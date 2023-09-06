@@ -62,7 +62,7 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 
 {: .important-title }
 
-> Exercise 1: Scrum Team
+> Exercise 1
 >
 > Read the "Scrum Team" chapter of the Scrum Guide and answer the following questions in your own words:
 >
@@ -71,7 +71,7 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 
 {: .important-title }
 
-> Exercise 2: Scrum Events
+> Exercise 2
 >
 > Read the "Scrum Events" chapter of the Scrum Guide and answer the following questions in your own words:
 >
@@ -81,7 +81,7 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 
 {: .important-title }
 
-> Exercise 3: Transparency in Scrum
+> Exercise 3
 >
 > Scrum emphasize the importance of _transparency_ of the process. It means that the significant aspects of the process should be visible to those responsible for the outcome. Transparency allows each Scrum Team member to track and understand what's really going on in each sprint.
 >
@@ -89,7 +89,7 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 
 {: .important-title }
 
-> Exercise 4: Scrum and agile principles
+> Exercise 4
 >
 > "Responding to change over following a plan" is one of the core principles of agile.
 >
@@ -170,7 +170,7 @@ There's still a bit uncertainty of the implementation, for example, how in pract
 
 {: .important-title }
 
-> Exercise 5: Defining good user stories
+> Exercise 5
 >
 > How does the following user stories violate the INVEST criteria of a good user story?
 >
@@ -180,7 +180,7 @@ There's still a bit uncertainty of the implementation, for example, how in pract
 
 {: .important-title }
 
-> Exercise 6: Improving a user story
+> Exercise 6
 >
 > The Product Owner came up with the following user story during the Sprint Planning:
 >
@@ -192,7 +192,7 @@ There's still a bit uncertainty of the implementation, for example, how in pract
 
 {: .important-title }
 
-> Exercise 7: Coming up with user stories
+> Exercise 7
 >
 > During the course, each team will develop a project described by the product owner in the [project description](/project-description).
 >

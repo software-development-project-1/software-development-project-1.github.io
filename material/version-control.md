@@ -26,24 +26,41 @@ GitHub is a service which was created later on, used for storing and publishing 
 
 Git and GitHub are used in solo as well as collaborative projects at University and in the industry. It's usage isn't limited only to code, and many people like to for example backup their thesis using Git. Nevertheless, this part focuses on sharing code with GitHub, and some of the common problems faced in the process. Git will certainly be useful in your studies, and you will learn more about it in the software engineering courses.
 
-Start by creating a GitHub account at <a href="https://github.com/"> https://github.com/ </a>. Programmers often use GitHub as a sort of code protfolio, so make sure to choose a username which you don't mind adding to your CV.
+{: .important-title }
 
-Git should be already installed on the department's computers and Ubuntu. If this is not the case, you can install it according to these <a href="https://git-scm.com/downloads" >instructions</a>, or using a <a href="/command-line#installing">package manager</a>. We'll learn how to use the command line client of Git.
+> Exercise 1
+>
+> Start by creating a GitHub account at <a href="https://github.com/"> https://github.com/ </a>. Programmers often use GitHub as a sort of code protfolio, so make sure to choose a username which you don't mind adding to your CV.
 
-Let's configure Git a bit.
+{: .important-title }
 
-Link your name and email address to Git so that all the changes you make to different projects are properly associated with you. This can be done by running the following commands with your own personal details:
+> Exercise 2
+>
+> Before we can start, we need to install Git. Here's the instructions for different operating systems:
+>
+> - Windows: install [Git for Windows](https://gitforwindows.org/)
+> - macOS and Linux: read the [Git installation instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-```
-git config --global user.name "My Name"
-git config --global user.email email@address.com
-```
+Now, depending on your operating system do one of the following:
 
-If you don't want your email to be public, GitHub offers a specific <a href="https://help.github.com/en/articles/setting-your-commit-email-address">noreply email</a>.
+- On _Windows_ Git is used through the Git Bash application. Open the Git Bash application.
+- On _macOS_ Git is used through the [Terminal](https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) application. Open the Terminal application.
 
-Make sure you noticed the "Note" part on the site linked above! The form of the noreply email depends on when you created your user. If you created an account only on this course, you can have a no-reply email only after setting your email as private from your account's settings.
+{: .important-title }
 
-In Windows replace <code>nano</code> with <code>notepad</code>.
+> Exercise 2
+>
+> Let's configure Git a bit.
+>
+> Link your name and email address to Git so that all the changes you make to different projects are properly associated with you. This can be done by running the following commands with your own personal details:
+>
+> ```
+> git config --global user.name "My Name"
+> git config --global user.email email@address.com
+> git config --global init.defaultBranch main
+> ```
+>
+> If you don't want your email to be public, GitHub offers a specific <a href="https://help.github.com/en/articles/setting-your-commit-email-address">noreply email</a>.
 
 ## Starting a Git project
 
@@ -59,14 +76,27 @@ Let's go through how a commit is created. First, the changes one wants to includ
 
 The command `git status` will turn out to be very useful in the process of creating commits, as it gives information avout the current state of the project and all the files inside it.
 
-Let's create a Git project folder, and add an empty file called `lapio_w2.txt` inside. You can do this with the command `touch` for example. When a new file is added to a fresh Git project, `git status` will print the following:
+Let's create a Git project folder. Create an empty folder named "git-practice" for example on your Desktop or any other location. Next, depending on your operating system do the following:
+
+- On _Windows_, open the folder in Git Bash by right clicking the folder name and choosing "Git Bash here".
+- On _macOS_, open the folder in Terminal by right clicking the folder name and choosing "New Terminal at Folder"
+
+Now, initialize the folder as a Git project with the `git init` command.
+
+{: .note }
+
+> Coping or pasting text into Git Bash won't work with keyboard shortcuts. Instead, you can right click on the Git Bash window and click "Paste" or "Copy".
+
+Open the Git project folder in an editor such as Visual Studio Code and add an a empty file called `git_practice.txt` inside. When a new file is added to a fresh Git project, running the `git status` command will print the following:
 
 ```bash
 On branch main
+
+No commits yet
+
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-
-	lapio_w2.txt
+        git_practice.txt
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
@@ -77,41 +107,37 @@ Next we'll take a closer look on the output of `git status`.
 
 Changes can be added to the next commit by running `git add`. The command requires one argument, that is the path to the file containing the changes one wishes to move to staging and consequently include in the next commit. Before a file has been added to Git, it is under `Untracked files`. This also means that the changes inside that file will not be added to the next commit.
 
-Now let's add the changes in the file we created earler by running `git add lapio_w2.txt`. Then we'll insert some text into the file with `echo "this is the second part of lapio" >> lapio_w2.txt`. Then we'll run `git status`:
+Now let's add the changes in the file we created earlier by running `git add git_practice.txt`. Then, let's add some text into the file and save. After that, we'll run `git status`:
 
 ```bash
 On branch main
+
+No commits yet
+
 Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-	new file:   lapio_w2.txt
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	modified:   lapio_w2.txt
+  (use "git rm --cached <file>..." to unstage)
+        new file:   git_practice.txt
 ```
 
 Next we'll add one more file to the project, called `empty.txt`. We'll then run `git status` again, which outputs the following:
 
 ```bash
 On branch main
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
 
-	new file:   lapio_w2.txt
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   git_practice.txt
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	modified:   lapio_w2.txt
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git_practice.txt
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-
-	empty.txt
+        empty.txt
 ```
 
 Now let's break down the output.
@@ -122,13 +148,15 @@ The first title is called `Changes to be committed.` The changes under this titl
 
 Finally `Untracked files` contains all the files which are unknown to Git, meaning that the changes inside them are not being followed. For example, Git cannot distinguish what sort of changes have been done to the untracked files. In consequence, the changes are not being added to the next commit.
 
-You probably noticed that the file `lapio_w2` is in the output twice. This is because Git tracks _changes_. The first change added to Git was where the file `lapio_w2` was created. Only after adding the change to Git was some text insterted into the file. Thus only the change where the file `lapio_w2` was created will be added to the next commit, and not the change when some text was added inside it. The interpretation of the output of `git status` is made easier with some colors. The changes which will be added to the next commit are displayed in green, and next to the filename is written what was done to the file (for example `new file`, `modified`, `deleted`).
+You probably noticed that the file `git_practice.txt` is in the output twice. This is because Git tracks _changes_. The first change added to Git was where the file `git-practice` was created. Only after adding the change to Git was some text insterted into the file. Thus only the change where the file `git_practice.txt` was created will be added to the next commit, and not the change when some text was added inside it. The interpretation of the output of `git status` is made easier with some colors. The changes which will be added to the next commit are displayed in green, and next to the filename is written what was done to the file (for example `new file`, `modified`, `deleted`).
 
-Changes can also be cancelled with Git. Adding some text to `lapio_w2.txt` could be cancelled by running `git checkout -- lapio_w2.txt`. The file will be empty after running the command because the command cancelled the change which added some text into `lapio_w2.txt`. In conclusion, the command `git checkout --` enables cancelling changes in tracked files.
+Changes can also be cancelled with Git. Adding some text to `git_practice.txt` could be cancelled by running `git restore git_practice.txt`. The file will be empty after running the command because the command cancelled the change which added some text into `git_practice.txt`. In conclusion, the command `git restore` enables cancelling changes in tracked files.
 
 By running `git add -p` one can choose change by change, which ones to add to the next commit (y=add, n=don't add). The command only takes into consideration changes in files which are being tracked, i.e. _have already been added to Git once_. Thus new files cannot be added to Git with `git add -p`. Running `git add file` will add all the changes in the file. It is also possible to add entire folders to Git using the same command.
 
-If you think there is a possibility that you will want to share a project with other people some day, don't add anything secret to Git. Even if you remove the secret content in the next commit, the delicate information stays in the project's history, and can be found from GitHub easily.
+{: .warning }
+
+> If you think there is a possibility that you will want to share a project with other people some day, don't add anything secret to Git. Even if you remove the secret content in the next commit, the delicate information stays in the project's history, and can be found from GitHub easily.
 
 A good habit to form is to constantly check which changes will be added to the next commit with `git status`. This might save you a lot of trouble later on.
 
@@ -142,27 +170,27 @@ We'll continue where the previous example left off. Let's add all the changes we
 
 ```bash
 On branch main
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
 
-	new file:   lapio_w2.txt
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   git_practice.txt
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-
-	empty.txt
+        empty.txt
 ```
 
-Then we'll run `git commit -m "Add new lapio file"`
+Then we'll run `git commit -m "Add new file"`
 
 Now the output of `git status` is:
 
-```
+```bash
 On branch main
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-
-	empty.txt
+        empty.txt
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
@@ -170,16 +198,18 @@ nothing added to commit but untracked files present (use "git add" to track)
 The changes which were committed are no longer visible in the output. However, they are not lost, they have just been moved to the commit. You can view the commits of a project with the command `git log`:
 
 ```
-commit 51bf544c786a671c28f70713b6cb33d87cc38
-Author:
-Date:
+Author: Kalle Ilves <kalle.ilves@haaga-helia.fi>
+Date:   Wed Sep 6 12:51:07 2023 +0300
 
-    Add new lapio file
+    Add new file
 ```
 
 The command `git log` outputs the author of the commit, the time of its creation and its title. Every commit has a unique id, formed with [SHA-1](https://en.wikipedia.org/wiki/SHA-1). In the output of `git log` the id can be seen as a long string next to the word "commit", which is `51bf544c786a671c28f70713b6cb33d87cc38` in this case.
 
-The process of creating a commit might seem unintuitive at first. The following analogy might help: Picture the commit as a package. You are sitting on the floor, with all the changes layed out in front of you as wooden blocks. The staging state, denoted with the title <code>Changes to be committed</code> is a piece of wrapping paper, which is spread out in front of you. With the command <code>git add</code> you can move the wooden blocks representing changes on top of the wrapping paper, and with <code>git commit</code> you tie the wrapper aroung the changes to create a commit.
+{: .note }
+> The process of creating a commit might seem unintuitive at first. The following analogy might help: Picture the commit as a package. You are sitting on the floor, with all the changes layed out in front of you as wooden blocks. The staging state, denoted with the title <code>Changes to be committed</code> is a piece of wrapping paper, which is spread out in front of you. With the command <code>git add</code> you can move the wooden blocks representing changes on top of the wrapping paper, and with <code>git commit</code> you tie the wrapper aroung the changes to create a commit.
+
+<!-- TODO -->
 
 ### Branches
 
@@ -260,7 +290,7 @@ After a project has been added to a repository in GitHub, commits can be publish
 
 Changes can be pushed to a specific branch in the remote repository as follows: `git push remotename branchname`. In this part we will only use the main branch. If you add the flag `-u` after the command `push`, next time you do not need to specify the name of the remote and the branch to push changes to the same place. Using the flag `-u` is recommended.
 
-Let's push the changes we made to the file `lapio_w2.txt` by running `git push -u origin main`, since we named the remote `origin` and we are using the main branch. Next we'll navigate to the project site on GitHub. There we will find the file `lapio_w2.txt`.
+Let's push the changes we made to the file `git_practice.txt` by running `git push -u origin main`, since we named the remote `origin` and we are using the main branch. Next we'll navigate to the project site on GitHub. There we will find the file `git_practice.txt`.
 
 <ol>
 <li>Push the three commits you made earlier to the main branch of the remote repository.</li>
@@ -275,7 +305,7 @@ We'll start by making changes to the project via GitHub. You can edit files via 
 
 ![Pen icon at GitHub](/assets/edit.png)
 
-Next we'll add a new line of text to `lapio_w2.txt`, and create a commit of the change using the green button at the bottom of the page. However, you can't see these changes locally.
+Next we'll add a new line of text to `git_practice.txt`, and create a commit of the change using the green button at the bottom of the page. However, you can't see these changes locally.
 
 We'll run the following commands:
 
@@ -300,7 +330,7 @@ From github.com
    8793615..c661629  main     -> origin/main
 Updating 8793615..c661629
 Fast-forward
- lapio_w2.txt | 1 +
+ git_practice.txt | 1 +
  1 file changed, 1 insertion(+)
 ```
 
@@ -314,7 +344,7 @@ In practice the situation handled above corresponds to working on a collaborativ
 
 Next we'll find out what happens, if GitHub contains some information not found in the local version, and vice versa.
 
-Let's change the first row of `lapio_w2.txt` via GitHub. This will create a new commit to the remote version. Then let's add a new line at the end of the same file in the local version, **but without creating a new commit of the new change**.
+Let's change the first row of `git_practice.txt` via GitHub. This will create a new commit to the remote version. Then let's add a new line at the end of the same file in the local version, **but without creating a new commit of the new change**.
 
 Now if we try to fetch the latest changes with the command `git pull` we'll get:
 
@@ -323,7 +353,7 @@ From github.com:
  * branch            main     -> FETCH_HEAD
 Updating 061ca96..6920cd0
 error: Your local changes to the following files would be overwritten by merge:
-	lapio_w2.txt
+	git_practice.txt
 Please, commit your changes or stash them before you can merge.
 Aborting
 ```
@@ -408,17 +438,17 @@ If you see "CONFLICT" printed out while pulling, read the next section "Merge Co
 
 When several people are working on the same project, it is not uncommon for two developers to make changes to the same lines in some file. When merging the two changes together, how does Git know which of the changes to discard and which one to keep? Well, it doesn't, and so when mutually exclusive changes are found when merging, the automatic merge will fail. The conflict between two commits (or branches) is called a _merge conflict_. In these cases, someone has to hand pick the changes which will be kept in the project. This is called resolving a merge conflict.
 
-Next we'll create a merge conflict. We'll start by writing "Greetings from GitHub" to a line in the `lapio_w2.txt` file via GitHub, and finish off by creating a commit. Then we'll edit the _exact_ same line locally by replacing it with "Greetings from my computer", and wrap the change up to another commit.
+Next we'll create a merge conflict. We'll start by writing "Greetings from GitHub" to a line in the `git_practice.txt` file via GitHub, and finish off by creating a commit. Then we'll edit the _exact_ same line locally by replacing it with "Greetings from my computer", and wrap the change up to another commit.
 
 Now when we try to combine the newest states from the remote and local versions together with `git pull`, we get the following error message:
 
 ```bash
 Auto-merging ...
-CONFLICT (content): Merge conflict in lapio_w2.txt
+CONFLICT (content): Merge conflict in git_practice.txt
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-This means that we have successfully created a merge conflict. The line starting with `CONFLICT` tells us where the overlapping changes can be found. Let's open the file in question, `lapio_w2.txt`. We see the following:
+This means that we have successfully created a merge conflict. The line starting with `CONFLICT` tells us where the overlapping changes can be found. Let's open the file in question, `git_practice.txt`. We see the following:
 
 ```bash
 <<<<<< HEAD
@@ -451,7 +481,7 @@ You have unmerged paths.
 Unmerged paths:
  (use "git add <file>..." to mark resolution)
 
-	both modified:   lapio_w2.txt
+	both modified:   git_practice.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -465,7 +495,7 @@ All conflicts fixed but you are still merging.
 
 Changes to be committed:
 
-	modified:   lapio_w2.txt
+	modified:   git_practice.txt
 ```
 
 Finally, we'll wrap up resolving the conflicts by, you guessed it, creating a new commit. The finishing touch is to push the result to GitHub, so that other developers can use the newest version.
