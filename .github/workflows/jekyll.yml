@@ -7,7 +7,7 @@
 name: Deploy Jekyll site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Runs on pushesbundle lock --add-platform x86_64-linux targeting the default branch
   push:
     branches: ["main"]
 

@@ -12,7 +12,7 @@ callouts:
     title: Important
     color: blue
   warning:
-    title: Warning
+    title: Important!
     color: red
   highlight:
     title: Heads-up
