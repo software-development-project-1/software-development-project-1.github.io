@@ -2,6 +2,7 @@
 layout: page
 title: Agile software development and Scrum
 permalink: /agile-software-development
+nav_order: 3
 ---
 
 # Agile software development and Scrum
@@ -59,6 +60,11 @@ Instead completing phases sequentially from start to finnish, the phases are com
 _Scrum_ is an iterative software development process framework that defines practical ways to carry out agile software development principles. The [Scrum Guide](https://scrumguides.org/scrum-guide.html) is the official guide to Scrum.
 
 Before starting working on the exercises, read at least the chapters "Scrum Definition", "Scrum Theory", "Scrum Values", "Scrum Team" and "Scrum Events" from the [Scrum Guide](https://scrumguides.org/scrum-guide.html).
+
+{: .highlight-title}
+> Submitting this week's exercises
+>
+> All of this week's exercises are submitted into [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a single PDF file. This week's exercises needs to be submitted before the deadline to confirm the course participation.
 
 {: .important-title }
 
@@ -133,7 +139,7 @@ A better user story would express the feature in the user's point of view:
 
 > ✅ As a blog reader I want to browse list of blog posts of a blog so that I can find insteresting posts to read.
 
-There are also other common guidelines for a good user story. One popular guideline is the INVEST criteria:
+There are also other common guidelines for a good user story. One popular guideline is the _INVEST criteria_:
 
 1. _Independent_: user stories should be written so they can be developed and tested independently of other stories. This allows for greater flexibility in the development process and helps to avoid unnecessary dependencies.
 2. _Negotiable_: user stories should be written to allow for negotiation between the development team and the customer. This helps ensure that the final product meets the customer's needs.
@@ -172,7 +178,7 @@ There's still a bit uncertainty of the implementation, for example, how in pract
 
 > Exercise 5
 >
-> How does the following user stories violate the INVEST criteria of a good user story?
+> What's wrong with the following user stories?
 >
 > 1. "As a content creator I want to submit a form that sends a HTTP request to the /api/blog-posts API endpoint on the server, which inserts a new row to the database, so that I can publish a new blog post on my blog"
 > 2. "As a content creator I want to be able to write a blog post with text, images, videos and interactive code samples so that I can create rich content for my readers"
@@ -187,14 +193,12 @@ There's still a bit uncertainty of the implementation, for example, how in pract
 > "As a content creator I want to be able to write a blog post with text, images, videos and interactive code samples so that I can create rich content for my readers"
 >
 > How would improve the user story?
->
-> Hint: big user stories can be split into smaller ones.
 
 {: .important-title }
 
 > Exercise 7
 >
-> During the course, each team will develop a project described by the product owner in the [project description](/project-description).
+> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).
 >
 > Come up with at least five well written user stories based on the project description. Use the INVEST criteria to explain, why your user stories are well written.
 >

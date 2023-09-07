@@ -2,9 +2,14 @@
 layout: page
 title: "Version control: Git and GitHub"
 permalink: /git
+nav_order: 4
 ---
 
 # Version control: Git and GitHub
+
+{: .note }
+> This material is based on the execellent course material of University of Helsinki's [Computing tools for CS studies](https://tkt-lapio.github.io/en/) course.
+
 
 This part of the course handles version control. Version control refers to a service used for storing code. There are two primary reasons for using it: Version control allows storing backups of both the current and older versions of a program. In addition, code and projects can easily be shared with others, which makes collaboration easy.
 
@@ -18,6 +23,10 @@ There are several different version control tools available, but this part will 
 
 ## About Git
 
+{: .highlight }
+
+> The material has steps that you need to perform outside the exercises as well. So, _don't just skip to exercises_. Read through the material carefully and perform the instructed steps.
+
 Git was initiated by Linus Torvalds, who studied at the department of Computer Science at the University of Helsinki in the nineties. Torvalds is most likely more famous for being the primary developer of the Linux kernel, which is the "heart" of many operating systems, such as Google's [Android](<https://en.wikipedia.org/wiki/Android_(operating_system)>). Almost all the department's computers have a Linux operating system installed in them.
 
 Torvalds started developing Git for his own needs when coding the Linux kernel. He needed a tool for storing different versions of his own code and sharing it with other people.
@@ -25,6 +34,11 @@ Torvalds started developing Git for his own needs when coding the Linux kernel. 
 GitHub is a service which was created later on, used for storing and publishing projects. There are several sites similiar to GitHub, such as [GitLab](https://about.gitlab.com/), however, this part deals with using GitHub as it is more popular in our department.
 
 Git and GitHub are used in solo as well as collaborative projects at University and in the industry. It's usage isn't limited only to code, and many people like to for example backup their thesis using Git. Nevertheless, this part focuses on sharing code with GitHub, and some of the common problems faced in the process. Git will certainly be useful in your studies, and you will learn more about it in the software engineering courses.
+
+{: .highlight-title}
+> Submitting this week's exercises
+>
+> All of this week's exercises are submitted into [this Moodle submission]({{site.week_2_moodle_submission_link}}). Submission should only contain the link to your GitHub repository created in exercise 6.
 
 {: .important-title }
 
@@ -38,13 +52,21 @@ Git and GitHub are used in solo as well as collaborative projects at University 
 >
 > Before we can start, we need to install Git. Here's the instructions for different operating systems:
 >
-> - Windows: install [Git for Windows](https://gitforwindows.org/)
-> - macOS and Linux: read the [Git installation instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+> - On _Windows_, install [Git for Windows](https://gitforwindows.org/)
+> - On _macOS_ and _Linux_, read the [Git installation instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 Now, depending on your operating system do one of the following:
 
 - On _Windows_ Git is used through the Git Bash application. Open the Git Bash application.
 - On _macOS_ Git is used through the [Terminal](https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) application. Open the Terminal application.
+
+In front of you is a so called _command line interface_ (CLI). A command line interface is a simple user interface: it accepts a textual command as input and prints the command output below. Type in the following command and press the enter key to execute the command:
+
+```
+git
+```
+
+The command should print basic introductions on how to use the `git` command.
 
 {: .important-title }
 
@@ -59,6 +81,8 @@ Now, depending on your operating system do one of the following:
 > git config --global user.email email@address.com
 > git config --global init.defaultBranch main
 > ```
+>
+> Run the commands _one command (one line) at a time_. Write the command and press enter to execute a command.
 >
 > If you don't want your email to be public, GitHub offers a specific <a href="https://help.github.com/en/articles/setting-your-commit-email-address">noreply email</a>.
 
@@ -152,13 +176,17 @@ You probably noticed that the file `git_practice.txt` is in the output twice. Th
 
 Changes can also be cancelled with Git. Adding some text to `git_practice.txt` could be cancelled by running `git restore git_practice.txt`. The file will be empty after running the command because the command cancelled the change which added some text into `git_practice.txt`. In conclusion, the command `git restore` enables cancelling changes in tracked files.
 
-By running `git add -p` one can choose change by change, which ones to add to the next commit (y=add, n=don't add). The command only takes into consideration changes in files which are being tracked, i.e. _have already been added to Git once_. Thus new files cannot be added to Git with `git add -p`. Running `git add file` will add all the changes in the file. It is also possible to add entire folders to Git using the same command.
+By running `git add -p` one can choose change by change, which ones to add to the next commit (y=add, n=don't add). The command only takes into consideration changes in files which are being tracked, i.e. _have already been added to Git once_. Thus new files cannot be added to Git with `git add -p`. Running `git add file` will add all the changes in the file. It is also possible to add entire folders to Git using the same command. Another quite handy shorthand is the `git add .`, which will add all files to the next commit.
 
 {: .warning }
 
 > If you think there is a possibility that you will want to share a project with other people some day, don't add anything secret to Git. Even if you remove the secret content in the next commit, the delicate information stays in the project's history, and can be found from GitHub easily.
 
 A good habit to form is to constantly check which changes will be added to the next commit with `git status`. This might save you a lot of trouble later on.
+
+{: .note }
+
+> You can navigate trough the command history by pressing the up (↑) and down (↓) arrow keys on the keyboard. Pressing the up arrow key goes to previous command. This is handy when you perform the same command multiple times. Instead of writing the same command again and again, just press the up arrow key and press enter to execute the command.
 
 ### Creating a commit
 
@@ -207,9 +235,8 @@ Date:   Wed Sep 6 12:51:07 2023 +0300
 The command `git log` outputs the author of the commit, the time of its creation and its title. Every commit has a unique id, formed with [SHA-1](https://en.wikipedia.org/wiki/SHA-1). In the output of `git log` the id can be seen as a long string next to the word "commit", which is `51bf544c786a671c28f70713b6cb33d87cc38` in this case.
 
 {: .note }
-> The process of creating a commit might seem unintuitive at first. The following analogy might help: Picture the commit as a package. You are sitting on the floor, with all the changes layed out in front of you as wooden blocks. The staging state, denoted with the title <code>Changes to be committed</code> is a piece of wrapping paper, which is spread out in front of you. With the command <code>git add</code> you can move the wooden blocks representing changes on top of the wrapping paper, and with <code>git commit</code> you tie the wrapper aroung the changes to create a commit.
 
-<!-- TODO -->
+> The process of creating a commit might seem unintuitive at first. The following analogy might help: Picture the commit as a package. You are sitting on the floor, with all the changes layed out in front of you as wooden blocks. The staging state, denoted with the title <code>Changes to be committed</code> is a piece of wrapping paper, which is spread out in front of you. With the command <code>git add</code> you can move the wooden blocks representing changes on top of the wrapping paper, and with <code>git commit</code> you tie the wrapper aroung the changes to create a commit.
 
 ### Branches
 
@@ -217,27 +244,29 @@ At the top of of the output of `git status`, you can see the following text: `On
 
 Traditionally git has used the term master to refer to the main or default branch. During years 2020 and 2021 many platforms, such as GitHub and Gitlab, transitioned into using main as the default name for this branch. Git itself followed suit in 2021 and recent versions of git create a branch named main by default.
 
-Branches are usually used for testing out new features without breaking a working version of the program. Since branches don't affect each other states, the new branch can be played with without worrying about other ones. When the changes made to the new branch are deemed ready, the branch can be merged to the main branch, and thus the new features will be published. Although branches are an important part of Git, this course will not focus on using them. It suffices to understand that we will only use the main branch in the exercises and in the exam.
+Branches are usually used for testing out new features without breaking a working version of the program. Since branches don't affect each other states, the new branch can be played with without worrying about other ones. When the changes made to the new branch are deemed ready, the branch can be merged to the main branch, and thus the new features will be published. For now it suffices to understand that we will only use the main branch in the exercises.
 
-<ol>
-<li>Create a folder on the command line and turn it into a Git project.</li>
-<li>Create a file called <code>story.txt</code> in your project. Add a lot of text inside.</li>
-<li>Add another file called <code>shopping_list.txt</code> to the project, and write down what you need from the store (or just many rows of text).</li>
-<li>Create a subfolder called <code>school</code> into the project, and create a file called<code>lapio.txt</code> inside. You will need these files in the future exercises.</li>
-<li>After doing all the changes described above, create a total of three commits: one, where you add the story, a second on where you add the shopping list, and a third one where you add the school folder. Make sure that each commit message is truly descriptive.</li>
-<li>Using the command <code>git log</code>, check that you have properly created three commits.</li>
-<li>Add something new to the shopping list, and create another commit. Use the command <code>git add -p</code>.</li>
-<li>Make sure you can see all the commits in the output of <code>git log</code>.</li>
-</ol>
+{: .important-title}
 
-If you see the following message when creating a commit <code>error: cannot run : No such file or directory error: unable to start editor</code>, make sure you configured the default text editor of Git properly (go back to exercise 2).
+> Exercise 3
+>
+> 1. Create a folder turn it into a Git project like we did before.
+> 2. Create a file called <code>story.txt</code> in your project. Add a lot of text inside.
+> 3. Add another file called <code>shopping_list.txt</code> to the project, and write down what you need from the store (or just many rows of text).
+> 4. Create a subfolder called <code>school</code> into the project, and create a file called<code>lapio.txt</code> inside. You will need these files in the future exercises.
+> 5. After doing all the changes described above, create a total of three commits: one, where you add the story, a second on where you add the shopping list, and a third one where you add the school folder. Make sure that each commit message is truly descriptive.
+> 6. Using the command <code>git log</code>, check that you have properly created three commits.
+> 7. Add something new to the shopping list, and create another commit. Use the command <code>git add -p</code>.
+> 8. Make sure you can see all the commits in the output of <code>git log</code>.
 
-<ol>
-<li>Find out how you can remove changes from the state where they are being added to the next commit (under <code>Changes to be committed</code>), and move them under the headline <code>Changes not staged for commit</code>? Hint: <code>git status</code> will help.</li>
-<li>Add some new products to the shopping list, and add them to the next commit (so that they are under <code>Changes to be committed</code>). <strong>Don't create the commit yet.</strong></li>
-<li>Then remove the changes from the next commit.</li>
-<li>Then remove the changes, using Git, so that when you open the shopping list, the new products are not there.</li>
-</ol>
+{: .important-title}
+
+> Exercise 4
+>
+> 1. Find out how you can remove changes from the state where they are being added to the next commit (under <code>Changes to be committed</code>), and move them under the headline <code>Changes not staged for commit</code>? Hint: <code>git status</code> will help.
+> 2. Add some new products to the shopping list, and add them to the next commit (so that they are under <code>Changes to be committed</code>). **Don't create the commit yet.**
+> 3. Then remove the changes from the next commit.
+> 4. Then remove the changes, using Git, so that when you open the shopping list, the new products are not there.
 
 ## Sharing code via GitHub
 
@@ -258,7 +287,9 @@ A window will open where you can add the repository a name and a description. A 
 You can also create a _README_, a _license_ and a _.gitignore_ file when creating a repository. The point of a README file is to display useful information about the project. A good README contains, for example, a short description of the project, installing instructions and a link to the documentation. A license refers to a document stating the responsabilities and rights of the creator and the users of the project. The `.gitignore` file allows automatically ignoring some files when creating a commit, and it is often quite useful. You can read more about it
 [here](https://www.atlassian.com/git/tutorials/saving-changes/gitignore).
 
-When you wish to update a pre-existing project to GitHub, it is not a good idea to let GitHub create files such as a README automatically. This will lead to problems, because GiHub contains files initially which are not found in the local project. You'll learn more about these kinds of situations later in this part.
+{: .highlight }
+
+> When you wish to add a pre-existing project to GitHub, it is not a good idea to let GitHub create files such as a README automatically. This will lead to problems, because GiHub contains files initially which are not found in the local project. You'll learn more about these kinds of situations later in this part.
 
 The button `Create repository` adds the project to your personal account. When you navigate to the empty project, you can see some useful instructions about adding a new project to tour profile. You can find all your projects from your profile, or navigate to them directly with `https://www.github.com/username/projectname`.
 
@@ -266,23 +297,29 @@ The button `Create repository` adds the project to your personal account. When y
 
 A remote can be linked to a local project with the command `git remote add`.
 
-The command takes the name and the address of the remote repository as arguments. GitHub offers two options for the repository address protocol: SSH and HTTPS. The first option should be familiar to you from the first part of the course, where the command `ssh` was used. This type of connection is possible to use also with GitHub, if the local system has an SSH key pair, and the public key has been added to GitHub. If the user uses the HTTPS connection type, they will be authenticated with their GitHub username and password. Using an SSH connection is therefore a little less tedious, since the private key can be added to the ssh-agent. You can read more about SSH keys from the first part.
-
-We'll choose the SSH address for the remote project:
+The command takes the name and the address of the remote repository as arguments. GitHub offers two options for the repository address protocol: SSH and HTTPS. We'll choose the SSH address for the remote project:
 
 ![SSH address in GitHub](/assets/ssh-clone.png)
 
 A new repository called "origin" is added using an SSH connection by running the command `git remote add origin git@github.com:user/project.git`. An HTTPS address would be almost identical to the URL in your browser. A remote can be called practically anything besides "origin", but it is a good and a common choice. It is possible to add several remotes, when properly naming them becomes important.
 
-If you haven't created an SSH key pair on your computer, do it first. The instructions can be found from <a href="/command-line">the first part</a>.
+{: .important-title }
 
-Add your public SSH key to your GitHub account. <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account">GitHub has instructions for it</a>.
+> Exercise 5
+>
+> When we start making changes to a remote repository on GitHub, we need to authenticate. This is done using the [SSH protocol](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh). _SSH key pairs_ are used to authenticate with SSH. We'll generate a _public key_ and a _private key_ on our local computer. We'll give the public key to GitHub and then, connection between our local computer and GitHub will be authenticated.
+>
+> Start by generating the SSH key. [GitHub has instructions for this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). Go through the steps in both "Generating a new SSH key" and "Adding your SSH key to the ssh-agent" parts. When you generate key, **make sure that you remember the password you provide for the key**.
+>
+> Next, Add your public SSH key to your GitHub account. <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account">GitHub has instructions for this as well</a>.
 
-Create a remote repository for the project you created locally.
+{: .important-title }
 
-**Don't let GitHub create a README, license or a .gitignore file when creating the repository. Doing so will cause problems later.**
-
-Add the repository as a remote to your project. If you did the previous exercise, use an SSH address, otherwise use HTTPS.
+> Exercise 6
+>
+> Create a remote repository in GitHub for the project you created locally as instructed above. **Don't let GitHub create a README, license or a .gitignore file when creating the repository**. Doing so will cause problems later.
+>
+> Add the repository as a remote to your local project using the `git remote add` command as instructed above. **Remember to use the SSH address when you copy the repository address in GitHub**.
 
 ### Publishing
 
@@ -292,10 +329,12 @@ Changes can be pushed to a specific branch in the remote repository as follows: 
 
 Let's push the changes we made to the file `git_practice.txt` by running `git push -u origin main`, since we named the remote `origin` and we are using the main branch. Next we'll navigate to the project site on GitHub. There we will find the file `git_practice.txt`.
 
-<ol>
-<li>Push the three commits you made earlier to the main branch of the remote repository.</li>
-<li>Check on GitHub that you can find all the changes in the remote.</li>
-</ol>
+{: .important-title }
+
+> Exercise 7
+>
+> 1. Push the three commits you made earlier to the main branch of the remote repository.
+> 2. Check on GitHub that you can find all the changes in the remote.
 
 ### Fetching code from GitHub
 
@@ -336,7 +375,12 @@ Fast-forward
 
 Now you can find the new line of text in the file you changed via GitHub.
 
-Create a new file to the school subfolder via GitHub, and fetch it to your local version.
+{: .important-title }
+
+> Exercise 7
+>
+> Create a new file to the school subfolder via GitHub, and fetch it to your local version.
+
 
 In practice the situation handled above corresponds to working on a collaborative project, where someone else has added commits to the project and pushed them to GitHub. Other developers should then fetch the new changes with the command `git pull`.
 

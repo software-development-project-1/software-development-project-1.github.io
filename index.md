@@ -21,7 +21,7 @@ Course follows a weekly [schedule](/schedule). There are weekly topics that are 
 
 Kalle Ilves (kalle.ilves@haaga-helia.fi)
 
-## Assesment
+## Assessment
 
 {: .highlight }
 
@@ -31,23 +31,24 @@ The assesment is based on the group's project and the personal contributions of 
 
 The project assesment is based on the following aspects:
 
-- Technical implementation: required features should be implemented and they should work as intended without major bugs
-- Project management: project management related documents (e.g. backlogs) should be well organized and kept up-to-date throughout the project
-- Documentation: required technical documents should be written and they should correctly describe the technical implementation
+- _Technical implementation_: required features should be implemented and they should work as intended without major bugs
+- _Project management_: project management related documents (e.g. backlogs) should be well organized and kept up-to-date throughout the project
+- _Documentation_: required technical documents should be written and they should correctly describe the technical implementation
+- _Following the schedule_: requirements of each iteration should be implemented before the deadline
 
-Each group member's assesment is based on the following aspects:
+Each group member's personal assessment is based on the following aspects:
 
-- Activity in group work: Attendance and active presence during group meetings
-- Technical contributions: amount of working code written
-- Project management and documentation contributions
-- Exercise submissions: at least 60% of the first three week's exercises have to be completed before their deadlines to pass the course. Completing more than 80% will have a positive impact on the assesment
+- _Activity in group work_: Attendance and active presence during group meetings
+- _Technical contributions_: amount of working code written
+- _Project management and documentation contributions_
+- _Exercise submissions_: at least 70% of the first two week's exercises have to be completed before their deadlines to pass the course. Completing at least 90% of the exercises will have a positive impact on the assessment
 
-The assesment is done based on teacher's observations and peer reviews from the group members.
+Both project and personal assessment affects the final grade (1-5). assessment is done based on teacher's observations and peer reviews from the group members.
 
 {: .highlight }
 
 > The following are necessary to pass the course:
 >
-> - At least 60% of the first three week's exercises have to be completed before their deadlines
+> - At least 70% of the first two week's exercises have to be completed before their deadlines
 > - Written peer review for each group member
 > - Passing grade from the peer reviews
