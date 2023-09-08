@@ -41,7 +41,7 @@ Each group member's personal assessment is based on the following aspects:
 - _Activity in group work_: Attendance and active presence during group meetings
 - _Technical contributions_: amount of working code written
 - _Project management and documentation contributions_
-- _Exercise submissions_: at least 70% of the first two week's exercises have to be completed before their deadlines to pass the course. Completing at least 90% of the exercises will have a positive impact on the assessment
+- _Exercise submissions_: at least 70% of the first two week's exercises have to be completed before their deadlines to pass the course. Completing at least 90% of the first two week's exercises will have a positive impact on the assessment
 
 Both project and personal assessment affects the final grade (1-5). assessment is done based on teacher's observations and peer reviews from the group members.
 

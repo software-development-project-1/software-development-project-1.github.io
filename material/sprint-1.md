@@ -149,7 +149,7 @@ Taskboards are either physical taskboards, for example whiteboards in an office,
 >
 > Decide how you will communicate outside the weekly sessions. Choose a communication platform, such as Teams, Telegram or Discord. Also schedule at least one weekly time slot when you work on the exercises together outside the weekly sessions. If possible, meet physically on the campus or some other location.
 
-## Sprint 1 Planning
+## GitHub workflow
 
 TODO
 
@@ -157,28 +157,17 @@ TODO
 
 > Exercise 6
 >
-> 1. Add these two user stories to the "Product Backlog" board in Trello. The user stories should be initially in the "In sprint" list of the board.
-> 2. Add the tasks to the "Sprint 1 Backlog" board in Trello. The tasks should be initially in the "To do" list of the board.
-
-## GitHub workflow
-
-TODO
+> One of the group members should create a GitHub organization for the project. Once the organization is created, add other group members to the organization as collaborators.
 
 {: .important-title }
 
 > Exercise 7
 >
-> One of the group members should create a GitHub organization for the project. Once the organization is created, add other group members to the organization as collaborators.
-
-{: .important-title }
-
-> Exercise 8
->
 > Fork repository
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 8
 >
 > Each group member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to use the SSH address of the GitHub repository with the command. Once each group member has the repository on their local computer, do the following:
 >
@@ -189,11 +178,44 @@ TODO
 > 5. Once changes have been pushed to GitHub, _each group member_ pulls the changes from GitHub using the `git pull` command.
 > 6. Once everybody sees the changes on their local `README.md` file, repeat the the steps from step 3. for each group member until everyone has pushed some changes to the GitHub repository.
 
+### The README file
+
+The `README.md` file we worked with in the previous exercise has a special meaning in software development projects. When a software developer starts exploring a project, the first thing they should do is to look for the README file. This file should have all the relevant information about the project, for example:
+
+- What's the project about?
+- How to use the project?
+- How to develop the project?
+- Who are project contributors?
+
+In GitHub, the README files commonly have the `.md` extension. These are [Markdown](https://www.markdownguide.org/) files. Markdown is markup language similar to HTML and you can use to add formatting elements to plaintext text documents. Compared to HTML, Markdown syntax is much simpler and that's why it is an excellent choise for formatting text documents.
+
+[This guide](https://www.markdownguide.org/basic-syntax) demonstrates the Markdown syntax compared to HTML. As an example, [here's](https://github.com/facebook/react/blob/main/README.md) what the React project's `README.md` file looks like and [here's](https://github.com/facebook/react/blob/main/README.md?plain=1) what the Markdown markup looks like.
+
+{: .important-title }
+
+> Exercise 9
+>
+> README
+
+## Sprint 1 planning
+
+TODO
+
+{: .highlight }
+
+> While working on the tasks, keep the Sprint Backlog up-to-date:
+>
+> - When you start working on a task, mark it assigned to you and move it to the "In progress" state
+> - When you complete a task, move it to the "Done" state
+>
+> Use the Sprint Backlog to track the Sprint progress. Always start a group meeting by looking at the Sprint Backlog.
+
 {: .important-title }
 
 > Exercise 10
 >
-> README.md
+> 1. Add these two user stories to the "Product Backlog" board in Trello. The user stories should be initially in the "In sprint" list of the board.
+> 2. Add the tasks to the "Sprint 1 Backlog" board in Trello. The tasks should be initially in the "To do" list of the board.
 
 {: .important-title }
 
@@ -206,6 +228,22 @@ TODO
 > Exercise 12
 >
 > Impelement 2. user story
+
+## Daily Scrum
+
+TODO
+
+## Sprint Review
+
+At the end of each Sprint, there's the [Sprint Review](https://scrumguides.org/scrum-guide.html#sprint-review) event. During the Sprint Review, the Developers demonstrate the outcome of the Sprint for the Product Owner. This means that the Developers should demonstrate how the implemented user stories work _in the user's perspective_. So, instead of showing the code, Developers should show how the user can use the new features of the application.
+
+Sprint Review has a huge impact on the transparency of the process. Seeing how the application actually works also brings forth many new ideas for the upcoming Sprint Planning event.
+
+{: .important-title }
+
+> Exercise 13
+>
+> Decide which group member gives the Sprint Review demonstration at the beginning of the next Sprint. This group member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 
 {: .warning }
 
