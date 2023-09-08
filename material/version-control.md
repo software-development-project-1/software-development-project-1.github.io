@@ -8,8 +8,8 @@ nav_order: 4
 # Version control: Git and GitHub
 
 {: .note }
-> This material is based on the execellent course material of University of Helsinki's [Computing tools for CS studies](https://tkt-lapio.github.io/en/) course.
 
+> This material is based on the execellent course material of University of Helsinki's [Computing tools for CS studies](https://tkt-lapio.github.io/en/) course.
 
 This part of the course handles version control. Version control refers to a service used for storing code. There are two primary reasons for using it: Version control allows storing backups of both the current and older versions of a program. In addition, code and projects can easily be shared with others, which makes collaboration easy.
 
@@ -36,6 +36,7 @@ GitHub is a service which was created later on, used for storing and publishing 
 Git and GitHub are used in solo as well as collaborative projects at University and in the industry. It's usage isn't limited only to code, and many people like to for example backup their thesis using Git. Nevertheless, this part focuses on sharing code with GitHub, and some of the common problems faced in the process. Git will certainly be useful in your studies, and you will learn more about it in the software engineering courses.
 
 {: .highlight-title}
+
 > Submitting this week's exercises
 >
 > All of this week's exercises are submitted into [this Moodle submission]({{site.week_2_moodle_submission_link}}). Submission should only contain the link to your GitHub repository created in exercise 6.
@@ -253,7 +254,7 @@ Branches are usually used for testing out new features without breaking a workin
 > 1. Create a folder turn it into a Git project like we did before.
 > 2. Create a file called <code>story.txt</code> in your project. Add a lot of text inside.
 > 3. Add another file called <code>shopping_list.txt</code> to the project, and write down what you need from the store (or just many rows of text).
-> 4. Create a subfolder called <code>school</code> into the project, and create a file called<code>lapio.txt</code> inside. You will need these files in the future exercises.
+> 4. Create a subfolder called <code>school</code> into the project, and create a file called<code>school_file.txt</code> inside. You will need these files in the future exercises.
 > 5. After doing all the changes described above, create a total of three commits: one, where you add the story, a second on where you add the shopping list, and a third one where you add the school folder. Make sure that each commit message is truly descriptive.
 > 6. Using the command <code>git log</code>, check that you have properly created three commits.
 > 7. Add something new to the shopping list, and create another commit. Use the command <code>git add -p</code>.
@@ -319,7 +320,7 @@ A new repository called "origin" is added using an SSH connection by running the
 >
 > Create a remote repository in GitHub for the project you created locally as instructed above. **Don't let GitHub create a README, license or a .gitignore file when creating the repository**. Doing so will cause problems later.
 >
-> Add the repository as a remote to your local project using the `git remote add` command as instructed above. **Remember to use the SSH address when you copy the repository address in GitHub**.
+> Add the repository as a remote to your local project using the `git remote add` command as instructed above. **Remember to use the SSH address when you copy the repository address in GitHub**. Note that the paste keyboard shortcut does not work on Git Bash. You need to right click the Git Bash window and choose "Paste".
 
 ### Publishing
 
@@ -344,9 +345,9 @@ We'll start by making changes to the project via GitHub. You can edit files via 
 
 ![Pen icon at GitHub](/assets/edit.png)
 
-Next we'll add a new line of text to `git_practice.txt`, and create a commit of the change using the green button at the bottom of the page. However, you can't see these changes locally.
+Next we'll add a new line of text to `git_practice.txt`, and create a commit of the change by clicking the green "Commit changes..." on top right corner and then inside the dialog click the green "Commit changes" button.
 
-We'll run the following commands:
+Now, if you take a look at the repository's files on your local computer, you can't see these changes locally. We'll run the following commands:
 
 ```bash
 git fetch
@@ -377,10 +378,9 @@ Now you can find the new line of text in the file you changed via GitHub.
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 8
 >
-> Create a new file to the school subfolder via GitHub, and fetch it to your local version.
-
+> Create a new file to the `school` subfolder via GitHub, and fetch it to your local version. You can add file in GitHub by click the `school` folder name on GitHub and cliking "Add a file" on top right corner. Then commit changes similarly as while editing the file.
 
 In practice the situation handled above corresponds to working on a collaborative project, where someone else has added commits to the project and pushed them to GitHub. Other developers should then fetch the new changes with the command `git pull`.
 
@@ -406,19 +406,21 @@ Pulling the new commit from the remote does not work, because the local verison 
 
 In situations like this one can put the local changes aside to the _stash_. This is done with the command `git stash`. When the command is run, the local changes in files tracked by Git will by hidden, but not lost completely. In order to also stash changes in untracked files, add the flag `-u`. Changes can be returned from the stash by running `git stash pop`.
 
-<ol>
-<li>Make changes to some files which you have already added to Git once (i.e. they are not under the headline <code>untracked</code> in the output of <code>git status</code>).</li>
-<li>Stash the changes you just made using Git.</li>
-<li>Open the files you last and check if you can still see the changes</li>
-<li>Edit the <i>first</i> sentence of the file <code>story.txt</code> in GitHub and create a commit.</li>
-<li>Then edit the <i>last</i> sentence of the same file locally, but <strong>don't create a commit</strong>.</li>
-<li>Fetch the changes you made to <code>story.txt</code> in the remote repository to the local version. Use the stash.</li>
-<li>After you have successfully fetched the changes to the local version, create a commit of the changes you made to the last sentence of <code>story.txt</code>.</li>
-<li>Push the end result to GitHub.</li>
-<li>Make sure you can see both the changes you made to the first sentence and the ones to the last sentence in the remote version.</li>
-If you see "CONFLICT" outputted to the terminal when popping changes from the stash, the section "Merge Conflicts" will help.
+{: .important-title }
 
-</ol>
+> Exercise 9
+>
+> 1. Make changes to some files which you have already added to Git once (i.e. they are not under the headline <code>untracked</code> in the output of <code>git status</code>).
+> 2. Stash the changes you just made using Git.
+> 3. Open the files you last and check if you can still see the changes
+> 4. Edit the <i>first</i> sentence of the file <code>story.txt</code> in GitHub and create a commit.
+> 5. Then edit the <i>last</i> sentence of the same file locally, but <strong>don't create a commit</strong>.
+> 6. Fetch the changes you made to <code>story.txt</code> in the remote repository to the local version. Use the stash.
+> 7. After you have successfully fetched the changes to the local version, create a commit of the changes you made to the last sentence of <code>story.txt</code>.
+> 8. Push the end result to GitHub.
+> 9. Make sure you can see both the changes you made to the first sentence and the ones to the last sentence in the remote version.
+>
+> If you see "CONFLICT" outputted to the terminal when popping changes from the stash, the section "Merge Conflicts" will help.
 
 ## Merge
 
@@ -442,7 +444,9 @@ nothing to commit, working directory clean
 
 Notice how Git is kind enough to notify us of the two parallel, differing states, and it even advices us on how to proceed.
 
-Remember that if <code>git status</code> doesn't display the newest state of the remote, you shoud run <code>git fetch</code> first.
+{: .note }
+
+> Remember that if <code>git status</code> doesn't display the newest state of the remote, you shoud run <code>git fetch</code> first.
 
 Pushing the now commits will not work, as the command `git push` will output the following:
 
@@ -469,14 +473,14 @@ Merge made by the 'recursive' strategy.
 
 Now according to the output of `git status` we have created two commits, (`ahead by 2 commits`). The first one is the commit we created locally, which added one new file to the project, and the other one is the merge conflict. Pushing the two commits to GitHub should not result in any errors.
 
-<ol>
-<li>Create two non-conflicting commits, one directly to the remote repository, and another to the local version. For example, edit the first line of your shopping list via GitHub, and the last line on the local version.</li>
-<li>Try pushing the local commit to the remote repository and observer the error message.</li>
-<li>Pull the commit from the remote repository to your local version and write "my first merge" as the commit message.</li>
-If you see "CONFLICT" printed out while pulling, read the next section "Merge Conflicts".
+{: .important-title }
 
-<li>Finally, push all the changes to GitHub.</li>
-</ol>
+> Exercise 10
+>
+> 1. Create two non-conflicting commits, one directly to the remote repository, and another to the local version. For example, edit the first line of your shopping list via GitHub, and the last line on the local version.
+> 2. Try pushing the local commit to the remote repository and observer the error message.
+> 3. Pull the commit from the remote repository to your local version and write "my first merge" as the commit message. If you see "CONFLICT" printed out while pulling, read the next section "Merge Conflicts".
+> 4. Finally, push all the changes to GitHub.
 
 ## Merge Conflicts
 
@@ -548,7 +552,10 @@ Merge conflicts are enfuriating, but rather common when collaborating with other
 
 Merge conflicts can also occur when taking changes out of the stash, if the hidden changes overlap with new ones.
 
-Create a merge conflict in your project and resolve it. Make sure to push the end result to GitHub.
+{: .important-title}
+> Exercise 11
+>
+> Create a merge conflict in your project and resolve it. Make sure to push the end result to GitHub.
 
 ## Commit history
 
@@ -560,11 +567,11 @@ Storing a project's commit history is one of the greatest benefits of using vers
 
 GitHub provides arguably the easiest tool to examine a project's commit history. We'll start revisiting our project's commits from there.
 
-Let's navigate to our project's front page. At approximately the center of the page you should see a bar, whose upper left corner has a tab allowing you to view the old commits. Here the tab says "4 commits".
+Let's navigate to our project's front page. Above the file list on right corner, there's a link that says the number of commits in the repository. Here the link says "4 commits". Clicking this link allows us to view the old commits.
 
 ![Commits in GitHub](/assets/commits.png)
 
-When you click on the tab, you'll see a list of all the commits which have been added to the project. There are three buttons on the right side of this view.
+When you click the link, you'll see a list of all the commits which have been added to the project. There are three buttons on the right side of this view.
 
 ![Viewing a commit](/assets/browse-commit.png)
 
@@ -578,48 +585,23 @@ Then by pressing "Browse files", or the rightmost button with `<>` written on it
 
 Of course, the same procedure can be repeated on the command line. You can browse the state of the project after a specific commit by running `git checkout commit_id`. You should check the id using `git log` for example. Similarly, you can move back to a specific branch by running `git checkout branch_name`, most commonly `git checkout main`. The changes made in a specific commit can be viewed with `git show commit_id`.
 
-<ol>
-<li>Create a new file to you project called <code>secret.txt</code>, and write something inside such as "this is a very important secret".</li>
-<li>Create a new commit of the new file and the contents added to it.</li>
-<li>Then remove the file <code>secret.txt</code>, and create a new commit of the deletition.</li>
-<li>Push the changes to GitHub.</li>
-<li>Navigate to the project page on GitHub. You shouldn't see the secret on the front page. Find the secret from your commit history. Find the secret also using the command line.</li>
-</ol>
+{: .important-title }
+> Exercise 12
+>
+> 1. Create a new file to you project called <code>secret.txt</code>, and write something inside such as "this is a very important secret".
+> 2. Create a new commit of the new file and the contents added to it.
+> 3. Then remove the file <code>secret.txt</code>, and create a new commit of the deletition.
+> 4. Push the changes to GitHub.
+> 5. Navigate to the project page on GitHub. You shouldn't see the secret on the front page. Find the secret from your commit history. Find the secret also using the command line.
 
-Remember, don't push anything secret to the remote repository: no passwords, personal API keys, your student number, or anything you wouldn't want to share with the whole Internet.
-
-## GitHub's workflow
-
-Sites like GitHub make collaboraton in development projects a lot easier. No one notices problems more efficiently than the actual users, and GitHub creates a platform for reporting those complications. Any user can create an _issue_ to a public project in GitHub, where one can report any problems with regards to using the software. Common issue subjects are error messages in edge cases, problems in installing, or missing features.
-
-If one knows the solution to a problem, they can even suggest their own improvements to the project. However, this requires having access to the source code of the project. A public project can be copied to a local computer with the command `git clone`. The command takes the address of the remote repository, which can be acquired from the upper right corner of the project page, as an argument.
-
-![Cloning address](/assets/clone.png)
-
-Note that this is actually the same address you used before when adding a remote repository with the command `git remote add`. The owner of a project will not know who has cloned their project.
-
-In the future, when you start a new Git project, you have two options for linking the local project to a repostory in GitHub. One option is to start by running `git init` inside a folder, create a repository to it in GitHub, and link them together. Another possibility is to create the remote first and simply clone the empty project to your local machine.
-
-In order to push some new commits to a project one has cloned, the project's owner has to [add the user as a collaborator](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/). Otherwise the command `git push` will fail, because the user doesn't have sufficient permissions to the repository. In other words, when starting a collaborative project, all the developers should be added as collaborators, allowing them to push code to the remote repository freely.
-
-However, there exists another way of suggesting changes to an existing project. This is called _forking_. When one forks a project, a copy of it is added to the users _own profile_. This will create an event to GitHub's "feed", and the project's owner can see who has forked their repository. After forking a project, you can clone the project from your _own profile_, and push changes to your _own version_, which has been separated from the original one. The difference to cloning is, that the cloned repository will not appear in your GitHub profile.
-
-If the chages you have done to your own version are good enough in your own opinion, you can suggest merging them to the original project with a [pull request](https://help.github.com/articles/about-pull-requests/). The owner of the original project can then go through your suggested changes and to integrate them to the project if they wish.
-
-<ol>
-<li>Find out using Google, how you can find out the names and addresses of the remote repositories of a project. The answer is a command you should run inside the Git project, when a remote has been set</li>
-<li>Find an <a href="https://en.wikipedia.org/wiki/Open-source_software">open source</a> project of your choice from GitHub (you can for example check our student organization <a href="https://github.com/TKOaly">TKO-äly's GitHub</a> for some projects). First clone the project to your local machine. Then find out what the name of the remote repository is set to by default. You can do this with the command you found in the previous part of this exercise.</li>
-</ol>
-
-Explore an open source project in GitHub. Find the issues and the pull requests, the people who have contributed to the project, and the statistics associated with them.
+{: .warning}
+> Remember, don't push anything secret to the remote repository: no passwords, personal API keys, your student number, or anything you wouldn't want to share with the whole Internet.
 
 ## The End
 
 As a novice programmer it is easy to lose and even break code with version control. However, learning how to use one is definitely one of the most vital skills required in the working life. Though the system in use may not be Git, the same principles often apply.
 
 If you run into a strange error message, don't be afraid to ask for help. Avoid running commands blindly. Keeping a close eye on the output of `git status` will get you a long way. Also remember to make commits a sensible size, push them to the remote repository regularly, and communicate with your team mates. The best way to learn how to use Git is to just do it, so don't give up and remove the project upon the first error message. Remember, that you can always just clone the repository to your computer again.
-
-Now congratulate yourself, rest for a bit and take a break before returning to check the learning goals.
 
 Hungry for more? You can read about Git from the following sources:
 
