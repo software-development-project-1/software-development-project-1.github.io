@@ -27,7 +27,7 @@ Kalle Ilves (kalle.ilves@haaga-helia.fi)
 
 > First week's exercises in [Agile software development and Scrum](/agile-software-development) needs to be submitted before the deadline to confirm the course participation.
 
-The assesment is based on the group's project and the personal contributions of the team member.
+The assesment is based on the group's project and the personal contributions of the group member.
 
 The project assesment is based on the following aspects:
 

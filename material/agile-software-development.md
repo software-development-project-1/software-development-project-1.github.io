@@ -64,7 +64,7 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 {: .highlight-title}
 > Submitting this week's exercises
 >
-> All of this week's exercises are submitted into [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a single PDF file. This week's exercises needs to be submitted before the deadline to confirm the course participation.
+> All of this week's exercises are submitted into [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a single PDF file. This week's exercises needs to be submitted before the deadline on {{site.week_1_deadline}} to confirm the course participation.
 
 {: .important-title }
 

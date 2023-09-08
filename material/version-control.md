@@ -39,7 +39,7 @@ Git and GitHub are used in solo as well as collaborative projects at University 
 
 > Submitting this week's exercises
 >
-> All of this week's exercises are submitted into [this Moodle submission]({{site.week_2_moodle_submission_link}}). Submission should only contain the link to your GitHub repository created in exercise 6.
+> All of this week's exercises are submitted into [this Moodle submission]({{site.week_2_moodle_submission_link}}). Submission should only contain the link to your GitHub repository created in exercise 6. The submission deadline is on {{site.week_2_deadline}}.
 
 {: .important-title }
 
