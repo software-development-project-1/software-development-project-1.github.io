@@ -47,7 +47,7 @@ During Sprint Planning Developers discuss the technical steps required to implem
 
 While discussing the technical details, the Developers document a todo-list of tasks with a short description. Developers also consider the order of the tasks:
 
-> Task 1: Add thymeleaf template for the blog submission form containing fields for name and description
+> Task 1: Add Thymeleaf template for the blog submission form containing fields for name and description
 
 > Task 2: Add BlogController controller class and a method for rendering the blog submission form
 
@@ -103,6 +103,10 @@ Sprint Backlog is commonly organized as taskboard that has columns for different
 
 Taskboards are either physical taskboards, for example whiteboards in an office, or virtual taskboards. These days, it is quite common that a virtual taskboard are used as Product Backlogs and Sprint Backlogs. During this we will be using virtual taskboard platform, called [Trello](https://trello.com).
 
+## Managing backlogs in Trello
+
+[Trello](https://trello.com) is an online platform for managing virtual taskboards. We will be using Trello to manage our project's Product Backlog and Sprint Backlogs.
+
 {: .highlight-title}
 
 > Submitting this Sprint's exercises
@@ -115,21 +119,23 @@ Taskboards are either physical taskboards, for example whiteboards in an office,
 >
 > Create a [Trello](https://trello.com) account.
 
-## Managing backlogs in Trello
+We can create a new Trello _board_ by clicking the "Create" button in the navigation bar and choosing "Create Board" from the menu. Boards have _lists_ that can hold _cards_. We can add a new list by opening a board and clicking the "Add a list" button on the board. We can change the order of the lists by dragging them around the board. We can add a card for a list by clicking the "Add a card" button on a list. Once added, we can move the cards around the board by dragging them.
 
-TODO
+We can create separate boards for Product Backlog and Sprint Backlogs in Trello. Cards can be used as user stories and tasks. Lists can be used to determine states for user stories and tasks, such as "Not started", "In progress" and "Done" used in an example above.
+
+Check the [Learn Trello board basics](https://trello.com/guide/trello-101) guide to learn more about boards.
 
 {: .important-title }
 
 > Exercise 2
 >
-> One of the group members should create a [workspace](https://support.atlassian.com/trello/docs/what-are-trello-workspaces/) for the project in Trello. Once logged in, a workspace can be added by clicking the "Create" button in the navigation bar and choosing "Create Workspace" from the menu. Once the workspace is created, invite other group members to the workspace. Also make sure to invite the teacher ({{site.teacher_email}}) to the workspace.
+> _One of the group members_ should create a [workspace](https://support.atlassian.com/trello/docs/what-are-trello-workspaces/) for the project in Trello. Once logged in, a workspace can be added by clicking the "Create" button in the navigation bar and choosing "Create Workspace" from the menu. Once the workspace is created, invite other group members to the workspace. Also make sure to invite the teacher ({{site.teacher_email}}) to the workspace.
 
 {: .important-title }
 
 > Exercise 3
 >
-> Create a Product Backlog board in Trello. A board can be added by clicking the "Create" button in the navigation bar and choosing "Create Board" from the menu. Make sure to choose created workspace as the board's workspace from the dropdown menu. Name Product Backlog board "Product backlog". The Product Backlog board should have these three lists from left to right:
+> Create a Product Backlog board in Trello. Make sure to choose created workspace as the board's workspace from the dropdown menu. Name Product Backlog board "Product backlog". The Product Backlog board should have these three lists from left to right:
 >
 > - "Backlog" for the user stories that are not on any Sprint yet
 > - "In sprint" for the user stories that are chosen for the current Sprint
@@ -260,7 +266,53 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 ## Sprint 1 planning
 
-TODO
+Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Planning event:
+
+> "Let's start from the basics. We need a simple web application which allows user to add a reading recommendation and list the added reading recommendations.
+>
+> When the user opens the application on browser, there should be page where the added reading recommendations are listed. There should also be a link that says "Add a reading recommendation" which takes the user to another page, where they can add a reading recommendation using a form.
+>
+> For now, it is enough that the reading recommendation has a title, for example "The 2020 Scrum Guide", a link, for example "https://scrumguides.org/scrum-guide.html" and a short description, for example "All you need to know about Scrum". Each of these should have field on the form and they should be displayed on the list."
+>
+> -- The Product Owner
+
+After some discussion the Scrum Team came up with the following user stories:
+
+1. As an user I want to add a reading recommendation so that I can build a collection of reading recommendations
+2. As an user I want to list the added reading recommendations so that I can easily find interesting things to read
+
+For the first user story, the Developers came up with the following tasks:
+
+1. Add Thymeleaf template for the reading recommendation submission form containing fields for title, link and description
+2. Add ReadingRecommendationController controller class and a method for rendering the reading recommendation submission form
+3. Add ReadingRecommendation JPA entity class and ReadingRecommendation JPA repository class
+4. Add a method for the ReadingRecommendationController that adds the reading recommendation to database
+
+For the second user story, the Developers came up with the following tasks:
+
+1. Add Thymeleaf template for listing the added reading recommendations with title, link and description.
+2. Add a method for rendering the reading recommendation list for the ReadingRecommendationController controller
+
+These are the user stories and tasks, that you will be working on as a group during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
+
+### Tips for implementing the tasks
+
+- It is recommended to implement the user stories in the described order. During this Sprint it is easier to do most of the tasks together because they are so tightly connected.
+- _Push_ code to the GitHub repository often. Once you have some _working_ code, do the `git add`, `git commit`, `git push` steps to push the code to GitHub.
+- _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer.
+- See how the mentioned things are done in the [example project]({{site.example_project_link}}).
+- [Controllers](https://www.baeldung.com/spring-controllers)
+- [Using Thymeleaf in Spring](https://www.baeldung.com/thymeleaf-in-spring-mvc)
+- [JPA Entities](https://www.baeldung.com/jpa-entities)
+- [JPA Repositories](https://www.baeldung.com/spring-data-repositories)
+
+{: .important-title }
+
+> Exercise 10
+>
+> 1. Add these two user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
+> 2. Add the tasks to the "Sprint 1 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
+> 3. Once you start working on task, assign the task to you. This can be done by first clicking on the card, then clicking the "Members" button below the "Add to card" and choosing your Trello account. Each task can also have multiple members. The important thing is that each task that is not in the "To do" state should have at least one member assigned to it.
 
 {: .highlight }
 
@@ -273,22 +325,15 @@ TODO
 
 {: .important-title }
 
-> Exercise 10
->
-> 1. Add these two user stories to the "Product Backlog" board in Trello. The user stories should be initially in the "In sprint" list of the board.
-> 2. Add the tasks to the "Sprint 1 Backlog" board in Trello. The tasks should be initially in the "To do" list of the board.
-
-{: .important-title }
-
 > Exercise 11
 >
-> Impelement 1. user story
+> Implement the tasks of the "As an user I want to add a reading recommendation so that I can build a collection of reading recommendations" user story
 
 {: .important-title }
 
 > Exercise 12
 >
-> Impelement 2. user story
+> Impelement the tasks of the "As an user I want to list the added reading recommendations so that I can easily find interesting things to read" user story
 
 ## Daily Scrum
 
