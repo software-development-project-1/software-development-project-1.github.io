@@ -330,6 +330,19 @@ Changes can be pushed to a specific branch in the remote repository as follows: 
 
 Let's push the changes we made to the file `git_practice.txt` by running `git push -u origin main`, since we named the remote `origin` and we are using the main branch. Next we'll navigate to the project site on GitHub. There we will find the file `git_practice.txt`.
 
+{: .note}
+> If the `git` commands keeps asking for the SSH key passphrase:
+> ```bash
+> Enter passphrase for key '/c/Users/h02680/.ssh/id_ed25519'
+> ```
+> Run the following commands _one by one_:
+> ```bash
+> eval "$(ssh-agent -s)"
+> ssh-add
+> ```
+> The latter command will ask for the SSH key passphrase. Once you type it in and press enter, you shouldn't need to re-enter it _before you restart your computer_.
+>
+
 {: .important-title }
 
 > Exercise 7

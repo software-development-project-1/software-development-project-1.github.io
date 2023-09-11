@@ -23,7 +23,7 @@ callouts:
 week_1_moodle_submission_link: "#"
 week_2_moodle_submission_link: "#"
 sprint_1_moodle_submission_link: "#"
-example_project_link: "#"
+example_project_link: "https://github.com/software-development-project-1/example-project"
 teacher_email: "kalle.ilves@haaga-helia.fi"
 week_1_deadline: "2.11. at 10:00"
 week_2_deadline: "9.11. at 10:00"

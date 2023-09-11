@@ -7,7 +7,7 @@ nav_order: 6
 
 # Sprint 1
 
-This week we'll start working on the project described by the Product Owner in the [project description](/project-description). As we have learned, in Scrum the project advances in short iterations called _Sprints_. Each of our three sprints last two weeks.
+This week we'll start working on the project described by the Product Owner in the [project description](/project-description). As we have learned, in Scrum the project advances in short iterations called _Sprints_. Each of our three sprints last two weeks. This week is the start of the Sprint 1.
 
 {: .highlight }
 
@@ -65,7 +65,7 @@ The "Scrum Artifacts" section of the [Scrum Guide](https://scrumguides.org/scrum
 
 ### Product backlog
 
-The _Product Backlog_ is a prioritized list of requirements for the developed software. Commonly these requirements are documented as user stories. The Product Backlog is altered constantly during the Sprints, mostly during the Sprint Planning event. For example, new user stories are added, old ones are edited or their priority is changed. Once a user story is implemented during the Sprint and it the implementation is accepted by the Product Owner, the user story can be removed from the Product Backlog.
+The _Product Backlog_ is a prioritized list of requirements for the developed software. Commonly these requirements are documented as user stories. The Product Backlog is altered constantly during the Sprints, mostly during the Sprint Planning event. For example, new user stories are added, old ones are edited or their priority is changed. Once a user story is implemented during the Sprint and the implementation is accepted by the Product Owner, the user story can be removed from the Product Backlog.
 
 {: .note }
 
@@ -117,6 +117,8 @@ Taskboards are either physical taskboards, for example whiteboards in an office,
 
 ## Managing backlogs in Trello
 
+TODO
+
 {: .important-title }
 
 > Exercise 2
@@ -130,7 +132,7 @@ Taskboards are either physical taskboards, for example whiteboards in an office,
 > Create a Product Backlog board in Trello. A board can be added by clicking the "Create" button in the navigation bar and choosing "Create Board" from the menu. Make sure to choose created workspace as the board's workspace from the dropdown menu. Name Product Backlog board "Product backlog". The Product Backlog board should have these three lists from left to right:
 >
 > - "Backlog" for the user stories that are not on any Sprint yet
-> - "In sprint" for the user stories that on the current Sprint
+> - "In sprint" for the user stories that are chosen for the current Sprint
 > - "Done" for the user stories that have been completed
 
 {: .important-title }
@@ -149,27 +151,59 @@ Taskboards are either physical taskboards, for example whiteboards in an office,
 >
 > Decide how you will communicate outside the weekly sessions. Choose a communication platform, such as Teams, Telegram or Discord. Also schedule at least one weekly time slot when you work on the exercises together outside the weekly sessions. If possible, meet physically on the campus or some other location.
 
-## GitHub workflow
+## GitHub's workflow
 
-TODO
+Sites like GitHub make collaboraton in development projects a lot easier. No one notices problems more efficiently than the actual users, and GitHub creates a platform for reporting those complications. Any user can create an _issue_ to a public project in GitHub, where one can report any problems with regards to using the software. Common issue subjects are error messages in edge cases, problems in installing, or missing features.
+
+If one knows the solution to a problem, they can even suggest their own improvements to the project. However, this requires having access to the source code of the project. A public project can be copied to a local computer with the command `git clone`. The command takes the address of the remote repository, which can be acquired from the upper right corner of the project page, as an argument.
+
+![Cloning address](/assets/git-clone.png)
+
+Note that this is actually the same address you used before when adding a remote repository with the command `git remote add`. The owner of a project will not know who has cloned their project.
+
+In the future, when you start a new Git project, you have two options for linking the local project to a repostory in GitHub. One option is to start by running `git init` inside a folder, create a repository to it in GitHub, and link them together. Another possibility is to create the remote first and simply clone the empty project to your local machine.
+
+### GitHub organizations
+
+When a software development teams is working on project together, the project can have multiple repositories and different team members might only have access to certain repositories. To have more control over the repository access, the repositories aren't personal repositories created by certain team member. Instead the repositories belong to certain _organization_ and team members can be invited to join that organization.
+
+Similarly as a repository, an organization can be added on GitHub by cliking the plus icon on the top-right corner of the page.
+
+![GitHub organization](/assets/github-organization.png)
+
+Once the organization is created, a team member can be invited by clicking the "People" tab on the navigation bar and then clicking the green "Invite member" button.
+
+![GitHub organization invite](/assets/organization-invite.png)
 
 {: .important-title }
 
 > Exercise 6
 >
-> One of the group members should create a GitHub organization for the project. Once the organization is created, add other group members to the organization as collaborators.
+> _One of the group members_ should create a GitHub organization for the project. Once the organization is created, invite other group members to the organization. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the group.
+
+### Forking a repository
+
+Instead of starting a repository from scratch, we can create a copy an existing repository and use that as a starting point for our project. In GitHub terminology this is called _forking a repository_ and the copied repository is called a _fork_.
+
+To get started faster, you can start your project by forking the [example-project repository]({{site.example_project_link}}). The repository has a simple Java Spring Boot application initialized with [Spring Initializr](https://start.spring.io/). It has some code samples of Thymeleaf templates, controllers, JPA entities and JPA repositories.
+
+A repository can be forked by cliking the "Fork" button on right side of the repository's name.
+
+![GitHub fork repository](/assets/fork-repository.png)
 
 {: .important-title }
 
 > Exercise 7
 >
-> Fork repository
+> _One of the group members_ should fork the [example-project repository]({{site.example_project_link}}). Choose the "Owner" as the organization you created previously and give the repository a descriptive name, such as "cool-reads" and a description. The forked repository will become your project's repository where you start working on the project.
 
 {: .important-title }
 
 > Exercise 8
 >
-> Each group member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to use the SSH address of the GitHub repository with the command. Once each group member has the repository on their local computer, do the following:
+> Each group member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example-project repository. Remember to use the SSH address of the GitHub repository with the command. If you have trouble with cloning, see instructions below.
+>
+> Once each group member has the repository on their local computer, do the following:
 >
 > 1. _Each group member_ opens the cloned repository folder in Visual Studio Code or in some other editor.
 > 2. _Each group member_ opens the cloned repository folder in Git Bash. See previous week's [Git instructions](/git) if you have trouble.
@@ -177,6 +211,28 @@ TODO
 > 4. _Each group member_ checks that the changes are visible in GitHub.
 > 5. Once changes have been pushed to GitHub, _each group member_ pulls the changes from GitHub using the `git pull` command.
 > 6. Once everybody sees the changes on their local `README.md` file, repeat the the steps from step 3. for each group member until everyone has pushed some changes to the GitHub repository.
+
+{: .note}
+
+> If the `git clone` commands outputs the following:
+>
+> ```bash
+> Are you sure you want to continue connecting (yes/no/[fingerprint])?
+> ```
+>
+> Type "yes" and press enter.
+
+{: .note}
+
+> If the `git clone` or other `git` commands keeps asking for the SSH key passphrase:
+>
+> ```bash
+> Enter passphrase for key '/c/Users/h02680/.ssh/id_ed25519'
+> ```
+>
+> Check, the [Git instructions](http://localhost:4000/git#publishing).
+>
+> If you don't remember the passphrase for the SSH key, generate another key as instructed in the [Git instructions](/git#adding-a-remote). Remember to add the new key to GitHub as well.
 
 ### The README file
 
@@ -195,7 +251,12 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 > Exercise 9
 >
-> README
+> Add the following things to your repository's `README.md` file using Markdown:
+>
+> 1. At the beginning of the file add the project name "Cool Reads" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
+> 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
+> 3. Below the description [list](https://www.markdownguide.org/basic-syntax#lists-1) each group member's name.
+> 4. Each group member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME
 
 ## Sprint 1 planning
 
