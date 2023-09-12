@@ -209,14 +209,9 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 >
 > Each group member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example-project repository. Remember to use the SSH address of the GitHub repository with the command. If you have trouble with cloning, see instructions below.
 >
-> Once each group member has the repository on their local computer, do the following:
+> Once you have cloned the repository, open the code in an editor such as Eclipse or Visual Studio Code. In Eclipse you can open the project folder from "File > Open Project from Filesystem". 
 >
-> 1. _Each group member_ opens the cloned repository folder in Visual Studio Code or in some other editor.
-> 2. _Each group member_ opens the cloned repository folder in Git Bash. See previous week's [Git instructions](/git) if you have trouble.
-> 3. _One of the group members_ locally edits the contents of the `README.md` file in the repository folder. Push changes to the remote GitHub repository using `git add`, `git commit` and `git push` commands.
-> 4. _Each group member_ checks that the changes are visible in GitHub.
-> 5. Once changes have been pushed to GitHub, _each group member_ pulls the changes from GitHub using the `git pull` command.
-> 6. Once everybody sees the changes on their local `README.md` file, repeat the the steps from step 3. for each group member until everyone has pushed some changes to the GitHub repository.
+> Explore the code and start the Spring Boot application. Once started, the application should be open at <http://localhost:8080>.
 
 {: .note}
 
@@ -240,6 +235,19 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 >
 > If you don't remember the passphrase for the SSH key, generate another key as instructed in the [Git instructions](/git#adding-a-remote). Remember to add the new key to GitHub as well.
 
+{: .important-title }
+
+> Exercise 9
+>
+> Once each group member has the repository on their local computer, do the following:
+>
+> 1. _Each group member_ opens the cloned repository folder in Eclipse or in some other editor.
+> 2. _Each group member_ opens the cloned repository folder in Git Bash. See previous week's [Git instructions](/git) if you have trouble.
+> 3. _One of the group members_ locally edits the contents of the `README.md` file in the repository folder. Push changes to the remote GitHub repository using `git add`, `git commit` and `git push` commands.
+> 4. _Each group member_ checks that the changes are visible in GitHub.
+> 5. Once changes have been pushed to GitHub, _each group member_ pulls the changes from GitHub using the `git pull` command.
+> 6. Once everybody sees the changes on their local `README.md` file, repeat the the steps from step 3. for each group member until everyone has pushed some changes to the GitHub repository.
+
 ### The README file
 
 The `README.md` file we worked with in the previous exercise has a special meaning in software development projects. When a software developer starts exploring a project, the first thing they should do is to look for the README file. This file should have all the relevant information about the project, for example:
@@ -255,7 +263,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 10
 >
 > Add the following things to your repository's `README.md` file using Markdown:
 >
@@ -309,7 +317,7 @@ These are the user stories and tasks, that you will be working on as a group dur
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 11
 >
 > 1. Add these two user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
 > 2. Add the tasks to the "Sprint 1 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
@@ -326,13 +334,13 @@ These are the user stories and tasks, that you will be working on as a group dur
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 12
 >
 > Implement the tasks of the "As an user I want to add a reading recommendation so that I can build a collection of reading recommendations" user story
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > Impelement the tasks of the "As an user I want to list the added reading recommendations so that I can easily find interesting things to read" user story
 
@@ -366,7 +374,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > Decide which group member gives the Sprint Review demonstration at the beginning of the next Sprint. This group member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 
