@@ -298,8 +298,9 @@ These are the user stories and tasks, that you will be working on as a group dur
 ### Tips for implementing the tasks
 
 - It is recommended to implement the user stories in the described order. During this Sprint it is easier to do most of the tasks together because they are so tightly connected.
-- _Push_ code to the GitHub repository often. Once you have some _working_ code, do the `git add`, `git commit`, `git push` steps to push the code to GitHub.
+- _Push_ code to the GitHub repository often. Once you have some _working_ code, use `git add`, `git commit`, `git push` commands to push the code to GitHub.
 - _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer.
+- While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](http://localhost:4000/git#merge-conflicts).
 - See how the mentioned things are done in the [example project]({{site.example_project_link}}).
 - [Controllers](https://www.baeldung.com/spring-controllers)
 - [Using Thymeleaf in Spring](https://www.baeldung.com/thymeleaf-in-spring-mvc)
@@ -312,7 +313,7 @@ These are the user stories and tasks, that you will be working on as a group dur
 >
 > 1. Add these two user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
 > 2. Add the tasks to the "Sprint 1 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
-> 3. Once you start working on task, assign the task to you. This can be done by first clicking on the card, then clicking the "Members" button below the "Add to card" and choosing your Trello account. Each task can also have multiple members. The important thing is that each task that is not in the "To do" state should have at least one member assigned to it.
+> 3. Once you start working on task, assign the task to you. This can be done by first clicking on the card, then clicking the "Members" button below the "Add to card" and choosing your Trello account. A task can also have multiple members. The important thing is that each task that is not in the "To do" state should have at least one member assigned to it.
 
 {: .highlight }
 
@@ -337,7 +338,25 @@ These are the user stories and tasks, that you will be working on as a group dur
 
 ## Daily Scrum
 
-TODO
+The Daily Scrum is a 15-minute event, commonly held on daily basis. The purpose of the Daily Scrum is for the Scrum Team to inspect and adapt its progress. During the event each team member typically answers the following three questions:
+
+1. What did you do previously?
+2. What will you do next?
+3. Are there any obstacles in your way?
+
+For example this could be a one team member's statement during the Daily Scrum:
+
+> "Yesterday I started implementing the task for the blog listing Thymeleaf template. I'll continue working on that today. I had some trouble while trying to iterate a List in the Thymeleaf template. I don't remember the syntax. Could anyone have a look at it with me after the Daily Scrum?"
+>
+> -- Jane, one of the Developers
+
+The Sprint Backlog should be open during the event so that the whole Scrum Team is up-to-date with Sprint Backlog updates and the Sprint progress.
+
+A funny fact: it is common that during the Daily Scrum the whole Scrum Team is standing. This is why the Daily Scrum is often called the "daily stand-up". The reason is very practical: the event tends to be shorter because standing for a long period of time can become tedious.
+
+{: .note }
+
+> You don't need to have a Daily Scrum event on a daily basis. Just start each group meeting (including the weekly sessions) with a Daily Scrum.
 
 ## Sprint Review
 
