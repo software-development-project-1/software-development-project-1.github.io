@@ -298,21 +298,20 @@ The button `Create repository` adds the project to your personal account. When y
 
 A remote can be linked to a local project with the command `git remote add`.
 
-The command takes the name and the address of the remote repository as arguments. GitHub offers two options for the repository address protocol: SSH and HTTPS. We'll choose the SSH address for the remote project:
+The command takes the name and the address of the remote repository as arguments. GitHub offers two options for the repository address protocol: SSH and HTTPS. _We'll choose the HTTPS address_ for the remote project:
 
-![SSH address in GitHub](/assets/ssh-clone.png)
+![HTTPS address in GitHub](/assets/https-clone.png)
 
-A new repository called "origin" is added using an SSH connection by running the command `git remote add origin git@github.com:user/project.git`. An HTTPS address would be almost identical to the URL in your browser. A remote can be called practically anything besides "origin", but it is a good and a common choice. It is possible to add several remotes, when properly naming them becomes important.
+A new repository called "origin" is added using an HTTPS connection by running the command `git remote add origin <https-address-of-the-repository>`. An HTTPS address would be almost identical to the URL in your browser. A remote can be called practically anything besides "origin", but it is a good and a common choice. It is possible to add several remotes, when properly naming them becomes important.
 
 {: .important-title }
 
 > Exercise 5
 >
-> When we start making changes to a remote repository on GitHub, we need to authenticate. This is done using the [SSH protocol](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh). _SSH key pairs_ are used to authenticate with SSH. We'll generate a _public key_ and a _private key_ on our local computer. We'll give the public key to GitHub and then, connection between our local computer and GitHub will be authenticated.
+> When we start making changes to a remote repository on GitHub, we need to authenticate. So that we don't need to input our GitHub credentials every time we access the remote repository, let's configure the Git's [Credential Storage](https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage):
 >
-> Start by generating the SSH key. [GitHub has instructions for this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). Go through the steps in both "Generating a new SSH key" and "Adding your SSH key to the ssh-agent" parts. When you generate key, **make sure that you remember the password you provide for the key**.
->
-> Next, Add your public SSH key to your GitHub account. <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account">GitHub has instructions for this as well</a>.
+> - On _Windows_, run `git config --global credential.helper manager` in Git Bash.
+> - On _macOS_, run `git config --global credential.helper osxkeychain` in the Terminal
 
 {: .important-title }
 
@@ -320,7 +319,7 @@ A new repository called "origin" is added using an SSH connection by running the
 >
 > Create a remote repository in GitHub for the project you created locally as instructed above. **Don't let GitHub create a README, license or a .gitignore file when creating the repository**. Doing so will cause problems later.
 >
-> Add the repository as a remote to your local project using the `git remote add` command as instructed above. **Remember to use the SSH address when you copy the repository address in GitHub**. Note that the paste keyboard shortcut does not work on Git Bash. You need to right click the Git Bash window and choose "Paste".
+> Add the repository as a remote to your local project using the `git remote add` command as instructed above. **Remember to use the HTTPS address when you copy the repository address in GitHub**. Note that the paste keyboard shortcut does not work on Git Bash. You need to right click the Git Bash window and choose "Paste".
 
 ### Publishing
 
@@ -331,17 +330,7 @@ Changes can be pushed to a specific branch in the remote repository as follows: 
 Let's push the changes we made to the file `git_practice.txt` by running `git push -u origin main`, since we named the remote `origin` and we are using the main branch. Next we'll navigate to the project site on GitHub. There we will find the file `git_practice.txt`.
 
 {: .note}
-> If the `git` commands keeps asking for the SSH key passphrase:
-> ```bash
-> Enter passphrase for key '/c/Users/h02680/.ssh/id_ed25519'
-> ```
-> Run the following commands _one by one_:
-> ```bash
-> eval "$(ssh-agent -s)"
-> ssh-add
-> ```
-> The latter command will ask for the SSH key passphrase. Once you type it in and press enter, you shouldn't need to re-enter it _before you restart your computer_.
->
+> Running `git push` will ask for your GitHub username and password. Once you have submitted those successfully, return to Git Bash.
 
 {: .important-title }
 

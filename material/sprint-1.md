@@ -207,33 +207,11 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 
 > Exercise 8
 >
-> Each group member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example-project repository. Remember to use the SSH address of the GitHub repository with the command. If you have trouble with cloning, see instructions below.
+> Each group member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example-project repository. _Remember to use the HTTPS address_ of the GitHub repository with the command.
 >
 > Once you have cloned the repository, open the code in an editor such as Eclipse or Visual Studio Code. In Eclipse you can open the project folder from "File > Open Project from Filesystem". 
 >
 > Explore the code and start the Spring Boot application. Once started, the application should be open at <http://localhost:8080>.
-
-{: .note}
-
-> If the `git clone` commands outputs the following:
->
-> ```bash
-> Are you sure you want to continue connecting (yes/no/[fingerprint])?
-> ```
->
-> Type "yes" and press enter.
-
-{: .note}
-
-> If the `git clone` or other `git` commands keeps asking for the SSH key passphrase:
->
-> ```bash
-> Enter passphrase for key '/c/Users/h02680/.ssh/id_ed25519'
-> ```
->
-> Check, the [Git instructions](http://localhost:4000/git#publishing).
->
-> If you don't remember the passphrase for the SSH key, generate another key as instructed in the [Git instructions](/git#adding-a-remote). Remember to add the new key to GitHub as well.
 
 {: .important-title }
 
@@ -255,11 +233,11 @@ The `README.md` file we worked with in the previous exercise has a special meani
 - What's the project about?
 - How to use the project?
 - How to develop the project?
-- Who are project contributors?
+- Who are the project contributors?
 
-In GitHub, the README files commonly have the `.md` extension. These are [Markdown](https://www.markdownguide.org/) files. Markdown is markup language similar to HTML and you can use to add formatting elements to plaintext text documents. Compared to HTML, Markdown syntax is much simpler and that's why it is an excellent choise for formatting text documents.
+In GitHub, the README files commonly have the `.md` extension. These are [Markdown](https://www.markdownguide.org/) files. Markdown is markup language similar to HTML and you can use it to add formatting elements to plaintext text documents. Compared to HTML, Markdown syntax is much simpler and that's why it is an excellent choise for formatting text documents.
 
-[This guide](https://www.markdownguide.org/basic-syntax) demonstrates the Markdown syntax compared to HTML. As an example, [here's](https://github.com/facebook/react/blob/main/README.md) what the React project's `README.md` file looks like and [here's](https://github.com/facebook/react/blob/main/README.md?plain=1) what the Markdown markup looks like.
+[This guide](https://www.markdownguide.org/basic-syntax) demonstrates the Markdown syntax compared to HTML. As an example, [here's](https://github.com/facebook/react/blob/main/README.md) what the React project's `README.md` file looks like and [here's](https://github.com/facebook/react/blob/main/README.md?plain=1) what the Markdown markup looks like. You can use the [Markdown Live Preview](https://markdownlivepreview.com/) to try out different kind of Markdown markup.
 
 {: .important-title }
 
@@ -271,6 +249,8 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 > 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
 > 3. Below the description [list](https://www.markdownguide.org/basic-syntax#lists-1) each group member's name.
 > 4. Each group member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME
+>
+> Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 
 ## Sprint 1 planning
 
