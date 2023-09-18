@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cool Reads</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container my-3">
+      <h1>Reading recommendations</h1>
+      <form class="mb-3">
+        <div class="mb-3">
+          <label class="form-label">Filter by a category</label>
+          <select class="form-select">
+            <option value="any">Any category</option>
+            <option value="1">Programming tutorials</option>
+            <option value="2">Video game news</option>
+            <option value="3">News articles on cats</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary">Filter</button>
+      </form>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Link</th>
+            <th>Description</th>
+            <th>Added on</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>The 2020 Scrum Guide</th>
+            <td>
+              <a href="https://scrumguides.org/scrum-guide.html"
+                >https://scrumguides.org/scrum-guide.html</a
+              >
+            </td>
+            <td>All you need to know about Scrum</td>
+            <td>18.9.2023 at 11:57</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <a href="#" class="btn btn-primary">Add a reading recommendation</a>
+    </div>
+  </body>
+</html>

@@ -209,7 +209,7 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 >
 > Each group member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example-project repository. _Remember to use the HTTPS address_ of the GitHub repository with the command.
 >
-> Once you have cloned the repository, open the code in an editor such as Eclipse or Visual Studio Code. In Eclipse you can open the project folder from "File > Open Project from Filesystem". 
+> Once you have cloned the repository, open the code in an editor such as Eclipse or Visual Studio Code. In Eclipse you can open the project folder from "File > Open Project from Filesystem". The project requires _Java version 17_.
 >
 > Explore the code and start the Spring Boot application. Once started, the application should be open at <http://localhost:8080>.
 
@@ -243,7 +243,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 > Exercise 10
 >
-> Add the following things to your repository's `README.md` file using Markdown:
+> Replace the current contents of the repository's `README.md` file with the following information using Markdown:
 >
 > 1. At the beginning of the file add the project name "Cool Reads" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
 > 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
@@ -266,19 +266,31 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 
 After some discussion the Scrum Team came up with the following user stories:
 
-1. As an user I want to add a reading recommendation so that I can build a collection of reading recommendations
-2. As an user I want to list the added reading recommendations so that I can easily find interesting things to read
+1. As an user I want to add a reading recommendation so that I can build a collection of recommendations
+2. As an user I want to list the added reading recommendations so that I can find interesting things to read
 
-For the first user story, the Developers came up with the following tasks:
+The implementation of the first user story should look roughly something like this:
 
-1. Add Thymeleaf template for the reading recommendation submission form containing fields for title, link and description
-2. Add ReadingRecommendationController controller class and a method for rendering the reading recommendation submission form
-3. Add ReadingRecommendation JPA entity class and ReadingRecommendation JPA repository class
-4. Add a method for the ReadingRecommendationController that adds the reading recommendation to database
+![](/assets/sprint-1-user-story-1.png){: width="500" }
 
-For the second user story, the Developers came up with the following tasks:
+The implementation of the second user story should look roughly something like this:
 
-1. Add Thymeleaf template for listing the added reading recommendations with title, link and description.
+![](/assets/sprint-1-user-story-2.png){: width="500" }
+
+{: .note }
+
+> The visual aspect of the application is not as important as the functionality. The most important things is that the user has some kind of functionality for the features described in the user stories.
+
+For the _first user story_, the Developers came up with the following tasks:
+
+1. Add ReadingRecommendation JPA entity class and ReadingRecommendationRepository JPA repository class
+2. Add Thymeleaf template for the reading recommendation submission form containing fields for title, link and description
+3. Add ReadingRecommendationController controller class and a method for rendering the reading recommendation submission form
+4. Add a method for the ReadingRecommendationController that saves the reading recommendation to the database
+
+For the _second user story_, the Developers came up with the following tasks:
+
+1. Add Thymeleaf template for listing the added reading recommendations with title, link and description
 2. Add a method for rendering the reading recommendation list for the ReadingRecommendationController controller
 
 These are the user stories and tasks, that you will be working on as a group during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
@@ -290,6 +302,7 @@ These are the user stories and tasks, that you will be working on as a group dur
 - _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer.
 - While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](http://localhost:4000/git#merge-conflicts).
 - See how the mentioned things are done in the [example project]({{site.example_project_link}}).
+- The example project is using [Bootstrap](https://getbootstrap.com/) frontend toolkit. You can use it to make your application look nice. [Forms](https://getbootstrap.com/docs/5.3/forms/form-control/), [buttons](https://getbootstrap.com/docs/5.3/components/buttons/) and [tables](https://getbootstrap.com/docs/5.3/content/tables/) are useful guides for the user stories in this Sprint.
 - [Controllers](https://www.baeldung.com/spring-controllers)
 - [Using Thymeleaf in Spring](https://www.baeldung.com/thymeleaf-in-spring-mvc)
 - [JPA Entities](https://www.baeldung.com/jpa-entities)
@@ -316,13 +329,13 @@ These are the user stories and tasks, that you will be working on as a group dur
 
 > Exercise 12
 >
-> Implement the tasks of the "As an user I want to add a reading recommendation so that I can build a collection of reading recommendations" user story
+> Implement the tasks of the first user story, "As an user I want to add a reading recommendation so that I can build a collection of reading recommendations".
 
 {: .important-title }
 
 > Exercise 13
 >
-> Impelement the tasks of the "As an user I want to list the added reading recommendations so that I can easily find interesting things to read" user story
+> Implement the tasks of the second user story, "As an user I want to list the added reading recommendations so that I can easily find interesting things to read".
 
 ## Daily Scrum
 
