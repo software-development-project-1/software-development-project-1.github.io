@@ -72,7 +72,7 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 >
 > Read the "Scrum Team" chapter of the Scrum Guide and answer the following questions in your own words:
 >
-> 1. What are different roles in a Scrum Team?
+> 1. What are the different roles in a Scrum Team?
 > 2. What are the responsibilities of each role?
 
 {: .important-title }
@@ -91,7 +91,7 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 >
 > Scrum emphasize the importance of _transparency_ of the process. It means that the significant aspects of the process should be visible to those responsible for the outcome. Transparency allows each Scrum Team member to track and understand what's really going on in each sprint.
 >
-> How does different Scrum Events improve process transparency?
+> How does different Scrum events improve process transparency?
 
 {: .important-title }
 
@@ -103,7 +103,7 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 
 ## Agile requirement specification
 
-In the _requirements phase_ of the software development lifecycle, the stakeholders' requirements for the software are defined and documented. In agile software development, requirements are commonly written as _user stories_. A user story is a short, simple description of a feature told from the perspective of the person who desires the new feature in the software. During each Sprint, the Developers of the Scrum Team implement features to the software based on the user stories.
+In the _requirements phase_ of the software development lifecycle, the stakeholders' requirements for the software are defined and documented. In agile software development, requirements are commonly written as _user stories_. A user story is a short, simple description of a feature told from the perspective of the person who desires the new feature in the software. During each Sprint, the Developers of the Scrum Team implement features for the software based on the user stories.
 
 {: .note }
 
@@ -125,11 +125,11 @@ The "a user persona" part describes the user role who wants to use the the featu
 
 > User stories are sort of an todo items, like "go to the store", "take out the trash" and "pick up kids from school". They are there so that the Scrum Team remembers what kind of features need to be implemented for the software.
 
-In Scrum, the whole Scrum Team participates in writing the user stories. This is done during the Sprint Planning event at the beginning of the Sprint. Product Owner's responsibility is to decide which user stories gets done first (perhaps during the next Sprint) and which can wait for later. This _priorization_ of the Developments work is among the most important responsibilities of the Product Owner.
+In Scrum, the whole Scrum Team participates in writing the user stories. This is done during the Sprint Planning event at the beginning of the Sprint. Product Owner's responsibility is to decide which user stories gets done first (perhaps during the next Sprint) and which can wait for later. This _priorization_ of the Developers' work is among the most important responsibilities of the Product Owner.
 
 ## Writing good user stories
 
-The user stories described previously sound like fairly good descriptions of software fetures. What makes a good user story?
+The user stories described previously sound like fairly good descriptions of software features. But what makes a good user story?
 
 Because Product Owner in the Scrum Team is commonly a non-technical person, user stories should not contain technical details of the implementation. For example the following user story is too technical:
 
@@ -172,7 +172,7 @@ In these kind of cases we should write a more concrete description of the featur
 
 > ✅ As a content creator I want to export blog posts from Medium so that I don't have to write same blog post twice.
 
-There's still a bit uncertainty of the implementation, for example, how in practice can we export blog posts from Medium. But at least the scope of the user story is narrower.
+There's still a bit uncertainty of the implementation. For example, how in practice can we export blog posts from Medium. But at least the scope of the user story is narrower.
 
 {: .important-title }
 
@@ -182,7 +182,7 @@ There's still a bit uncertainty of the implementation, for example, how in pract
 >
 > 1. "As a content creator I want to submit a form that sends a HTTP request to the /api/blog-posts API endpoint on the server, which inserts a new row to the database, so that I can publish a new blog post on my blog"
 > 2. "As a content creator I want to be able to write a blog post with text, images, videos and interactive code samples so that I can create rich content for my readers"
-> 3. "As a content creator I want my blog's layout to have a modern look so that I my readers can enjoy cool blog posts"
+> 3. "As a content creator I want my blog's layout to have a modern look so that I can write visually pleasing blog posts"
 
 {: .important-title }
 
@@ -198,8 +198,8 @@ There's still a bit uncertainty of the implementation, for example, how in pract
 
 > Exercise 7
 >
-> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).
+> During the course, each group will develop a project described by the Product Owner in the [project description](/project-description).
 >
-> Come up with at least three well written user stories based on the project description. Use the INVEST criteria to explain, why your user stories are well written.
+> Come up with at least three _well written_ user stories based on the project description. Use the INVEST criteria to explain, why your user stories are well written.
 >
 > Hint: pay attention to the size of the user story. Split big user stories into smaller ones.
