@@ -7,7 +7,7 @@ nav_order: 2
 
 # Schedule
 
-The course has weekly sessions on Fridays at 14:00 - 16:45 in class room 4012. Attendance on weekly sessions is _mandatory_.
+The course has weekly sessions on Thursdays at 14:00 - 16:45 in class room 4012. Attendance on weekly sessions is _mandatory_.
 
 {: .highlight }
 
@@ -19,9 +19,9 @@ On the third week the groups start working on the project. The project advances 
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 | 23.10.          | [Agile software development and Scrum](/agile-software-development): Agile software development, Scrum, agile requirement specification, assemble project groups | Exercises 1 - 7, deadline on {{site.week_1_deadline}}    |
 | 30.10.          | [Version control: Git and GitHub](/git)                                                                                                                          | Exercises 1 - 12, deadline on {{site.week_2_deadline}}   |
-| 6.11.           | [Sprint 1](/sprint-1): Sprint Planning, Scrum backlogs, GitHub's workflow                                                                                          | Exercises 1 - 14, deadline on {{site.sprint_1_deadline}} |
+| 6.11.           | [Sprint 1](/sprint-1): Sprint Planning, Scrum backlogs, GitHub's workflow                                                                                        | Exercises 1 - 14, deadline on {{site.sprint_1_deadline}} |
 | 13.11.          | Daily Scrum, Sprint Review                                                                                                                                       |                                                          |
 | 20.11.          | [Sprint 2](/sprint-2): Retrospective                                                                                                                             | Deadline on {{site.sprint_2_deadline}}                   |
 | 27.11.          | REST APIs, communication between frontend and backend                                                                                                            |                                                          |
-| 4.12.           | [Sprint 3](/sprint-3): Git branches, pull requests                                                                                                          | Deadline on {{site.sprint_3_deadline}}                   |
-| 11.12.          | Documentation                                                                                                                                           |                                                          |
+| 4.12.           | [Sprint 3](/sprint-3): Authentication, Documentation                                                                                                                   | Deadline on {{site.sprint_3_deadline}}                   |
+| 11.12.          | Testing, GitHub release                                                                                                                                                   |                                                          |

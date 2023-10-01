@@ -191,7 +191,7 @@ Once the organization is created, a team member can be invited by clicking the "
 
 Instead of starting a repository from scratch, we can create a copy an existing repository and use that as a starting point for our project. In GitHub terminology this is called _forking a repository_ and the copied repository is called a _fork_.
 
-To get started faster, you can start your project by forking the [example-project repository]({{site.example_project_link}}). The repository has a simple Java Spring Boot application initialized with [Spring Initializr](https://start.spring.io/). It has some code samples of Thymeleaf templates, controllers, JPA entities and JPA repositories.
+To get started faster, start your project by forking the [example-project repository]({{site.example_project_link}}). The repository has a simple Java Spring Boot application initialized with [Spring Initializr](https://start.spring.io/). It has some code samples of Thymeleaf templates, controllers, JPA entities and JPA repositories.
 
 A repository can be forked by cliking the "Fork" button on right side of the repository's name.
 
@@ -248,7 +248,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 > 1. At the beginning of the file add the project name "Cool Reads" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
 > 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
 > 3. Below the description [list](https://www.markdownguide.org/basic-syntax#lists-1) each group member's name.
-> 4. Each group member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME
+> 4. Each group member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
 >
 > Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 
@@ -269,18 +269,6 @@ After some discussion the Scrum Team came up with the following user stories:
 1. As an user I want to add a reading recommendation so that I can build a collection of recommendations
 2. As an user I want to list the added reading recommendations so that I can find interesting things to read
 
-The implementation of the first user story should look roughly something like this:
-
-![](/assets/sprint-1-user-story-1.png){: width="500" }
-
-The implementation of the second user story should look roughly something like this:
-
-![](/assets/sprint-1-user-story-2.png){: width="500" }
-
-{: .note }
-
-> The visual aspect of the application is not as important as the functionality. The most important things is that the user has some kind of functionality for the features described in the user stories.
-
 For the _first user story_, the Developers came up with the following tasks:
 
 1. Add ReadingRecommendation JPA entity class and ReadingRecommendationRepository JPA repository class
@@ -291,7 +279,7 @@ For the _first user story_, the Developers came up with the following tasks:
 For the _second user story_, the Developers came up with the following tasks:
 
 1. Add Thymeleaf template for listing the added reading recommendations with title, link and description
-2. Add a method for rendering the reading recommendation list for the ReadingRecommendationController controller
+2. Add a method for rendering the reading recommendation list for the ReadingRecommendationController class
 
 These are the user stories and tasks, that you will be working on as a group during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
 
@@ -325,17 +313,83 @@ These are the user stories and tasks, that you will be working on as a group dur
 >
 > Use the Sprint Backlog to track the Sprint progress. Always start a group meeting by looking at the Sprint Backlog.
 
+## Thymeleaf page layouts
+
+If we take a look at the images of what our application should look like, we see that the two pages share a common structure. They both have the navigation bar at the top of the page. We could simply copy-paste the navigation bar HTML to both pages, but once we implement more pages and want to update the navigation bar, things start to get out of hand. Instead, we can have a common _layout_ for the application that each page can share. This can be achieved using the [Thymeleaf Layout Dialect](https://ultraq.github.io/thymeleaf-layout-dialect/).
+
+If we take a look at the example project's `layout.html` file in the `src/main/resources/templates` folder we'll see that the file has a common structure for each page:
+
+```html
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cool Reads</title>
+    <!-- ... -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <!-- ... -->
+    </nav>
+    <div class="container my-3" layout:fragment="content"></div>
+  </body>
+</html>
+```
+
+The `<div class="container my-3" layout:fragment="content"></div>` element is a _layout fragment_ called "content". It will contain the page-specific content. The layout can have multiple fragments, which could come in handy if we have for example a footer that has page-specific content.
+
+Let's have a look at the `messagelist.html` file that is using this layout:
+
+```html
+<!DOCTYPE html>
+<html
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout.html}"
+>
+  <body>
+    <div layout:fragment="content">
+      <h1>Messages</h1>
+
+      <ul>
+        <li th:each="message: ${messages}" th:text="${message.content}"></li>
+      </ul>
+
+      <a class="btn btn-primary" href="/messages/add">Add a message </a>
+    </div>
+  </body>
+</html>
+```
+
+The `layout:decorate="~{layout.html}"` on the `html` element specifies that this template is using the `layout.html` file as the layout file. The `div` element that has the `layout:fragment="content"` attribute has the content that will be displayed on the corresponding layout fragment on the `layout.html` file.
+
 {: .important-title }
 
 > Exercise 12
 >
 > Implement the tasks of the first user story, "As an user I want to add a reading recommendation so that I can build a collection of reading recommendations".
+>
+>The implementation should look roughly something like this:
+>
+>![](/assets/sprint-1-user-story-1.png){: width="600" }
 
 {: .important-title }
 
 > Exercise 13
 >
 > Implement the tasks of the second user story, "As an user I want to list the added reading recommendations so that I can easily find interesting things to read".
+>
+> The implementation should look roughly something like this:
+>
+>![](/assets/sprint-1-user-story-2.png){: width="600" }
+
+{: .note }
+
+> The visual aspect of the application is not as important as the functionality. The most important things is that the user has some kind of functionality for the features described in the user stories.
+
 
 ## Daily Scrum
 

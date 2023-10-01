@@ -11,36 +11,29 @@
     />
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Cool Reads</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Recommendations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Categories</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="container my-3">
-      <h1>Add a reading recommendation</h1>
-      <form>
-        <div class="mb-3">
-          <label class="form-label">Title</label>
-          <input type="text" class="form-control" />
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Link</label>
-          <input type="text" class="form-control" />
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Description</label>
-          <textarea class="form-control"></textarea>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Category</label>
-          <select class="form-select">
-            <option value="1">Programming tutorials</option>
-            <option value="2">Video game news</option>
-            <option value="3">News articles on cats</option>
-          </select>
-        </div>
-
-        <button class="btn btn-primary">Add</button>
-        <a href="#" class="btn btn-secondary">Cancel</a>
-      </form>
+      <h1>Categories</h1>
+      <ul>
+        <li>Programming tutorials</li>
+        <li>Video game news</li>
+        <li>News articles on cats</li>
+      </ul>
+      <a href="#" class="btn btn-primary">Add a category</a>
     </div>
   </body>
 </html>

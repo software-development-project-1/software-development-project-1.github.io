@@ -81,8 +81,9 @@ After some discussion the Scrum Team came up with the following user stories:
 
 1. As an user I want to know the date and time when a reading recommendation was added so that I know how old it is
 2. As an user I want to add a category so that I can organize my recommendations
-3. As an user I want to provide a category for a reading recommendation so that I can organize my recommendations
-4. As an user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier
+3. As an user I want to see a list of categories so that I know which categories exist
+4. As an user I want to provide a category for a reading recommendation so that I can organize my recommendations
+5. As an user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier
 
 For the _first user story_, the Developers came up with the following tasks:
 
@@ -96,37 +97,36 @@ For the _second user story_, the Developers came up with the following tasks:
 1. Add Category JPA entity class and CategoryRepository JPA repository class
 2. Add Thymeleaf template for the category submission form containing a field for the category name
 3. Add CategoryController controller class and a method for rendering the category submission form
-4. Add a method for the CategoryController that saves the reading category to the database
+4. Add a method for the CategoryController class that saves the reading category to the database
+
+for the _third user story_, the Developers came up with the following tasks:
+
+1. Add Thymeleaf template for listing the added categories
+2. Add a method for rendering the categories list for the CategoryController class
+
+The tasks for the fifth user story will be covered in the [Communication between frontend and backend](#communication-between-frontend-and-backend) section.
+
+{: .note }
+The tasks described above are suggestions, feel free to alter them or add new tasks.
 
 {: .important-title }
 
 > Exercise 2
 >
-> Come up with tasks for the third user story, "As an user I want to provide a category for a reading recommendation so that I can organize my recommendations".
-
-The tasks for the fourth user story will be covered in the [Communication between frontend and backend](#communication-between-frontend-and-backend) section.
-
-{: .note }
-The tasks described above are suggestions, feel free to alter them or add new tasks.
-
-### Tips for implementing the tasks
-
-- [CreationTimestamp](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
-- [DateTimeFormatter](https://www.baeldung.com/java-datetimeformatter)
-- [HTML select tag](https://www.w3schools.com/tags/tag_select.asp)
+> Create a Sprint Backlog board for the second Spring in Trello. Name the Sprint Backlog board "Sprint 2 backlog". Add similar lists for the board as in the Sprint 1 backlog.
 
 {: .important-title }
 
 > Exercise 3
 >
-> Create a Sprint Backlog board for the second Spring in Trello. Name the Sprint Backlog board "Sprint 2 backlog". Add similar lists for the board as in the Sprint 1 backlog.
+> Come up with tasks for the fourth user story, "As an user I want to provide a category for a reading recommendation so that I can organize my recommendations".
 
 {: .important-title }
 
 > Exercise 4
 >
-> 1. Add these four user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
-> 2. Add the tasks of the _first three user stories_ to the "Sprint 2 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
+> 1. Add these five user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
+> 2. Add the tasks of the _first four user stories_ to the "Sprint 2 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
 
 {: .note }
 At this point it might sense to distribute the workload a bit instead of working on each user story together. For example two members of the group could start working on the first user story and the others on the second one. Decide who will be working on which task and assign at least one group member for each task on the Trello board.
@@ -136,6 +136,12 @@ At this point it might sense to distribute the workload a bit instead of working
 > Exercise 5
 >
 > Implement the tasks of the first user story, "As an user I want to know the date and time when a reading recommendation was added so that I know how old it is".
+>
+> Tips for implementing the tasks:
+>
+> - [CreationTimestamp](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
+> - [DateTimeFormatter](https://www.baeldung.com/java-datetimeformatter)
+> - If the method `getFormattedCreatedAt` returns the formatted date string, you can access it with `th:text="${recommendation.formattedCreatedAt}"` in the Thymeleaf template
 
 {: .important-title }
 
@@ -147,40 +153,152 @@ At this point it might sense to distribute the workload a bit instead of working
 
 > Exercise 7
 >
-> Implement the tasks of the third user story, "As an user I want to provide a category for a reading recommendation so that I can organize my recommendations".
-
-## REST APIs
-
-Coming soon!
+> Implement the tasks of the third user story, "As an user I want to see a list of categories so that I know which categories exist".
 
 {: .important-title }
 
 > Exercise 8
 >
-> REST API /api/recommendations
+> Implement the tasks of the third user story, "As an user I want to provide a category for a reading recommendation so that I can organize my recommendations".
+>
+> Tips for implementing the tasks:
+>
+> - [OneToMany](https://www.baeldung.com/hibernate-one-to-many)
+> - [HTML select tag](https://www.w3schools.com/tags/tag_select.asp)
+
+## REST APIs
+
+So far the user has interacted with our web application in the following manner:
+
+1. The user opens a page at certain path, for example `/`, on a web browser.
+2. The web browser sends a request to the server (the backend) for the resource of that path.
+3. On the server, the request is delegated to the controller method responsible for handling requests for the path.
+4. The controller method retrieves the required data from the database and based on the data creates an HTML page.
+5. The HTML page is sent as a response and the browser displays the page for the user.
+
+So the representation of our application's data is an HTML page. But what if we would like to implement the user interface with JavaScript, for example using React? In this case, instead of representing the data as HTML pages we need a proper _application programming interface_ (API) for the data.
+
+There are different kinds text-based data presentation formats that programming languages, such as JavaScript, know how to _parse_ and _serialize_. One such format is JavaScript Object Notation (JSON). The server can send text-based JSON data as a response and JavaScript has built-in functions to parse the data as JavaScript objects:
+
+```js
+// jsonData contains a string of JSON data (note the quotes around the array brackets)
+const jsonData = '["This", "is", "a", "JSON", "array"]';
+// parsedData contains a JavaScript array
+const parsedData = JSON.parse(jsonData);
+console.log(parsedData.length); // 5
+```
+
+Similarly, we can serialize a JavaScript object into a text-based JSON string and send it to the server:
+
+```js
+const data = ["This", "is", "a", "JavaScript", "array"];
+// jsonData contains a string of JSON data
+const jsonData = JSON.stringify(data);
+console.log(jsonData); // '["This", "is", "a", "JavaScript", "array"]'
+```
+
+Instead of sending a response as an HTML page, we can serialize Java objects into JSON strings and send it as a response. Let's have a look at the [MessageRestController](https://github.com/software-development-project-1/example-project/blob/main/src/main/java/fi/haagahelia/coolreads/controller/MessageRestController.java) controller class in the example project:
+
+```java
+@RestController
+@RequestMapping("/api/messages")
+public class MessageRestController {
+	@Autowired
+	private MessageRepository messageRepository;
+
+	@GetMapping("")
+	public List<Message> getMessages() {
+		return messageRepository.findAll();
+	}
+}
+```
+
+The `@RestController` annotation on the `MessageRestController` class specifies that each method of the controller class produces a JSON response. Instead of returning the name of the Thymeleaf template, we can directly return Java objects. For example the `getMessages` method returns a list of `Message` objects. If we open the page <http://localhost:8080/api/messages> in a web browser we should see this list.
+
+By using JSON as the data representation format we can separate the _client_ (the user interface application) from the server. This allows as to implement many different kinds of client applications with different programming languages. This separation of server and client is one of the corner stones of the _the REST architectural style_.
+
+_REST_, or REpresentational State Transfer, is an architectural style for providing standards between computer systems on the web, making it easier for systems to communicate with each other. REST-compliant systems, often called _RESTful systems_, are characterized by how they are stateless and separate the concerns of client and server.
+
+In a RESTful system, the requests must contain a path to a _resource_ that the operation should be performed on. In RESTful APIs, paths should be designed to help the client know what is going on. For example, the path `/users/29/messages` is a resource for messages of an user with a specific id.
+
+The request should also contain the _HTTP method_, that determines the operation itself. For example, the `GET` method is used to retrieve data, and _never to manipulate it_. The `POST` method on the other hand is used to manipulate the data, so it can have side-effects such as creating an entry to the database. The `PUT` method is used to update an entry and the `DELETE` method is used to delete it.
+
+The resource path has certain naming conventions. The path starts with the resource _collection_ name in plural, for examples "users". The collection name is followed by resource specifiers, for example the id of the resource. Here's example of RESTful API paths for the "users" collection:
+
+| Method   | Path          | Description                          |
+| -------- | ------------- | ------------------------------------ |
+| `GET`    | `/users`      | List all users                       |
+| `GET`    | `/users/{id}` | Get the user with the provided id    |
+| `POST`   | `/users`      | Create an user                       |
+| `PUT`    | `/users/{id}` | Update the user with the provided id |
+| `DELETE` | `/users/{id}` | Delete the user with the provided id |
+
+The `{id}` part of the `/users/{id}` path is a _path variable_. For example, the path for user with id 2 would be `/users/2`.
+
+A collection can have _sub-collections_. For example, a path for a user's messages resource would be `/users/{id}/messages`, where "messages" is a sub-collection. [This guide](https://restfulapi.net/resource-naming/) has more information about the resource path naming conventions.
+
+We can create a separate controller class for each collection. The `@RequestMapping` annotation can be used the define the collection name prefix of the path. Each method will automatically get the prefix in the path, so we don't need to have it in the `@GetMapping` annotation:
+
+```java
+@RestController
+@RequestMapping("/api/messages")
+public class MessageRestController {
+	// ...
+
+	@GetMapping("/{id}")
+	public Message getMessageById(@PathVariable("id") Long id) {
+		// ...
+	}
+}
+```
+
+In this case, the `getMessageById` method will handle request to the path `/api/messages/{id}`.
+
+{: .note }
+
+> It's handy to use some prefix, such as "api" to distinguish paths that produce JSON responses from paths that produce HTML pages.
 
 {: .important-title }
 
 > Exercise 9
 >
-> REST API /api/categories
+> Create a controller class `ReadingRecommendationRestController` that has a method `getReadingRecommendations`. This method should return _all the reading recommendations_ in path `/api/recommendations` in JSON format. You should be able to see the list of recommendations when opening <http://localhost:8080/api/recommendations> in a web browser.
 
 {: .important-title }
 
 > Exercise 10
 >
-> REST API /api/categories/{categoryId}/recommendations
-
-## Communication between frontend and backend
-
-Coming soon!
+> Create a controller class `CategoryRestController` that has a method `getCategories`. This method should return _all the categories_ in path `/api/categories` in JSON format. You should be able to see the list of categories when opening <http://localhost:8080/api/categories> in a web browser.
 
 {: .important-title }
 
-> Exercise X
+> Exercise 11
+>
+> Create a method `getReadingRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id.
+
+## Communication between frontend and backend
+
+{: .important-title }
+
+> Exercise 12
+>
+> React recommendations list
+
+{: .important-title }
+
+> Exercise 13
+>
+> React category filter
+
+{: .important-title }
+
+> Exercise 14
 >
 > Decide which group member gives the Sprint Review demonstration at the beginning of the next Sprint. The group member should be someone else as the one who gave it previously. This group member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 
+{: .note }
+
+> Once you have completed the exercises, remove the excessive Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive `messageList` folder from the `frontend` directory.
 
 {: .warning }
 
