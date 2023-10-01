@@ -271,10 +271,10 @@ After some discussion the Scrum Team came up with the following user stories:
 
 For the _first user story_, the Developers came up with the following tasks:
 
-1. Add ReadingRecommendation JPA entity class and ReadingRecommendationRepository JPA repository class
+1. Add a ReadingRecommendation JPA entity class with id, title, link and description attributes, and a ReadingRecommendationRepository JPA repository class
 2. Add Thymeleaf template for the reading recommendation submission form containing fields for title, link and description
 3. Add ReadingRecommendationController controller class and a method for rendering the reading recommendation submission form
-4. Add a method for the ReadingRecommendationController that saves the reading recommendation to the database
+4. Add a method for the ReadingRecommendationController class that saves the reading recommendation to the database
 
 For the _second user story_, the Developers came up with the following tasks:
 
@@ -315,7 +315,7 @@ These are the user stories and tasks, that you will be working on as a group dur
 
 ## Thymeleaf page layouts
 
-If we take a look at the images of what our application should look like, we see that the two pages share a common structure. They both have the navigation bar at the top of the page. We could simply copy-paste the navigation bar HTML to both pages, but once we implement more pages and want to update the navigation bar, things start to get out of hand. Instead, we can have a common _layout_ for the application that each page can share. This can be achieved using the [Thymeleaf Layout Dialect](https://ultraq.github.io/thymeleaf-layout-dialect/).
+If we start the example project application and visit the [message list page](http://localhost:8080) at and the [add message page](http://localhost:8080/messages/add), we see that the pages share a common structure. They both have the navigation bar at the top of the page. If we dig deeper into the HTML structure, there's also common `link` and `script` elements. We could simply copy-paste the navigation bar HTML to both pages, but once we implement more pages and want to update the navigation bar, things start to get out of hand. Instead, we can have a common _layout_ for the application that each page can share. This can be achieved using the [Thymeleaf Layout Dialect](https://ultraq.github.io/thymeleaf-layout-dialect/).
 
 If we take a look at the example project's `layout.html` file in the `src/main/resources/templates` folder we'll see that the file has a common structure for each page:
 
@@ -375,6 +375,8 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 >The implementation should look roughly something like this:
 >
 >![](/assets/sprint-1-user-story-1.png){: width="600" }
+>
+> Alter the `layout.html` file mentioned above to change the navigation bar content.
 
 {: .important-title }
 
@@ -385,6 +387,8 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 > The implementation should look roughly something like this:
 >
 >![](/assets/sprint-1-user-story-2.png){: width="600" }
+>
+> This page should be visible on the root path (the `/` path) of the application. Change the `@GetMapping` of the `listMessages` method in the `MessageController` class, for example to `@GetMapping("/messages")`.
 
 {: .note }
 

@@ -87,21 +87,21 @@ After some discussion the Scrum Team came up with the following user stories:
 
 For the _first user story_, the Developers came up with the following tasks:
 
-1. Add createdAt attribute of LocalDateTime type for the ReadingRecommendation entity
+1. Add a createdAt attribute of LocalDateTime type for the ReadingRecommendation entity
 2. Add a CreationTimestamp annotation for the createdAt attribute
 3. Add a getFormattedCreatedAt method for the ReadingRecommendation entity which returns the formatted createdAt attribute value
 4. Add a "Added on" column which displays the formatted date for the Thymeleaf template
 
 For the _second user story_, the Developers came up with the following tasks:
 
-1. Add Category JPA entity class and CategoryRepository JPA repository class
-2. Add Thymeleaf template for the category submission form containing a field for the category name
-3. Add CategoryController controller class and a method for rendering the category submission form
+1. Add a Category JPA entity class with id and name attributes, and a CategoryRepository JPA repository class
+2. Add a Thymeleaf template for the category submission form containing a field for the category name
+3. Add a CategoryController controller class and a method for rendering the category submission form
 4. Add a method for the CategoryController class that saves the reading category to the database
 
 for the _third user story_, the Developers came up with the following tasks:
 
-1. Add Thymeleaf template for listing the added categories
+1. Add a Thymeleaf template for listing the added categories
 2. Add a method for rendering the categories list for the CategoryController class
 
 The tasks for the fifth user story will be covered in the [Communication between frontend and backend](#communication-between-frontend-and-backend) section.
