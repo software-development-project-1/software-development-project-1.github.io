@@ -82,6 +82,8 @@ The command should print basic introductions on how to use the `git` command.
 > git config --global user.email email@address.com
 > git config --global init.defaultBranch main
 > ```
+> 
+> Use the same email address as you used with your GitHub account.
 >
 > Run the commands _one command (one line) at a time_. Write the command and press enter to execute a command.
 >
@@ -317,7 +319,7 @@ A new repository called "origin" is added using an HTTPS connection by running t
 
 > Exercise 6
 >
-> Create a remote repository in GitHub for the project you created locally as instructed above. **Don't let GitHub create a README, license or a .gitignore file when creating the repository**. Doing so will cause problems later.
+> Create a remote repository in GitHub for the project you created locally as instructed above. **Don't let GitHub create a README, license or a .gitignore file when creating the repository**. Doing so will cause problems later. Also, make sure that _the repository is public_ (the "Public" option is selected).
 >
 > Add the repository as a remote to your local project using the `git remote add` command as instructed above. **Remember to use the HTTPS address when you copy the repository address in GitHub**. Note that the paste keyboard shortcut does not work on Git Bash. You need to right click the Git Bash window and choose "Paste".
 

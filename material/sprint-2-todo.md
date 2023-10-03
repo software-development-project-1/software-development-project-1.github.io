@@ -274,15 +274,185 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 
 > Exercise 11
 >
-> Create a method `getReadingRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id.
+> Create a method `getReadingRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations).
 
 ## Communication between frontend and backend
+
+The purpose of the REST APIs we just implemented on the backend is that we can _separate_ the client application from the backend application. In web applications these client applications are commonly called _frontend applications_ and they are implemented using JavaScript programming language.
+
+It's very difficult to implement complex frontend applications using plain JavaScript. That's is why libraries such as [React](https://react.dev/) are used. React allows us to build user interfaces out of individual pieces called _components_. Components represent a visual element on the page, such as `MessageList`, or `MessageListItem`:
+
+```jsx
+import React from "react";
+
+// We can use props object to reuse components, just like regular functions
+export default function MessageListItem(props) {
+  return <li>{props.message.content}</li>;
+}
+```
+
+If you aren't familiar with React yet, React's documentation has great [tutorials](https://react.dev/learn).
+
+{: .note }
+
+> This material doesn't go into React details. It is recommended that those group members who have completed (or currently completing) the Front End Development course will be working on the exercises in this section.
+
+The example project has a simple React frontend application in the `frontend/messageList` folder. We will be using this application as an example.
+
+The communication between the frontend application and the backend application is performed using the JavaScript's [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The Fetch API provides the `fetch` function, which can be used to send a HTTP request to a specific URL:
+
+```js
+fetch("/api/messages")
+  .then((response) => response.json())
+  .then((messages) => {
+    console.log(messages);
+  });
+```
+
+The `fetch` function returns a [Promise](https://javascript.info/promise-basics) object. The promise resolves a `Response` object, which contains the response from the server. The response's JSON payload can be parsed into JavaScript objects using the `response.json()` method.
+
+In the example project, fetching the messages is extracted into a function called `fetchMessages`, which can be found in the `frontend/messageList/fetchMessages.js` file:
+
+```js
+export default function fetchMessages() {
+  return fetch("/api/messages").then((response) => response.json());
+}
+```
+
+This is a simple abstraction for fetching the messages, but it's quite handy. If the logic for fetching the messages (for example the API URL) changes, we only need to change the logic inside the `fetchMessages` function and nowhere else.
+
+The `MessageList` component in the `frontend/messageList/MessageList.jsx` calls the `fetchMessages` function to display the message list:
+
+```jsx
+import React, { useEffect, useState } from "react";
+import MessageListItem from "./MessageListItem";
+import fetchMessages from "./fetchMessages";
+
+export default function MessageList() {
+  const [messages, setMessages] = useState([]);
+
+  useEffect(() => {
+    fetchMessages().then((fetchedMessages) => setMessages(fetchedMessages));
+  }, []);
+
+  return (
+    <div>
+      <h1>Messages</h1>
+
+      <ul>
+        {messages.map((message) => (
+          <MessageListItem message={message} key={message.id} />
+        ))}
+      </ul>
+
+      <a className="btn btn-primary" href="/messages/add">
+        Add a message
+      </a>
+    </div>
+  );
+}
+```
+
+The `MessageList` component is rendered on the page in the `frontend/messageList/renderMessageList.jsx` file:
+
+```jsx
+import React from "react";
+import { createRoot } from "react-dom/client";
+import MessageList from "./MessageList";
+
+const root = createRoot(document.getElementById("messageListRoot"));
+root.render(<MessageList />);
+```
+
+The component is rendered on a HTML element with an id "messageListRoot". This element can be found in the `src/main/resources/templates/reactmessagelist.html` template file:
+
+```html
+<!DOCTYPE html>
+<html
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout.html}"
+>
+  <head>
+    <script th:src="@{/frontend/renderMessageList.js}" defer></script>
+  </head>
+  <body>
+    <div layout:fragment="content">
+      <div id="messageListRoot"></div>
+    </div>
+  </body>
+</html>
+```
+
+The JavaScript file for the frontend application is added with a `script` tag:
+
+```html
+<script th:src="@{/frontend/renderMessageList.js}" defer></script>
+```
+
+The JavaScript file is bundled using a _bundler_. The bundler will combines many JavaScript code files into a single one that is loadable in the browser. We will be using the [esbuild](https://esbuild.github.io/) bundler.
+
+If we take a look at the `scripts` section of the `package.json` file in the root folder of the project, we'll see three scripts:
+
+```json
+{
+  "esbuild-bundle": "esbuild frontend/messageList/renderMessageList.jsx --bundle --sourcemap --outdir=src/main/resources/static/frontend",
+  "dev": "npm run esbuild-bundle -- --watch",
+  "build": "npm run esbuild-bundle -- --minify"
+}
+```
+
+The `esbuild-bundle` script will bundle the `frontend/messageList/renderMessageList.jsx` entry file and output the result to the `src/main/resources/static/frontend` folder. The `dev` script will execute the `esbuild-bundle` script with a `--watch` flag, which will generate the output files each time one of the source files changes. Use this script while writing the frontend code.
+
+Let's open the project folder in Git Bash and run `npm run dev` command. Next, open <http://localhost:8080/react-messages> in browser and you should see a list of messages if there's any. If the list is empty, add a message in <http://localhost:8080/messages/add> and check again.
+
+Now that we have the <http://localhost:8080/api/recommendations> REST API, we can implement a frontend application for the recommendations list. Create a folder `recommendationList` in the `frontend` folder. In that folder, create a file `renderRecommendationList.jsx` with the following content:
+
+```jsx
+import React from "react";
+import { createRoot } from "react-dom/client";
+
+const root = createRoot(document.getElementById("recommendationListRoot"));
+root.render(<h1>Reading recommendation list coming soon!</h1>);
+```
+
+Next, alter the template file for the reading recommendation list so that it only has the root element for the React application:
+
+```html
+<!DOCTYPE html>
+<html
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout.html}"
+>
+  <head>
+    <script th:src="@{/frontend/renderRecommendationList.js}" defer></script>
+  </head>
+  <body>
+    <div layout:fragment="content">
+      <div id="recommendationListRoot"></div>
+    </div>
+  </body>
+</html>
+```
+
+In order to bundle the `renderRecommendationList.jsx` file with esbuild, we'll need to alter the `esbuild-bundle` script in the `package.json` file:
+
+```json
+{
+  "esbuild-bundle": "esbuild frontend/recommendationList/renderRecommendationList.jsx --bundle --sourcemap --outdir=src/main/resources/static/frontend",
+  "dev": "npm run esbuild-bundle -- --watch",
+  "build": "npm run esbuild-bundle -- --minify"
+}
+```
+
+So, we replaced the previous `frontend/messageList/renderMessageList.jsx` entry file with the `frontend/recommendationList/renderRecommendationList.jsx` entry file.
+
+Let's run the `npm run dev` command in Git Bash and open <http://localhost:8080> in browser. We should see the text "Reading recommendation list coming soon!" where used to be the list of reading recommendations. Change the text in the `renderRecommendationList.jsx` and save the changes. Then, reaload the page and you should see that the text has changed.
 
 {: .important-title }
 
 > Exercise 12
 >
-> React recommendations list
+> Implement a React frontend application to the `frontend/recommendationList` folder which lists the reading recommendation similarly as before. Use the `fetch` function to fetch the recommendations from <http://localhost:8080/api/recommendations>. Take a look at the files in the `frontend/messageList` folder for examples.
 
 {: .important-title }
 
@@ -294,11 +464,13 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 
 > Exercise 14
 >
+> Once you have completed the exercises for this Sprint, remove the excessive Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive `messageList` folder from the `frontend` directory.
+
+{: .important-title }
+
+> Exercise 15
+>
 > Decide which group member gives the Sprint Review demonstration at the beginning of the next Sprint. The group member should be someone else as the one who gave it previously. This group member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
-
-{: .note }
-
-> Once you have completed the exercises, remove the excessive Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive `messageList` folder from the `frontend` directory.
 
 {: .warning }
 
