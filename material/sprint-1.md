@@ -247,7 +247,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 >
 > 1. At the beginning of the file add the project name "Cool Reads" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
 > 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
-> 3. Below the description add a subheading "Team members" and below that add a [list](https://www.markdownguide.org/basic-syntax#lists-1) of each group member's name.
+> 3. Below the description, add a subheading "Team members" and below that add a [list](https://www.markdownguide.org/basic-syntax#lists-1) of each group member's name.
 > 4. Each group member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
 >
 > Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
@@ -420,7 +420,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 Now that we have implemented some features for our application that the users can use it is time to describe _how_ to use the application. The _usage guide_ is perhaps one of the most important pieces of documentation for the application. It will describe our fellow developers how to technically use the application. This means for example, how to start the application, how to package the application, and how to run tests.
 
-The usage guide shouldn't make too many assumptions, for example, that the reader of the documentation happens to know that the `application.properties` needs alterations before the application can be started. If something needs to be done, even a simple thing, _mention it_. It is helpful not only for others but also for yourself. We should also describe the _system requirements_ for the application. For example, the required JDK version. The example project uses Spring Boot version 3, which requires JDK version 19 or higher.
+The usage guide shouldn't make too many assumptions, for example, that the reader of the documentation happens to know that the `application.properties` file needs alterations before the application can be started. If something needs to be done, even a simple thing, _mention it_. It is helpful not only for others but also for yourself. We should also describe the _system requirements_ for the application. For example, the required JDK version. The example project uses Spring Boot version 3, which requires JDK version 19 or higher.
 
 Because developers use different IDEs, it is easier to describe how the application can be used using a command-line interface (such as Git Bash). On the command-line, we can use the Maven command `mvn` or the alias `./mvnw` to run different Maven commands. Using `./mvnw` (the [Maven wrapper](https://www.baeldung.com/maven-wrapper)) is a bit more convenient because it doesn't require Maven to be installed.
 

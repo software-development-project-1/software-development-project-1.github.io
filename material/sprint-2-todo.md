@@ -470,8 +470,8 @@ Next we will implement the list of reading recommendations as a React frontend a
 For the _fifth user story_ we can have the following tasks:
 
 1. Create a React component RecommendationList which lists reading recommendations from http://localhost:8080/api/recommendations
-2. Render the RecommandationList component on the recommendation list Thymeleaf template
-3. Add the category filter for the RecommandationList component
+2. Render the RecommandationList component on the reading recommendation list Thymeleaf template
+3. Add the category filter for the RecommendationList component
 
 {: .important-title }
 

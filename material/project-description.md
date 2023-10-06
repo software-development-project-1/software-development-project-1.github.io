@@ -7,7 +7,7 @@ nav_order: 5
 
 # Project description
 
-At week three, the Scrum Team will start working on a project in Sprint 1. Students are the Developers of the Scrum Team and the teacher is the Product Owner. Each team will be working on the same project idea, so the high level requirements for the project are the same. The project is implemented step by step during the three two week Sprints. Each Sprint will have a small set of requirements that need to implemented during the Sprint.
+At week three, the Scrum Team will start working on a project in Sprint 1. Students are the Developers of the Scrum Team and the teacher is the Product Owner. The team consists of 4-5 students. Each team will be working on the same project idea, so the high level requirements for the project are the same. The project is implemented step by step during the three two week Sprints. Each Sprint will have a small set of requirements that need to implemented during the Sprint.
 
 ## Cool Reads
 
@@ -26,6 +26,7 @@ The Product Owner has a great project idea and is in desprate need of a talented
 > -- The Product Owner of "Cool Reads"
 
 {: .note }
+
 > At the end of the course, the final application doesn't have to have all the features described by the Product Owner.
 
 ## Technical requirements
@@ -42,6 +43,6 @@ The team can decide how "frontend heavy" the technical implementation is. If the
 - Backend has some API endpoints that return JSON data
 - Some individual features on pages are implemented with React and they use these JSON API endpoints
 
-We will start by implementing backend features during [Sprint 1](/sprint-1). During [Sprint 2](/sprint-2) we will be implementing a React application which uses JSON API endpoints. 
+We will start by implementing backend features during [Sprint 1](/sprint-1). During [Sprint 2](/sprint-2) we will be implementing a React application which uses JSON API endpoints.
 
 The [example project]({{site.example_project_link}}) will be used as the project starting point. It demonstrates the basic concepts and will get you started more quickly.
