@@ -5,6 +5,15 @@ permalink: /sprint-3
 nav_order: 8
 ---
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Sprint 3
 
 Coming soon!

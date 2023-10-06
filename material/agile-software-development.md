@@ -5,6 +5,15 @@ permalink: /agile-software-development
 nav_order: 3
 ---
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Agile software development and Scrum
 
 > _able to move quickly and easily_

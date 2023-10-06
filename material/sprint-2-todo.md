@@ -6,6 +6,15 @@ nav_order: 7
 nav_exclude: true
 ---
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Sprint 2
 
 For the Sprint 2 we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to Retrospective, REST APIs and communication between frontend and backend.
@@ -292,7 +301,6 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 >
 > Swagger
 
-
 ## Communication between frontend and backend
 
 The purpose of the REST APIs we just implemented on the backend is that we can _separate_ the client application from the backend application. In web applications these client applications are commonly called _frontend applications_ and they are implemented using JavaScript programming language.
@@ -534,6 +542,7 @@ For the _fifth user story_ we can have the following tasks:
 >           Clear category filter
 >         </button>
 >       </div>
+>       {/* The list of reading recommendations goes here */}
 >     </div>
 >   );
 > }

@@ -5,6 +5,15 @@ permalink: /git
 nav_order: 4
 ---
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Version control: Git and GitHub
 
 {: .note }
@@ -82,7 +91,7 @@ The command should print basic introductions on how to use the `git` command.
 > git config --global user.email email@address.com
 > git config --global init.defaultBranch main
 > ```
-> 
+>
 > Use the same email address as you used with your GitHub account.
 >
 > Run the commands _one command (one line) at a time_. Write the command and press enter to execute a command.
@@ -332,6 +341,7 @@ Changes can be pushed to a specific branch in the remote repository as follows: 
 Let's push the changes we made to the file `git_practice.txt` by running `git push -u origin main`, since we named the remote `origin` and we are using the main branch. Next we'll navigate to the project site on GitHub. There we will find the file `git_practice.txt`.
 
 {: .note}
+
 > Running `git push` will ask for your GitHub username and password. Once you have submitted those successfully, return to Git Bash.
 
 {: .important-title }
@@ -557,6 +567,7 @@ Merge conflicts are enfuriating, but rather common when collaborating with other
 Merge conflicts can also occur when taking changes out of the stash, if the hidden changes overlap with new ones.
 
 {: .important-title}
+
 > Exercise 11
 >
 > Create a merge conflict in your project and resolve it. Make sure to push the end result to GitHub.
@@ -590,6 +601,7 @@ Then by pressing "Browse files", or the rightmost button with `<>` written on it
 Of course, the same procedure can be repeated on the command line. You can browse the state of the project after a specific commit by running `git checkout commit_id`. You should check the id using `git log` for example. Similarly, you can move back to a specific branch by running `git checkout branch_name`, most commonly `git checkout main`. The changes made in a specific commit can be viewed with `git show commit_id`.
 
 {: .important-title }
+
 > Exercise 12
 >
 > 1. Create a new file to you project called <code>secret.txt</code>, and write something inside such as "this is a very important secret".
@@ -599,6 +611,7 @@ Of course, the same procedure can be repeated on the command line. You can brows
 > 5. Navigate to the project page on GitHub. You shouldn't see the secret on the front page. Find the secret from your commit history. Find the secret also using the command line.
 
 {: .warning}
+
 > Remember, don't push anything secret to the remote repository: no passwords, personal API keys, your student number, or anything you wouldn't want to share with the whole Internet.
 
 ## The End
