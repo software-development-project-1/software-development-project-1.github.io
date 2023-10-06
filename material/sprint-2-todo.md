@@ -276,6 +276,23 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 >
 > Create a method `getReadingRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations).
 
+## API documentation with Swagger
+
+<!-- https://medium.com/@f.s.a.kuzman/using-swagger-3-in-spring-boot-3-c11a483ea6dc -->
+
+```xml
+<dependency>
+   <groupId>org.springdoc</groupId>
+   <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+   <version>2.0.2</version>
+</dependency>
+```
+
+> Exercise 12
+>
+> Swagger
+
+
 ## Communication between frontend and backend
 
 The purpose of the REST APIs we just implemented on the backend is that we can _separate_ the client application from the backend application. In web applications these client applications are commonly called _frontend applications_ and they are implemented using JavaScript programming language.
@@ -448,27 +465,93 @@ So, we replaced the previous `frontend/messageList/renderMessageList.jsx` entry 
 
 Let's run the `npm run dev` command in Git Bash and open <http://localhost:8080> in browser. We should see the text "Reading recommendation list coming soon!" where used to be the list of reading recommendations. Change the text in the `renderRecommendationList.jsx` and save the changes. Then, reaload the page and you should see that the text has changed.
 
-{: .important-title }
+Next we will implement the list of reading recommendations as a React frontend application. After that we will implement the the fifth user story "As an user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
 
-> Exercise 12
->
-> Implement a React frontend application to the `frontend/recommendationList` folder which lists the reading recommendation similarly as before. Use the `fetch` function to fetch the recommendations from <http://localhost:8080/api/recommendations>. Take a look at the files in the `frontend/messageList` folder for examples.
+For the _fifth user story_ we can have the following tasks:
+
+1. Create a React component RecommendationList which lists reading recommendations from http://localhost:8080/api/recommendations
+2. Render the RecommandationList component on the recommendation list Thymeleaf template
+3. Add the category filter for the RecommandationList component
 
 {: .important-title }
 
 > Exercise 13
 >
-> React category filter
+> Add the tasks of the _fifth user story_ to the "Sprint 2 Backlog" board as cards in Trello.
 
 {: .important-title }
 
 > Exercise 14
 >
-> Once you have completed the exercises for this Sprint, remove the excessive Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive `messageList` folder from the `frontend` directory.
+> Implement a React frontend application to the `frontend/recommendationList` folder which lists the reading recommendation similarly as before. Use the `fetch` function to fetch the recommendations from <http://localhost:8080/api/recommendations>. Take a look at the files in the `frontend/messageList` folder for examples.
 
 {: .important-title }
 
 > Exercise 15
+>
+> ```jsx
+> export default function RecommendationList() {
+>   const [categories, setCategories] = useState([]);
+>   const [selectedCategoryId, setSelectedCategoryId] = useState();
+>   const [recommendations, setRecommendations] = useState([]);
+>
+>   // effect for fetching categories
+>   useEffect(() => {
+>     // fetch categories
+>   }, []);
+>
+>   // effect for fetching recommendations
+>   useEffect(() => {
+>     if (selectedCategoryId) {
+>       // If category is selected fetch categories from /api/categories/{id}/recommendations
+>     } else {
+>       // If no category is selected fetch categories from /api/recommendations
+>     }
+>   }, [selectedCategoryId]); // Re-run the effect when selectedCategoryId changes
+>
+>   function handleCategoryFilterChange(event) {
+>     setSelectedCategoryId(event.target.value);
+>   }
+>
+>   function clearCategoryFilter() {
+>     setSelectedCategoryId(undefined);
+>   }
+>
+>   return (
+>     <div>
+>       <div class="mb-3">
+>         <div class="mb-3">
+>           <label class="form-label">Filter by a category</label>
+>           <select class="form-select" onChange={handleCategoryFilterChange}>
+>             {categories.map((category) => (
+>               <option value={category.id} key={category.id}>
+>                 {category.name}
+>               </option>
+>             ))}
+>           </select>
+>         </div>
+>         <button class="btn btn-secondary" onClick={handleClearCategoryFilter}>
+>           Clear category filter
+>         </button>
+>       </div>
+>     </div>
+>   );
+> }
+> ```
+
+{: .important-title }
+
+> Exercise 16
+>
+> Once you have completed the exercises for this Sprint, remove the excessive Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive `messageList` folder from the `frontend` directory.
+
+## Sprint Review
+
+We have all kinds of cool stuff to show for the Product Owner at the end of this Sprint. Prepare for the upcoming [Sprint Review](/sprint-1#sprint-review) event, similarly as in the previous Sprint.
+
+{: .important-title }
+
+> Exercise 17
 >
 > Decide which group member gives the Sprint Review demonstration at the beginning of the next Sprint. The group member should be someone else as the one who gave it previously. This group member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 

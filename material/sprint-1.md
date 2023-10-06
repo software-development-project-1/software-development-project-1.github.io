@@ -247,7 +247,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 >
 > 1. At the beginning of the file add the project name "Cool Reads" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
 > 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
-> 3. Below the description [list](https://www.markdownguide.org/basic-syntax#lists-1) each group member's name.
+> 3. Below the description add a subheading "Team members" and below that add a [list](https://www.markdownguide.org/basic-syntax#lists-1) of each group member's name.
 > 4. Each group member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
 >
 > Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
@@ -288,7 +288,7 @@ These are the user stories and tasks, that you will be working on as a group dur
 - It is recommended to implement the user stories in the described order. During this Sprint it is easier to do most of the tasks together because they are so tightly connected.
 - _Push_ code to the GitHub repository often. Once you have some _working_ code, use `git add`, `git commit`, `git push` commands to push the code to GitHub.
 - _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer.
-- While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](http://localhost:4000/git#merge-conflicts).
+- While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts).
 - See how the mentioned things are done in the [example project]({{site.example_project_link}}).
 - The example project is using [Bootstrap](https://getbootstrap.com/) frontend toolkit. You can use it to make your application look nice. [Forms](https://getbootstrap.com/docs/5.3/forms/form-control/), [buttons](https://getbootstrap.com/docs/5.3/components/buttons/) and [tables](https://getbootstrap.com/docs/5.3/content/tables/) are useful guides for the user stories in this Sprint.
 - [Controllers](https://www.baeldung.com/spring-controllers)
@@ -372,9 +372,9 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 >
 > Implement the tasks of the first user story, "As an user I want to add a reading recommendation so that I can build a collection of reading recommendations".
 >
->The implementation should look roughly something like this:
+> The implementation should look roughly something like this:
 >
->![](/assets/sprint-1-user-story-1.png){: width="600" }
+> ![](/assets/sprint-1-user-story-1.png){: width="600" }
 >
 > Alter the `layout.html` file mentioned above to change the navigation bar content.
 
@@ -386,14 +386,13 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 >
 > The implementation should look roughly something like this:
 >
->![](/assets/sprint-1-user-story-2.png){: width="600" }
+> ![](/assets/sprint-1-user-story-2.png){: width="600" }
 >
 > This page should be visible on the root path (the `/` path) of the application. Change the `@GetMapping` of the `listMessages` method in the `MessageController` class, for example to `@GetMapping("/messages")`.
 
 {: .note }
 
 > The visual aspect of the application is not as important as the functionality. The most important things is that the user has some kind of functionality for the features described in the user stories.
-
 
 ## Daily Scrum
 
@@ -417,6 +416,27 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 > You don't need to have a Daily Scrum event on a daily basis. Just start each group meeting (including the weekly sessions) with a Daily Scrum.
 
+## Usage guide documentation
+
+Now that we have implemented some features for our application that the users can use it is time to describe _how_ to use the application. The _usage guide_ is perhaps one of the most important pieces of documentation for the application. It will describe our fellow developers how to technically use the application. This means for example, how to start the application, how to package the application, and how to run tests.
+
+The usage guide shouldn't make too many assumptions, for example, that the reader of the documentation happens to know that the `application.properties` needs alterations before the application can be started. If something needs to be done, even a simple thing, _mention it_. It is helpful not only for others but also for yourself. We should also describe the _system requirements_ for the application. For example, the required JDK version. The example project uses Spring Boot version 3, which requires JDK version 19 or higher.
+
+Because developers use different IDEs, it is easier to describe how the application can be used using a command-line interface (such as Git Bash). On the command-line, we can use the Maven command `mvn` or the alias `./mvnw` to run different Maven commands. Using `./mvnw` (the [Maven wrapper](https://www.baeldung.com/maven-wrapper)) is a bit more convenient because it doesn't require Maven to be installed.
+
+Here's a simple usage guide on how to start the example project application:
+
+1. Start the application by running `./mvnw spring-boot:run` on the command-line
+2. Once the application has started, visit <http://localhost:8080> in a browser to use the application
+
+The description should be so clear that your fellow student who knows nothing about the project beforehand would be able to start the application.
+
+{: .important-title }
+
+> Exercise 14
+>
+> Write a usage guide on _how to start your application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required JDK version for the project.
+
 ## Sprint Review
 
 At the end of each Sprint, there's the [Sprint Review](https://scrumguides.org/scrum-guide.html#sprint-review) event. During the Sprint Review, the Developers demonstrate the outcome of the Sprint for the Product Owner. This means that the Developers should demonstrate how the implemented user stories work _in the user's perspective_. So, instead of showing the code, Developers should show how the user can use the new features of the application.
@@ -425,7 +445,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 15
 >
 > Decide which group member gives the Sprint Review demonstration at the beginning of the next Sprint. This group member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 

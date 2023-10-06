@@ -33,13 +33,15 @@ The Product Owner has a great project idea and is in desprate need of a talented
 Although the high level requirements are the same, the team will decide on the technical implementation. The only technical limitations are the following:
 
 - Backend must be implemented with Java using the Spring Boot framework.
-- If there's a frontend implementation, it must be done using React.
+- Frontend must be implemented with React
 
-The team can decide how "frontend heavy" the technical implementation is. If there's not much frontend experience in the team the following implementation is recommended:
+The team can decide how "frontend heavy" the technical implementation is. If there's not much frontend experience in the team, the following implementation is recommended:
 
 - Backend renders pages with Thymeleaf
 - Backend handles transitions between pages
 - Backend has some API endpoints that return JSON data
 - Some individual features on pages are implemented with React and they use these JSON API endpoints
+
+We will start by implementing backend features during [Sprint 1](/sprint-1). During [Sprint 2](/sprint-2) we will be implementing a React application which uses JSON API endpoints. 
 
 The [example project]({{site.example_project_link}}) will be used as the project starting point. It demonstrates the basic concepts and will get you started more quickly.
