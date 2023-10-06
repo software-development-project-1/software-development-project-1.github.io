@@ -5,7 +5,7 @@ permalink: /git
 nav_order: 4
 ---
 
-<details open markdown="block">
+<details markdown="block">
   <summary>
     Table of contents
   </summary>

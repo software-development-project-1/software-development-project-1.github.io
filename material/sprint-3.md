@@ -5,7 +5,7 @@ permalink: /sprint-3
 nav_order: 8
 ---
 
-<details open markdown="block">
+<details markdown="block">
   <summary>
     Table of contents
   </summary>

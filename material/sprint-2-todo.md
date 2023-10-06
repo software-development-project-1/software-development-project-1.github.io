@@ -6,7 +6,7 @@ nav_order: 7
 nav_exclude: true
 ---
 
-<details open markdown="block">
+<details markdown="block">
   <summary>
     Table of contents
   </summary>

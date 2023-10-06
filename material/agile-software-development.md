@@ -5,7 +5,7 @@ permalink: /agile-software-development
 nav_order: 3
 ---
 
-<details open markdown="block">
+<details markdown="block">
   <summary>
     Table of contents
   </summary>
