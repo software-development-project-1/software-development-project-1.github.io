@@ -5,14 +5,7 @@ permalink: /sprint-1
 nav_order: 6
 ---
 
-<details markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+{% include toc.html %}
 
 # Sprint 1
 
@@ -21,6 +14,12 @@ This week we'll start working on the project described by the Product Owner in t
 {: .highlight }
 
 > Starting from this week, you will be working with your group. That means that, you will be working on the exercises together. You also need to work on the exercises outside the weekly sessions.
+
+## Sprint assesment
+
+All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your group's GitHub repository created in exercise 8. _Each group member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
+
+The Sprint assesment is done based on the exercises 1-15. The group can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Sprint Planning
 
@@ -115,12 +114,6 @@ Taskboards are either physical taskboards, for example whiteboards in an office,
 ## Managing backlogs in Trello
 
 [Trello](https://trello.com) is an online platform for managing virtual taskboards. We will be using Trello to manage our project's Product Backlog and Sprint Backlogs.
-
-{: .highlight-title}
-
-> Submitting this Sprint's exercises
->
-> All of this Sprint's exercises are submitted into [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). Submission should only contain the link to your group's GitHub repository created in exercise 8. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
 {: .important-title }
 
@@ -321,6 +314,12 @@ These are the user stories and tasks, that you will be working on as a group dur
 > - When you complete a task, move it to the "Done" state
 >
 > Use the Sprint Backlog to track the Sprint progress. Always start a group meeting by looking at the Sprint Backlog.
+
+{: .note }
+
+> "What's the progress of user story X?". This is a common question that the Sprint backlog should answer with a quick glance. We should be able to quickly see what's the state of each task of a user story and who is working on each task. One way to specify the user story of a task is to use user story specific prefix in the task description.
+>
+> First, add an unique index number prefix for each user story on the Product backlog, for example "1. As an user I want to add a reading recommendation so that I can build a collection of recommendations". Then, add an unique index number prefix in format "USER_STORY_INDEX.TASK_INDEX." for each task on the Sprint backlog, for example "1.1. Add a ReadingRecommendation JPA entity class with id, title, link and description attributes, and a ReadingRecommendationRepository JPA repository class".
 
 ## Thymeleaf page layouts
 

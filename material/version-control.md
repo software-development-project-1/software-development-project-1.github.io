@@ -5,20 +5,19 @@ permalink: /git
 nav_order: 4
 ---
 
-<details markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+{% include toc.html %}
 
 # Version control: Git and GitHub
 
 {: .note }
 
 > This material is based on the execellent course material of University of Helsinki's [Computing tools for CS studies](https://tkt-lapio.github.io/en/) course.
+
+## Submitting this week's exercises
+
+All of this week's exercises (exercises 1-12) are submitted to [this Moodle submission]({{site.week_2_moodle_submission_link}}). The submission should only contain the link to your GitHub repository created in exercise 6. The submission deadline is on {{site.week_2_deadline}}.
+
+## Version control
 
 This part of the course handles version control. Version control refers to a service used for storing code. There are two primary reasons for using it: Version control allows storing backups of both the current and older versions of a program. In addition, code and projects can easily be shared with others, which makes collaboration easy.
 
@@ -43,12 +42,6 @@ Torvalds started developing Git for his own needs when coding the Linux kernel. 
 GitHub is a service which was created later on, used for storing and publishing projects. There are several sites similiar to GitHub, such as [GitLab](https://about.gitlab.com/), however, this part deals with using GitHub as it is more popular in our department.
 
 Git and GitHub are used in solo as well as collaborative projects at University and in the industry. It's usage isn't limited only to code, and many people like to for example backup their thesis using Git. Nevertheless, this part focuses on sharing code with GitHub, and some of the common problems faced in the process. Git will certainly be useful in your studies, and you will learn more about it in the software engineering courses.
-
-{: .highlight-title}
-
-> Submitting this week's exercises
->
-> All of this week's exercises are submitted into [this Moodle submission]({{site.week_2_moodle_submission_link}}). Submission should only contain the link to your GitHub repository created in exercise 6. The submission deadline is on {{site.week_2_deadline}}.
 
 {: .important-title }
 

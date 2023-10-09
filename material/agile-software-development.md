@@ -5,16 +5,15 @@ permalink: /agile-software-development
 nav_order: 3
 ---
 
-<details markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+{% include toc.html %}
 
 # Agile software development and Scrum
+
+## Submitting this week's exercises
+
+All of this week's exercises (exercises 1-7) are submitted to [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a _single PDF file_. This week's exercises need to be submitted before the deadline on {{site.week_1_deadline}} to confirm the course participation.
+
+## Agile software development
 
 > _able to move quickly and easily_
 >
@@ -69,11 +68,6 @@ Instead of completing phases sequentially from start to finish, the phases are c
 _Scrum_ is an iterative software development process framework that defines practical ways to carry out agile software development principles. The [Scrum Guide](https://scrumguides.org/scrum-guide.html) is the official guide to Scrum.
 
 Before starting working on the exercises, read at least the chapters "Scrum Definition", "Scrum Theory", "Scrum Values", "Scrum Team" and "Scrum Events" from the [Scrum Guide](https://scrumguides.org/scrum-guide.html).
-
-{: .highlight-title}
-> Submitting this week's exercises
->
-> All of this week's exercises are submitted into [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a single PDF file. This week's exercises need to be submitted before the deadline on {{site.week_1_deadline}} to confirm the course participation.
 
 {: .important-title }
 

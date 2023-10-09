@@ -6,14 +6,7 @@ nav_order: 7
 nav_exclude: true
 ---
 
-<details markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+{% include toc.html %}
 
 # Sprint 2
 
