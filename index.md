@@ -49,7 +49,7 @@ Each group member's personal assessment is based on the following aspects:
 
 The personal assessment is done based on the teacher's observations and peer reviews from the group members. Each group member can earn up to 10 points based on their personal efforts towards the project.
 
-The final grade (1-5) is composed of the project points and the personal points.
+The final grade (1-5) is composed of the project points (maximum of 30 points) and the personal points (maximum of 10 points).
 
 {: .highlight }
 

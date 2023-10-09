@@ -13,7 +13,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 ## Sprint assesment
 
-This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_1_deadline}}. We will be working on the exercises for the next two weeks.
+This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
 The Sprint assesment is done based on the exercises 1-17. The group can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
