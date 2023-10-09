@@ -1,9 +1,8 @@
 ---
 layout: page
 title: Sprint 2
-permalink: /sprint-2-todo
+permalink: /sprint-2
 nav_order: 7
-nav_exclude: true
 ---
 
 {% include toc.html %}
@@ -52,12 +51,6 @@ First, create a session board that has the _mad_, _sad_ and _glad_ categories li
 3. Pick at least three most urgent issues from the _mad_ and _sad_ categories and come up with _concrete_ actions to solve each of these issues during the upcoming Sprint. For example a concrete action for the issue "I always have conflicts when I try to pull code from the GitHub" could be "Pull code from GitHub more often" and "Create smaller commits and push code to GitHub more often".
 
 Make sure that everyone follows the event structure and that each group member gets their voice heard.
-
-{: .highlight-title}
-
-> Submitting this Sprint's exercises
->
-> This Sprint does not have a Moodle submission. It is enough that the project's GitHub repository is up-to-date before the submission deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
 {: .important-title }
 
@@ -195,14 +188,15 @@ Before we can start using Lombok, we need to add it as dependency for our Maven 
 
 Lombok also needs the IDE support. We can setup Lombok for Eclipse by following these [instructions](https://projectlombok.org/setup/eclipse#via-eclipse-plugin-installer).
 
-Once we have successfully setup the Lombok library, we can start using it in our classes. Lombok generates boilerplate code for classes using a set of [annotations](https://projectlombok.org/features/). For example, the [@Data](https://projectlombok.org/features/Data) annotation generates, getters, setters and a constructor for the class. We also need an empty constructor for Entity classes. We can use the [@NoArgsConstructor](https://projectlombok.org/features/constructor) annotation for this.
+Once we have successfully setup the Lombok library, we can start using it in our classes. Lombok generates boilerplate code for classes using a set of [annotations](https://projectlombok.org/features/). For example, the [@Getter](https://projectlombok.org/features/GetterSetter) annotation generates getters and the [@Setter](https://projectlombok.org/features/GetterSetter) annotation setters for the class. We also need an empty constructor for Entity classes. We can use the [@NoArgsConstructor](https://projectlombok.org/features/constructor) annotation for this.
 
 Here's an example of using these two annotations on the `Message` class:
 
 ```java
 @Entity
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 public class Message {
   @Id
   @GeneratedValue
@@ -213,6 +207,10 @@ public class Message {
 
   @Column(nullable=false)
   private String content;
+
+  public Message(String content) {
+    this.content = content;
+  }
 }
 ```
 
@@ -336,9 +334,9 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 
 ## API documentation with Swagger
 
-Now that we have implemented REST API endpoints for our application, we should describe to our fellow developers what these endpoints are and what kind of data they provide. We could write this documentation by hand, but there's a high risk that the documentation will become stale in the future. For example, if we make some alteration to the structure of the provided data and forget to update the documentation. That is why API documentation is commonly generated automatically by tools such as [Springdoc](https://swagger.io/).
+Now that we have implemented REST API endpoints for our application, we should describe to our fellow developers what these endpoints are and what kind of data they provide. We could write this documentation by hand, but there's a high risk that the documentation will become stale in the future. For example, if we make some alteration to the structure of the provided data and forget to update the documentation. That is why API documentation is commonly generated automatically by tools such as [Spring Doc](https://springdoc.org/).
 
-Springdoc is a library for generating a JSON-formatted description of a REST API from our controller classes and their methods. This description follows a common format called the [OpenAPI Specification](https://swagger.io/docs/specification/about/) format. Once the OpenAPI formatted description is generated, there are tools to display the information in a user-friendly way as a user interface. One of such tools is [Swagger](https://swagger.io/). 
+Spring Doc is a library for generating a JSON-formatted description of a REST API from our controller classes and their methods. This description follows a common format called the [OpenAPI Specification](https://swagger.io/docs/specification/about/) format. Once the OpenAPI formatted description is generated, there are tools to display the information in a user-friendly way as a user interface. One of such tools is [Swagger](https://swagger.io/).
 
 Swagger provides documentation for the API endpoints we define in the controller methods. The documentation is a user interface that lists the endpoints and provides information for each one, such as what the request for the endpoint looks like and what's in the response. We can also easily send requests and inspect the response using the user interface. [Here](https://petstore.swagger.io/) is an example of a Swagger documentation.
 
