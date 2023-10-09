@@ -12,6 +12,12 @@ nav_exclude: true
 
 For the Sprint 2 we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to Retrospective, REST APIs and communication between frontend and backend.
 
+## Sprint assesment
+
+This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_1_deadline}}. We will be working on the exercises for the next two weeks.
+
+The Sprint assesment is done based on the exercises 1-17. The group can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+
 ## Retrospective
 
 The Scrum Guide only describes high-level guideliness for the software development process. It is not a one-size-fits-all framework suitable for every kind of project. Instead, the Scrum Team should _adapt_ the process to match the project needs. To discuss about the issues with the process and to come up with solutions, the Scrum has a dedicated event called _Retrospective_.
@@ -265,18 +271,24 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 > Exercise 9
 >
 > Create a controller class `ReadingRecommendationRestController` that has a method `getReadingRecommendations`. This method should return _all the reading recommendations_ in path `/api/recommendations` in JSON format. You should be able to see the list of recommendations when opening <http://localhost:8080/api/recommendations> in a web browser.
+>
+> Add this task to the "Sprint 2 Backlog" board in Trello and assign a group member for the task. This task is related to fifth user story.
 
 {: .important-title }
 
 > Exercise 10
 >
 > Create a controller class `CategoryRestController` that has a method `getCategories`. This method should return _all the categories_ in path `/api/categories` in JSON format. You should be able to see the list of categories when opening <http://localhost:8080/api/categories> in a web browser.
+>
+> Add this task to the "Sprint 2 Backlog" board in Trello and assign a group member for the task. This task is related to fifth user story.
 
 {: .important-title }
 
 > Exercise 11
 >
 > Create a method `getReadingRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations).
+>
+> Add this task to the "Sprint 2 Backlog" board in Trello and assign a group member for the task. This task is related to fifth user story.
 
 ## API documentation with Swagger
 
@@ -468,7 +480,7 @@ Let's run the `npm run dev` command in Git Bash and open <http://localhost:8080>
 
 Next we will implement the list of reading recommendations as a React frontend application. After that we will implement the the fifth user story "As an user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
 
-For the _fifth user story_ we can have the following tasks:
+For the _fifth user story_ we can have the following tasks in addition to the REST API tasks mentioned before:
 
 1. Create a React component RecommendationList which lists reading recommendations from http://localhost:8080/api/recommendations
 2. Render the RecommandationList component on the reading recommendation list Thymeleaf template

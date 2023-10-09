@@ -203,6 +203,6 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > During the course, each group will develop a project described by the Product Owner in the [project description](/project-description).
 >
-> Come up with at least three _well-written_ user stories based on the project description. Use the INVEST criteria to explain, why your user stories are well-written.
+> Come up with at least five _well-written_ user stories based on the project description. Use the INVEST criteria to explain, why your user stories are well-written.
 >
 > Hint: pay attention to the size of the user story. Split big user stories into smaller ones.
