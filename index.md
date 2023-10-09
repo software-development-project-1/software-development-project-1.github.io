@@ -13,11 +13,15 @@ During this course, we will learn how to manage the software development process
 
 Each group will be developing a project described [here](/project-description). The project is a web application implemented with Java programming language using the Spring Boot framework. Also, React is used as a frontend technology. The development of the project is split into three two-week iterations called _Sprints_. Each Sprint has high-level requirements, but groups should make most of the technical decisions themselves. The project starts on week three. For more information about the course, read the [course description](https://opinto-opas.haaga-helia.fi/course_unit/SOF005AS3AE).
 
-The course follows a weekly [schedule](/schedule). There are weekly topics that are covered in weekly sessions on Thursdays at 14:00 - 16:45 in classroom 4012. Attendance of the weekly sessions is _mandatory_. There are exercises each week that need to be submitted before the submission deadline.
+The course follows a weekly [schedule](/schedule). There are weekly topics that are covered in weekly sessions on Thursdays at 14:00 - 16:45 in classroom 4012. Attendance of the weekly sessions is _mandatory_. On the first two weeks, there are exercises on each week that need to be submitted before the submission deadline. On the third week, we start working on the project in groups.
 
 ## Teacher
 
 Kalle Ilves (kalle.ilves@haaga-helia.fi)
+
+## Course related discussions in Teams
+
+The course has a Teams team for all course related discussions. When you have trouble with an exercise or any other questions related to the course, feel free to ask about it in Teams.
 
 ## Assessment
 

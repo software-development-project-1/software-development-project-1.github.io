@@ -20,6 +20,7 @@ callouts:
   note:
     title: Note
     color: purple
+moodle_link: "#"
 week_1_moodle_submission_link: "#"
 week_2_moodle_submission_link: "#"
 sprint_1_moodle_submission_link: "#"
