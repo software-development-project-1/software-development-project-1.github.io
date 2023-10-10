@@ -190,7 +190,7 @@ Lombok also needs the IDE support. We can setup Lombok for Eclipse by following 
 
 Once we have successfully setup the Lombok library, we can start using it in our classes. Lombok generates boilerplate code for classes using a set of [annotations](https://projectlombok.org/features/). For example, the [@Getter](https://projectlombok.org/features/GetterSetter) annotation generates getters and the [@Setter](https://projectlombok.org/features/GetterSetter) annotation setters for the class. We also need an empty constructor for Entity classes. We can use the [@NoArgsConstructor](https://projectlombok.org/features/constructor) annotation for this.
 
-Here's an example of using these two annotations on the `Message` class:
+Here's an example of using these annotations on the `Message` class:
 
 ```java
 @Entity
@@ -340,7 +340,7 @@ Spring Doc is a library for generating a JSON-formatted description of a REST AP
 
 Swagger provides documentation for the API endpoints we define in the controller methods. The documentation is a user interface that lists the endpoints and provides information for each one, such as what the request for the endpoint looks like and what's in the response. We can also easily send requests and inspect the response using the user interface. [Here](https://petstore.swagger.io/) is an example of a Swagger documentation.
 
-We can generate Swagger documentation for our project using the Springdoc library. Let's start by adding the dependency for the `pom.xml` file under the `<dependencies>` list:
+Let's start documenting our API by adding the Spring Doc dependency for the `pom.xml` file under the `<dependencies>` list:
 
 ```xml
 <dependency>
@@ -350,7 +350,7 @@ We can generate Swagger documentation for our project using the Springdoc librar
 </dependency>
 ```
 
-Then, let's start our application and open <http://localhost:8080/v3/api-docs> in a browser. We should see the JSON formatted description of our REST API in the Open API format. For a more user-friendly description, the Swagger documentation can be found at <http://localhost:8080/swagger-ui.html>. In the Swagger documentation, we can see a documentation for two controllers: the `ReadingRecommendationRestController` controller and the `CategoryRestController` controller.
+Then, let's start our application and open <http://localhost:8080/v3/api-docs> in a browser. We should see the JSON formatted description of our REST API in the OpenAPI format. For a more user-friendly description, the Swagger documentation can be found at <http://localhost:8080/swagger-ui.html>. In the Swagger documentation, we can see a documentation for two controllers: the `ReadingRecommendationRestController` controller and the `CategoryRestController` controller.
 
 Let's have a look at the documentation for the `/api/categories/{id}/recommendations` endpoint under the "category-rest-controller". We see all relevant information about the endpoint: the path, path parameters, and an example of the response. We can send a test request by clicking the "Try it out" button on the right. This is handy while we are exploring an API that we aren't familiar with.
 
@@ -661,6 +661,8 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 > Exercise 17
 >
 > Decide which group member gives the Sprint Review demonstration at the beginning of the next Sprint. The group member should be someone else as the one who gave it previously. This group member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
+>
+> Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/)) for the Sprint Review. This means that you should add a few categories and a few reading recommendations using the application so that you can easily demonstrate the user stories.
 
 {: .warning }
 
