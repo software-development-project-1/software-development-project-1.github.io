@@ -14,7 +14,7 @@ For the final Sprint of the course, the Sprint 3, we have a new set of requireme
 
 ## Sprint assesment
 
-This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for the next two weeks.
+This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
 
 The Sprint assesment is done based on the exercises 1-17. The group can earn up to 10 points from this Sprint. This is the final Sprint of the course and the group's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
 
@@ -40,15 +40,17 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 
 ## Git branches
 
-So far, we have only created commits for the _main branch_ of our repository. _Git branches_ allows us to _diverge from the main branch commit history_ by creating a new branch. We can add commits for our branch without effecting the main branch commit history and at some point we _merge_ the commits of branch to the main branch. Branches are commonly used to isolate certain changes, such as feature implementations, from the main branch so that we don't effect other developer's work. Such use of branches is referred to as _feature branches_, wich we will cover soon.
+So far, we have only created commits for the _main branch_ of our repository. _Git branches_ allows us to _diverge from the main branch commit history_ by creating a new branch. We can add commits for our branch without effecting the main branch commit history and at some point we _merge_ the commits of branch to the main branch.
 
-A new branch can be created with the `git branch <name-of-the-branch>` command in Git Bash. Let's create a branch and _name it our first name_. For example, I would create the following branch
+Branches are commonly used to isolate work-in-progress code from the main branch. The main branch should only contain _working code_, which produces _deployment ready features_. This means that the _latest working version_ of our application can be found in the main branch at all times. We should be able to deploy this application for our users at any moment without issues.
+
+A new branch can be created with the `git branch <name-of-the-branch>` (replace the `<name-of-the-branch>` with name of the branch) command in Git Bash. Let's create a branch and _name it based on our first name without whitespaces_. For example, I would create the following branch:
 
 ```bash
 git branch kalle
 ```
 
-Now, let's check the repository's branches with the `git branch` command. We should see that our branch is added to the list. We can also see that there's an astrisk symbol (\*) before the main. This means that we are currently on the main branch. We can switch branches wit the `git checkout <name-of-the-branch>`. Switch to the branch you just created:
+Now, let's check the repository's branches with the `git branch` command. We should see that our branch is added to the list. We can also see that there's an astrisk symbol (\*) before the main branch. This means that we are currently on the main branch. We can switch branches wit the `git checkout <name-of-the-branch>`. Switch to the branch you just created:
 
 ```bash
 git checkout kalle
@@ -76,9 +78,61 @@ git push --set-upstream origin kalle
 
 Now, let's check that our branch is pushed to GitHub. Open the repository in GitHub and click the branch selector which says "main" below the repository name. We should see our branch there. Click the branch and check that the file exists in the `documentation` folder.
 
+{: .important-title }
+
+> Exercise 2
+>
+> Do the steps mentioned above to create your own branch and push it to GitHub.
+
+We can also pull remote (in GitHub) branches for our local computer and make changes to them. Check the list of branches on GitHub and pick _some other group member's branch_.Once you have picked a branch, switch to main branch first:
+
+```bash
+git checkout main
+```
+
+Then, create a branch that _has the same name_ as the one you picked from GitHub:
+
+```bash
+git branch <branch>
+```
+
+Once created, switch to the created branch:
+
+```bash
+git checkout <branch>
+```
+
+Now, we can pull the branch changes from GitHub with the `git pull` command:
+
+```bash
+git pull
+```
+
+<!-- TODO: tuleeko virhe? -->
+
+Once we have pulled the changes from GitHub, let's change the contents of the group member's file in the `documentation` folder and push these changes to GitHub similarly as we did before. Once you have pushed the changes, check that changes are visible in GitHub like you did with your own branch.
+
+{: .important-title }
+
+> Exercise 3
+>
+> Pull _some other group member's_ branch from GitHub and make some changes for _their file_ in `documentation` folder. Push these changes to GitHub.
+
 Once we have happy with the changes we have made in the branch, we should _merge_ it with the main branch. This basically means applying all the commits we have made for the branch to the main branch. For this we can use the `git merge` command.
 
-Let's switch to the main branch first:
+Let's switch to the our branch first and see if there is any changes in GitHub:
+
+```bash
+git checkout kalle
+```
+
+We can pull changes from GitHub with the `git pull` command:
+
+```bash
+git pull
+```
+
+Once we have the changes on our local computer, let's switch to the main branch:
 
 ```bash
 git checkout main
@@ -98,32 +152,25 @@ git push
 
 Now if we open the repository in GitHub, we should see that the main branch has our file in the `documentation` folder.
 
-{: .important-title }
+{: .highlight }
 
-> Exercise 2
->
-> Do the steps mentioned above to create your own branch and merge it with the main branch. Once the branch is merged, remove the file you created to `documentation` folder and push the changes to GitHub.
-
-## Feature branch workflow
-
-As mentioned before, branches are commonly used to isolate certain changes, such as feature implementations, from the main branch. This is useful, because we want to _protect the main branch_ from unfinished features and more importantly from broken code (for example code which doesn't compile). Within branches we have safe "playground" for the feature implementation. Only once we have confirmed that the feature is finished and it works as expected, we can merge it with the main branch. This kind of workflow is referred to as [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow).
-
-But, what is a "feature" in the feature branch workflow? A feature is any totality of code, documentation, or other relevant content that we want to merge with the main branch. For example a user story, or a task can be a feature. The important thing is, that we want to keep the feature branch scope _as small as possible_.
-
-## Pull request
+> Merge commits can cause _merge conflicts_. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts).
 
 {: .important-title }
 
-> Exercise 3
+> Exercise 4
 >
-> Pull request
+> Pull changes for _your branch_ from GitHub with the `git pull` command. Then, merge _your branch_ with the main branch. Check in GitHub that you changes are visible in the main branch.
+
+{: .highlight }
+
+> Once everyone is done with these exercises, remove each group member's file from the `documentation` folder in the main branch and push the changes to GitHub.
 
 ## Sprint 3 planning
 
 1. As an anonymous user I want to register an account so that I can manage my personal reading recommendations
 2. As a signed in user I want to assosicate the added reading recommendation with my account so that I can manage my personal reading recommendations
 3. As a signed in user I want to delete my own reading recommendations so that I can get rid of useless reading recommendations
-4. As a signed in user I want to edit my own reading recommendations so that I can keep their information up-to-date
 
 ## Authentication
 
@@ -138,12 +185,6 @@ But, what is a "feature" in the feature branch workflow? A feature is any totali
 > Exercise 5
 >
 > Spring Security
-
-{: .important-title }
-
-> Exercise 6
->
-> Pull request
 
 {: .important-title }
 
@@ -225,13 +266,5 @@ But, what is a "feature" in the feature branch workflow? A feature is any totali
 {: .important-title }
 
 > Exercise 14
->
-> Final report
-
-## GitHub release
-
-{: .important-title }
-
-> Exercise 15
 >
 > Final report
