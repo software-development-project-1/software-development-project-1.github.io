@@ -40,6 +40,8 @@ In _agile software development_, the development process follows values and prin
 >
 > -- Manifesto for Agile Software Development
 
+The Manifesto for Agile Software Development doesn't go into details on how to actually _implement_ these values in practice. Different Agile software development process frameworks, such as _Scrum_ and _SAFe_ describe a detailed process that follows these values.
+
 ## Software development lifecycle
 
 The software development process is divided into different phases:
@@ -65,7 +67,7 @@ Instead of completing phases sequentially from start to finish, the phases are c
 
 ## Scrum
 
-_Scrum_ is an iterative software development process framework that defines practical ways to carry out agile software development principles. The [Scrum Guide](https://scrumguides.org/scrum-guide.html) is the official guide to Scrum.
+_Scrum_ is an iterative software development process framework that defines practical ways to carry out agile software development principles. The [Scrum Guide](https://scrumguides.org/scrum-guide.html) is the official guide to Scrum. During the course we will use Scrum to manage our software development process. This week we will learn about Scrum in theory and week three onwards we will apply the knowledge with our project.
 
 Before starting working on the exercises, read at least the chapters "Scrum Definition", "Scrum Theory", "Scrum Values", "Scrum Team" and "Scrum Events" from the [Scrum Guide](https://scrumguides.org/scrum-guide.html).
 
