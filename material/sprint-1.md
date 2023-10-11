@@ -17,7 +17,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 ## Sprint assesment
 
-All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your group's GitHub repository created in exercise 8. _Each group member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
+All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your group's GitHub repository created in exercise 7. _Each group member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
 The Sprint assesment is done based on the exercises 1-15. The group can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 

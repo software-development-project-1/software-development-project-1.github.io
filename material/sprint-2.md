@@ -56,7 +56,7 @@ Make sure that everyone follows the event structure and that each group member g
 
 > Exercise 1
 >
-> _One of the group members_ should create a new session in Flinga as instructed above. Name the session "Retrospective 1". Once the session is created, other group members should join the session with the "Join link". Setup the session board organize the Retrospective event as instructed above.
+> _One of the group members_ should create a new session in Flinga as instructed above. Name the session "Retrospective 1". Once the session is created, other group members should join the session with the "Join link". Setup the session board and organize the Retrospective event as instructed above.
 >
 > Once you have completed the Retrospective write down the issues and actions to the repository's `retrospectives/sprint-1.md` file and push the changes to GitHub.
 

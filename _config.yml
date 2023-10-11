@@ -20,10 +20,10 @@ callouts:
   note:
     title: Note
     color: purple
-moodle_link: "#"
-week_1_moodle_submission_link: "#"
-week_2_moodle_submission_link: "#"
-sprint_1_moodle_submission_link: "#"
+moodle_link: "https://hhmoodle.haaga-helia.fi/course/view.php?id=38762"
+week_1_moodle_submission_link: "https://hhmoodle.haaga-helia.fi/mod/assign/view.php?id=2634199"
+week_2_moodle_submission_link: "https://hhmoodle.haaga-helia.fi/mod/assign/view.php?id=2634203"
+sprint_1_moodle_submission_link: "https://hhmoodle.haaga-helia.fi/mod/assign/view.php?id=2634208"
 example_project_link: "https://github.com/software-development-project-1/example-project"
 teacher_email: "kalle.ilves@haaga-helia.fi"
 week_1_deadline: "2.11. at 10:00"
