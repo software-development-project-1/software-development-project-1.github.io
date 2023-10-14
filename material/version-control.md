@@ -197,7 +197,7 @@ A good habit to form is to constantly check which changes will be added to the n
 
 After choosing which changes will be included in the next commit, you can finally create the commit with the command `git commit`. Every commit has a message attached to it, describing the changes included in the commit. The message is added upon creating the commit by running: `git commit -m "a descriptive message"`, where your descriptive message specifies what has changed since the last commit. If you leave out the flag `-m` and the message, a text editor will open, where you can write a longer, detailed description below the title message. The commit is then created by saving and exiting the text editor.
 
-Git uses a command line text editor for commit messages by default. If we have installed [Visual Studio Code](https://code.visualstudio.com/), we can use that as the Git text editor by running the following command:
+Git uses a command line text editor for commit messages by default. Let's use a bit more user-friendly editor, [Visual Studio Code](https://code.visualstudio.com/). If you haven't installed it yet, start with that. Once installed, we can use Visual Studio Code as the Git text editor by running the following command:
 
 ```bash
 git config --global core.editor "code --wait"
