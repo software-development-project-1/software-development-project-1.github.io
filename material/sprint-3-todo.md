@@ -16,7 +16,7 @@ For the final Sprint of the course, the Sprint 3, we have a new set of requireme
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
 
-The Sprint assesment is done based on the exercises 1-17. The group can earn up to 10 points from this Sprint. This is the final Sprint of the course and the group's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
+The Sprint assesment is done based on the exercises 1-13. The group can earn up to 10 points from this Sprint. This is the final Sprint of the course and the group's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
 
 During this Sprint, each group member will do a [peer review](#peer-review) in which they asses themselves and other group members. The results of the peer review will heavily impact the personal points of a group member. Each group member can earn up to 10 personal points.
 
@@ -44,7 +44,7 @@ So far, we have only created commits for the _main branch_ of our repository. _G
 
 Branches are commonly used to isolate work-in-progress code from the main branch. The main branch should only contain _working code_, which produces _deployment ready features_. This means that the _latest working version_ of our application can be found in the main branch at all times. We should be able to deploy this application for our users at any moment without issues.
 
-A new branch can be created with the `git branch <name-of-the-branch>` (replace the `<name-of-the-branch>` with name of the branch) command in Git Bash. Let's create a branch and _name it based on our first name without whitespaces_. For example, I would create the following branch:
+A new branch can be created with the `git branch <name-of-the-branch>` (replace the `<name-of-the-branch>` with name of the branch) command in Git Bash. Let's create a branch and _name it our first name without whitespaces_. For example, I would create the following branch:
 
 ```bash
 git branch kalle
@@ -82,7 +82,7 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 
 > Exercise 2
 >
-> Do the steps mentioned above to create your own branch and push it to GitHub.
+> _Each group member_ should do the steps mentioned above to create their own branch and push it to GitHub.
 
 We can also pull remote (in GitHub) branches for our local computer and make changes to them. Check the list of branches on GitHub and pick _some other group member's branch_.Once you have picked a branch, switch to main branch first:
 
@@ -176,13 +176,13 @@ Now if we open the repository in GitHub, we should see that the main branch has 
 
 {: .important-title }
 
-> Exercise 4
+> Exercise 5
 >
 > User story 1
 
 {: .important-title }
 
-> Exercise 5
+> Exercise 6
 >
 > Spring Security
 
@@ -198,23 +198,17 @@ Now if we open the repository in GitHub, we should see that the main branch has 
 >
 > User story 3
 
-{: .important-title }
-
-> Exercise 9
->
-> User story 4
-
 ## Testing
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 9
 >
 > Create reading recommendation test
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 10
 >
 > Register account test
 
@@ -243,7 +237,7 @@ Now if we open the repository in GitHub, we should see that the main branch has 
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 11
 >
 > Jacoco
 
@@ -251,20 +245,26 @@ Now if we open the repository in GitHub, we should see that the main branch has 
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 12
 >
 > Peer review
 
-## The final report
+## Final report
 
-- Kerrataan jokaisen sprintin aikana kohdatut ongelmat (prosessiin-, projektityöskentelyyn- ja teknisiin asioihin liittyvät)
-- Mikä sujui projektissa hyvin, mitä pitäisi parantaa seuraavaa kertaa varten
-- Mitä asioita opitte, mitä asioita olisitte halunneet oppia, mikä tuntui turhalta
-- Raportti palautetaan lisäämällä raporttiin linkki projektin GitHubin README:hen
-- Raportista tulee ilmetä jokaisen projektiin osallistuneen nimi
+Add a file `final-report.md` to the `documentation` folder. In that file, write _the final report_ for the course, which answers the following questions:
+
+- What challenges did you face during each Sprint? Describe both technical and project management related challenges. You can use the Sprint Retrospective notes in the `retrospectives` folder.
+- Where you able to overcome these challenges? If so, how?
+- In which areas did you succeed as a group?
+- In which areas there was room for improvement?
+- What did you learn during the course? What would you have wanted to learn more about? What felt irrellevant?
+
+The final report should also include the name of each group member.
+
+Add a link to the `final-report.md` file in Github to the `README.md` file under the "Documentation" subheading.
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 13
 >
-> Final report
+> Write the final report for the course as instructed above.

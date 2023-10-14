@@ -40,11 +40,13 @@ In _agile software development_, the development process follows values and prin
 >
 > -- Manifesto for Agile Software Development
 
+One of the key value is the attitude towards _change_. For example, there is often need to change the software's requirements during the development process. Agile software development process should welcome any kind of change with open arms. That is, because _change is inevitable and frequent_ in many business environments. 
+
 The Manifesto for Agile Software Development doesn't go into details on how to actually _implement_ these values in practice. Different Agile software development process frameworks, such as _Scrum_ and _SAFe_ describe a detailed process that follows these values.
 
 ## Software development lifecycle
 
-The software development process is divided into different phases:
+It requires different phases to be completed so that an idea of what we can do with a software becomes an actual working software which provides the desired features. The software development process is divided into different phases:
 
 - In the _requirements phase_, the development team collects requirements from several stakeholders such as customers, internal and external experts, and managers. The requirements cover use cases that describe user interactions that the software must provide. These requirements are written down as the _software requirement specification document_.
 - In the _design phase_, the development team analyzes requirements and identifies the best solutions to create the software. For example, they may consider integrating pre-existing modules, making technology choices, and identifying development tools
@@ -57,13 +59,19 @@ The mentioned phases are commonly performed in the mentioned order and the whole
 
 In the old days (and unfortunately, these days too), each phase was completed before the next phase could begin and there was no overlapping in the phases. This means that, for example, in the requirements phase, all possible requirements for the software had to be carefully thought out and documented before the design phase could begin. This kind of sequential software development process is called the [Waterfall model](https://en.wikipedia.org/wiki/Waterfall_model).
 
+![Waterfall model software development lifecycle](/assets/waterfall-lifecycle.webp)
+
 The software requirement specification document written in the requirements phase was sort of a binding contract, meaning that _the requirements shouldn't change_ after the requirements phase. If some problems with the requirements were spotted during the implementation phase, it was practically impossible to change the requirements. Another problem was that it could easily take years before the users could get their hands on any kind of working software.
 
-The problem with this so-called [Big design up front](https://en.wikipedia.org/wiki/Big_design_up_front) approach is that _requirements tend to change_ during the implementation phase. If the development of software takes even a year, that's forever in the current, constantly changing business environment. Also, it is _practically impossible to come up with all the possible requirements_ for the software before actual users can try out some kind of a prototype and give feedback.
+The problem with this so-called [Big design up front](https://en.wikipedia.org/wiki/Big_design_up_front) approach is that _requirements tend to change_ during the implementation phase. If the development of the software takes even a few years, that's forever in the current, constantly changing business environment. Also, it is _practically impossible to come up with all the possible requirements_ for the software before actual users can try out some kind of a prototype and give feedback.
 
-Agile software development takes a different, _iterative approach_. In this approach, the software is developed in short, typically one or two-week-long iterations. Before each iteration, it is only necessary to specify requirements that the software should fulfill after the iteration is complete. During the iteration, the software development team turns these customer's requirements into technical development tasks and implements these tasks in a self-organized manner. The outcome of each iteration is working software that users can actually use and give feedback. This feedback can be used to constitute requirements for the next iteration. This feedback loop is in the heartbeat of the agile software development process.
+Agile software development takes a different, _iterative approach_. In this approach, the software is developed in short, typically one or two-week-long iterations. Before each iteration, it is only necessary to specify requirements that the software should fulfill after the iteration is complete. 
 
-Instead of completing phases sequentially from start to finish, the phases are completed in a _cycle_. Each iteration starts with the requirements phase and during the iteration design, implementation, test, deployment, and maintenance phases are completed. This cycle repeats in every iteration.
+During the iteration, the software development team turns these customer's requirements into technical development tasks and implements these tasks in a self-organized manner. The outcome of each iteration is working software that users can actually use and give feedback. This feedback can be used to constitute requirements for the next iteration. This feedback loop is in the heartbeat of the agile software development process.
+
+Instead of completing software development lifecycle's phases sequentially from start to finish, the phases are completed in a _cycle_. Each iteration starts with the requirements phase and during the iteration design, implementation, test, deployment, and maintenance phases are completed. This cycle repeats in every iteration.
+
+![Agile software development lifecycle](/assets/agile-lifecycle.png){: width="400" }
 
 ## Scrum
 
