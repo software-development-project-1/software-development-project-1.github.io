@@ -169,7 +169,7 @@ If one knows the solution to a problem, they can even suggest their own improvem
 
 Note that this is actually the same address you used before when adding a remote repository with the command `git remote add`. The owner of a project will not know who has cloned their project.
 
-In the future, when you start a new Git project, you have two options for linking the local project to a repostory in GitHub. One option is to start by running `git init` inside a folder, create a repository to it in GitHub, and link them together. Another possibility is to create the remote first and simply clone the empty project to your local machine.
+In the future, when you start a new Git project, you have two options for linking the local project to a repostory in GitHub. One option is to start by running `git init` inside a directory, create a repository to it in GitHub, and link them together. Another possibility is to create the remote first and simply clone the empty project to your local machine.
 
 ### GitHub organizations
 
@@ -211,7 +211,7 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 >
 > Each group member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example-project repository. _Remember to use the HTTPS address_ of the GitHub repository with the command.
 >
-> Once you have cloned the repository, open the code in an editor such as Eclipse or Visual Studio Code. In Eclipse you can open the project folder from "File > Open Project from Filesystem". The project requires _Java version 17_.
+> Once you have cloned the repository, open the code in an editor such as Eclipse or Visual Studio Code. In Eclipse you can open the project directory from "File > Open Project from Filesystem". The project requires _Java version 17_.
 >
 > Explore the code and start the Spring Boot application. Once started, the application should be open at <http://localhost:8080>.
 
@@ -221,9 +221,9 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 >
 > Once each group member has the repository on their local computer, do the following:
 >
-> 1. _Each group member_ opens the cloned repository folder in Eclipse or in some other editor.
-> 2. _Each group member_ opens the cloned repository folder in Git Bash. See previous week's [Git instructions](/git) if you have trouble.
-> 3. _One of the group members_ locally edits the contents of the `README.md` file in the repository folder. Push changes to the remote GitHub repository using `git add`, `git commit` and `git push` commands.
+> 1. _Each group member_ opens the cloned repository directory in Eclipse or in some other editor.
+> 2. _Each group member_ opens the cloned repository directory in Git Bash. See previous week's [Git instructions](/git) if you have trouble.
+> 3. _One of the group members_ locally edits the contents of the `README.md` file in the repository directory. Push changes to the remote GitHub repository using `git add`, `git commit` and `git push` commands.
 > 4. _Each group member_ checks that the changes are visible in GitHub.
 > 5. Once changes have been pushed to GitHub, _each group member_ pulls the changes from GitHub using the `git pull` command.
 > 6. Once everybody sees the changes on their local `README.md` file, repeat the the steps from step 3. for each group member until everyone has pushed some changes to the GitHub repository.
@@ -325,7 +325,7 @@ These are the user stories and tasks, that you will be working on as a group dur
 
 If we start the example project application and visit the [message list page](http://localhost:8080) at and the [add message page](http://localhost:8080/messages/add), we see that the pages share a common structure. They both have the navigation bar at the top of the page. If we dig deeper into the HTML structure, there's also common `link` and `script` elements. We could simply copy-paste the navigation bar HTML to both pages, but once we implement more pages and want to update the navigation bar, things start to get out of hand. Instead, we can have a common _layout_ for the application that each page can share. This can be achieved using the [Thymeleaf Layout Dialect](https://ultraq.github.io/thymeleaf-layout-dialect/).
 
-If we take a look at the example project's `layout.html` file in the `src/main/resources/templates` folder we'll see that the file has a common structure for each page:
+If we take a look at the example project's `layout.html` file in the `src/main/resources/templates` directory we'll see that the file has a common structure for each page:
 
 ```html
 <!DOCTYPE html>

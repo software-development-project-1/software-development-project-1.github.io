@@ -416,7 +416,7 @@ If you aren't familiar with React yet, React's documentation has great [tutorial
 
 > This material doesn't go into React details. It is recommended that those group members who have completed (or currently completing) the Front End Development course will be working on the exercises in this section.
 
-The example project has a simple React frontend application in the `frontend/messageList` folder. We will be using this application as an example.
+The example project has a simple React frontend application in the `frontend/messageList` directory. We will be using this application as an example.
 
 The communication between the frontend application and the backend application is performed using the JavaScript's [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The Fetch API provides the `fetch` function, which can be used to send a HTTP request to a specific URL:
 
@@ -510,7 +510,7 @@ The JavaScript file for the frontend application is added with a `script` tag:
 
 The JavaScript file is bundled using a _bundler_. The bundler will combines many JavaScript code files into a single one that is loadable in the browser. We will be using the [esbuild](https://esbuild.github.io/) bundler.
 
-If we take a look at the `scripts` section of the `package.json` file in the root folder of the project, we'll see three scripts:
+If we take a look at the `scripts` section of the `package.json` file in the root directory of the project, we'll see three scripts:
 
 ```json
 {
@@ -520,11 +520,11 @@ If we take a look at the `scripts` section of the `package.json` file in the roo
 }
 ```
 
-The `esbuild-bundle` script will bundle the `frontend/messageList/renderMessageList.jsx` entry file and output the result to the `src/main/resources/static/frontend` folder. The `dev` script will execute the `esbuild-bundle` script with a `--watch` flag, which will generate the output files each time one of the source files changes. Use this script while writing the frontend code.
+The `esbuild-bundle` script will bundle the `frontend/messageList/renderMessageList.jsx` entry file and output the result to the `src/main/resources/static/frontend` directory. The `dev` script will execute the `esbuild-bundle` script with a `--watch` flag, which will generate the output files each time one of the source files changes. Use this script while writing the frontend code.
 
-Let's open the project folder in Git Bash and run `npm run dev` command. Next, open <http://localhost:8080/react-messages> in browser and you should see a list of messages if there's any. If the list is empty, add a message in <http://localhost:8080/messages/add> and check again.
+Let's open the project directory in Git Bash and run `npm run dev` command. Next, open <http://localhost:8080/react-messages> in browser and you should see a list of messages if there's any. If the list is empty, add a message in <http://localhost:8080/messages/add> and check again.
 
-Now that we have the <http://localhost:8080/api/recommendations> REST API, we can implement a frontend application for the recommendations list. Create a folder `recommendationList` in the `frontend` folder. In that folder, create a file `renderRecommendationList.jsx` with the following content:
+Now that we have the <http://localhost:8080/api/recommendations> REST API, we can implement a frontend application for the recommendations list. Create a directory `recommendationList` in the `frontend` directory. In that directory, create a file `renderRecommendationList.jsx` with the following content:
 
 ```jsx
 import React from "react";
@@ -585,7 +585,7 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 
 > Exercise 14
 >
-> Implement a React frontend application to the `frontend/recommendationList` folder which lists the reading recommendation similarly as before. Use the `fetch` function to fetch the recommendations from <http://localhost:8080/api/recommendations>. Take a look at the files in the `frontend/messageList` folder for examples.
+> Implement a React frontend application to the `frontend/recommendationList` directory which lists the reading recommendation similarly as before. Use the `fetch` function to fetch the recommendations from <http://localhost:8080/api/recommendations>. Take a look at the files in the `frontend/messageList` directory for examples.
 
 {: .important-title }
 
@@ -650,7 +650,7 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 
 > Exercise 16
 >
-> Once you have completed the exercises for this Sprint, remove the excessive Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive `messageList` folder from the `frontend` directory.
+> Once you have completed the exercises for this Sprint, remove the excessive Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive `messageList` directory from the `frontend` directory.
 
 ## Sprint Review
 
