@@ -222,7 +222,7 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 > Once each group member has the repository on their local computer, do the following:
 >
 > 1. _Each group member_ opens the cloned repository directory in Eclipse or in some other editor.
-> 2. _Each group member_ opens the cloned repository directory in Git Bash. See previous week's [Git instructions](/git) if you have trouble.
+> 2. _Each group member_ opens the cloned repository directory in Git Bash. Right-click the repository directory in the File Explorer and choose "Git Bash Here". See previous week's [Git instructions](/git) if you have trouble.
 > 3. _One of the group members_ locally edits the contents of the `README.md` file in the repository directory. Push changes to the remote GitHub repository using `git add`, `git commit` and `git push` commands.
 > 4. _Each group member_ checks that the changes are visible in GitHub.
 > 5. Once changes have been pushed to GitHub, _each group member_ pulls the changes from GitHub using the `git pull` command.
