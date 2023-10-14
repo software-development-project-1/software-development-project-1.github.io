@@ -114,7 +114,7 @@ Now, initialize the folder as a Git project with the `git init` command.
 
 {: .note }
 
-> Coping or pasting text into Git Bash won't work with keyboard shortcuts. Instead, you can right click on the Git Bash window and click "Paste" or "Copy".
+> Copying or pasting text into Git Bash won't work with keyboard shortcuts. Instead, you can right click on the Git Bash window and click "Paste" or "Copy".
 
 Open the Git project folder in an editor such as Visual Studio Code and add an a empty file called `git_practice.txt` inside. When a new file is added to a fresh Git project, running the `git status` command will print the following:
 
@@ -196,6 +196,8 @@ A good habit to form is to constantly check which changes will be added to the n
 ### Creating a commit
 
 After choosing which changes will be included in the next commit, you can finally create the commit with the command `git commit`. Every commit has a message attached to it, describing the changes included in the commit. The message is added upon creating the commit by running: `git commit -m "a descriptive message"`, where your descriptive message specifies what has changed since the last commit. If you leave out the flag `-m` and the message, a text editor will open, where you can write a longer, detailed description below the title message. The commit is then created by saving and exiting the text editor.
+
+![Git process](/assets/git-process.webp){: width="500" }
 
 [Here](https://github.com/erlang/otp/wiki/writing-good-commit-messages) are some quick instructions about writing a good commit message.
 
