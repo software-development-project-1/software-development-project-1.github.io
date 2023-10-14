@@ -93,7 +93,7 @@ The command should print basic introductions on how to use the `git` command.
 
 ## Starting a Git project
 
-A project is simply a directory containing some files. These files can for example have code in them. You can turn a directory into a Git project by running the command `git init` inside it. This will allow running git commands inside the folder. The initialization command will create a subfolder called `.git`. This folder stores all sorts of information about the project in the directory it is located in.
+A project is simply a folder containing some files. These files can for example have code in them. You can turn a folder into a Git project by running the command `git init` inside it. This will allow running git commands inside the folder. The initialization command will create a subfolder called `.git`. This folder stores all sorts of information about the project in the folder it is located in.
 
 ### Commits
 
@@ -107,15 +107,14 @@ The command `git status` will turn out to be very useful in the process of creat
 
 Let's create a Git project folder. Create an empty folder named "git-practice" for example on your Desktop or any other location. Next, depending on your operating system do the following:
 
-- On _Windows_, open the folder in Git Bash by right clicking the folder name and choosing "Git Bash here".
+- On _Windows_, open the folder in Git Bash by right-clicking the folder name and choosing "Git Bash here".
 - On _macOS_, open the folder in Terminal by right clicking the folder name and choosing "New Terminal at Folder"
 
 Now, initialize the folder as a Git project with the `git init` command.
 
 {: .note }
 
-> Copying or pasting text into Git Bash won't work with keyboard shortcuts. Instead, you can righ
-> t click on the Git Bash window and click "Paste" or "Copy".
+> Copying or pasting text into Git Bash won't work with keyboard shortcuts. Instead, you can right-click on the Git Bash window and click "Paste" or "Copy".
 
 Open the Git project folder in an editor such as Visual Studio Code and add an a empty file called `git_practice.txt` inside. When a new file is added to a fresh Git project, running the `git status` command will print the following:
 
