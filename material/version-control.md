@@ -63,7 +63,7 @@ Now, depending on your operating system do one of the following:
 - On _Windows_ Git is used through the Git Bash application. Open the Git Bash application.
 - On _macOS_ Git is used through the [Terminal](https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) application. Open the Terminal application.
 
-In front of you is a so called _command line interface_ (CLI). A command line interface is a simple user interface: it accepts a textual command as input and prints the command output below. Type in the following command and press the enter key to execute the command:
+In front of you is a so called _command line interface_ (CLI). A command line interface is a simple user interface: it accepts a textual command as input and prints the command output below. Type in the following command and press the enter key to execute it:
 
 ```
 git
@@ -87,7 +87,7 @@ The command should print basic introductions on how to use the `git` command.
 >
 > Use the same email address as you used with your GitHub account.
 >
-> Run the commands _one command (one line) at a time_. Write the command and press enter to execute a command.
+> Run the commands _one command (one line) at a time_. Write the command and press enter to execute it.
 >
 > If you don't want your email to be public, GitHub offers a specific <a href="https://help.github.com/en/articles/setting-your-commit-email-address">noreply email</a>.
 
@@ -197,9 +197,17 @@ A good habit to form is to constantly check which changes will be added to the n
 
 After choosing which changes will be included in the next commit, you can finally create the commit with the command `git commit`. Every commit has a message attached to it, describing the changes included in the commit. The message is added upon creating the commit by running: `git commit -m "a descriptive message"`, where your descriptive message specifies what has changed since the last commit. If you leave out the flag `-m` and the message, a text editor will open, where you can write a longer, detailed description below the title message. The commit is then created by saving and exiting the text editor.
 
-![Git process](/assets/git-process.webp){: width="500" }
+Git uses a command line text editor for commit messages by default. If we have installed [Visual Studio Code](https://code.visualstudio.com/), we can use that as the Git text editor by running the following command:
+
+```bash
+git config --global core.editor "code --wait"
+```
+
+However, it is usually more convinient to commit changes using the `git commit -m "the commit message"` command instead of using the `git commit` command and saving and exiting the text editor.
 
 [Here](https://github.com/erlang/otp/wiki/writing-good-commit-messages) are some quick instructions about writing a good commit message.
+
+![Git process](/assets/git-process.webp){: width="500" }
 
 We'll continue where the previous example left off. Let's add all the changes we made to the next commit, except the creation of the file `empty.txt`. Before running `git commit`, the output of `git status` is:
 
@@ -260,7 +268,7 @@ Branches are usually used for testing out new features without breaking a workin
 > 1. Create a folder turn it into a Git project like we did before.
 > 2. Create a file called <code>story.txt</code> in your project. Add a lot of text inside.
 > 3. Add another file called <code>shopping_list.txt</code> to the project, and write down what you need from the store (or just many rows of text).
-> 4. Create a subfolder called <code>school</code> into the project, and create a file called<code>school_file.txt</code> inside. You will need these files in the future exercises.
+> 4. Create a subfolder called <code>school</code> into the project, and create a file called <code>school_file.txt</code> inside. You will need these files in the future exercises.
 > 5. After doing all the changes described above, create a total of three commits: one, where you add the story, a second on where you add the shopping list, and a third one where you add the school folder. Make sure that each commit message is truly descriptive.
 > 6. Using the command <code>git log</code>, check that you have properly created three commits.
 > 7. Add something new to the shopping list, and create another commit. Use the command <code>git add -p</code>.
