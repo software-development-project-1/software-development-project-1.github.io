@@ -40,7 +40,7 @@ In _agile software development_, the development process follows values and prin
 >
 > -- Manifesto for Agile Software Development
 
-One of the key value is the attitude towards _change_. For example, there is often need to change the software's requirements during the development process. Agile software development process should welcome any kind of change with open arms. That is, because _change is inevitable and frequent_ in many business environments. 
+One of the key value is the attitude towards _change_. For example, there is often need to change the software's requirements during the development process. Agile software development process should welcome any kind of change with open arms. That is, because _change is inevitable and frequent_ in many business environments.
 
 The Manifesto for Agile Software Development doesn't go into details on how to actually _implement_ these values in practice. Different Agile software development process frameworks, such as _Scrum_ and _SAFe_ describe a detailed process that follows these values.
 
@@ -65,7 +65,7 @@ The software requirement specification document written in the requirements phas
 
 The problem with this so-called [Big design up front](https://en.wikipedia.org/wiki/Big_design_up_front) approach is that _requirements tend to change_ during the implementation phase. If the development of the software takes even a few years, that's forever in the current, constantly changing business environment. Also, it is _practically impossible to come up with all the possible requirements_ for the software before actual users can try out some kind of a prototype and give feedback.
 
-Agile software development takes a different, _iterative approach_. In this approach, the software is developed in short, typically one or two-week-long iterations. Before each iteration, it is only necessary to specify requirements that the software should fulfill after the iteration is complete. 
+Agile software development takes a different, _iterative approach_. In this approach, the software is developed in short, typically one or two-week-long iterations. Before each iteration, it is only necessary to specify requirements that the software should fulfill after the iteration is complete.
 
 During the iteration, the software development team turns these customer's requirements into technical development tasks and implements these tasks in a self-organized manner. The outcome of each iteration is working software that users can actually use and give feedback. This feedback can be used to constitute requirements for the next iteration. This feedback loop is in the heartbeat of the agile software development process.
 
@@ -78,6 +78,8 @@ Instead of completing software development lifecycle's phases sequentially from 
 _Scrum_ is an iterative software development process framework that defines practical ways to carry out agile software development principles. The [Scrum Guide](https://scrumguides.org/scrum-guide.html) is the official guide to Scrum. During the course we will use Scrum to manage our software development process. This week we will learn about Scrum in theory and week three onwards we will apply the knowledge with our project.
 
 Before starting working on the exercises, read at least the chapters "Scrum Definition", "Scrum Theory", "Scrum Values", "Scrum Team" and "Scrum Events" from the [Scrum Guide](https://scrumguides.org/scrum-guide.html).
+
+![Scrum process](/assets/scrum.png)
 
 {: .important-title }
 
