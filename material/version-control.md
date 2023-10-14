@@ -114,7 +114,8 @@ Now, initialize the folder as a Git project with the `git init` command.
 
 {: .note }
 
-> Copying or pasting text into Git Bash won't work with keyboard shortcuts. Instead, you can right click on the Git Bash window and click "Paste" or "Copy".
+> Copying or pasting text into Git Bash won't work with keyboard shortcuts. Instead, you can righ
+> t click on the Git Bash window and click "Paste" or "Copy".
 
 Open the Git project folder in an editor such as Visual Studio Code and add an a empty file called `git_practice.txt` inside. When a new file is added to a fresh Git project, running the `git status` command will print the following:
 
