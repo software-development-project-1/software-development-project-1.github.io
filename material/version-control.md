@@ -105,7 +105,7 @@ The command `git status` will turn out to be very useful in the process of creat
 
 Let's create a Git project folder. Create an empty folder named "git-practice" for example on your Desktop or any other location. Next, depending on your operating system do the following:
 
-- On _Windows_, open the folder in Git Bash by right-clicking the folder name and choosing "Git Bash here".
+- On _Windows_, open the folder in Git Bash by right-clicking the folder name and choosing "Git Bash Here".
 - On _macOS_, open the folder in Terminal by right clicking the folder name and choosing "New Terminal at Folder"
 
 Now, initialize the folder as a Git project with the `git init` command.
