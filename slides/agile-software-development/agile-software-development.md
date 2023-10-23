@@ -23,7 +23,7 @@ Welcome to the Software Development Project 1 course!
 - Different kind of problems arise while we work on more complicated applications _in a software development team_.
 - These problems aren't _only technical_, the _management_ of the software development process can be quite tricky.
 - During this course, we will learn how to _manage the software development process_ and how to _work as a member of a software development team_.
-- We will learn these skills in practice by developing a _software development project_ in software developer teams of 4-5 students.
+- We will learn these skills in practice by developing a _software development project_ in a software development team consisting of 4-5 students.
 
 ---
 

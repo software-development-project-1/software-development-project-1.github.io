@@ -9,7 +9,7 @@ nav_order: 1
 
 Welcome to the Software Development Project 1 course!
 
-During this course, we will learn how to manage the software development process and how to work as a member of a software development team. We will learn these skills in practice by developing a software development project in software development teams of 4-5 students.
+During this course, we will learn how to manage the software development process and how to work as a member of a software development team. We will learn these skills in practice by developing a software development project in a software development team consisting of 4-5 students.
 
 Each team will be developing a project described [here](/project-description). The project is a web application implemented with Java programming language using the Spring Boot framework. Also, React is used as a frontend technology. The development of the project is split into three two-week iterations called _Sprints_. Each Sprint has high-level requirements, but teams should make most of the technical decisions themselves. The project starts on week three. For more information about the course, read the [course description](https://opinto-opas.haaga-helia.fi/course_unit/SOF005AS3AE).
 
