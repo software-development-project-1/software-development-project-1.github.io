@@ -15,7 +15,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-17. The group can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-17. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -42,21 +42,21 @@ The things in the _glad_ category are the ones that made you happy. For example:
 
 Retrospectives can be organized face-to-face or using virtual platforms. During this course we will be using the [Flinga](https://edu.flinga.fi) platform to organize our Retrospectives. You can login to Flinga with your Haaga-Helia credentials by choosing "Haaga-Helia ammattikorkeakoulu" at the [Flinga login page](https://edu.flinga.fi/).
 
-Once logged in a new session can be created by clicking the "Create a session" button. In the session you can send cards to the board by typing the message and clicking the "Send" button. You can also choose a color for the card. Other group members can join the session using the "Join link" which can be found by cliking the menu icon on the top left corner of the page.
+Once logged in a new session can be created by clicking the "Create a session" button. In the session you can send cards to the board by typing the message and clicking the "Send" button. You can also choose a color for the card. Other team members can join the session using the "Join link" which can be found by cliking the menu icon on the top left corner of the page.
 
 First, create a session board that has the _mad_, _sad_ and _glad_ categories like in [this board](https://edu.flinga.fi/s/E2L5YL9). Then, organize the Retrospective in the following manner:
 
-1. Based on their experiences during the Sprint, each group member should write cards for each of the three categories. Choose the card color based on the category. Try to come up with cards for each category.
+1. Based on their experiences during the Sprint, each team member should write cards for each of the three categories. Choose the card color based on the category. Try to come up with cards for each category.
 2. Once everyone is done writing the cards, go through the cards from each category. The writer of the card should shortly describe what their card means.
 3. Pick at least three most urgent issues from the _mad_ and _sad_ categories and come up with _concrete_ actions to solve each of these issues during the upcoming Sprint. For example a concrete action for the issue "I always have conflicts when I try to pull code from the GitHub" could be "Pull code from GitHub more often" and "Create smaller commits and push code to GitHub more often".
 
-Make sure that everyone follows the event structure and that each group member gets their voice heard.
+Make sure that everyone follows the event structure and that each team member gets their voice heard.
 
 {: .important-title }
 
 > Exercise 1
 >
-> _One of the group members_ should create a new session in Flinga as instructed above. Name the session "Retrospective 1". Once the session is created, other group members should join the session with the "Join link". Setup the session board and organize the Retrospective event as instructed above.
+> _One of the team members_ should create a new session in Flinga as instructed above. Name the session "Retrospective 1". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event as instructed above.
 >
 > Once you have completed the Retrospective write down the issues and actions to the repository's `retrospectives/sprint-1.md` file and push the changes to GitHub.
 
@@ -130,7 +130,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 > 2. Add the tasks of the _first four user stories_ to the "Sprint 2 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
 
 {: .note }
-At this point it might sense to distribute the workload a bit instead of working on each user story together. For example two members of the group could start working on the first user story and the others on the second one. Decide who will be working on which task and assign at least one group member for each task on the Trello board.
+At this point it might sense to distribute the workload a bit instead of working on each user story together. For example two members of the team could start working on the first user story and the others on the second one. Decide who will be working on which task and assign at least one team member for each task on the Trello board.
 
 {: .important-title }
 
@@ -314,7 +314,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 >
 > Create a controller class `ReadingRecommendationRestController` that has a method `getReadingRecommendations`. This method should return _all the reading recommendations_ in path `/api/recommendations` in JSON format. You should be able to see the list of recommendations when opening <http://localhost:8080/api/recommendations> in a web browser.
 >
-> Add this task to the "Sprint 2 Backlog" board in Trello and assign a group member for the task. This task is related to fifth user story.
+> Add this task to the "Sprint 2 Backlog" board in Trello and assign a team member for the task. This task is related to fifth user story.
 
 {: .important-title }
 
@@ -322,7 +322,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 >
 > Create a controller class `CategoryRestController` that has a method `getCategories`. This method should return _all the categories_ in path `/api/categories` in JSON format. You should be able to see the list of categories when opening <http://localhost:8080/api/categories> in a web browser.
 >
-> Add this task to the "Sprint 2 Backlog" board in Trello and assign a group member for the task. This task is related to fifth user story.
+> Add this task to the "Sprint 2 Backlog" board in Trello and assign a team member for the task. This task is related to fifth user story.
 
 {: .important-title }
 
@@ -330,7 +330,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 >
 > Create a method `getReadingRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations).
 >
-> Add this task to the "Sprint 2 Backlog" board in Trello and assign a group member for the task. This task is related to fifth user story.
+> Add this task to the "Sprint 2 Backlog" board in Trello and assign a team member for the task. This task is related to fifth user story.
 
 ## API documentation with Swagger
 
@@ -414,7 +414,7 @@ If you aren't familiar with React yet, React's documentation has great [tutorial
 
 {: .note }
 
-> This material doesn't go into React details. It is recommended that those group members who have completed (or currently completing) the Front End Development course will be working on the exercises in this section.
+> This material doesn't go into React details. It is recommended that those team members who have completed (or currently completing) the Front End Development course will be working on the exercises in this section.
 
 The example project has a simple React frontend application in the `frontend/messageList` folder. We will be using this application as an example.
 
@@ -660,7 +660,7 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 > Exercise 17
 >
-> Decide which group member gives the Sprint Review demonstration at the beginning of the next Sprint. The group member should be someone else as the one who gave it previously. This group member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
+> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be someone else as the one who gave it previously. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 >
 > Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/)) for the Sprint Review. This means that you should add a few categories and a few reading recommendations using the application so that you can easily demonstrate the user stories.
 

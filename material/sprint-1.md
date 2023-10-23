@@ -13,13 +13,13 @@ This week we'll start working on the project described by the Product Owner in t
 
 {: .highlight }
 
-> Starting from this week, you will be working with your group. That means that, you will be working on the exercises together. You also need to work on the exercises outside the weekly sessions.
+> Starting from this week, you will be working with your team. That means that, you will be working on the exercises together. You also need to work on the exercises outside the weekly sessions.
 
 ## Sprint assesment
 
-All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your group's GitHub repository created in exercise 7. _Each group member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
+All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 7. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-15. The group can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-15. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Sprint Planning
 
@@ -131,7 +131,7 @@ Check the [Learn Trello board basics](https://trello.com/guide/trello-101) guide
 
 > Exercise 2
 >
-> _One of the group members_ should create a [workspace](https://support.atlassian.com/trello/docs/what-are-trello-workspaces/) for the project in Trello. Once logged in, a workspace can be added by clicking the "Create" button in the navigation bar and choosing "Create Workspace" from the menu. Once the workspace is created, invite other group members to the workspace. Also make sure to invite the teacher ({{site.teacher_email}}) to the workspace.
+> _One of the team members_ should create a [workspace](https://support.atlassian.com/trello/docs/what-are-trello-workspaces/) for the project in Trello. Once logged in, a workspace can be added by clicking the "Create" button in the navigation bar and choosing "Create Workspace" from the menu. Once the workspace is created, invite other team members to the workspace. Also make sure to invite the teacher ({{site.teacher_email}}) to the workspace.
 
 {: .important-title }
 
@@ -187,7 +187,7 @@ Once the organization is created, a team member can be invited by clicking the "
 
 > Exercise 6
 >
-> _One of the group members_ should create a GitHub organization for the project. Once the organization is created, invite other group members to the organization. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the group.
+> _One of the team members_ should create a GitHub organization for the project. Once the organization is created, invite other team members to the organization. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team.
 
 ### Forking a repository
 
@@ -203,13 +203,13 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 
 > Exercise 7
 >
-> _One of the group members_ should fork the [example-project repository]({{site.example_project_link}}). Choose the "Owner" as the organization you created previously and give the repository a descriptive name, such as "cool-reads" and a description. The forked repository will become your project's repository where you start working on the project.
+> _One of the team members_ should fork the [example-project repository]({{site.example_project_link}}). Choose the "Owner" as the organization you created previously and give the repository a descriptive name, such as "cool-reads" and a description. The forked repository will become your project's repository where you start working on the project.
 
 {: .important-title }
 
 > Exercise 8
 >
-> Each group member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example-project repository. _Remember to use the HTTPS address_ of the GitHub repository with the command.
+> Each team member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example-project repository. _Remember to use the HTTPS address_ of the GitHub repository with the command.
 >
 > Once you have cloned the repository, open the code in an editor such as Eclipse or Visual Studio Code. In Eclipse you can open the project folder from "File > Open Project from Filesystem". The project requires _Java version 17_.
 >
@@ -219,14 +219,14 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 
 > Exercise 9
 >
-> Once each group member has the repository on their local computer, do the following:
+> Once each team member has the repository on their local computer, do the following:
 >
-> 1. _Each group member_ opens the cloned repository folder in Eclipse or in some other editor.
-> 2. _Each group member_ opens the cloned repository folder in Git Bash. Right-click the repository folder in the File Explorer and choose "Git Bash Here". See previous week's [Git instructions](/git) if you have trouble.
-> 3. _One of the group members_ locally edits the contents of the `README.md` file in the repository folder. Push changes to the remote GitHub repository using `git add`, `git commit` and `git push` commands.
-> 4. _Each group member_ checks that the changes are visible in GitHub.
-> 5. Once changes have been pushed to GitHub, _each group member_ pulls the changes from GitHub using the `git pull` command.
-> 6. Once everybody sees the changes on their local `README.md` file, repeat the the steps from step 3. for each group member until everyone has pushed some changes to the GitHub repository.
+> 1. _Each team member_ opens the cloned repository folder in Eclipse or in some other editor.
+> 2. _Each team member_ opens the cloned repository folder in Git Bash. Right-click the repository folder in the File Explorer and choose "Git Bash Here". See previous week's [Git instructions](/git) if you have trouble.
+> 3. _One of the team members_ locally edits the contents of the `README.md` file in the repository folder. Push changes to the remote GitHub repository using `git add`, `git commit` and `git push` commands.
+> 4. _Each team member_ checks that the changes are visible in GitHub.
+> 5. Once changes have been pushed to GitHub, _each team member_ pulls the changes from GitHub using the `git pull` command.
+> 6. Once everybody sees the changes on their local `README.md` file, repeat the the steps from step 3. for each team member until everyone has pushed some changes to the GitHub repository.
 
 ### The README file
 
@@ -249,8 +249,8 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 >
 > 1. At the beginning of the file add the project name "Cool Reads" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
 > 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
-> 3. Below the description, add a subheading "Team members" and below that add a [list](https://www.markdownguide.org/basic-syntax#lists-1) of each group member's name.
-> 4. Each group member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
+> 3. Below the description, add a subheading "Team members" and below that add a [list](https://www.markdownguide.org/basic-syntax#lists-1) of each team member's name.
+> 4. Each team member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
 >
 > Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 
@@ -283,7 +283,7 @@ For the _second user story_, the Developers came up with the following tasks:
 1. Add Thymeleaf template for listing the added reading recommendations with title, link and description
 2. Add a method for rendering the reading recommendation list for the ReadingRecommendationController class
 
-These are the user stories and tasks, that you will be working on as a group during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
+These are the user stories and tasks, that you will be working on as a team during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
 
 ### Tips for implementing the tasks
 
@@ -313,7 +313,7 @@ These are the user stories and tasks, that you will be working on as a group dur
 > - When you start working on a task, mark it assigned to you and move it to the "In progress" state
 > - When you complete a task, move it to the "Done" state
 >
-> Use the Sprint Backlog to track the Sprint progress. Always start a group meeting by looking at the Sprint Backlog.
+> Use the Sprint Backlog to track the Sprint progress. Always start a team meeting by looking at the Sprint Backlog.
 
 {: .note }
 
@@ -422,7 +422,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 {: .note }
 
-> You don't need to have a Daily Scrum event on a daily basis. Just start each group meeting (including the weekly sessions) with a Daily Scrum.
+> You don't need to have a Daily Scrum event on a daily basis. Just start each team meeting (including the weekly sessions) with a Daily Scrum.
 
 ## Usage guide documentation
 
@@ -455,7 +455,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 > Exercise 15
 >
-> Decide which group member gives the Sprint Review demonstration at the beginning of the next Sprint. This group member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
+> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 
 {: .warning }
 

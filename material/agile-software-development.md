@@ -67,7 +67,7 @@ The problem with this so-called [Big design up front](https://en.wikipedia.org/w
 
 Agile software development takes a different, _iterative approach_. In this approach, the software is developed in short, typically one or two-week-long iterations. Before each iteration, it is only necessary to specify requirements that the software should fulfill after the iteration is complete.
 
-During the iteration, the software development team turns these customer's requirements into technical development tasks and implements these tasks in a self-organized manner. The outcome of each iteration is working software that users can actually use and give feedback. This feedback can be used to constitute requirements for the next iteration. This feedback loop is in the heartbeat of the agile software development process.
+During the iteration, the software development team turns these customer's requirements into technical development tasks and implements these tasks in a self-organized manner. The outcome of each iteration is working software that users can actually use and give feedback. This feedback can be used to constitute requirements for the next iteration. This feedback loop is the heartbeat of the agile software development process.
 
 Instead of completing software development lifecycle's phases sequentially from start to finish, the phases are completed in a _cycle_. Each iteration starts with the requirements phase and during the iteration design, implementation, test, deployment, and maintenance phases are completed. This cycle repeats in every iteration.
 
@@ -213,7 +213,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 > Exercise 7
 >
-> During the course, each group will develop a project described by the Product Owner in the [project description](/project-description).
+> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).
 >
 > Come up with at least five _well-written_ user stories based on the project description. Use the INVEST criteria to explain, why your user stories are well-written.
 >

@@ -11,9 +11,9 @@ The course has weekly sessions on Thursdays at 14:00 - 16:45 in class room 4012.
 
 {: .highlight }
 
-> Attendance on the first week session is especially important because during that session, the project groups are assembled.
+> Attendance on the first week session is especially important because during that session, the project teams are assembled.
 
-On the third week the groups start working on the project. The project advances in two week iterations called sprints. There are requirements for each sprint. During the sprint groups work with the sprint requirements with the guidance of the teacher during the weekly sessions and independently outside the sessions.
+On the third week the teams start working on the project. The project advances in two week iterations called sprints. There are requirements for each sprint. During the sprint teams work with the sprint requirements with the guidance of the teacher during the weekly sessions and independently outside the sessions.
 
 | Week start date | Topics                                                                    | Exercises                                                |
 | --------------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
