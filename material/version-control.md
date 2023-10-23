@@ -27,7 +27,7 @@ Contrary to what many people think, programming is mostly done in groups. With v
 
 Visual Studio has summarized reasons for using version control on their [website](https://www.visualstudio.com/learn/what-is-version-control/?rr=https%3A%2F%2Fwww.google.fi%2F). Bitbucket [has also written](https://www.atlassian.com/git/tutorials/what-is-version-control) a longer text about version control.
 
-There are several different version control tools available, but this part will focus on using Git and Github, especially in the context of programming projects.
+There are several different version control tools available, but this part will focus on using Git and GitHub, especially in the context of programming projects.
 
 ## About Git
 
@@ -35,13 +35,11 @@ There are several different version control tools available, but this part will 
 
 > The material has steps that you need to perform outside the exercises as well. So, _don't just skip to exercises_. Read through the material carefully and perform the instructed steps.
 
-Git was initiated by Linus Torvalds, who studied at the department of Computer Science at the University of Helsinki in the nineties. Torvalds is most likely more famous for being the primary developer of the Linux kernel, which is the "heart" of many operating systems, such as Google's [Android](<https://en.wikipedia.org/wiki/Android_(operating_system)>). Almost all the department's computers have a Linux operating system installed in them.
+Git was initiated by Linus Torvalds, who is most likely more famous for being the primary developer of the Linux kernel, which is the "heart" of many operating systems, such as Google's [Android](<https://en.wikipedia.org/wiki/Android_(operating_system)>). Torvalds started developing Git for his own needs when coding the Linux kernel. He needed a tool for storing different versions of his own code and sharing it with other people.
 
-Torvalds started developing Git for his own needs when coding the Linux kernel. He needed a tool for storing different versions of his own code and sharing it with other people.
+GitHub is a service which was created later on, used for storing and publishing projects. There are several sites similiar to GitHub, such as [GitLab](https://about.gitlab.com/).
 
-GitHub is a service which was created later on, used for storing and publishing projects. There are several sites similiar to GitHub, such as [GitLab](https://about.gitlab.com/), however, this part deals with using GitHub as it is more popular in our department.
-
-Git and GitHub are used in solo as well as collaborative projects at University and in the industry. It's usage isn't limited only to code, and many people like to for example backup their thesis using Git. Nevertheless, this part focuses on sharing code with GitHub, and some of the common problems faced in the process. Git will certainly be useful in your studies, and you will learn more about it in the software engineering courses.
+Git and GitHub are used in solo as well as collaborative projects in the industry. It's usage isn't limited only to code, and many people like to for example backup their course material using Git. Nevertheless, this part focuses on sharing code with GitHub, and some of the common problems faced in the process. Git will certainly be useful in your studies, and especially if you choose the software developer career.
 
 {: .important-title }
 
@@ -107,7 +105,7 @@ The command `git status` will turn out to be very useful in the process of creat
 
 Let's create a Git project folder. Create an empty folder named "git-practice" for example on your Desktop or any other location. Next, depending on your operating system do the following:
 
-- On _Windows_, open the folder in Git Bash by right-clicking the folder name and choosing "Git Bash here".
+- On _Windows_, open the folder in Git Bash by right-clicking the folder name and choosing "Git Bash Here".
 - On _macOS_, open the folder in Terminal by right clicking the folder name and choosing "New Terminal at Folder"
 
 Now, initialize the folder as a Git project with the `git init` command.
@@ -197,7 +195,7 @@ A good habit to form is to constantly check which changes will be added to the n
 
 After choosing which changes will be included in the next commit, you can finally create the commit with the command `git commit`. Every commit has a message attached to it, describing the changes included in the commit. The message is added upon creating the commit by running: `git commit -m "a descriptive message"`, where your descriptive message specifies what has changed since the last commit. If you leave out the flag `-m` and the message, a text editor will open, where you can write a longer, detailed description below the title message. The commit is then created by saving and exiting the text editor.
 
-Git uses a command line text editor for commit messages by default. If we have installed [Visual Studio Code](https://code.visualstudio.com/), we can use that as the Git text editor by running the following command:
+Git uses a command line text editor for commit messages by default. Let's use a bit more user-friendly editor, [Visual Studio Code](https://code.visualstudio.com/). If you haven't installed it yet, start with that. Once installed, we can use Visual Studio Code as the Git text editor by running the following command:
 
 ```bash
 git config --global core.editor "code --wait"
