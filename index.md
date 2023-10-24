@@ -21,7 +21,7 @@ Kalle Ilves (kalle.ilves@haaga-helia.fi)
 
 ## Course related discussions in Teams
 
-The course has a Teams team for all course related discussions. When you have trouble with an exercise or any other questions related to the course, feel free to ask about it in Teams.
+The course has a Teams team for all course related discussions. When you have trouble with an exercise or any other questions related to the course, feel free to ask about it in Teams. You can find the link for joining the Teams team on [Moodle]({{site.moodle_link}}).
 
 ## Assessment
 
