@@ -58,8 +58,8 @@ Welcome to the Software Development Project 1 course!
   - Technical contributions
   - Project management and documentation contributions
   - Exercise submissions
-- The personal assessment is done based on the teacher’s observations and peer reviews from the team members.
-- Each team member can earn up to 10 points based on their personal efforts towards the project.
+- The personal assessment is done based on the teacher’s observations and peer reviews from the team members
+- Each team member can earn up to 10 points based on their personal efforts towards the project
 
 ---
 
