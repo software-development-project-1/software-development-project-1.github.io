@@ -138,6 +138,10 @@ At this point it might sense to distribute the workload a bit instead of working
 >
 > Implement the tasks of the first user story, "As an user I want to know the date and time when a reading recommendation was added so that I know how old it is".
 >
+> The implementation should look roughly something like this:
+>
+> ![](/assets/sprint-2-user-story-1.png)
+>
 > Tips for implementing the tasks:
 >
 > - [CreationTimestamp](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
@@ -149,18 +153,34 @@ At this point it might sense to distribute the workload a bit instead of working
 > Exercise 6
 >
 > Implement the tasks of the second user story, "As an user I want to add a category so that I can organize my recommendations".
+>
+> The implementation should look roughly something like this:
+>
+> ![](/assets/sprint-2-user-story-2.png)
 
 {: .important-title }
 
 > Exercise 7
 >
 > Implement the tasks of the third user story, "As an user I want to see a list of categories so that I know which categories exist".
+>
+> The implementation should look roughly something like this:
+>
+> ![](/assets/sprint-2-user-story-3.png)
+>
+> User should be able to visit the page by clicking a "Categories" link in the navigation bar.
 
 {: .important-title }
 
 > Exercise 8
 >
-> Implement the tasks of the third user story, "As an user I want to provide a category for a reading recommendation so that I can organize my recommendations".
+> Implement the tasks of the fourth user story, "As an user I want to provide a category for a reading recommendation so that I can organize my recommendations".
+>
+> The implementation should look roughly something like this:
+>
+> ![](/assets/sprint-2-user-story-4.png)
+>
+> The select menu should list the added categories. Addition to the added categories, the user should be able to select the "Uncategorized" option, which means that the recommendations doesn't have a category.
 >
 > Tips for implementing the tasks:
 >
@@ -593,12 +613,19 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 >
 > Implement the rest of the tasks of the fifth user story "As an user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
 >
+> The implementation should look roughly something like this:
+>
+> ![](/assets/sprint-2-user-story-5.png)
+>
+> The select menu should list all added categories. If the user chooses the "Any category" option, all recommendations should be listed. Otherwise only recommendations in the selected category.
+>
 > If you have trouble with the implementation, here's a high-level idea of the implementation:
 >
 > ```jsx
 > export default function RecommendationList() {
 >   const [categories, setCategories] = useState([]);
->   const [selectedCategoryId, setSelectedCategoryId] = useState();
+>   // "any" is used as the id of the "Any category" option
+>   const [selectedCategoryId, setSelectedCategoryId] = useState("any");
 >   const [recommendations, setRecommendations] = useState([]);
 >
 >   // effect for fetching categories
@@ -608,10 +635,10 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 >
 >   // effect for fetching recommendations
 >   useEffect(() => {
->     if (selectedCategoryId) {
->       // If category is selected fetch categories from /api/categories/{id}/recommendations
+>     if (selectedCategoryId !== "any") {
+>       // If category is selected fetch recommendations from /api/categories/{id}/recommendations
 >     } else {
->       // If no category is selected fetch categories from /api/recommendations
+>       // If no category is selected fetch recommendations from /api/recommendations
 >     }
 >   }, [selectedCategoryId]); // Re-run the effect when selectedCategoryId changes
 >
@@ -619,26 +646,22 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 >     setSelectedCategoryId(event.target.value);
 >   }
 >
->   function clearCategoryFilter() {
->     setSelectedCategoryId(undefined);
->   }
->
 >   return (
 >     <div>
 >       <div class="mb-3">
->         <div class="mb-3">
->           <label class="form-label">Filter by a category</label>
->           <select class="form-select" onChange={handleCategoryFilterChange}>
->             {categories.map((category) => (
->               <option value={category.id} key={category.id}>
->                 {category.name}
->               </option>
->             ))}
->           </select>
->         </div>
->         <button class="btn btn-secondary" onClick={handleClearCategoryFilter}>
->           Clear category filter
->         </button>
+>         <label class="form-label">Filter by a category</label>
+>         <select
+>           class="form-select"
+>           onChange={handleCategoryFilterChange}
+>           value={selectedCategoryId}
+>         >
+>           <option value="any">Any category</option>
+>           {categories.map((category) => (
+>             <option value={category.id} key={category.id}>
+>               {category.name}
+>             </option>
+>           ))}
+>         </select>
 >       </div>
 >       {/* The list of reading recommendations goes here */}
 >     </div>

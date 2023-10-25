@@ -382,7 +382,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 >
 > The implementation should look roughly something like this:
 >
-> ![](/assets/sprint-1-user-story-1.png){: width="600" }
+> ![](/assets/sprint-1-user-story-1.png)
 >
 > Alter the `layout.html` file mentioned above to change the navigation bar content.
 
@@ -394,7 +394,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 >
 > The implementation should look roughly something like this:
 >
-> ![](/assets/sprint-1-user-story-2.png){: width="600" }
+> ![](/assets/sprint-1-user-story-2.png)
 >
 > This page should be visible on the root path (the `/` path) of the application. Change the `@GetMapping` of the `listMessages` method in the `MessageController` class, for example to `@GetMapping("/messages")`.
 
