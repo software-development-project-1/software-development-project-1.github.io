@@ -98,6 +98,16 @@ Welcome to the Software Development Project 1 course!
 
 ---
 
+# Manifesto for Agile Software Development
+
+- The Manifesto for Agile Software Development describes the following values:
+  - Individuals and interactions over processes and tools
+  - Working software over comprehensive documentation
+  - Customer collaboration over contract negotiation
+  - Responding to change over following a plan
+
+---
+
 # Agile software development
 
 - One of the key value is the attitude towards _change_
