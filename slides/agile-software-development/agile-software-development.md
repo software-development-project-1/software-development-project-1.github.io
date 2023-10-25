@@ -6,14 +6,12 @@ Welcome to the Software Development Project 1 course!
 
 # Agile software development and Scrum
 
-- During this week, we will learn:
-  - What is the course about?
-  - How is the course assessed?
-  - What is the course schedule?
-  - What is agile software development?
-  - What is the software development licecycle?
-  - What is Scrum?
-  - How software requirements are managed in an agile software development process?
+- The learning objectives for this week are:
+  - Knowing about the course contents, assesment and schedule 
+  - Knowing what is agile software development
+  - Knowing what is the software development licecycle
+  - Knowing what is Scrum
+  - Knowing how requirements are managed in agile software development
 
 ---
 
