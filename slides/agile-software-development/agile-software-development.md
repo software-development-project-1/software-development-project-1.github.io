@@ -162,9 +162,9 @@ Welcome to the Software Development Project 1 course!
 # Test phase
 
 - In the _test phase_, the development team combines automation and manual testing to check that the software works as intended
-- Test phase is usually _tightly coupled with the implementation phase_
+- In practice, the test phase isn't usually separated from the implementation phase
 - This means that software developers usually implement a small coding task, write automated test cases for the task and moves on to the next task.
-- Testing the software is usually consired to be the responsibility of the software developer who wrote the code, because _they are most familiar with the implementation_
+- Testing the software is usually considered to be the responsibility of the software developer who wrote the code, because _they are most familiar with the implementation_
 
 ---
 
