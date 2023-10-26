@@ -686,6 +686,12 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 > Exercise 17
 >
+> Create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
+
+{: .important-title }
+
+> Exercise 18
+>
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be someone else as the one who gave it previously. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 >
 > Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/)) for the Sprint Review. This means that you should add a few categories and a few reading recommendations using the application so that you can easily demonstrate the user stories.

@@ -445,6 +445,16 @@ The description should be so clear that your fellow student who knows nothing ab
 >
 > Write a usage guide on _how to start your application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required JDK version for the project.
 
+## GitHub release
+
+Once the GitHub repository's main branch has a working version of the application with the desired features, we should _release_ it for the users. [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is a way to "freeze" the source at certain point of the commit history and to provide users a working version of the application. Usually a new version of an application is released at the end of each Sprint. Users can easily browser different versions of the application by going through the releases.
+
+{: .important-title }
+
+> Exercise 15
+>
+> Create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
+
 ## Sprint Review
 
 At the end of each Sprint, there's the [Sprint Review](https://scrumguides.org/scrum-guide.html#sprint-review) event. During the Sprint Review, the Developers demonstrate the outcome of the Sprint for the Product Owner. This means that the Developers should demonstrate how the implemented user stories work _in the user's perspective_. So, instead of showing the code, Developers should show how the user can use the new features of the application.
@@ -453,9 +463,11 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 16
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
+>
+> You can use the source code of the release you created earlier to get the working version of the application. Click the "Releases" link in GitHub and choose "Source code" under the "Assets" heading.
 
 {: .warning }
 

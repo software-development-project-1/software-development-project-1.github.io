@@ -7,7 +7,7 @@ Welcome to the Software Development Project 1 course!
 # Agile software development and Scrum
 
 - The learning objectives for this week are:
-  - Knowing about the course contents, assesment and schedule 
+  - Knowing about the course contents, assesment and schedule
   - Knowing what is agile software development
   - Knowing what is the software development lifecycle
   - Knowing what is Scrum
@@ -239,6 +239,7 @@ Welcome to the Software Development Project 1 course!
 - In agile software development, requirements are commonly written as _user stories_
 - A user story is a short, simple description of a feature told from the perspective of the person who desires the new feature in the software
 - During each Sprint, the Developers of the Scrum Team implement features for the software based on the user stories
+- User stories are sort of todo items, like "take out the trash". They are there so that the Scrum Team remembers what kind of features need to be implemented for the software
 
 ---
 
@@ -249,7 +250,7 @@ Welcome to the Software Development Project 1 course!
   - "As a blog reader I want to browse list of blog posts of a blog so that I can find interesting posts to read."
 - A user story is usually written from the user’s perspective and follows the format:
 
-> As [a user persona], I want [to perform this action] so that [I can accomplish this goal].
+  > As [a user persona], I want [to perform this action] so that [I can accomplish this goal].
 
 ---
 
@@ -258,11 +259,11 @@ Welcome to the Software Development Project 1 course!
 - User stories should be written in a language that is _understood by a non-technical person_
 - For example the following user story is too technical:
 
-> ❌ As a blog reader I want to send an HTTP request to the server to get the list of blog posts in a JSON format so that I can find interesting posts to read.
+  > ❌ As a blog reader I want to send an HTTP request to the server to get the list of blog posts in a JSON format so that I can find interesting posts to read.
 
 - A better user story would express the feature from the user’s point of view:
 
-> ✅ As a blog reader I want to browse the list of blog posts of a blog so that I can find interesting posts to read.
+  > ✅ As a blog reader I want to browse the list of blog posts of a blog so that I can find interesting posts to read.
 
 - There are also other common guidelines for a good user story. One popular guideline is the _INVEST criteria_
 
@@ -283,7 +284,7 @@ Welcome to the Software Development Project 1 course!
 
 - Which INVEST criteria does the following user story violate?
 
-> ❌ As a content creator I want to register with a username and password, a profile picture, and a profile description so that I can start writing blog posts.
+  > ❌ As a content creator I want to register with a username and password, a profile picture, and a profile description so that I can start writing blog posts.
 
 ---
 
@@ -291,11 +292,13 @@ Welcome to the Software Development Project 1 course!
 
 - It is better to split these kinds of big user stories into multiple smaller user stories:
 
-> ✅ As a content creator I want to register with a username and password so that I can start writing blog posts.
+  > ✅ As a content creator I want to register with a username and password so that I can start writing blog posts.
 
-> ✅ As a content creator I want to register with a profile picture so that my readers know what I look like.
+  > ✅ As a content creator I want to register with a profile picture so that my readers know what I look like.
 
-> ✅ As a content creator I want to register with a profile description so that my readers know about me.
+  > ✅ As a content creator I want to register with a profile description so that my readers know about me.
+
+- If the description of the feature contains words like "and" or "or", it could be that the user story can be split into smaller user stories
 
 ---
 
