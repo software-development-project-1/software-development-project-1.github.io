@@ -448,6 +448,9 @@ fetch("/api/messages")
   });
 ```
 
+{: .note }
+> Our frontend application's source is served from the same _origin_ as the backend, which is <http://localhost:8080>. This is why don't need to specify the full URL in the `fetch` call, which is <http://localhost:8080/api/messages>. Instead we can specify just the path. For example, the Vite development server serves the source files from a different origin (by default <http://localhost:5173>) and in this case we would need to use the full URL.
+
 The `fetch` function returns a [Promise](https://javascript.info/promise-basics) object. The promise resolves a `Response` object, which contains the response from the server. The response's JSON payload can be parsed into JavaScript objects using the `response.json()` method.
 
 In the example project, fetching the messages is extracted into a function called `fetchMessages`, which can be found in the `frontend/messageList/fetchMessages.js` file:
@@ -458,7 +461,7 @@ export default function fetchMessages() {
 }
 ```
 
-This is a simple abstraction for fetching the messages, but it's quite handy. If the logic for fetching the messages (for example the API URL) changes, we only need to change the logic inside the `fetchMessages` function and nowhere else.
+This is a simple _abstraction_ for fetching the messages, but it's quite handy. If the logic for fetching the messages (for example the API URL) changes, we only need to change the logic inside the `fetchMessages` function and nowhere else.
 
 The `MessageList` component in the `frontend/messageList/MessageList.jsx` calls the `fetchMessages` function to display the message list:
 
@@ -591,7 +594,7 @@ Next we will implement the list of reading recommendations as a React frontend a
 
 For the _fifth user story_ we can have the following tasks in addition to the REST API tasks mentioned before:
 
-1. Create a React component RecommendationList which lists reading recommendations from http://localhost:8080/api/recommendations
+1. Create a React component RecommendationList which lists reading recommendations from /api/recommendations
 2. Render the RecommandationList component on the reading recommendation list Thymeleaf template
 3. Add the category filter for the RecommendationList component
 

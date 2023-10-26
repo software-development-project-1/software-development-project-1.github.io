@@ -9,7 +9,7 @@ Welcome to the Software Development Project 1 course!
 - The learning objectives for this week are:
   - Knowing about the course contents, assesment and schedule 
   - Knowing what is agile software development
-  - Knowing what is the software development licecycle
+  - Knowing what is the software development lifecycle
   - Knowing what is Scrum
   - Knowing how requirements are managed in agile software development
 
