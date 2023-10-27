@@ -11,7 +11,11 @@ nav_order: 3
 
 ## Submitting this week's exercises
 
-All of this week's exercises (exercises 1-7) are submitted to [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a _single PDF file_. This week's exercises need to be submitted before the deadline on {{site.week_1_deadline}} to confirm the course participation.
+All of this week's exercises (exercises 1-7) are submitted to [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a _single PDF file_. The submission deadline is on {{site.week_1_deadline}}.
+
+{: .highlight }
+
+> This week's exercises need to be submitted before the deadline on {{site.week_1_deadline}} to confirm the course participation.
 
 ## Agile software development
 

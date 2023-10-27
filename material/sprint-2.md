@@ -88,10 +88,9 @@ After some discussion the Scrum Team came up with the following user stories:
 
 For the _first user story_, the Developers came up with the following tasks:
 
-1. Add a createdAt attribute of LocalDateTime type for the ReadingRecommendation entity
+1. Add a createdAt attribute of Instant type for the ReadingRecommendation entity
 2. Add a CreationTimestamp annotation for the createdAt attribute
-3. Add a getFormattedCreatedAt method for the ReadingRecommendation entity which returns the formatted createdAt attribute value
-4. Add a "Added on" column which displays the formatted date for the Thymeleaf template
+3. Add a "Added on" column which displays the formatted date for the Thymeleaf template
 
 For the _second user story_, the Developers came up with the following tasks:
 
@@ -145,8 +144,7 @@ At this point it might sense to distribute the workload a bit instead of working
 > Tips for implementing the tasks:
 >
 > - [CreationTimestamp](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
-> - [DateTimeFormatter](https://www.baeldung.com/java-datetimeformatter)
-> - If the method `getFormattedCreatedAt` returns the formatted date string, you can access it with `th:text="${recommendation.formattedCreatedAt}"` in the Thymeleaf template
+> - You can format an [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object in a Thymeleaf template like this: `th:text="${#temporals.format(message.createdAt,'dd.MM.yyyy')}"`
 
 {: .important-title }
 
@@ -449,6 +447,7 @@ fetch("/api/messages")
 ```
 
 {: .note }
+
 > Our frontend application's source is served from the same _origin_ as the backend, which is <http://localhost:8080>. This is why don't need to specify the full URL in the `fetch` call, which is <http://localhost:8080/api/messages>. Instead we can specify just the path. For example, the Vite development server serves the source files from a different origin (by default <http://localhost:5173>) and in this case we would need to use the full URL.
 
 The `fetch` function returns a [Promise](https://javascript.info/promise-basics) object. The promise resolves a `Response` object, which contains the response from the server. The response's JSON payload can be parsed into JavaScript objects using the `response.json()` method.
@@ -686,7 +685,7 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 > Exercise 17
 >
-> Create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
+> Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
