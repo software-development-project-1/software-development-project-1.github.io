@@ -305,7 +305,7 @@ These are the user stories, that you will be working on as a team during this Sp
 
 > Exercise 11
 >
-> Come up with tasks for the third user story, "As an user I want to be able to edit a reading recommendation so that I can change its information". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Come up with tasks for the third user story, "As an user I want to be able to edit a reading recommendation so that I can change its information". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 to get an idea what the implementation could look like.
 
 {: .important-title }
 
