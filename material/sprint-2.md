@@ -64,7 +64,7 @@ Make sure that everyone follows the event structure and that each team member ge
 
 {: .highlight}
 
-> If you weren't able to implement all the user stories during the previous Sprint, start by finnishing those before starting to implement the user stories for this Sprint.
+> If you weren't able to implement all the user stories during the previous Sprint, start by finishing those before starting to implement the user stories for this Sprint.
 
 The Product Owner was delighted to see how the project has advancend during Sprint 1.
 
