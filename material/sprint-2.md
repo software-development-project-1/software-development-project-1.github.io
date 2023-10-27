@@ -88,9 +88,8 @@ After some discussion the Scrum Team came up with the following user stories:
 
 For the _first user story_, the Developers came up with the following tasks:
 
-1. Add a createdAt attribute of Instant type for the ReadingRecommendation entity
-2. Add a CreationTimestamp annotation for the createdAt attribute
-3. Add a "Added on" column which displays the formatted date for the Thymeleaf template
+1. Add a createdAt attribute with the CreationTimestamp annotation for the ReadingRecommendation entity
+2. Add a "Added on" column which displays the formatted date for the Thymeleaf template
 
 For the _second user story_, the Developers came up with the following tasks:
 
