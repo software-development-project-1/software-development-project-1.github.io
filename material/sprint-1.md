@@ -262,7 +262,9 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > When the user opens the application on browser, there should be page where the added reading recommendations are listed. There should also be a link that says "Add a reading recommendation" which takes the user to another page, where they can add a reading recommendation using a form.
 >
-> For now, it is enough that the reading recommendation has a title, for example "The 2020 Scrum Guide", a link, for example "https://scrumguides.org/scrum-guide.html" and a short description, for example "All you need to know about Scrum". Each of these should have field on the form and they should be displayed on the list."
+> For now, it is enough that the reading recommendation has a title, for example "The 2020 Scrum Guide", a link, for example "https://scrumguides.org/scrum-guide.html" and a short description, for example "All you need to know about Scrum". Each of these should have field on the form and they should be displayed on the list.
+>
+> It would be convinient that the user could edit the added reading recommendation if, for example they made a typo in the title or description. The reading recommendation list should have an "Edit" button next to each reading recommendation. When user clicks the button, it should take user to an edit form, where the user can edit all the added information."
 >
 > -- The Product Owner
 
@@ -270,6 +272,7 @@ After some discussion the Scrum Team came up with the following user stories:
 
 1. As an user I want to add a reading recommendation so that I can build a collection of recommendations
 2. As an user I want to list the added reading recommendations so that I can find interesting things to read
+3. As an user I want to be able to edit a reading recommendation so that I can change its information
 
 For the _first user story_, the Developers came up with the following tasks:
 
@@ -283,7 +286,7 @@ For the _second user story_, the Developers came up with the following tasks:
 1. Add Thymeleaf template for listing the added reading recommendations with title, link and description
 2. Add a method for rendering the reading recommendation list for the ReadingRecommendationController class
 
-These are the user stories and tasks, that you will be working on as a team during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
+These are the user stories, that you will be working on as a team during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
 
 ### Tips for implementing the tasks
 
@@ -302,7 +305,13 @@ These are the user stories and tasks, that you will be working on as a team duri
 
 > Exercise 11
 >
-> 1. Add these two user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
+> Come up with tasks for the third user story, "As an user I want to be able to edit a reading recommendation so that I can change its information". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+
+{: .important-title }
+
+> Exercise 12
+>
+> 1. Add these three user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
 > 2. Add the tasks to the "Sprint 1 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
 > 3. Once you start working on task, assign the task to you. This can be done by first clicking on the card, then clicking the "Members" button below the "Add to card" and choosing your Trello account. A task can also have multiple members. The important thing is that each task that is not in the "To do" state should have at least one member assigned to it.
 
@@ -376,7 +385,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > Implement the tasks of the first user story, "As an user I want to add a reading recommendation so that I can build a collection of reading recommendations".
 >
@@ -388,7 +397,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > Implement the tasks of the second user story, "As an user I want to list the added reading recommendations so that I can easily find interesting things to read".
 >
@@ -397,6 +406,18 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 > ![](/assets/sprint-1-user-story-2.png)
 >
 > This page should be visible on the root path (the `/` path) of the application. Change the `@GetMapping` of the `listMessages` method in the `MessageController` class, for example to `@GetMapping("/messages")`.
+
+{: .important-title }
+
+> Exercise 15
+>
+> Implement the tasks of the third user story, "As an user I want to be able to edit a reading recommendation so that I can change its information".
+>
+> The implementation should look roughly something like this:
+>
+> ![](/assets/sprint-1-user-story-3-1.png)
+>
+> ![](/assets/sprint-1-user-story-3-2.png)
 
 {: .note }
 
@@ -441,7 +462,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 16
 >
 > Write a usage guide on _how to start your application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required JDK version for the project.
 
@@ -453,7 +474,7 @@ Usually a new version of an application is released at the end of each Sprint. W
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 17
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -465,7 +486,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 18
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 >
