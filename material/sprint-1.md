@@ -147,7 +147,7 @@ Check the [Learn Trello board basics](https://trello.com/guide/trello-101) guide
 
 > Exercise 4
 >
-> Create a Sprint Backlog board for the first Spring in Trello. Name the Sprint Backlog board "Sprint 1 backlog". The Sprint Backlog board should have these three lists from left to right:
+> Create a Sprint Backlog board for the first Sprint in Trello. Name the Sprint Backlog board "Sprint 1 backlog". The Sprint Backlog board should have these three lists from left to right:
 >
 > - "To do" for tasks that haven't been started yet
 > - "In progress" for tasks that somebody is working on
