@@ -72,7 +72,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "It's great that we can now add and list the reading recommendations! But, after adding many recommendations it gets really hard to find the right kind of recommendations from the list.
 >
-> It would nice if the reading recommendation list would display the date and time when the recommendations was added. This way, the user would know how old the recommendation is.
+> It would nice if the reading recommendation list would display the date when the recommendations was added. This way, the user would know how old the recommendation is.
 >
 > To better organize the reading recommendations, it would be useful to be able to add different categories, like "Programming tutorials" or "Video game news". User should be able to add a category using a form. There should also be a page that lists all the added categories.
 >
@@ -84,7 +84,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 After some discussion the Scrum Team came up with the following user stories:
 
-1. As an user I want to know the date and time when a reading recommendation was added so that I know how old it is
+1. As an user I want to know the date when a reading recommendation was added so that I know how old it is
 2. As an user I want to add a category so that I can organize my recommendations
 3. As an user I want to see a list of categories so that I know which categories exist
 4. As an user I want to provide a category for a reading recommendation so that I can organize my recommendations
@@ -138,7 +138,7 @@ At this point it might sense to distribute the workload a bit instead of working
 
 > Exercise 5
 >
-> Implement the tasks of the first user story, "As an user I want to know the date and time when a reading recommendation was added so that I know how old it is".
+> Implement the tasks of the first user story, "As an user I want to know the date when a reading recommendation was added so that I know how old it is".
 >
 > The implementation should look roughly something like this:
 >
