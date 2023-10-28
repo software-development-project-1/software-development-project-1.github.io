@@ -427,7 +427,7 @@ In situations like this one can put the local changes aside to the _stash_. This
 >
 > 1. Make changes to some files which you have already added to Git once (i.e. they are not under the headline <code>untracked</code> in the output of <code>git status</code>).
 > 2. Stash the changes you just made using Git.
-> 3. Open the files you last and check if you can still see the changes
+> 3. Open the files you changed and check if you can still see the changes
 > 4. Edit the <i>first</i> sentence of the file <code>story.txt</code> in GitHub and create a commit.
 > 5. Then edit the <i>last</i> sentence of the same file locally, but <strong>don't create a commit</strong>.
 > 6. Fetch the changes you made to <code>story.txt</code> in the remote repository to the local version. Use the stash.
