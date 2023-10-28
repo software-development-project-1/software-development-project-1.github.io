@@ -463,7 +463,7 @@ Notice how Git is kind enough to notify us of the two parallel, differing states
 
 > Remember that if <code>git status</code> doesn't display the newest state of the remote, you shoud run <code>git fetch</code> first.
 
-Pushing the now commits will not work, as the command `git push` will output the following:
+Pushing the new commits will not work, as the command `git push` will output the following:
 
 ```
 To git@github.com:user/repo.git
@@ -493,7 +493,7 @@ Now according to the output of `git status` we have created two commits, (`ahead
 > Exercise 10
 >
 > 1. Create two non-conflicting commits, one directly to the remote repository, and another to the local version. For example, edit the first line of your shopping list via GitHub, and the last line on the local version.
-> 2. Try pushing the local commit to the remote repository and observer the error message.
+> 2. Try pushing the local commit to the remote repository and observe the error message.
 > 3. Pull the commit from the remote repository to your local version and write "my first merge" as the commit message. If you see "CONFLICT" printed out while pulling, read the next section "Merge Conflicts".
 > 4. Finally, push all the changes to GitHub.
 
