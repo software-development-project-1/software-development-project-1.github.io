@@ -776,9 +776,9 @@ If the application is currently running, for example in Eclipse, stop it. Then, 
 
 The Product Owner came up with a feature for the application if we run out of work during the Sprint:
 
-> "The category filter on the reading recommendation list is very helpful for finding the right things to read. But it would even more helpful if an user would be able to filter reading recommendations by a title or a description.
+> "The category filter on the reading recommendation list is very useful for finding the right things to read. But it would even more useful if an user would be able to filter reading recommendations based on their title or description.
 >
-> There could be a filter field in the reading recommendation list and if either the title or the description of a reading recommendation contains the keyword typed in to the field, the reading recommendation would be listed. If there's no keyword, all the reading recommendations would be listed."
+> There could be a search field in the reading recommendation list and if either the title or the description of a reading recommendation contains the keyword typed in to the field, the reading recommendation would be listed. If there's no keyword, all the reading recommendations would be listed."
 >
 > -- The Product Owner
 
