@@ -752,7 +752,7 @@ Now, if we run the `./mvnw spring-boot:run` command, the command output indicate
 
 ## JAR
 
-A JAR (Java Archive) is a package file format typically used to aggregate many Java class files and associated metadata and resources (such as CSS files, JavaScript files and other assets) into one file to distribute application software or libraries on the Java platform.If an user wants to use our application, instead of providing them with the entire source code, we can just provide a JAR file containing everything needed to run our application.
+A JAR (Java Archive) is a package file format typically used to aggregate many Java class files and associated metadata and resources (such as CSS files, JavaScript files and other assets) into one file to distribute application software or libraries on the Java platform. If an user wants to use our application, instead of providing them with the entire source code, we can just provide a JAR file containing everything needed to run our application.
 
 We can generate a JAR file for the application with the following command:
 
