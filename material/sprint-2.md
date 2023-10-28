@@ -74,7 +74,11 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > It would nice if the reading recommendation list would display the date and time when the recommendations was added. This way, the user would know how old the recommendation is.
 >
-> To better organize the reading recommendations, it would be useful to be able to add different categories, like "Programming tutorials" or "Video game news". After adding a category, the user could select a category from a dropdown menu while adding a recommendation. Then, in the reading recommendation list, the user should be able to filter the recommendations based on the category. For example if user chooses a "Programming tutorials" category from a dropdown menu, only the recommendations in that category will be listed."
+> To better organize the reading recommendations, it would be useful to be able to add different categories, like "Programming tutorials" or "Video game news". User should be able to add a category using a form. There should also be a page that lists all the added categories.
+>
+> After adding a category, the user could select a category from a dropdown menu while adding a recommendation. The dropdown menu should also have an "Uncategorized" option to leave the reading recommendation uncategorized.
+>
+> In the reading recommendation list, the user should be able to filter the recommendations based on the category. For example if user chooses a "Programming tutorials" category from a dropdown menu, only the recommendations in that category will be listed. The dropdown menu should also have an "Any category" option to list all the reading recommendations."
 >
 > -- The Product Owner
 
@@ -118,7 +122,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 3
 >
-> Come up with tasks for the fourth user story, "As an user I want to provide a category for a reading recommendation so that I can organize my recommendations".
+> Come up with tasks for the fourth user story, "As an user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 8 to get an idea what the implementation could look like.
 
 {: .important-title }
 
@@ -192,7 +196,7 @@ At this point it might sense to distribute the workload a bit instead of working
 
 Java classes require a lot of _boilerplate code_ in the form of getters, setters and constructors. Each time we define an attribute for a class, we need to implement getter and setter methods for it and alter the constructor. [Lombok](https://projectlombok.org/) is library that automatically generates getters, setters and constructors from the attributes.
 
-Before we can start using Lombok, we need to add it as dependency for our Maven project. Let's add the dependency for the `pom.xml` file under the `<dependencies>` list:
+Before we can start using Lombok, we need to add it as dependency for our Maven project. Let's add the dependency to the `<dependencies>` list in the `pom.xml` file:
 
 ```xml
 <dependency>
@@ -357,7 +361,7 @@ Spring Doc is a library for generating a JSON-formatted description of a REST AP
 
 Swagger provides documentation for the API endpoints we define in the controller methods. The documentation is a user interface that lists the endpoints and provides information for each one, such as what the request for the endpoint looks like and what's in the response. We can also easily send requests and inspect the response using the user interface. [Here](https://petstore.swagger.io/) is an example of a Swagger documentation.
 
-Let's start documenting our API by adding the Spring Doc dependency for the `pom.xml` file under the `<dependencies>` list:
+Let's start documenting our API by adding the Spring Doc dependency to the `<dependencies>` list in the `pom.xml` file:
 
 ```xml
 <dependency>
@@ -529,7 +533,7 @@ The JavaScript file for the frontend application is added with a `script` tag:
 <script th:src="@{/frontend/renderMessageList.js}" defer></script>
 ```
 
-The JavaScript file is bundled using a _bundler_. The bundler will combines many JavaScript code files into a single one that is loadable in the browser. We will be using the [esbuild](https://esbuild.github.io/) bundler.
+The JavaScript file is bundled using a _bundler_. The bundler will combines many JavaScript code files into a single file that is loadable in the browser. We will be using the [esbuild](https://esbuild.github.io/) bundler.
 
 If we take a look at the `scripts` section of the `package.json` file in the root folder of the project, we'll see three scripts:
 
@@ -541,9 +545,19 @@ If we take a look at the `scripts` section of the `package.json` file in the roo
 }
 ```
 
-The `esbuild-bundle` script will bundle the `frontend/messageList/renderMessageList.jsx` entry file and output the result to the `src/main/resources/static/frontend` folder. The `dev` script will execute the `esbuild-bundle` script with a `--watch` flag, which will generate the output files each time one of the source files changes. Use this script while writing the frontend code.
+Here's what the scripts do:
 
-Let's open the project folder in Git Bash and run `npm run dev` command. Next, open <http://localhost:8080/react-messages> in browser and you should see a list of messages if there's any. If the list is empty, add a message in <http://localhost:8080/messages/add> and check again.
+- The `esbuild-bundle` script will bundle the `frontend/messageList/renderMessageList.jsx` entry file and output the result to the `src/main/resources/static/frontend` folder.
+- The `dev` script will execute the `esbuild-bundle` script with a `--watch` flag, which will generate the output files each time one of the source files changes. Use this script while writing the frontend code. This is handy while we are developing the frontend.
+- The `build` script will generate a [minified](https://esbuild.github.io/api/#minify) version of the code. This version should be used for the _production version_ of the application due to its smaller file size that is faster to download through the network.
+
+Let's open the open project folder in an editor. If you have previously written frontend code using Visual Studio Code, you can use that instead of Eclipse. Then, open the project folder in a command-line interface such as Git Bash or the Visual Studio Code's integrated terminal.
+
+Start by installing the frontend dependencies by running the `npm install` command. Then, run `npm run dev` command to bundle the frontend code. Next, open <http://localhost:8080/react-messages> in browser and you should see a list of messages if there's any. If the list is empty, add a message in <http://localhost:8080/messages/add> and check again.
+
+{: .note }
+
+> Run the `npm run dev` command when you are developing the frontend application.
 
 Now that we have the <http://localhost:8080/api/recommendations> REST API, we can implement a frontend application for the recommendations list. Create a folder `recommendationList` in the `frontend` folder. In that folder, create a file `renderRecommendationList.jsx` with the following content:
 
@@ -584,9 +598,9 @@ In order to bundle the `renderRecommendationList.jsx` file with esbuild, we'll n
 }
 ```
 
-So, we replaced the previous `frontend/messageList/renderMessageList.jsx` entry file with the `frontend/recommendationList/renderRecommendationList.jsx` entry file.
+So, we replaced the previous `frontend/messageList/renderMessageList.jsx` entry file with the `frontend/recommendationList/renderRecommendationList.jsx` entry file. If you still have the `npm run dev` command running, stop it by pressing `ctrl` and `c` keys in the command-line window. Then run the `npm run dev` command again to apply the changes we made for the `dev` script.
 
-Let's run the `npm run dev` command in Git Bash and open <http://localhost:8080> in browser. We should see the text "Reading recommendation list coming soon!" where used to be the list of reading recommendations. Change the text in the `renderRecommendationList.jsx` and save the changes. Then, reaload the page and you should see that the text has changed.
+Open <http://localhost:8080> in browser. We should see the text "Reading recommendation list coming soon!" where used to be the list of reading recommendations. Change the text in the `renderRecommendationList.jsx` and save the changes. Then, reaload the page and you should see that the text has changed.
 
 Next we will implement the list of reading recommendations as a React frontend application. After that we will implement the the fifth user story "As an user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
 
@@ -676,19 +690,139 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 >
 > Once you have completed the exercises for this Sprint, remove the excessive Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive `messageList` folder from the `frontend` folder.
 
-## Sprint Review
+## Frontend workflow with Maven
 
-We have all kinds of cool stuff to show for the Product Owner at the end of this Sprint. Prepare for the upcoming [Sprint Review](/sprint-1#sprint-review) event, similarly as in the previous Sprint.
+We can integrate the frontend's npm scripts with the backend's Maven workflow using the [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin). Using the plugin, we can run all the commands required for the frontend application when we compile the Java code. This will simplify the development workflow of the whole application.
+
+Let's add the frontend-maven-plugin to the `<plugins>` list in the `pom.xml` file:
+
+```xml
+<plugin>
+  <groupId>com.github.eirslett</groupId>
+  <artifactId>frontend-maven-plugin</artifactId>
+  <version>1.14.2</version>
+  <executions>
+    <execution>
+      <id>install node and npm</id>
+      <goals>
+        <goal>install-node-and-npm</goal>
+      </goals>
+      <phase>generate-resources</phase>
+      <configuration>
+        <nodeVersion>v18.16.0</nodeVersion>
+      </configuration>
+    </execution>
+    <execution>
+      <id>npm install</id>
+      <goals>
+        <goal>npm</goal>
+      </goals>
+      <phase>generate-resources</phase>
+      <configuration>
+        <arguments>install</arguments>
+      </configuration>
+    </execution>
+    <execution>
+      <id>npm build</id>
+      <goals>
+        <goal>npm</goal>
+      </goals>
+      <phase>generate-resources</phase>
+      <configuration>
+        <arguments>run build</arguments>
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
+```
+
+The plugin will execute three commands when we generate the resources for the project:
+
+1. Install Node.js
+2. Run `npm install` command
+3. Run `npm run build` command
+
+Now, if we run the `./mvnw spring-boot:run` command, the command output indicates that the frontend related commands are executed.
 
 {: .important-title }
 
 > Exercise 17
 >
-> Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
+> Use the frontend-maven-plugin in the project as instructed above.
+
+## JAR
+
+A JAR (Java Archive) is a package file format typically used to aggregate many Java class files and associated metadata and resources (such as CSS files, JavaScript files and other assets) into one file to distribute application software or libraries on the Java platform.If an user wants to use our application, instead of providing them with the entire source code, we can just provide a JAR file containing everything needed to run our application.
+
+We can generate a JAR file for the application with the following command:
+
+```bash
+./mvnw package
+```
+
+The command will generate the JAR file under the `target` folder. Inside the folder there should a file `cool-reads-0.0.1-SNAPSHOT.jar`. 
+
+If the application is currently running, for example in Eclipse, stop it. Then, run `java -jar target/cool-reads-0.0.1-SNAPSHOT.jar` to run the application with the JAR file. Open the application in <http://localhost:8080> and see that it is working.
+
+{: .note }
+
+> When you change the application's code, you need to re-generate the JAR file with the `./mvnw package` command to have a JAR file for the latest version of the application.
+
+## ⭐ Bonus user story
+
+{: .note }
+
+> This user story is optional. If you have implemented all other user stories, feel free to implement this one.
+
+The Product Owner came up with a feature for the application if we run out of work during the Sprint:
+
+> "The category filter on the reading recommendation list is very helpful for finding the right things to read. But it would even more helpful if an user would be able to filter reading recommendations by a title or a description.
+>
+> There could be a filter field in the reading recommendation list and if either the title or the description of a reading recommendation contains the keyword typed in to the field, the reading recommendation would be listed. If there's no keyword, all the reading recommendations would be listed."
+>
+> -- The Product Owner
+
+{: .important-title }
+
+> Bonus exercise
+>
+> Come up with an user story based on the Product Owner's description and add it to the "Product Backlog" board in Trello. Then, split the user story into tasks and add those to the "Sprint 2 Backlog" board in Trello. Finally, implement the tasks.
+>
+> The implementation should look roughly something like this:
+>
+> ![](/assets/sprint-2-user-story-bonus.png)
+>
+> If you have trouble with the implementation, here's a high-level idea of the implementation:
+>
+> ```jsx
+> // ...
+> const [recommendations, setRecommendations] = useState([]);
+> const [keyword, setKeyword] = useState("");
+>
+> let filteredRecommendations = recommendations;
+>
+> if (keyword) {
+>   filteredRecommendations = recommendations.filter(/* ... */);
+> }
+> ```
+
+Check the documentation for the [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method to learn how to filter arrays.
+
+## Sprint Review
+
+We have all kinds of cool stuff to show for the Product Owner at the end of this Sprint. Prepare for the upcoming [Sprint Review](/sprint-1#print-review) event, similarly as in the previous Sprint.
 
 {: .important-title }
 
 > Exercise 18
+>
+> Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
+>
+> Also generate a _JAR file for the application_ as instructed previously. Add the JAR file to the release by clicking the "Attach binaries by dropping them here or selecting them." section in the release form.
+
+{: .important-title }
+
+> Exercise 19
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be someone else as the one who gave it previously. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 >
