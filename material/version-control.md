@@ -103,7 +103,7 @@ Let's go through how a commit is created. First, the changes one wants to includ
 
 The command `git status` will turn out to be very useful in the process of creating commits, as it gives information avout the current state of the project and all the files inside it.
 
-Let's create a Git project folder. Create an empty folder named "git-practice" for example on your Desktop or any other location. Next, depending on your operating system do the following:
+Let's create a Git project folder. Create an empty folder named `git-practice` for example on your Desktop or any other location. Next, depending on your operating system do the following:
 
 - On _Windows_, open the folder in Git Bash by right-clicking the folder name and choosing "Git Bash Here".
 - On _macOS_, open the folder in Terminal by right clicking the folder name and choosing "New Terminal at Folder"
@@ -263,7 +263,7 @@ Branches are usually used for testing out new features without breaking a workin
 
 > Exercise 3
 >
-> 1. Create a folder turn it into a Git project like we did before.
+> 1. Open the `git-practice` folder we turned it into a Git project earlier both in an editor (for example Visual Studio Code) and in Git Bash.
 > 2. Create a file called <code>story.txt</code> in your project. Add a lot of text inside.
 > 3. Add another file called <code>shopping_list.txt</code> to the project, and write down what you need from the store (or just many rows of text).
 > 4. Create a subfolder called <code>school</code> into the project, and create a file called <code>school_file.txt</code> inside. You will need these files in the future exercises.
