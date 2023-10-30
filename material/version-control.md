@@ -184,7 +184,7 @@ You probably noticed that the file `git_practice.txt` is in the output twice. Th
 
 Changes can also be cancelled with Git. Adding some text to `git_practice.txt` could be cancelled by running `git restore git_practice.txt`. The file will be empty after running the command because the command cancelled the change which added some text into `git_practice.txt`. In conclusion, the command `git restore` enables cancelling changes in tracked files.
 
-By running `git add -p` one can choose change by change, which ones to add to the next commit (y=add, n=don't add). The command only takes into consideration changes in files which are being tracked, i.e. _have already been added to Git once_. Thus new files cannot be added to Git with `git add -p`. Running `git add file` will add all the changes in the file. It is also possible to add entire folders to Git using the same command. Another quite handy shorthand is the `git add .`, which will add all files to the next commit.
+By running `git add -p` one can choose change by change, which ones to add to the next commit (letter "y" means add, "n" means don't add). Type in the letter ("y" or "n") and press the Enter key. The command only takes into consideration changes in files which are being tracked, i.e. _have already been added to Git once_. Thus new files cannot be added to Git with `git add -p`. Running `git add file` will add all the changes in the file. It is also possible to add entire folders to Git using the same command. Another quite handy shorthand is the `git add .`, which will add all files to the next commit.
 
 {: .warning }
 
