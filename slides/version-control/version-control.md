@@ -46,5 +46,5 @@
 - For this, there are several different services, such as _Gitlab_, _Bitbucket_ and _GitHub_
 - The basic idea for these services is the same: they allow us to store and publish project related code into a single centralized _code base_ which all team members contribute to
 - During this course we will using the _GitHub_ service to store and publish our project's code
-- The software developer's GitHub account is commonly their personal portfolio: all their projects are there for others to see
+- The software developer's GitHub account is commonly their _personal portfolio_: all their projects are there for others to see
 - When applying for a job, having a GitHub account with projects is very beneficial
