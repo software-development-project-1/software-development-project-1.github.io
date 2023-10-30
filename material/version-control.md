@@ -103,7 +103,7 @@ Let's go through how a commit is created. First, the changes one wants to includ
 
 The command `git status` will turn out to be very useful in the process of creating commits, as it gives information avout the current state of the project and all the files inside it.
 
-Let's create a Git project folder. Create an empty folder named "git-practice" for example on your Desktop or any other location. Next, depending on your operating system do the following:
+Let's create a Git project folder. Create an empty folder named `git-practice` for example on your Desktop or any other location. Next, depending on your operating system do the following:
 
 - On _Windows_, open the folder in Git Bash by right-clicking the folder name and choosing "Git Bash Here".
 - On _macOS_, open the folder in Terminal by right clicking the folder name and choosing "New Terminal at Folder"
@@ -180,7 +180,7 @@ The first title is called `Changes to be committed.` The changes under this titl
 
 Finally `Untracked files` contains all the files which are unknown to Git, meaning that the changes inside them are not being followed. For example, Git cannot distinguish what sort of changes have been done to the untracked files. In consequence, the changes are not being added to the next commit.
 
-You probably noticed that the file `git_practice.txt` is in the output twice. This is because Git tracks _changes_. The first change added to Git was where the file `git-practice` was created. Only after adding the change to Git was some text insterted into the file. Thus only the change where the file `git_practice.txt` was created will be added to the next commit, and not the change when some text was added inside it. The interpretation of the output of `git status` is made easier with some colors. The changes which will be added to the next commit are displayed in green, and next to the filename is written what was done to the file (for example `new file`, `modified`, `deleted`).
+You probably noticed that the file `git_practice.txt` is in the output twice. This is because Git tracks _changes_. The first change added to Git was where the file `git_practice.txt` was created. Only after adding the change to Git was some text insterted into the file. Thus only the change where the file `git_practice.txt` was created will be added to the next commit, and not the change when some text was added inside it. The interpretation of the output of `git status` is made easier with some colors. The changes which will be added to the next commit are displayed in green, and next to the filename is written what was done to the file (for example `new file`, `modified`, `deleted`).
 
 Changes can also be cancelled with Git. Adding some text to `git_practice.txt` could be cancelled by running `git restore git_practice.txt`. The file will be empty after running the command because the command cancelled the change which added some text into `git_practice.txt`. In conclusion, the command `git restore` enables cancelling changes in tracked files.
 
@@ -268,7 +268,7 @@ Branches are usually used for testing out new features without breaking a workin
 
 > Exercise 3
 >
-> 1. Create a folder turn it into a Git project like we did before.
+> 1. Open the `git-practice` folder we turned it into a Git project earlier both in an editor (for example Visual Studio Code) and in Git Bash.
 > 2. Create a file called <code>story.txt</code> in your project. Add a lot of text inside.
 > 3. Add another file called <code>shopping_list.txt</code> to the project, and write down what you need from the store (or just many rows of text).
 > 4. Create a subfolder called <code>school</code> into the project, and create a file called <code>school_file.txt</code> inside. You will need these files in the future exercises.
@@ -432,7 +432,7 @@ In situations like this one can put the local changes aside to the _stash_. This
 >
 > 1. Make changes to some files which you have already added to Git once (i.e. they are not under the headline <code>untracked</code> in the output of <code>git status</code>).
 > 2. Stash the changes you just made using Git.
-> 3. Open the files you last and check if you can still see the changes
+> 3. Open the files you changed and check if you can still see the changes
 > 4. Edit the <i>first</i> sentence of the file <code>story.txt</code> in GitHub and create a commit.
 > 5. Then edit the <i>last</i> sentence of the same file locally, but <strong>don't create a commit</strong>.
 > 6. Fetch the changes you made to <code>story.txt</code> in the remote repository to the local version. Use the stash.
@@ -468,7 +468,7 @@ Notice how Git is kind enough to notify us of the two parallel, differing states
 
 > Remember that if <code>git status</code> doesn't display the newest state of the remote, you shoud run <code>git fetch</code> first.
 
-Pushing the now commits will not work, as the command `git push` will output the following:
+Pushing the new commits will not work, as the command `git push` will output the following:
 
 ```
 To git@github.com:user/repo.git
@@ -498,7 +498,7 @@ Now according to the output of `git status` we have created two commits, (`ahead
 > Exercise 10
 >
 > 1. Create two non-conflicting commits, one directly to the remote repository, and another to the local version. For example, edit the first line of your shopping list via GitHub, and the last line on the local version.
-> 2. Try pushing the local commit to the remote repository and observer the error message.
+> 2. Try pushing the local commit to the remote repository and observe the error message.
 > 3. Pull the commit from the remote repository to your local version and write "my first merge" as the commit message. If you see "CONFLICT" printed out while pulling, read the next section "Merge Conflicts".
 > 4. Finally, push all the changes to GitHub.
 
