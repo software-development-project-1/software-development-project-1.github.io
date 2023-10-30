@@ -42,21 +42,25 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 
 So far, we have only created commits for the _main branch_ of our repository. _Git branches_ allows us to _diverge from the main branch commit history_ by creating a new branch. We can add commits for our branch without effecting the main branch commit history and at some point we _merge_ the commits of branch to the main branch.
 
-Branches are commonly used to isolate work-in-progress code from the main branch. The main branch should only contain _working code_, which produces _deployment ready features_. This means that the _latest working version_ of our application can be found in the main branch at all times. We should be able to deploy this application for our users at any moment without issues.
+Branches are commonly used to isolate work-in-progress code from the main branch. This can be for example the development of certain user story. Commonly, the main branch should only contain _working code_, which produces _deployment ready features_. This means that the _latest working version_ of our application can be found in the main branch at all times. We should be able to deploy this application for our users at any moment without issues.
 
-A new branch can be created with the `git branch <name-of-the-branch>` (replace the `<name-of-the-branch>` with name of the branch) command in Git Bash. Let's create a branch and _name it our first name without whitespaces_. For example, I would create the following branch:
-
-```bash
-git branch kalle
-```
-
-Now, let's check the repository's branches with the `git branch` command. We should see that our branch is added to the list. We can also see that there's an astrisk symbol (\*) before the main branch. This means that we are currently on the main branch. We can switch branches wit the `git checkout <name-of-the-branch>`. Switch to the branch you just created:
+A new branch can be created with the `git branch <name-of-the-branch>` (replace the `<name-of-the-branch>` with name of the branch) command in Git Bash. Let's create a branch and _name it our GitHub username with lowercase letters_. For example, I would create the following branch:
 
 ```bash
-git checkout kalle
+git branch kaltsoon
 ```
 
-Next, create a Markdown file to the `documentation` folder which is named after you first name (for example `kalle.md`). Add some text to the file and save it. Check the status with `git status` command, add the changes with the `git add` command and create a commit with the `git commit` command. Then let's switch back to the main branch with the `git checkout main` command. If we check the contents of `documentation` folder, we don't see our file there. That's because these changes _only exist in our other branch_.
+{: .note }
+
+> Typically, the branch name describes the feature develop in the branch or some other purpose of the branch, for example `filter-recommendations-by-category`.
+
+Now, let's check the repository's branches with the `git branch` command. We should see that our branch is added to the list. We can also see that there's an astrisk symbol (\*) before the main branch. This means that we are currently on the main branch. We can switch branches using the `git checkout <name-of-the-branch>` command. Switch to the branch you just created:
+
+```bash
+git checkout <name-of-my-branch>
+```
+
+Next, create a Markdown file to the `documentation` folder which is named after you GitHub username (for example `kaltsoon.md`). Add some text to the file and save it. Check the status with `git status` command, add the changes with the `git add` command and create a commit with the `git commit` command. Then let's switch back to the main branch with the `git checkout main` command. If we check the contents of `documentation` folder, we don't see our file there. That's because these changes _only exist in our other branch_.
 
 Let's switch back to our branch with the `git checkout` command. Change the contents of your file in the `documentation` folder and create one more commit. Then, push the changes to GitHub with the `git push` command. We get the following error message:
 
@@ -82,9 +86,9 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 
 > Exercise 2
 >
-> _Each group member_ should do the steps mentioned above to create their own branch and push it to GitHub.
+> _Each group member_ should do the steps mentioned above to create their own branch named by their GitHub username and push it to GitHub.
 
-We can also pull remote (in GitHub) branches for our local computer and make changes to them. Check the list of branches on GitHub and pick _some other group member's branch_.Once you have picked a branch, switch to main branch first:
+We can also pull remote (in GitHub) branches for our local computer and make changes to them. Check the list of branches on GitHub and pick _some other group member's branch_. Once you have picked a branch, switch to main branch first:
 
 ```bash
 git checkout main
@@ -93,13 +97,13 @@ git checkout main
 Then, create a branch that _has the same name_ as the one you picked from GitHub:
 
 ```bash
-git branch <branch>
+git branch <name-of-other-team-member-branch>
 ```
 
 Once created, switch to the created branch:
 
 ```bash
-git checkout <branch>
+git checkout <name-of-other-team-member-branch>
 ```
 
 Now, we can pull the branch changes from GitHub with the `git pull` command:
@@ -123,7 +127,7 @@ Once we have happy with the changes we have made in the branch, we should _merge
 Let's switch to the our branch first and see if there is any changes in GitHub:
 
 ```bash
-git checkout kalle
+git checkout <name-of-my-branch>
 ```
 
 We can pull changes from GitHub with the `git pull` command:
@@ -141,7 +145,7 @@ git checkout main
 Now, to merge our branch with the main branch we can do the following:
 
 ```bash
-git merge kalle
+git merge <name-of-my-branch>
 ```
 
 This creates a _merge commit_ for the main branch containing all the changes done in the other branch. Let's push the changes to GitHub:
@@ -166,51 +170,135 @@ Now if we open the repository in GitHub, we should see that the main branch has 
 
 > Once everyone is done with these exercises, remove each group member's file from the `documentation` folder in the main branch and push the changes to GitHub.
 
+If you want to learn more about branches and how they are used in the software development workflow, read the [Git feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) tutorial by Atlassian.
+
 ## Sprint 3 planning
+
+{: .highlight}
+
+> If you weren't able to implement all the user stories during the previous Sprint, start by finishing those before starting to implement the user stories for this Sprint.
+
+The Product Owner was delighted to see how the project has advancend during Sprint 2.
+
+The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 3 goals in the Sprint Planning event:
+
+> "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username and password. After registering, the user should be able to sign in using the username and password provided during the registration.
+>
+> An anonymous user, that is an user who has not signed in, should be able to see the reading recommendation list. They shouldn not be able to add a reading recommendation or a category.
+
+> Signed in user should only be able to edit reading recommendations that they have added themselves. They should also be able to delete their own reading recommendations."
+>
+> -- The Product Owner
 
 1. As an anonymous user I want to register an account so that I can manage my personal reading recommendations
 2. As a signed in user I want to assosicate the added reading recommendation with my account so that I can manage my personal reading recommendations
 3. As a signed in user I want to delete my own reading recommendations so that I can get rid of useless reading recommendations
 
-## Authentication
-
-{: .important-title }
-
 > Exercise 5
 >
-> User story 1
+> Create a Sprint Backlog board for the third Spring in Trello. Name the Sprint Backlog board "Sprint 3 backlog". Add similar lists for the board as in the Sprint 2 backlog.
 
 {: .important-title }
 
 > Exercise 6
 >
-> Spring Security
+> Come up with tasks for the first user story, "As an anonymous user I want to register an account so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 to get an idea what the implementation could look like.
 
 {: .important-title }
 
 > Exercise 7
 >
-> User story 2
-
-{: .important-title }
-
-> Exercise 8
->
-> User story 3
+> 1. Add these three user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
+> 2. Add the tasks to the "Sprint 3 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
 
 ## Testing
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 8
 >
-> Create reading recommendation test
+> Implement a `ReadingRecommendationService` class with the following method:
+>
+> ```java
+> @Service
+> public class ReadingRecommendationService {
+>   @Autowired
+>   ReadingRecommendationRepository recommendationRepository;
+>
+>   public ReadingRecommendation createRecommendation(AddReadingRecommendationDto recommendation) {
+>       // Save the reading recommendation to the database and return the saved ReadingRecommendation object
+>   }
+> }
+> ```
+>
+> It is fine that the names of your classes differ from these. Replace the names of the classes based on the classes on your project.
+>
+> Then, extract the current controller method's code into the `createRecommendation` method and call it in the controller method:
+>
+> ```java
+> @Controller
+> public class ReadingRecommendationController {
+>   @Autowired
+>   private ReadingRecommendationService recommendationService;
+>
+>    // ...
+>
+>   @PostMapping("/recommendations/add")
+>   public ModelAndView addRecommendation(@ModelAttribute AddReadingRecommendationDto recommendation) {
+>       recommendationService.createRecommendation(recommendation);
+>
+>       return new ModelAndView("redirect:/");
+>   }
+> }
+> ```
+>
+> This change in code should not change how the application works in the user's perspective. Make sure that adding a reading recommendation works as before.
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 9
 >
-> Register account test
+> Add a `ReadingRecommendationServiceTest` test class and implement the following test methods for the `createRecommendation` method:
+>
+> ```java
+> @DataJpaTest
+> class ReadingRecommendationServiceTest {
+>   @Autowired
+>   private ReadingRecommendationService recommendationService;
+>
+>   @Autowired
+>   private ReadingRecommendationRepository recommendationRepository;
+>
+>   @Test
+>   void createRecommendationSetsAttributesCorrectly() {
+>       // Arrange: initialize a AddReadingRecommendationDto object with other attributes, except the category (the recommendation is uncategorized)
+>
+>       // Act: call the recommendationRepository.createRecommendation method with the initialized object
+>
+>      // Assert: retrieve all the recommendations from the database using the recommendationRepository.findAll() method. Then, the attributes of the first (and the only) object on the list should match the attributes of the AddReadingRecommendationDto object
+>   }
+>
+>   @Test
+>   void createRecommendationSetsCategoryAsNullWhenCategoryIsNotProvided() {
+>       // Arrange: initialize a AddReadingRecommendationDto object with other attributes, except the category (the recommendation is uncategorized)
+>
+>       // Act: call the recommendationRepository.createRecommendation method with the initialized object
+>
+>       // Assert: retrieve all the recommendations from the database using the recommendationRepository.findAll() method. Then, the category attribute of the first (and the only) object on the list should be null
+>   }
+>
+>   @Test
+>   void createRecommendationSetsCategoryCorrectlyWhenCategoryIsProvided() {
+>       // Arrange: initialize a Category object and save it to the database by calling the category.save() method. Then, initialize a AddReadingRecommendationDto object with with a category matching the initialized Category object and the other attributes
+>
+>       // Act: call the recommendationRepository.createRecommendation method with the initialized object
+>
+>       // Assert: retrieve all the recommendations from the database using the recommendationRepository.findAll() method. Then, the category attribute of the first (and the only) object on the list should match the initialized Category object (you can for example check that the name attribute of the objects is the same)
+>   }
+> }
+> ```
+>
+> Replace the arrange, act and assert comments with the actual test implementation.
 
 ## Test coverage
 
@@ -237,15 +325,60 @@ Now if we open the repository in GitHub, we should see that the main branch has 
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 10
 >
 > Jacoco
+
+## Authentication
+
+{: .important-title }
+
+> Exercise 11
+>
+> Spring Security
+
+{: .important-title }
+
+> Exercise 12
+>
+> Implement the tasks of the first user story, "As an anonymous user I want to register an account so that I can manage my personal reading recommendations".
+>
+> The implementation should look roughly something like this:
+>
+> ![](/assets/sprint-2-user-story-2.png)
+
+{: .important-title }
+
+> Exercise 13
+>
+> Implement the tasks of the second user story, "As a signed in user I want to assosicate the added reading recommendation with my account so that I can manage my personal reading recommendations".
+>
+> Make sure that the buttons for adding a reading recommendation or category is not visible if the user is not signed in. Also, the "Edit" button should only be visible in the reading recommendation list if the user has added the reading recommendation.
+>
+> Tips for implementing the tasks:
+>  
+> - See how `Message` entity is associated with the `User` entity in the authentication-example project.
+> - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
+> - Take a look at the [messagelist](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/resources/templates/messagelist.html) Thymeleaf template file of the authentication-example project
+
+{: .important-title }
+
+> Exercise 1
+>
+> Implement the tasks of the third user story, "As a signed in user I want to delete my own reading recommendations so that I can get rid of useless reading recommendations".
+
+{: .important-title }
+
+> Exercise 15
+>
+> Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
+> [Generate a JAR file](/sprint-2#jar) for the application like we did in the previous Sprint and add the JAR file to the release.
 
 ## Peer review
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 16
 >
 > Peer review
 
@@ -265,6 +398,6 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 17
 >
 > Write the final report for the course as instructed above.

@@ -760,7 +760,7 @@ We can generate a JAR file for the application with the following command:
 ./mvnw package
 ```
 
-The command will generate the JAR file under the `target` folder. Inside the folder there should a file `cool-reads-0.0.1-SNAPSHOT.jar`. 
+The command will generate the JAR file under the `target` folder. Inside the folder there should a file `cool-reads-0.0.1-SNAPSHOT.jar`.
 
 If the application is currently running, for example in Eclipse, stop it. Then, run `java -jar target/cool-reads-0.0.1-SNAPSHOT.jar` to run the application with the JAR file. Open the application in <http://localhost:8080> and see that it is working.
 
@@ -818,13 +818,15 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 >
-> Also generate a _JAR file for the application_ as instructed previously. Add the JAR file to the release by clicking the "Attach binaries by dropping them here or selecting them." section in the release form.
+> Also generate a _JAR file for the application_ as instructed previously. Make sure to check that the application can be started using the `java -jar <path-to-the-jar-file>` command and it is working as expected.
+>
+> Add the JAR file to the release by clicking the "Attach binaries by dropping them here or selecting them." section in the release form.
 
 {: .important-title }
 
 > Exercise 19
 >
-> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be someone else as the one who gave it previously. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
+> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 >
 > Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/)) for the Sprint Review. This means that you should add a few categories and a few reading recommendations using the application so that you can easily demonstrate the user stories.
 
