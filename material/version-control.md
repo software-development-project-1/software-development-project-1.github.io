@@ -144,6 +144,11 @@ No commits yet
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
         new file:   git_practice.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git_practice.txt
 ```
 
 Next we'll add one more file to the project, called `empty.txt`. We'll then run `git status` again, which outputs the following:
