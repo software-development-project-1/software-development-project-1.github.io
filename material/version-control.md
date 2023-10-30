@@ -45,7 +45,7 @@ Git and GitHub are used in solo as well as collaborative projects in the industr
 
 > Exercise 1
 >
-> Start by creating a GitHub account at <a href="https://github.com/"> https://github.com/ </a>. Programmers often use GitHub as a sort of code protfolio, so make sure to choose a username which you don't mind adding to your CV.
+> Start by creating a GitHub account at <https://github.com/>. Programmers often use GitHub as a sort of code protfolio, so make sure to choose a username which you don't mind adding to your CV.
 
 {: .important-title }
 
