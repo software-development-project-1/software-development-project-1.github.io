@@ -15,7 +15,7 @@ nav_order: 4
 
 ## Submitting this week's exercises
 
-All of this week's exercises (exercises 1-12) are submitted to [this Moodle submission]({{site.week_2_moodle_submission_link}}). The submission should only contain the link to your GitHub repository created in exercise 6. The submission deadline is on {{site.week_2_deadline}}.
+All of this week's exercises (exercises 1-14) are submitted to [this Moodle submission]({{site.week_2_moodle_submission_link}}). The submission should only contain the link to your GitHub repository created in exercise 6. The submission deadline is on {{site.week_2_deadline}}.
 
 ## Version control
 

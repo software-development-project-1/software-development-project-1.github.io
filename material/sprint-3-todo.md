@@ -213,11 +213,90 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 ## Testing
 
+When we implement a new feature for the application we need to make sure that it works as intended. That is, we _test_ the implementation of a feature against the requirements. During the development of a feature we are constantly performing _manual testing_ for the implementation, meaning that we use the application ourselfs and see that we can perform certain actions successfully.
+
+Manual testing is important, but we can't perform it _at scale_. When our application becomes more complex, each change to code can potentially break any part of the application. Testing each feature manually after each change to code would be tome time-consuming. That's why we implement _automated tests_: programs that test our code. We can usually execute hundreds of automated tests within just a minute. Martin Fowler explains the purpose of different kind of automated tests in his article [TestPyramid](https://martinfowler.com/bliki/TestPyramid.html).
+
+Automated tests are implemented with programming language specific _testing frameworks_, such as Java's [JUnit](https://junit.org/junit5/) and JavaScript's [Vitest](https://vitest.dev/). During this Sprint we will implement some tests for our backend using JUnit. But first, let's discuss how to write code that is _easy to test_.
+
+## Service classes
+
+At the moment probably most of our application's _business logic_ is within controller methods. These methods usually read the user input from the request, do some database operations and send a response. Let's consider the following example that adds a message for an authenticated user:
+
+```java
+@Controller
+public class MessageController {
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private MessageRepository messageRepository;
+
+    @PostMapping("/messages/add")
+    public ModelAndView addMessage(@ModelAttribute AddMessageDto message, @AuthenticationPrincipal UserDetails userDetails) {
+        User user = userRepository.findOneByUsername(userDetails.getUsername());
+        Message newMessage = new Message(message.getContent(), user);
+        messageRepository.save(newMessage);
+
+        return new ModelAndView("redirect:/");
+    }
+
+    // ...
+}
+```
+
+Testing controller methods is a bit tricky because they operate on HTTP requests and responses. To make the business logic of "adding a message for an authenticated user" reusable and easier to test, we can create a service class `MessageService` with method `createMessage`:
+
+```java
+@Service
+public class MessageService {
+    @Autowired
+    private MessageRepository messageRepository;
+
+    @Autowired
+    private UserRepository userRepository;
+
+    public Message createMessage(AddMessageDto message, UserDetails userDetails) {
+        User user = userRepository.findOneByUsername(userDetails.getUsername());
+        Message newMessage = new Message(message.getContent(), user);
+
+        return messageRepository.save(newMessage);
+    }
+}
+```
+
+We can use the `MessageService` class in the controller method to simplify the code:
+
+```java
+@Controller
+public class MessageController {
+    @Autowired
+    private MessageService messageService;
+
+    @PostMapping("/messages/add")
+    public ModelAndView addMessage(@ModelAttribute AddMessageDto message, @AuthenticationPrincipal UserDetails userDetails) {
+        messageService.createMessage(message, userDetails);
+
+        return new ModelAndView("redirect:/");
+    }
+
+    // ...
+}
+```
+
+Now that we have extracted the logic into the `createMessage` method, we can use it in other methods as well. Also, the logic is now easier to test as we will soon see.
+
+{: .note }
+
+> A common architecture for a Java application is that controllers use services and services use repositories. This architecture is referred to as the [Three-tier architecture](https://www.ibm.com/topics/three-tier-architecture).
+
+These code snippets are from the [authentication-example](https://github.com/software-development-project-1/authentication-example) repository. We'll have a closer look at it soon.
+
 {: .important-title }
 
 > Exercise 8
 >
-> Implement a `ReadingRecommendationService` class with the following method:
+> Create a new package `fi.haagahelia.coolreads.service` for the project's service classes. You can do this in Eclipse by right-clicking the `src/main/java` folder and choosing New > Package. Implement a `ReadingRecommendationService` class within the package with the following method:
 >
 > ```java
 > @Service
@@ -231,7 +310,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 > }
 > ```
 >
-> It is fine that the names of your classes differ from these. Replace the names of the classes based on the classes on your project.
+> It is fine that the names of your classes differ from these. Replace the names of the classes based on the classes on your project. You can also change the method parameters if they aren't suitable.
 >
 > Then, extract the current controller method's code into the `createRecommendation` method and call it in the controller method:
 >
@@ -254,6 +333,60 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > This change in code should not change how the application works in the user's perspective. Make sure that adding a reading recommendation works as before.
 
+## Configuration for tests
+
+Because our tests will alter the database we should consider _using a different database for tests_. This is a common practice because we don't want the tests to alter (for example delete) any data we are using during the development.
+
+The database related configuration is in the `src/main/resources/application.properties` configuration file:
+
+```
+spring.datasource.url=jdbc:h2:file:~/cool-reads;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
+```
+
+The _database is stored in a file_ located in `~/cool-reads`. We can use a different, _in-memory database_ for the tests. For this we have a separate `src/test/resources/application.properties` configuration file (note the `test` folder in the path):
+
+```
+spring.datasource.url=jdbc:h2:mem:cool-reads-test;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
+```
+
+The configuration in the `src/test/resources/application.properties` file will be used while we are running the tests, which makes it suitable for test-specific configuration.
+
+## Testing service classes
+
+```java
+@SpringBootTest
+class MessageServiceTest {
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private MessageRepository messageRepository;
+
+    @Autowired
+    private MessageService messageService;
+
+    private UserDetails userDetails;
+
+    @BeforeEach
+    void setUp() throws Exception {
+        messageRepository.deleteAll();
+        userRepository.deleteAll();
+
+        String passwordHash = passwordEncoder.encode("password123");
+        User user = new User("tester", passwordHash, "USER");
+        userRepository.save(user);
+
+        this.userDetails = new org.springframework.security.core.userdetails.User(user.getUsername(),
+            user.getPasswordHash(), AuthorityUtils.createAuthorityList(user.getRole()));
+    }
+
+    // The tests methods go here...
+}
+```
+
 {: .important-title }
 
 > Exercise 9
@@ -261,7 +394,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 > Add a `ReadingRecommendationServiceTest` test class and implement the following test methods for the `createRecommendation` method:
 >
 > ```java
-> @DataJpaTest
+> @SpringBootTest
 > class ReadingRecommendationServiceTest {
 >   @Autowired
 >   private ReadingRecommendationService recommendationService;
@@ -356,14 +489,14 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 > Make sure that the buttons for adding a reading recommendation or category is not visible if the user is not signed in. Also, the "Edit" button should only be visible in the reading recommendation list if the user has added the reading recommendation.
 >
 > Tips for implementing the tasks:
->  
+>
 > - See how `Message` entity is associated with the `User` entity in the authentication-example project.
 > - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
 > - Take a look at the [messagelist](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/resources/templates/messagelist.html) Thymeleaf template file of the authentication-example project
 
 {: .important-title }
 
-> Exercise 1
+> Exercise 14
 >
 > Implement the tasks of the third user story, "As a signed in user I want to delete my own reading recommendations so that I can get rid of useless reading recommendations".
 
