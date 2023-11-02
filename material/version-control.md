@@ -184,7 +184,17 @@ You probably noticed that the file `git_practice.txt` is in the output twice. Th
 
 Changes can also be cancelled with Git. Adding some text to `git_practice.txt` could be cancelled by running `git restore git_practice.txt`. The file will be empty after running the command because the command cancelled the change which added some text into `git_practice.txt`. In conclusion, the command `git restore` enables cancelling changes in tracked files.
 
-By running `git add -p` one can choose change by change, which ones to add to the next commit (letter "y" means add, "n" means don't add). Type in the letter ("y" or "n") and press the Enter key. The command only takes into consideration changes in files which are being tracked, i.e. _have already been added to Git once_. Thus new files cannot be added to Git with `git add -p`. Running `git add file` will add all the changes in the file. It is also possible to add entire folders to Git using the same command. Another quite handy shorthand is the `git add .`, which will add all files to the next commit.
+By running `git add -p` one can choose change by change, which ones to add to the next commit (letter "y" means add, "n" means don't add). Type in the letter ("y" or "n") and press the Enter key. The command only takes into consideration changes in files which are being tracked, i.e. _have already been added to Git once_. Thus new files cannot be added to Git with `git add -p`. Running `git add file` will add all the changes in the file. It is also possible to add entire folders to Git using the same command. Another quite handy shorthand is the `git add .` (note the dot at the end of the command), which will add all files to the next commit.
+
+Here's a few different ways to add changes with the `git add` command:
+
+- `git add name_of_folder/some_file.txt`: add changes in file `some_file.txt` in folder `name_of_folder`.
+- `git add name_of_folder`: add _all changes_ in folder `name_of_folder`
+- `git add .`: add _all changes_ in the project
+
+{: .note }
+
+> If we check the `git status` and confirm that we want to add _all the changes_ to the next commit, the `git add .` command is the fastest way to do it.
 
 {: .warning }
 
