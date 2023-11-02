@@ -191,6 +191,7 @@ Here's a few different ways to add changes with the `git add` command:
 - `git add name_of_folder/some_file.txt`: add changes in file `some_file.txt` in folder `name_of_folder`.
 - `git add name_of_folder`: add _all changes_ in folder `name_of_folder`
 - `git add .`: add _all changes_ in the project
+- `git add -p`: choose change by change, which ones to add. This only works for _tracked files_.
 
 {: .note }
 
