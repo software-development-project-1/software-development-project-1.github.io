@@ -620,6 +620,52 @@ Of course, the same procedure can be repeated on the command line. You can brows
 
 > Remember, don't push anything secret to the remote repository: no passwords, personal API keys, your student number, or anything you wouldn't want to share with the whole Internet.
 
+## GitHub's workflow
+
+Sites like GitHub make collaboraton in development projects a lot easier. No one notices problems more efficiently than the actual users, and GitHub creates a platform for reporting those complications. Any user can create an _issue_ to a public project in GitHub, where one can report any problems with regards to using the software. Common issue subjects are error messages in edge cases, problems in installing, or missing features. 
+
+If one knows the solution to a problem, they can even suggest their own improvements to the project. However, this requires having access to the source code of the project. A public project can be copied to a local computer with the command `git clone <https-address-of-the-repository>`. The command takes the address of the remote repository, which can be acquired from the upper right corner of the project page, as an argument.
+
+![Cloning address](/assets/git-clone.png)
+
+Note that this is actually the same address you used before when adding a remote repository with the command `git remote add`. The owner of a project will not know who has cloned their project. The command creates a new folder named by the repository containing the contents of the repository to the folder where we run it.
+
+In the future, when you start a new Git project, you have two options for linking the local project to a repostory in GitHub. One option is to start by running `git init` inside a folder, create a repository to it in GitHub, and link them together. Another possibility is to create the remote first and simply clone the empty project to your local machine. The latter option has less steps so it is a bit more convinient.
+
+In order to push some new commits to a project one has cloned, the project's owner has to [add the user as a collaborator](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/). Otherwise the command `git push` will fail, because the user doesn't have sufficient permissions to the repository. In other words, when starting a collaborative project, all the developers should be added as collaborators, allowing them to push code to the remote repository freely.
+
+However, there exists another way of suggesting changes to an existing project. This is called _forking_. When one forks a project, a copy of it is added to the users _own profile_. This will create an event to GitHub's "feed", and the project's owner can see who has forked their repository. After forking a project, you can clone the project from your _own profile_, and push changes to your _own version_, which has been separated from the original one. The difference to cloning is, that the cloned repository will not appear in your GitHub profile.
+
+If the chages you have done to your own version are good enough in your own opinion, you can suggest merging them to the original project with a [pull request](https://help.github.com/articles/about-pull-requests/). The owner of the original project can then go through your suggested changes and to integrate them to the project if they wish.
+
+Let's clone the git-practice repository we have been working on from GitHub to our local computer. First, open Git Bash in the folder where you want to clone the repository. For example, we can right-click on the Desktop and choose "Git Bash Here" to clone the repository on the Desktop. Then, let's clone the repository by using _the HTTPS address_ of the repository we get from GitHub. We can change the name of the repository folder by providing a name at the end of the `git clone` command. Let's call this folder `git-practice-clone` to not confuse it with the `git-practice` folder we have as well:
+
+```bash
+git clone <https-address-of-the-repository> git-practice-clone
+```
+
+{: .highlight }
+
+> Usually we should not have multiple versions of the same repository on our computer to avoid confusion.
+
+We should now have a `git-practice-clone` folder in the folder we ran the command in. Open the folder for example in Visual Studio Code. We can see that the folder contains everything we have in GitHub. To open the repository in Git Bash we can either right-click on the repository folder or we can run the command `cd git-practice-clone`. The [cd command](https://www.geeksforgeeks.org/cd-command-in-linux-with-examples/) will change the current folder.
+
+{: .important-title }
+
+> Exercise 13
+>
+> 1. Clone the git-practice repository to your local computer as instructed above and open the repository folder in Git Bash and in an editor such as Visual Studio Code.
+> 2. Change the contents of some file (for example the `git_practice.txt`) file and push the changes to GitHub. Open the repository in GitHub and see that it has the commit you created.
+> 3. Find out using Google, how you can find out the names and addresses of the remote repositories of a project. The answer is a command you should run inside the Git project, when a remote has been set.
+
+{: .important-title }
+
+> Exercise 14
+>
+> Explore an open source project repositories in GitHub. You can for example search for your favorite library (such as React) on the [GitHub's home page](https://github.com/) using the search field at the top of the page. Alternatively, you can use Google.
+>
+> Find the issues and the pull requests, the people who have contributed to the project, and the statistics associated with them.
+
 ## The End
 
 As a novice programmer it is easy to lose and even break code with version control. However, learning how to use one is definitely one of the most vital skills required in the working life. Though the system in use may not be Git, the same principles often apply.
