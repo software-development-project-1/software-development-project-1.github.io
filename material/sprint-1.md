@@ -159,19 +159,7 @@ Check the [Learn Trello board basics](https://trello.com/guide/trello-101) guide
 >
 > Decide how you will communicate outside the weekly sessions. Choose a communication platform, such as Teams, Telegram or Discord. Also schedule at least one weekly time slot when you work on the exercises together outside the weekly sessions. If possible, meet physically on the campus or some other location.
 
-## GitHub's workflow
-
-Sites like GitHub make collaboraton in development projects a lot easier. No one notices problems more efficiently than the actual users, and GitHub creates a platform for reporting those complications. Any user can create an _issue_ to a public project in GitHub, where one can report any problems with regards to using the software. Common issue subjects are error messages in edge cases, problems in installing, or missing features.
-
-If one knows the solution to a problem, they can even suggest their own improvements to the project. However, this requires having access to the source code of the project. A public project can be copied to a local computer with the command `git clone`. The command takes the address of the remote repository, which can be acquired from the upper right corner of the project page, as an argument.
-
-![Cloning address](/assets/git-clone.png)
-
-Note that this is actually the same address you used before when adding a remote repository with the command `git remote add`. The owner of a project will not know who has cloned their project.
-
-In the future, when you start a new Git project, you have two options for linking the local project to a repostory in GitHub. One option is to start by running `git init` inside a folder, create a repository to it in GitHub, and link them together. Another possibility is to create the remote first and simply clone the empty project to your local machine.
-
-### GitHub organizations
+## GitHub organizations
 
 When a software development teams is working on project together, the project can have multiple repositories and different team members might only have access to certain repositories. To have more control over the repository access, the repositories aren't personal repositories created by certain team member. Instead the repositories belong to certain _organization_ and team members can be invited to join that organization.
 
@@ -189,7 +177,7 @@ Once the organization is created, a team member can be invited by clicking the "
 >
 > _One of the team members_ should create a GitHub organization for the project. Once the organization is created, invite other team members to the organization. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team.
 
-### Forking a repository
+## Forking a GitHub repository
 
 Instead of starting a repository from scratch, we can create a copy an existing repository and use that as a starting point for our project. In GitHub terminology this is called _forking a repository_ and the copied repository is called a _fork_.
 
@@ -209,7 +197,7 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 
 > Exercise 8
 >
-> Each team member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example-project repository. _Remember to use the HTTPS address_ of the GitHub repository with the command.
+> Each team member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example-project repository. _Remember to use the HTTPS address_ of the GitHub repository with the command. See the [Git instructions](/git#githubs-workflow) if you have trouble.
 >
 > Once you have cloned the repository, open the code in an editor such as Eclipse or Visual Studio Code. In Eclipse you can open the project folder from "File > Open Project from Filesystem". The project requires _Java version 17_.
 >
@@ -222,13 +210,20 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 > Once each team member has the repository on their local computer, do the following:
 >
 > 1. _Each team member_ opens the cloned repository folder in Eclipse or in some other editor.
-> 2. _Each team member_ opens the cloned repository folder in Git Bash. Right-click the repository folder in the File Explorer and choose "Git Bash Here". See previous week's [Git instructions](/git) if you have trouble.
-> 3. _One of the team members_ locally edits the contents of the `README.md` file in the repository folder. Push changes to the remote GitHub repository using `git add`, `git commit` and `git push` commands.
+> 2. _Each team member_ opens the cloned repository folder in Git Bash. Right-click the repository folder in the File Explorer and choose "Git Bash Here".
+> 3. _One of the team members_ locally edits the contents of the `README.md` file in the repository folder. Push changes to the remote GitHub repository using `git add`, `git commit` and `git push` commands. See the [Git instructions](/git#starting-a-git-project) if you have trouble.
 > 4. _Each team member_ checks that the changes are visible in GitHub.
-> 5. Once changes have been pushed to GitHub, _each team member_ pulls the changes from GitHub using the `git pull` command.
+> 5. Once changes have been pushed to GitHub, _each team member_ pulls the changes from GitHub using the `git pull` command. If you see `CONFLICT` in the command output, see the [Git instructions](/git#merge-conflicts) to figure out how to solve conflicts.
 > 6. Once everybody sees the changes on their local `README.md` file, repeat the the steps from step 3. for each team member until everyone has pushed some changes to the GitHub repository.
+>
+> If you didn't manage to cause a [merge conflict](/git#merge-conflicts), let's cause one:
+>
+> 7. _One of the team members_ change a specific line in the `README.md` file and pushes the changes to GitHub.
+> 8. _Other team member_ changes _the same line_ in the `README.md` file and _creates a commit for the changes, but does push the changes to GitHub_. After creating the commit, the team member will pull changes from GitHub using the `git pull` command. Solve the merge conflict by following the [Git instructions](/git#merge-conflicts) and push the changes to GitHub.
+>
+> Repeat the steps 7 and 8 for each team member so that everyone can solve one merge conflict.
 
-### The README file
+## The README file
 
 The `README.md` file we worked with in the previous exercise has a special meaning in software development projects. When a software developer starts exploring a project, the first thing they should do is to look for the README file. This file should have all the relevant information about the project, for example:
 
