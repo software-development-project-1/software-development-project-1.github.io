@@ -198,8 +198,9 @@ For the _second user story_, the Developers came up with the following tasks:
 1. Add a /api/users/current REST API endpoint that returns the authenticated user's information
 2. Hide the "Add a reading recommendation" link in the reading recommendation list page if the user is not signed in
 3. Hide the "Add a category" link in the category list page if the user is not signed in
-4. Hide the "Edit" link in the reading recommendation list if the recommendation is not added by the signed in user
-5. Add a "Sign in" link to the navigation bar which is visible if user is not signed in
+4. Hide the "Edit" link in the reading recommendation list if the recommendation is not added by the user
+5. Hide the "Register" link in the navigation bar if the user is signed in
+6. Add a "Sign in" link to the navigation bar which is visible if the user is not signed in
 
 {: .important-title }
 
