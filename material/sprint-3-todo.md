@@ -184,9 +184,9 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username and password. After registering, the user should be able to sign in using the username and password provided during the registration.
 >
-> An anonymous user, that is an user who has not signed in, should be able to see the reading recommendation list. They shouldn not be able to add a reading recommendation or a category.
-
-> Signed in user should only be able to edit reading recommendations that they have added."
+> An anonymous user, that is an user who is not signed in, should be able to see the reading recommendation list and the category list. However, they should not be able to add a reading recommendation or a category.
+>
+> After signing in, the user should be able to add reading recommendations and categories. However, a user should only be able to edit reading recommendations that they have added."
 >
 > -- The Product Owner
 
