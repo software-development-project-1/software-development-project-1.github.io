@@ -10,37 +10,24 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">Cool Reads</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Recommendations</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">Categories</a>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Cool Reads</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Recommendations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">Categories</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
+  <body>
     <div class="container my-3">
       <h1>Reading recommendations</h1>
-      <form class="mb-3">
-        <label class="form-label">Filter by a category</label>
-        <select class="form-select">
-          <option value="-1">Any category</option>
-          <option value="1">Programming tutorials</option>
-          <option value="2">Video game news</option>
-          <option value="3">News articles on cats</option>
-        </select>
-      </form>
-      <form class="mb-3">
-        <label class="form-label">Filter by title or description</label>
-        <input type="text" class="form-control" />
-      </form>
       <table class="table">
         <thead>
           <tr>
@@ -48,6 +35,7 @@
             <th>Link</th>
             <th>Description</th>
             <th>Added on</th>
+            <th></th>
             <th></th>
           </tr>
         </thead>
@@ -63,6 +51,9 @@
             <td>18.09.2023</td>
             <td>
               <button class="btn btn-secondary">Edit</button>
+            </td>
+            <td>
+              <button class="btn btn-danger">Delete</button>
             </td>
           </tr>
         </tbody>

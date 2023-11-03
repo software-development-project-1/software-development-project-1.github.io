@@ -43,8 +43,8 @@ Each of the three Sprints is assessed based on the Sprint requirements. The team
 Each team member's personal assessment is based on the following aspects:
 
 - _Activity in team work_: Attendance and active presence during team meetings.
-- _Technical contributions_: amount of working code written.
-- _Project management and documentation contributions_.
+- _Technical contributions_: amount of working code written _or_ active participation in the writing process of the code (for example [pair-programming](https://en.wikipedia.org/wiki/Pair_programming)).
+- _Project management and documentation contributions_: Backlog management, efforts to improve the process (for example in Retrospectives), writing project related documentation.
 - _Exercise submissions_: at least 70% of the _first two week's exercises_ have to be completed before their deadlines to pass the course.
 
 The personal assessment is done based on the teacher's observations and peer reviews from the team members. Each team member can earn up to 10 points based on their personal efforts towards the project.

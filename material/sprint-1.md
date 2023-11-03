@@ -13,7 +13,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 {: .highlight }
 
-> Starting from this week, you will be working with your team. That means that, you will be working on the exercises together. You also need to work on the exercises outside the weekly sessions. If you don't know your team members, you can find their names on [Moodle]({{site.moodle_link}}).
+> Starting from this week, you will be working with your team. That means that, you will be working on the exercises together. You also need to work on the exercises outside the weekly sessions. If you don't know your team members, you can find their names on [Moodle]({{site.project_teams_moodle_link}}).
 
 ## Sprint assesment
 
@@ -259,7 +259,7 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > For now, it is enough that the reading recommendation has a title, for example "The 2020 Scrum Guide", a link, for example "https://scrumguides.org/scrum-guide.html" and a short description, for example "All you need to know about Scrum". Each of these should have field on the form and they should be displayed on the list.
 >
-> It would be convinient that the user could edit the added reading recommendation if, for example they made a typo in the title or the description. The reading recommendation list should have an "Edit" button next to each reading recommendation. When user clicks the button, it should take user to an edit form, where they can edit all the added information."
+> It would be convinient that the user could edit the added reading recommendation if, for example they made a typo in the title or the description. The reading recommendation list should have an "Edit" link next to each reading recommendation. The link should take the user to an edit form, where they can edit all the added information."
 >
 > -- The Product Owner
 

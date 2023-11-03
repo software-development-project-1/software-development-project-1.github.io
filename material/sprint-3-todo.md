@@ -186,13 +186,22 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > An anonymous user, that is an user who has not signed in, should be able to see the reading recommendation list. They shouldn not be able to add a reading recommendation or a category.
 
-> Signed in user should only be able to edit reading recommendations that they have added themselves. They should also be able to delete their own reading recommendations."
+> Signed in user should only be able to edit reading recommendations that they have added."
 >
 > -- The Product Owner
 
 1. As an anonymous user I want to register an account so that I can manage my personal reading recommendations
 2. As a signed in user I want to assosicate the added reading recommendation with my account so that I can manage my personal reading recommendations
-3. As a signed in user I want to delete my own reading recommendations so that I can get rid of useless reading recommendations
+
+For the _second user story_, the Developers came up with the following tasks:
+
+1. Add a /api/users/current REST API endpoint that returns the authenticated user's information
+2. Hide the "Add a reading recommendation" link in the reading recommendation list page if the user is not signed in
+3. Hide the "Add a category" link in the category list page if the user is not signed in
+4. Hide the "Edit" link in the reading recommendation list if the recommendation is not added by the signed in user
+5. Add a "Sign in" link to the navigation bar which is visible if user is not signed in
+
+{: .important-title }
 
 > Exercise 5
 >
@@ -202,13 +211,13 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > Exercise 6
 >
-> Come up with tasks for the first user story, "As an anonymous user I want to register an account so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 to get an idea what the implementation could look like.
+> Come up with tasks for the first user story, "As an anonymous user I want to register an account so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
 
 {: .important-title }
 
 > Exercise 7
 >
-> 1. Add these three user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
+> 1. Add these two user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
 > 2. Add the tasks to the "Sprint 3 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
 
 ## Testing
@@ -290,7 +299,7 @@ Now that we have extracted the logic into the `createMessage` method, we can use
 
 > A common architecture for a Java application is that controllers use services and services use repositories. This architecture is referred to as the [Three-tier architecture](https://www.ibm.com/topics/three-tier-architecture).
 
-These code snippets are from the [authentication-example](https://github.com/software-development-project-1/authentication-example) repository. We'll have a closer look at it soon.
+These code snippets are from the [authentication-example](https://github.com/software-development-project-1/authentication-example) project. We'll have a closer look at it soon.
 
 {: .important-title }
 
@@ -353,6 +362,53 @@ The configuration in the `src/test/resources/application.properties` file will b
 
 ## Testing service classes
 
+JUnit tests are implemented as test classes. Methods annotated with the `@Test` annotation are the _test methods_, which test a specific _test scenario_.
+
+Test methods usually share certain common setup code, which should be done before each test method. This setup can be put inside a method annotated with the `@BeforeEach` annotation. For example here's the `setUp` method for the authentication-example project's [MessageServiceTest](https://github.com/software-development-project-1/authentication-example/blob/main/src/test/java/fi/haagahelia/coolreads/service/MessageServiceTest.java) test class:
+
+```java
+@SpringBootTest
+class MessageServiceTest {
+    // ...
+
+    private UserDetails userDetails;
+
+    @BeforeEach
+    void setUp() throws Exception {
+        // Make sure that the database is empty before each test
+        messageRepository.deleteAll();
+        userRepository.deleteAll();
+
+        String passwordHash = passwordEncoder.encode("password123");
+        User user = new User("tester", passwordHash, "USER");
+        userRepository.save(user);
+
+        // Initialize an object for the authenticated user for each test
+        this.userDetails = new org.springframework.security.core.userdetails.User(user.getUsername(),
+            user.getPasswordHash(), AuthorityUtils.createAuthorityList(user.getRole()));
+    }
+
+    // The test methods go here...
+}
+```
+
+The tests should be _independent_ from each other, meaning that for example the order in which the tests are executed should not matter. To achieve the independence, each test needs to start with an _empty database_. This is achieved by deleting all entities in the `setUp` method before each test.
+
+The test methods test specific scenario. We come up with scenarios by analyzing the code (for example a certain method) that we are testing: how does the code behave based on different parameters or database state? For example if we call a method with certain parameters, we expect it to return a certain value. We need to cover all divergences in the code behavior with a test scenario.
+
+For example, if we consider the test scenarios for the `createMessage` method:
+
+1. If we call the `createMessage` method with an object containing the message content, we expect that a single `Message` entity is saved to database with that content
+2. If we call the `createMessage` method with an user object, we expect that a single `Message` entity is saved and it should associated with the given user object
+
+To structure these test cases as test methods, we can follow the popular [Arrange-Act-Assert](https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/) pattern:
+
+1. _Arrange_ inputs and targets. Arrange steps should set up the test case. Does the test require any objects or special settings? Does it need to prep a database? Does it need to log into a web app? Handle all of these operations at the start of the test
+2. _Act_ on the target behavior. Act steps should cover the main thing to be tested. This could be calling a function or method, calling a REST API, or interacting with a web page. Keep actions focused on the target behavior
+3. _Assert_ expected outcomes. Act steps should elicit some sort of response. Assert steps verify the goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails
+
+Here's how the second test scenario could be tested with a `createMessageSetsUserCorrectly` test method:
+
 ```java
 @SpringBootTest
 class MessageServiceTest {
@@ -383,7 +439,19 @@ class MessageServiceTest {
             user.getPasswordHash(), AuthorityUtils.createAuthorityList(user.getRole()));
     }
 
-    // The tests methods go here...
+    @Test
+    void createMessageSetsUserCorrectly() {
+        // Arrange
+        AddMessageDto message = new AddMessageDto("Hello world!");
+
+        // Act
+        messageService.createMessage(message, this.userDetails);
+
+        // Assert
+        List<Message> messages = messageRepository.findAll();
+        assertEquals(1, messages.size());
+        assertEquals("tester", messages.get(0).getUser().getUsername());
+    }
 }
 ```
 
@@ -391,16 +459,17 @@ class MessageServiceTest {
 
 > Exercise 9
 >
-> Add a `ReadingRecommendationServiceTest` test class and implement the following test methods for the `createRecommendation` method:
+> Create a new package `fi.haagahelia.coolreads.service` for the project's service class tests. You can do this in Eclipse by right-clicking the `src/test/java` folder and choosing New > Package. Implement a `ReadingRecommendationServiceTest` test class within the package with the following test methods for the `createRecommendation` method:
 >
 > ```java
 > @SpringBootTest
 > class ReadingRecommendationServiceTest {
->   @Autowired
->   private ReadingRecommendationService recommendationService;
+>   // ...
 >
->   @Autowired
->   private ReadingRecommendationRepository recommendationRepository;
+>   @BeforeEach
+>   void setUp() throws Exception {
+>       // Delete all reading recommendations and categories
+>   }
 >
 >   @Test
 >   void createRecommendationSetsAttributesCorrectly() {
@@ -431,9 +500,13 @@ class MessageServiceTest {
 > }
 > ```
 >
-> Replace the arrange, act and assert comments with the actual test implementation.
+> Replace the arrange, act and assert comments with the actual test implementation. You can run the tests for the project either in Eclipse or by running the command `./mvnw test` in Git Bash.
 
 ## Test coverage
+
+We have analyzed the code that we are testing and we are quite sure that our test scenarios cover everything. The good news is, that we don't need to trust only on our gut. There are so called _test coverage_ tools that analyze which lines of code our test scenarios cover and which they don't.
+
+[JaCoCo](https://www.eclemma.org/jacoco/) is one of the most widely used code coverage tools for Java. Let's add the jacoco-maven-plugin to the `<plugins>` list in the `pom.xml` file:
 
 ```xml
 <plugin>
@@ -456,11 +529,29 @@ class MessageServiceTest {
 </plugin>
 ```
 
+If we run the `./mvnw test` command in Git Bash, we run our tests and JaCoCo will generate a code coverage report. Once the command has finished successfully, the code coverage report can be found as an `index.html` file in the `target/site/jacoco`. Open the `index.html` file in a web browser.
+
+For the authentication-example project, the report looks like this:
+
+![JaCoCo](/assets/jacoco-overall.png)
+
+The "Cov" column determines the _percentage of lines covered by the tests_.
+
+If we click a package name, we see the classes in the package. By clicking a class name, we see the methods of the class. By clicking a method we see the methods implementation as code. For example the `createMessage` method looks the following:
+
+![JaCoCo](/assets/jacoco-class.png)
+
+Green highlight indicates that the line _is fully covered_. Yellow highlight indicates that the line is _partially covered_. For example a certain condition of an `if` statement is not covered by a test. Red highlight indicates that line is _not covered_.
+
+{: .note }
+
+> When we change the code (in the tests or in the application), we need to re-run `./mvnw test` to generate the coverage report for the latest tests.
+
 {: .important-title }
 
 > Exercise 10
 >
-> Jacoco
+> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the `createRecommendation` method we implemented previously. Are all the lines of the method covered? If not, implement a test to cover the lines.
 
 ## Authentication
 
@@ -478,7 +569,9 @@ class MessageServiceTest {
 >
 > The implementation should look roughly something like this:
 >
-> ![](/assets/sprint-2-user-story-2.png)
+> ![](/assets/sprint-3-user-story-1.png)
+>
+> The "Register" link in the navigation bar should take the user to the register page.
 
 {: .important-title }
 
@@ -486,34 +579,86 @@ class MessageServiceTest {
 >
 > Implement the tasks of the second user story, "As a signed in user I want to assosicate the added reading recommendation with my account so that I can manage my personal reading recommendations".
 >
-> Make sure that the buttons for adding a reading recommendation or category is not visible if the user is not signed in. Also, the "Edit" button should only be visible in the reading recommendation list if the user has added the reading recommendation.
+> Put the business logic of "creating a reading recommendation for an user" into the `createReadingRecommendation` method implemented in exercise 8. These changes will probably break the tests implemented in exercise 9. Fix the existing tests, but you don't have to implement any new tests.
+>
+> Make sure that the links for adding a reading recommendation and category is not visible if the user is not signed in. Also, the "Edit" link should only be visible in the reading recommendation list if the user has added the reading recommendation.
 >
 > Tips for implementing the tasks:
 >
-> - See how `Message` entity is associated with the `User` entity in the authentication-example project.
+> - See how the `Message` entity is associated with the `User` entity in the [MessageService](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/service/MessageService.java) class in the authentication-example project
+> - See how the `/api/users/current` REST API endpoint is implemented in the [UserRestController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/UserRestController.java) class in the authentication-example project
 > - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
-> - Take a look at the [messagelist](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/resources/templates/messagelist.html) Thymeleaf template file of the authentication-example project
+> - See how the "Add a message" button is hidden if the user is not signed in in the [messagelist](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/resources/templates/messagelist.html) Thymeleaf template in the authentication-example project. Use the same logic for the "Add a category" link
+> - You can sign out by opening <http://localhost:8080/logout> in a browser. You can also add a "Sign out" link to the navigation bar like in the [layout](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/resources/templates/layout.html) Thymeleaf template in the authentication-example project
+> - Once you have implemented the `/api/users/current` REST API endpoint, you can use the `fetch` function in the frontend to fetch the authenticated user and use that information to determine whether to hide the "Edit" link:
+>
+>   ```js
+>   // ...
+>   const [currentUser, setCurrentUser] = useState();
+>
+>   useEffect(() => {
+>     fetch("/api/users/current")
+>       .then((response) => {
+>         if (!response.ok) {
+>           // Backend response was not successful (HTTP status code is not in the range 200-299)
+>           throw new Error("User is not authenticated");
+>         }
+>
+>         return response.json();
+>       })
+>       .then((user) => {
+>         setCurrentUser(user);
+>       });
+>   }, []);
+>   ```
+>
+>   When we render the "Edit" link we can use the following logic to hide it:
+>
+>   ```jsx
+>   <td>
+>     {currentUser &&
+>     recommendation.user &&
+>     currentUser.id === recomendation.user.id ? (
+>       <a
+>         class="btn btn-secondary"
+>         href={`/recommendations/${recommendation.id}/edit`}
+>       >
+>         Edit
+>       </a>
+>     ) : null}
+>   </td>
+>   ```
+>
+>   The `condition ? if true : if false` operator is called the [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator).
 
 {: .important-title }
 
 > Exercise 14
->
-> Implement the tasks of the third user story, "As a signed in user I want to delete my own reading recommendations so that I can get rid of useless reading recommendations".
-
-{: .important-title }
-
-> Exercise 15
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 > [Generate a JAR file](/sprint-2#jar) for the application like we did in the previous Sprint and add the JAR file to the release.
 
 ## Peer review
 
+{: .highlight }
+
+> Writing a peer review for each team member and receiving a passing grade from the peer reviews is required to pass the course.
+
+The peer review is used to assess each team member. The 10 personal points are based on the peer reviews and the teacher's observations. _Every team member must write a peer review_.
+
+The peer review is conducted with a form. You can find the link for your team's peer review form in [Moodle]({{site.peer_review_moodle_link}}). In the form you will need to assess every team member's (including yourself) efforts in the team work in the following aspects:
+
+- _Activity in team work_: Attendance and active presence during team meetings
+- _Technical contributions_: amount of working code written _or_ active participation in the writing process of the code (for example [pair-programming](https://en.wikipedia.org/wiki/Pair_programming))
+- _Project management and documentation contributions_: Backlog management, efforts to improve the process (for example in Retrospectives), writing project related documentation
+
+You will need to grade each these aspects in scale of 0-5 and provide a short reasoning for the grade. The peer reviews are _anonymous_, the team members won't see each other's peer reviews.
+
 {: .important-title }
 
-> Exercise 16
+> Exercise 15
 >
-> Peer review
+> Write the peer review for your team members. You can find the link to the peer review form in [Moodle]({{site.peer_review_moodle_link}}).
 
 ## Final report
 
@@ -531,6 +676,57 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 16
 >
 > Write the final report for the course as instructed above.
+
+{: .warning }
+
+> Make sure that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint 3 deadline on {{site.sprint_3_deadline}}.
+
+## ⭐ Bonus user story
+
+{: .note }
+
+> This user story is optional. If you have implemented all other user stories, feel free to implement this one.
+
+The Product Owner came up with a feature for the application if we run out of work during the Sprint:
+
+> "The user should be able to get rid of reading recommendations they have added. The reading recommendation list should have a "Delete" button for each reading recommendation that is added by the user. Clicking the button should delete the reading recommendation. User should only be able to delete reading recommendations which they have added."
+>
+> -- The Product Owner
+
+{: .important-title }
+
+> Bonus exercise
+>
+> Come up with an user story based on the Product Owner's description and add it to the "Product Backlog" board in Trello. Then, split the user story into tasks and add those to the "Sprint 3 Backlog" board in Trello. Finally, implement the tasks.
+>
+> The implementation should look roughly something like this:
+>
+> ![](/assets/sprint-3-user-story-bonus.png)
+>
+> You can implement the "Delete" button submission with either a form:
+>
+> ```jsx
+> <form method="POST" action={`/recommendations/${recommendation.id}/delete`}>
+>   <button className="btn btn-danger">Delete</button>
+> </form>
+> ```
+>
+> Or using the `fetch` function:
+>
+> ```jsx
+> function handeDelete(recommendation) {
+>   fetch(`/recommendations/${recommendation.id}/delete`, {
+>     method: "POST",
+>   }).then(() => {
+>     // Remove the deleted recommendation from the list
+>     setRecommendations(
+>       recommendations.filter((r = r.id !== recommendation.id))
+>     );
+>   });
+> }
+> ```
+>
+> Using the `fetch` function provies a slightly better userexperience, because it doesn't reload the page.
