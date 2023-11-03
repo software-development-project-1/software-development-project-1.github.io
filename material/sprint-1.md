@@ -280,6 +280,7 @@ For the _second user story_, the Developers came up with the following tasks:
 
 1. Add Thymeleaf template for listing the added reading recommendations with title, link and description
 2. Add a method for rendering the reading recommendation list for the ReadingRecommendationController class
+3. Add a link to the reading recommendation list page to the navigation bar
 
 These are the user stories, that you will be working on as a team during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
 
