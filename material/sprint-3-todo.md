@@ -191,16 +191,23 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 > -- The Product Owner
 
 1. As an anonymous user I want to register an account so that I can manage my personal reading recommendations
-2. As a signed in user I want to assosicate the added reading recommendation with my account so that I can manage my personal reading recommendations
+2. As an anonymous user I want to sign in so that I can manage my personal reading recommendations
+3. As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations
 
 For the _second user story_, the Developers came up with the following tasks:
 
-1. Add a /api/users/current REST API endpoint that returns the authenticated user's information
-2. Hide the "Add a reading recommendation" link in the reading recommendation list page if the user is not signed in
-3. Hide the "Add a category" link in the category list page if the user is not signed in
+1. Add the form login configuration to the Spring Security configuration
+2. Hide the "Add a reading recommendation" link in the reading recommendation list page if the user is not authenticated
+3. Hide the "Add a category" link in the category list page if the user is not authenticated
+4. Hide the "Register" link in the navigation bar if the user is authenticated
+5. Add a "Sign in" link to the navigation bar which is visible if the user is not authenticated
+
+For the _third user story_, the Developers came up with the following tasks:
+
+1. Add the relationship attributes for User and ReadingRecommendation JPA entity classes
+2. Associate the authenticated user with the added reading recommendation 
+3. Add a /api/users/current REST API endpoint that returns the authenticated user's information
 4. Hide the "Edit" link in the reading recommendation list if the recommendation is not added by the user
-5. Hide the "Register" link in the navigation bar if the user is signed in
-6. Add a "Sign in" link to the navigation bar which is visible if the user is not signed in
 
 {: .important-title }
 
@@ -218,7 +225,7 @@ For the _second user story_, the Developers came up with the following tasks:
 
 > Exercise 7
 >
-> 1. Add these two user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
+> 1. Add these three user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
 > 2. Add the tasks to the "Sprint 3 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
 
 ## Testing
