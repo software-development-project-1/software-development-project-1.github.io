@@ -484,7 +484,7 @@ class MessageServiceTest {
 >   void createRecommendationSetsAttributesCorrectly() {
 >       // Arrange: initialize a AddReadingRecommendationDto object with other attributes, except the category (the recommendation is uncategorized)
 >
->       // Act: call the recommendationRepository.createRecommendation method with the initialized object
+>       // Act: call the createRecommendation method with the initialized object
 >
 >      // Assert: retrieve all the recommendations from the database using the recommendationRepository.findAll() method. Then, the attributes of the first (and the only) object on the list should match the attributes of the AddReadingRecommendationDto object
 >   }
@@ -493,7 +493,7 @@ class MessageServiceTest {
 >   void createRecommendationSetsCategoryAsNullWhenCategoryIsNotProvided() {
 >       // Arrange: initialize a AddReadingRecommendationDto object with other attributes, except the category (the recommendation is uncategorized)
 >
->       // Act: call the recommendationRepository.createRecommendation method with the initialized object
+>       // Act: call the createRecommendation method with the initialized object
 >
 >       // Assert: retrieve all the recommendations from the database using the recommendationRepository.findAll() method. Then, the category attribute of the first (and the only) object on the list should be null
 >   }
@@ -502,7 +502,7 @@ class MessageServiceTest {
 >   void createRecommendationSetsCategoryCorrectlyWhenCategoryIsProvided() {
 >       // Arrange: initialize a Category object and save it to the database by calling the category.save() method. Then, initialize a AddReadingRecommendationDto object with with a category matching the initialized Category object and the other attributes
 >
->       // Act: call the recommendationRepository.createRecommendation method with the initialized object
+>       // Act: call the createRecommendation method with the initialized object
 >
 >       // Assert: retrieve all the recommendations from the database using the recommendationRepository.findAll() method. Then, the category attribute of the first (and the only) object on the list should match the initialized Category object (you can for example check that the name attribute of the objects is the same)
 >   }
@@ -538,15 +538,15 @@ We have analyzed the code that we are testing and we are quite sure that our tes
 </plugin>
 ```
 
-If we run the `./mvnw test` command in Git Bash, we run our tests and JaCoCo will generate a code coverage report. Once the command has finished successfully, the code coverage report can be found as an `index.html` file in the `target/site/jacoco`. Open the `index.html` file in a web browser.
+If we run the `./mvnw test` command in Git Bash, our tests are executed and JaCoCo will generate a _code coverage report_. Once the command has finished successfully, the code coverage report can be found as an `index.html` file in the `target/site/jacoco` folder. Open the `index.html` file in a web browser.
 
 For the authentication-example project, the report looks like this:
 
 ![JaCoCo](/assets/jacoco-overall.png)
 
-The "Cov" column determines the _percentage of lines covered by the tests_.
+The "Cov" column determines the _percentage of lines covered by the tests_. Bigger the number, better the coverage.
 
-If we click a package name, we see the classes in the package. By clicking a class name, we see the methods of the class. By clicking a method we see the methods implementation as code. For example the `createMessage` method looks the following:
+If we click a package name, we see the classes in the package. By clicking a class name, we see the methods of the class. By clicking a method we see the method's implementation as code. For example the `createMessage` method looks the following:
 
 ![JaCoCo](/assets/jacoco-class.png)
 
@@ -560,7 +560,7 @@ Green highlight indicates that the line _is fully covered_. Yellow highlight ind
 
 > Exercise 10
 >
-> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the `createRecommendation` method we implemented previously. Are all the lines of the method covered? If not, implement a test to cover the lines.
+> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the `createRecommendation` method we implemented and tested previously. Are all the lines of the method covered? If not, implement a test to cover the lines.
 
 ## Authentication
 
