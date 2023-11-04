@@ -509,7 +509,7 @@ class MessageServiceTest {
 > }
 > ```
 >
-> Replace the arrange, act and assert comments with the actual test implementation. You can run the tests for the project either in Eclipse or by running the command `./mvnw test` in Git Bash.
+> Replace the arrange, act and assert comments with the actual test implementation. The implementation doesn't have to precisely match the comment descriptions. Make alterations based on your implementation of the `createRecommendation` method. You can run the tests for the project either in Eclipse or by running the command `./mvnw test` in Git Bash.
 
 ## Test coverage
 
