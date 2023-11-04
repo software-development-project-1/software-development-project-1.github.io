@@ -408,7 +408,7 @@ The test methods test specific scenario. We come up with scenarios by analyzing 
 For example, if we consider the test scenarios for the `createMessage` method:
 
 1. If we call the `createMessage` method with an object containing the message content, we expect that a single `Message` entity is saved to database with that content
-2. If we call the `createMessage` method with an user object, we expect that a single `Message` entity is saved and it should associated with the given user object
+2. If we call the `createMessage` method with an user object, we expect that a single `Message` entity is saved to database and it should be associated with that user object
 
 To structure these test cases as test methods, we can follow the popular [Arrange-Act-Assert](https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/) pattern:
 
