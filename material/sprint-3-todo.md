@@ -486,7 +486,7 @@ class MessageServiceTest {
 >
 >       // Act: call the createRecommendation method with the initialized object
 >
->      // Assert: retrieve all the recommendations from the database using the recommendationRepository.findAll() method. Then, the attributes of the first (and the only) object on the list should match the attributes of the AddReadingRecommendationDto object
+>       // Assert: retrieve all the recommendations from the database using the recommendationRepository.findAll() method. Then, the attributes of the first (and the only) object on the list should match the attributes of the AddReadingRecommendationDto object
 >   }
 >
 >   @Test
