@@ -65,10 +65,10 @@ Next, create a Markdown file to the `documentation` folder which is named after 
 Let's switch back to our branch with the `git checkout` command. Change the contents of your file in the `documentation` folder and create one more commit. Then, push the changes to GitHub with the `git push` command. We get the following error message:
 
 ```bash
-fatal: The current branch kalle has no upstream branch.
+fatal: The current branch kaltsoon has no upstream branch.
 To push the current branch and set the remote as upstream, use
 
-    git push --set-upstream origin kalle
+    git push --set-upstream origin kaltsoon
 
 To have this happen automatically for branches without a tracking
 upstream, see 'push.autoSetupRemote' in 'git help config'.
@@ -77,7 +77,7 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.
 The error means that the current branch is not in GitHub yet, just on our local computer. Let's run the command that Git suggests:
 
 ```bash
-git push --set-upstream origin kalle
+git push --set-upstream origin kaltsoon
 ```
 
 Now, let's check that our branch is pushed to GitHub. Open the repository in GitHub and click the branch selector which says "main" below the repository name. We should see our branch there. Click the branch and check that the file exists in the `documentation` folder.
@@ -197,17 +197,18 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 For the _second user story_, the Developers came up with the following tasks:
 
 1. Add the form login configuration to the Spring Security configuration
-2. Hide the "Add a reading recommendation" link in the reading recommendation list page if the user is not authenticated
-3. Hide the "Add a category" link in the category list page if the user is not authenticated
-4. Hide the "Register" link in the navigation bar if the user is authenticated
-5. Add a "Sign in" link to the navigation bar which is visible if the user is not authenticated
+2. Add a /api/users/current REST API endpoint that returns the authenticated user's information
+3. Hide the "Add a reading recommendation" link in the reading recommendation list page if the user is not authenticated
+4. Hide the "Add a category" link in the category list page if the user is not authenticated
+5. Hide the "Register" link in the navigation bar if the user is authenticated
+6. Add a "Sign in" link to the navigation bar which is visible if the user is not authenticated
 
 For the _third user story_, the Developers came up with the following tasks:
 
 1. Add the relationship attributes for User and ReadingRecommendation JPA entity classes
-2. Associate the authenticated user with the added reading recommendation 
-3. Add a /api/users/current REST API endpoint that returns the authenticated user's information
-4. Hide the "Edit" link in the reading recommendation list if the recommendation is not added by the user
+2. Associate the authenticated user with the reading recommendation in the controller method handling the add form submission
+3. Hide the "Edit" link in the reading recommendation list if the recommendation is not added by the user
+4. Check that the reading recommendation's user matches the authenticated user in the controller method handling the edit form submission
 
 {: .important-title }
 
