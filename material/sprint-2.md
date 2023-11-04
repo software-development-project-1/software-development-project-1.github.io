@@ -182,7 +182,7 @@ At this point it might sense to distribute the workload a bit instead of working
 >
 > ![](/assets/sprint-2-user-story-4.png)
 >
-> The select menu should list the added categories. Addition to the added categories, the user should be able to select the "Uncategorized" option, which means that the recommendations doesn't have a category.
+> The select menu should list the added categories. Addition to the added categories, the user should be able to select the "Uncategorized" option, which means that the recommendation doesn't have a category.
 >
 > Tips for implementing the tasks:
 >
