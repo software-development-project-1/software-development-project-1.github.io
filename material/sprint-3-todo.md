@@ -16,13 +16,13 @@ For the final Sprint of the course, the Sprint 3, we have a new set of requireme
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
 
-The Sprint assesment is done based on the exercises 1-13. The group can earn up to 10 points from this Sprint. This is the final Sprint of the course and the group's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
+The Sprint assesment is done based on the exercises 1-13. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
 
-During this Sprint, each group member will do a [peer review](#peer-review) in which they asses themselves and other group members. The results of the peer review will heavily impact the personal points of a group member. Each group member can earn up to 10 personal points.
+During this Sprint, each team member will do a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 10 personal points.
 
 {: .highlight }
 
-> At the end of this Sprint, the group has to write the [final report](#the-final-report) together and each group member needs to do the [peer review](#peer-review). Missing final report will decrease the project points by 5 points and the peer review is required for a passing grade. If the peer review is done after the Sprint deadline, the personal points will decrease by 5 points.
+> At the end of this Sprint, the team has to write the [final report](#the-final-report) together and each team member needs to do the [peer review](#peer-review). Missing final report will decrease the project points by 5 points and the peer review is required for a passing grade. If the peer review is done after the Sprint deadline, the personal points will decrease by 5 points.
 
 ## Retrospective
 
@@ -32,7 +32,7 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 
 > Exercise 1
 >
-> _One of the group members_ should create a new session in Flinga as instructed above. Name the session "Retrospective 2". Once the session is created, other group members should join the session with the "Join link". Setup the session board and organize the Retrospective event.
+> _One of the team members_ should create a new session in Flinga as instructed above. Name the session "Retrospective 2". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event.
 >
 > Did similar issues arise as in Sprint 1 retrospective? If so, try to come up with different actions as before or ask the teacher for tips on how to solve these issues.
 >
@@ -54,7 +54,9 @@ git branch kaltsoon
 
 > Typically, the branch name describes the feature develop in the branch or some other purpose of the branch, for example `filter-recommendations-by-category`.
 
-Now, let's check the repository's branches with the `git branch` command. We should see that our branch is added to the list. We can also see that there's an astrisk symbol (\*) before the main branch. This means that we are currently on the main branch. We can switch branches using the `git checkout <name-of-the-branch>` command. Switch to the branch you just created:
+Now, let's check the repository's branches with the `git branch` command. We should see that our branch is added to the list. We can also see that there's an astrisk symbol (\*) before the main branch. This means that we are currently on the main branch. The current branch is also displayed in brackets in the Git Bash after the path to the current folder.
+
+We can switch branches using the `git checkout <name-of-the-branch>` command. Switch to the branch you just created:
 
 ```bash
 git checkout <name-of-my-branch>
@@ -86,9 +88,9 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 
 > Exercise 2
 >
-> _Each group member_ should do the steps mentioned above to create their own branch named by their GitHub username and push it to GitHub.
+> _Each team member_ should do the steps mentioned above to create their own branch named by their GitHub username and push it to GitHub.
 
-We can also pull remote (in GitHub) branches for our local computer and make changes to them. Check the list of branches on GitHub and pick _some other group member's branch_. Once you have picked a branch, switch to main branch first:
+We can also pull remote (in GitHub) branches for our local computer and make changes to them. Check the list of branches on GitHub and pick _some other team member's branch_. Once you have picked a branch, switch to main branch first:
 
 ```bash
 git checkout main
@@ -114,13 +116,13 @@ git pull
 
 <!-- TODO: tuleeko virhe? -->
 
-Once we have pulled the changes from GitHub, let's change the contents of the group member's file in the `documentation` folder and push these changes to GitHub similarly as we did before. Once you have pushed the changes, check that changes are visible in GitHub like you did with your own branch.
+Once we have pulled the changes from GitHub, let's change the contents of the team member's file in the `documentation` folder and push these changes to GitHub similarly as we did before. Once you have pushed the changes, check that changes are visible in GitHub like you did with your own branch.
 
 {: .important-title }
 
 > Exercise 3
 >
-> Pull _some other group member's_ branch from GitHub and make some changes for _their file_ in `documentation` folder. Push these changes to GitHub.
+> Pull _some other team member's_ branch from GitHub and make some changes for _their file_ in `documentation` folder. Push these changes to GitHub.
 
 Once we have happy with the changes we have made in the branch, we should _merge_ it with the main branch. This basically means applying all the commits we have made for the branch to the main branch. For this we can use the `git merge` command.
 
@@ -168,7 +170,7 @@ Now if we open the repository in GitHub, we should see that the main branch has 
 
 {: .highlight }
 
-> Once everyone is done with these exercises, remove each group member's file from the `documentation` folder in the main branch and push the changes to GitHub.
+> Once everyone is done with these exercises, remove each team member's file from the `documentation` folder in the main branch and push the changes to GitHub.
 
 If you want to learn more about branches and how they are used in the software development workflow, read the [Git feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) tutorial by Atlassian.
 
@@ -184,9 +186,9 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username and password. After registering, the user should be able to sign in using the username and password provided during the registration.
 >
-> An anonymous user, that is an user who is not signed in, should be able to see the reading recommendation list and the category list. However, they should not be able to add a reading recommendation or a category.
+> An anonymous user, that is an user who is not signed in, should be able to see the reading recommendation list and the category list. However, they should not be able to add a reading recommendation or a category. That is, the links for adding a reading recommendation and adding a category should not be visible if the user is not signed in.
 >
-> After signing in, the user should be able to add reading recommendations and categories. However, a user should only be able to edit reading recommendations that they have added."
+> After signing in, the user should be able to add reading recommendations and categories. However, a user should only be able to edit reading recommendations that they have added. That is, the "Edit" link in the reading recommendation list should only be visible if the user has added the reading recommendation."
 >
 > -- The Product Owner
 
@@ -194,21 +196,27 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 2. As an anonymous user I want to sign in so that I can manage my personal reading recommendations
 3. As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations
 
+For the _first user story_, the Developers came up with the following tasks:
+
+1. Add the spring-boot-starter-security and thymeleaf-extras-springsecurity6 dependencies for the project
+2. Add a Spring Security configuration class
+3. Add a User JPA entity class with id, username, role and passwordHash attributes, and a UserRepository JPA repository class
+4. Add a Thymeleaf template for the user registration form
+5. Add a UserController controller class and a method for rendering the user registration form
+6. Add a method for the UserController class that saves the user to the database
+7. Add a "Register" link to the navigation bar
+
 For the _second user story_, the Developers came up with the following tasks:
 
 1. Add the form login configuration to the Spring Security configuration
-2. Add a /api/users/current REST API endpoint that returns the authenticated user's information
+2. Add a UserRestController controller class and a method for the /api/users/current REST API endpoint that returns the authenticated user's information
 3. Hide the "Add a reading recommendation" link in the reading recommendation list page if the user is not authenticated
 4. Hide the "Add a category" link in the category list page if the user is not authenticated
 5. Hide the "Register" link in the navigation bar if the user is authenticated
 6. Add a "Sign in" link to the navigation bar which is visible if the user is not authenticated
 
-For the _third user story_, the Developers came up with the following tasks:
-
-1. Add the relationship attributes for User and ReadingRecommendation JPA entity classes
-2. Associate the authenticated user with the reading recommendation in the controller method handling the add form submission
-3. Hide the "Edit" link in the reading recommendation list if the recommendation is not added by the user
-4. Check that the reading recommendation's user matches the authenticated user in the controller method handling the edit form submission
+{: .note }
+The tasks described above are suggestions, feel free to alter them or add new tasks.
 
 {: .important-title }
 
@@ -220,7 +228,7 @@ For the _third user story_, the Developers came up with the following tasks:
 
 > Exercise 6
 >
-> Come up with tasks for the first user story, "As an anonymous user I want to register an account so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
+> Come up with tasks for the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
 
 {: .important-title }
 
@@ -560,19 +568,81 @@ Green highlight indicates that the line _is fully covered_. Yellow highlight ind
 
 > Exercise 10
 >
-> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the `createRecommendation` method we implemented and tested previously. Are all the lines of the method covered? If not, implement a test to cover the lines.
+> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the `createRecommendation` method we implemented and tested previously. Are all the lines of the method covered? If not, implement tests for the uncovered lines.
 
 ## Authentication
+
+Most of the application have features that need to verify the user's identity before they are allowed to perform certain actions. This process is referred to as _authentication_. User's identity can be verified in different ways, but a quite common process is to associate a password with a certain username or some other unique identifier such as email. The user who knows the password of a username will be identified as that user.
+
+The user's password is not stored to the database as a plain text, instead a [hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) presentation of the password is stored. Hash is like a secret we put behind a door, lock it with a key and throw the key away. There's no way of getting the original text from a hash. But we can _comprare_ two hashes and see if their value is the same. If the data in the database gets into wrong hands, the password hashes can't be used to authenticate.
+
+In web applications the common authentication flow goes like this:
+
+1. The user sends a request with a username and password to the server
+2. The server fetches the password hash with the given username from the database, hashes the provided password and compares it with the password hash in the database
+3. If the hashes match, the server provides the user with a _token_ that they can use to authenticate the future requests. The server commonly puts the token to a [cookie](https://en.wikipedia.org/wiki/HTTP_cookie) and it is sent to server in each request by the web browser
+
+[Spring Security](https://spring.io/projects/spring-security) is a popular authentication and access-control framework for Spring applications. Let's start using Spring Security in our application by adding the dependency to the `<dependencies>` list in the `pom.xml` file:
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+```
+
+To use authentication related information in Thymeleaf templates, we can use the [Thymeleaf Spring Security dialect](https://github.com/thymeleaf/thymeleaf-extras-springsecurity). Let's also add that dependency to the `<dependencies>` list in the `pom.xml` file:
+
+```xml
+<dependency>
+    <groupId>org.thymeleaf.extras</groupId>
+    <artifactId>thymeleaf-extras-springsecurity6</artifactId>
+</dependency>
+```
+
+Next, we need to configure the Spring Security a bit. Let's add the following `SecurityConfig` configuration class for our project:
+
+```java
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+    return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.authorizeHttpRequests((requests) -> requests.requestMatchers(antMatcher("/"), antMatcher("/register"),
+                                antMatcher("/categories"), antMatcher("/frontend/**"), antMatcher("/api/**")).permitAll().anyRequest().authenticated());
+
+        http.formLogin((form) -> form.permitAll());
+        http.logout((logout) -> logout.permitAll());
+        http.csrf(csrf -> csrf.disable());
+
+        return http.build();
+    }
+}
+```
+
+The `passwordEncoder` method returns the password encoder object used to hash passwords. We'll use [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) which is the de facto hash algorithm for passwords.
+
+The `securityFilterChain` returns the configuration object for Spring Security. The first piece of configuration determines the access-control for our application. We will allow anyone (authenticated or not) access the following paths:
+
+- `/`, the reading recommendation list page, 
+- `/register`, the registration form and registration form submission
+- `/categories`, the category list page
+- `/frontend/**`, the JavaScript assets required by the frontend application. The `**` part of the path means any path
+- `/api/**`, the REST API endpoints
+
+{: .note }
+> Change this configuration if your application's paths don't match the ones above.
+
+The `permitAll()` method call _will permit anyone to access the these paths_. This is follow by `anyRequest().authenticated()` method call, which means that _request to any other path will require authentication_.
 
 {: .important-title }
 
 > Exercise 11
->
-> Spring Security
-
-{: .important-title }
-
-> Exercise 12
 >
 > Implement the tasks of the first user story, "As an anonymous user I want to register an account so that I can manage my personal reading recommendations".
 >
@@ -580,26 +650,21 @@ Green highlight indicates that the line _is fully covered_. Yellow highlight ind
 >
 > ![](/assets/sprint-3-user-story-1.png)
 >
-> The "Register" link in the navigation bar should take the user to the register page.
+> Start the implementation by adding the spring-boot-starter-security and thymeleaf-extras-springsecurity6 dependencies for the project. Add similar Spring Security configuration class as instructed above.
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 12
 >
-> Implement the tasks of the second user story, "As a signed in user I want to assosicate the added reading recommendation with my account so that I can manage my personal reading recommendations".
->
-> Put the business logic of "creating a reading recommendation for an user" into the `createReadingRecommendation` method implemented in exercise 8. These changes will probably break the tests implemented in exercise 9. Fix the existing tests, but you don't have to implement any new tests.
->
-> Make sure that the links for adding a reading recommendation and category is not visible if the user is not signed in. Also, the "Edit" link should only be visible in the reading recommendation list if the user has added the reading recommendation.
+> Implement the tasks of the second user story, "As an anonymous user I want to sign in so that I can manage my personal reading recommendations".
 >
 > Tips for implementing the tasks:
 >
-> - See how the `Message` entity is associated with the `User` entity in the [MessageService](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/service/MessageService.java) class in the authentication-example project
 > - See how the `/api/users/current` REST API endpoint is implemented in the [UserRestController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/UserRestController.java) class in the authentication-example project
 > - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
 > - See how the "Add a message" button is hidden if the user is not signed in in the [messagelist](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/resources/templates/messagelist.html) Thymeleaf template in the authentication-example project. Use the same logic for the "Add a category" link
-> - You can sign out by opening <http://localhost:8080/logout> in a browser. You can also add a "Sign out" link to the navigation bar like in the [layout](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/resources/templates/layout.html) Thymeleaf template in the authentication-example project
-> - Once you have implemented the `/api/users/current` REST API endpoint, you can use the `fetch` function in the frontend to fetch the authenticated user and use that information to determine whether to hide the "Edit" link:
+> - You can sign out by visiting <http://localhost:8080/logout> in a web browser. You can also add a "Sign out" link to the navigation bar like in the [layout](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/resources/templates/layout.html) Thymeleaf template in the authentication-example project
+> - Once you have implemented the `/api/users/current` REST API endpoint, you can use the `fetch` function in the frontend to fetch the authenticated user and use that information to determine whether to hide the "Add a reading recommendation" link:
 >
 >   ```js
 >   // ...
@@ -621,24 +686,47 @@ Green highlight indicates that the line _is fully covered_. Yellow highlight ind
 >   }, []);
 >   ```
 >
->   When we render the "Edit" link we can use the following logic to hide it:
+>   When we render the "Add a reading recommendation" link we can use the following logic to hide it:
+>
+>   ```jsx
+>   {
+>     currentUser && (
+>       <a class="btn btn-primary" href={`/recommendations/add`}>
+>         Add a reading recommendation
+>       </a>
+>     );
+>   }
+>   ```
+
+{: .important-title }
+
+> Exercise 13
+>
+> Implement the tasks of the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations".
+>
+> Put the business logic of "creating a reading recommendation for a user" into the `createReadingRecommendation` method implemented in exercise 8. These changes will probably break the tests implemented in exercise 9. Fix the existing tests, but you don't have to implement any new tests.
+>
+> The "Edit" link should only be visible in the reading recommendation list if the user has added the reading recommendation.
+>
+> Tips for implementing the tasks:
+>
+> - See how the `Message` entity is associated with the `User` entity in the [MessageService](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/service/MessageService.java) class in the authentication-example project
+> - You can use the following logic to hide the "Edit" link in the frontend application:
 >
 >   ```jsx
 >   <td>
 >     {currentUser &&
->     recommendation.user &&
->     currentUser.id === recomendation.user.id ? (
->       <a
->         class="btn btn-secondary"
->         href={`/recommendations/${recommendation.id}/edit`}
->       >
->         Edit
->       </a>
->     ) : null}
+>       recommendation.user &&
+>       currentUser.id === recomendation.user.id && (
+>         <a
+>           class="btn btn-secondary"
+>           href={`/recommendations/${recommendation.id}/edit`}
+>         >
+>           Edit
+>         </a>
+>       )}
 >   </td>
 >   ```
->
->   The `condition ? if true : if false` operator is called the [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator).
 
 {: .important-title }
 
@@ -675,11 +763,11 @@ Add a file `final-report.md` to the `documentation` folder. In that file, write 
 
 - What challenges did you face during each Sprint? Describe both technical and project management related challenges. You can use the Sprint Retrospective notes in the `retrospectives` folder.
 - Where you able to overcome these challenges? If so, how?
-- In which areas did you succeed as a group?
+- In which areas did you succeed as a team?
 - In which areas there was room for improvement?
 - What did you learn during the course? What would you have wanted to learn more about? What felt irrellevant?
 
-The final report should also include the name of each group member.
+The final report should also include the name of each team member.
 
 Add a link to the `final-report.md` file in Github to the `README.md` file under the "Documentation" subheading.
 
