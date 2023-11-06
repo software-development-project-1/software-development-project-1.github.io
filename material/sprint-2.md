@@ -84,11 +84,11 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 After some discussion the Scrum Team came up with the following user stories:
 
-1. As an user I want to know the date when a reading recommendation was added so that I know how old it is
-2. As an user I want to add a category so that I can organize my recommendations
-3. As an user I want to see a list of categories so that I know which categories exist
-4. As an user I want to provide a category for a reading recommendation so that I can organize my recommendations
-5. As an user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier
+1. As a user I want to know the date when a reading recommendation was added so that I know how old it is
+2. As a user I want to add a category so that I can organize my recommendations
+3. As a user I want to see a list of categories so that I know which categories exist
+4. As a user I want to provide a category for a reading recommendation so that I can organize my recommendations
+5. As a user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier
 
 For the _first user story_, the Developers came up with the following tasks:
 
@@ -123,7 +123,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 3
 >
-> Come up with tasks for the fourth user story, "As an user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 8 to get an idea what the implementation could look like.
+> Come up with tasks for the fourth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 8 to get an idea what the implementation could look like.
 
 {: .important-title }
 
@@ -139,7 +139,7 @@ At this point it might sense to distribute the workload a bit instead of working
 
 > Exercise 5
 >
-> Implement the tasks of the first user story, "As an user I want to know the date when a reading recommendation was added so that I know how old it is".
+> Implement the tasks of the first user story, "As a user I want to know the date when a reading recommendation was added so that I know how old it is".
 >
 > The implementation should look roughly something like this:
 >
@@ -154,7 +154,7 @@ At this point it might sense to distribute the workload a bit instead of working
 
 > Exercise 6
 >
-> Implement the tasks of the second user story, "As an user I want to add a category so that I can organize my recommendations".
+> Implement the tasks of the second user story, "As a user I want to add a category so that I can organize my recommendations".
 >
 > The implementation should look roughly something like this:
 >
@@ -164,7 +164,7 @@ At this point it might sense to distribute the workload a bit instead of working
 
 > Exercise 7
 >
-> Implement the tasks of the third user story, "As an user I want to see a list of categories so that I know which categories exist".
+> Implement the tasks of the third user story, "As a user I want to see a list of categories so that I know which categories exist".
 >
 > The implementation should look roughly something like this:
 >
@@ -176,7 +176,7 @@ At this point it might sense to distribute the workload a bit instead of working
 
 > Exercise 8
 >
-> Implement the tasks of the fourth user story, "As an user I want to provide a category for a reading recommendation so that I can organize my recommendations".
+> Implement the tasks of the fourth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations".
 >
 > The implementation should look roughly something like this:
 >
@@ -291,7 +291,7 @@ By using JSON as the data representation format we can separate the _client_ (th
 
 _REST_, or REpresentational State Transfer, is an architectural style for providing standards between computer systems on the web, making it easier for systems to communicate with each other. REST-compliant systems, often called _RESTful systems_, are characterized by how they are stateless and separate the concerns of client and server.
 
-In a RESTful system, the requests must contain a path to a _resource_ that the operation should be performed on. In RESTful APIs, paths should be designed to help the client know what is going on. For example, the path `/users/29/messages` is a resource for messages of an user with a specific id. These paths are also referred to as _endpoints_.
+In a RESTful system, the requests must contain a path to a _resource_ that the operation should be performed on. In RESTful APIs, paths should be designed to help the client know what is going on. For example, the path `/users/29/messages` is a resource for messages of a user with a specific id. These paths are also referred to as _endpoints_.
 
 The request should also contain the _HTTP method_, that determines the operation itself. For example, the `GET` method is used to retrieve data, and _never to manipulate it_. When we open a page on a web browser, a `GET` request is sent. The `POST` method on the other hand is used to manipulate the data, so it can have side-effects such as creating an entry to the database. The `PUT` method is used to update an entry and the `DELETE` method is used to delete it. `POST`, `PUT` or `DELETE` methods are commonly used when user submits a form.
 
@@ -301,7 +301,7 @@ The resource path has certain naming conventions. The path starts with the resou
 | -------- | ------------- | ------------------------------------ |
 | `GET`    | `/users`      | List all users                       |
 | `GET`    | `/users/{id}` | Get the user with the provided id    |
-| `POST`   | `/users`      | Create an user                       |
+| `POST`   | `/users`      | Create a user                       |
 | `PUT`    | `/users/{id}` | Update the user with the provided id |
 | `DELETE` | `/users/{id}` | Delete the user with the provided id |
 
@@ -603,7 +603,7 @@ So, we replaced the previous `frontend/messageList/renderMessageList.jsx` entry 
 
 Open <http://localhost:8080> in browser. We should see the text "Reading recommendation list coming soon!" where used to be the list of reading recommendations. Change the text in the `renderRecommendationList.jsx` and save the changes. Then, reaload the page and you should see that the text has changed.
 
-Next we will implement the list of reading recommendations as a React frontend application. After that we will implement the the fifth user story "As an user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
+Next we will implement the list of reading recommendations as a React frontend application. After that we will implement the the fifth user story "As a user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
 
 For the _fifth user story_ we can have the following tasks in addition to the REST API tasks mentioned before:
 
@@ -627,7 +627,7 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 
 > Exercise 15
 >
-> Implement the rest of the tasks of the fifth user story "As an user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
+> Implement the rest of the tasks of the fifth user story "As a user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
 >
 > The implementation should look roughly something like this:
 >
@@ -769,7 +769,7 @@ Now, if we run the `./mvnw spring-boot:run` command, the command output indicate
 
 ## JAR
 
-A JAR (Java Archive) is a package file format typically used to aggregate many Java class files and associated metadata and resources (such as CSS files, JavaScript files and other assets) into one file to distribute application software or libraries on the Java platform. If an user wants to use our application, instead of providing them with the entire source code, we can just provide a JAR file containing everything needed to run our application.
+A JAR (Java Archive) is a package file format typically used to aggregate many Java class files and associated metadata and resources (such as CSS files, JavaScript files and other assets) into one file to distribute application software or libraries on the Java platform. If a user wants to use our application, instead of providing them with the entire source code, we can just provide a JAR file containing everything needed to run our application.
 
 We can generate a JAR file for the application with the following command:
 
@@ -819,7 +819,7 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 The Product Owner came up with a feature for the application if we run out of work during the Sprint:
 
-> "The category filter on the reading recommendation list is very useful for finding the right things to read. But it would even more useful if an user would be able to filter reading recommendations based on their title or description.
+> "The category filter on the reading recommendation list is very useful for finding the right things to read. But it would even more useful if a user would be able to filter reading recommendations based on their title or description.
 >
 > There could be a search field in the reading recommendation list page. If either the title or the description of a reading recommendation contains the keyword typed in to the field, the reading recommendation would be listed. If there's no keyword, all the reading recommendations would be listed."
 >
@@ -829,7 +829,7 @@ The Product Owner came up with a feature for the application if we run out of wo
 
 > Bonus exercise
 >
-> Come up with an user story based on the Product Owner's description and add it to the "Product Backlog" board in Trello. Then, split the user story into tasks and add those to the "Sprint 2 Backlog" board in Trello. Finally, implement the tasks.
+> Come up with a user story based on the Product Owner's description and add it to the "Product Backlog" board in Trello. Then, split the user story into tasks and add those to the "Sprint 2 Backlog" board in Trello. Finally, implement the tasks.
 >
 > The implementation should look roughly something like this:
 >

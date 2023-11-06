@@ -255,9 +255,9 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 
 > "Let's start from the basics. We need a simple web application which allows user to add a reading recommendation and list the added reading recommendations.
 >
-> When the user opens the application on browser, there should be page where the added reading recommendations are listed. There should also be a link that says "Add a reading recommendation" which takes the user to another page, where they can add a reading recommendation using a form.
+> When the user opens the application on a web browser, there should be page where the added reading recommendations are listed. There should also be a link that says "Add a reading recommendation" which takes the user to another page, where they can add a reading recommendation using a form.
 >
-> For now, it is enough that the reading recommendation has a title, for example "The 2020 Scrum Guide", a link, for example "https://scrumguides.org/scrum-guide.html" and a short description, for example "All you need to know about Scrum". Each of these should have field on the form and they should be displayed on the list.
+> For now, it is enough that a reading recommendation has a title, for example "The 2020 Scrum Guide", a link, for example "https://scrumguides.org/scrum-guide.html" and a short description, for example "All you need to know about Scrum". Each of these should have field on the form and they should be displayed on the list.
 >
 > It would be convinient that the user could edit the added reading recommendation if, for example they made a typo in the title or the description. The reading recommendation list should have an "Edit" link next to each reading recommendation. The link should take the user to an edit form, where they can edit all the added information."
 >
@@ -265,9 +265,9 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 
 After some discussion the Scrum Team came up with the following user stories:
 
-1. As an user I want to add a reading recommendation so that I can build a collection of recommendations
-2. As an user I want to list the added reading recommendations so that I can find interesting things to read
-3. As an user I want to be able to edit a reading recommendation so that I can change its information
+1. As a user I want to add a reading recommendation so that I can build a collection of recommendations
+2. As a user I want to list the added reading recommendations so that I can find interesting things to read
+3. As a user I want to be able to edit a reading recommendation so that I can change its information
 
 For the _first user story_, the Developers came up with the following tasks:
 
@@ -301,7 +301,7 @@ These are the user stories, that you will be working on as a team during this Sp
 
 > Exercise 11
 >
-> Come up with tasks for the third user story, "As an user I want to be able to edit a reading recommendation so that I can change its information". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 to get an idea what the implementation could look like.
+> Come up with tasks for the third user story, "As a user I want to be able to edit a reading recommendation so that I can change its information". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 to get an idea what the implementation could look like.
 
 {: .important-title }
 
@@ -324,7 +324,7 @@ These are the user stories, that you will be working on as a team during this Sp
 
 > "What's the progress of user story X?". This is a common question that the Sprint backlog should answer with a quick glance. We should be able to quickly see what's the state of each task of a user story and who is working on each task. One way to specify the user story of a task is to use user story specific prefix in the task description.
 >
-> First, add an unique index number prefix for each user story on the Product backlog, for example "1. As an user I want to add a reading recommendation so that I can build a collection of recommendations". Then, add an unique index number prefix in format "USER_STORY_INDEX.TASK_INDEX." for each task on the Sprint backlog, for example "1.1. Add a ReadingRecommendation JPA entity class with id, title, link and description attributes, and a ReadingRecommendationRepository JPA repository class".
+> First, add an unique index number prefix for each user story on the Product backlog, for example "1. As a user I want to add a reading recommendation so that I can build a collection of recommendations". Then, add an unique index number prefix in format "USER_STORY_INDEX.TASK_INDEX." for each task on the Sprint backlog, for example "1.1. Add a ReadingRecommendation JPA entity class with id, title, link and description attributes, and a ReadingRecommendationRepository JPA repository class".
 
 ## Thymeleaf page layouts
 
@@ -383,7 +383,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 > Exercise 13
 >
-> Implement the tasks of the first user story, "As an user I want to add a reading recommendation so that I can build a collection of reading recommendations".
+> Implement the tasks of the first user story, "As a user I want to add a reading recommendation so that I can build a collection of reading recommendations".
 >
 > The implementation should look roughly something like this:
 >
@@ -395,7 +395,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 > Exercise 14
 >
-> Implement the tasks of the second user story, "As an user I want to list the added reading recommendations so that I can easily find interesting things to read".
+> Implement the tasks of the second user story, "As a user I want to list the added reading recommendations so that I can easily find interesting things to read".
 >
 > The implementation should look roughly something like this:
 >
@@ -407,7 +407,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 > Exercise 15
 >
-> Implement the tasks of the third user story, "As an user I want to be able to edit a reading recommendation so that I can change its information".
+> Implement the tasks of the third user story, "As a user I want to be able to edit a reading recommendation so that I can change its information".
 >
 > The implementation should look roughly something like this:
 >
