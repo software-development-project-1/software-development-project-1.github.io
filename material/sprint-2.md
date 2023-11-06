@@ -76,7 +76,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > To better organize the reading recommendations, it would be useful to be able to add different categories, like "Programming tutorials" or "Video game news". User should be able to add a category using a form. There should also be a page that lists all the added categories and has a "Add a category" link that takes the user to the form.
 >
-> After adding a category, the user could select a category from a dropdown menu while adding a recommendation. The dropdown menu should also have an "Uncategorized" option to leave the reading recommendation uncategorized.
+> After adding a category, the user should be able to select a category from a dropdown menu while adding a recommendation. The dropdown menu should also have an "Uncategorized" option to leave the reading recommendation uncategorized. The category should be displayed on the reading recommendation list.
 >
 > In the reading recommendation list, the user should be able to filter the recommendations based on the category. For example if user chooses a "Programming tutorials" category from a dropdown menu, only the recommendations in that category will be listed. The dropdown menu should also have an "Any category" option to list all the reading recommendations."
 >
@@ -180,9 +180,11 @@ At this point it might sense to distribute the workload a bit instead of working
 >
 > The implementation should look roughly something like this:
 >
-> ![](/assets/sprint-2-user-story-4.png)
+> ![](/assets/sprint-2-user-story-4-1.png)
 >
-> The select menu should list the added categories. Addition to the added categories, the user should be able to select the "Uncategorized" option, which means that the recommendation doesn't have a category.
+> ![](/assets/sprint-2-user-story-4-2.png)
+>
+> The select menu should list the added categories. Addition to the added categories, the user should be able to select the "Uncategorized" option, which means that the recommendation doesn't have a category. The reading recommendation's category should be displayed on the reading recommendation list.
 >
 > Tips for implementing the tasks:
 >
@@ -301,7 +303,7 @@ The resource path has certain naming conventions. The path starts with the resou
 | -------- | ------------- | ------------------------------------ |
 | `GET`    | `/users`      | List all users                       |
 | `GET`    | `/users/{id}` | Get the user with the provided id    |
-| `POST`   | `/users`      | Create a user                       |
+| `POST`   | `/users`      | Create a user                        |
 | `PUT`    | `/users/{id}` | Update the user with the provided id |
 | `DELETE` | `/users/{id}` | Delete the user with the provided id |
 
@@ -621,7 +623,17 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 
 > Exercise 14
 >
-> Implement a React frontend application to the `frontend/recommendationList` folder which lists the reading recommendation similarly as before. Use the `fetch` function to fetch the recommendations from <http://localhost:8080/api/recommendations>. Take a look at the files in the `frontend/messageList` folder for examples.
+> Implement a React frontend application to the `frontend/recommendationList` folder which lists the reading recommendations _similarly as before_. The frontend application should fully replace the implementation in the Thymeleaf template. That is, the `<body>` tag should only contain the following:
+>
+> ```html
+> <body>
+>   <div layout:fragment="content">
+>     <div id="recommendationListRoot"></div>
+>   </div>
+> </body>
+> ```
+>
+> Use the `fetch` function to fetch the recommendations from <http://localhost:8080/api/recommendations>. Take a look at the files in the `frontend/messageList` folder for examples.
 
 {: .important-title }
 
@@ -819,9 +831,7 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 The Product Owner came up with a feature for the application if we run out of work during the Sprint:
 
-> "The category filter on the reading recommendation list is very useful for finding the right things to read. But it would even more useful if a user would be able to filter reading recommendations based on their title or description.
->
-> There could be a search field in the reading recommendation list page. If either the title or the description of a reading recommendation contains the keyword typed in to the field, the reading recommendation would be listed. If there's no keyword, all the reading recommendations would be listed."
+> "The user should be able to get rid of reading recommendations they have added. The reading recommendation list should have a "Delete" button for each reading recommendation that is added by the user. Clicking the button should delete the reading recommendation. User should only be able to delete reading recommendations which they have added."
 >
 > -- The Product Owner
 
@@ -829,24 +839,33 @@ The Product Owner came up with a feature for the application if we run out of wo
 
 > Bonus exercise
 >
-> Come up with a user story based on the Product Owner's description and add it to the "Product Backlog" board in Trello. Then, split the user story into tasks and add those to the "Sprint 2 Backlog" board in Trello. Finally, implement the tasks.
+> Come up with an user story based on the Product Owner's description and add it to the "Product Backlog" board in Trello. Then, split the user story into tasks and add those to the "Sprint 3 Backlog" board in Trello. Finally, implement the tasks.
 >
 > The implementation should look roughly something like this:
 >
 > ![](/assets/sprint-2-user-story-bonus.png)
 >
-> If you have trouble with the implementation, here's a high-level idea of the implementation:
+> You can implement the "Delete" button submission with either a form:
 >
 > ```jsx
-> // ...
-> const [recommendations, setRecommendations] = useState([]);
-> const [keyword, setKeyword] = useState("");
+> <form method="POST" action={`/recommendations/${recommendation.id}/delete`}>
+>   <button className="btn btn-danger">Delete</button>
+> </form>
+> ```
 >
-> let filteredRecommendations = recommendations;
+> Or using the `fetch` function:
 >
-> if (keyword) {
->   filteredRecommendations = recommendations.filter(/* ... */);
+> ```jsx
+> function handeDelete(recommendation) {
+>   fetch(`/recommendations/${recommendation.id}/delete`, {
+>     method: "POST",
+>   }).then(() => {
+>     // Remove the deleted recommendation from the list
+>     setRecommendations(
+>       recommendations.filter((r = r.id !== recommendation.id))
+>     );
+>   });
 > }
 > ```
 >
-> Check the documentation for the [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method to learn how to filter arrays.
+> Using the `fetch` function provies a slightly better userexperience, because it doesn't reload the page.

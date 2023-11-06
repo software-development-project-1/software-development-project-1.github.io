@@ -789,7 +789,9 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 The Product Owner came up with a feature for the application if we run out of work during the Sprint:
 
-> "The user should be able to get rid of reading recommendations they have added. The reading recommendation list should have a "Delete" button for each reading recommendation that is added by the user. Clicking the button should delete the reading recommendation. User should only be able to delete reading recommendations which they have added."
+> "The category filter on the reading recommendation list is very useful for finding the right things to read. But it would even more useful if a user would be able to filter reading recommendations based on their title or description.
+>
+> There could be a search field in the reading recommendation list page. If either the title or the description of a reading recommendation contains the keyword typed in to the field, the reading recommendation would be listed. If there's no keyword, all the reading recommendations would be listed."
 >
 > -- The Product Owner
 
@@ -797,33 +799,24 @@ The Product Owner came up with a feature for the application if we run out of wo
 
 > Bonus exercise
 >
-> Come up with an user story based on the Product Owner's description and add it to the "Product Backlog" board in Trello. Then, split the user story into tasks and add those to the "Sprint 3 Backlog" board in Trello. Finally, implement the tasks.
+> Come up with a user story based on the Product Owner's description and add it to the "Product Backlog" board in Trello. Then, split the user story into tasks and add those to the "Sprint 2 Backlog" board in Trello. Finally, implement the tasks.
 >
 > The implementation should look roughly something like this:
 >
 > ![](/assets/sprint-3-user-story-bonus.png)
 >
-> You can implement the "Delete" button submission with either a form:
+> If you have trouble with the implementation, here's a high-level idea of the implementation:
 >
 > ```jsx
-> <form method="POST" action={`/recommendations/${recommendation.id}/delete`}>
->   <button className="btn btn-danger">Delete</button>
-> </form>
-> ```
+> // ...
+> const [recommendations, setRecommendations] = useState([]);
+> const [keyword, setKeyword] = useState("");
 >
-> Or using the `fetch` function:
+> let filteredRecommendations = recommendations;
 >
-> ```jsx
-> function handeDelete(recommendation) {
->   fetch(`/recommendations/${recommendation.id}/delete`, {
->     method: "POST",
->   }).then(() => {
->     // Remove the deleted recommendation from the list
->     setRecommendations(
->       recommendations.filter((r = r.id !== recommendation.id))
->     );
->   });
+> if (keyword) {
+>   filteredRecommendations = recommendations.filter(/* ... */);
 > }
 > ```
 >
-> Using the `fetch` function provies a slightly better userexperience, because it doesn't reload the page.
+> Check the documentation for the [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method to learn how to filter arrays.
