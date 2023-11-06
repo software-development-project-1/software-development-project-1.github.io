@@ -856,16 +856,13 @@ The Product Owner came up with a feature for the application if we run out of wo
 > Or using the `fetch` function:
 >
 > ```jsx
-> function handeDelete(recommendation) {
+> function handleDelete(recommendation) {
 >   fetch(`/recommendations/${recommendation.id}/delete`, {
 >     method: "POST",
 >   }).then(() => {
 >     // Remove the deleted recommendation from the list
->     setRecommendations(
->       recommendations.filter((r = r.id !== recommendation.id))
->     );
 >   });
 > }
 > ```
 >
-> Using the `fetch` function provies a slightly better userexperience, because it doesn't reload the page.
+> Using the `fetch` function provies a slightly better user experience, because it doesn't reload the page.
