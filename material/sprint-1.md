@@ -253,13 +253,15 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Planning event:
 
-> "Let's start from the basics. We need a simple web application which allows user to add a reading recommendation and list the added reading recommendations.
+> "Let's start from the basics. We need a simple web application which allows the user to add a reading recommendation and list the added reading recommendations. In addition, to be able to manage the added reading recommendations, the user should also be able to edit and delete reading recommendations.
 >
 > When the user opens the application on a web browser, there should be page where the added reading recommendations are listed. There should also be a link that says "Add a reading recommendation" which takes the user to another page, where they can add a reading recommendation using a form.
 >
 > For now, it is enough that a reading recommendation has a title, for example "The 2020 Scrum Guide", a link, for example "https://scrumguides.org/scrum-guide.html" and a short description, for example "All you need to know about Scrum". Each of these should have field on the form and they should be displayed on the list.
 >
-> It would be convinient that the user could edit the added reading recommendation if, for example they made a typo in the title or the description. The reading recommendation list should have an "Edit" link next to each reading recommendation. The link should take the user to an edit form, where they can edit all the added information."
+> It would be convinient that the user could edit the added reading recommendation if, for example they made a typo in the title or the description. The reading recommendation list should have an "Edit" link next to each reading recommendation. The link should take the user to an edit form, where they can edit all the added information.
+>
+> The user should also be able to get rid of reading recommendations they don't need. Next to the "Edit" link, there should be a "Delete" button in the reading recommendation list. When the user clicks the button, the reading recommendation should be deleted."
 >
 > -- The Product Owner
 
@@ -268,6 +270,7 @@ After some discussion the Scrum Team came up with the following user stories:
 1. As a user I want to add a reading recommendation so that I can build a collection of recommendations
 2. As a user I want to list the added reading recommendations so that I can find interesting things to read
 3. As a user I want to be able to edit a reading recommendation so that I can change its information
+4. As a user I want to be able to delete a reading recommendation so that I can get rid of recommendations I don't need
 
 For the _first user story_, the Developers came up with the following tasks:
 
@@ -283,6 +286,9 @@ For the _second user story_, the Developers came up with the following tasks:
 3. Add a link to the reading recommendation list page to the navigation bar
 
 These are the user stories, that you will be working on as a team during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
+
+{: .highlight }
+> The tasks that you come up with during the Sprint Planning event _should not be set in stone_. These tasks are there to get you started with implementing the user stories. You might come up with new tasks or notice that the current tasks need alterations during the actual implementation. In such case, do the necessary changes for the Sprint Backlog.
 
 ### Tips for implementing the tasks
 
@@ -301,13 +307,19 @@ These are the user stories, that you will be working on as a team during this Sp
 
 > Exercise 11
 >
-> Come up with tasks for the third user story, "As a user I want to be able to edit a reading recommendation so that I can change its information". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 to get an idea what the implementation could look like.
+> Come up with tasks for the third user story, "As a user I want to be able to edit a reading recommendation so that I can change its information". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 to get an idea what the implementation could look like.
 
 {: .important-title }
 
 > Exercise 12
 >
-> 1. Add these three user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
+> Come up with tasks for the fourth user story, "As a user I want to be able to delete a reading recommendation so that I can get rid of recommendations I don't need". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 to get an idea what the implementation could look like.
+
+{: .important-title }
+
+> Exercise 13
+>
+> 1. Add these four user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
 > 2. Add the tasks to the "Sprint 1 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
 > 3. Once you start working on task, assign the task to you. This can be done by first clicking on the card, then clicking the "Members" button below the "Add to card" and choosing your Trello account. A task can also have multiple members. The important thing is that each task that is not in the "To do" state should have at least one member assigned to it.
 
@@ -322,9 +334,7 @@ These are the user stories, that you will be working on as a team during this Sp
 
 {: .note }
 
-> "What's the progress of user story X?". This is a common question that the Sprint backlog should answer with a quick glance. We should be able to quickly see what's the state of each task of a user story and who is working on each task. One way to specify the user story of a task is to use user story specific prefix in the task description.
->
-> First, add an unique index number prefix for each user story on the Product backlog, for example "1. As a user I want to add a reading recommendation so that I can build a collection of recommendations". Then, add an unique index number prefix in format "USER_STORY_INDEX.TASK_INDEX." for each task on the Sprint backlog, for example "1.1. Add a ReadingRecommendation JPA entity class with id, title, link and description attributes, and a ReadingRecommendationRepository JPA repository class".
+> "What's the progress of user story X?". This is a common question that the Sprint backlog should answer with a quick glance. We should be able to quickly see what's the state of each task of a user story and who is working on each task. One way to specify the user story of a task is to add user story specific [label](https://blog.trello.com/taco-tuesdays-learning-to-love-labels) for each tasks in the Sprint Backlog. The label could have a short description of the user story, such as "Add recommendation" or "List recommendations".
 
 ## Thymeleaf page layouts
 
@@ -381,7 +391,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > Implement the tasks of the first user story, "As a user I want to add a reading recommendation so that I can build a collection of reading recommendations".
 >
@@ -393,7 +403,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 15
 >
 > Implement the tasks of the second user story, "As a user I want to list the added reading recommendations so that I can easily find interesting things to read".
 >
@@ -405,7 +415,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 16
 >
 > Implement the tasks of the third user story, "As a user I want to be able to edit a reading recommendation so that I can change its information".
 >
@@ -414,6 +424,17 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 > ![](/assets/sprint-1-user-story-3-1.png)
 >
 > ![](/assets/sprint-1-user-story-3-2.png)
+
+{: .important-title }
+
+> Exercise 17
+>
+> Implement the tasks of the fourth user story, "As a user I want to be able to delete a reading recommendation so that I can get rid of recommendations I don’t need".
+>
+> The implementation should look roughly something like this:
+>
+> ![](/assets/sprint-1-user-story-4.png)
+
 
 {: .note }
 
@@ -458,7 +479,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 18
 >
 > Write a usage guide on _how to start your application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required JDK version for the project.
 
@@ -470,7 +491,7 @@ Usually a new version of an application is released at the end of each Sprint. W
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 19
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -482,7 +503,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 20
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 >
