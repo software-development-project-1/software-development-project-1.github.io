@@ -278,6 +278,7 @@ For the _first user story_, the Developers came up with the following tasks:
 2. Add Thymeleaf template for the reading recommendation submission form containing fields for title, link and description
 3. Add ReadingRecommendationController controller class and a method for rendering the reading recommendation submission form
 4. Add a method for the ReadingRecommendationController class that saves the reading recommendation to the database
+5. Add validation for title, link and description attributes
 
 For the _second user story_, the Developers came up with the following tasks:
 
@@ -288,6 +289,7 @@ For the _second user story_, the Developers came up with the following tasks:
 These are the user stories, that you will be working on as a team during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
 
 {: .highlight }
+
 > The tasks that you come up with during the Sprint Planning event _should not be set in stone_. These tasks are there to get you started with implementing the user stories. You might come up with new tasks or notice that the current tasks need alterations during the actual implementation. In such case, do the necessary changes for the Sprint Backlog.
 
 ### Tips for implementing the tasks
@@ -399,6 +401,14 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 >
 > ![](/assets/sprint-1-user-story-1.png)
 >
+> Add some simple validation for the form fields:
+>
+> - The title should not be blank
+> - The link should not not be blank and it should start with "http://" or "https://"
+> - The description should not be blank
+>
+> See this [guide](https://spring.io/guides/gs/validating-form-input/) to learn about form validation. The link can be validated with a regular expression using the [@Pattern](https://www.codeproject.com/Questions/5324493/Jakarta-regex-validation) annotation.
+>
 > Alter the `layout.html` file mentioned above to change the navigation bar content.
 
 {: .important-title }
@@ -434,7 +444,6 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 > The implementation should look roughly something like this:
 >
 > ![](/assets/sprint-1-user-story-4.png)
-
 
 {: .note }
 
