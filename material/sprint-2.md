@@ -311,6 +311,10 @@ The `{id}` part of the `/users/{id}` path is a _path variable_. For example, the
 
 A collection can have _sub-collections_. For example, a path for a user's messages resource would be `/users/{id}/messages`, where "messages" is a sub-collection. [This guide](https://restfulapi.net/resource-naming/) has more information about the resource path naming conventions.
 
+When we design and implement REST API endpoints we should consider the use case. We don't implement endpoints arbitrary, there should be a _need for the endpoint_ first, for example a certain feature in a frontend application needs to display some data in the database. Based on the feature we consider what kind of data and operations the REST API needs to provide. These requirements will determine the endpoints we will implement.
+
+We should however remember to _follow the implementation conventions_ to keep the REST API endpoints _reusable_ throughout the application. For example we don't want to implement a `/api/recommendations-for-home-page` endpoint just to provide data for a specific feature. Instead, we should be implement a single `/api/recommendations` endpoint, which is reusable for other features as well.
+
 We can create a separate controller class for each collection. The `@RequestMapping` annotation can be used the define the collection name prefix of the path. Each method will automatically get the prefix in the path, so we don't need to have it in the `@GetMapping` annotation:
 
 ```java
@@ -728,7 +732,7 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 > }
 > ```
 >
-> You can use the [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method to create a new array without the deleted recommendation and set that as the state. The user confirmation can be requested using the [window.confirm](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) method. 
+> You can use the [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method to create a new array without the deleted recommendation and set that as the state. The user confirmation can be requested using the [window.confirm](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) method.
 >
 > ![](/assets/sprint-2-user-story-5-2.png)
 
