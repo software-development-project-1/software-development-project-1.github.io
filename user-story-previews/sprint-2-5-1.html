@@ -32,14 +32,11 @@
         <label class="form-label">Filter by a category</label>
         <select class="form-select">
           <option value="-1">Any category</option>
-          <option value="1">Programming tutorials</option>
-          <option value="2">Video game news</option>
-          <option value="3">News articles on cats</option>
+          <option value="1">Scrum articles</option>
+          <option value="2">Programming tutorials</option>
+          <option value="3">Video game news</option>
+          <option value="4">News articles on cats</option>
         </select>
-      </form>
-      <form class="mb-3">
-        <label class="form-label">Filter by title or description</label>
-        <input type="text" class="form-control" />
       </form>
       <table class="table">
         <thead>
@@ -49,6 +46,7 @@
             <th>Description</th>
             <th>Added on</th>
             <th>Category</th>
+            <th></th>
             <th></th>
           </tr>
         </thead>
@@ -65,6 +63,9 @@
             <td>Scrum articles</td>
             <td>
               <button class="btn btn-secondary">Edit</button>
+            </td>
+            <td>
+              <button class="btn btn-danger">Delete</button>
             </td>
           </tr>
         </tbody>

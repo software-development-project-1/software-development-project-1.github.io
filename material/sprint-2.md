@@ -15,7 +15,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-17. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-21. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -102,12 +102,6 @@ For the _second user story_, the Developers came up with the following tasks:
 3. Add a CategoryController controller class and a method for rendering the category submission form
 4. Add a method for the CategoryController class that saves the category to the database
 
-for the _third user story_, the Developers came up with the following tasks:
-
-1. Add a Thymeleaf template for listing the added categories
-2. Add a method for rendering the categories list for the CategoryController class
-3. Add a link to the category list page to the navigation bar
-
 The tasks for the fifth user story will be covered in the [Communication between frontend and backend](#communication-between-frontend-and-backend) section.
 
 {: .note }
@@ -123,11 +117,17 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 3
 >
-> Come up with tasks for the fourth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 8 to get an idea what the implementation could look like.
+> Come up with tasks for the third user story, "As a user I want to see a list of categories so that I know which categories exist". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 8 to get an idea what the implementation could look like.
 
 {: .important-title }
 
 > Exercise 4
+>
+> Come up with tasks for the fourth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 8 to get an idea what the implementation could look like.
+
+{: .important-title }
+
+> Exercise 5
 >
 > 1. Add these five user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
 > 2. Add the tasks of the _first four user stories_ to the "Sprint 2 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
@@ -137,7 +137,7 @@ At this point it might sense to distribute the workload a bit instead of working
 
 {: .important-title }
 
-> Exercise 5
+> Exercise 6
 >
 > Implement the tasks of the first user story, "As a user I want to know the date when a reading recommendation was added so that I know how old it is".
 >
@@ -152,7 +152,7 @@ At this point it might sense to distribute the workload a bit instead of working
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 7
 >
 > Implement the tasks of the second user story, "As a user I want to add a category so that I can organize my recommendations".
 >
@@ -162,7 +162,7 @@ At this point it might sense to distribute the workload a bit instead of working
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 8
 >
 > Implement the tasks of the third user story, "As a user I want to see a list of categories so that I know which categories exist".
 >
@@ -174,7 +174,7 @@ At this point it might sense to distribute the workload a bit instead of working
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 9
 >
 > Implement the tasks of the fourth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations".
 >
@@ -334,7 +334,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 10
 >
 > Create a controller class `ReadingRecommendationRestController` that has a method `getReadingRecommendations`. This method should return _all the reading recommendations_ in path `/api/recommendations` in JSON format. You should be able to see the list of recommendations when opening <http://localhost:8080/api/recommendations> in a web browser.
 >
@@ -342,7 +342,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 11
 >
 > Create a controller class `CategoryRestController` that has a method `getCategories`. This method should return _all the categories_ in path `/api/categories` in JSON format. You should be able to see the list of categories when opening <http://localhost:8080/api/categories> in a web browser.
 >
@@ -350,7 +350,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 12
 >
 > Create a method `getReadingRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations).
 >
@@ -413,7 +413,7 @@ public class CategoryRestController {
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for both the `ReadingRecommendationRestController` and the `CategoryRestController` controllers using the `@Tag` annotation. For each controller method add a proper summary and description using the `@Operation` annotation.
 >
@@ -615,13 +615,13 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > Add the tasks of the _fifth user story_ to the "Sprint 2 Backlog" board as cards in Trello.
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 15
 >
 > Implement a React frontend application to the `frontend/recommendationList` folder which lists the reading recommendations _similarly as before_. The frontend application should fully replace the implementation in the Thymeleaf template. That is, the `<body>` tag should only contain the following:
 >
@@ -634,16 +634,26 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 > ```
 >
 > Use the `fetch` function to fetch the recommendations from <http://localhost:8080/api/recommendations>. Take a look at the files in the `frontend/messageList` folder for examples.
+>
+> For now the "Delete" button can be implemented with a form:
+>
+> ```jsx
+> <form method="POST" target={`/recommendations/${recommendation.id}/delete`}>
+>   <button class="btn btn-danger">Delete</button>
+> </form>
+> ```
+>
+> We will improve the user experience of the feature in exercise X.
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 16
 >
 > Implement the rest of the tasks of the fifth user story "As a user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
 >
 > The implementation should look roughly something like this:
 >
-> ![](/assets/sprint-2-user-story-5.png)
+> ![](/assets/sprint-2-user-story-5-1.png)
 >
 > The select menu should list all added categories. If the user chooses the "Any category" option, all recommendations should be listed. Otherwise only recommendations in the selected category.
 >
@@ -699,9 +709,32 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 17
 >
-> Once you have completed the exercises for this Sprint, remove the excessive Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive `messageList` folder from the `frontend` folder.
+> The form implementation of the "Delete" button has a few drawbacks in the user experience:
+>
+> - Submitting the form causes a full page reload. This will lose the state of the page (for example the current category filter) and will feel slow and unresponsive for the user
+> - Submitting the form doesn't request a confirmation from the user. User might accidently delete a reading recommendation quite easily
+>
+> Improve the user experience by replacing the form submission with a `fetch` call:
+>
+> ```js
+> function handleDelete(recommendation) {
+>   fetch(`/recommendations/${recommendation.id}/delete`, {
+>     method: "POST",
+>   }).then(() => {
+>     // Remove the deleted recommendation from the recommendations state variable array
+>   });
+> }
+> ```
+>
+> You can use the [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method to create a new array without the deleted recommendation and set that as the state. The user confirmation can be requested using the [window.confirm](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) method. 
+>
+> ![](/assets/sprint-2-user-story-5-2.png)
+
+## Cross-Origin Resource Sharing (CORS)
+
+Coming soon!
 
 ## The .gitignore file
 
@@ -775,7 +808,7 @@ Now, if we run the `./mvnw spring-boot:run` command, the command output indicate
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 18
 >
 > Use the frontend-maven-plugin in the project as instructed above.
 
@@ -803,7 +836,13 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 19
+>
+> Once you have implemented the user stories of the Sprint, remove the excessive Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive `messageList` folder from the `frontend` folder.
+
+{: .important-title }
+
+> Exercise 20
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 >
@@ -813,7 +852,7 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 21
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 >
@@ -831,7 +870,9 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 The Product Owner came up with a feature for the application if we run out of work during the Sprint:
 
-> "The user should be able to get rid of reading recommendations they have added. The reading recommendation list should have a "Delete" button for each reading recommendation that is added by the user. Clicking the button should delete the reading recommendation. User should only be able to delete reading recommendations which they have added."
+> "The category filter on the reading recommendation list is very useful for finding the right things to read. But it would even more useful if a user would be able to filter reading recommendations based on their title or description.
+>
+> There could be a search field in the reading recommendation list page. If either the title or the description of a reading recommendation contains the keyword typed in to the field, the reading recommendation would be listed. If there's no keyword, all the reading recommendations would be listed."
 >
 > -- The Product Owner
 
@@ -839,30 +880,24 @@ The Product Owner came up with a feature for the application if we run out of wo
 
 > Bonus exercise
 >
-> Come up with an user story based on the Product Owner's description and add it to the "Product Backlog" board in Trello. Then, split the user story into tasks and add those to the "Sprint 3 Backlog" board in Trello. Finally, implement the tasks.
+> Come up with a user story based on the Product Owner's description and add it to the "Product Backlog" board in Trello. Then, split the user story into tasks and add those to the "Sprint 2 Backlog" board in Trello. Finally, implement the tasks.
 >
 > The implementation should look roughly something like this:
 >
 > ![](/assets/sprint-2-user-story-bonus.png)
 >
-> You can implement the "Delete" button submission with either a form:
+> If you have trouble with the implementation, here's a high-level idea of the implementation:
 >
 > ```jsx
-> <form method="POST" action={`/recommendations/${recommendation.id}/delete`}>
->   <button className="btn btn-danger">Delete</button>
-> </form>
-> ```
+> // ...
+> const [recommendations, setRecommendations] = useState([]);
+> const [keyword, setKeyword] = useState("");
 >
-> Or using the `fetch` function:
+> let filteredRecommendations = recommendations;
 >
-> ```jsx
-> function handleDelete(recommendation) {
->   fetch(`/recommendations/${recommendation.id}/delete`, {
->     method: "POST",
->   }).then(() => {
->     // Remove the deleted recommendation from the list
->   });
+> if (keyword) {
+>   filteredRecommendations = recommendations.filter(/* ... */);
 > }
 > ```
 >
-> Using the `fetch` function provies a slightly better user experience, because it doesn't reload the page.
+> Check the documentation for the [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method to learn how to filter arrays.
