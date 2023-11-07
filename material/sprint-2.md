@@ -123,7 +123,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 4
 >
-> Come up with tasks for the fourth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 8 to get an idea what the implementation could look like.
+> Come up with tasks for the fourth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 9 to get an idea what the implementation could look like.
 
 {: .important-title }
 
@@ -647,7 +647,7 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 > </form>
 > ```
 >
-> We will improve the user experience of the feature in exercise X.
+> We will improve the user experience of the feature in exercise 17.
 
 {: .important-title }
 
