@@ -489,6 +489,10 @@ Once the GitHub repository's main branch has a working version of the applicatio
 
 Usually a new version of an application is released at the end of each Sprint. When we create a new release at the end of each Sprint, we will create a _release history_ for the project. Users can easily browse and download the source code of different versions of the application by going through the release history.
 
+Each release should at least include the name for the release and a short description describing the changes introduced in the release. For libraries the release name is commonly the version number of the release, for example "18.2.0". We create a release for each Sprint, so we can name our releases based on the Sprint number, for example "Sprint 1".
+
+As an example, [here](https://github.com/facebook/react/releases) are the releases for the React library.
+
 {: .important-title }
 
 > Exercise 19
