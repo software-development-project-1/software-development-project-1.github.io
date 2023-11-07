@@ -434,6 +434,8 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 > ![](/assets/sprint-1-user-story-3-1.png)
 >
 > ![](/assets/sprint-1-user-story-3-2.png)
+>
+> Add similar validation for the form as in the first user story.
 
 {: .important-title }
 

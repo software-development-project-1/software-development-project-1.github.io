@@ -101,6 +101,7 @@ For the _second user story_, the Developers came up with the following tasks:
 2. Add a Thymeleaf template for the category submission form containing a field for the category name
 3. Add a CategoryController controller class and a method for rendering the category submission form
 4. Add a method for the CategoryController class that saves the category to the database
+5. Add validation for the name attribute
 
 The tasks for the fifth user story will be covered in the [Communication between frontend and backend](#communication-between-frontend-and-backend) section.
 
@@ -159,6 +160,8 @@ At this point it might sense to distribute the workload a bit instead of working
 > The implementation should look roughly something like this:
 >
 > ![](/assets/sprint-2-user-story-2.png)
+>
+> Validate that the category name is not blank.
 
 {: .important-title }
 
