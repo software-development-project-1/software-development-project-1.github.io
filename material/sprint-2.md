@@ -111,7 +111,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > It would nice if the reading recommendation list would display the date when the recommendations was added. This way, the user would know how old the recommendation is.
 >
-> To better organize the reading recommendations, it would be useful to be able to add different categories, like "Programming tutorials" or "Video game news". User should be able to add a category using a form. There should also be a page that lists all the added categories and has a "Add a category" link that takes the user to the form.
+> To better organize the reading recommendations, it would be useful to be able to add different categories, like "Programming tutorials" or "Video game news". User should be able to add a category using a form. The form should only have a field for the category name. The user should not be able to add a category with a blank name or a name that already exists. There should also be a page that lists all the added categories and has a "Add a category" link that takes the user to the form.
 >
 > After adding a category, the user should be able to select a category from a dropdown menu while adding a recommendation. The dropdown menu should also have an "Uncategorized" option to leave the reading recommendation uncategorized. The category should be displayed on the reading recommendation list.
 >
@@ -138,7 +138,7 @@ For the _second user story_, the Developers came up with the following tasks:
 2. Add a Thymeleaf template for the category submission form containing a field for the category name
 3. Add a CategoryController controller class and a method for rendering the category submission form
 4. Add a method for the CategoryController class that saves the category to the database
-5. Add validation for the name attribute
+5. Add validation for the category name
 
 The tasks for the fifth user story will be covered in the [Communication between frontend and backend](#communication-between-frontend-and-backend) section.
 
@@ -174,7 +174,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 6
 >
-> The Product Owner needs your help in estimating user stories. Faciliate a planning poker event where you estimate the _first four user stories_ of the Sprint.
+> The Product Owner needs your help in estimating user stories. Facilitate a planning poker event where you estimate the _first four user stories_ of the Sprint. Add the story point estimates for the user stories to the Product Backlog.
 
 {: .note }
 At this point it might sense to distribute the workload a bit instead of working on each user story together. For example two members of the team could start working on the first user story and the others on the second one. Decide who will be working on which task and assign at least one team member for each task on the Trello board.
@@ -204,7 +204,7 @@ At this point it might sense to distribute the workload a bit instead of working
 >
 > ![](/assets/sprint-2-user-story-2.png)
 >
-> Validate that the category name is not blank.
+> Validate that the category name is not blank and it is unique.
 
 {: .important-title }
 

@@ -268,7 +268,7 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > When the user opens the application on a web browser, there should be page where the added reading recommendations are listed. There should also be a link that says "Add a reading recommendation" which takes the user to another page, where they can add a reading recommendation using a form.
 >
-> For now, it is enough that a reading recommendation has a title, for example "The 2020 Scrum Guide", a link, for example "https://scrumguides.org/scrum-guide.html" and a short description, for example "All you need to know about Scrum". Each of these should have field on the form and they should be displayed on the list.
+> For now, it is enough that a reading recommendation has a title, for example "The 2020 Scrum Guide", a link, for example "https://scrumguides.org/scrum-guide.html" and a short description, for example "All you need to know about Scrum". Each of these should have field on the form and they should be displayed on the list. The user should not be able to add a reading recommendation with a blank title, link or description. Also, the link should be a valid link.
 >
 > It would be convinient that the user could edit the added reading recommendation if, for example they made a typo in the title or the description. The reading recommendation list should have an "Edit" link next to each reading recommendation. The link should take the user to an edit form, where they can edit all the added information.
 >
@@ -291,7 +291,7 @@ For the _first user story_, the Developers came up with the following tasks:
 2. Add Thymeleaf template for the reading recommendation submission form containing fields for title, link and description
 3. Add ReadingRecommendationController controller class and a method for rendering the reading recommendation submission form
 4. Add a method for the ReadingRecommendationController class that saves the reading recommendation to the database
-5. Add validation for title, link and description attributes
+5. Add validation for reading recommendation title, link and description
 
 For the _second user story_, the Developers came up with the following tasks:
 

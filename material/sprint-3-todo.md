@@ -188,7 +188,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > An anonymous user, that is an user who is not signed in, should be able to see the reading recommendation list and the category list. However, they should not be able to add a reading recommendation or a category. That is, the links for adding a reading recommendation and adding a category should not be visible if the user is not signed in.
 >
-> After signing in, the user should be able to add reading recommendations and categories. However, a user should only be able to edit reading recommendations that they have added. That is, the "Edit" link in the reading recommendation list should only be visible if the user has added the reading recommendation."
+> After signing in, the user should be able to add reading recommendations and categories. However, a user should only be able to edit and delete reading recommendations that they have added. That is, the "Edit" link and the "Delete" button in the reading recommendation list should only be visible if the user has added the reading recommendation."
 >
 > -- The Product Owner
 
@@ -263,12 +263,18 @@ public class MessageController {
     private MessageRepository messageRepository;
 
     @PostMapping("/messages/add")
-    public ModelAndView addMessage(@ModelAttribute AddMessageDto message, @AuthenticationPrincipal UserDetails userDetails) {
+    public String addMessage(@Valid @ModelAttribute AddMessageDto message, @AuthenticationPrincipal UserDetails userDetails, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return "addmessage";
+        }
+
         User user = userRepository.findOneByUsername(userDetails.getUsername());
+            .orElseThrow(() -> new UsernameNotFoundException(userDetails.getUsername()));
+
         Message newMessage = new Message(message.getContent(), user);
         messageRepository.save(newMessage);
 
-        return new ModelAndView("redirect:/");
+        return "redirect:/";
     }
 
     // ...
@@ -279,6 +285,7 @@ Testing controller methods is a bit tricky because they operate on HTTP requests
 
 ```java
 @Service
+@Validated
 public class MessageService {
     @Autowired
     private MessageRepository messageRepository;
@@ -286,14 +293,20 @@ public class MessageService {
     @Autowired
     private UserRepository userRepository;
 
-    public Message createMessage(AddMessageDto message, UserDetails userDetails) {
-        User user = userRepository.findOneByUsername(userDetails.getUsername());
+    public Message createMessage(@Valid AddMessageDto message, UserDetails userDetails) {
+        User user = userRepository.findOneByUsername(userDetails.getUsername())
+            .orElseThrow(() -> new UsernameNotFoundException(userDetails.getUsername()));
+
         Message newMessage = new Message(message.getContent(), user);
 
         return messageRepository.save(newMessage);
     }
 }
 ```
+
+{: .note }
+
+> We can move the validation to the service class by using the `@Validated` annotation on the service class. You can read more about validation in service class [here](https://reflectoring.io/bean-validation-with-spring-boot/).
 
 We can use the `MessageService` class in the controller method to simplify the code:
 
@@ -305,9 +318,13 @@ public class MessageController {
 
     @PostMapping("/messages/add")
     public ModelAndView addMessage(@ModelAttribute AddMessageDto message, @AuthenticationPrincipal UserDetails userDetails) {
-        messageService.createMessage(message, userDetails);
+        try {
+            messageService.createMessage(message, userDetails);
+        } catch (ConstraintViolationException exception) {
+            return "addmessage";
+        }
 
-        return new ModelAndView("redirect:/");
+        return "redirect:/";
     }
 
     // ...
@@ -353,10 +370,14 @@ These code snippets are from the [authentication-example](https://github.com/sof
 >    // ...
 >
 >   @PostMapping("/recommendations/add")
->   public ModelAndView addRecommendation(@ModelAttribute AddReadingRecommendationDto recommendation) {
->       recommendationService.createRecommendation(recommendation);
+>   public String addRecommendation(@ModelAttribute AddReadingRecommendationDto recommendation) {
+>       try {
+>           recommendationService.createRecommendation(recommendation);
+>       } catch (ConstraintViolationException exception) {
+>           // return the add reading recommendation template name
+>       }
 >
->       return new ModelAndView("redirect:/");
+>       return "redirect:/";
 >   }
 > }
 > ```
@@ -633,16 +654,38 @@ The `passwordEncoder` method returns the password encoder object used to hash pa
 
 The `securityFilterChain` returns the configuration object for Spring Security. The first piece of configuration determines the access-control for our application. We will allow anyone (authenticated or not) access the following paths:
 
-- `/`, the reading recommendation list page, 
+- `/`, the reading recommendation list page,
 - `/register`, the registration form and registration form submission
 - `/categories`, the category list page
 - `/frontend/**`, the JavaScript assets required by the frontend application. The `**` part of the path means any path
 - `/api/**`, the REST API endpoints
 
 {: .note }
+
 > Change this configuration if your application's paths don't match the ones above.
 
 The `permitAll()` method call _will permit anyone to access the these paths_. This is follow by `anyRequest().authenticated()` method call, which means that _request to any other path will require authentication_.
+
+On top of the configuration class, we need to have class that implements the `UserDetailsService` interface. This class will determine how to fetch the user's information based on the username:
+
+```java
+@Service
+public class UserDetailsServiceImpl implements UserDetailsService {
+    @Autowired
+    private UserRepository userRepository;
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userRepository.findOneByUsername(username)
+                        .orElseThrow(() -> new UsernameNotFoundException(username));
+
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPasswordHash(),
+                    AuthorityUtils.createAuthorityList(user.getRole()));
+    }
+}
+```
+
+The `loadUserByUsername` method will need to return a `User` object based on the username provided by the paramater or throw an `UsernameNotFoundException` exception if no user is found.
 
 {: .important-title }
 
@@ -689,18 +732,6 @@ The `permitAll()` method call _will permit anyone to access the these paths_. Th
 >       });
 >   }, []);
 >   ```
->
->   When we render the "Add a reading recommendation" link we can use the following logic to hide it:
->
->   ```jsx
->   {
->     currentUser && (
->       <a class="btn btn-primary" href={`/recommendations/add`}>
->         Add a reading recommendation
->       </a>
->     );
->   }
->   ```
 
 {: .important-title }
 
@@ -710,27 +741,11 @@ The `permitAll()` method call _will permit anyone to access the these paths_. Th
 >
 > Put the business logic of "creating a reading recommendation for a user" into the `createReadingRecommendation` method implemented in exercise 8. These changes will probably break the tests implemented in exercise 9. Fix the existing tests, but you don't have to implement any new tests.
 >
-> The "Edit" link should only be visible in the reading recommendation list if the user has added the reading recommendation.
+> The "Edit" link and the "Delete" button should only be visible in the reading recommendation list if the user has added the reading recommendation.
 >
 > Tips for implementing the tasks:
 >
 > - See how the `Message` entity is associated with the `User` entity in the [MessageService](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/service/MessageService.java) class in the authentication-example project
-> - You can use the following logic to hide the "Edit" link in the frontend application:
->
->   ```jsx
->   <td>
->     {currentUser &&
->       recommendation.user &&
->       currentUser.id === recomendation.user.id && (
->         <a
->           class="btn btn-secondary"
->           href={`/recommendations/${recommendation.id}/edit`}
->         >
->           Edit
->         </a>
->       )}
->   </td>
->   ```
 
 {: .important-title }
 
@@ -784,43 +799,3 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 {: .warning }
 
 > Make sure that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint 3 deadline on {{site.sprint_3_deadline}}.
-
-## ⭐ Bonus user story
-
-{: .note }
-
-> This user story is optional. If you have implemented all other user stories, feel free to implement this one.
-
-The Product Owner came up with a feature for the application if we run out of work during the Sprint:
-
-> "The category filter on the reading recommendation list is very useful for finding the right things to read. But it would even more useful if a user would be able to filter reading recommendations based on their title or description.
->
-> There could be a search field in the reading recommendation list page. If either the title or the description of a reading recommendation contains the keyword typed in to the field, the reading recommendation would be listed. If there's no keyword, all the reading recommendations would be listed."
->
-> -- The Product Owner
-
-{: .important-title }
-
-> Bonus exercise
->
-> Come up with a user story based on the Product Owner's description and add it to the "Product Backlog" board in Trello. Then, split the user story into tasks and add those to the "Sprint 2 Backlog" board in Trello. Finally, implement the tasks.
->
-> The implementation should look roughly something like this:
->
-> ![](/assets/sprint-3-user-story-bonus.png)
->
-> If you have trouble with the implementation, here's a high-level idea of the implementation:
->
-> ```jsx
-> // ...
-> const [recommendations, setRecommendations] = useState([]);
-> const [keyword, setKeyword] = useState("");
->
-> let filteredRecommendations = recommendations;
->
-> if (keyword) {
->   filteredRecommendations = recommendations.filter(/* ... */);
-> }
-> ```
->
-> Check the documentation for the [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method to learn how to filter arrays.
