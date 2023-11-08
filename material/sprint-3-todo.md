@@ -192,9 +192,13 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > -- The Product Owner
 
+After some discussion the Scrum Team came up with the following user stories:
+
 1. As an anonymous user I want to register an account so that I can manage my personal reading recommendations
 2. As an anonymous user I want to sign in so that I can manage my personal reading recommendations
 3. As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations
+
+The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
 
 For the _first user story_, the Developers came up with the following tasks:
 

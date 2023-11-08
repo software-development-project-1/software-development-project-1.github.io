@@ -95,7 +95,7 @@ Once we have "calibrated" the worth of story points we can start the actual plan
 
 {: .note }
 
-> In a traditional planning poker session, each team member will have a card for different story points (for example card for 1, 2, 3, 5 and 8 story points). Team members are in a round table revealing their cards. Because the session is a bit like a poker game, the "planning poker" name is suitable.
+> In a traditional planning poker session, each team member will have a card for different story points (for example card for 1, 2, 3, 5 and 8 story points). Team members are sitting in a round table revealing their cards. Because the session is a bit like a poker game, the "planning poker" name is suitable.
 
 ## Sprint 2 planning
 
@@ -784,7 +784,24 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 
 ## Cross-Origin Resource Sharing (CORS)
 
-Coming soon!
+In our case the frontend application's JavaScript file is served by the backend from URL of form `http://localhost:8080/frontend/renderRecommendationList-RANDOM_HASH.js`. The frontend application is sending requests using the `fetch` function to URLs that start with `http://localhost:8080`. That is, the JavaScript file is sending request to the _same origin_, which is `http://localhost:8080`.
+
+That's not case all the time. For example a Vite development server is serving the JavaScript files from an URL that starts with `http://localhost:5173`. If we would send a request from a frontend application served from the Vite development server to our backend, we would send a request to a _different origin_. These kind of requests are called _cross-orgin_ requests.
+
+Web browsers don't allow `fetch` functions to send cross-origin requests by default. This is called the Same-origin Policy. The reason for this is that cross-origin requests can cause [security issues](https://medium.com/@ehayushpathak/security-risks-of-cors-e3f4a25c04d7). We can however allow certain (or every) cross-origin request by using [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (CORS).
+
+The idea of CORS is that the web browser "asks" the backend if cross-origin request from a certain origin is allowed by sending a special HTTP request. If backend allows the requests, then the web browser will send it. In a Spring Boot application we can use the [@CrossOrigin](https://spring.io/guides/gs/rest-service-cors/) annotation in the class or method level to allow cross-origin requests to certain or all paths of controller.
+
+For example we can allow cross-origin requests from `http://localhost:5173` origin for all `ReadingRecommendationRestController` method paths in the following way:
+
+```java
+@RestController
+@RequestMapping("/api/messages")
+@CrossOrigin(origins="http://localhost:5173")
+public class MessageRestController {
+  // ...
+}
+``` 
 
 ## The .gitignore file
 
