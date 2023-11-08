@@ -73,7 +73,18 @@ The "Scrum Artifacts" section of the [Scrum Guide](https://scrumguides.org/scrum
 
 ### Product backlog
 
-The _Product Backlog_ is a prioritized list of requirements for the developed software. Commonly these requirements are documented as user stories. The Product Backlog is altered constantly during the Sprints, mostly during the Sprint Planning event. For example, new user stories are added, old ones are edited or their priority is changed. Once a user story is implemented during the Sprint and the implementation is accepted by the Product Owner, the user story can be removed from the Product Backlog.
+The _Product Backlog_ is a _prioritized_ list of requirements for the developed software. Commonly these requirements are documented as user stories. The Product Backlog is altered constantly during the Sprints, mostly during the Sprint Planning event. For example, new user stories are added, old ones are edited or their priority is changed. 
+
+The Product Owner's responsibility is to prioritize the user stories in the Product Backlog, but the whole Scrum Team participates in the definition of the user stories. The Product Owner should also make sure that the user stories implemented during a Sprint match the stakeholder's requirements. Once a user story is implemented during a Sprint and the implementation is accepted by the Product Owner, the user story can be removed from the Product Backlog.
+
+A good Product Backlog has the [DEEP](https://www.romanpichler.com/blog/make-the-product-backlog-deep/) characteristics:
+
+- _Detailed appropriately_: the high-priority user stories (at the top of the Product Backlog) are described in a more detail than the low-priority user stories. This is because the high-priority user stories are the ones that will be implemented soon, maybe during the upcoming Sprint. That is why it is important that these user stories fulfill the INVEST criteria and are ready for the implementation.
+- _Estimated_: the user stories in the Product Backlog should be estimated. That is, the Developers have considered the efforts required to implement each user story and they have communicated it with the Product Owner. Having a rough estimate for the user stories helps the Product Owner in the priorization.
+- _Emergent_: the Product Backlog evolves constantly: old user stories are completed, new user stories emerge and priorization changes
+- _Prioritized_: all user stories are in a prioritized order in the Product Backlog. The user stories at the top of the Product Backlog are the ones that Product Owner considers to produce most value for the stakeholders.
+
+We aren't estimating the user stories during the first Sprint. That's because estimation is especially hard at the beginning of the project. We will discuss more about estimation during the second Sprint. 
 
 {: .note }
 
@@ -87,7 +98,7 @@ During Sprint Planning event, the Developers decide the amount of user stories t
 
 {: .note }
 
-> Deciding the amount of user stories for the Sprint can be quite tricky at first. It is hard to _estimate_ the amount of time it takes to implement a certain user story. But, the estimation gets easier in time.
+> Deciding the amount of user stories for the Sprint can be quite tricky at first. It is hard to _estimate_ the amount of effort it takes to implement a certain user story. But, the estimation gets easier in time.
 
 The Sprint Backlog should represent the work needed to be done during the Sprint and the progress of that work. That is, the following points should be seen from the Sprint Backlog:
 
@@ -272,6 +283,8 @@ After some discussion the Scrum Team came up with the following user stories:
 3. As a user I want to be able to edit a reading recommendation so that I can change its information
 4. As a user I want to be able to delete a reading recommendation so that I can get rid of recommendations I don't need
 
+The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
+
 For the _first user story_, the Developers came up with the following tasks:
 
 1. Add a ReadingRecommendation JPA entity class with id, title, link and description attributes, and a ReadingRecommendationRepository JPA repository class
@@ -321,7 +334,7 @@ These are the user stories, that you will be working on as a team during this Sp
 
 > Exercise 13
 >
-> 1. Add these four user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
+> 1. Add these four user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board. Make sure that the user stories are _prioritized_ (the "P" of DEEP). That is, they are listed in the order that the Product Owner described in the Sprint Planning.
 > 2. Add the tasks to the "Sprint 1 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
 > 3. Once you start working on task, assign the task to you. This can be done by first clicking on the card, then clicking the "Members" button below the "Add to card" and choosing your Trello account. A task can also have multiple members. The important thing is that each task that is not in the "To do" state should have at least one member assigned to it.
 
