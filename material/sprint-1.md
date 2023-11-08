@@ -278,7 +278,7 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 
 After some discussion the Scrum Team came up with the following user stories:
 
-1. As a user I want to add a reading recommendation so that I can build a collection of recommendations
+1. As a user I want to add a reading recommendation so that I can gather a collection of recommendations
 2. As a user I want to list the added reading recommendations so that I can find interesting things to read
 3. As a user I want to be able to edit a reading recommendation so that I can change its information
 4. As a user I want to be able to delete a reading recommendation so that I can get rid of recommendations I don't need
