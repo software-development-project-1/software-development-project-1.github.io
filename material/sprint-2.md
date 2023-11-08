@@ -113,7 +113,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > To better organize the reading recommendations, it would be useful to be able to add different categories, like "Programming tutorials" or "Video game news". User should be able to add a category using a form. The form should only have a field for the category name. The user should not be able to add a category with a blank name or a name that already exists. There should also be a page that lists all the added categories and has a "Add a category" link that takes the user to the form.
 >
-> After adding a category, the user should be able to select a category from a dropdown menu while adding a recommendation. The dropdown menu should also have an "Uncategorized" option to leave the reading recommendation uncategorized. The category should be displayed on the reading recommendation list.
+> After adding a category, the user should be able to select a category from a dropdown menu while adding a recommendation. The dropdown menu should also have an "Uncategorized" option to leave the reading recommendation uncategorized. Once a reading recommendation has been added, the user should be able to change the category in the edit form. The reading recommendation's category should be displayed on the reading recommendation list.
 >
 > In the reading recommendation list, the user should be able to filter the recommendations based on the category. For example if user chooses a "Programming tutorials" category from a dropdown menu, only the recommendations in that category will be listed. The dropdown menu should also have an "Any category" option to list all the reading recommendations."
 >
@@ -228,9 +228,9 @@ At this point it might sense to distribute the workload a bit instead of working
 >
 > ![](/assets/sprint-2-user-story-4-1.png)
 >
-> ![](/assets/sprint-2-user-story-4-2.png)
+> ![](/assets/sprint-2-user-story-4-3.png)
 >
-> The select menu should list the added categories. Addition to the added categories, the user should be able to select the "Uncategorized" option, which means that the recommendation doesn't have a category. The reading recommendation's category should be displayed on the reading recommendation list.
+> ![](/assets/sprint-2-user-story-4-2.png)
 >
 > Tips for implementing the tasks:
 >

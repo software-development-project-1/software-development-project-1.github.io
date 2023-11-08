@@ -739,13 +739,9 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 >
 > Implement the tasks of the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations".
 >
-> Put the business logic of "creating a reading recommendation for a user" into the `createReadingRecommendation` method implemented in exercise 8. These changes will probably break the tests implemented in exercise 9. Fix the existing tests, but you don't have to implement any new tests.
+> Put the business logic of "creating a reading recommendation for a user" into the `createReadingRecommendation` method implemented in exercise 8. These changes will probably break the tests implemented in exercise 9. Fix the existing tests, and _add a new test_, which tests that the `createReadingRecommendation` methods associates the reading recommendation with the provided user.
 >
 > The "Edit" link and the "Delete" button should only be visible in the reading recommendation list if the user has added the reading recommendation.
->
-> Tips for implementing the tasks:
->
-> - See how the `Message` entity is associated with the `User` entity in the [MessageService](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/service/MessageService.java) class in the authentication-example project
 
 {: .important-title }
 

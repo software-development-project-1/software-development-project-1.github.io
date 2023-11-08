@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cool Reads</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Cool Reads</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Recommendations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Categories</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container my-3">
+      <h1>Edit "What is ScrumBut?"</h1>
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Title</label>
+          <input type="text" class="form-control" value="What is ScrumBut?" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Link</label>
+          <input
+            type="text"
+            class="form-control"
+            value="https://www.scrum.org/resources/what-scrumbut"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <textarea class="form-control">
+Definition of ScrumBut with examples</textarea
+          >
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Category</label>
+          <select class="form-select">
+            <option value="0">Uncategorized</option>
+            <option value="1">Scrum articles</option>
+            <option value="2">Programming tutorials</option>
+            <option value="3">Video game news</option>
+            <option value="4">News articles on cats</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary">Add</button>
+        <a href="#" class="btn btn-secondary">Cancel</a>
+      </form>
+    </div>
+  </body>
+</html>
