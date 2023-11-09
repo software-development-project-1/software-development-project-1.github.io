@@ -161,7 +161,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 3
 >
-> Create a Sprint Backlog project for the second Spring in GitHub Projects. Name the project "Sprint 2 Backlog". Use the default project columns, similar as for the board as in the Sprint 1 Backlog.
+> Create a Sprint Backlog project for the second Spring in GitHub Projects. Name the project "Sprint 2 Backlog". Use the default project columns, similar as for the board as in the Sprint 1 Backlog. Add a "Sprint 2 Backlog" link for the project to the "Backlogs" section in the `README.md` file.
 
 {: .important-title }
 
