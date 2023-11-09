@@ -17,7 +17,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 ## Sprint assesment
 
-All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 7. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
+All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 2. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
 The Sprint assesment is done based on the exercises 1-20. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
@@ -188,7 +188,7 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 
 ## GitHub Projects
 
-[GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) is a platform for managing taskboards. We will be using it for managing the user stories in our Product Backlog and the tasks in the Sprint Backlogs.
+[GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) is a platform for managing taskboards. We will be using it for managing the user stories in our Product Backlog and the tasks in our Sprint Backlogs.
 
 Taskboards in GitHub Projects are called _projects_. Let's create a project for our Product Backlog for the user stories of our project. Open your repository in GitHub and click the "Projects" tab. Then, click the green "New project" button on the right. Click the arrow next to the button, if the button label is different. This should open a dialog. From the left side of the dialog, choose "Board". This determines what the project will look like and you can change it later. Name the project "Product Backlog". Finally, click the "Create" button to create the project.
 

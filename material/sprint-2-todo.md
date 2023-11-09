@@ -75,9 +75,9 @@ For example let's consider these three user stories from the previous Sprint:
 2. As a user I want to list the added reading recommendations so that I can find interesting things to read
 3. As a user I want to be able to edit a reading recommendation so that I can change its information
 
-Some Developer could estimate that the implementation of the _first user story_ requires the double amount of effort compared to the implementation of the _second user story_. Also, some could estimate that the implementation of the _first_ and the _third user story_ require somewhat the same amount of effort.
+Some team member could estimate that the implementation of the _first user story_ requires the double amount of effort compared to the implementation of the _second user story_. Also, some could estimate that the implementation of the _first_ and the _third user story_ require somewhat the same amount of effort.
 
-In Scrum, the user story estimation is commonly provided in _story points_. A story point isn't based on time (working hours) required for the implementation. The Scrum Team will define themselves what amount of effort one story point represents so that their estimations are "calibrated". Based on our experience on the previous Sprint we could say, for example that the _second user story_ is worth _2 story points_. This would mean that the estimate suggested above would estimate that the _first_ and the _third user stories_ are worth _4 story points_ (double the amount effort). Estimates from a different Developer _could be different_ but at least they are comparing the effort with the same user story.
+In Scrum, the user story estimation is commonly provided in _story points_. A story point isn't based on time (working hours) required for the implementation. The Scrum Team will define themselves what amount of effort one story point represents so that their estimations are "calibrated". Based on our experience on the previous Sprint we could say, for example that the _second user story_ is worth _2 story points_. This would mean that the estimate suggested above would estimate that the _first_ and the _third user stories_ are worth _4 story points_ (double the amount effort). Estimates from a different team members _could be different_ (and probably are) but at least they are comparing the effort with the same user story.
 
 During estimation the Developers usually have a different view of how many story points a certain user story is worth. However, in the end they need to come up with an single estimate for each user story that _everyone agrees on_. There are different techniques to facilitate the estimation so that the agreement can be eventually accomplished. One such technique is the _planning poker_.
 
@@ -94,7 +94,7 @@ Once we have "calibrated" the worth of a story point we can start the actual pla
 2. Everyone will consider _by themself_ (no dicussion) how many story points the user story is worth. The estimate needs to be 1, 2, 3, 5 or 8 story points. Compare the effort to the user story "As a user I want to list the added reading recommendations so that I can find interesting things to read" which is worth 2 story points
 3. Everyone will write down their story point estimate.
 4. Once everyone is ready, everyone will show their estimate at the same time
-5. If there's more than one point difference in the least and most amount of story points in the suggested estimates, discuss the implementation further and repeat the steps 1 - 5 until you have an agreement.
+5. If there's more than one point difference in the least and most amount of story points in the suggested estimates, discuss the implementation further to find out why there is such difference in the estimates. Then, repeat the steps 1 - 5 until you have an agreement.
 6. Once the team has agreed on the user story estimate for the user story, the estimate should be added to the Product Backlog. We can for example add a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) with the story points for the user story related issue.
 
 {: .note }
@@ -167,13 +167,13 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 4
 >
-> Come up with tasks for the third user story, "As a user I want to see a list of categories so that I know which categories exist". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 8 to get an idea what the implementation could look like.
+> Come up with tasks for the third user story, "As a user I want to see a list of categories so that I know which categories exist". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 10 to get an idea what the implementation could look like.
 
 {: .important-title }
 
 > Exercise 5
 >
-> Come up with tasks for the fourth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 9 to get an idea what the implementation could look like.
+> Come up with tasks for the fourth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get an idea what the implementation could look like.
 
 {: .important-title }
 
