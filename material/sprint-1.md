@@ -19,7 +19,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 7. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-20. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-21. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Sprint Planning
 
@@ -73,7 +73,7 @@ The "Scrum Artifacts" section of the [Scrum Guide](https://scrumguides.org/scrum
 
 ### Product backlog
 
-The _Product Backlog_ is a _prioritized_ list of requirements for the developed software. Commonly these requirements are documented as user stories. The Product Backlog is altered constantly during the Sprints, mostly during the Sprint Planning event. For example, new user stories are added, old ones are edited or their priority is changed. 
+The _Product Backlog_ is a _prioritized_ list of requirements for the developed software. Commonly these requirements are documented as user stories. The Product Backlog is altered constantly during the Sprints, mostly during the Sprint Planning event. For example, new user stories are added, old ones are edited or their priority is changed.
 
 The Product Owner's responsibility is to prioritize the user stories in the Product Backlog, but the whole Scrum Team participates in the definition of the user stories. The Product Owner should also make sure that the user stories implemented during a Sprint match the stakeholder's requirements. Once a user story is implemented during a Sprint and the implementation is accepted by the Product Owner, the user story can be removed from the Product Backlog.
 
@@ -84,7 +84,7 @@ A good Product Backlog has the [DEEP](https://www.romanpichler.com/blog/make-the
 - _Emergent_: the Product Backlog evolves constantly: old user stories are completed, new user stories emerge and priorization changes
 - _Prioritized_: all user stories are in a prioritized order in the Product Backlog. The user stories at the top of the Product Backlog are the ones that Product Owner considers to produce most value for the stakeholders.
 
-We aren't estimating the user stories during the first Sprint. That's because estimation is especially hard at the beginning of the project. We will discuss more about estimation during the second Sprint. 
+We aren't estimating the user stories during the first Sprint. That's because estimation is especially hard at the beginning of the project. We will discuss more about estimation during the second Sprint.
 
 {: .note }
 
@@ -120,55 +120,7 @@ Sprint Backlog is commonly organized as taskboard that has columns for different
 
 ![Sprint Backlog](/assets/sprint-backlog-example.png){: width="600" }
 
-Taskboards are either physical taskboards, for example whiteboards in an office, or virtual taskboards. These days, it is quite common that a virtual taskboard are used as Product Backlogs and Sprint Backlogs. During this we will be using virtual taskboard platform, called [Trello](https://trello.com).
-
-## Managing backlogs in Trello
-
-[Trello](https://trello.com) is an online platform for managing virtual taskboards. We will be using Trello to manage our project's Product Backlog and Sprint Backlogs.
-
-{: .important-title }
-
-> Exercise 1
->
-> Create a [Trello](https://trello.com) account.
-
-We can create a new Trello _board_ by clicking the "Create" button in the navigation bar and choosing "Create Board" from the menu. Boards have _lists_ that can hold _cards_. We can add a new list by opening a board and clicking the "Add a list" button on the board. We can change the order of the lists by dragging them around the board. We can add a card for a list by clicking the "Add a card" button on a list. Once added, we can move the cards around the board by dragging them.
-
-We can create separate boards for Product Backlog and Sprint Backlogs in Trello. Cards can be used as user stories and tasks. Lists can be used to determine states for user stories and tasks, such as "Not started", "In progress" and "Done" used in an example above.
-
-Check the [Learn Trello board basics](https://trello.com/guide/trello-101) guide to learn more about boards.
-
-{: .important-title }
-
-> Exercise 2
->
-> _One of the team members_ should create a [workspace](https://support.atlassian.com/trello/docs/what-are-trello-workspaces/) for the project in Trello. Once logged in, a workspace can be added by clicking the "Create" button in the navigation bar and choosing "Create Workspace" from the menu. Once the workspace is created, invite other team members to the workspace. Also make sure to invite the teacher ({{site.teacher_email}}) to the workspace.
-
-{: .important-title }
-
-> Exercise 3
->
-> Create a Product Backlog board in Trello. Make sure to choose created workspace as the board's workspace from the dropdown menu. Name Product Backlog board "Product backlog". The Product Backlog board should have these three lists from left to right:
->
-> - "Backlog" for the user stories that are not on any Sprint yet
-> - "In sprint" for the user stories that are chosen for the current Sprint
-> - "Done" for the user stories that have been completed
-
-{: .important-title }
-
-> Exercise 4
->
-> Create a Sprint Backlog board for the first Sprint in Trello. Name the Sprint Backlog board "Sprint 1 backlog". The Sprint Backlog board should have these three lists from left to right:
->
-> - "To do" for tasks that haven't been started yet
-> - "In progress" for tasks that somebody is working on
-> - "Done" for the tasks that have been completed
-
-{: .important-title }
-
-> Exercise 5
->
-> Decide how you will communicate outside the weekly sessions. Choose a communication platform, such as Teams, Telegram or Discord. Also schedule at least one weekly time slot when you work on the exercises together outside the weekly sessions. If possible, meet physically on the campus or some other location.
+Taskboards are either physical taskboards, for example whiteboards in an office, or virtual taskboards. These days, it is quite common that a virtual taskboard are used as Product Backlogs and Sprint Backlogs. [Jira](https://www.atlassian.com/software/jira) and [GitHub projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) are perhaps the most widely used taskboard platforms in the industry. During this course we will be using _GitHub projects_ because it integrates very well with our GitHub workflow. But, before we can start using GitHub projects, we need to create a repository for our project.
 
 ## GitHub organizations
 
@@ -234,6 +186,36 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 >
 > Repeat the steps 7 and 8 for each team member so that everyone can solve one merge conflict.
 
+## GitHub projects
+
+[GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) is a platform for managing taskboards. We will be using it for managing the user stories in our Product Backlog and the tasks in the Sprint Backlogs.
+
+Taskboards in GitHub Projects are called _projects_. Let's create a project for our Product Backlog for the user stories of our project. Open your repository in GitHub and click the "Projects" tab. Then, click the green "New project" button on the right. Click the arrow next to the button, if the button label is different. This should open dialog. From the left side of the dialog, choose "Board". This determines what the project will look like and you can change it later. Name the project "Product Backlog". Finally, click the "Create" button to create the project.
+
+We'll now have a project with the default columns: "Todo", "In progress" and "Done". Let's change the column labels by clicking the three dots at the top-right corner of the column. Name the columns in the following manner from left to right:
+
+- "Backlog" for the user stories that are not on any Sprint yet
+- "In sprint" for the user stories that are chosen for the current Sprint
+- "Done" for the user stories that have been completed
+
+Now, let's make sure that our project is public. Click the project's name and the project's settings should open. Scroll down to "Danger zone" section and choose "Visibility" as "Public" from the dropdown menu.
+
+The project will be empty for now, but we will add some user stories for the project after the Sprint Planning event.
+
+{: .important-title }
+
+> Exercise 10
+>
+> Create the "Product Backlog" project for the project as instructed above. Make sure that the project is public.
+
+Every Sprint should have a separate Sprint Backlog for the Sprint's tasks. Let's create a project for the Sprint 1 Backlog. Create a project similarly as with the Product Backlog project. Name the project "Sprint 1 Backlog". We can use the default "Todo", "In progress" and "Done" columns for the Sprint Backlog project. Make sure that project is pulic as with the Sprint Backlog project. The project will be empty for now, but we will add some tasks for the project after the Sprint Planning event.
+
+{: .important-title }
+
+> Exercise 11
+>
+> Create the "Sprint 1 Backlog" project for the project as instructed above. Make sure that the project is public.
+
 ## The README file
 
 The `README.md` file we worked with in the previous exercise has a special meaning in software development projects. When a software developer starts exploring a project, the first thing they should do is to look for the README file. This file should have all the relevant information about the project, for example:
@@ -249,7 +231,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 12
 >
 > Replace the current contents of the repository's `README.md` file with the following information using Markdown:
 >
@@ -330,26 +312,61 @@ These are the user stories, that you will be working on as a team during this Sp
 >
 > Come up with tasks for the fourth user story, "As a user I want to be able to delete a reading recommendation so that I can get rid of recommendations I don't need". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 to get an idea what the implementation could look like.
 
+## GitHub issues
+
+[GitHub issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are used to track ideas, feedback, tasks, or bugs for work on GitHub. Open source projects commonly use issues for feature suggestions and bug reports (something is not working as inteded). [Here](https://github.com/facebook/react/issues) is an example of issues in the React library's repository. We will use issues to organize our user stories, tasks and bug reports.
+
+Before we start creating issues, let's add some [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) so that we can better organize our issues. Open your repository in GitHub and click the "Issues" tab. On the right, click the "Labels" button. Let's add the following labels by clicking the "New label" button:
+
+- "user story" label indicates that the issue is a user story
+- "task" label indicates that the issue is a task
+
+Then, let's create a label for each user story so that we can better organize the tasks. Create a label with a short description of each user story, for example "add recommendation" and "list recommendations".
+
 {: .important-title }
 
 > Exercise 13
 >
-> 1. Add these four user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board. Make sure that the user stories are _prioritized_ (the "P" of DEEP). That is, they are listed in the order that the Product Owner described in the Sprint Planning.
-> 2. Add the tasks to the "Sprint 1 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
-> 3. Once you start working on task, assign the task to you. This can be done by first clicking on the card, then clicking the "Members" button below the "Add to card" and choosing your Trello account. A task can also have multiple members. The important thing is that each task that is not in the "To do" state should have at least one member assigned to it.
+> Create the "user story", "task" labels and a label for each user story as described above.
+
+Now that we have the labels, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "As a user I want to add a reading recommendation so that I can gather a collection of recommendations". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose labels "user story" and "add recommendation", which indicate that this issue is related to a certain user story. Then, click "Projects" and choose "Product Backlog". This will add the issue to the Product Backlog project. Finally, click the "Submit a new issue" button to create the issue.
+
+Let's open the "Projects" tab and open the Sprint Backlog project. We should see that the issue we created is now in the project. We can move the issue to column by dragging the issue card. This will change the status of the issue. Let's move the issue we created to the "In Sprint" column, which indicates that this user story is in the current Sprint.
+
+{: .important-title }
+
+> Exercise 14
+>
+> Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column. Make sure that the user stories are _prioritized_ (the "P" of DEEP). That is, they are listed in the project in the order that the Product Owner described in the Sprint Planning.
+
+{: .important-title }
+
+{: .important-title }
+
+> Exercise 15
+>
+> Create an issue for each _task_. If the task description is long, use a short version of the description as the issue title and add the full description as the issue description. Add a label "task" and the task related user story's label for each issue. Add the issues to the Sprint 1 Backlog project and move them to the "Todo" column.
+
+Once you start working on task, _assign_ the task related issue to you. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu.
+
+{: .note }
+> You can easily find the issues assigned to you by opening the "Issues" tab and choosing your GitHub account from the "Assignee" dropdown menu. 
+
+When you complete a task, you should _close_ the task related issue. This can be done by opening the issue and clicking the "Close issue" button at the bottom of the page.
 
 {: .highlight }
 
 > While working on the tasks, keep the Sprint Backlog up-to-date:
 >
-> - When you start working on a task, mark it assigned to you and move it to the "In progress" state
-> - When you complete a task, move it to the "Done" state
+> - When you start working on a task, mark it assigned to you and move it to the "In progress" state in the project
+> - When you complete a task, move it to the "Done" state in the project. Also remember to _close_ the task related issue
 >
 > Use the Sprint Backlog to track the Sprint progress. Always start a team meeting by looking at the Sprint Backlog.
 
-{: .note }
+{: .highlight }
 
-> "What's the progress of user story X?". This is a common question that the Sprint backlog should answer with a quick glance. We should be able to quickly see what's the state of each task of a user story and who is working on each task. One way to specify the user story of a task is to add user story specific [label](https://blog.trello.com/taco-tuesdays-learning-to-love-labels) for each tasks in the Sprint Backlog. The label could have a short description of the user story, such as "Add recommendation" or "List recommendations".
+> Don't close the user story related issues before the Sprint Review. The Product Owner needs to accept the user stories before they are completed.
+
 
 ## Thymeleaf page layouts
 
@@ -406,7 +423,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 16
 >
 > Implement the tasks of the first user story, "As a user I want to add a reading recommendation so that I can build a collection of reading recommendations".
 >
@@ -426,7 +443,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 17
 >
 > Implement the tasks of the second user story, "As a user I want to list the added reading recommendations so that I can easily find interesting things to read".
 >
@@ -438,7 +455,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 18
 >
 > Implement the tasks of the third user story, "As a user I want to be able to edit a reading recommendation so that I can change its information".
 >
@@ -452,7 +469,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 19
 >
 > Implement the tasks of the fourth user story, "As a user I want to be able to delete a reading recommendation so that I can get rid of recommendations I don’t need".
 >
@@ -503,7 +520,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 20
 >
 > Write a usage guide on _how to start your application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required JDK version for the project.
 
@@ -519,7 +536,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 21
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -531,7 +548,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 22
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 >
