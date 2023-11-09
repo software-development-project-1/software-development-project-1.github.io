@@ -333,6 +333,8 @@ Now that we have the labels, let's create an issue for each user story. Click th
 
 Let's open the "Projects" tab and open the Sprint Backlog project. We should see that the issue we created is now in the project. We can move the issue to column by dragging the issue card. This will change the status of the issue. Let's move the issue we created to the "In Sprint" column, which indicates that this user story is in the current Sprint.
 
+By default we can't see the labels on the issue cards. We can right click on the arrow next to "View 1" below the project name and click "Fields" under "Configuration". There, check "Labels" and finally click the green "Save" button to save the configuration.
+
 {: .important-title }
 
 > Exercise 14
