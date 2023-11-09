@@ -334,7 +334,7 @@ Then, let's create a label for each user story so that we can better organize th
 
 > Exercise 11
 >
-> Create the "user story", "task" labels and a label for each user story as described above.
+> Create the "user story" and "task" labels and a label for each user story as described above.
 
 Now that we have the labels, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "As a user I want to add a reading recommendation so that I can gather a collection of recommendations". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose labels "user story" and "add recommendation", which indicate that this issue is related to a certain user story. Then, click "Projects" on the right and choose "Product Backlog". This will add the issue to the Product Backlog project. Finally, click the "Submit a new issue" button to create the issue.
 
