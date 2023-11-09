@@ -186,13 +186,13 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 >
 > Repeat the steps 7 and 8 for each team member so that everyone can solve one merge conflict.
 
-## GitHub projects
+## GitHub Projects
 
 [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) is a platform for managing taskboards. We will be using it for managing the user stories in our Product Backlog and the tasks in the Sprint Backlogs.
 
-Taskboards in GitHub Projects are called _projects_. Let's create a project for our Product Backlog for the user stories of our project. Open your repository in GitHub and click the "Projects" tab. Then, click the green "New project" button on the right. Click the arrow next to the button, if the button label is different. This should open dialog. From the left side of the dialog, choose "Board". This determines what the project will look like and you can change it later. Name the project "Product Backlog". Finally, click the "Create" button to create the project.
+Taskboards in GitHub Projects are called _projects_. Let's create a project for our Product Backlog for the user stories of our project. Open your repository in GitHub and click the "Projects" tab. Then, click the green "New project" button on the right. Click the arrow next to the button, if the button label is different. This should open a dialog. From the left side of the dialog, choose "Board". This determines what the project will look like and you can change it later. Name the project "Product Backlog". Finally, click the "Create" button to create the project.
 
-We'll now have a project with the default columns: "Todo", "In progress" and "Done". Let's change the column labels by clicking the three dots at the top-right corner of the column. Name the columns in the following manner from left to right:
+We now have a project with the default columns: "Todo", "In progress" and "Done". The column will determine the status of the user story. Let's change the column labels by clicking the three dots at the top-right corner of the column. Name the columns in the following manner from left to right:
 
 - "Backlog" for the user stories that are not on any Sprint yet
 - "In sprint" for the user stories that are chosen for the current Sprint
@@ -208,7 +208,7 @@ The project will be empty for now, but we will add some user stories for the pro
 >
 > Create the "Product Backlog" project for the project as instructed above. Make sure that the project is public.
 
-Every Sprint should have a separate Sprint Backlog for the Sprint's tasks. Let's create a project for the Sprint 1 Backlog. Create a project similarly as with the Product Backlog project. Name the project "Sprint 1 Backlog". We can use the default "Todo", "In progress" and "Done" columns for the Sprint Backlog project. Make sure that project is pulic as with the Sprint Backlog project. The project will be empty for now, but we will add some tasks for the project after the Sprint Planning event.
+Each Sprint should have a separate Sprint Backlog for the Sprint's tasks. Let's create a project for the Sprint 1 Backlog. Create a project similarly as with the Product Backlog project. Name the project "Sprint 1 Backlog". We can use the default "Todo", "In progress" and "Done" columns for the project. Make sure that project is pulic as we did with the Sprint Backlog project. The project will be empty for now, but we will add some tasks for the project after the Sprint Planning event.
 
 {: .important-title }
 
@@ -335,7 +335,7 @@ Then, let's create a label for each user story so that we can better organize th
 >
 > Create the "user story", "task" labels and a label for each user story as described above.
 
-Now that we have the labels, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "As a user I want to add a reading recommendation so that I can gather a collection of recommendations". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose labels "user story" and "add recommendation", which indicate that this issue is related to a certain user story. Then, click "Projects" and choose "Product Backlog". This will add the issue to the Product Backlog project. Finally, click the "Submit a new issue" button to create the issue.
+Now that we have the labels, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "As a user I want to add a reading recommendation so that I can gather a collection of recommendations". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose labels "user story" and "add recommendation", which indicate that this issue is related to a certain user story. Then, click "Projects" on the right and choose "Product Backlog". This will add the issue to the Product Backlog project. Finally, click the "Submit a new issue" button to create the issue.
 
 {: .note }
 > You can easily find the issues related to certain user story by opening the "Issues" tab and choosing the user story label from the "Label" dropdown menu. 
