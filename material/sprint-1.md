@@ -239,6 +239,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 > 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
 > 3. Below the description, add a subheading "Team members" and below that add a [list](https://www.markdownguide.org/basic-syntax#lists-1) of each team member's name.
 > 4. Each team member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
+> 5. Below the "Team members" section, add a subheading "Backlogs" and below that add [list](https://www.markdownguide.org/basic-syntax#lists-1) of "Product Backlog" and "Sprint 1 Backlog" links. The link should point to the backlog's project (open the backlog's project in GitHub and cope the URL from the web browser's address bar)
 >
 > Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 
