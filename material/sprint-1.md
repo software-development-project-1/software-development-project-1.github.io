@@ -19,7 +19,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 7. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-21. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-20. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Sprint Planning
 
@@ -136,7 +136,7 @@ Once the organization is created, a team member can be invited by clicking the "
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 1
 >
 > _One of the team members_ should create a GitHub organization for the project. Once the organization is created, invite other team members to the organization. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team.
 
@@ -152,13 +152,13 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 2
 >
 > _One of the team members_ should fork the [example-project repository]({{site.example_project_link}}). Choose the "Owner" as the organization you created previously and give the repository a descriptive name, such as "cool-reads" and a description. The forked repository will become your project's repository where you start working on the project.
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 3
 >
 > Each team member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example-project repository. _Remember to use the HTTPS address_ of the GitHub repository with the command. See the [Git instructions](/git#githubs-workflow) if you have trouble.
 >
@@ -168,7 +168,7 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 4
 >
 > Once each team member has the repository on their local computer, do the following:
 >
@@ -204,7 +204,7 @@ The project will be empty for now, but we will add some user stories for the pro
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 5
 >
 > Create the "Product Backlog" project for the project as instructed above. Make sure that the project is public.
 
@@ -212,7 +212,7 @@ Every Sprint should have a separate Sprint Backlog for the Sprint's tasks. Let's
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 6
 >
 > Create the "Sprint 1 Backlog" project for the project as instructed above. Make sure that the project is public.
 
@@ -231,7 +231,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 7
 >
 > Replace the current contents of the repository's `README.md` file with the following information using Markdown:
 >
@@ -302,13 +302,19 @@ These are the user stories, that you will be working on as a team during this Sp
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 8
+>
+> Decide how you will communicate outside the weekly sessions. Choose a communication platform, such as Teams, Telegram or Discord. Also schedule at least one weekly time slot when you work on the exercises together outside the weekly sessions. If possible, meet physically on the campus or some other location.
+
+{: .important-title }
+
+> Exercise 9
 >
 > Come up with tasks for the third user story, "As a user I want to be able to edit a reading recommendation so that I can change its information". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 to get an idea what the implementation could look like.
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 10
 >
 > Come up with tasks for the fourth user story, "As a user I want to be able to delete a reading recommendation so that I can get rid of recommendations I don't need". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 to get an idea what the implementation could look like.
 
@@ -325,19 +331,22 @@ Then, let's create a label for each user story so that we can better organize th
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 11
 >
 > Create the "user story", "task" labels and a label for each user story as described above.
 
 Now that we have the labels, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "As a user I want to add a reading recommendation so that I can gather a collection of recommendations". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose labels "user story" and "add recommendation", which indicate that this issue is related to a certain user story. Then, click "Projects" and choose "Product Backlog". This will add the issue to the Product Backlog project. Finally, click the "Submit a new issue" button to create the issue.
 
+{: .note }
+> You can easily find the issues related to certain user story by opening the "Issues" tab and choosing the user story label from the "Label" dropdown menu. 
+
 Let's open the "Projects" tab and open the Sprint Backlog project. We should see that the issue we created is now in the project. We can move the issue to column by dragging the issue card. This will change the status of the issue. Let's move the issue we created to the "In Sprint" column, which indicates that this user story is in the current Sprint.
 
-By default we can't see the labels on the issue cards. We can right click on the arrow next to "View 1" below the project name and click "Fields" under "Configuration". There, check "Labels" and finally click the green "Save" button to save the configuration.
+By default we can't see the labels on the issue cards. We can click on the arrow button next to "View 1" below the project name and click "Fields" under "Configuration". There, check "Labels" and finally click the green "Save" button to save the configuration.
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 12
 >
 > Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column. Make sure that the user stories are _prioritized_ (the "P" of DEEP). That is, they are listed in the project in the order that the Product Owner described in the Sprint Planning.
 
@@ -345,7 +354,7 @@ By default we can't see the labels on the issue cards. We can right click on the
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 13
 >
 > Create an issue for each _task_. If the task description is long, use a short version of the description as the issue title and add the full description as the issue description. Add a label "task" and the task related user story's label for each issue. Add the issues to the Sprint 1 Backlog project and move them to the "Todo" column.
 
@@ -425,7 +434,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 14
 >
 > Implement the tasks of the first user story, "As a user I want to add a reading recommendation so that I can build a collection of reading recommendations".
 >
@@ -445,7 +454,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 15
 >
 > Implement the tasks of the second user story, "As a user I want to list the added reading recommendations so that I can easily find interesting things to read".
 >
@@ -457,7 +466,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 16
 >
 > Implement the tasks of the third user story, "As a user I want to be able to edit a reading recommendation so that I can change its information".
 >
@@ -471,7 +480,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 17
 >
 > Implement the tasks of the fourth user story, "As a user I want to be able to delete a reading recommendation so that I can get rid of recommendations I don’t need".
 >
@@ -522,7 +531,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 18
 >
 > Write a usage guide on _how to start your application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required JDK version for the project.
 
@@ -538,7 +547,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 19
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -550,7 +559,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 20
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 >
