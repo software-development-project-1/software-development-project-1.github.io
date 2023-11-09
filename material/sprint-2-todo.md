@@ -16,7 +16,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-22. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-23. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -95,7 +95,7 @@ Once we have "calibrated" the worth of a story point we can start the actual pla
 3. Everyone will write down their story point estimate.
 4. Once everyone is ready, everyone will show their estimate at the same time
 5. If there's more than one point difference in the least and most amount of story points in the suggested estimates, discuss the implementation further and repeat the steps 1 - 5 until you have an agreement.
-6. Once there's an agreed user story estimate for the user story, it should be added to the Product Backlog. For example "As a user I want to list the added reading recommendations so that I can find interesting things to read (2 story points)"
+6. Once the team has agreed on the user story estimate for the user story, the estimate should be added to the Product Backlog. We can for example add a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) with the story points for the user story related issue.
 
 {: .note }
 
@@ -153,39 +153,52 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 2
 >
-> Create a Sprint Backlog board for the second Spring in Trello. Name the Sprint Backlog board "Sprint 2 backlog". Add similar lists for the board as in the Sprint 1 backlog.
+> Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their status is "Done" in the Sprint 1 Backlog project. Also, close the user story related issues accepted by the Product Owner during the Sprint Review event.
+>
+> If you didn't manage to implement all user stories during Sprint 1, move the task related issues of the unfinished user stories to the Sprint 2 Backlog project.
 
 {: .important-title }
 
 > Exercise 3
 >
-> Come up with tasks for the third user story, "As a user I want to see a list of categories so that I know which categories exist". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 8 to get an idea what the implementation could look like.
+> Create a Sprint Backlog project for the second Spring in GitHub Projects. Name the project "Sprint 2 Backlog". Use the default project columns, similar as for the board as in the Sprint 1 Backlog.
 
 {: .important-title }
 
 > Exercise 4
 >
-> Come up with tasks for the fourth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 9 to get an idea what the implementation could look like.
+> Come up with tasks for the third user story, "As a user I want to see a list of categories so that I know which categories exist". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 8 to get an idea what the implementation could look like.
 
 {: .important-title }
 
 > Exercise 5
 >
-> 1. Add these five user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
-> 2. Add the tasks of the _first four user stories_ to the "Sprint 2 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
+> Come up with tasks for the fourth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 9 to get an idea what the implementation could look like.
 
 {: .important-title }
 
 > Exercise 6
 >
-> The Product Owner needs your help in estimating user stories. Facilitate a planning poker event where you estimate the _first four user stories_ of the Sprint. Add the story point estimates for the user stories to the Product Backlog.
-
-{: .note }
-At this point it might sense to distribute the workload a bit instead of working on each user story together. For example two members of the team could start working on the first user story and the others on the second one. Decide who will be working on which task and assign at least one team member for each task on the Trello board.
+> 1. Create a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) for each user story, such as "recommendation creation date" and "add category"
+> 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column.
+> 3. Create an issue for each _tasks_ of the _first four user stories_. If the task description is long, use a short version of the description as the issue title and add the full description as the issue description. Add a label "task" and the task related user story's label for each issue. Add the issues to the Sprint 2 Backlog project and move them to the "Todo" column.
 
 {: .important-title }
 
 > Exercise 7
+>
+> The Product Owner needs your help in estimating user stories. 
+>
+> 1. Create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) "1 story point", "2 story points", "3 story points", "5 story points" and "8 story points"
+> 2. Facilitate a planning poker event where you estimate the _first four user stories_ of the Sprint
+> 3. Based on the user story estimation, add the story point label for the user story related issue
+
+{: .note }
+At this point it might sense to distribute the workload a bit instead of working on each user story together. For example two members of the team could start working on the first user story and the others on the second one. Decide who will be working on which task and assign at least one team member for each task related issue.
+
+{: .important-title }
+
+> Exercise 8
 >
 > Implement the tasks of the first user story, "As a user I want to know the date when a reading recommendation was added so that I know how old it is".
 >
@@ -200,7 +213,7 @@ At this point it might sense to distribute the workload a bit instead of working
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 9
 >
 > Implement the tasks of the second user story, "As a user I want to add a category so that I can organize my recommendations".
 >
@@ -212,7 +225,7 @@ At this point it might sense to distribute the workload a bit instead of working
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 10
 >
 > Implement the tasks of the third user story, "As a user I want to see a list of categories so that I know which categories exist".
 >
@@ -224,7 +237,7 @@ At this point it might sense to distribute the workload a bit instead of working
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 11
 >
 > Implement the tasks of the fourth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations".
 >
@@ -388,7 +401,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 12
 >
 > Create a controller class `ReadingRecommendationRestController` that has a method `getReadingRecommendations`. This method should return _all the reading recommendations_ in path `/api/recommendations` in JSON format. You should be able to see the list of recommendations when opening <http://localhost:8080/api/recommendations> in a web browser.
 >
@@ -396,7 +409,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > Create a controller class `CategoryRestController` that has a method `getCategories`. This method should return _all the categories_ in path `/api/categories` in JSON format. You should be able to see the list of categories when opening <http://localhost:8080/api/categories> in a web browser.
 >
@@ -404,7 +417,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > Create a method `getReadingRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations).
 >
@@ -467,7 +480,7 @@ public class CategoryRestController {
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 15
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for both the `ReadingRecommendationRestController` and the `CategoryRestController` controllers using the `@Tag` annotation. For each controller method add a proper summary and description using the `@Operation` annotation.
 >
@@ -669,13 +682,13 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 16
 >
 > Add the tasks of the _fifth user story_ to the "Sprint 2 Backlog" board as cards in Trello.
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 17
 >
 > Implement a React frontend application to the `frontend/recommendationList` folder which lists the reading recommendations _similarly as before_. The frontend application should fully replace the implementation in the Thymeleaf template. That is, the `<body>` tag should only contain the following:
 >
@@ -701,7 +714,7 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 18
 >
 > Implement the rest of the tasks of the fifth user story "As a user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
 >
@@ -763,7 +776,7 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 19
 >
 > The form implementation of the "Delete" button has a few drawbacks in the user experience:
 >
@@ -879,7 +892,7 @@ Now, if we run the `./mvnw spring-boot:run` command, the command output indicate
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 20
 >
 > Use the frontend-maven-plugin in the project as instructed above.
 
@@ -907,13 +920,13 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 21
 >
 > Once you have implemented the user stories of the Sprint, remove the excessive Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive `messageList` folder from the `frontend` folder.
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 >
@@ -923,7 +936,7 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 23
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 >

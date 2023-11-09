@@ -358,7 +358,7 @@ By default we can't see the labels on the issue cards. We can click on the arrow
 >
 > Create an issue for each _task_. If the task description is long, use a short version of the description as the issue title and add the full description as the issue description. Add a label "task" and the task related user story's label for each issue. Add the issues to the Sprint 1 Backlog project and move them to the "Todo" column.
 
-Once you start working on task, _assign_ the task related issue to you. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu.
+Once you start working on task, _assign_ the task related issue to you. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same task together.
 
 {: .note }
 > You can easily find the issues assigned to you by opening the "Issues" tab and choosing your GitHub account from the "Assignee" dropdown menu. 

@@ -21,7 +21,7 @@ On the third week the teams start working on the project. The project advances i
 | 30.10.          | [Version control: Git and GitHub](/git)                                   | Exercises 1 - 14, deadline on {{site.week_2_deadline}}   |
 | 6.11.           | [Sprint 1](/sprint-1): Sprint Planning, Scrum backlogs, GitHub's workflow | Exercises 1 - 20, deadline on {{site.sprint_1_deadline}} |
 | 13.11.          | Daily Scrum, Sprint Review                                                |                                                          |
-| 20.11.          | [Sprint 2](/sprint-2): Retrospective, Estimation                                      | Exercises 1 - 22, deadline on {{site.sprint_2_deadline}} |
+| 20.11.          | [Sprint 2](/sprint-2): Retrospective, Estimation                                      | Exercises 1 - 23, deadline on {{site.sprint_2_deadline}} |
 | 27.11.          | REST APIs, communication between frontend and backend                     |                                                          |
 | 4.12.           | [Sprint 3](/sprint-3): Git branches, testing                                            | Deadline on {{site.sprint_3_deadline}}                   |
 | 11.12.          | Finishing the project                                                              |                                                          |
