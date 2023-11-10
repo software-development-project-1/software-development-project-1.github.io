@@ -323,7 +323,7 @@ These are the user stories, that you will be working on as a team during this Sp
 
 [GitHub issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are used to track ideas, feedback, tasks, or bugs for work on GitHub. Open source projects commonly use issues for feature suggestions and bug reports (something is not working as inteded). [Here](https://github.com/facebook/react/issues) is an example of issues in the React library's repository. We will use issues to organize the user stories, tasks and bug reports in our project.
 
-Before we start creating issues, let's add some [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) so that we can better organize our issues. Open your repository in GitHub and click the "Issues" tab. On the right, click the "Labels" button.
+Before we start creating issues, let's add some [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) so that we can better organize our issues. Open your repository in GitHub and click the "Issues" tab. Then, on the right, click the "Labels" button.
 
 {: .highlight }
 
@@ -331,10 +331,10 @@ Before we start creating issues, let's add some [labels](https://docs.github.com
 
 Let's add the following labels by clicking the "New label" button:
 
-- "user story" label indicates that the issue is a user story
-- "task" label indicates that the issue is a task
+- "user story" label indicates that the issue is a _user story_
+- "task" label indicates that the issue is a _task_
 
-Then, let's create a label _for each user story_ so that we can better organize the tasks. Create a label with a _short description_ (_not_ the full user story description) of each user story, for example "add recommendation" and "list recommendations".
+Then, let's create a label _for each user story_ so that we can better organize the tasks. Create a label with a _short description_ (_not_ the full user story description) for each user story. For example "add recommendation" and "list recommendations" for the first two user stories.
 
 {: .important-title }
 

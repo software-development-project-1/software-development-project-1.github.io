@@ -322,7 +322,7 @@ To structure these test cases as test methods, we can follow the popular [Arrang
 2. _Act_ on the target behavior. Act steps should cover the main thing to be tested. This could be calling a function or method, calling a REST API, or interacting with a web page. Keep actions focused on the target behavior
 3. _Assert_ expected outcomes. Act steps should elicit some sort of response. Assert steps verify the goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails
 
-Here's how the second test scenario could be tested with a `createMessageSetsUserCorrectly` test method:
+Here's how the two test scenario could be tested with `createMessageSetsMessageAttributesCorrectly` test method:
 
 ```java
 @SpringBootTest
@@ -355,7 +355,7 @@ class MessageServiceTest {
     }
 
     @Test
-    void createMessageSetsUserCorrectly() {
+    void createMessageSetsMessageAttributesCorrectly() {
         // Arrange
         AddMessageDto message = new AddMessageDto("Hello world!");
 
@@ -365,6 +365,7 @@ class MessageServiceTest {
         // Assert
         List<Message> messages = messageRepository.findAll();
         assertEquals(1, messages.size());
+        assertEquals("Hello world!", messages.get(0).getContent());
         assertEquals("tester", messages.get(0).getUser().getUsername());
     }
 }
@@ -383,35 +384,21 @@ class MessageServiceTest {
 >
 >   @BeforeEach
 >   void setUp() throws Exception {
->       // Delete all reading recommendations and categories
+>       // 1. Delete all reading recommendations and categories
+>       // 2. Initialize a Category object, save it to the database and assign it to an attribute (similarly as with the userDetails attribute in the example above)
 >   }
 >
 >   @Test
->   void createRecommendationSetsAttributesCorrectly() {
->       // Arrange: initialize a AddReadingRecommendationDto object with other attributes, except the category (the recommendation is uncategorized)
+>   void createRecommendationSetsReadingRecommendationAttributesCorrectly() {
+>       // Arrange: initialize a AddReadingRecommendationDto object with with all attributes, including the category created in the setUp method
 >
 >       // Act: call the createRecommendation method with the initialized object
 >
->       // Assert: retrieve all the recommendations from the database using the recommendationRepository.findAll() method. Then, the attributes of the first (and the only) object on the list should match the attributes of the AddReadingRecommendationDto object
+>       // Assert:
+>       // 1. Retrieve all the recommendations from the database using the recommendationRepository.findAll() method
+>       // 2. The attributes (including the category) of the first (and the only) object on the list should match the attributes of the AddReadingRecommendationDto object
 >   }
 >
->   @Test
->   void createRecommendationSetsCategoryAsNullWhenCategoryIsNotProvided() {
->       // Arrange: initialize a AddReadingRecommendationDto object with other attributes, except the category (the recommendation is uncategorized)
->
->       // Act: call the createRecommendation method with the initialized object
->
->       // Assert: retrieve all the recommendations from the database using the recommendationRepository.findAll() method. Then, the category attribute of the first (and the only) object on the list should be null
->   }
->
->   @Test
->   void createRecommendationSetsCategoryCorrectlyWhenCategoryIsProvided() {
->       // Arrange: initialize a Category object and save it to the database by calling the category.save() method. Then, initialize a AddReadingRecommendationDto object with with a category matching the initialized Category object and the other attributes
->
->       // Act: call the createRecommendation method with the initialized object
->
->       // Assert: retrieve all the recommendations from the database using the recommendationRepository.findAll() method. Then, the category attribute of the first (and the only) object on the list should match the initialized Category object (you can for example check that the name attribute of the objects is the same)
->   }
 > }
 > ```
 >
@@ -612,7 +599,7 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 >
 > Implement the tasks of the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations".
 >
-> Put the business logic of "creating a reading recommendation for a user" into the `createRecommendation` method implemented in exercise 6. These changes will probably break the tests implemented in exercise 7. Fix the existing tests, but you don't need to implement any new tests.
+> Put the business logic of "creating a reading recommendation for a user" into the `createRecommendation` method implemented in exercise 6. These changes will probably break the tests implemented in exercise 7. Fix the existing tests, and test that the user is correctly associated with the user (similarly as with the category).
 >
 > The "Edit" link and the "Delete" button should only be visible in the reading recommendation list if the user has added the reading recommendation.
 

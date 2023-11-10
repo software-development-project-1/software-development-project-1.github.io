@@ -10,7 +10,7 @@ nav_exclude: true
 
 # Sprint 2
 
-For the Sprint 2 we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to Retrospective, REST APIs and communication between frontend and backend.
+For the Sprint 2 we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to Retrospective, Estimation, REST APIs and communication between frontend and backend.
 
 ## Sprint assesment
 
@@ -84,6 +84,20 @@ During estimation the Developers usually have a different view of how many story
 ### Planning poker
 
 [Planning poker](https://en.wikipedia.org/wiki/Planning_poker) is a (fun) technique to facilitate estimation of user stories. We first need to decide which are the number of story points we use for the estimation. The [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is a common choice: 1, 2, 3, 5 or 8 story points. Then we need to make sure that everyone knows the amount of effort required for a certain amount of story points. Let's say that the user story "As a user I want to list the added reading recommendations so that I can find interesting things to read" is worth _2 story points_ and we should compare the effort of other user stories to that.
+
+Here's a table describing the worth of the available story points:
+
+| The required effort                                             | Story points   |
+| --------------------------------------------------------------- | -------------- |
+| _Half the effort_ compared to the reference user story       | 1 story point  |
+| _Somewhat the same effort_ compared to the reference user story | 2 story points |
+| _A bit more effort_ compared to the reference user story        | 3 story points |
+| _Double the effort_ compared to the reference user story        | 5 story points |
+| _Four times the effort_ compared to the reference user story    | 8 story points |
+
+As mentioned, the reference user story is the first user story of the previous Sprint:
+
+> As a user I want to list the added reading recommendations so that I can find interesting things to read
 
 {: .note }
 
@@ -192,7 +206,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > 1. Create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) "1 story point", "2 story points", "3 story points", "5 story points" and "8 story points"
 > 2. Facilitate a planning poker event where you estimate the _first four user stories_ of the Sprint
-> 3. Based on the user story estimation, add the story point label for the user story related issue
+> 3. Based on the user story estimation, add the story point label for the _four user story related issues_
 
 {: .note }
 At this point it might sense to distribute the workload a bit instead of working on each user story together. For example two members of the team could start working on the first user story and the others on the second one. Decide who will be working on which task and assign at least one team member for each task related issue.
