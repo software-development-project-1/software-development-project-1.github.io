@@ -237,9 +237,9 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 >
 > 1. At the beginning of the file add the project name "Cool Reads" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
 > 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
-> 3. Below the description, add a subheading "Team members" and below that add a [list](https://www.markdownguide.org/basic-syntax#lists-1) of each team member's name.
+> 3. Below the description, add a subheading "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name.
 > 4. Each team member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
-> 5. Below the "Team members" section, add a subheading "Backlogs" and below that add a [list](https://www.markdownguide.org/basic-syntax#lists-1) that has links "Product Backlog" and "Sprint 1 Backlog". The link should point to the backlog's project (open the backlog's project in GitHub and copy the URL from the web browser's address bar)
+> 5. Below the "Team members" section, add a subheading "Backlogs" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) that has links "Product Backlog" and "Sprint 1 Backlog". The link should point to the backlog's project (open the backlog's project in GitHub and copy the URL from the web browser's address bar)
 >
 > Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 
