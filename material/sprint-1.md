@@ -326,26 +326,27 @@ These are the user stories, that you will be working on as a team during this Sp
 Before we start creating issues, let's add some [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) so that we can better organize our issues. Open your repository in GitHub and click the "Issues" tab. On the right, click the "Labels" button.
 
 {: .highlight }
-> If you don't see the "Issues" tab in the repository, follow [this guide](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-issues) to enable the issues. In our case the "Issues" checkbox should be checked.
 
+> If you don't see the "Issues" tab in the repository, follow [this guide](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-issues) to enable the issues. In our case the "Issues" checkbox should be checked.
 
 Let's add the following labels by clicking the "New label" button:
 
 - "user story" label indicates that the issue is a user story
 - "task" label indicates that the issue is a task
 
-Then, let's create a label for each user story so that we can better organize the tasks. Create a label with a short description of each user story, for example "add recommendation" and "list recommendations".
+Then, let's create a label _for each user story_ so that we can better organize the tasks. Create a label with a _short description_ (_not_ the full user story description) of each user story, for example "add recommendation" and "list recommendations".
 
 {: .important-title }
 
 > Exercise 11
 >
-> Create the "user story" and "task" labels and a label for each user story as described above.
+> Create the "user story" and "task" labels and a label _for each user story_ as described above. Come up with a _short description_ for each user story for the labels, such as "add recommendation".
 
 Now that we have the labels, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "As a user I want to add a reading recommendation so that I can gather a collection of recommendations". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose labels "user story" and "add recommendation", which indicate that this issue is related to a certain user story. Then, click "Projects" on the right and choose "Product Backlog". This will add the issue to the Product Backlog project. Finally, click the "Submit a new issue" button to create the issue.
 
 {: .note }
-> You can easily find the issues related to certain user story by opening the "Issues" tab and choosing the user story label from the "Label" dropdown menu. 
+
+> You can easily find the issues related to certain user story by opening the "Issues" tab and choosing the user story label from the "Label" dropdown menu.
 
 Let's open the "Projects" tab and open the Sprint Backlog project. We should see that the issue we created is now in the project. We can move the issue to a column by dragging the issue card. This will change the status of the issue. Let's move the issue we created to the "In Sprint" column, which indicates that this user story is in the current Sprint.
 
@@ -368,7 +369,8 @@ By default we can't see the labels on the issue cards. We can click on the arrow
 Once you start working on task, _assign_ the task related issue to you. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same task together.
 
 {: .note }
-> You can easily find the issues assigned to you by opening the "Issues" tab and choosing your GitHub account from the "Assignee" dropdown menu. 
+
+> You can easily find the issues assigned to you by opening the "Issues" tab and choosing your GitHub account from the "Assignee" dropdown menu.
 
 When you complete a task, you should _close_ the task related issue. This can be done by opening the issue and clicking the "Close issue" button at the bottom of the page.
 
@@ -384,7 +386,6 @@ When you complete a task, you should _close_ the task related issue. This can be
 {: .highlight }
 
 > Don't close the user story related issues before the Sprint Review. The Product Owner needs to accept the user stories before they are completed.
-
 
 ## Thymeleaf page layouts
 
@@ -533,6 +534,9 @@ Here's a simple usage guide on how to start the example project application:
 
 1. Start the application by running `./mvnw spring-boot:run` on the command-line
 2. Once the application has started, visit <http://localhost:8080> in a browser to use the application
+
+{: .highlight }
+> If you have trouble starting the application with the `./mvnw spring-boot:run` command, see if [this](problems-and-solutions#warning-java_home-environment-variable-is-not-set) solves the problem.
 
 The description should be so clear that your fellow student who knows nothing about the project beforehand would be able to start the application.
 
