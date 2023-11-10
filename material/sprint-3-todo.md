@@ -16,13 +16,13 @@ For the final Sprint of the course, the Sprint 3, we have a new set of requireme
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
 
-The Sprint assesment is done based on the exercises 1-13. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
+The Sprint assesment is done based on the exercises 1-14. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
 
 During this Sprint, each team member will do a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 10 personal points.
 
 {: .highlight }
 
-> At the end of this Sprint, the team has to write the [final report](#the-final-report) together and each team member needs to do the [peer review](#peer-review). Missing final report will decrease the project points by 5 points and the peer review is required for a passing grade. If the peer review is done after the Sprint deadline, the personal points will decrease by 5 points.
+> At the end of this Sprint, the team has to write the [final report](#the-final-report) together and each team member needs to do the [peer review](#peer-review). Missing final report will decrease the project points by 5 points and the _peer review is required for a passing grade_. If the peer review is done after the Sprint deadline, the personal points will decrease by 5 points.
 
 ## Retrospective
 
@@ -37,142 +37,6 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 > Did similar issues arise as in Sprint 1 retrospective? If so, try to come up with different actions as before or ask the teacher for tips on how to solve these issues.
 >
 > Once you have completed the Retrospective write down the issues and actions to the repository's `retrospectives/sprint-2.md` file and push the changes to GitHub.
-
-## Git branches
-
-So far, we have only created commits for the _main branch_ of our repository. _Git branches_ allows us to _diverge from the main branch commit history_ by creating a new branch. We can add commits for our branch without effecting the main branch commit history and at some point we _merge_ the commits of branch to the main branch.
-
-Branches are commonly used to isolate work-in-progress code from the main branch. This can be for example the development of certain user story. Commonly, the main branch should only contain _working code_, which produces _deployment ready features_. This means that the _latest working version_ of our application can be found in the main branch at all times. We should be able to deploy this application for our users at any moment without issues.
-
-A new branch can be created with the `git branch <name-of-the-branch>` (replace the `<name-of-the-branch>` with name of the branch) command in Git Bash. Let's create a branch and _name it our GitHub username with lowercase letters_. For example, I would create the following branch:
-
-```bash
-git branch kaltsoon
-```
-
-{: .note }
-
-> Typically, the branch name describes the feature develop in the branch or some other purpose of the branch, for example `filter-recommendations-by-category`.
-
-Now, let's check the repository's branches with the `git branch` command. We should see that our branch is added to the list. We can also see that there's an astrisk symbol (\*) before the main branch. This means that we are currently on the main branch. The current branch is also displayed in brackets in the Git Bash after the path to the current folder.
-
-We can switch branches using the `git checkout <name-of-the-branch>` command. Switch to the branch you just created:
-
-```bash
-git checkout <name-of-my-branch>
-```
-
-Next, create a Markdown file to the `documentation` folder which is named after you GitHub username (for example `kaltsoon.md`). Add some text to the file and save it. Check the status with `git status` command, add the changes with the `git add` command and create a commit with the `git commit` command. Then let's switch back to the main branch with the `git checkout main` command. If we check the contents of `documentation` folder, we don't see our file there. That's because these changes _only exist in our other branch_.
-
-Let's switch back to our branch with the `git checkout` command. Change the contents of your file in the `documentation` folder and create one more commit. Then, push the changes to GitHub with the `git push` command. We get the following error message:
-
-```bash
-fatal: The current branch kaltsoon has no upstream branch.
-To push the current branch and set the remote as upstream, use
-
-    git push --set-upstream origin kaltsoon
-
-To have this happen automatically for branches without a tracking
-upstream, see 'push.autoSetupRemote' in 'git help config'.
-```
-
-The error means that the current branch is not in GitHub yet, just on our local computer. Let's run the command that Git suggests:
-
-```bash
-git push --set-upstream origin kaltsoon
-```
-
-Now, let's check that our branch is pushed to GitHub. Open the repository in GitHub and click the branch selector which says "main" below the repository name. We should see our branch there. Click the branch and check that the file exists in the `documentation` folder.
-
-{: .important-title }
-
-> Exercise 2
->
-> _Each team member_ should do the steps mentioned above to create their own branch named by their GitHub username and push it to GitHub.
-
-We can also pull remote (in GitHub) branches for our local computer and make changes to them. Check the list of branches on GitHub and pick _some other team member's branch_. Once you have picked a branch, switch to main branch first:
-
-```bash
-git checkout main
-```
-
-Then, create a branch that _has the same name_ as the one you picked from GitHub:
-
-```bash
-git branch <name-of-other-team-member-branch>
-```
-
-Once created, switch to the created branch:
-
-```bash
-git checkout <name-of-other-team-member-branch>
-```
-
-Now, we can pull the branch changes from GitHub with the `git pull` command:
-
-```bash
-git pull
-```
-
-<!-- TODO: tuleeko virhe? -->
-
-Once we have pulled the changes from GitHub, let's change the contents of the team member's file in the `documentation` folder and push these changes to GitHub similarly as we did before. Once you have pushed the changes, check that changes are visible in GitHub like you did with your own branch.
-
-{: .important-title }
-
-> Exercise 3
->
-> Pull _some other team member's_ branch from GitHub and make some changes for _their file_ in `documentation` folder. Push these changes to GitHub.
-
-Once we have happy with the changes we have made in the branch, we should _merge_ it with the main branch. This basically means applying all the commits we have made for the branch to the main branch. For this we can use the `git merge` command.
-
-Let's switch to the our branch first and see if there is any changes in GitHub:
-
-```bash
-git checkout <name-of-my-branch>
-```
-
-We can pull changes from GitHub with the `git pull` command:
-
-```bash
-git pull
-```
-
-Once we have the changes on our local computer, let's switch to the main branch:
-
-```bash
-git checkout main
-```
-
-Now, to merge our branch with the main branch we can do the following:
-
-```bash
-git merge <name-of-my-branch>
-```
-
-This creates a _merge commit_ for the main branch containing all the changes done in the other branch. Let's push the changes to GitHub:
-
-```bash
-git push
-```
-
-Now if we open the repository in GitHub, we should see that the main branch has our file in the `documentation` folder.
-
-{: .highlight }
-
-> Merge commits can cause _merge conflicts_. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts).
-
-{: .important-title }
-
-> Exercise 4
->
-> Pull changes for _your branch_ from GitHub with the `git pull` command. Then, merge _your branch_ with the main branch. Check in GitHub that you changes are visible in the main branch.
-
-{: .highlight }
-
-> Once everyone is done with these exercises, remove each team member's file from the `documentation` folder in the main branch and push the changes to GitHub.
-
-If you want to learn more about branches and how they are used in the software development workflow, read the [Git feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) tutorial by Atlassian.
 
 ## Sprint 3 planning
 
@@ -224,22 +88,31 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 5
+> Exercise 2
 >
-> Create a Sprint Backlog board for the third Spring in Trello. Name the Sprint Backlog board "Sprint 3 backlog". Add similar lists for the board as in the Sprint 2 backlog.
+> Create a Sprint Backlog project for the third Sprint in GitHub Projects. Name the project "Sprint 3 Backlog". Use the default project columns, similar as in the Sprint 2 Backlog project. Add a "Sprint 3 Backlog" link for the project to the "Backlogs" section in the `README.md` file.
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 3
+>
+> Make sure that all task related issues that have been completed during the Sprint 2 are _closed_ and their _status is "Done"_ in the Sprint 2 Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
+>
+> If you didn't manage to implement all user stories during Sprint 2, move the task related issues of the unfinished user stories to the Sprint 3 Backlog project.
+
+{: .important-title }
+
+> Exercise 4
 >
 > Come up with tasks for the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 5
 >
-> 1. Add these three user stories to the "Product Backlog" board as cards in Trello. The user stories should be initially in the "In sprint" list of the board.
-> 2. Add the tasks to the "Sprint 3 Backlog" board as cards in Trello. The tasks should be initially in the "To do" list of the board.
+> 1. Create a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) for each user story, such as "user register" and "user sign in"
+> 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column.
+> 3. Create an issue for each _tasks_ of the _first four user stories_. If the task description is long, use a short version of the description as the issue title and add the full description as the issue description. Add a label "task" and the task related user story's label for each issue. Add the issues to the Sprint 2 Backlog project and move them to the "Todo" column.
 
 ## Testing
 
@@ -306,7 +179,7 @@ public class MessageService {
 
 {: .note }
 
-> We can move the validation to the service class by using the `@Validated` annotation on the service class. You can read more about validation in service class [here](https://reflectoring.io/bean-validation-with-spring-boot/).
+> We can move the validation to the service class by using the `@Validated` annotation on the service class. You can read more about validation in service classes [here](https://reflectoring.io/bean-validation-with-spring-boot/).
 
 We can use the `MessageService` class in the controller method to simplify the code:
 
@@ -341,7 +214,7 @@ These code snippets are from the [authentication-example](https://github.com/sof
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 6
 >
 > Create a new package `fi.haagahelia.coolreads.service` for the project's service classes. You can do this in Eclipse by right-clicking the `src/main/java` folder and choosing New > Package. Implement a `ReadingRecommendationService` class within the package with the following method:
 >
@@ -499,7 +372,7 @@ class MessageServiceTest {
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 7
 >
 > Create a new package `fi.haagahelia.coolreads.service` for the project's service class tests. You can do this in Eclipse by right-clicking the `src/test/java` folder and choosing New > Package. Implement a `ReadingRecommendationServiceTest` test class within the package with the following test methods for the `createRecommendation` method:
 >
@@ -591,9 +464,9 @@ Green highlight indicates that the line _is fully covered_. Yellow highlight ind
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 8
 >
-> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the `createRecommendation` method we implemented and tested previously. Are all the lines of the method covered? If not, implement tests for the uncovered lines.
+> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the `createRecommendation` method we implemented and tested previously. Are all the lines of the method covered?
 
 ## Authentication
 
@@ -689,7 +562,7 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 9
 >
 > Implement the tasks of the first user story, "As an anonymous user I want to register an account so that I can manage my personal reading recommendations".
 >
@@ -701,7 +574,7 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 10
 >
 > Implement the tasks of the second user story, "As an anonymous user I want to sign in so that I can manage my personal reading recommendations".
 >
@@ -735,17 +608,17 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 11
 >
 > Implement the tasks of the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations".
 >
-> Put the business logic of "creating a reading recommendation for a user" into the `createReadingRecommendation` method implemented in exercise 8. These changes will probably break the tests implemented in exercise 9. Fix the existing tests, and _add a new test_, which tests that the `createReadingRecommendation` methods associates the reading recommendation with the provided user.
+> Put the business logic of "creating a reading recommendation for a user" into the `createRecommendation` method implemented in exercise 6. These changes will probably break the tests implemented in exercise 7. Fix the existing tests, but you don't need to implement any new tests.
 >
 > The "Edit" link and the "Delete" button should only be visible in the reading recommendation list if the user has added the reading recommendation.
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 12
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 > [Generate a JAR file](/sprint-2#jar) for the application like we did in the previous Sprint and add the JAR file to the release.
@@ -768,7 +641,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 13
 >
 > Write the peer review for your team members. You can find the link to the peer review form in [Moodle]({{site.peer_review_moodle_link}}).
 
@@ -788,7 +661,7 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 14
 >
 > Write the final report for the course as instructed above.
 

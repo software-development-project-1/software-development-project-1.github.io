@@ -86,6 +86,7 @@ During estimation the Developers usually have a different view of how many story
 [Planning poker](https://en.wikipedia.org/wiki/Planning_poker) is a (fun) technique to facilitate estimation of user stories. We first need to decide which are the number of story points we use for the estimation. The [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is a common choice: 1, 2, 3, 5 or 8 story points. Then we need to make sure that everyone knows the amount of effort required for a certain amount of story points. Let's say that the user story "As a user I want to list the added reading recommendations so that I can find interesting things to read" is worth _2 story points_ and we should compare the effort of other user stories to that.
 
 {: .note }
+
 > The Fibonacci sequence is commonly used instead of a linear sequence (1, 2, 3, 4...) because _larger user stories are more difficult to estimate_. The Fibonacci sequence starts to grow quickly after five, so we don't need to be very accurate while estimating large user stories. On the other hand, if we have a user story worth more than 8 story points, we should really consider splitting it into smaller user stories.
 
 Once we have "calibrated" the worth of a story point we can start the actual planning poker event. For each user story under estimation we should perform the following steps:
@@ -117,7 +118,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > To better organize the reading recommendations, it would be useful to be able to add different categories, like "Programming tutorials" or "Video game news". User should be able to add a category using a form. The form should only have a field for the category name. The user should not be able to add a category with a blank name or a name that already exists. There should also be a page that lists all the added categories and has a "Add a category" link that takes the user to the form.
 >
-> After adding a category, the user should be able to select a category from a dropdown menu while adding a recommendation. The dropdown menu should also have an "Uncategorized" option to leave the reading recommendation uncategorized. Once a reading recommendation has been added, the user should be able to change the category in the edit form. The reading recommendation's category should be displayed on the reading recommendation list.
+> After adding a category, the user should be able to select a category from a dropdown menu while adding a recommendation. Once a reading recommendation has been added, the user should be able to change the category in the edit form. The reading recommendation's category should be displayed on the reading recommendation list.
 >
 > In the reading recommendation list, the user should be able to filter the recommendations based on the category. For example if user chooses a "Programming tutorials" category from a dropdown menu, only the recommendations in that category will be listed. The dropdown menu should also have an "Any category" option to list all the reading recommendations."
 >
@@ -153,15 +154,15 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 2
 >
-> Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their status is "Done" in the Sprint 1 Backlog project. Also, close the user story related issues accepted by the Product Owner during the Sprint Review event.
->
-> If you didn't manage to implement all user stories during Sprint 1, move the task related issues of the unfinished user stories to the Sprint 2 Backlog project.
+> Create a Sprint Backlog project for the second Sprint in GitHub Projects. Name the project "Sprint 2 Backlog". Use the default project columns, similar as in the Sprint 1 Backlog project. Add a "Sprint 2 Backlog" link for the project to the "Backlogs" section in the `README.md` file.
 
 {: .important-title }
 
 > Exercise 3
 >
-> Create a Sprint Backlog project for the second Spring in GitHub Projects. Name the project "Sprint 2 Backlog". Use the default project columns, similar as for the board as in the Sprint 1 Backlog. Add a "Sprint 2 Backlog" link for the project to the "Backlogs" section in the `README.md` file.
+> Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Sprint 1 Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
+>
+> If you didn't manage to implement all user stories during Sprint 1, move the task related issues of the unfinished user stories to the Sprint 2 Backlog project.
 
 {: .important-title }
 
@@ -187,7 +188,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 7
 >
-> The Product Owner needs your help in estimating user stories. 
+> The Product Owner needs your help in estimating user stories.
 >
 > 1. Create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) "1 story point", "2 story points", "3 story points", "5 story points" and "8 story points"
 > 2. Facilitate a planning poker event where you estimate the _first four user stories_ of the Sprint
@@ -209,7 +210,11 @@ At this point it might sense to distribute the workload a bit instead of working
 > Tips for implementing the tasks:
 >
 > - [CreationTimestamp](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
-> - You can format an [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object in a Thymeleaf template like this: `th:text="${#temporals.format(message.createdAt,'dd.MM.yyyy')}"`
+> - You can format an [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object in a Thymeleaf template in the following way:
+>
+>   ```html
+>   <td th:text="${#temporals.format(message.createdAt,'dd.MM.yyyy')}"></td>
+>   ```
 
 {: .important-title }
 
@@ -252,7 +257,12 @@ At this point it might sense to distribute the workload a bit instead of working
 > Tips for implementing the tasks:
 >
 > - [OneToMany](https://www.baeldung.com/hibernate-one-to-many)
-> - [HTML select tag](https://www.w3schools.com/tags/tag_select.asp)
+> - [Working with Select and Option in Thymeleaf](https://www.baeldung.com/thymeleaf-select-option)
+> - The reading recommendation category is `null` for the old reading recommendations. We can access possibly `null` values safely, with the `?` operator in a Thymeleaf template in the following way:
+>
+>   ```html
+>   <td th:text="${recommendation.category?.name}"></td>
+>   ```
 
 ## Reducing boilerplate code with Lombok
 
@@ -818,7 +828,7 @@ For example we can allow cross-origin requests from `http://localhost:5173` orig
 public class MessageRestController {
   // ...
 }
-``` 
+```
 
 ## The .gitignore file
 
@@ -884,7 +894,7 @@ Let's add the frontend-maven-plugin to the `<plugins>` list in the `pom.xml` fil
 
 The plugin will execute three commands when we generate the resources for the project:
 
-1. Install Node.js
+1. Install a _project-specific_ Node.js version into the `node` folder. This won't effect your other Node.js installations
 2. Run `npm install` command
 3. Run `npm run build` command
 
