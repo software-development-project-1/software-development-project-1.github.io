@@ -233,7 +233,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 > Exercise 7
 >
-> Replace the current contents of the repository's `README.md` file with the following information using Markdown:
+> Open the `README.md` for editing for example in GitHub or in Visual Studio Code. You might not be able to edit the file in Eclipse. Replace the current contents of the repository's `README.md` file with the following information using Markdown:
 >
 > 1. At the beginning of the file add the project name "Cool Reads" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
 > 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
@@ -536,6 +536,7 @@ Here's a simple usage guide on how to start the example project application:
 2. Once the application has started, visit <http://localhost:8080> in a browser to use the application
 
 {: .highlight }
+
 > If you have trouble starting the application with the `./mvnw spring-boot:run` command, see if [this](problems-and-solutions#warning-java_home-environment-variable-is-not-set) solves the problem.
 
 The description should be so clear that your fellow student who knows nothing about the project beforehand would be able to start the application.
