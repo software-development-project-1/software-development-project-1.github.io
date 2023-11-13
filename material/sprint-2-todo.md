@@ -77,7 +77,7 @@ For example let's consider these three user stories from the previous Sprint:
 
 Some team member could estimate that the implementation of the _first user story_ requires the double amount of effort compared to the implementation of the _second user story_. Also, some could estimate that the implementation of the _first_ and the _third user story_ require somewhat the same amount of effort.
 
-In Scrum, the user story estimation is commonly provided in _story points_. A story point isn't based on time (working hours) required for the implementation. The Scrum Team will define themselves what amount of effort one story point represents so that their estimations are "calibrated". 
+In Scrum, the user story estimation is commonly provided in _story points_. A story point isn't based on time (working hours) required for the implementation. The Scrum Team will define themselves what amount of effort one story point represents so that their estimations are "calibrated".
 
 We could say, for example that the _second user story_ from the previous Sprint is worth _2 story points_. In our estimations we would then compare other user stories to this user story. This would mean that the estimate suggested above would estimate that the _first_ and the _third user stories_ are worth _4 story points_ (double the amount effort). Estimates from a different team members _could be different_ (and probably are) but at least they are comparing the effort with the same user story.
 
@@ -91,7 +91,7 @@ Here's a table describing the worth of the available story points:
 
 | The required effort                                             | Story points   |
 | --------------------------------------------------------------- | -------------- |
-| _Half the effort_ compared to the reference user story       | 1 story point  |
+| _Half the effort_ compared to the reference user story          | 1 story point  |
 | _Somewhat the same effort_ compared to the reference user story | 2 story points |
 | _A bit more effort_ compared to the reference user story        | 3 story points |
 | _Double the effort_ compared to the reference user story        | 5 story points |
@@ -242,7 +242,7 @@ At this point it might sense to distribute the workload a bit instead of working
 >
 > ![](/assets/sprint-2-user-story-2.png)
 >
-> Validate that the category name is not blank and it is unique.
+> Validate that the category name is not blank and it is unique (category with the same name should not exists).
 
 {: .important-title }
 
@@ -429,7 +429,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 
 > Exercise 12
 >
-> Create a controller class `ReadingRecommendationRestController` that has a method `getReadingRecommendations`. This method should return _all the reading recommendations_ in path `/api/recommendations` in JSON format. You should be able to see the list of recommendations when opening <http://localhost:8080/api/recommendations> in a web browser.
+> Create a controller class `ReadingRecommendationRestController` that has a method `getRecommendations`. This method should return _all the reading recommendations_ in path `/api/recommendations` in JSON format. You should be able to see the list of recommendations when opening <http://localhost:8080/api/recommendations> in a web browser.
 >
 > Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the fifth user story.
 
@@ -445,7 +445,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 
 > Exercise 14
 >
-> Create a method `getReadingRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations).
+> Create a method `getRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations).
 >
 > Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the fifth user story.
 
@@ -702,9 +702,8 @@ Next we will implement the list of reading recommendations as a React frontend a
 
 For the _fifth user story_ we can have the following tasks in addition to the REST API tasks mentioned before:
 
-1. Implement a RecommendationList component which lists reading recommendations from the /api/recommendations REST API endpoint
-2. Render the RecommandationList component in the reading recommendation list Thymeleaf template
-3. Add the category filter for the RecommendationList component
+1. Add a RecommendationList component which lists reading recommendations from the /api/recommendations REST API endpoint
+2. Add the category filter for the RecommendationList component
 
 {: .important-title }
 
