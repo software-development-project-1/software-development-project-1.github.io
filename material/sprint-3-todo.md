@@ -155,7 +155,7 @@ void calculateWordsCalculatesZeroWordCorrectly() {
 
 Unit tests have these pros and cons:
 
-- 🟢 Simple to write and easy to maintain
+- 🟢 Simple to implement and easy to maintain
 - 🟢 Fast to run
 - 🔴 Doesn't provide good reliability that the application works as a whole
 
@@ -188,7 +188,7 @@ void createMessageSetsMessageAttributesCorrectly() {
 
 Integration tests have these pros and cons:
 
-- 🟢 Fairly simple to write and easy to maintain
+- 🟢 Fairly simple to implement and easy to maintain
 - 🟢 Fairly fast to run
 - 🟡 Provides a reasonable reliability that the application works as a whole
 
