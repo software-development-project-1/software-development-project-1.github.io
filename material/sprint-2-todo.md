@@ -729,7 +729,7 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 > For now the "Delete" button can be implemented with a form:
 >
 > ```jsx
-> <form method="POST" target={`/recommendations/${recommendation.id}/delete`}>
+> <form method="POST" action={`/recommendations/${recommendation.id}/delete`}>
 >   <button class="btn btn-danger">Delete</button>
 > </form>
 > ```

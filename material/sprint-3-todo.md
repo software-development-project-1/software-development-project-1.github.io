@@ -118,11 +118,105 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 When we implement a new feature for the application we need to make sure that it works as intended. That is, we _test_ the implementation of a feature against the requirements. During the development of a feature we are constantly performing _manual testing_ for the implementation, meaning that we use the application ourselfs and see that we can perform certain actions successfully.
 
-Manual testing is important, but we can't perform it _at scale_. When our application becomes more complex, each change to code can potentially break any part of the application. Testing each feature manually after each change to code would be tome time-consuming. That's why we implement _automated tests_: programs that test our code. We can usually execute hundreds of automated tests within just a minute. Martin Fowler explains the purpose of different kind of automated tests in his article [TestPyramid](https://martinfowler.com/bliki/TestPyramid.html).
+Manual testing is important, but we can't perform it _at scale_. When our application becomes more complex, each change to code can potentially break any part of the application. Testing each feature manually after each change to code would be tome time-consuming. That's why we implement _automated tests_: programs that test our code. We can usually execute hundreds of automated tests within just a minute. Martin Fowler explains the purpose of different kind of automated tests and their pros and cons in his article [TestPyramid](https://martinfowler.com/bliki/TestPyramid.html).
 
-Automated tests are implemented with programming language specific _testing frameworks_, such as Java's [JUnit](https://junit.org/junit5/) and JavaScript's [Vitest](https://vitest.dev/). During this Sprint we will implement some tests for our backend using JUnit. But first, let's discuss how to write code that is _easy to test_.
+![TestPyramid](/assets/test-pyramid.png)
+
+Fowler categorizes different tests in three categories: _unit_, _service_ and _UI_ (user interface) tests. The test pyramid represents the _amount_ of these different kind of tests we should have for our application. There are pros and cons for the different kind of tests. While we go up in the pyramid we get better reliability that our application works as inteaded as a whole, but the tests becomes _laborious to maintain_, _difficult to implement_, and _time consuming to run_. This is why our test portfolio should be balanced.
+
+### Unit tests
+
+_Unit tests_ constitutes the bottom of the test pyramid. Most of our application's tests should be unit tests. Unit tests test the smallest testable parts of an application, called _units_. These are commonly simple methods that does some operation based on their parameters and return some value. Units never _integrate_ to other parts of the application code, such as the database.
+
+Here's an example of unit tests for a `calculateWords` method, which returns the number of words in the string provided as the paratamer:
+
+```java
+@Test
+void calculateWordsCalculatesSingleWordCorrectly() {
+    String message = "Hello"
+
+    assert(1, MessageUtils.calculateWords(message))
+}
+
+@Test
+void calculateWordsCalculatesManyWordCorrectly() {
+    String message = "Hello world"
+
+    assert(2, MessageUtils.calculateWords(message))
+}
+
+@Test
+void calculateWordsCalculatesZeroWordCorrectly() {
+    String message = ""
+
+    assert(0, MessageUtils.calculateWords(message))
+}
+```
+
+Unit tests have these pros and cons:
+
+- 🟢 Simple to write and easy to maintain
+- 🟢 Fast to run
+- 🔴 Doesn't provide good reliability that the application works as a whole
+
+### Integration tests
+
+_Integration tests_ (also known as service tests) constitutes the middle of the test pyramid. We should have quite many (but less than unit tests) integration tests in our application. As the name suggests, integration tests that different parts of our application code work as inteded once they are _integrated_. For example methods that perform database operations are tested with integration tests.
+
+Here's an example of integration tests for a `createMessage` method, which creates a message for the authenticated user provided as the parameter:
+
+```java
+@Test
+void createMessageSetsMessageAttributesCorrectly() {
+    String passwordHash = passwordEncoder.encode("password123");
+    User user = new User("tester", passwordHash, "USER");
+    userRepository.save(user);
+
+    UserDetails userDetails = new org.springframework.security.core.userdetails.User(user.getUsername(),
+        user.getPasswordHash(), AuthorityUtils.createAuthorityList(user.getRole()));
+
+    AddMessageDto message = new AddMessageDto("Hello world!");
+
+    messageService.createMessage(message, userDetails);
+
+    List<Message> messages = messageRepository.findAll();
+    assertEquals(1, messages.size());
+    assertEquals("Hello world!", messages.get(0).getContent());
+    assertEquals("tester", messages.get(0).getUser().getUsername());
+}
+```
+
+Integration tests have these pros and cons:
+
+- 🟢 Fairly simple to write and easy to maintain
+- 🟢 Fairly fast to run
+- 🟡 Provides a reasonable reliability that the application works as a whole
+
+### UI tests
+
+_UI tests_ (also known as end-to-end tests) constitutes the top of the test pyramid. We should have a moderate amount of UI tests in our application. As the name suggests, UI tests test that the application works by actually performing actions on the user interface similarly as a real user. This means opening a page on a web browser, filling form fields, clicking buttons and expecting the page to have some content. Because UI tests need the user interface to operate on, they are _slow to execute_. In addition, because the application's user interface commonly changes more often than the code, UI tests are laborious to maintain.
+
+Here's an example of testing the submission of a message form with the [Robot Framework](https://robotframework.org/) test automation framework:
+
+```
+*** Test Cases ***
+Submit Valid Message
+    Go To http://localhost:8080/add/message
+    Input Text content "Hello world!"
+    Click Button "Add a message"
+    Go To http://localhost:8080
+    Page Should Contain "Hello world!"
+```
+
+UI tests have these pros and cons:
+
+- 🟢 Provides a good reliability that the application works as a whole
+- 🔴 Difficult to implement and laborious to maintain
+- 🔴 Slow to run
 
 ## Service classes
+
+Automated tests are implemented with programming language specific _testing frameworks_, such as Java's [JUnit](https://junit.org/junit5/) and JavaScript's [Vitest](https://vitest.dev/). During this Sprint we will implement some tests for our backend using JUnit. But first, let's discuss how to write code that is _easy to test_.
 
 At the moment probably most of our application's _business logic_ is within controller methods. These methods usually read the user input from the request, do some database operations and send a response. Let's consider the following example that adds a message for an authenticated user:
 
@@ -136,8 +230,9 @@ public class MessageController {
     private MessageRepository messageRepository;
 
     @PostMapping("/messages/add")
-    public String addMessage(@Valid @ModelAttribute AddMessageDto message, @AuthenticationPrincipal UserDetails userDetails, BindingResult bindingResult) {
+    public String addMessage(@Valid @ModelAttribute("message") AddMessageDto message, @AuthenticationPrincipal UserDetails userDetails, BindingResult bindingResult, Model model) {
         if (bindingResult.hasErrors()) {
+            model.addAttribute("message", message);
             return "addmessage";
         }
 
@@ -158,7 +253,6 @@ Testing controller methods is a bit tricky because they operate on HTTP requests
 
 ```java
 @Service
-@Validated
 public class MessageService {
     @Autowired
     private MessageRepository messageRepository;
@@ -166,7 +260,7 @@ public class MessageService {
     @Autowired
     private UserRepository userRepository;
 
-    public Message createMessage(@Valid AddMessageDto message, UserDetails userDetails) {
+    public Message createMessage(AddMessageDto message, UserDetails userDetails) {
         User user = userRepository.findOneByUsername(userDetails.getUsername())
             .orElseThrow(() -> new UsernameNotFoundException(userDetails.getUsername()));
 
@@ -177,10 +271,6 @@ public class MessageService {
 }
 ```
 
-{: .note }
-
-> We can move the validation to the service class by using the `@Validated` annotation on the service class. You can read more about validation in service classes [here](https://reflectoring.io/bean-validation-with-spring-boot/).
-
 We can use the `MessageService` class in the controller method to simplify the code:
 
 ```java
@@ -190,12 +280,13 @@ public class MessageController {
     private MessageService messageService;
 
     @PostMapping("/messages/add")
-    public ModelAndView addMessage(@ModelAttribute AddMessageDto message, @AuthenticationPrincipal UserDetails userDetails) {
-        try {
-            messageService.createMessage(message, userDetails);
-        } catch (ConstraintViolationException exception) {
+    public ModelAndView addMessage(@Valid @ModelAttribute("message") AddMessageDto message, @AuthenticationPrincipal UserDetails userDetails,BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("message", message);
             return "addmessage";
         }
+
+        messageService.createMessage(message, userDetails);
 
         return "redirect:/";
     }
@@ -243,12 +334,12 @@ These code snippets are from the [authentication-example](https://github.com/sof
 >    // ...
 >
 >   @PostMapping("/recommendations/add")
->   public String addRecommendation(@ModelAttribute AddReadingRecommendationDto recommendation) {
->       try {
->           recommendationService.createRecommendation(recommendation);
->       } catch (ConstraintViolationException exception) {
+>   public String addRecommendation(@Valid @ModelAttribute("recommendation") AddReadingRecommendationDto recommendation, BindingResult bindingResult, Model model) {
+>       if (bindingResult.hasErrors()) {
 >           // return the add reading recommendation template name
 >       }
+>
+>       recommendationService.createRecommendation(recommendation);
 >
 >       return "redirect:/";
 >   }
@@ -275,9 +366,15 @@ spring.datasource.url=jdbc:h2:mem:cool-reads-test;DB_CLOSE_ON_EXIT=FALSE;AUTO_RE
 
 The configuration in the `src/test/resources/application.properties` file will be used while we are running the tests, which makes it suitable for test-specific configuration.
 
-## Testing service classes
+## Testing service classes with integration tests
 
-JUnit tests are implemented as test classes. Methods annotated with the `@Test` annotation are the _test methods_, which test a specific _test scenario_.
+> "Write tests. Not too many. Mostly integration."
+>
+> -- Kent C. Dodds
+
+Integration tests are a great balance of reliability and performance. Kent C. Dodds covers the importance of integration tests in his article [Write tests. Not too many. Mostly integration.](https://kentcdodds.com/blog/write-tests).
+
+In Java application, tests implemented and executed with the [JUnit](https://junit.org/junit5/) testing framework. JUnit tests are implemented as test classes. Test classes can be annoted with the `@SpringBootTest` annotation to access the Spring application context in tests. This, for example makes the `@Autowired` annotations work. Methods annotated with the `@Test` annotation are the _test methods_, which test a specific _test scenario_.
 
 Test methods usually share certain common setup code, which should be done before each test method. This setup can be put inside a method annotated with the `@BeforeEach` annotation. For example here's the `setUp` method for the authentication-example project's [MessageServiceTest](https://github.com/software-development-project-1/authentication-example/blob/main/src/test/java/fi/haagahelia/coolreads/service/MessageServiceTest.java) test class:
 
