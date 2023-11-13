@@ -112,7 +112,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > 1. Create a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) for each user story, such as "user register" and "user sign in"
 > 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column.
-> 3. Create an issue for each _tasks_ of the _first four user stories_. If the task description is long, use a short version of the description as the issue title and add the full description as the issue description. Add a label "task" and the task related user story's label for each issue. Add the issues to the Sprint 2 Backlog project and move them to the "Todo" column.
+> 3. Create an issue for each _tasks_ of the _first four user stories_. If the task description is long, use a short version of the description as the issue title and add the full description as the issue description. Add a label "task" and the task related user story's label for each issue. Add the issues to the Sprint 3 Backlog project and move them to the "Todo" column.
 
 ## Testing
 
@@ -133,23 +133,23 @@ Here's an example of unit tests for a `calculateWords` method, which returns the
 ```java
 @Test
 void calculateWordsCalculatesSingleWordCorrectly() {
-    String message = "Hello"
+    String message = "Hello";
 
-    assertEquals(1, MessageUtils.calculateWords(message))
+    assertEquals(1, MessageUtils.calculateWords(message));
 }
 
 @Test
 void calculateWordsCalculatesManyWordsCorrectly() {
-    String message = "Hello world"
+    String message = "Hello world";
 
-    assertEquals(2, MessageUtils.calculateWords(message))
+    assertEquals(2, MessageUtils.calculateWords(message));
 }
 
 @Test
 void calculateWordsCalculatesZeroWordCorrectly() {
-    String message = ""
+    String message = "";
 
-    assertEquals(0, MessageUtils.calculateWords(message))
+    assertEquals(0, MessageUtils.calculateWords(message));
 }
 ```
 

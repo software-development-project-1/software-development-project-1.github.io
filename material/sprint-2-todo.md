@@ -208,7 +208,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > 1. Create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) "1 story point", "2 story points", "3 story points", "5 story points" and "8 story points"
 > 2. Facilitate a planning poker event where you estimate the _first four user stories_ of the Sprint
-> 3. Based on the user story estimation, add the story point label for the _four user story related issues_
+> 3. Based on the user story estimation, add the story point labels for the four user story related issues
 
 {: .note }
 At this point it might sense to distribute the workload a bit instead of working on each user story together. For example two members of the team could start working on the first user story and the others on the second one. Decide who will be working on which task and assign at least one team member for each task related issue.
@@ -431,7 +431,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 >
 > Create a controller class `ReadingRecommendationRestController` that has a method `getReadingRecommendations`. This method should return _all the reading recommendations_ in path `/api/recommendations` in JSON format. You should be able to see the list of recommendations when opening <http://localhost:8080/api/recommendations> in a web browser.
 >
-> Add this task to the "Sprint 2 Backlog" board in Trello and assign a team member for the task. This task is related to fifth user story.
+> Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the fifth user story.
 
 {: .important-title }
 
@@ -439,7 +439,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 >
 > Create a controller class `CategoryRestController` that has a method `getCategories`. This method should return _all the categories_ in path `/api/categories` in JSON format. You should be able to see the list of categories when opening <http://localhost:8080/api/categories> in a web browser.
 >
-> Add this task to the "Sprint 2 Backlog" board in Trello and assign a team member for the task. This task is related to fifth user story.
+> Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the fifth user story.
 
 {: .important-title }
 
@@ -447,7 +447,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 >
 > Create a method `getReadingRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations).
 >
-> Add this task to the "Sprint 2 Backlog" board in Trello and assign a team member for the task. This task is related to fifth user story.
+> Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the fifth user story.
 
 ## API documentation with Swagger
 
@@ -702,15 +702,15 @@ Next we will implement the list of reading recommendations as a React frontend a
 
 For the _fifth user story_ we can have the following tasks in addition to the REST API tasks mentioned before:
 
-1. Create a React component RecommendationList which lists reading recommendations from /api/recommendations
-2. Render the RecommandationList component on the reading recommendation list Thymeleaf template
+1. Implement a RecommendationList component which lists reading recommendations from the /api/recommendations REST API endpoint
+2. Render the RecommandationList component in the reading recommendation list Thymeleaf template
 3. Add the category filter for the RecommendationList component
 
 {: .important-title }
 
 > Exercise 16
 >
-> Add the tasks of the _fifth user story_ to the "Sprint 2 Backlog" board as cards in Trello.
+> Create issues for the the remaining tasks of the _fifth user story_ and add them to the Sprint 2 Backlog project.
 
 {: .important-title }
 
@@ -990,7 +990,7 @@ The Product Owner came up with a feature for the application if we run out of wo
 
 > Bonus exercise
 >
-> Come up with a user story based on the Product Owner's description and add it to the "Product Backlog" board in Trello. Then, split the user story into tasks and add those to the "Sprint 2 Backlog" board in Trello. Finally, implement the tasks.
+> Come up with a user story based on the Product Owner's description, create an issue for the user story and add it to the "Product Backlog" project. Then, split the user story into tasks, create an issue for each task and add those to the Sprint 2 Backlog project. Finally, implement the tasks.
 >
 > The implementation should look roughly something like this:
 >
