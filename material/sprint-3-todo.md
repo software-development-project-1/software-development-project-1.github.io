@@ -135,21 +135,21 @@ Here's an example of unit tests for a `calculateWords` method, which returns the
 void calculateWordsCalculatesSingleWordCorrectly() {
     String message = "Hello"
 
-    assert(1, MessageUtils.calculateWords(message))
+    assertEquals(1, MessageUtils.calculateWords(message))
 }
 
 @Test
-void calculateWordsCalculatesManyWordCorrectly() {
+void calculateWordsCalculatesManyWordsCorrectly() {
     String message = "Hello world"
 
-    assert(2, MessageUtils.calculateWords(message))
+    assertEquals(2, MessageUtils.calculateWords(message))
 }
 
 @Test
 void calculateWordsCalculatesZeroWordCorrectly() {
     String message = ""
 
-    assert(0, MessageUtils.calculateWords(message))
+    assertEquals(0, MessageUtils.calculateWords(message))
 }
 ```
 
