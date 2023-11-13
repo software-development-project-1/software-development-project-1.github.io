@@ -243,7 +243,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 >
 > Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 
-## Sprint 1 planning
+## 🏃‍♂️ Sprint 1 planning
 
 Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Planning event:
 

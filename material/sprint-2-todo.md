@@ -116,7 +116,7 @@ Once we have "calibrated" the worth of a story point we can start the actual pla
 
 > In a traditional planning poker session, each team member will have a card for different story points (for example card for 1, 2, 3, 5 and 8 story points). Team members are sitting in a round table revealing their cards. Because the session is a bit like a poker game, the "planning poker" name is suitable.
 
-## Sprint 2 planning
+## 🏃‍♂️ Sprint 2 planning
 
 {: .highlight}
 

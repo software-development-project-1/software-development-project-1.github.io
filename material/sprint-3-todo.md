@@ -38,7 +38,7 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 >
 > Once you have completed the Retrospective write down the issues and actions to the repository's `retrospectives/sprint-2.md` file and push the changes to GitHub.
 
-## Sprint 3 planning
+## 🏃‍♂️ Sprint 3 planning
 
 {: .highlight}
 
@@ -48,7 +48,7 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 3 goals in the Sprint Planning event:
 
-> "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username and password. After registering, the user should be able to sign in using the username and password provided during the registration.
+> "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username and password. User should not be able to register with a blank username or a password less than 8 characters long. After registering, the user should be able to sign in using the username and password provided during the registration.
 >
 > An anonymous user, that is an user who is not signed in, should be able to see the reading recommendation list and the category list. However, they should not be able to add a reading recommendation or a category. That is, the links for adding a reading recommendation and adding a category should not be visible if the user is not signed in.
 >
@@ -203,7 +203,7 @@ Here's an example of testing the submission of a message form with the [Robot Fr
 Submit Valid Message
     Go To http://localhost:8080/add/message
     Input Text content "Hello world!"
-    Click Button "Add a message"
+    Click Button "Add"
     Go To http://localhost:8080
     Page Should Contain "Hello world!"
 ```
