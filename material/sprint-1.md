@@ -456,13 +456,13 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 > - The link should not not be blank and it should start with "http://" or "https://"
 > - The description should not be blank
 >
+> Alter the `layout.html` file mentioned above to change the navigation bar content.
+>
 > Tips for implementing the tasks:
 >
 > - [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
 > - [Validating Form Input](https://spring.io/guides/gs/validating-form-input/)
 > - The link can be validated with a regular expression using the [@Pattern](https://www.codeproject.com/Questions/5324493/Jakarta-regex-validation) annotation
->
-> Alter the `layout.html` file mentioned above to change the navigation bar content.
 
 {: .important-title }
 

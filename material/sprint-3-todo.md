@@ -600,7 +600,6 @@ public class SecurityConfig {
 
         http.formLogin((form) -> form.permitAll());
         http.logout((logout) -> logout.permitAll());
-        http.csrf(csrf -> csrf.disable());
 
         return http.build();
     }
@@ -656,9 +655,43 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 >
 > Start the implementation by adding the spring-boot-starter-security and thymeleaf-extras-springsecurity6 dependencies for the project. Add similar Spring Security configuration class as instructed above.
 
+### Cross-site request forgery (CSRF)
+
+If we try deleting a reading recommendation by clicking the "Delete" button after adding the Spring Security for our project, we will notice that it is no longer working. This is because Spring Security adds protection against [Cross Site Request Forgery (CSRF)](https://docs.spring.io/spring-security/reference/features/exploits/csrf.html) attacks. Basically, Spring Security won't permit requests originated outside our application that aren't HTTP GET requests. In practice this enforced by using a so called _CSRF token_ in form submissions.
+
+Thymeleaf will automatically include the CSRF token in forms. The problem is that the request send with the `fetch` function after clicking the "Delete" button doesn't have the CSRF token. Let's fix this problem. First, we need to make the CSRF token available. We can do this by including it to the HTML content in the `src/main/resources/templates/layout.html` file. Adding the following `<meta>` tag at the end of the `<head>` tag:
+
+```html
+<head>
+  <!-- ... -->
+  <meta id="_csrf" name="_csrf" th:content="${_csrf.token}" />
+</head>
+```
+
+Now, we can read the token from the `<meta>` tag and send it as a `X-CSRF-TOKEN` header with the `fetch` function:
+
+```js
+function handleDelete(recommendation) {
+  fetch(`/recommendations/${recommendation.id}/delete`, {
+    method: "POST",
+    headers: {
+      "X-CSRF-TOKEN": document.getElementById("_csrf").getAttribute("content"),
+    },
+  }).then(() => {
+    // Remove the deleted recommendation from the recommendations state variable array
+  });
+}
+```
+
 {: .important-title }
 
 > Exercise 10
+>
+> Fix the reading recommendation deletion implemention as instruced above.
+
+{: .important-title }
+
+> Exercise 11
 >
 > Implement the tasks of the second user story, "As an anonymous user I want to sign in so that I can manage my personal reading recommendations".
 >
@@ -692,7 +725,7 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 12
 >
 > Implement the tasks of the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations".
 >
@@ -702,7 +735,7 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 > [Generate a JAR file](/sprint-2#jar) for the application like we did in the previous Sprint and add the JAR file to the release.
@@ -725,7 +758,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > Write the peer review for your team members. You can find the link to the peer review form in [Moodle]({{site.peer_review_moodle_link}}).
 
@@ -745,7 +778,7 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 15
 >
 > Write the final report for the course as instructed above.
 
