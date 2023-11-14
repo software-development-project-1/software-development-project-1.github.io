@@ -519,7 +519,6 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 >   <a
 >     th:href="@{/recommendations/{id}/edit(id = ${recommendation.id})}"
 >     th:text="${recommendation.link}"
->     class="btn btn-secondary"
 >   >
 >   </a>
 >   ```
