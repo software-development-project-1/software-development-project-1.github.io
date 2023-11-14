@@ -540,7 +540,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 >
 >   ```html
 >   <form
->     th:action="@{/recommendations/{id}/delete(id = ${message.id})}"
+>     th:action="@{/recommendations/{id}/delete(id = ${recommendation.id})}"
 >     method="post"
 >   >
 >     <button class="btn btn-danger">Delete</button>

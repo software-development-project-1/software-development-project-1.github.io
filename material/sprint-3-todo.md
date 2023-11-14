@@ -72,7 +72,8 @@ For the _first user story_, the Developers came up with the following tasks:
 4. Add a Thymeleaf template for the user registration form
 5. Add a UserController controller class and a method for rendering the user registration form
 6. Add a method for the UserController class that saves the user to the database
-7. Add a "Register" link to the navigation bar
+7. Add validation for username and password
+8. Add a "Register" link to the navigation bar
 
 For the _second user story_, the Developers came up with the following tasks:
 
@@ -616,7 +617,7 @@ The `securityFilterChain` returns the configuration object for Spring Security. 
 - `/frontend/**`, the JavaScript assets required by the frontend application. The `**` part of the path means any path
 - `/api/**`, the REST API endpoints
 
-{: .note }
+{: .highlight }
 
 > Change this configuration if your application's paths don't match the ones above.
 
@@ -653,7 +654,11 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 >
 > ![](/assets/sprint-3-user-story-1.png)
 >
-> Start the implementation by adding the spring-boot-starter-security and thymeleaf-extras-springsecurity6 dependencies for the project. Add similar Spring Security configuration class as instructed above.
+> Tips for implementing the tasks:
+>
+> - Start the implementation by adding the spring-boot-starter-security and thymeleaf-extras-springsecurity6 dependencies for the project
+> - Add similar `SecurityConfig` and `UserDetailsServiceImpl` classes as instructed above
+> - See how the user registration is implemented in the [authentication-example](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/UserController.java) project
 
 ### Cross-site request forgery (CSRF)
 
@@ -682,6 +687,8 @@ function handleDelete(recommendation) {
   });
 }
 ```
+
+We should now be able to delete reading recommendations again.
 
 {: .important-title }
 
