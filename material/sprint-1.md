@@ -630,7 +630,3 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 {: .warning }
 
 > Make sure that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint 1 deadline on {{site.sprint_1_deadline}}.
-
-```
-
-```
