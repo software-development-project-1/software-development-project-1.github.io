@@ -456,7 +456,11 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 > - The link should not not be blank and it should start with "http://" or "https://"
 > - The description should not be blank
 >
-> See this [guide](https://spring.io/guides/gs/validating-form-input/) to learn about form validation. The link can be validated with a regular expression using the [@Pattern](https://www.codeproject.com/Questions/5324493/Jakarta-regex-validation) annotation.
+> Tips for implementing the tasks:
+>
+> - [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
+> - [Validating Form Input](https://spring.io/guides/gs/validating-form-input/)
+> - The link can be validated with a regular expression using the [@Pattern](https://www.codeproject.com/Questions/5324493/Jakarta-regex-validation) annotation
 >
 > Alter the `layout.html` file mentioned above to change the navigation bar content.
 
@@ -485,6 +489,40 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 > ![](/assets/sprint-1-user-story-3-2.png)
 >
 > Add similar validation for the form as in the first user story.
+>
+> Tips for implementing the tasks:
+>
+> - You can add a path variable to the form's `th:action` attribute like this:
+>
+>   ```html
+>   <form
+>     th:action="@{/recommendations/{id}/edit(id = ${recommendation.id})}"
+>     th:object="${recommendation}"
+>     method="post"
+>   >
+>     <!-- ... -->
+>   </form>
+>   ```
+>
+> - You can access the path variable in a controller method like this:
+>
+>   ```java
+>   @PostMapping("/recommendations/{id}/edit")
+>   public String editRecommendation(@PathVariable Long id, /* ... */) {
+>     // ...
+>   }
+>   ```
+>
+> - Similarly, you can add a path variable to the "Edit" link like this:
+>
+>   ```html
+>   <a
+>     th:href="@{/recommendations/{id}/edit(id = ${recommendation.id})}"
+>     th:text="${recommendation.link}"
+>     class="btn btn-secondary"
+>   >
+>   </a>
+>   ```
 
 {: .important-title }
 
@@ -495,6 +533,19 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 > The implementation should look roughly something like this:
 >
 > ![](/assets/sprint-1-user-story-4.png)
+>
+> Tips for implementing the tasks:
+>
+> - You can implemented the "Delete" button with a form with only a submit button:
+>
+>   ```html
+>   <form
+>     th:action="@{/recommendations/{id}/delete(id = ${message.id})}"
+>     method="post"
+>   >
+>     <button class="btn btn-danger">Delete</button>
+>   </form>
+>   ```
 
 {: .note }
 
@@ -580,3 +631,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 {: .warning }
 
 > Make sure that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint 1 deadline on {{site.sprint_1_deadline}}.
+
+```
+
+```
