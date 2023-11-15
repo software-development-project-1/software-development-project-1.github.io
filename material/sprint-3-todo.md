@@ -664,7 +664,9 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 
 If we try deleting a reading recommendation by clicking the "Delete" button after adding the Spring Security for our project, we will notice that it is no longer working. This is because Spring Security adds protection against [Cross Site Request Forgery (CSRF)](https://docs.spring.io/spring-security/reference/features/exploits/csrf.html) attacks. Basically, Spring Security won't permit requests originated outside our application that aren't HTTP GET requests. In practice this enforced by using a so called _CSRF token_ in form submissions.
 
-Thymeleaf will automatically include the CSRF token in forms. The problem is that the request send with the `fetch` function after clicking the "Delete" button doesn't have the CSRF token. Let's fix this problem. First, we need to make the CSRF token available. We can do this by including it to the HTML content in the `src/main/resources/templates/layout.html` file. Adding the following `<meta>` tag at the end of the `<head>` tag:
+Thymeleaf will automatically include the CSRF token in forms. The problem is that the request send with the `fetch` function after clicking the "Delete" button doesn't have the CSRF token. Let's fix this problem.
+
+First, we need to make the CSRF token available. We can do this by including it to the HTML content in the `src/main/resources/templates/layout.html` file. Let's add a `<meta>` tag that contains the CSRF token at the end of the `<head>` tag:
 
 ```html
 <head>
@@ -673,7 +675,7 @@ Thymeleaf will automatically include the CSRF token in forms. The problem is tha
 </head>
 ```
 
-Now, we can read the token from the `<meta>` tag and send it as a `X-CSRF-TOKEN` header with the `fetch` function:
+Now, we can read the CSRF token from the `<meta>` tag's `content` attribute and send it as a `X-CSRF-TOKEN` header with the `fetch` function:
 
 ```js
 function handleDelete(recommendation) {
@@ -687,6 +689,18 @@ function handleDelete(recommendation) {
   });
 }
 ```
+
+{: .note }
+
+> We could simplify the code by extracting the business logic of "deleting a reading recommendation" to a `deleteRecommendation` function:
+>
+> ```js
+> function handleDelete(recommendation) {
+>   deleteRecommendation(recommendation.id).then(() => {
+>     // Remove the deleted recommendation from the recommendations state variable array
+>   });
+> }
+> ```
 
 We should now be able to delete reading recommendations again.
 
@@ -757,7 +771,7 @@ The peer review is used to assess each team member. The 10 personal points are b
 
 The peer review is conducted with a form. You can find the link for your team's peer review form in [Moodle]({{site.peer_review_moodle_link}}). In the form you will need to assess every team member's (including yourself) efforts in the team work in the following aspects:
 
-- _Activity in team work_: Attendance and active presence during team meetings
+- _Activity in team work_: Attendance and active presence during team meetings and communication with team members outside the meetings
 - _Technical contributions_: amount of working code written _or_ active participation in the writing process of the code (for example [pair-programming](https://en.wikipedia.org/wiki/Pair_programming))
 - _Project management and documentation contributions_: Backlog management, efforts to improve the process (for example in Retrospectives), writing project related documentation
 
