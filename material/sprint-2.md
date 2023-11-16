@@ -954,9 +954,9 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 >
-> Also generate a _JAR file for the application_ as instructed previously. Make sure to check that the application can be started using the `java -jar <path-to-the-jar-file>` command and it is working as expected.
+> Also generate a _JAR file for the application_ as instructed previously. Make sure to check that the application can be started using the `java -jar <path-to-the-jar-file>` command and it is working as expected. Add the JAR file to the release by clicking the "Attach binaries by dropping them here or selecting them." section in the release form.
 >
-> Add the JAR file to the release by clicking the "Attach binaries by dropping them here or selecting them." section in the release form.
+> Add the instructions to the "Usage guide" section in the `README.md` file on how the user can download the JAR file from the latest release and start the application with the `java -jar <path-to-the-jar-file>` command.
 
 {: .important-title }
 
