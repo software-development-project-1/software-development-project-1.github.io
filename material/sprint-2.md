@@ -644,7 +644,7 @@ Here's what the scripts do:
 
 - The `esbuild-bundle` script will bundle the `frontend/messageList/renderMessageList.jsx` entry file and output the result to the `src/main/resources/static/frontend` folder.
 - The `dev` script will execute the `esbuild-bundle` script with a `--watch` flag, which will generate the output files each time one of the source files changes. Use this script while writing the frontend code. This is handy while we are developing the frontend.
-- The `build` script will generate a [minified](https://esbuild.github.io/api/#minify) version of the code. This version should be used for the _production version_ of the application due to its smaller file size that is faster to download through the network.
+- The `build` script will generate a [minified](https://esbuild.github.io/api/#minify) bundle of the code. This version should be used for the _production version_ of the application due to its smaller file size that is faster to download through the network.
 
 Let's open the open project folder in an editor. If you have previously written frontend code using Visual Studio Code, you can use that instead of Eclipse. Then, open the project folder in a command-line interface such as Git Bash or the Visual Studio Code's integrated terminal.
 
@@ -909,8 +909,8 @@ Let's add the frontend-maven-plugin to the `<plugins>` list in the `pom.xml` fil
 The plugin will execute three commands when we generate the resources for the project:
 
 1. Install a _project-specific_ Node.js version into the `node` folder. This won't effect your other Node.js installations
-2. Run `npm install` command
-3. Run `npm run build` command
+2. Run `npm install` command to install frontend dependencies
+3. Run `npm run build` command to generate a minified bundle of the frontend code, suitable for the production version of the application
 
 Now, if we run the `./mvnw spring-boot:run` command, the command output indicates that the frontend related commands are executed.
 
