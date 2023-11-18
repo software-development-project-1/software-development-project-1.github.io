@@ -15,7 +15,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-23. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-25. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -188,19 +188,19 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 4
+> Exercise 5
 >
-> Come up with tasks for the fourth user story, "As a user I want to see a list of categories so that I know which categories exist". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 10 to get an idea what the implementation could look like.
+> Come up with tasks for the fourth user story, "As a user I want to see a list of categories so that I know which categories exist". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 to get an idea what the implementation could look like.
 
 {: .important-title }
 
-> Exercise 5
+> Exercise 6
 >
 > Come up with tasks for the fifth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get an idea what the implementation could look like.
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 7
 >
 > 1. Create a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) for each user story, such as "recommendation creation date" and "add category"
 > 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column.
@@ -208,7 +208,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 8
 >
 > The Product Owner needs your help in estimating user stories.
 >
@@ -218,7 +218,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 9
 >
 > Implement the tasks of the first user story, "As a user I want to know the date when a reading recommendation was added so that I know how old it is".
 >
@@ -237,7 +237,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 10
 >
 > Implement the tasks of the second user story, "As a user I want to add a category so that I can organize my recommendations".
 >
@@ -249,13 +249,13 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 11
 >
 > Implement the tasks of the third user story, "As a user I want the reading recommendations to be listed from newest to oldest so that I can find the latest recommendations quickly".
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 12
 >
 > Implement the tasks of the fourth user story, "As a user I want to see a list of categories so that I know which categories exist".
 >
@@ -267,7 +267,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 13
 >
 > Implement the tasks of the fifth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations".
 >
@@ -436,7 +436,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 14
 >
 > Create a controller class `ReadingRecommendationRestController` that has a method `getRecommendations`. This method should return _all the reading recommendations_ in path `/api/recommendations` in JSON format. You should be able to see the list of recommendations when opening <http://localhost:8080/api/recommendations> in a web browser.
 >
@@ -444,7 +444,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 15
 >
 > Create a controller class `CategoryRestController` that has a method `getCategories`. This method should return _all the categories_ in path `/api/categories` in JSON format. You should be able to see the list of categories when opening <http://localhost:8080/api/categories> in a web browser.
 >
@@ -452,7 +452,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 16
 >
 > Create a method `getRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations).
 >
@@ -515,7 +515,7 @@ public class CategoryRestController {
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 17
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for both the `ReadingRecommendationRestController` and the `CategoryRestController` controllers using the `@Tag` annotation. For each controller method add a proper summary and description using the `@Operation` annotation.
 >
@@ -716,13 +716,13 @@ For the _sixth user story_ we can have the following tasks in addition to the RE
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 18
 >
 > Create issues for the the remaining tasks of the _sixth user story_ and add them to the Sprint 2 Backlog project.
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 19
 >
 > Implement a React frontend application to the `frontend/recommendationList` folder which lists the reading recommendations _similarly as before_. The frontend application should fully replace the implementation in the Thymeleaf template. That is, the `<body>` tag should only contain the following:
 >
@@ -748,7 +748,7 @@ For the _sixth user story_ we can have the following tasks in addition to the RE
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 20
 >
 > Implement the rest of the tasks of the sixth user story "As a user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
 >
@@ -810,7 +810,7 @@ For the _sixth user story_ we can have the following tasks in addition to the RE
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 21
 >
 > The form implementation of the "Delete" button has a few drawbacks in the user experience:
 >
@@ -926,7 +926,7 @@ Now, if we run the `./mvnw spring-boot:run` command, the command output indicate
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 22
 >
 > Use the frontend-maven-plugin in the project as instructed above.
 
@@ -954,13 +954,13 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 23
 >
 > Once you have implemented the user stories of the Sprint, remove the excessive Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive `messageList` folder from the `frontend` folder.
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 24
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 >
@@ -970,7 +970,7 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 25
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
 >
