@@ -184,13 +184,19 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 4
 >
-> Come up with tasks for the third user story, "As a user I want to see a list of categories so that I know which categories exist". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 10 to get an idea what the implementation could look like.
+> Come up with tasks for the third user story, "As a user I want the reading recommendations to be listed from newest to oldest so that I can find the latest recommendations quickly". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+
+{: .important-title }
+
+> Exercise 4
+>
+> Come up with tasks for the fourth user story, "As a user I want to see a list of categories so that I know which categories exist". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 10 to get an idea what the implementation could look like.
 
 {: .important-title }
 
 > Exercise 5
 >
-> Come up with tasks for the fourth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get an idea what the implementation could look like.
+> Come up with tasks for the fifth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get an idea what the implementation could look like.
 
 {: .important-title }
 
@@ -198,7 +204,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > 1. Create a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) for each user story, such as "recommendation creation date" and "add category"
 > 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column.
-> 3. Create an issue for each _tasks_ of the _first four user stories_. If the task description is long, use a short version of the description as the issue title and add the full description as the issue description. Add a label "task" and the task related user story's label for each issue. Add the issues to the Sprint 2 Backlog project and move them to the "Todo" column.
+> 3. Create an issue for each _tasks_ of the _first five user stories_. If the task description is long, use a short version of the description as the issue title and add the full description as the issue description. Add a label "task" and the task related user story's label for each issue. Add the issues to the Sprint 2 Backlog project and move them to the "Todo" column.
 
 {: .important-title }
 
@@ -209,9 +215,6 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 > 1. Create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) "1 story point", "2 story points", "3 story points", "5 story points" and "8 story points"
 > 2. Facilitate a planning poker event where you estimate the _first four user stories_ of the Sprint
 > 3. Based on the user story estimation, add the story point labels for the four user story related issues
-
-{: .note }
-At this point it might sense to distribute the workload a bit instead of working on each user story together. For example two members of the team could start working on the first user story and the others on the second one. Decide who will be working on which task and assign at least one team member for each task related issue.
 
 {: .important-title }
 
@@ -248,19 +251,25 @@ At this point it might sense to distribute the workload a bit instead of working
 
 > Exercise 10
 >
-> Implement the tasks of the third user story, "As a user I want to see a list of categories so that I know which categories exist".
+> Implement the tasks of the third user story, "As a user I want the reading recommendations to be listed from newest to oldest so that I can find the latest recommendations quickly".
+
+{: .important-title }
+
+> Exercise 10
+>
+> Implement the tasks of the fourth user story, "As a user I want to see a list of categories so that I know which categories exist".
 >
 > The implementation should look roughly something like this:
 >
 > ![](/assets/sprint-2-user-story-3.png)
 >
-> User should be able to visit the page by clicking a "Categories" link in the navigation bar.
+> User should be able to visit the page by clicking a "Categories" link in the navigation bar. The categories should be listed in an alphabetical order by the catogory name.
 
 {: .important-title }
 
 > Exercise 11
 >
-> Implement the tasks of the fourth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations".
+> Implement the tasks of the fifth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations".
 >
 > The implementation should look roughly something like this:
 >
@@ -431,7 +440,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 >
 > Create a controller class `ReadingRecommendationRestController` that has a method `getRecommendations`. This method should return _all the reading recommendations_ in path `/api/recommendations` in JSON format. You should be able to see the list of recommendations when opening <http://localhost:8080/api/recommendations> in a web browser.
 >
-> Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the fifth user story.
+> Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the sixth user story.
 
 {: .important-title }
 
@@ -439,7 +448,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 >
 > Create a controller class `CategoryRestController` that has a method `getCategories`. This method should return _all the categories_ in path `/api/categories` in JSON format. You should be able to see the list of categories when opening <http://localhost:8080/api/categories> in a web browser.
 >
-> Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the fifth user story.
+> Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the sixth user story.
 
 {: .important-title }
 
@@ -447,7 +456,7 @@ In this case, the `getMessageById` method will handle request to the path `/api/
 >
 > Create a method `getRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations).
 >
-> Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the fifth user story.
+> Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the sixth user story.
 
 ## API documentation with Swagger
 
@@ -698,9 +707,9 @@ So, we replaced the previous `frontend/messageList/renderMessageList.jsx` entry 
 
 Open <http://localhost:8080> in browser. We should see the text "Reading recommendation list coming soon!" where used to be the list of reading recommendations. Change the text in the `renderRecommendationList.jsx` and save the changes. Then, reaload the page and you should see that the text has changed.
 
-Next we will implement the list of reading recommendations as a React frontend application. After that we will implement the the fifth user story "As a user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
+Next we will implement the list of reading recommendations as a React frontend application. After that we will implement the the sixth user story "As a user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
 
-For the _fifth user story_ we can have the following tasks in addition to the REST API tasks mentioned before:
+For the _sixth user story_ we can have the following tasks in addition to the REST API tasks mentioned before:
 
 1. Add a RecommendationList component which lists reading recommendations from the /api/recommendations REST API endpoint
 2. Add the category filter for the RecommendationList component
@@ -709,7 +718,7 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 
 > Exercise 16
 >
-> Create issues for the the remaining tasks of the _fifth user story_ and add them to the Sprint 2 Backlog project.
+> Create issues for the the remaining tasks of the _sixth user story_ and add them to the Sprint 2 Backlog project.
 
 {: .important-title }
 
@@ -741,7 +750,7 @@ For the _fifth user story_ we can have the following tasks in addition to the RE
 
 > Exercise 18
 >
-> Implement the rest of the tasks of the fifth user story "As a user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
+> Implement the rest of the tasks of the sixth user story "As a user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
 >
 > The implementation should look roughly something like this:
 >
