@@ -196,7 +196,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 6
 >
-> Come up with tasks for the fifth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get an idea what the implementation could look like.
+> Come up with tasks for the fifth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 13 to get an idea what the implementation could look like.
 
 {: .important-title }
 
@@ -213,8 +213,8 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 > The Product Owner needs your help in estimating user stories.
 >
 > 1. Create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) "1 story point", "2 story points", "3 story points", "5 story points" and "8 story points"
-> 2. Facilitate a planning poker event where you estimate the _first four user stories_ of the Sprint
-> 3. Based on the user story estimation, add the story point labels for the four user story related issues
+> 2. Facilitate a planning poker event where you estimate the _first five user stories_ of the Sprint
+> 3. Based on the user story estimation, add the story point labels for the five user story related issues
 
 {: .important-title }
 
