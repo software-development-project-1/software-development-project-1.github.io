@@ -141,7 +141,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 After some discussion the Scrum Team came up with the following user stories:
 
-1. As a user I want to know the date when a reading recommendation was added so that I know how old it is
+1. As a user I want to know the date when the reading recommendation was added so that I know how old it is
 2. As a user I want to add a category so that I can organize my recommendations
 3. As a user I want the reading recommendations to be listed from newest to oldest so that I can find the latest recommendations quickly
 4. As a user I want to see a list of categories so that I know which categories exist
@@ -151,7 +151,7 @@ After some discussion the Scrum Team came up with the following user stories:
 For the _first user story_, the Developers came up with the following tasks:
 
 1. Add a createdAt attribute with the CreationTimestamp annotation for the ReadingRecommendation entity
-2. Add a "Added on" column which displays the formatted date for the Thymeleaf template
+2. Add a "Added on" column which displays the formatted date for the reading recommendation list Thymeleaf template
 
 For the _second user story_, the Developers came up with the following tasks:
 
