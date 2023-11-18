@@ -744,7 +744,7 @@ For the _sixth user story_ we can have the following tasks in addition to the RE
 > </form>
 > ```
 >
-> We will improve the user experience of the feature in exercise 17.
+> We will improve the user experience of the feature in exercise 21.
 
 {: .important-title }
 
