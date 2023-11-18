@@ -127,11 +127,11 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 2 goals in the Sprint Planning event:
 
-> "It's great that we can now add and list the reading recommendations! But, after adding many recommendations it gets really hard to find the right kind of recommendations from the list.
+> "It's great that we can now add, list, edit and delete reading recommendations! But, after adding many recommendations it gets really hard to find the right kind of recommendations from the list.
 >
-> It would nice if the reading recommendation list would display the date when the recommendations was added. This way, the user would know how old the recommendation is.
+> It would nice if the reading recommendation list would display the date when the recommendations was added. This way, the user would know how old the recommendation is. Also, recommendations should be listed from newest to oldest. This way the user can quickly find the latest recommendations at the top of the list.
 >
-> To better organize the reading recommendations, it would be useful to be able to add different categories, like "Programming tutorials" or "Video game news". User should be able to add a category using a form. The form should only have a field for the category name. The user should not be able to add a category with a blank name or a name that already exists. There should also be a page that lists all the added categories and has a "Add a category" link that takes the user to the form.
+> To better organize the reading recommendations, it would be useful to be able to add different categories, like "Programming tutorials" or "Video game news". User should be able to add a category using a form. The form should only have a field for the category name. The user should not be able to add a category with a blank name or a name that already exists. There should also be a page that lists all the added categories and has a "Add a category" link that takes the user to the form. The categories should be listed in an alphabetical order by the category name.
 >
 > After adding a category, the user should be able to select a category from a dropdown menu while adding a recommendation. Once a reading recommendation has been added, the user should be able to change the category in the edit form. The reading recommendation's category should be displayed on the reading recommendation list.
 >
@@ -143,9 +143,10 @@ After some discussion the Scrum Team came up with the following user stories:
 
 1. As a user I want to know the date when a reading recommendation was added so that I know how old it is
 2. As a user I want to add a category so that I can organize my recommendations
-3. As a user I want to see a list of categories so that I know which categories exist
-4. As a user I want to provide a category for a reading recommendation so that I can organize my recommendations
-5. As a user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier
+3. As a user I want the reading recommendations to be listed from newest to oldest so that I can find the latest recommendations quickly
+4. As a user I want to see a list of categories so that I know which categories exist
+5. As a user I want to provide a category for a reading recommendation so that I can organize my recommendations
+6. As a user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier
 
 For the _first user story_, the Developers came up with the following tasks:
 
@@ -160,7 +161,7 @@ For the _second user story_, the Developers came up with the following tasks:
 4. Add a method for the CategoryController class that saves the category to the database
 5. Add validation for the category name
 
-The tasks for the fifth user story will be covered in the [Communication between frontend and backend](#communication-between-frontend-and-backend) section.
+The tasks for the sixth user story will be covered in the [Communication between frontend and backend](#communication-between-frontend-and-backend) section.
 
 {: .note }
 The tasks described above are suggestions, feel free to alter them or add new tasks.
