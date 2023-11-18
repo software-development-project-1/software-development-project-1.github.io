@@ -129,7 +129,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "It's great that we can now add, list, edit and delete reading recommendations! But, after adding many recommendations it gets really hard to find the right kind of recommendations from the list.
 >
-> It would nice if the reading recommendation list would display the date when the recommendations was added. This way, the user would know how old the recommendation is. Also, recommendations should be listed from newest to oldest. This way the user can quickly find the latest recommendations at the top of the list.
+> It would nice if the reading recommendation list would display the date when the recommendation was added. This way, the user would know how old the recommendation is. Also, recommendations should be listed from newest to oldest. This way, the user can quickly find the latest recommendations at the top of the list.
 >
 > To better organize the reading recommendations, it would be useful to be able to add different categories, like "Programming tutorials" or "Video game news". User should be able to add a category using a form. The form should only have a field for the category name. The user should not be able to add a category with a blank name or a name that already exists. There should also be a page that lists all the added categories and has a "Add a category" link that takes the user to the form. The categories should be listed in an alphabetical order by the category name.
 >
