@@ -427,21 +427,19 @@ public class MessageRestController {
   // ...
 
   @GetMapping("/{id}")
-  public ResponseEntity<Message> getMessageById(@PathVariable Long id) {
-    return messageRepository.findById(id).map((message) -> ResponseEntity.ok(message))
-      .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+  public Message getMessageById(@PathVariable Long id) {
+    return messageRepository.findById(id).orElseThrow(
+      () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + "does not exist"));
   }
 
   @PostMapping("")
-  public ResponseEntity<Message> createMessage(@Valid @RequestBody AddMessageDto message, BindingResult bindingResult) {
+  public Message createMessage(@Valid @RequestBody AddMessageDto message, BindingResult bindingResult) {
     if (bindingResult.hasErrors()) {
-      return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+      throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
     }
 
     Message newMessage = new Message(message.getContent());
-    messageRepository.save(newMessage);
-
-    return ResponseEntity.ok(newMessage);
+    return messageRepository.save(newMessage);
   }
 }
 ```
@@ -463,19 +461,26 @@ Successful status codes are in range 200 - 299. Most common successful status co
 - [403 Forbidden](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403): the user lacks the required authorization for the request. For example the user tries to update a resource that they don't have access to
 - [401 Unauthorized](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401): the user is not authenticated, meaning that the server can't identify the user. For example the user is not signed in and tries to access a resource which requires authentication
 
-As in the previous example, we can use the [ResponseEntity](https://www.baeldung.com/spring-response-entity) class to send HTTP status code with the response. For example, the line:
+As in the previous example, we can use the [ResponseStatusException](https://www.baeldung.com/spring-response-status-exception) exception class to send HTTP status code with the response in case of errors. The exception should be thrown with an appropriate HTTP status code and an error message. For example, the line:
 
 ```java
-return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
 ```
 
-In the `createMessage` method will send a `400 Bad Request` status code in case the request body is not valid. The line:
+In the `createMessage` method will send a `400 Bad Request` status code with the response in case the request body is not valid. The second parameter of the `ResponseStatusException` constructor is the error message which will be displayed in the error response object:
 
-```java
-return ResponseEntity.ok(newMessage);
+```json
+{
+  "timestamp": "2023-11-20T07:55:10.918+00:00",
+  "status": 400,
+  "error": "Bad Request",
+  "trace": "...",
+  "message": "Content is required",
+  "path": "/api/messages"
+}
 ```
 
-In the same method will send a `200 OK` status code along with the `Message` object in case the request body was valid and the message was saved to the database. The `200 OK` status code is the default one, if we don't specify any other status code like in the `getMessages` method.
+If we don't throw a `ResponseStatusException` exception, the `200 OK` status code will be sent with the response, which indicates the that request succeeded.
 
 {: .important-title }
 
@@ -497,7 +502,7 @@ In the same method will send a `200 OK` status code along with the `Message` obj
 
 > Exercise 16
 >
-> Create a method `getRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations). If the category by the provided category id doesn't exist, send a `404 Not Found` HTTP status code as a response. The recommendations should be listed from newest to oldest as specified in the third user story.
+> Create a method `getRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations). If the category by the provided category id doesn't exist, send a `404 Not Found` HTTP status code and an appropriate error message with the response. The recommendations should be listed from newest to oldest as specified in the third user story.
 >
 > Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the sixth user story.
 
