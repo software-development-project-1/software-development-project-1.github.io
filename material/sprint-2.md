@@ -481,7 +481,7 @@ In the same method will send a `200 OK` status code along with the `Message` obj
 
 > Exercise 14
 >
-> Create a controller class `ReadingRecommendationRestController` that has a method `getRecommendations`. This method should return _all the reading recommendations_ in path `/api/recommendations` in JSON format. You should be able to see the list of recommendations when opening <http://localhost:8080/api/recommendations> in a web browser.
+> Create a controller class `ReadingRecommendationRestController` that has a method `getRecommendations`. This method should return _all the reading recommendations_ in path `/api/recommendations` in JSON format. You should be able to see the list of recommendations when opening <http://localhost:8080/api/recommendations> in a web browser. The recommendations should be listed from newest to oldest as specified in the third user story.
 >
 > Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the sixth user story.
 
@@ -489,7 +489,7 @@ In the same method will send a `200 OK` status code along with the `Message` obj
 
 > Exercise 15
 >
-> Create a controller class `CategoryRestController` that has a method `getCategories`. This method should return _all the categories_ in path `/api/categories` in JSON format. You should be able to see the list of categories when opening <http://localhost:8080/api/categories> in a web browser.
+> Create a controller class `CategoryRestController` that has a method `getCategories`. This method should return _all the categories_ in path `/api/categories` in JSON format. You should be able to see the list of categories when opening <http://localhost:8080/api/categories> in a web browser. The categories should be listed in an alphabetical order by the category name as specified in the fourth user story.
 >
 > Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the sixth user story.
 
@@ -497,7 +497,7 @@ In the same method will send a `200 OK` status code along with the `Message` obj
 
 > Exercise 16
 >
-> Create a method `getRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations).
+> Create a method `getRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations). If the category by the provided category id doesn't exist, send a `404 Not Found` HTTP status code as a response. The recommendations should be listed from newest to oldest as specified in the third user story.
 >
 > Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the sixth user story.
 
