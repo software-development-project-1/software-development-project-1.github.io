@@ -591,13 +591,14 @@ Next, we need to configure the Spring Security a bit. Let's add the following `S
 public class SecurityConfig {
     @Bean
     public PasswordEncoder passwordEncoder() {
-    return new BCryptPasswordEncoder();
+        return new BCryptPasswordEncoder();
     }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((requests) -> requests.requestMatchers(antMatcher("/"), antMatcher("/register"),
-                                antMatcher("/categories"), antMatcher("/frontend/**"), antMatcher("/api/**")).permitAll().anyRequest().authenticated());
+                                antMatcher("/categories"), antMatcher("/frontend/**"), antMatcher("/api/**"), antMatcher("/error")).permitAll().anyRequest()
+                                .authenticated());
 
         http.formLogin((form) -> form.permitAll());
         http.logout((logout) -> logout.permitAll());
