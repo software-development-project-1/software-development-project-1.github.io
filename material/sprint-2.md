@@ -184,7 +184,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 4
 >
-> Come up with tasks for the third user story, "As a user I want the reading recommendations to be listed from newest to oldest so that I can find the latest recommendations quickly". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Come up with tasks for the third user story, "As a user I want the reading recommendations to be listed from newest to oldest so that I can find the latest recommendations quickly". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get tips for the implementation.
 
 {: .important-title }
 
@@ -252,6 +252,11 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 > Exercise 11
 >
 > Implement the tasks of the third user story, "As a user I want the reading recommendations to be listed from newest to oldest so that I can find the latest recommendations quickly".
+>
+> Tips for implementing the tasks:
+>
+> - Use the `createdAt` attribute (see the tasks of the first user story) in ordering the recommendations
+> - [Sorting Query Results with Spring Data](https://www.baeldung.com/spring-data-sorting)
 
 {: .important-title }
 
@@ -413,7 +418,7 @@ When we design and implement REST API endpoints we should consider the use case.
 
 We should however remember to _follow the implementation conventions_ to keep the REST API endpoints _reusable_ throughout the application. For example we don't want to implement a `/api/recommendations-for-home-page` endpoint just to provide data for a specific feature. Instead, we should be implement a single `/api/recommendations` endpoint, which is reusable for other features as well.
 
-We can create a separate controller class for each collection. The `@RequestMapping` annotation can be used the define the collection name prefix of the path. Each method will automatically get the prefix in the path, so we don't need to have it in the `@GetMapping` annotation:
+We can create a separate controller class for each collection. The `@RequestMapping` annotation can be used the define the collection name prefix of the path. Each method will automatically get the prefix in the path, so we don't need to have it in the `@GetMapping` or `@PostMapping` annotations:
 
 ```java
 @RestController
@@ -422,17 +427,55 @@ public class MessageRestController {
   // ...
 
   @GetMapping("/{id}")
-  public Message getMessageById(@PathVariable("id") Long id) {
-    // ...
+  public ResponseEntity<Message> getMessageById(@PathVariable Long id) {
+    return messageRepository.findById(id).map((message) -> ResponseEntity.ok(message))
+      .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+  }
+
+  @PostMapping("")
+  public ResponseEntity<Message> createMessage(@Valid @RequestBody AddMessageDto message, BindingResult bindingResult) {
+    if (bindingResult.hasErrors()) {
+      return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
+
+    Message newMessage = new Message(message.getContent());
+    messageRepository.save(newMessage);
+
+    return ResponseEntity.ok(newMessage);
   }
 }
 ```
 
-In this case, the `getMessageById` method will handle request to the path `/api/messages/{id}`.
+In this case, the `getMessageById` method will handle GET request to the path `/api/messages/{id}` and the `createMessage` method will handle POST request to the path `/api/messages`.
 
 {: .note }
 
 > It's handy to use some prefix, such as "api" to distinguish paths that produce JSON responses from paths that produce HTML pages.
+
+### REST API error handling and HTTP status codes
+
+Previously we have handled errors in requests by sending a redirect or rendering a Thymeleaf template with some error messages. With REST API endpoints we communicate errors with [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) and optionally JSON error objects containing details about the error. HTTP status codes are numeric codes that describe whether the request was successful or not.
+
+Successful status codes are in range 200 - 299. Most common successful status code is [200 OK](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200), which is a generic way to inform the client that the request succeeded. Client error status codes are in range 400 - 499. These status codes indicate that there's something wrong with the client's request. Most common client error status codes are:
+
+- [404 Not Found](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404): the server cannot find the requested resource
+- [400 Bad Request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400): there was something wrong with the user's request. For example the request body of a POST request is not valid
+- [403 Forbidden](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403): the user lacks the required authorization for the request. For example the user tries to update a resource that they don't have access to
+- [401 Unauthorized](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401): the user is not authenticated, meaning that the server can't identify the user. For example the user is not signed in and tries to access a resource which requires authentication
+
+As in the previous example, we can use the [ResponseEntity](https://www.baeldung.com/spring-response-entity) class to send HTTP status code with the response. For example, the line:
+
+```java
+return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+```
+
+In the `createMessage` method will send a `400 Bad Request` status code in case the request body is not valid. The line:
+
+```java
+return ResponseEntity.ok(newMessage);
+```
+
+In the same method will send a `200 OK` status code along with the `Message` object in case the request body was valid and the message was saved to the database. The `200 OK` status code is the default one, if we don't specify any other status code like in the `getMessages` method.
 
 {: .important-title }
 
@@ -559,6 +602,23 @@ fetch("/api/messages")
 > Our frontend application's source is served from the same _origin_ as the backend, which is <http://localhost:8080>. This is why don't need to specify the full URL in the `fetch` call, which is <http://localhost:8080/api/messages>. Instead we can specify just the path. For example, the Vite development server serves the source files from a different origin (by default <http://localhost:5173>) and in this case we would need to use the full URL.
 
 The `fetch` function returns a [Promise](https://javascript.info/promise-basics) object. The promise resolves a `Response` object, which contains the response from the server. The response's JSON payload can be parsed into JavaScript objects using the `response.json()` method.
+
+The default request method is GET. We can also send a POST request with a JSON formatted request body by providing addional options for the `fetch` call:
+
+```js
+fetch("/api/messages", {
+  method: "POST",
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ content: "Hello world!" }),
+})
+  .then((response) => response.json())
+  .then((newMessage) => {
+    console.log(newMessage);
+  });
+```
 
 In the example project, fetching the messages is extracted into a function called `fetchMessages`, which can be found in the `frontend/messageList/fetchMessages.js` file:
 
