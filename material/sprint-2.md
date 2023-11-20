@@ -161,7 +161,7 @@ For the _second user story_, the Developers came up with the following tasks:
 4. Add a method for the CategoryController class that saves the category to the database
 5. Add validation for the category name
 
-The tasks for the sixth user story will be covered in the [Communication between frontend and backend](#communication-between-frontend-and-backend) section.
+The tasks for the sixth user story will be covered in the [REST APIs](#rest-apis) and [Communication between frontend and backend](#communication-between-frontend-and-backend) sections.
 
 {: .note }
 The tasks described above are suggestions, feel free to alter them or add new tasks.
