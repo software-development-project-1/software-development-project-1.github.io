@@ -1079,7 +1079,7 @@ Finally, for the application itself, we need to create a web service. Complete t
    - `POSTGRES_USERNAME`: the _username_ of the PostgreSQL instance
    - `POSTGRES_PASSWORD`: the _password_ of the PostgreSQL instance
 
-8. Set "Auto-deploy" as "No" from the dropdown menu
+8. Set "Auto-Deploy" as "No" from the dropdown menu
 9. Click the "Create Web service" button at the bottom of the page
 
 Open the created web service in the Render dashboard. The deployment of the application should have started. You can always deploy the application by clicking the "Manual Deploy" button and choosing "Deploy latest commit". Once the deployment is complete the application will be accessible to everyone in the URL that is displayed under the web service's name.
