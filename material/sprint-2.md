@@ -1075,7 +1075,7 @@ Finally, for the application itself, we need to create a web service. Complete t
 6. Choose "Docker" as the runtime in the dropdown menu
 7. Click the "Advanced" button at the bottom of the page. In the advanced options section, click the "Add environment variable" button to add three environment variables (key, value):
 
-   - `POSTGRES_URL`: the _internal URL in correct format_ of the PostgreSQL instance. The URL format is `jdbc:postgresql://dpg-<something>/coolreads`. Basically, you can take everything after the "@" symbol in the external URL you copied previously and the environment variable value is `jdbc:postgresql://<everything-after-the-@-symbol>`
+   - `POSTGRES_URL`: the _internal URL in correct format_ of the PostgreSQL instance. The URL format is `jdbc:postgresql://dpg-<something>/coolreads`. Basically, you can take everything after the "@" symbol in the internal URL you copied previously and the environment variable value is `jdbc:postgresql://<everything-after-the-@-symbol>`
    - `POSTGRES_USERNAME`: the _username_ of the PostgreSQL instance
    - `POSTGRES_PASSWORD`: the _password_ of the PostgreSQL instance
 
