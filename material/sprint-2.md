@@ -15,7 +15,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-25. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-26. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -429,7 +429,7 @@ public class MessageRestController {
   @GetMapping("/{id}")
   public Message getMessageById(@PathVariable Long id) {
     return messageRepository.findById(id).orElseThrow(
-      () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + "does not exist"));
+      () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + " does not exist"));
   }
 
   @PostMapping("")
@@ -626,6 +626,7 @@ fetch("/api/messages", {
 ```
 
 {: .note }
+
 > The `fetch` calls require somewhat boilerplate code, especially while sending JSON formatted data to the server with a POST request. Different HTTP client libraries such as [Axios](https://axios-http.com/docs/intro) are used to reduce this boiplerate code and to provide useful additional features.
 
 In the example project, fetching the messages is extracted into a function called `fetchMessages`, which can be found in the `frontend/messageList/fetchMessages.js` file:
@@ -1016,19 +1017,92 @@ If the application is currently running, for example in Eclipse, stop it. Then, 
 
 > When you change the application's code, you need to re-generate the JAR file with the `./mvnw package` command to have a JAR file for the latest version of the application.
 
+## Deployment
+
+So far we have been using and developing our application in an isolated environment on our own computer. This environment used during the development of the application is referred to as the _development environment_. In the software development lifecycle the _deployment phase_ is the phase in which the implemented software is distributed to the users. For example, a web application is published online so that users can access it with their web browsers. This environment is referred to as the _production environment_.
+
+In an agile software development process, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint. There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). During the course, we will be using Render to deploy our application.
+
+Let's deploy our application so that the users can start using it. First, [sign in to Render](https://dashboard.render.com/) using your GitHub account. Then, we will need to set up a _production database_ for our application. The H2 database is convinient in the development environment but not suitable for the production environment. We can create a [PostgreSQL](https://www.postgresql.org/) database instance in Render dashboard by clicking the "New" button on the navigation bar and choosing "PostgreSQL". Name the PostgreSQL instance "cool-reads-database" and the database "coolreads". Then, scroll to the bottom and click the "Create database" button.
+
+Once the PostgreSQL instance has been created, open its information in the Render dashboard. In the PostgreSQL instance's page, scroll to "Connections" section. Copy the values for "Username", "Password" and "Internal Database URL" and paste the values temporary to an editor. We will need these values soon.
+
+Next, let's add "instructions" for Render on how to start our application to our project. Render supports deploying [Docker](https://www.docker.com/) containers which are isolated environments for running all kinds of applications. Docker container is defined with a `Dockerfile`. Add the following `Dockerfile` to the root folder of the project (same folder that has the `pom.xml` file):
+
+```dockerfile
+FROM maven:3.8.7-openjdk-18-slim AS build
+COPY . .
+RUN mvn clean package -DskipTests
+
+FROM openjdk:22-jdk-slim
+ENV SPRING_CONFIG_NAME=application,production
+COPY --from=build /target/cool-reads-0.0.1-SNAPSHOT.jar coolreads.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","coolreads.jar"]
+```
+
+The `Dockerfile` has some familiar commands. Basically we just generate a JAR file for the project and start the application using the JAR file.
+
+Because we use PostgreSQL as the production database, we will need to specific production environment configuration. Add a file `production.properties` to the `src/main/resources` (same folder that has the `application.properties` file) with the following content:
+
+```
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.datasource.url=${POSTGRES_URL}
+spring.datasource.username=${POSTGRES_USERNAME}
+spring.datasource.password=${POSTGRES_PASSWORD}
+spring.datasource.driver-class-name=org.postgresql.Driver
+```
+
+The PostgreSQL database requires a suitable driver for the application. Let's add the PostgreSQL driver dependency to the `<dependencies>` list in the `pom.xml` file:
+
+```xml
+<dependency>
+  <groupId>org.postgresql</groupId>
+  <artifactId>postgresql</artifactId>
+  <scope>runtime</scope>
+</dependency>
+```
+
+Push these changes to GitHub.
+
+Finally, for the application itself, we need to create a web service. Complete the following steps to create a web service in the Render dashboard:
+
+1. Click the "New" button on the navigation bar and choose "Web Service"
+2. Choose "Build and deploy from a Git repository" and click the "Next" button
+3. In the create web service page, click "Configure accounts" in the "Github" section on the right. Choose your GitHub organization from the list, choose "All repositories" and click the "Install" button
+4. Back in the create web service page, choose your project repository in the "Connect a repository" section by clicking the "Connect" button next to the repository's name
+5. Come up with a name for the web service that isn't already in use. The name will be visible in the application's URL so try to come up with a sensible name
+6. Choose "Docker" as the runtime in the dropdown menu
+7. Click the "Advanced" button at the bottom of the page. Click "Add environment" variable to add three environment variables (key, value):
+
+   - `POSTGRES_URL`: the _internal URL in correct format_ of the PostgreSQL instance. The URL format is `jdbc:postgresql://dpg-<something>/coolreads`. Basically, you can take everything after the "@" symbol in the external URL you copied previously and the environment variable value is `jdbc:postgresql://<everything-after-the-@-symbol>`
+   - `POSTGRES_USERNAME`: the _username_ of the PostgreSQL instance
+   - `POSTGRES_PASSWORD`: the _password_ of the PostgreSQL instance
+
+8. Set "Auto-deploy" as "No" from the dropdown menu
+9. Click the "Create Web service" button at the bottom of the page
+
+Open the created web service in the Render dashboard. The deployment of the application should have started. You can always deploy the application by clicking the "Manual Deploy" button and choosing "Deploy latest commit". Once the deployment is complete the application will be accessible to everyone in the URL that is displayed under the web service's name.
+
+{: .important-title }
+
+> Exercise 23
+>
+> Deploy the application to Render as instructed above. Add the production environment URL of the application (the web service URL in the Render dashboard) to to the "Usage guide" section in the `README.md` file.
+
 ## Sprint Review
 
 We have all kinds of cool stuff to show for the Product Owner at the end of this Sprint. Prepare for the upcoming [Sprint Review](/sprint-1#print-review) event, similarly as in the previous Sprint.
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 24
 >
 > Once you have implemented the user stories of the Sprint, remove the excessive Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive `messageList` folder from the `frontend` folder.
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 25
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 >
@@ -1038,9 +1112,9 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 26
 >
-> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
+> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If you managed to deploy the application to Render, demonstrate the features in the production environment.
 >
 > Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/)) for the Sprint Review. This means that you should add a few categories and a few reading recommendations using the application so that you can easily demonstrate the user stories.
 
