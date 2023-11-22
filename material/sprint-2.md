@@ -1053,6 +1053,8 @@ spring.datasource.password=${POSTGRES_PASSWORD}
 spring.datasource.driver-class-name=org.postgresql.Driver
 ```
 
+The `Dockerfile` sets the environment variable `ENV SPRING_CONFIG_NAME=application,production`, which tells Spring to merge properties from `application.properties` and `production.properties` files. The properties are merged from left to right, so the properties in the `production.properties` file will override any properties in the `application.properties` file. The values inside `${...}` are [environment variables](https://en.wikipedia.org/wiki/Environment_variable). We will define them in Render soon.
+
 The PostgreSQL database requires a suitable driver for the application. Let's add the PostgreSQL driver dependency to the `<dependencies>` list in the `pom.xml` file:
 
 ```xml
