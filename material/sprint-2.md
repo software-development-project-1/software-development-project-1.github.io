@@ -1084,6 +1084,9 @@ Finally, for the application itself, we need to create a web service. Complete t
 
 Open the created web service in the Render dashboard. The deployment of the application should have started. You can always deploy the application by clicking the "Manual Deploy" button and choosing "Deploy latest commit". Once the deployment is complete the application will be accessible to everyone in the URL that is displayed under the web service's name.
 
+{: .highlight }
+> It might take a very long time for the application to open in the web browser.
+
 {: .important-title }
 
 > Exercise 23

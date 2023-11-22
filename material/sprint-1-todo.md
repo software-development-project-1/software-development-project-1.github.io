@@ -6,7 +6,6 @@ nav_order: 8
 nav_exclude: true
 ---
 
-
 {% include toc.html %}
 
 # Sprint 1
@@ -617,6 +616,103 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
+## JAR
+
+A JAR (Java Archive) is a package file format typically used to aggregate many Java class files and associated metadata and resources (such as CSS files, JavaScript files and other assets) into one file to distribute application software or libraries on the Java platform. If a user wants to use our application, instead of providing them with the entire source code, we can just provide a JAR file containing everything needed to run our application.
+
+We can generate a JAR file for the application with the following command:
+
+```bash
+./mvnw package
+```
+
+{: .highlight }
+> If you have trouble generating the JAR file with the `./mvnw package` command, see if [this](problems-and-solutions#warning-java_home-environment-variable-is-not-set) solves the problem.
+
+The command will generate the JAR file under the `target` folder. Inside the folder there should be a file `cool-reads-0.0.1-SNAPSHOT.jar`. Because we added the frontend-maven-plugin for the project previously, the JAR file will contain the JavaScript files required by the frontend.
+
+If the application is currently running, for example in Eclipse, stop it. Then, run `java -jar target/cool-reads-0.0.1-SNAPSHOT.jar` to run the application with the JAR file. Open the application in <http://localhost:8080> and see that it is working.
+
+{: .note }
+
+> When you change the application's code, you need to re-generate the JAR file with the `./mvnw package` command to have a JAR file for the latest version of the application.
+
+## Deployment
+
+So far we have been using and developing our application in an isolated environment on our own computer. This environment used during the development of the application is referred to as the _development environment_. In the software development lifecycle the _deployment phase_ is the phase in which the implemented software is distributed to the users. For example, a web application is published online so that users can access it with their web browsers. This environment is referred to as the _production environment_.
+
+In an agile software development process, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint. There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). During the course, we will be using Render to deploy our application.
+
+Let's deploy our application so that the users can start using it. First, [sign in to Render](https://dashboard.render.com/) using your GitHub account. Then, we will need to set up a _production database_ for our application. The H2 database is convenient in the development environment but not suitable for the production environment. We can create a [PostgreSQL](https://www.postgresql.org/) database instance in Render dashboard by clicking the "New" button on the navigation bar and choosing "PostgreSQL". Name the PostgreSQL instance "cool-reads-database" and the database "coolreads". Then, scroll to the bottom and click the "Create database" button.
+
+Once the PostgreSQL instance has been created, open its information in the Render dashboard. In the PostgreSQL instance's page, scroll to "Connections" section. Copy the values for "Username", "Password" and "Internal Database URL" and paste the values temporary to an editor. We will need these values soon.
+
+Next, let's add "instructions" for Render on how to start our application to our project. Render supports deploying [Docker](https://www.docker.com/) containers which are isolated environments for running all kinds of applications. Docker container is defined with a `Dockerfile`. Add the following `Dockerfile` to the root folder of the project (same folder that has the `pom.xml` file):
+
+```dockerfile
+FROM maven:3.8.7-openjdk-18-slim AS build
+COPY . .
+RUN mvn clean package -DskipTests
+
+FROM openjdk:22-jdk-slim
+ENV SPRING_CONFIG_NAME=application,production
+COPY --from=build /target/cool-reads-0.0.1-SNAPSHOT.jar cool-reads.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","cool-reads.jar"]
+```
+
+The `Dockerfile` has some familiar commands. Basically we just generate a JAR file for the project and start the application using the JAR file.
+
+Because we use PostgreSQL as the production database, we will need to specific production environment configuration. Add a file `production.properties` to the `src/main/resources` folder (same folder that has the `application.properties` file) with the following content:
+
+```
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.datasource.url=${POSTGRES_URL}
+spring.datasource.username=${POSTGRES_USERNAME}
+spring.datasource.password=${POSTGRES_PASSWORD}
+spring.datasource.driver-class-name=org.postgresql.Driver
+```
+
+The PostgreSQL database requires a suitable driver for the application. Let's add the PostgreSQL driver dependency to the `<dependencies>` list in the `pom.xml` file:
+
+```xml
+<dependency>
+  <groupId>org.postgresql</groupId>
+  <artifactId>postgresql</artifactId>
+  <scope>runtime</scope>
+</dependency>
+```
+
+Push these changes to GitHub.
+
+Finally, for the application itself, we need to create a web service. Complete the following steps to create a web service in the Render dashboard:
+
+1. Click the "New" button on the navigation bar and choose "Web Service"
+2. Choose "Build and deploy from a Git repository" and click the "Next" button
+3. In the create web service page, click "Configure accounts" in the "Github" section on the right. Choose your GitHub organization from the list, choose "All repositories" and click the "Install" button
+4. Back in the create web service page, choose your project repository in the "Connect a repository" section by clicking the "Connect" button next to the repository's name
+5. Come up with a name for the web service that isn't already in use. The name will be visible in the application's URL so try to come up with a sensible name
+6. Choose "Docker" as the runtime in the dropdown menu
+7. Click the "Advanced" button at the bottom of the page. In the advanced options section, click the "Add environment variable" button to add three environment variables (key, value):
+
+   - `POSTGRES_URL`: the _internal URL in correct format_ of the PostgreSQL instance. The URL format is `jdbc:postgresql://dpg-<something>/coolreads`. Basically, you can take everything after the "@" symbol in the internal URL you copied previously and the environment variable value is `jdbc:postgresql://<everything-after-the-@-symbol>`
+   - `POSTGRES_USERNAME`: the _username_ of the PostgreSQL instance
+   - `POSTGRES_PASSWORD`: the _password_ of the PostgreSQL instance
+
+8. Set "Auto-Deploy" as "No" from the dropdown menu
+9. Click the "Create Web service" button at the bottom of the page
+
+Open the created web service in the Render dashboard. The deployment of the application should have started. You can always deploy the application by clicking the "Manual Deploy" button and choosing "Deploy latest commit". Once the deployment is complete the application will be accessible to everyone in the URL that is displayed under the web service's name.
+
+{: .highlight }
+> It might take a very long time for the application to open in the web browser.
+
+{: .important-title }
+
+> Exercise 20
+>
+> Deploy the application to Render as instructed above. Add the production environment URL of the application (the web service URL in the Render dashboard) to to the "Usage guide" section in the `README.md` file.
+
 ## Sprint Review
 
 At the end of each Sprint, there's the [Sprint Review](https://scrumguides.org/scrum-guide.html#sprint-review) event. During the Sprint Review, the Developers demonstrate the outcome of the Sprint for the Product Owner. This means that the Developers should demonstrate how the implemented user stories work _in the user's perspective_. So, instead of showing the code, Developers should show how the user can use the new features of the application.
@@ -625,11 +721,11 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 21
 >
-> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
+> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If you managed to deploy the application to Render, demonstrate the features in the production environment.
 >
-> You can use the source code of the release you created earlier to get the working version of the application. Click the "Releases" link in GitHub and choose "Source code" under the "Assets" heading.
+> Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/)) for the Sprint Review. This means that you should add a few sensible reading recommendations using the application so that you can easily demonstrate the user stories.
 
 {: .warning }
 

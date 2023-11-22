@@ -17,6 +17,6 @@ If you have the project in Eclipse, delete it, by right-clicking on the project 
 
 ## Warning: JAVA_HOME environment variable is not set
 
-While running `./mvnw spring-boot:run`, you might see warning `Warning: JAVA_HOME environment variable is not set.` at the top of the command output. [Here's](https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html) a guide to fix the issue.
+While running `./mvnw spring-boot:run` (or other Maven commands), you might see warning `Warning: JAVA_HOME environment variable is not set.` at the top of the command output. [Here's](https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html) a guide to fix the issue.
 
 On Windows the JDK should be found in the `C:\Program Files\Java` folder. The environment variable value should be in format `C:\Program Files\Java\<jdk-folder-name>`. Once you have created the `JAVA_HOME` environment variable close the Git Bash and open it again.

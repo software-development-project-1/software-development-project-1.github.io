@@ -11,7 +11,7 @@ nav_order: 3
 
 ## Submitting this week's exercises
 
-All of this week's exercises (exercises 1-7) are submitted to [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a _single PDF file_. The submission deadline is on {{site.week_1_deadline}}.
+All of this week's exercises (exercises 1-8) are submitted to [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a _single PDF file_. The submission deadline is on {{site.week_1_deadline}}.
 
 {: .highlight }
 
@@ -81,7 +81,7 @@ Instead of completing software development lifecycle's phases sequentially from 
 
 _Scrum_ is an iterative software development process framework that defines practical ways to carry out agile software development principles. The [Scrum Guide](https://scrumguides.org/scrum-guide.html) is the official guide to Scrum. During the course we will use Scrum to manage our software development process. This week we will learn about Scrum in theory and week three onwards we will apply the knowledge with our project.
 
-Before starting working on the exercises, read at least the chapters "Scrum Definition", "Scrum Theory", "Scrum Values", "Scrum Team" and "Scrum Events" from the [Scrum Guide](https://scrumguides.org/scrum-guide.html).
+Before starting working on the exercises, read at least the chapters "Scrum Definition", "Scrum Theory", "Scrum Values", "Scrum Team", "Scrum Events" and "Scrum Artifacts" from the [Scrum Guide](https://scrumguides.org/scrum-guide.html).
 
 ![Scrum process](/assets/scrum.png)
 
@@ -108,13 +108,24 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 
 > Exercise 3
 >
+> Read the "Scrum Artifacts" chapter of the Scrum Guide and answer the following questions in your own words:
+>
+> 1. What are the Scrum Artifacts and what is their purpose for the process?
+> 2. What is the Product Backlog?
+> 3. What is the Sprint Backlog?
+> 4. What is the difference between the Product Backlog and the Sprint Backlog?
+
+{: .important-title }
+
+> Exercise 4
+>
 > Scrum emphasize the importance of _transparency_ of the process. It means that the significant aspects of the process should be visible to those responsible for the outcome. Transparency allows each Scrum Team member to track and understand what's really going on in each sprint.
 >
 > How do different Scrum events improve process transparency?
 
 {: .important-title }
 
-> Exercise 4
+> Exercise 5
 >
 > "Responding to change over following a plan" is one of the core principles of agile.
 >
@@ -195,7 +206,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 5
+> Exercise 6
 >
 > What's wrong with the following user stories?
 >
@@ -205,7 +216,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 7
 >
 > The Product Owner came up with the following user story during the Sprint Planning:
 >
@@ -215,7 +226,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 8
 >
 > During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).
 >
