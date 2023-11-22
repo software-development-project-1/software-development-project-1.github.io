@@ -1019,9 +1019,9 @@ If the application is currently running, for example in Eclipse, stop it. Then, 
 
 ## Deployment
 
-So far we have been using and developing our application in an isolated environment on our own computer. This environment used during the development of the application is referred to as the _development environment_. In the software development lifecycle the _deployment phase_ is the phase in which the implemented software is distributed to the users. For example, a web application is published online so that users can access it with their web browsers. This environment is referred to as the _production environment_.
+So far we have been using and developing our application in an isolated environment on our own computer. This environment used during the development of the application is referred to as the _development environment_. In the software development lifecycle the _deployment phase_ is the phase in which the implemented software is distributed to the users. For example, a web application is published online so that users can access it with their web browsers. This environment is referred to as the _production environment_. 
 
-In an agile software development process, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint. There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). During the course, we will be using Render to deploy our application.
+The deployment phase is crucial because unless users can use the application, it has no real value for the stakeholders. That is why in the agile software development process, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint. There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). During the course, we will be using Render to deploy our application.
 
 Let's deploy our application so that the users can start using it. First, [sign in to Render](https://dashboard.render.com/) using your GitHub account. Then, we will need to set up a _production database_ for our application. The H2 database is convenient in the development environment but not suitable for the production environment. We can create a [PostgreSQL](https://www.postgresql.org/) database instance in Render dashboard by clicking the "New" button on the navigation bar and choosing "PostgreSQL". Name the PostgreSQL instance "cool-reads-database" and the database "coolreads". Then, scroll to the bottom and click the "Create database" button.
 
@@ -1079,12 +1079,15 @@ Finally, for the application itself, we need to create a web service. Complete t
    - `POSTGRES_USERNAME`: the _username_ of the PostgreSQL instance
    - `POSTGRES_PASSWORD`: the _password_ of the PostgreSQL instance
 
+   ![Render environment variables](/assets/render-environment-variables.png)
+
 8. Set "Auto-Deploy" as "No" from the dropdown menu
 9. Click the "Create Web service" button at the bottom of the page
 
 Open the created web service in the Render dashboard. The deployment of the application should have started. You can always deploy the application by clicking the "Manual Deploy" button and choosing "Deploy latest commit". Once the deployment is complete the application will be accessible to everyone in the URL that is displayed under the web service's name.
 
 {: .highlight }
+
 > It might take a very long time for the application to open in the web browser.
 
 {: .important-title }

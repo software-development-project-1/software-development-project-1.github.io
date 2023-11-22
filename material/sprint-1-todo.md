@@ -145,7 +145,7 @@ Once the organization is created, a team member can be invited by clicking the "
 
 Instead of starting a repository from scratch, we can create a copy an existing repository and use that as a starting point for our project. In GitHub terminology this is called _forking a repository_ and the copied repository is called a _fork_.
 
-To get started faster, start your project by forking the [example-project repository]({{site.example_project_link}}). The repository has a simple Java Spring Boot application initialized with [Spring Initializr](https://start.spring.io/). It has some code samples of Thymeleaf templates, controllers, JPA entities and JPA repositories.
+To get started faster, start your project by forking the [example project repository]({{site.example_project_link}}). The repository has a simple Java Spring Boot application initialized with [Spring Initializr](https://start.spring.io/). It has some code samples of Thymeleaf templates, controllers, JPA entities and JPA repositories.
 
 A repository can be forked by cliking the "Fork" button on right side of the repository's name.
 
@@ -155,13 +155,13 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 
 > Exercise 2
 >
-> _One of the team members_ should fork the [example-project repository]({{site.example_project_link}}). Choose the "Owner" as the organization you created previously and give the repository a descriptive name, such as "cool-reads" and a description. The forked repository will become your project's repository where you start working on the project.
+> _One of the team members_ should fork the [example project repository]({{site.example_project_link}}). Choose the "Owner" as the organization you created previously and give the repository a descriptive name, such as "quizzer" and a description. The forked repository will become your project's repository where you start working on the project.
 
 {: .important-title }
 
 > Exercise 3
 >
-> Each team member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example-project repository. _Remember to use the HTTPS address_ of the GitHub repository with the command. See the [Git instructions](/git#githubs-workflow) if you have trouble.
+> Each team member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example project repository. _Remember to use the HTTPS address_ of the GitHub repository with the command. See the [Git instructions](/git#githubs-workflow) if you have trouble.
 >
 > Once you have cloned the repository, open the code in an editor such as Eclipse or Visual Studio Code. In Eclipse you can open the project folder from "File > Open Project from Filesystem". The project requires _Java version 17_.
 >
@@ -236,7 +236,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 >
 > Open the `README.md` for editing for example in GitHub or in Visual Studio Code. You might not be able to edit the file in Eclipse. Replace the current contents of the repository's `README.md` file with the following information using Markdown:
 >
-> 1. At the beginning of the file add the project name "Cool Reads" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
+> 1. At the beginning of the file add the project name "Quizzer" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
 > 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
 > 3. Below the description, add a subheading "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name.
 > 4. Each team member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
@@ -248,40 +248,40 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Planning event:
 
-> "Let's start from the basics. We need a simple web application which allows the user to add a reading recommendation and list the added reading recommendations. In addition, to be able to manage the added reading recommendations, the user should also be able to edit and delete reading recommendations.
+> "Let's start from the basics. We need a simple web application which allows the teacher to add, list, edit and delete quizzes.
 >
-> When the user opens the application on a web browser, there should be page where the added reading recommendations are listed. There should also be a link that says "Add a reading recommendation" which takes the user to another page, where they can add a reading recommendation using a form.
+> When the teacher opens the application on a web browser, there should be page where the added quizzes are listed. There should also be a link that says "Add a quiz" which takes the teacher to another page, where they can add a quiz using a form.
 >
-> For now, it is enough that a reading recommendation has a title, for example "The 2020 Scrum Guide", a link, for example "https://scrumguides.org/scrum-guide.html" and a short description, for example "All you need to know about Scrum". Each of these should have field on the form and they should be displayed on the list. The user should not be able to add a reading recommendation with a blank title, link or description. Also, the link should be a valid link.
+> For now, it is enough that a quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries". Each of these should have field on the form and they should be displayed on the list. The user should not be able to add a quiz with a blank title or description.
 >
-> It would be convinient that the user could edit the added reading recommendation if, for example they made a typo in the title or the description. The reading recommendation list should have an "Edit" link next to each reading recommendation. The link should take the user to an edit form, where they can edit all the added information.
+> It would be convinient that the teacher could edit the added quizzes if, for example they made a typo in the quiz name or description. The quiz list should have an "Edit" link next to each quiz. The link should take the teacher to an edit form, where they can edit all the added information of the quiz.
 >
-> The user should also be able to get rid of reading recommendations they don't need. Next to the "Edit" link, there should be a "Delete" button in the reading recommendation list. When the user clicks the button, the reading recommendation should be deleted."
+> The teacher should also be able to get rid of quizzes they don't need. Next to the "Edit" link, there should be a "Delete" button in the quiz list. When the user clicks the button, the quiz should be deleted."
 >
 > -- The Product Owner
 
 After some discussion the Scrum Team came up with the following user stories:
 
-1. As a user I want to add a reading recommendation so that I can gather a collection of recommendations
-2. As a user I want to list the added reading recommendations so that I can find interesting things to read
-3. As a user I want to be able to edit a reading recommendation so that I can change its information
-4. As a user I want to be able to delete a reading recommendation so that I can get rid of recommendations I don't need
+1. As a teacher, I want to add a quiz so that my students can learn about course-related topics
+2. As a teacher, I want to list the added quizzes so that I know which quizzes are added
+3. As a teacher, I want to be able to edit a quiz so that I can change its information
+4. As a teacher, I want to be able to delete a quiz so that I can get rid of quizzes I don't need
 
 The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
 
 For the _first user story_, the Developers came up with the following tasks:
 
-1. Add a ReadingRecommendation JPA entity class with id, title, link and description attributes, and a ReadingRecommendationRepository JPA repository class
-2. Add Thymeleaf template for the reading recommendation submission form containing fields for title, link and description
-3. Add ReadingRecommendationController controller class and a method for rendering the reading recommendation submission form
-4. Add a method for the ReadingRecommendationController class that saves the reading recommendation to the database
-5. Add validation for reading recommendation title, link and description
+1. Add a Quiz JPA entity class with id, name and description attributes, and a QuizRepository JPA repository class
+2. Add Thymeleaf template for the quiz submission form containing fields for title, link and description
+3. Add QuizController controller class and a method for rendering the quiz submission form
+4. Add a method for the QuizController class that saves the quiz to the database
+5. Add validation for quiz name and description
 
 For the _second user story_, the Developers came up with the following tasks:
 
-1. Add Thymeleaf template for listing the added reading recommendations with title, link and description
-2. Add a method for rendering the reading recommendation list for the ReadingRecommendationController class
-3. Add a link to the reading recommendation list page to the navigation bar
+1. Add Thymeleaf template for listing the added quizzes with title, link and description
+2. Add a method for rendering the quiz list for the QuizController class
+3. Add a link to the quiz list page to the navigation bar
 
 These are the user stories, that you will be working on as a team during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
 
@@ -312,13 +312,13 @@ These are the user stories, that you will be working on as a team during this Sp
 
 > Exercise 9
 >
-> Come up with tasks for the third user story, "As a user I want to be able to edit a reading recommendation so that I can change its information". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 to get an idea what the implementation could look like.
+> Come up with tasks for the third user story, "As a teacher, I want to be able to edit a quiz so that I can change its information". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 to get an idea what the implementation could look like.
 
 {: .important-title }
 
 > Exercise 10
 >
-> Come up with tasks for the fourth user story, "As a user I want to be able to delete a reading recommendation so that I can get rid of recommendations I don't need". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 to get an idea what the implementation could look like.
+> Come up with tasks for the fourth user story, "As a teacher, I want to be able to delete a quiz so that I can get rid of quizzes I don't need". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 to get an idea what the implementation could look like.
 
 ## GitHub issues
 
@@ -335,15 +335,15 @@ Let's add the following labels by clicking the "New label" button:
 - "user story" label indicates that the issue is a _user story_
 - "task" label indicates that the issue is a _task_
 
-Then, let's create a label _for each user story_ so that we can better organize the tasks. Create a label with a _short description_ (_not_ the full user story description) for each user story. For example "add recommendation" and "list recommendations" for the first two user stories.
+Then, let's create a label _for each user story_ so that we can better organize the tasks. Create a label with a _short description_ (_not_ the full user story description) for each user story. For example "add quiz" and "list quizzes" for the first two user stories.
 
 {: .important-title }
 
 > Exercise 11
 >
-> Create the "user story" and "task" labels and a label _for each user story_ as described above. Come up with a _short description_ for each user story for the labels, such as "add recommendation".
+> Create the "user story" and "task" labels and a label _for each user story_ as described above. Come up with a _short description_ for each user story for the labels, such as "add quiz".
 
-Now that we have the labels, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "As a user I want to add a reading recommendation so that I can gather a collection of recommendations". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose labels "user story" and "add recommendation", which indicate that this issue is related to a certain user story. Then, click "Projects" on the right and choose "Product Backlog". This will add the issue to the Product Backlog project. Finally, click the "Submit a new issue" button to create the issue.
+Now that we have the labels, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "As a teacher, I want to add a quiz so that my students can learn about course-related topics". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose labels "user story" and "add quiz", which indicate that this issue is related to a certain user story. Then, click "Projects" on the right and choose "Product Backlog". This will add the issue to the Product Backlog project. Finally, click the "Submit a new issue" button to create the issue.
 
 {: .note }
 
@@ -403,7 +403,7 @@ If we take a look at the example project's `layout.html` file in the `src/main/r
 >
   <head>
     <meta charset="utf-8" />
-    <title>Cool Reads</title>
+    <title>Quizzer</title>
     <!-- ... -->
   </head>
   <body>
@@ -428,12 +428,10 @@ Let's have a look at the `messagelist.html` file that is using this layout:
   <body>
     <div layout:fragment="content">
       <h1>Messages</h1>
-
+      <a class="btn btn-primary" href="/messages/add">Add a message</a>
       <ul>
         <li th:each="message: ${messages}" th:text="${message.content}"></li>
       </ul>
-
-      <a class="btn btn-primary" href="/messages/add">Add a message </a>
     </div>
   </body>
 </html>
@@ -445,7 +443,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 > Exercise 14
 >
-> Implement the tasks of the first user story, "As a user I want to add a reading recommendation so that I can build a collection of reading recommendations".
+> Implement the tasks of the first user story, "As a teacher, I want to add a quiz so that my students can learn about course-related topics".
 >
 > The implementation should look roughly something like this:
 >
@@ -469,7 +467,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 > Exercise 15
 >
-> Implement the tasks of the second user story, "As a user I want to list the added reading recommendations so that I can easily find interesting things to read".
+> Implement the tasks of the second user story, "As a teacher, I want to list the added quizzes so that I know which quizzes are added".
 >
 > The implementation should look roughly something like this:
 >
@@ -481,7 +479,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 > Exercise 16
 >
-> Implement the tasks of the third user story, "As a user I want to be able to edit a reading recommendation so that I can change its information".
+> Implement the tasks of the third user story, "As a teacher, I want to be able to edit a quiz so that I can change its information".
 >
 > The implementation should look roughly something like this:
 >
@@ -497,8 +495,8 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 >
 >   ```html
 >   <form
->     th:action="@{/recommendations/{id}/edit(id = ${recommendation.id})}"
->     th:object="${recommendation}"
+>     th:action="@{/quizzes/{id}/edit(id = ${quiz.id})}"
+>     th:object="${quiz}"
 >     method="post"
 >   >
 >     <!-- ... -->
@@ -508,7 +506,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 > - You can access the path variable in a controller method like this:
 >
 >   ```java
->   @PostMapping("/recommendations/{id}/edit")
+>   @PostMapping("/quizzes/{id}/edit")
 >   public String editRecommendation(@PathVariable Long id, /* ... */) {
 >     // ...
 >   }
@@ -518,9 +516,10 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 >
 >   ```html
 >   <a
->     th:href="@{/recommendations/{id}/edit(id = ${recommendation.id})}"
->     th:text="${recommendation.link}"
+>     th:href="@{/quizzes/{id}/edit(id = ${quiz.id})}"
+>     class="btn btn-secondary"
 >   >
+>     Edit
 >   </a>
 >   ```
 
@@ -528,7 +527,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 > Exercise 17
 >
-> Implement the tasks of the fourth user story, "As a user I want to be able to delete a reading recommendation so that I can get rid of recommendations I don’t need".
+> Implement the tasks of the fourth user story, "As a teacher, I want to be able to delete a quiz so that I can get rid of quizzes I don’t need".
 >
 > The implementation should look roughly something like this:
 >
@@ -539,10 +538,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 > - You can implemented the "Delete" button with a form with only a submit button:
 >
 >   ```html
->   <form
->     th:action="@{/recommendations/{id}/delete(id = ${recommendation.id})}"
->     method="post"
->   >
+>   <form th:action="@{/quizzes/{id}/delete(id = ${quiz.id})}" method="post">
 >     <button class="btn btn-danger">Delete</button>
 >   </form>
 >   ```
@@ -627,11 +623,12 @@ We can generate a JAR file for the application with the following command:
 ```
 
 {: .highlight }
+
 > If you have trouble generating the JAR file with the `./mvnw package` command, see if [this](problems-and-solutions#warning-java_home-environment-variable-is-not-set) solves the problem.
 
-The command will generate the JAR file under the `target` folder. Inside the folder there should be a file `cool-reads-0.0.1-SNAPSHOT.jar`. Because we added the frontend-maven-plugin for the project previously, the JAR file will contain the JavaScript files required by the frontend.
+The command will generate the JAR file under the `target` folder. Inside the folder there should be a file `quizzer-0.0.1-SNAPSHOT.jar`. Because we added the frontend-maven-plugin for the project previously, the JAR file will contain the JavaScript files required by the frontend.
 
-If the application is currently running, for example in Eclipse, stop it. Then, run `java -jar target/cool-reads-0.0.1-SNAPSHOT.jar` to run the application with the JAR file. Open the application in <http://localhost:8080> and see that it is working.
+If the application is currently running, for example in Eclipse, stop it. Then, run `java -jar target/quizzer-0.0.1-SNAPSHOT.jar` to run the application with the JAR file. Open the application in <http://localhost:8080> and see that it is working.
 
 {: .note }
 
@@ -639,9 +636,9 @@ If the application is currently running, for example in Eclipse, stop it. Then, 
 
 ## Deployment
 
-So far we have been using and developing our application in an isolated environment on our own computer. This environment used during the development of the application is referred to as the _development environment_. In the software development lifecycle the _deployment phase_ is the phase in which the implemented software is distributed to the users. For example, a web application is published online so that users can access it with their web browsers. This environment is referred to as the _production environment_.
+So far we have been using and developing our application in an isolated environment on our own computer. This environment used during the development of the application is referred to as the _development environment_. In the software development lifecycle the _deployment phase_ is the phase in which the implemented software is distributed to the users. For example, a web application is published online so that users can access it with their web browsers. This environment is referred to as the _production environment_. 
 
-In an agile software development process, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint. There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). During the course, we will be using Render to deploy our application.
+The deployment phase is crucial because unless users can use the application, it has no real value for the stakeholders. That is why in the agile software development process, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint. There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). During the course, we will be using Render to deploy our application.
 
 Let's deploy our application so that the users can start using it. First, [sign in to Render](https://dashboard.render.com/) using your GitHub account. Then, we will need to set up a _production database_ for our application. The H2 database is convenient in the development environment but not suitable for the production environment. We can create a [PostgreSQL](https://www.postgresql.org/) database instance in Render dashboard by clicking the "New" button on the navigation bar and choosing "PostgreSQL". Name the PostgreSQL instance "cool-reads-database" and the database "coolreads". Then, scroll to the bottom and click the "Create database" button.
 
@@ -656,9 +653,9 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:22-jdk-slim
 ENV SPRING_CONFIG_NAME=application,production
-COPY --from=build /target/cool-reads-0.0.1-SNAPSHOT.jar cool-reads.jar
+COPY --from=build /target/quizzer-0.0.1-SNAPSHOT.jar quizzer.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","cool-reads.jar"]
+ENTRYPOINT ["java","-jar","quizzer.jar"]
 ```
 
 The `Dockerfile` has some familiar commands. Basically we just generate a JAR file for the project and start the application using the JAR file.
@@ -699,12 +696,15 @@ Finally, for the application itself, we need to create a web service. Complete t
    - `POSTGRES_USERNAME`: the _username_ of the PostgreSQL instance
    - `POSTGRES_PASSWORD`: the _password_ of the PostgreSQL instance
 
+   ![Render environment variables](/assets/render-environment-variables.png)
+
 8. Set "Auto-Deploy" as "No" from the dropdown menu
 9. Click the "Create Web service" button at the bottom of the page
 
 Open the created web service in the Render dashboard. The deployment of the application should have started. You can always deploy the application by clicking the "Manual Deploy" button and choosing "Deploy latest commit". Once the deployment is complete the application will be accessible to everyone in the URL that is displayed under the web service's name.
 
 {: .highlight }
+
 > It might take a very long time for the application to open in the web browser.
 
 {: .important-title }
@@ -725,7 +725,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If you managed to deploy the application to Render, demonstrate the features in the production environment.
 >
-> Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/)) for the Sprint Review. This means that you should add a few sensible reading recommendations using the application so that you can easily demonstrate the user stories.
+> Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/), "asd", or "foobar") for the Sprint Review. This means that you should add a few sensible quizzes using the application so that you can easily demonstrate the user stories.
 
 {: .warning }
 
