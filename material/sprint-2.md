@@ -1023,7 +1023,7 @@ So far we have been using and developing our application in an isolated environm
 
 In an agile software development process, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint. There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). During the course, we will be using Render to deploy our application.
 
-Let's deploy our application so that the users can start using it. First, [sign in to Render](https://dashboard.render.com/) using your GitHub account. Then, we will need to set up a _production database_ for our application. The H2 database is convinient in the development environment but not suitable for the production environment. We can create a [PostgreSQL](https://www.postgresql.org/) database instance in Render dashboard by clicking the "New" button on the navigation bar and choosing "PostgreSQL". Name the PostgreSQL instance "cool-reads-database" and the database "coolreads". Then, scroll to the bottom and click the "Create database" button.
+Let's deploy our application so that the users can start using it. First, [sign in to Render](https://dashboard.render.com/) using your GitHub account. Then, we will need to set up a _production database_ for our application. The H2 database is convenient in the development environment but not suitable for the production environment. We can create a [PostgreSQL](https://www.postgresql.org/) database instance in Render dashboard by clicking the "New" button on the navigation bar and choosing "PostgreSQL". Name the PostgreSQL instance "cool-reads-database" and the database "coolreads". Then, scroll to the bottom and click the "Create database" button.
 
 Once the PostgreSQL instance has been created, open its information in the Render dashboard. In the PostgreSQL instance's page, scroll to "Connections" section. Copy the values for "Username", "Password" and "Internal Database URL" and paste the values temporary to an editor. We will need these values soon.
 
@@ -1043,7 +1043,7 @@ ENTRYPOINT ["java","-jar","coolreads.jar"]
 
 The `Dockerfile` has some familiar commands. Basically we just generate a JAR file for the project and start the application using the JAR file.
 
-Because we use PostgreSQL as the production database, we will need to specific production environment configuration. Add a file `production.properties` to the `src/main/resources` (same folder that has the `application.properties` file) with the following content:
+Because we use PostgreSQL as the production database, we will need to specific production environment configuration. Add a file `production.properties` to the `src/main/resources` folder (same folder that has the `application.properties` file) with the following content:
 
 ```
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
