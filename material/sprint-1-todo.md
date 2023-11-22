@@ -651,7 +651,7 @@ FROM maven:3.8.7-openjdk-18-slim AS build
 COPY . .
 RUN mvn clean package -DskipTests
 
-FROM openjdk:22-jdk-slim
+FROM openjdk:21-jdk-slim
 ENV SPRING_CONFIG_NAME=application,production
 COPY --from=build /target/quizzer-0.0.1-SNAPSHOT.jar quizzer.jar
 EXPOSE 8080
@@ -703,7 +703,7 @@ Finally, for the application itself, we need to create a web service. Complete t
 8. Set "Auto-Deploy" as "No" from the dropdown menu
 9. Click the "Create Web service" button at the bottom of the page
 
-Open the created web service in the Render dashboard. The deployment of the application should have started. You can always deploy the application by clicking the "Manual Deploy" button and choosing "Deploy latest commit". Once the deployment is complete the application will be accessible to everyone in the URL that is displayed under the web service's name.
+Open the created web service in the Render dashboard. The deployment of the application should have started and it will take some time to finish. You can always deploy the application by clicking the "Manual Deploy" button and choosing "Deploy latest commit". Once the deployment is complete the application will be accessible to everyone in the URL that is displayed under the web service's name.
 
 {: .highlight }
 
