@@ -20,7 +20,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 2. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-20. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-22. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Sprint Planning
 
@@ -277,12 +277,6 @@ For the _first user story_, the Developers came up with the following tasks:
 4. Add a method for the QuizController class that saves the quiz to the database
 5. Add validation for quiz name and description
 
-For the _second user story_, the Developers came up with the following tasks:
-
-1. Add Thymeleaf template for listing the added quizzes with title, link and description
-2. Add a method for rendering the quiz list for the QuizController class
-3. Add a link to the quiz list page to the navigation bar
-
 These are the user stories, that you will be working on as a team during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
 
 {: .highlight }
@@ -312,13 +306,19 @@ These are the user stories, that you will be working on as a team during this Sp
 
 > Exercise 9
 >
-> Come up with tasks for the third user story, "As a teacher, I want to be able to edit a quiz so that I can change its information". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 to get an idea what the implementation could look like.
+> Come up with tasks for the second user story, "As a teacher, I want to list the added quizzes so that I know which quizzes are added". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 to get an idea what the implementation could look like.
 
 {: .important-title }
 
 > Exercise 10
 >
-> Come up with tasks for the fourth user story, "As a teacher, I want to be able to delete a quiz so that I can get rid of quizzes I don't need". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 to get an idea what the implementation could look like.
+> Come up with tasks for the third user story, "As a teacher, I want to be able to edit a quiz so that I can change its information". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 to get an idea what the implementation could look like.
+
+{: .important-title }
+
+> Exercise 11
+>
+> Come up with tasks for the fourth user story, "As a teacher, I want to be able to delete a quiz so that I can get rid of quizzes I don't need". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 to get an idea what the implementation could look like.
 
 ## GitHub issues
 
@@ -339,7 +339,7 @@ Then, let's create a label _for each user story_ so that we can better organize 
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 12
 >
 > Create the "user story" and "task" labels and a label _for each user story_ as described above. Come up with a _short description_ for each user story for the labels, such as "add quiz".
 
@@ -355,15 +355,13 @@ By default we can't see the labels on the issue cards. We can click on the arrow
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column. Make sure that the user stories are _prioritized_ (the "P" of DEEP). That is, they are listed in the project in the order that the Product Owner described in the Sprint Planning.
 
 {: .important-title }
 
-{: .important-title }
-
-> Exercise 13
+> Exercise 14
 >
 > Create an issue for each _task_. If the task description is long, use a short version of the description as the issue title and add the full description as the issue description. Add a label "task" and the task related user story's label for each issue. Add the issues to the Sprint 1 Backlog project and move them to the "Todo" column.
 
@@ -428,10 +426,10 @@ Let's have a look at the `messagelist.html` file that is using this layout:
   <body>
     <div layout:fragment="content">
       <h1>Messages</h1>
-      <a class="btn btn-primary" href="/messages/add">Add a message</a>
-      <ul>
+      <ul class="mb-3">
         <li th:each="message: ${messages}" th:text="${message.content}"></li>
       </ul>
+      <a class="btn btn-primary" href="/messages/add">Add a message</a>
     </div>
   </body>
 </html>
@@ -441,7 +439,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 15
 >
 > Implement the tasks of the first user story, "As a teacher, I want to add a quiz so that my students can learn about course-related topics".
 >
@@ -465,7 +463,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 16
 >
 > Implement the tasks of the second user story, "As a teacher, I want to list the added quizzes so that I know which quizzes are added".
 >
@@ -477,7 +475,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 17
 >
 > Implement the tasks of the third user story, "As a teacher, I want to be able to edit a quiz so that I can change its information".
 >
@@ -525,7 +523,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 18
 >
 > Implement the tasks of the fourth user story, "As a teacher, I want to be able to delete a quiz so that I can get rid of quizzes I don’t need".
 >
@@ -590,7 +588,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 19
 >
 > Write a usage guide on _how to start your application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
 >
@@ -608,7 +606,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 20
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -636,7 +634,7 @@ If the application is currently running, for example in Eclipse, stop it. Then, 
 
 ## Deployment
 
-So far we have been using and developing our application in an isolated environment on our own computer. This environment used during the development of the application is referred to as the _development environment_. In the software development lifecycle the _deployment phase_ is the phase in which the implemented software is distributed to the users. For example, a web application is published online so that users can access it with their web browsers. This environment is referred to as the _production environment_. 
+So far we have been using and developing our application in an isolated environment on our own computer. This environment used during the development of the application is referred to as the _development environment_. In the software development lifecycle the _deployment phase_ is the phase in which the implemented software is distributed to the users. For example, a web application is published online so that users can access it with their web browsers. This environment is referred to as the _production environment_.
 
 The deployment phase is crucial because unless users can use the application, it has no real value for the stakeholders. That is why in the agile software development process, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint. There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). During the course, we will be using Render to deploy our application.
 
@@ -711,7 +709,7 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 21
 >
 > Deploy the application to Render as instructed above. Add the production environment URL of the application (the web service URL in the Render dashboard) to to the "Usage guide" section in the `README.md` file.
 
@@ -723,7 +721,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If you managed to deploy the application to Render, demonstrate the features in the production environment.
 >

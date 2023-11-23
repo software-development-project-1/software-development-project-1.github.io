@@ -1157,18 +1157,4 @@ The Product Owner came up with a feature for the application if we run out of wo
 >
 > ![](/assets/sprint-2-user-story-bonus.png)
 >
-> If you have trouble with the implementation, here's a high-level idea of the implementation:
->
-> ```jsx
-> // ...
-> const [recommendations, setRecommendations] = useState([]);
-> const [keyword, setKeyword] = useState("");
->
-> let filteredRecommendations = recommendations;
->
-> if (keyword) {
->   filteredRecommendations = recommendations.filter(/* ... */);
-> }
-> ```
->
-> Check the documentation for the [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method to learn how to filter arrays.
+> The [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method might be useful for the implementation.
