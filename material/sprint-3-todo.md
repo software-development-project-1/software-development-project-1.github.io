@@ -16,7 +16,7 @@ For the final Sprint of the course, the Sprint 3, we have a new set of requireme
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
 
-The Sprint assesment is done based on the exercises 1-16. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
+The Sprint assesment is done based on the exercises 1-17. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
 
 During this Sprint, each team member will do a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 10 personal points.
 
@@ -48,7 +48,7 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 3 goals in the Sprint Planning event:
 
-> "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username and password. User should not be able to register with a blank username or a password less than 8 characters long. After registering, the user should be able to sign in using the username and password provided during the registration.
+> "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username, password and password confirmation. User should not be able to register with a blank username or a password less than 12 characters long. The password should also contain at least one letter and at least one number. Also, the password should match the password confirmation. After registering, the user should be able to sign in using their username and password provided during the registration.
 >
 > An anonymous user, that is an user who is not signed in, should be able to see the reading recommendation list and the category list. However, they should not be able to add a reading recommendation or a category. That is, the links for adding a reading recommendation and adding a category should not be visible if the user is not signed in.
 >
@@ -69,7 +69,7 @@ For the _first user story_, the Developers came up with the following tasks:
 1. Add the spring-boot-starter-security and thymeleaf-extras-springsecurity6 dependencies for the project
 2. Add a Spring Security configuration class
 3. Add a User JPA entity class with id, username, role and passwordHash attributes, and a UserRepository JPA repository class
-4. Add a Thymeleaf template for the user registration form
+4. Add a Thymeleaf template for the user registration form containing fields for username, password and password confirmation
 5. Add a UserController controller class and a method for rendering the user registration form
 6. Add a method for the UserController class that saves the user to the database
 7. Add validation for username and password
@@ -302,7 +302,7 @@ Now that we have extracted the logic into the `createMessage` method, we can use
 
 > A common architecture for a Java application is that controllers use services and services use repositories. This architecture is referred to as the [Three-tier architecture](https://www.ibm.com/topics/three-tier-architecture).
 
-These code snippets are from the [authentication-example](https://github.com/software-development-project-1/authentication-example) project. We'll have a closer look at it soon.
+These code snippets are from the [authentication example](https://github.com/software-development-project-1/authentication-example) project. We'll have a closer look at it soon.
 
 {: .important-title }
 
@@ -377,7 +377,7 @@ Integration tests are a great balance of reliability and performance. Kent C. Do
 
 In Java application, tests implemented and executed with the [JUnit](https://junit.org/junit5/) testing framework. JUnit tests are implemented as test classes. Test classes can be annoted with the `@SpringBootTest` annotation to access the Spring application context in tests. This, for example makes the `@Autowired` annotations work. Methods annotated with the `@Test` annotation are the _test methods_, which test a specific _test scenario_.
 
-Test methods usually share certain common setup code, which should be done before each test method. This setup can be put inside a method annotated with the `@BeforeEach` annotation. For example here's the `setUp` method for the authentication-example project's [MessageServiceTest](https://github.com/software-development-project-1/authentication-example/blob/main/src/test/java/fi/haagahelia/coolreads/service/MessageServiceTest.java) test class:
+Test methods usually share certain common setup code, which should be done before each test method. This setup can be put inside a method annotated with the `@BeforeEach` annotation. For example here's the `setUp` method for the authentication example project's [MessageServiceTest](https://github.com/software-development-project-1/authentication-example/blob/main/src/test/java/fi/haagahelia/coolreads/service/MessageServiceTest.java) test class:
 
 ```java
 @SpringBootTest
@@ -531,7 +531,7 @@ We have analyzed the code that we are testing and we are quite sure that our tes
 
 If we run the `./mvnw test` command in Git Bash, our tests are executed and JaCoCo will generate a _code coverage report_. Once the command has finished successfully, the code coverage report can be found as an `index.html` file in the `target/site/jacoco` folder. Open the `index.html` file in a web browser.
 
-For the authentication-example project, the report looks like this:
+For the authentication example project, the report looks like this:
 
 ![JaCoCo](/assets/jacoco-overall.png)
 
@@ -659,7 +659,7 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 >
 > - Start the implementation by adding the spring-boot-starter-security and thymeleaf-extras-springsecurity6 dependencies for the project
 > - Add similar `SecurityConfig` and `UserDetailsServiceImpl` classes as instructed above
-> - See how the user registration is implemented in the [authentication-example](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/UserController.java) project
+> - See how the user registration is implemented in the [authentication example](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/UserController.java) project
 
 ### Cross-site request forgery (CSRF)
 
@@ -719,31 +719,9 @@ We should now be able to delete reading recommendations again.
 >
 > Tips for implementing the tasks:
 >
-> - See how the `/api/users/current` REST API endpoint is implemented in the [UserRestController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/UserRestController.java) class in the authentication-example project
+> - See how the `/api/users/current` REST API endpoint is implemented in the [UserRestController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/UserRestController.java) class in the authentication example project
 > - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
-> - See how the "Add a message" button is hidden if the user is not signed in in the [messagelist](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/resources/templates/messagelist.html) Thymeleaf template in the authentication-example project. Use the same logic for the "Add a category" link
-> - You can sign out by visiting <http://localhost:8080/logout> in a web browser. You can also add a "Sign out" link to the navigation bar like in the [layout](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/resources/templates/layout.html) Thymeleaf template in the authentication-example project
-> - Once you have implemented the `/api/users/current` REST API endpoint, you can use the `fetch` function in the frontend to fetch the authenticated user and use that information to determine whether to hide the "Add a reading recommendation" link:
->
->   ```js
->   // ...
->   const [currentUser, setCurrentUser] = useState();
->
->   useEffect(() => {
->     fetch("/api/users/current")
->       .then((response) => {
->         if (!response.ok) {
->           // Backend response was not successful (HTTP status code is not in the range 200-299)
->           throw new Error("User is not authenticated");
->         }
->
->         return response.json();
->       })
->       .then((user) => {
->         setCurrentUser(user);
->       });
->   }, []);
->   ```
+> - You can sign out by visiting <http://localhost:8080/logout> in a web browser. You can also add a "Sign out" link to the navigation bar
 
 {: .important-title }
 
@@ -760,7 +738,12 @@ We should now be able to delete reading recommendations again.
 > Exercise 13
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
-> [Generate a JAR file](/sprint-2#jar) for the application like we did in the previous Sprint and add the JAR file to the release.
+
+{: .important-title }
+
+> Exercise 14
+>
+> Deploy the final version of the application to Render and make sure that the application works properly in the production environment.
 
 ## Peer review
 
@@ -780,7 +763,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 15
 >
 > Write the peer review for your team members. You can find the link to the peer review form in [Moodle]({{site.peer_review_moodle_link}}).
 
@@ -800,13 +783,13 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 16
 >
 > Write the final report for the course as instructed above.
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 17
 >
 > You can now pat yourself on the back, the project is done! 🎉
 >

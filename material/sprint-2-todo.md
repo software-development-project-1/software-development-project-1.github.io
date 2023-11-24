@@ -956,13 +956,13 @@ We can define the basename of the `BrowserRouter` component in the following way
 <BrowserRouter basename={import.meta.env.VITE_ROUTER_BASENAME}>
 ```
 
-Now we should be ready to deploy the frontend. Before deploying the application to Render, generate a JAR file with the `./mvnw package` command and start the application with the `java -jar target/quizzer-0.0.1-SNAPSHOT.jar` command.
+Now we should be ready to deploy the frontend. Before deploying the application to Render, generate a JAR file with the `./mvnw package` command and start the application with the `java -jar target/quizzer-0.0.1-SNAPSHOT.jar` command. The frontend should be accessible at <http://localhost:8080/app>.
 
 {: .important-title }
 
 > Exercise 23
 >
-> Do the required setup for the frontend deployment as instructed above and deploy the application to Render.
+> Do the required setup for the frontend deployment as instructed above and deploy the application to Render. Make sure that the application (especially the frontend) works properly in the production environment.
 
 ## Sprint Review
 
