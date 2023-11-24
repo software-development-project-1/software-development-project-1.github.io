@@ -252,29 +252,32 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > When the teacher opens the application on a web browser, there should be page where the added quizzes are listed. There should also be a link that says "Add a quiz" which takes the teacher to another page, where they can add a quiz using a form.
 >
-> For now, it is enough that a quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries". Each of these should have field on the form and they should be displayed on the list. The user should not be able to add a quiz with a blank title or description.
+> For now, it is enough that a quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries" and a published status. A quiz is either published or not. Each of these values should have field in the form. The published status could be for example a checkbox. The user should not be able to add a quiz with a blank title or description. The quiz should not be published by default.
 >
 > It would be convinient that the teacher could edit the added quizzes if, for example they made a typo in the quiz name or description. The quiz list should have an "Edit" link next to each quiz. The link should take the teacher to an edit form, where they can edit all the added information of the quiz.
 >
-> The teacher should also be able to get rid of quizzes they don't need. Next to the "Edit" link, there should be a "Delete" button in the quiz list. When the user clicks the button, the quiz should be deleted."
+> The teacher should also be able to get rid of quizzes they don't need. Next to the "Edit" link, there should be a "Delete" button in the quiz list. When the user clicks the button, the quiz should be deleted.
+>
+> The teacher should be able to quickly see which quizzes are published and which are not in the quiz list. There should be some way for the teacher to filter the quiz list based on the published status. There could be for example "All", "Published", and "Not published" tabs at the top of the list."
 >
 > -- The Product Owner
 
 After some discussion the Scrum Team came up with the following user stories:
 
-1. As a teacher, I want to add a quiz so that my students can learn about course-related topics
-2. As a teacher, I want to list the added quizzes so that I know which quizzes are added
-3. As a teacher, I want to be able to edit a quiz so that I can change its information
-4. As a teacher, I want to be able to delete a quiz so that I can get rid of quizzes I don't need
+1. {{site.sprint_1_user_story_1}}
+2. {{site.sprint_1_user_story_2}}
+3. {{site.sprint_1_user_story_3}}
+4. {{site.sprint_1_user_story_4}}
+5. {{site.sprint_1_user_story_5}}
 
 The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
 
 For the _first user story_, the Developers came up with the following tasks:
 
-1. Add a Quiz JPA entity class with id, name and description attributes, and a QuizRepository JPA repository class
-2. Add Thymeleaf template for the quiz submission form containing fields for title, link and description
+1. Add a Quiz JPA entity class with id (Long), name (String), description (String) and published (Boolean) attributes, and a QuizRepository JPA repository class
+2. Add Thymeleaf template for the quiz submission form containing fields for title, description and the published status
 3. Add QuizController controller class and a method for rendering the quiz submission form
-4. Add a method for the QuizController class that saves the quiz to the database
+4. Add a method for the QuizController class which saves the quiz to the database
 5. Add validation for quiz name and description
 
 These are the user stories, that you will be working on as a team during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
@@ -282,43 +285,6 @@ These are the user stories, that you will be working on as a team during this Sp
 {: .highlight }
 
 > The tasks that you come up with during the Sprint Planning event _should not be set in stone_. These tasks are there to get you started with implementing the user stories. You might come up with new tasks or notice that the current tasks need alterations during the actual implementation. In such case, do the necessary changes for the Sprint Backlog.
-
-### Tips for implementing the tasks
-
-- It is recommended to implement the user stories in the described order. During this Sprint it is easier to do most of the tasks together because they are so tightly connected.
-- _Push_ code to the GitHub repository often. Once you have some _working_ code, use `git add`, `git commit`, `git push` commands to push the code to GitHub.
-- _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer.
-- While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts).
-- See how the mentioned things are done in the [example project]({{site.example_project_link}}).
-- The example project is using [Bootstrap](https://getbootstrap.com/) frontend toolkit. You can use it to make your application look nice. [Forms](https://getbootstrap.com/docs/5.3/forms/form-control/), [buttons](https://getbootstrap.com/docs/5.3/components/buttons/) and [tables](https://getbootstrap.com/docs/5.3/content/tables/) are useful guides for the user stories in this Sprint.
-- [Controllers](https://www.baeldung.com/spring-controllers)
-- [Using Thymeleaf in Spring](https://www.baeldung.com/thymeleaf-in-spring-mvc)
-- [JPA Entities](https://www.baeldung.com/jpa-entities)
-- [JPA Repositories](https://www.baeldung.com/spring-data-repositories)
-
-{: .important-title }
-
-> Exercise 8
->
-> Decide how you will communicate outside the weekly sessions. Choose a communication platform, such as Teams, Telegram or Discord. Also schedule at least one weekly time slot when you work on the exercises together outside the weekly sessions. If possible, meet physically on the campus or some other location.
-
-{: .important-title }
-
-> Exercise 9
->
-> Come up with tasks for the second user story, "As a teacher, I want to list the added quizzes so that I know which quizzes are added". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 to get an idea what the implementation could look like.
-
-{: .important-title }
-
-> Exercise 10
->
-> Come up with tasks for the third user story, "As a teacher, I want to be able to edit a quiz so that I can change its information". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 to get an idea what the implementation could look like.
-
-{: .important-title }
-
-> Exercise 11
->
-> Come up with tasks for the fourth user story, "As a teacher, I want to be able to delete a quiz so that I can get rid of quizzes I don't need". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 to get an idea what the implementation could look like.
 
 ## GitHub issues
 
@@ -339,11 +305,11 @@ Then, let's create a label _for each user story_ so that we can better organize 
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 8
 >
 > Create the "user story" and "task" labels and a label _for each user story_ as described above. Come up with a _short description_ for each user story for the labels, such as "add quiz".
 
-Now that we have the labels, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "As a teacher, I want to add a quiz so that my students can learn about course-related topics". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose labels "user story" and "add quiz", which indicate that this issue is related to a certain user story. Then, click "Projects" on the right and choose "Product Backlog". This will add the issue to the Product Backlog project. Finally, click the "Submit a new issue" button to create the issue.
+Now that we have the labels, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "{{site.sprint_1_user_story_1}}". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose labels "user story" and "add quiz", which indicate that this issue is related to a certain user story. Then, click "Projects" on the right and choose "Product Backlog". This will add the issue to the Product Backlog project. Finally, click the "Submit a new issue" button to create the issue.
 
 {: .note }
 
@@ -355,17 +321,53 @@ By default we can't see the labels on the issue cards. We can click on the arrow
 
 {: .important-title }
 
+> Exercise 9
+>
+> Create an issue for each _user story_. Add the "user story" label and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column. Make sure that the user stories are _prioritized_ (the "P" of DEEP). That is, they are listed in the project in the order that the Product Owner described in the Sprint Planning.
+
+{: .important-title }
+
+> Exercise 10
+>
+> Create an issue for each task of the first user story, "{{site.sprint_1_user_story_1}}". You can use the tasks suggested in the [Sprint 1 planning](#%EF%B8%8F-sprint-1-planning) section, or plan your own tasks. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
+
+{: .important-title }
+
+> Exercise 11
+>
+> Plan the tasks for the second user story, "{{site.sprint_1_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 to get an idea what the implementation could look like.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
+
+{: .important-title }
+
+> Exercise 12
+>
+> Plan the tasks for the third user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 to get an idea what the implementation could look like.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
+
+{: .important-title }
+
 > Exercise 13
 >
-> Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column. Make sure that the user stories are _prioritized_ (the "P" of DEEP). That is, they are listed in the project in the order that the Product Owner described in the Sprint Planning.
+> Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 19 to get an idea what the implementation could look like.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
 
 {: .important-title }
 
 > Exercise 14
 >
-> Create an issue for each _task_. If the task description is long, use a short version of the description as the issue title and add the full description as the issue description. Add a label "task" and the task related user story's label for each issue. Add the issues to the Sprint 1 Backlog project and move them to the "Todo" column.
+> Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get an idea what the implementation could look like.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
 
-Once you start working on task, _assign_ the task related issue to you. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same task together.
+{: .important-title }
+
+> Exercise 15
+>
+> Discuss how you will divide the workload (the tasks) of the sprint among the team members. For example, each team member could be responsible for the tasks of a single user story. Then, add an _assignee_ for each task related issue. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same task together.
 
 {: .note }
 
@@ -437,53 +439,74 @@ Let's have a look at the `messagelist.html` file that is using this layout:
 
 The `layout:decorate="~{layout.html}"` on the `html` element specifies that this template is using the `layout.html` file as the layout file. The `div` element that has the `layout:fragment="content"` attribute has the content that will be displayed on the corresponding layout fragment on the `layout.html` file.
 
-{: .important-title }
+## Implementing the tasks
 
-> Exercise 15
->
-> Implement the tasks of the first user story, "As a teacher, I want to add a quiz so that my students can learn about course-related topics".
->
-> The implementation should look roughly something like this:
->
-> ![](/assets/sprint-1-user-story-1.png)
->
-> Add some simple validation for the form fields:
->
-> - The title should not be blank
-> - The link should not not be blank and it should start with "http://" or "https://"
-> - The description should not be blank
->
-> Alter the `layout.html` file mentioned above to change the navigation bar content.
->
-> Tips for implementing the tasks:
->
-> - [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
-> - [Validating Form Input](https://spring.io/guides/gs/validating-form-input/)
-> - The link can be validated with a regular expression using the [@Pattern](https://www.codeproject.com/Questions/5324493/Jakarta-regex-validation) annotation
+Here's a few tips before you start implementing the tasks:
+
+- It is recommended to implement the user stories in the order they are in the Product Backlog.
+- _Push_ code to the GitHub repository often. Once you have some _working_ code, use `git add`, `git commit`, `git push` commands to push the code to GitHub.
+- _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer.
+- While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts).
+- See how the mentioned things are done in the [example project]({{site.example_project_link}}).
+
+{: .note }
+
+> The visual aspect of the application is not as important as the functionality. The most important things is that the user has some kind of functionality for the features described in the user stories.
 
 {: .important-title }
 
 > Exercise 16
 >
-> Implement the tasks of the second user story, "As a teacher, I want to list the added quizzes so that I know which quizzes are added".
+> Implement the tasks of the first user story, "{{site.sprint_1_user_story_1}}".
 >
 > The implementation should look roughly something like this:
 >
-> ![](/assets/sprint-1-user-story-2.png)
+> ![](/assets/todo-sprint-1-user-story-1.png)
 >
-> This page should be visible on the root path (the `/` path) of the application. Change the `@GetMapping` of the `listMessages` method in the `MessageController` class, for example to `@GetMapping("/messages")`.
+> Validate that the name or the description is not blank. Alter the `layout.html` file mentioned above to change the navigation bar content.
+>
+> Tips for implementing the tasks:
+>
+> - [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
+> - [Validating Form Input](https://spring.io/guides/gs/validating-form-input/)
+> - Bootstrap [forms](https://getbootstrap.com/docs/5.3/forms/form-control/), [checks & radios](https://getbootstrap.com/docs/5.3/forms/checks-radios/) and [buttons](https://getbootstrap.com/docs/5.3/components/buttons/)
 
 {: .important-title }
 
 > Exercise 17
 >
-> Implement the tasks of the third user story, "As a teacher, I want to be able to edit a quiz so that I can change its information".
+> Implement the tasks of the second user story, "{{site.sprint_1_user_story_2}}".
 >
 > The implementation should look roughly something like this:
 >
-> ![](/assets/sprint-1-user-story-3-1.png)
+> ![](/assets/todo-sprint-1-user-story-2.png)
 >
-> ![](/assets/sprint-1-user-story-3-2.png)
+> This page should be visible on the root path (the `/` path) of the application. Change the `@GetMapping` of the `listMessages` method in the `MessageController` class, for example to `@GetMapping("/messages")`.
+>
+> Tips for implementing the tasks:
+>
+> - Bootstrap [badges](https://getbootstrap.com/docs/5.3/components/badge/)
+> - You can add a `class` attribute value conditionally with Thymeleaf in the following way:
+>
+>   ```html
+>   <span
+>     class="badge"
+>     th:classappend="${quiz.published}? text-bg-primary : text-bg-secondary"
+>     th:text="${quiz.published}? 'Published' : 'Not published'"
+>   ></span>
+>   ```
+
+{: .important-title }
+
+> Exercise 18
+>
+> Implement the tasks of the third user story, "{{site.sprint_1_user_story_3}}".
+>
+> The implementation should look roughly something like this:
+>
+> ![](/assets/todo-sprint-1-user-story-3-1.png)
+>
+> ![](/assets/todo-sprint-1-user-story-3-2.png)
 >
 > Add similar validation for the form as in the first user story.
 >
@@ -523,13 +546,13 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 19
 >
-> Implement the tasks of the fourth user story, "As a teacher, I want to be able to delete a quiz so that I can get rid of quizzes I don’t need".
+> Implement the tasks of the fourth user story, "{{site.sprint_1_user_story_4}}".
 >
 > The implementation should look roughly something like this:
 >
-> ![](/assets/sprint-1-user-story-4.png)
+> ![](/assets/todo-sprint-1-user-story-4.png)
 >
 > Tips for implementing the tasks:
 >
@@ -541,9 +564,69 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 >   </form>
 >   ```
 
-{: .note }
+{: .important-title }
 
-> The visual aspect of the application is not as important as the functionality. The most important things is that the user has some kind of functionality for the features described in the user stories.
+> Exercise 20
+>
+> Implement the tasks of the fifth user story, "{{site.sprint_1_user_story_5}}".
+>
+> The implementation should look roughly something like this:
+>
+> ![](/assets/sprint-1-user-story-5-1.png)
+>
+> ![](/assets/sprint-1-user-story-5-2.png)
+>
+> ![](/assets/sprint-1-user-story-5-3.png)
+>
+> Tips for implementing the tasks:
+>
+> - Bootstrap [navs & tabs](https://getbootstrap.com/docs/5.3/components/navs-tabs/)
+> - Filters are a good use-cases for _request parameters_. Request parameters are key-value pairs we can use to provide additional parameters for the path without using a path variable. For example `http://localhost:8080/?variable1=value1&variable2=value2`.
+> - We can access request parameters in a controller method with the [@RequestParam](https://www.baeldung.com/spring-request-param) annotation in the following way:
+>
+>   ```java
+>   @GetMapping("/")
+>   public String listQuizzes(@RequestParam(required = false) Boolean published, /* ... */) {
+>     model.addAttribute("publishedFilter", published);
+>
+>     if (published == null) {
+>       // return all quizzes
+>     } else {
+>       // return quizzes based on the published status
+>     }
+>   }
+>   ```
+>
+> - In the quiz list Thymeleaf template we can add the request parameter to the links:
+>
+>   ```html
+>   <ul class="nav nav-pills my-3">
+>     <li class="nav-item">
+>       <a
+>         class="nav-link"
+>         href="/"
+>         th:classappend="${publishedFilter == null}? active"
+>         >All</a
+>       >
+>     </li>
+>     <li class="nav-item">
+>       <a
+>         class="nav-link"
+>         href="/?published=true"
+>         th:classappend="${publishedFilter == true}? active"
+>         >Published</a
+>       >
+>     </li>
+>     <li class="nav-item">
+>       <a
+>         class="nav-link"
+>         href="/?published=false"
+>         th:classappend="${publishedFilter == false}? active"
+>         >Not published</a
+>       >
+>     </li>
+>   </ul>
+>   ```
 
 ## Daily Scrum
 
@@ -588,7 +671,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 21
 >
 > Write a usage guide on _how to start your application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
 >
@@ -606,7 +689,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 22
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -709,7 +792,7 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 23
 >
 > Deploy the application to Render as instructed above. Add the production environment URL of the application (the web service URL in the Render dashboard) to to the "Usage guide" section in the `README.md` file.
 
@@ -721,7 +804,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 24
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If you managed to deploy the application to Render, demonstrate the features in the production environment.
 >

@@ -71,9 +71,9 @@ User stories aren't commonly estimated by considering the working hours required
 
 For example let's consider these three user stories from the previous Sprint:
 
-1. As a teacher, I want to add a quiz so that my students can learn about course-related topics
-2. As a teacher, I want to list the added quizzes so that I know which quizzes are added
-3. As a teacher, I want to be able to edit a quiz so that I can change its information
+1. {{site.sprint_1_user_story_1}}
+2. {{site.sprint_1_user_story_2}}
+3. {{site.sprint_1_user_story_3}}
 
 Some team member could estimate that the implementation of the _first user story_ requires the double amount of effort compared to the implementation of the _second user story_. Also, some could estimate that the implementation of the _first_ and the _third user story_ require somewhat the same amount of effort.
 
@@ -85,7 +85,7 @@ During estimation the Developers usually have a different view of how many story
 
 ### Planning poker
 
-[Planning poker](https://en.wikipedia.org/wiki/Planning_poker) is a (fun) technique to facilitate estimation of user stories. We first need to decide which are the number of story points we use for the estimation. The [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is a common choice: 1, 2, 3, 5 or 8 story points. Then we need to make sure that everyone knows the amount of effort required for a certain amount of story points. Let's say that the user story "As a teacher, I want to list the added quizzes so that I know which quizzes are added" is worth _2 story points_ and we should compare the effort of other user stories to that.
+[Planning poker](https://en.wikipedia.org/wiki/Planning_poker) is a (fun) technique to facilitate estimation of user stories. We first need to decide which are the number of story points we use for the estimation. The [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is a common choice: 1, 2, 3, 5 or 8 story points. Then we need to make sure that everyone knows the amount of effort required for a certain amount of story points. Let's say that the user story "{{site.sprint_1_user_story_1}}" is worth _2 story points_ and we should compare the effort of other user stories to that.
 
 Here's a table describing the worth of the available story points:
 
@@ -99,7 +99,7 @@ Here's a table describing the worth of the available story points:
 
 As mentioned, the reference user story is the first user story of the previous Sprint:
 
-> As a teacher, I want to list the added quizzes so that I know which quizzes are added
+> {{site.sprint_1_user_story_1}}
 
 {: .note }
 
@@ -108,7 +108,7 @@ As mentioned, the reference user story is the first user story of the previous S
 Once we have "calibrated" the worth of a story point we can start the actual planning poker event. For each user story under estimation we should perform the following steps:
 
 1. Discuss the technical requirements (tasks) for the user story. Make sure that everyone is on the same page what is required to implement the user story.
-2. Everyone will consider _by themself_ (no dicussion) how many story points the user story is worth. The estimate needs to be 1, 2, 3, 5 or 8 story points. Compare the effort to the user story "As a teacher, I want to list the added quizzes so that I know which quizzes are added" which is worth 2 story points
+2. Everyone will consider _by themself_ (no dicussion) how many story points the user story is worth. The estimate needs to be 1, 2, 3, 5 or 8 story points. Compare the effort to the user story "{{site.sprint_1_user_story_1}}" which is worth 2 story points
 3. Everyone will write down their story point estimate.
 4. Once everyone is ready, everyone will show their estimate at the same time
 5. If there's more than one point difference in the least and most amount of story points in the suggested estimates, discuss the implementation further to find out why there is such difference in the estimates. Then, repeat the steps 1 - 5 until you have an agreement.
@@ -132,24 +132,24 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > Let's start with a small user-experience improvement. It would nice if the quiz list would display the date when the quiz was added. This way, the teacher would know how old the quiz is. Also, quizzes should be listed from newest to oldest. This way, the teacher can find the latest quizzes quickly at the top of the list.
 >
-> The teacher should be able to add questions for the quizzes. For example the "The capital cities of Europe" of quiz could have questions "What's the capital of Finland?" and "What's the capital of Sweden?". In addition to the question text, the teacher should be able to provide the correct answer for questions, for example "Helsinki" and "Stockholm". A question can be added in the quiz edit form we implemented during the previous Sprint. The added questions for the quiz should be listed and below the list there should be a form for adding a question. The form should have fields for the question text and the correct answer. The teacher should not be able to add a question with a blank text or correct answer. Once a question has been added for the quiz, the teacher should be able to delete it. The question list should have a "Delete" button next to each question.
+> The teacher should be able to add questions for the quizzes. For example the "The capital cities of Europe" of quiz could have questions "What is the capital of Finland?" and "What is the capital of Sweden?". In addition to the question text, the teacher should be able to provide the correct answer for questions, for example "Helsinki" and "Stockholm". A question can be added in the quiz edit form we implemented during the previous Sprint. The added questions for the quiz should be listed and below the list there should be a form for adding a question. The form should have fields for the question text and the correct answer. The teacher should not be able to add a question with a blank text or correct answer. Once a question has been added for the quiz, the teacher should be able to delete it. The question list should have a "Delete" button next to each question.
 >
-> Once we have this basic set of features for the teachers, we can start working on the student dashboard. The student dashboard should have a separate page that lists the added quizzes with the quiz name and the date when it was added. These quizzes should be listed from newest to oldest as well. Each quiz name should be a link to a separate page where the quiz name, description and the questions are displayed.
+> Once we have this basic set of features for the teachers, we can start working on the student dashboard. The student dashboard should have a separate page that lists the published quizzes with the quiz name, description and the date when it was added. These quizzes should be listed from newest to oldest as well. Each quiz name should be a link to a separate page where the quiz name, description and the questions are displayed.
 >
-> In the quiz page the student should be able to take the quiz by answering the questions. The questions should be displayed one by one and the student should see the quiz progress with some kind of a progress bar. When the student answers a question, there should be some kind of feedback which tells the student if their answer was correct or not. For example, "That's correct, good job!", or "That's not correct, the correct answer is "Helsinki"". Once the student has answered all the questions there should be a summary of the results, for example "You got 3/5 questions correct" and a button "Retake the quiz" which the student can click to take the same quiz again.
+> In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be displayed one by one and the student should see the quiz progress with some kind of a progress bar. When the student answers a question, there should be some kind of feedback which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, the correct answer is "Helsinki"". The casing or leading or trailing whitespace of the answer should not be considered when checking if the student's answer is correct or not. For example, "helsinki" answer is correct when the correct answer is "Helsinki". Once the student has answered all the questions there should be a summary of the results, for example "You got 1 out of 5 questions correct" and a button "Retake the quiz" which the student can click to take the same quiz again.
 >
 > -- The Product Owner
 
 After some discussion the Scrum Team came up with the following user stories:
 
-1. As a teacher, I want to know the date when a quiz was added so that I know how old it is
-2. As a teacher, I want the quizzes to be listed from newest to oldest so that I can find the latest quizzes quickly
-3. As a teacher, I want to add a question for a quiz so that my students can learn about course-related topics
-4. As a teacher, I want to see a list of quiz-related questions so that I know which questions the quiz has
-5. As a teacher, I want to delete quiz-related questions so that I can get rid of questions I don't need
-6. As a student, I want to see a list of quizzes so that I know what kind of quizzes I can take
-7. As a student, I want to see a the questions of the quiz, so that I know the contents of the quiz
-8. As a student, I want to answer the quiz questions so that I can learn the correct answers
+1. {{site.sprint_2_user_story_1}}
+2. {{site.sprint_2_user_story_2}}
+3. {{site.sprint_2_user_story_3}}
+4. {{site.sprint_2_user_story_4}}
+5. {{site.sprint_2_user_story_5}}
+6. As a student, I want to see a list of published quizzes so that I know what kind of quizzes I can take
+7. {{site.sprint_2_user_story_7}}
+8. {{site.sprint_2_user_story_8}}
 
 For the _first user story_, the Developers came up with the following tasks:
 
@@ -171,41 +171,48 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 3
 >
+> 1. Create a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) for each user story, such as "quiz creation date" and "add question"
+> 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column
+
+{: .important-title }
+
+> Exercise 4
+>
 > Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Sprint 1 Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
 > If you didn't manage to implement all user stories during Sprint 1, move the task related issues of the unfinished user stories to the Sprint 2 Backlog project.
 
 {: .important-title }
 
-> Exercise 4
->
-> Come up with tasks for the second user story, "As a teacher, I want the quizzes to be listed from newest to oldest so that I can find the latest quizzes quickly". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get tips for the implementation.
-
-{: .important-title }
-
 > Exercise 5
 >
-> Come up with tasks for the third user story, "As a teacher, I want to add a question for a quiz so that my students can learn about course-related topics". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get tips for the implementation.
+> Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get tips for the implementation.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 2 Backlog project.
 
 {: .important-title }
 
 > Exercise 6
 >
-> Come up with tasks for the fourth user story, "As a teacher, I want to see a list of quiz-related questions so that I know which questions the quiz has". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 to get an idea what the implementation could look like.
+> Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get tips for the implementation.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 2 Backlog project.
 
 {: .important-title }
 
 > Exercise 7
 >
-> Come up with tasks for the fifth user story, "As a teacher, I want to delete quiz-related questions so that I can get rid of questions I don't need". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 13 to get an idea what the implementation could look like.
+> Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 to get an idea what the implementation could look like.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 2 Backlog project.
 
 {: .important-title }
 
 > Exercise 8
 >
-> 1. Create a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) for each user story, such as "quiz creation date" and "add question"
-> 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column
-> 3. Create an issue for each _tasks_ of the _first five user stories_. If the task description is long, use a short version of the description as the issue title and add the full description as the issue description. Add a label "task" and the task related user story's label for each issue. Add the issues to the Sprint 2 Backlog project and move them to the "Todo" column
+> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 13 to get an idea what the implementation could look like.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 2 Backlog project.
 
 {: .important-title }
 
@@ -221,11 +228,11 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 10
 >
-> Implement the tasks of the first user story, "As a teacher, I want to know the date when a quiz was added so that I know how old it is".
+> Implement the tasks of the first user story, "{{site.sprint_2_user_story_1}}".
 >
 > The implementation should look roughly something like this:
 >
-> ![](/assets/sprint-2-user-story-1.png)
+> ![](/assets/todo-sprint-2-user-story-1.png)
 >
 > Tips for implementing the tasks:
 >
@@ -240,22 +247,22 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 11
 >
-> Implement the tasks of the second user story, "As a teacher, I want the quizzes to be listed from newest to oldest so that I can find the latest quizzes quickly".
+> Implement the tasks of the second user story, "{{site.sprint_2_user_story_2}}".
 >
 > Tips for implementing the tasks:
 >
-> - Use the `createdAt` attribute (see the tasks of the first user story) in ordering the recommendations
+> - Use the `createdAt` attribute (see the tasks of the first user story) in ordering the quizzes
 > - [Sorting Query Results with Spring Data](https://www.baeldung.com/spring-data-sorting)
 
 {: .important-title }
 
 > Exercise 12
 >
-> Implement the tasks of the third user story, "As a teacher, I want to add a question for a quiz so that my students can learn about course-related topics".
+> Implement the tasks of the third user story, "{{site.sprint_2_user_story_3}}".
 >
 > The implementation should look roughly something like this:
 >
-> ![](/assets/sprint-2-user-story-2.png)
+> ![](/assets/todo-sprint-2-user-story-2.png)
 >
 > Validate that the question text and correct answer is not blank.
 
@@ -263,21 +270,21 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 13
 >
-> Implement the tasks of the fourth user story, "As a teacher, I want to see a list of quiz-related questions so that I know which questions the quiz has".
+> Implement the tasks of the fourth user story, "{{site.sprint_2_user_story_4}}".
 >
 > The implementation should look roughly something like this:
 >
-> ![](/assets/sprint-2-user-story-3.png)
+> ![](/assets/todo-sprint-2-user-story-3.png)
 
 {: .important-title }
 
 > Exercise 14
 >
-> Implement the tasks of the fifth user story, "As a teacher, I want to delete quiz-related questions so that I can get rid of questions I don't need".
+> Implement the tasks of the fifth user story, "{{site.sprint_2_user_story_5}}".
 >
 > The implementation should look roughly something like this:
 >
-> ![](/assets/sprint-2-user-story-4-1.png)
+> ![](/assets/todo-sprint-2-user-story-4.png)
 
 ## Reducing boilerplate code with Lombok
 
@@ -332,7 +339,7 @@ Wow, that eliminates a lot of boilerplate code! Lombok has many other useful ann
 
 So far the user has interacted with our web application in the following manner:
 
-1. The user opens a page at certain path, for example `/`, on a web browser.
+1. The user opens a page at certain path, for example `/`, in a web browser.
 2. The web browser sends a request to the server (the backend) for the resource of that path.
 3. On the server, the request is delegated to the controller method responsible for handling requests for the path.
 4. The controller method retrieves the required data from the database and based on the data creates an HTML page.
@@ -401,7 +408,7 @@ A collection can have _sub-collections_. For example, a path for a user's messag
 
 When we design and implement REST API endpoints we should consider the use case. We don't implement endpoints arbitrary, there should be a _need for the endpoint_ first, for example a certain feature in a frontend application needs to display some data in the database. Based on the feature we consider what kind of data and operations the REST API needs to provide. These requirements will determine the endpoints we will implement.
 
-We should however remember to _follow the implementation conventions_ to keep the REST API endpoints _reusable_ throughout the application. For example we don't want to implement a `/api/recommendations-for-home-page` endpoint just to provide data for a specific feature. Instead, we should be implement a single `/api/recommendations` endpoint, which is reusable for other features as well.
+We should however remember to _follow the implementation conventions_ to keep the REST API endpoints _reusable_ throughout the application. For example we don't want to implement a `/api/quizzes-for-home-page` endpoint just to provide data for a specific feature. Instead, we should be implement a single `/api/quizzes` endpoint, which is reusable for other features as well.
 
 We can create a separate controller class for each collection. The `@RequestMapping` annotation can be used the define the collection name prefix of the path. Each method will automatically get the prefix in the path, so we don't need to have it in the `@GetMapping` or `@PostMapping` annotations:
 
@@ -482,11 +489,7 @@ export default function MessageListItem(props) {
 
 If you aren't familiar with React yet, React's documentation has great [tutorials](https://react.dev/learn).
 
-{: .note }
-
-> This material doesn't go into React details. It is recommended that those team members who have completed (or currently completing) the Front End Development course will be working on the exercises in this section.
-
-The example project has a simple [Vite](https://vitejs.dev/) frontend application in the `frontend` folder. We will be using this application as an example.
+The example project has a simple [Vite](https://vitejs.dev/) frontend application in the `frontend` folder. We will be using this application as an example and as the starting point for the student dashboard which we start implementing during the last three user stories.
 
 The communication between the frontend application and the backend application is performed using the JavaScript's [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The Fetch API provides the `fetch` function, which can be used to send a HTTP request to a specific URL:
 
@@ -500,7 +503,8 @@ fetch("/api/messages")
 
 {: .note }
 
-> Our frontend application's source is served from the same _origin_ as the backend, which is <http://localhost:8080>. This is why don't need to specify the full URL in the `fetch` call, which is <http://localhost:8080/api/messages>. Instead we can specify just the path. For example, the Vite development server serves the source files from a different origin (by default <http://localhost:5173>) and in this case we would need to use the full URL.
+> You might wonder, why the URL in the `fetch` function call is `/api/messages` and not `http://localhost:8080/api/messages`. We will cover the reason for this in the [
+> Cross-Origin Resource Sharing (CORS) ](#cross-origin-resource-sharing-cors) section.
 
 The `fetch` function returns a [Promise](https://javascript.info/promise-basics) object. The promise resolves a `Response` object, which contains the response from the server. The response's JSON payload can be parsed into JavaScript objects using the `response.json()` method.
 
@@ -554,6 +558,8 @@ These are simple _abstractions_ for fetching and creating messages, but they are
 
 The `MessageList` component in the `frontend/src/components/MessageList.jsx` calls the `getAllMessages` function to display the message list:
 
+{% raw %}
+
 ```jsx
 import { useEffect, useState } from "react";
 import { Typography, Button } from "@mui/material";
@@ -593,49 +599,59 @@ export default function MessageList() {
 }
 ```
 
+{% endraw %}
+
 Explore the code in the `frontend` folder. You can start the Vite development server by runing the `npm run dev` command in the `frontend` folder.
 
 ## Designing REST API endpoints for user stories
 
-Next, let's consider what kind of REST API endpoints we need for the last three user stories. In the sixth user story, "As a student, I want to see a list of quizzes so that I know what kind of quizzes I can take", we need an lists all the quizzes. To follow the REST API naming principles, we can implement a GET method endpoint `/api/quizzes`. We can add a `QuizRestController` class and implement the endpoint with a `getQuizzes` method.
+Next, let's consider what kind of REST API endpoints we need for the last three user stories. In the sixth user story, "{{site.sprint_2_user_story_6}}", we need an lists all the quizzes. To follow the REST API naming principles, we can implement a GET method endpoint `/api/quizzes`. We can add a `QuizRestController` class and implement the endpoint with a `getQuizzes` method.
 
-In the seventh user story, "As a student, I want to see a the questions of the quiz, so that I know the contents of the quiz", we need to display information of a quiz with a specific id. For this use-case we can implement a GET method enpoint `/api/quizzes/{id}`. We also want to list the quiz-related questions. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}/questions`. We can implement the endpoints with a `getQuizById` and a `getQuestionsByQuizId` method in the `QuizRestController` class.
+In the seventh user story, "{{site.sprint_2_user_story_7}}", we need to display information of a quiz with a specific id. For this use-case we can implement a GET method enpoint `/api/quizzes/{id}`. We also want to list the quiz-related questions. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}/questions`. We can implement the endpoints with a `getQuizById` and a `getQuestionsByQuizId` method in the `QuizRestController` class.
 
-In the eighth user story, "As a student, I want to answer the quiz questions so that I can learn the correct answers", we need save the student's answer to the database. Before implementing the endpoint we need to consider what kind of data we need to store about the student's answer. We want at least to know which questions the answer is related to, what's the answer text and whether the answer was correct or not (we could also infer this information from the question). So, we need to implement the appropriate JPA entity class and a JPA repository class first. Then, we can implement a POST method endpoint `/api/answers` for this use-case. We can add a `AnswerRestController` class and implement the endpoint with a `createAnswer` method.
+In the eighth user story, "{{site.sprint_2_user_story_8}}", we need save the student's answer to the database. Before implementing the endpoint we need to consider what kind of data we need to store about the student's answer. We want at least to know which questions the answer is related to, what's the answer text and whether the answer was correct or not (we could also infer this information from the question). So, we need to implement the appropriate JPA entity class and a JPA repository class first. Then, we can implement a POST method endpoint `/api/answers` for this use-case. We can add a `AnswerRestController` class and implement the endpoint with a `createAnswer` method.
 
 Before starting to implement the frontend features, we should test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL, for example <http://localhost:8080/api/quizzes>. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
+
+{: .highlight}
+
+> The last three user stories are related to the student dashboard and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend. Use the Vite application in the `frontend` folder as the staring point of your implementation.
 
 {: .important-title }
 
 > Exercise 15
 >
-> Come up with tasks for the sixth user story, "As a student, I want to see a list of quizzes so that I know what kind of quizzes I can take". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise X to get tips for the implementation.
->
-> Create an issue for each task and add them to the Sprint 2 Backlog project.
+> Create two new labels: "frontend" and "backend". Add the "frontend" label for frontend-related tasks and the "backend" label for backend-related tasks.
 
 {: .important-title }
 
 > Exercise 16
 >
-> Come up with tasks for the seventh user story, "As a student, I want to see a the questions of the quiz, so that I know the contents of the quiz". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise X to get tips for the implementation.
+> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise X to get tips for the implementation.
 >
-> Create an issue for each task and add them to the Sprint 2 Backlog project.
+> Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Add the issues to the Sprint 2 Backlog project.
 
 {: .important-title }
 
 > Exercise 17
 >
-> Come up with tasks for the eighth user story, "As a student, I want to answer the quiz questions so that I can learn the correct answers". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise X to get tips for the implementation.
+> Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise X to get tips for the implementation.
 >
-> Create an issue for each task and add them to the Sprint 2 Backlog project.
+> Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Add the issues to the Sprint 2 Backlog project.
+
+{: .important-title }
+
+> Exercise 18
+>
+> Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise X to get tips for the implementation.
+>
+> Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Add the issues to the Sprint 2 Backlog project.
 
 ## Cross-Origin Resource Sharing (CORS)
 
-In our case the frontend application's JavaScript file is served by the backend from URL of form `http://localhost:8080/frontend/renderRecommendationList-RANDOM_HASH.js`. The frontend application is sending requests using the `fetch` function to URLs that start with `http://localhost:8080`. That is, the JavaScript file is sending request to the _same origin_, which is `http://localhost:8080`.
+The Vite development server is serving the JavaScript files from an URL that starts with `http://localhost:5173`. Our backend is accessible in the URL `http://localhost:8080`. When we send a request with the `fetch` function from the frontend to our backend, we send a request to a _different origin_. These kind of requests are called _cross-orgin_ requests.
 
-That's not case all the time. For example a Vite development server is serving the JavaScript files from an URL that starts with `http://localhost:5173`. If we would send a request from a frontend application served from the Vite development server to our backend, we would send a request to a _different origin_. These kind of requests are called _cross-orgin_ requests.
-
-Web browsers don't allow `fetch` functions to send cross-origin requests by default. This is called the Same-origin Policy. The reason for this is that cross-origin requests can cause [security issues](https://medium.com/@ehayushpathak/security-risks-of-cors-e3f4a25c04d7). We can however allow certain (or every) cross-origin request by using [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (CORS).
+Web browsers don't allow `fetch` functions to send cross-origin requests by default. This is called the _same-origin policy_. The reason for this is that cross-origin requests can cause [security issues](https://medium.com/@ehayushpathak/security-risks-of-cors-e3f4a25c04d7). We can however allow certain (or every) cross-origin request by using [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (CORS).
 
 The idea of CORS is that the web browser "asks" the backend if cross-origin request from a certain origin is allowed by sending a special HTTP request. If backend allows the requests, then the web browser will send it. In a Spring Boot application we can use the [@CrossOrigin](https://spring.io/guides/gs/rest-service-cors/) annotation in the class or method level to allow cross-origin requests to certain or all paths of controller.
 
@@ -650,31 +666,88 @@ public class MessageRestController {
 }
 ```
 
-TODO: proxy
+However, with the Vite development server there is a better way to handle the CORS issue, which is the [proxy](https://vitejs.dev/config/server-options.html#server-proxy) feature. With the proxy, the Vite development server will serve as a man-in-the-middle for our `fetch` requests. For example, we can send a request to `http://localhost:5173/api/messages` (which doesn't violate the same-origin policy) and the proxy will forward the the request to `http://localhost:8080/api/messages` and provides us with the response.
 
-{: .important-title }
+The proxy is configured in the `frontend/vite.config.js` file in the following way:
 
-> Exercise 18
->
-> Implement the tasks of the sixth user story, "As a student, I want to see a list of quizzes so that I know what kind of quizzes I can take".
->
-> The implementation should look roughly something like this:
+```js
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:8080/api",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    },
+  },
+});
+```
+
+The proxy will forward every request starting with `/api` to `http://localhost:8080/api`.
+
+Proxy is also handy because we don't need to hard-code origins in the `@CrossOrigin` annotation in the backend. Also, we don't have to configure development and production backend URL in the frontend while we are deploying our application.
 
 {: .important-title }
 
 > Exercise 19
 >
-> Implement the tasks of the seventh user story, "As a student, I want to see a the questions of the quiz, so that I know the contents of the quiz".
+> Implement the tasks of the sixth user story, "{{site.sprint_2_user_story_6}}".
 >
 > The implementation should look roughly something like this:
+>
+> ![](/assets/todo-sprint-2-user-story-6.png)
+>
+> Tips for implementing the tasks:
+>
+> - Material UI [Table](https://mui.com/material-ui/react-table/)
 
 {: .important-title }
 
 > Exercise 20
 >
-> Implement the tasks of the eighth user story, "As a student, I want to answer the quiz questions so that I can learn the correct answers". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise X to get tips for the implementation.
+> Implement the tasks of the seventh user story, "{{site.sprint_2_user_story_7}}".
 >
 > The implementation should look roughly something like this:
+>
+> ![](/assets/todo-sprint-2-user-story-7-1.png)
+>
+> ![](/assets/todo-sprint-2-user-story-7-2.png)
+>
+> ![](/assets/todo-sprint-2-user-story-7-3.png)
+>
+> ![](/assets/todo-sprint-2-user-story-7-4.png)
+>
+> Tips for implementing the tasks:
+>
+> - You can store the active question index to a state variable:
+>
+>   ```js
+>   const [questions, setQuestions] = useState([]);
+>   const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
+>   const activeQuestion = questions[activeQuestionIndex];
+>   ```
+>
+> - Material UI [Card](https://mui.com/material-ui/react-card/) and [LinearProgress](https://mui.com/material-ui/react-progress/)
+
+{: .important-title }
+
+> Exercise 21
+>
+> Implement the tasks of the eighth user story, "{{site.sprint_2_user_story_8}}".
+>
+> The implementation should look roughly something like this:
+>
+> ![](/assets/todo-sprint-2-user-story-8-1.png)
+>
+> ![](/assets/todo-sprint-2-user-story-8-2.png)
+>
+> ![](/assets/todo-sprint-2-user-story-8-3.png)
+>
+> Tips for implementing the tasks:
+>
+> - Material UI [Snackbar](https://mui.com/material-ui/react-snackbar/)
 
 ## API documentation with Swagger
 
@@ -733,9 +806,9 @@ public class QuizRestController {
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
-> Generate a Swagger documentation for the project as described above. Add proper name and description all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
+> Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
 >
 > For other developers to find the Swagger documentation, add a "Documentation" subheading for the `README.md` file and under that a link to the Swagger documentation at <http://localhost:8080/swagger-ui.html>.
 
@@ -758,9 +831,35 @@ These two lines will ignore both the `node_modules` and `dist` folders in the `f
 
 ## Deploying the frontend
 
-TODO
+We managed to deploy the backend during the previous Sprint, but we still haven't deployed the frontend. We can use the backend to serve the frontend files from the `src/resources/static` folder so that we don't need a separate deployment for the frontend.
 
-We can integrate the frontend's npm scripts with the backend's Maven workflow using the [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin). Using the plugin, we can run all the commands required for the frontend application when we compile the Java code. This will simplify the development workflow of the whole application.
+First, let's configure Vite so that it builds the output files to the `src/resources/static` folder. We can do this by adding the `build` configuration for the `frontend/vite.config.js` file:
+
+```js
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    outDir: "../src/main/resources/static",
+  },
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:8080/api",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    },
+  },
+});
+```
+
+Next, let's add the `src/main/resources/static` folder to the `.gitignore` file in the root folder of our application (same folder that has the `pom.xml` file). This is because we don't want the frontend build files to end-up in the repository. Just add the following line at the end of the file:
+
+```
+src/main/resources/static
+```
+
+Vite builds the frontend application with the `npm run build` command. We can integrate the frontend's npm scripts with the backend's Maven workflow using the [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin). Using the plugin, we can run all the commands required for the frontend application when we compile the Java code. This will simplify the deployment workflow of the application.
 
 Let's add the frontend-maven-plugin to the `<plugins>` list in the `pom.xml` file:
 
@@ -770,7 +869,8 @@ Let's add the frontend-maven-plugin to the `<plugins>` list in the `pom.xml` fil
   <artifactId>frontend-maven-plugin</artifactId>
   <version>1.14.2</version>
   <configuration>
-    <installDirectory>target</installDirectory>
+    <installDirectory>./target</installDirectory>
+    <workingDirectory>./frontend</workingDirectory>
   </configuration>
   <executions>
     <execution>
@@ -813,13 +913,56 @@ The plugin will execute three commands when we generate the resources for the pr
 2. Run `npm install` command to install frontend dependencies
 3. Run `npm run build` command to generate a minified bundle of the frontend code, suitable for the production version of the application
 
-Now, if we run the `./mvnw spring-boot:run` command, the command output indicates that the frontend related commands are executed.
+Now, if we run the `./mvnw spring-boot:run` command, the command output indicates that the frontend related commands are executed. We should also see that the `src/main/resources/static` folder has a `assets` folder with the frontend files.
+
+We want the frontend application to be accessible in a certain path of the application, for example `http://localhost:8080/app`. We can achieve this by rendering the `src/main/resources/static/index.html` in the `/app` path. Let's add a `FrontendController` controller class to handle that:
+
+```java
+@Controller
+public class FrontendController {
+    @GetMapping("/app/**")
+	public String renderFrontend(Model model) {
+		return "index";
+	}
+}
+```
+
+Last thing to do is to tell Thymeleaf to search for template files in the `src/main/resources/static` folder. Let's add the following method for the `ThymeleafConfig` class:
+
+```java
+@Bean
+public ClassLoaderTemplateResolver secondaryTemplateResolver() {
+    ClassLoaderTemplateResolver secondaryTemplateResolver = new ClassLoaderTemplateResolver();
+    secondaryTemplateResolver.setPrefix("static/");
+    secondaryTemplateResolver.setSuffix(".html");
+    secondaryTemplateResolver.setTemplateMode(TemplateMode.HTML);
+    secondaryTemplateResolver.setCharacterEncoding("UTF-8");
+    secondaryTemplateResolver.setOrder(1);
+    secondaryTemplateResolver.setCheckExistence(true);
+
+    return secondaryTemplateResolver;
+}
+```
+
+We still have one problem, which is related to React Router. React Router assumes that the basepath of the application is `/`, but in our case it is `/app`. We only want to change the basepath in the production version of the application. To achieve this, we can use [environment variables](https://vitejs.dev/guide/env-and-mode). Let's add a `env.production` file to the `frontend` folder with the following content:
+
+```
+VITE_ROUTER_BASENAME=/app
+```
+
+We can define the basename of the `BrowserRouter` component in the following way:
+
+```jsx
+<BrowserRouter basename={import.meta.env.VITE_ROUTER_BASENAME}>
+```
+
+Now we should be ready to deploy the frontend. Before deploying the application to Render, generate a JAR file with the `./mvnw package` command and start the application with the `java -jar target/quizzer-0.0.1-SNAPSHOT.jar` command.
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 23
 >
-> Use the frontend-maven-plugin in the project as instructed above.
+> Do the required setup for the frontend deployment as instructed above and deploy the application to Render.
 
 ## Sprint Review
 
@@ -827,19 +970,19 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 24
 >
-> Once you have implemented the user stories of the Sprint, remove the excessive Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive `messageList` folder from the `frontend` folder.
+> Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, exessive frontend-related files from the `frontend` folder.
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 25
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 26
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If you managed to deploy the application to Render, demonstrate the features in the production environment.
 >
@@ -867,10 +1010,10 @@ The Product Owner came up with a feature for the application if we run out of wo
 
 > Bonus exercise
 >
-> Come up with a user story based on the Product Owner's description, create an issue for the user story and add it to the "Product Backlog" project. Then, split the user story into tasks, create an issue for each task and add those to the Sprint 2 Backlog project. Finally, implement the tasks.
+> Come up with a user story based on the Product Owner's description, create an issue for the user story and add it to the Product Backlog project. Then, split the user story into tasks, create an issue for each task and add those to the Sprint 2 Backlog project. Finally, implement the tasks.
 >
 > The implementation should look roughly something like this:
 >
-> ![](/assets/sprint-2-user-story-bonus.png)
+> ![](/assets/todo-sprint-2-user-story-bonus.png)
 >
 > The [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method might be useful for the implementation.

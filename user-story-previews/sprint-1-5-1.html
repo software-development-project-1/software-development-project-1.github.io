@@ -25,12 +25,25 @@
     </nav>
     <div class="container my-3">
       <h1>Quizzes</h1>
+      <ul class="nav nav-pills my-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">All</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Published</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Not published</a>
+        </li>
+      </ul>
       <table class="table">
         <thead>
           <tr>
             <th>Name</th>
             <th>Description</th>
             <th>Published</th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -38,11 +51,23 @@
             <td>The capital cities of Europe</td>
             <td>Learn the capital cities of the European countries</td>
             <td><span class="badge text-bg-secondary">Not published</span></td>
+            <td>
+              <button class="btn btn-secondary btn-sm">Edit</button>
+            </td>
+            <td>
+              <button class="btn btn-danger btn-sm">Delete</button>
+            </td>
           </tr>
           <tr>
             <td>Finnish vocabulary</td>
             <td>Learn the most common Finnish words</td>
             <td><span class="badge text-bg-primary">Published</span></td>
+            <td>
+              <button class="btn btn-secondary btn-sm">Edit</button>
+            </td>
+            <td>
+              <button class="btn btn-danger btn-sm">Delete</button>
+            </td>
           </tr>
         </tbody>
       </table>

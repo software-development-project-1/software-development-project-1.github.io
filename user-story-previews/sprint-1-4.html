@@ -13,48 +13,55 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">Cool Reads</a>
+        <a class="navbar-brand" href="/">Quizzer</a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="/">Recommendations</a>
+              <a class="nav-link" href="/">Quizzes</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="container my-3">
-      <h1>Reading recommendations</h1>
+      <h1>Quizzes</h1>
       <table class="table">
         <thead>
           <tr>
-            <th>Title</th>
-            <th>Link</th>
+            <th>Name</th>
             <th>Description</th>
+            <th>Published</th>
             <th></th>
             <th></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>The 2020 Scrum Guide</td>
+            <td>The capital cities of Europe</td>
+            <td>Learn the capital cities of the European countries</td>
+            <td><span class="badge text-bg-secondary">Not published</span></td>
             <td>
-              <a href="https://scrumguides.org/scrum-guide.html"
-                >https://scrumguides.org/scrum-guide.html</a
-              >
-            </td>
-            <td>All you need to know about Scrum</td>
-            <td>
-              <button class="btn btn-secondary">Edit</button>
+              <button class="btn btn-secondary btn-sm">Edit</button>
             </td>
             <td>
-              <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-danger btn-sm">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Finnish vocabulary</td>
+            <td>Learn the most common Finnish words</td>
+            <td><span class="badge text-bg-primary">Published</span></td>
+            <td>
+              <button class="btn btn-secondary btn-sm">Edit</button>
+            </td>
+            <td>
+              <button class="btn btn-danger btn-sm">Delete</button>
             </td>
           </tr>
         </tbody>
       </table>
 
-      <a href="#" class="btn btn-primary">Add a reading recommendation</a>
+      <a href="#" class="btn btn-primary">Add a quiz</a>
     </div>
   </body>
 </html>
