@@ -650,7 +650,9 @@ We should now be able to delete reading recommendations again.
 >
 > Implement the tasks of the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations".
 >
-> The "Edit" link and the "Delete" button should only be visible in the reading recommendation list if the user has added the reading recommendation.
+> Tips for implementing the tasks:
+> 
+> - See how the authenticated user is associated with a message in the [MessageController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/MessageController.java) class in the authentication example project
 
 {: .important-title }
 
