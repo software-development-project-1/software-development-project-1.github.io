@@ -16,7 +16,7 @@ For the final Sprint of the course, the Sprint 3, we have a new set of requireme
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
 
-The Sprint assesment is done based on the exercises 1-17. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
+The Sprint assesment is done based on the exercises 1-21. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
 
 During this Sprint, each team member will do a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 10 personal points.
 
@@ -48,11 +48,13 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 3 goals in the Sprint Planning event:
 
-> "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username, password and password confirmation. User should not be able to register with a blank username or a password less than 12 characters long. The password should also contain at least one letter and at least one number. Also, the password should match the password confirmation. After registering, the user should be able to sign in using their username and password provided during the registration.
+> "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username, password. User should not be able to register with a blank username or a password less than 12 characters long. The password should also contain at least one letter and at least one number.
+
+> After registering, the user should be able to sign in using their username and password provided during the registration. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in form. Once the user is signed in, there should be "Sign out" link in the navigation bar that will sign the user out.
 >
 > An anonymous user, that is an user who is not signed in, should be able to see the reading recommendation list and the category list. However, they should not be able to add a reading recommendation or a category. That is, the links for adding a reading recommendation and adding a category should not be visible if the user is not signed in.
 >
-> After signing in, the user should be able to add reading recommendations and categories. However, a user should only be able to edit and delete reading recommendations that they have added. That is, the "Edit" link and the "Delete" button in the reading recommendation list should only be visible if the user has added the reading recommendation."
+> After signing in, the user should be able to add reading recommendations and categories. However, the user should only be able to edit and delete reading recommendations that they have added. That is, the "Edit" link and the "Delete" button in the reading recommendation list should only be visible if the user has added the reading recommendation."
 >
 > -- The Product Owner
 
@@ -64,29 +66,6 @@ After some discussion the Scrum Team came up with the following user stories:
 
 The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
 
-For the _first user story_, the Developers came up with the following tasks:
-
-1. Add the spring-boot-starter-security and thymeleaf-extras-springsecurity6 dependencies for the project
-2. Add a Spring Security configuration class
-3. Add a User JPA entity class with id, username, role and passwordHash attributes, and a UserRepository JPA repository class
-4. Add a Thymeleaf template for the user registration form containing fields for username, password and password confirmation
-5. Add a UserController controller class and a method for rendering the user registration form
-6. Add a method for the UserController class that saves the user to the database
-7. Add validation for username and password
-8. Add a "Register" link to the navigation bar
-
-For the _second user story_, the Developers came up with the following tasks:
-
-1. Add the form login configuration to the Spring Security configuration
-2. Add a UserRestController controller class and a method for the /api/users/current REST API endpoint that returns the authenticated user's information
-3. Hide the "Add a reading recommendation" link in the reading recommendation list page if the user is not authenticated
-4. Hide the "Add a category" link in the category list page if the user is not authenticated
-5. Hide the "Register" link in the navigation bar if the user is authenticated
-6. Add a "Sign in" link to the navigation bar which is visible if the user is not authenticated
-
-{: .note }
-The tasks described above are suggestions, feel free to alter them or add new tasks.
-
 {: .important-title }
 
 > Exercise 2
@@ -97,23 +76,40 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 3
 >
+> 1. Create a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) for each user story, such as "user register" and "user sign in"
+> 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column
+
+{: .important-title }
+
+> Exercise 4
+>
 > Make sure that all task related issues that have been completed during the Sprint 2 are _closed_ and their _status is "Done"_ in the Sprint 2 Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
 > If you didn't manage to implement all user stories during Sprint 2, move the task related issues of the unfinished user stories to the Sprint 3 Backlog project.
 
 {: .important-title }
 
-> Exercise 4
+> Exercise 5
 >
-> Come up with tasks for the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
+> Come up with tasks for the first user story, "As an anonymous user I want to register an account so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
 
 {: .important-title }
 
-> Exercise 5
+> Exercise 6
 >
-> 1. Create a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) for each user story, such as "user register" and "user sign in"
-> 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column.
-> 3. Create an issue for each _tasks_ of the _first four user stories_. If the task description is long, use a short version of the description as the issue title and add the full description as the issue description. Add a label "task" and the task related user story's label for each issue. Add the issues to the Sprint 3 Backlog project and move them to the "Todo" column.
+> Come up with tasks for the second user story, "As an anonymous user I want to sign in so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 13 to get tips for the implementation and the [Authentication](#authentication) section for the technical details.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
+
+{: .important-title }
+
+> Exercise 7
+>
+> Come up with tasks for the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 14 to get tips for the implementation and the [Authentication](#authentication) section for the technical details.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
 
 ## Testing
 
@@ -124,6 +120,8 @@ Manual testing is important, but we can't perform it _at scale_. When our applic
 ![TestPyramid](/assets/test-pyramid.png)
 
 Fowler categorizes different tests in three categories: _unit_, _service_ and _UI_ (user interface) tests. The test pyramid represents the _amount_ of these different kind of tests we should have for our application. There are pros and cons for the different kind of tests. While we go up in the pyramid we get better reliability that our application works as inteaded as a whole, but the tests becomes _laborious to maintain_, _difficult to implement_, and _time consuming to run_. This is why our test portfolio should be balanced.
+
+Automated tests are implemented with programming language specific _testing frameworks_, such as Java's [JUnit](https://junit.org/junit5/) and JavaScript's [Vitest](https://vitest.dev/). During this Sprint we will implement some integration tests for our backend's REST API endpoints using JUnit and the [MockMVC](https://docs.spring.io/spring-framework/reference/testing/spring-mvc-test-framework.html) framework.
 
 ### Unit tests
 
@@ -164,28 +162,33 @@ Unit tests have these pros and cons:
 
 _Integration tests_ (also known as service tests) constitutes the middle of the test pyramid. We should have quite many (but less than unit tests) integration tests in our application. As the name suggests, integration tests that different parts of our application code work as inteded once they are _integrated_. For example methods that perform database operations are tested with integration tests.
 
-Here's an example of integration tests for a `createMessage` method, which creates a message for the authenticated user provided as the parameter:
+Here's an example of integration tests for a REST API endpoint `/api/messages` implemented by the `getMessages` method:
 
 ```java
 @Test
-void createMessageSetsMessageAttributesCorrectly() {
-    String passwordHash = passwordEncoder.encode("password123");
-    User user = new User("tester", passwordHash, "USER");
-    userRepository.save(user);
+public void getMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception {
+    this.mockMvc.perform(get("/api/messages"))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$", hasSize(0)));
+}
 
-    UserDetails userDetails = new org.springframework.security.core.userdetails.User(user.getUsername(),
-        user.getPasswordHash(), AuthorityUtils.createAuthorityList(user.getRole()));
+@Test
+public void getMessagesReturnsListOfMessagesWhenMessagesExist() throws Exception {
+    Message firstMessage = new Message("First message");
+    Message secondMessage = new Message("Second message");
+    messageRepository.saveAll(List.of(firstMessage, secondMessage));
 
-    AddMessageDto message = new AddMessageDto("Hello world!");
-
-    messageService.createMessage(message, userDetails);
-
-    List<Message> messages = messageRepository.findAll();
-    assertEquals(1, messages.size());
-    assertEquals("Hello world!", messages.get(0).getContent());
-    assertEquals("tester", messages.get(0).getUser().getUsername());
+    this.mockMvc.perform(get("/api/messages"))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$", hasSize(2)))
+            .andExpect(jsonPath("$[0].content").value("First message"))
+            .andExpect(jsonPath("$[0].id").value(firstMessage.getId()))
+            .andExpect(jsonPath("$[1].content").value("Second message"))
+            .andExpect(jsonPath("$[1].id").value(secondMessage.getId()));
 }
 ```
+
+These tests send a request to the REST API endpoint and verify that the JSON response body contains the required information.
 
 Integration tests have these pros and cons:
 
@@ -215,140 +218,6 @@ UI tests have these pros and cons:
 - 🔴 Difficult to implement and laborious to maintain
 - 🔴 Slow to run
 
-## Service classes
-
-Automated tests are implemented with programming language specific _testing frameworks_, such as Java's [JUnit](https://junit.org/junit5/) and JavaScript's [Vitest](https://vitest.dev/). During this Sprint we will implement some tests for our backend using JUnit. But first, let's discuss how to write code that is _easy to test_.
-
-At the moment probably most of our application's _business logic_ is within controller methods. These methods usually read the user input from the request, do some database operations and send a response. Let's consider the following example that adds a message for an authenticated user:
-
-```java
-@Controller
-public class MessageController {
-    @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private MessageRepository messageRepository;
-
-    @PostMapping("/messages/add")
-    public String addMessage(@Valid @ModelAttribute("message") AddMessageDto message, @AuthenticationPrincipal UserDetails userDetails, BindingResult bindingResult, Model model) {
-        if (bindingResult.hasErrors()) {
-            model.addAttribute("message", message);
-            return "addmessage";
-        }
-
-        User user = userRepository.findOneByUsername(userDetails.getUsername());
-            .orElseThrow(() -> new UsernameNotFoundException(userDetails.getUsername()));
-
-        Message newMessage = new Message(message.getContent(), user);
-        messageRepository.save(newMessage);
-
-        return "redirect:/";
-    }
-
-    // ...
-}
-```
-
-Testing controller methods is a bit tricky because they operate on HTTP requests and responses. To make the business logic of "adding a message for an authenticated user" reusable and easier to test, we can create a service class `MessageService` with method `createMessage`:
-
-```java
-@Service
-public class MessageService {
-    @Autowired
-    private MessageRepository messageRepository;
-
-    @Autowired
-    private UserRepository userRepository;
-
-    public Message createMessage(AddMessageDto message, UserDetails userDetails) {
-        User user = userRepository.findOneByUsername(userDetails.getUsername())
-            .orElseThrow(() -> new UsernameNotFoundException(userDetails.getUsername()));
-
-        Message newMessage = new Message(message.getContent(), user);
-
-        return messageRepository.save(newMessage);
-    }
-}
-```
-
-We can use the `MessageService` class in the controller method to simplify the code:
-
-```java
-@Controller
-public class MessageController {
-    @Autowired
-    private MessageService messageService;
-
-    @PostMapping("/messages/add")
-    public ModelAndView addMessage(@Valid @ModelAttribute("message") AddMessageDto message, @AuthenticationPrincipal UserDetails userDetails,BindingResult bindingResult, Model model) {
-        if (bindingResult.hasErrors()) {
-            model.addAttribute("message", message);
-            return "addmessage";
-        }
-
-        messageService.createMessage(message, userDetails);
-
-        return "redirect:/";
-    }
-
-    // ...
-}
-```
-
-Now that we have extracted the logic into the `createMessage` method, we can use it in other methods as well. Also, the logic is now easier to test as we will soon see.
-
-{: .note }
-
-> A common architecture for a Java application is that controllers use services and services use repositories. This architecture is referred to as the [Three-tier architecture](https://www.ibm.com/topics/three-tier-architecture).
-
-These code snippets are from the [authentication example](https://github.com/software-development-project-1/authentication-example) project. We'll have a closer look at it soon.
-
-{: .important-title }
-
-> Exercise 6
->
-> Create a new package `fi.haagahelia.coolreads.service` for the project's service classes. You can do this in Eclipse by right-clicking the `src/main/java` folder and choosing New > Package. Implement a `ReadingRecommendationService` class within the package with the following method:
->
-> ```java
-> @Service
-> public class ReadingRecommendationService {
->   @Autowired
->   ReadingRecommendationRepository recommendationRepository;
->
->   public ReadingRecommendation createRecommendation(AddReadingRecommendationDto recommendation) {
->       // Save the reading recommendation to the database and return the saved ReadingRecommendation object
->   }
-> }
-> ```
->
-> It is fine that the names of your classes differ from these. Replace the names of the classes based on the classes on your project. You can also change the method parameters if they aren't suitable.
->
-> Then, extract the current controller method's code into the `createRecommendation` method and call it in the controller method:
->
-> ```java
-> @Controller
-> public class ReadingRecommendationController {
->   @Autowired
->   private ReadingRecommendationService recommendationService;
->
->    // ...
->
->   @PostMapping("/recommendations/add")
->   public String addRecommendation(@Valid @ModelAttribute("recommendation") AddReadingRecommendationDto recommendation, BindingResult bindingResult, Model model) {
->       if (bindingResult.hasErrors()) {
->           // return the add reading recommendation template name
->       }
->
->       recommendationService.createRecommendation(recommendation);
->
->       return "redirect:/";
->   }
-> }
-> ```
->
-> This change in code should not change how the application works in the user's perspective. Make sure that adding a reading recommendation works as before.
-
 ## Configuration for tests
 
 Because our tests will alter the database we should consider _using a different database for tests_. This is a common practice because we don't want the tests to alter (for example delete) any data we are using during the development.
@@ -367,7 +236,7 @@ spring.datasource.url=jdbc:h2:mem:cool-reads-test;DB_CLOSE_ON_EXIT=FALSE;AUTO_RE
 
 The configuration in the `src/test/resources/application.properties` file will be used while we are running the tests, which makes it suitable for test-specific configuration.
 
-## Testing service classes with integration tests
+## Testing REST API endpoints
 
 > "Write tests. Not too many. Mostly integration."
 >
@@ -377,42 +246,70 @@ Integration tests are a great balance of reliability and performance. Kent C. Do
 
 In Java application, tests implemented and executed with the [JUnit](https://junit.org/junit5/) testing framework. JUnit tests are implemented as test classes. Test classes can be annoted with the `@SpringBootTest` annotation to access the Spring application context in tests. This, for example makes the `@Autowired` annotations work. Methods annotated with the `@Test` annotation are the _test methods_, which test a specific _test scenario_.
 
-Test methods usually share certain common setup code, which should be done before each test method. This setup can be put inside a method annotated with the `@BeforeEach` annotation. For example here's the `setUp` method for the authentication example project's [MessageServiceTest](https://github.com/software-development-project-1/authentication-example/blob/main/src/test/java/fi/haagahelia/coolreads/service/MessageServiceTest.java) test class:
+Test methods usually share certain common setup code, which should be done before each test method. This setup can be put inside a method annotated with the `@BeforeEach` annotation. The tests should be _independent_ from each other, meaning that for example the order in which the tests are executed should not matter. To achieve the independence, each test needs to start with an _empty database_. This is achieved by deleting all entities in the `setUp` method before each test.
+
+As an example, let's consider testing the following methods of a `MessageRestController` class:
 
 ```java
-@SpringBootTest
-class MessageServiceTest {
-    // ...
+@RestController
+@RequestMapping("/api/messages")
+public class MessageRestController {
+	@Autowired
+	private MessageRepository messageRepository;
 
-    private UserDetails userDetails;
+	@GetMapping("")
+	public List<Message> getMessages() {
+		return messageRepository.findAll();
+	}
+
+	@GetMapping("/{id}")
+	public Message getMessageById(@PathVariable Long id) {
+		return messageRepository.findById(id).orElseThrow(
+				() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + " does not exist"));
+	}
+}
+```
+
+The test class files should be placed to the `src/test/java` folder and the name of the test class should have a `Test` prefix. For example, we can test the `MessageRestController` class with a `MessageRestControllerTest` class.
+
+To make sure that the tests in the test class are independent, the `setUp` method should delete all messages at the beginning of each test:
+
+```java
+package fi.haagahelia.coolreads;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.web.servlet.MockMvc;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+@SpringBootTest
+@AutoConfigureMockMvc
+public class MessageRestControllerTest {
+    @Autowired
+    MessageRepository messageRepository;
+
+    @Autowired
+    private MockMvc mockMvc;
 
     @BeforeEach
     void setUp() throws Exception {
         // Make sure that the database is empty before each test
         messageRepository.deleteAll();
-        userRepository.deleteAll();
-
-        String passwordHash = passwordEncoder.encode("password123");
-        User user = new User("tester", passwordHash, "USER");
-        userRepository.save(user);
-
-        // Initialize an object for the authenticated user for each test
-        this.userDetails = new org.springframework.security.core.userdetails.User(user.getUsername(),
-            user.getPasswordHash(), AuthorityUtils.createAuthorityList(user.getRole()));
     }
 
-    // The test methods go here...
-}
+    // The test methods go here
 ```
-
-The tests should be _independent_ from each other, meaning that for example the order in which the tests are executed should not matter. To achieve the independence, each test needs to start with an _empty database_. This is achieved by deleting all entities in the `setUp` method before each test.
 
 The test methods test specific scenario. We come up with scenarios by analyzing the code (for example a certain method) that we are testing: how does the code behave based on different parameters or database state? For example if we call a method with certain parameters, we expect it to return a certain value. We need to cover all divergences in the code behavior with a test scenario.
 
-For example, if we consider the test scenarios for the `createMessage` method:
+For example, we could have the following test scenarios for the `getMessages` method introduced above:
 
-1. If we call the `createMessage` method with an object containing the message content, we expect that a single `Message` entity is saved to database with that content
-2. If we call the `createMessage` method with an user object, we expect that a single `Message` entity is saved to database and it should be associated with that user object
+1. If we send a request to the `/api/messages` REST API endpoint and _there is no messages in the database_, the JSON response body should be an empty list
+2. If we send a request to the `/api/messages` REST API endpoint and _there are messages in the database_, the JSON response body should contain the messages as a list
 
 To structure these test cases as test methods, we can follow the popular [Arrange-Act-Assert](https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/) pattern:
 
@@ -420,87 +317,119 @@ To structure these test cases as test methods, we can follow the popular [Arrang
 2. _Act_ on the target behavior. Act steps should cover the main thing to be tested. This could be calling a function or method, calling a REST API, or interacting with a web page. Keep actions focused on the target behavior
 3. _Assert_ expected outcomes. Act steps should elicit some sort of response. Assert steps verify the goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails
 
-Here's how the two test scenario could be tested with `createMessageSetsMessageAttributesCorrectly` test method:
+Here's the two test methods for our test scenarios:
 
 ```java
-@SpringBootTest
-class MessageServiceTest {
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+@Test
+public void getAllMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception {
+    // Act
+    this.mockMvc.perform(get("/api/messages"))
+    // Assert
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$", hasSize(0)));
+}
 
-    @Autowired
-    private UserRepository userRepository;
+@Test
+public void getAllMessagesReturnsListOfMessagesWhenMessagesExist() throws Exception {
+    // Arrange
+    Message firstMessage = new Message("First message");
+    Message secondMessage = new Message("Second message");
+    messageRepository.saveAll(List.of(firstMessage, secondMessage));
 
-    @Autowired
-    private MessageRepository messageRepository;
-
-    @Autowired
-    private MessageService messageService;
-
-    private UserDetails userDetails;
-
-    @BeforeEach
-    void setUp() throws Exception {
-        messageRepository.deleteAll();
-        userRepository.deleteAll();
-
-        String passwordHash = passwordEncoder.encode("password123");
-        User user = new User("tester", passwordHash, "USER");
-        userRepository.save(user);
-
-        this.userDetails = new org.springframework.security.core.userdetails.User(user.getUsername(),
-            user.getPasswordHash(), AuthorityUtils.createAuthorityList(user.getRole()));
-    }
-
-    @Test
-    void createMessageSetsMessageAttributesCorrectly() {
-        // Arrange
-        AddMessageDto message = new AddMessageDto("Hello world!");
-
-        // Act
-        messageService.createMessage(message, this.userDetails);
-
-        // Assert
-        List<Message> messages = messageRepository.findAll();
-        assertEquals(1, messages.size());
-        assertEquals("Hello world!", messages.get(0).getContent());
-        assertEquals("tester", messages.get(0).getUser().getUsername());
-    }
+    // Act
+    this.mockMvc.perform(get("/api/messages"))
+    // Assert
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$", hasSize(2)))
+            .andExpect(jsonPath("$[0].content").value("First message"))
+            .andExpect(jsonPath("$[0].id").value(firstMessage.getId()))
+            .andExpect(jsonPath("$[1].content").value("Second message"))
+            .andExpect(jsonPath("$[1].id").value(secondMessage.getId()));
 }
 ```
 
+The tests use the `perform` method of the `MockMVC` class to send a GET request to the `/api/messages` REST API endpoint. Then, we expect that the HTTP status of the response is `200 OK` and the JSON of the response body contains the messages we saved in the arrange step.
+
+For another example, here's the test methods of the `getMessageById` method introduced above:
+
+```java
+@Test
+public void getMessageByIdReturnsMessageWhenMessageExists() throws Exception {
+    // Arrange
+    Message message = new Message("Message");
+    messageRepository.save(message);
+
+    // Act
+    this.mockMvc.perform(get("/api/messages/" + message.getId()))
+    // Assert
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.content").value("Message"))
+            .andExpect(jsonPath("$.id").value(message.getId()));
+}
+
+@Test
+public void getMessageByIdReturnsNotFoundWhenMessageDoesNotExist() throws Exception {
+    // Act
+    this.mockMvc.perform(get("/api/messages/123"))
+    // Assert
+            .andExpect(status().isNotFound());
+}
+```
+
+The spring-boot-starter-test library provides other test functionalities except the `jsonPath` method used in the expectations. Before we start testing our REST API endpoints, let's add the json-path dependency to the `<dependencies>` list in the `pom.xml` file:
+
+```xml
+<dependency>
+    <groupId>com.jayway.jsonpath</groupId>
+    <artifactId>json-path</artifactId>
+    <version>2.8.0</version>
+    <scope>test</scope>
+</dependency>
+```
+
+While testing your application's REST API endpoints, refer to the examples above and guides, such as [Integration Testing in Spring](https://www.baeldung.com/integration-testing-in-spring).
+
+{: .note }
+
+> You can run the tests for the project either in Eclipse or by running the `./mvnw test` command in Git Bash.
+
+> Exercise 8
+>
+> Create a new "test" label for test-related tasks.
+
 {: .important-title }
 
-> Exercise 7
+> Exercise 9
 >
-> Create a new package `fi.haagahelia.coolreads.service` for the project's service class tests. You can do this in Eclipse by right-clicking the `src/test/java` folder and choosing New > Package. Implement a `ReadingRecommendationServiceTest` test class within the package with the following test methods for the `createRecommendation` method:
+> Create a new package `fi.haagahelia.coolreads.controller` for the project's controller class tests. You can do this in Eclipse by right-clicking the `src/test/java` folder and choosing New > Package. Implement a `ReadingRecommendationRestControllerTest` test class within the package with the following test methods for the `/api/recommendations` REST API endpoint:
 >
-> ```java
-> @SpringBootTest
-> class ReadingRecommendationServiceTest {
->   // ...
+> - `getRecommendationsReturnsEmptyListWhenNoRecommendationsExist`: send a request to the `/api/recommendations` without saving a recommendation to the database and the response should have an empty list
+> - `getRecommendationsReturnsListOfRecommendationsWhenRecommendationsExist`: save a few recommendations to the database and send a request to the `/api/recommendations` and the response should have a list of the saved recommendations
 >
->   @BeforeEach
->   void setUp() throws Exception {
->       // 1. Delete all reading recommendations and categories
->       // 2. Initialize a Category object, save it to the database and assign it to an attribute (similarly as with the userDetails attribute in the example above)
->   }
+> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
+
+{: .important-title }
+
+> Exercise 10
 >
->   @Test
->   void createRecommendationSetsReadingRecommendationAttributesCorrectly() {
->       // Arrange: initialize a AddReadingRecommendationDto object with with all attributes, including the category created in the setUp method
+> Implement a `CategoryRestControllerTest` test class with the following test methods for the `/api/categories` REST API endpoint:
 >
->       // Act: call the createRecommendation method with the initialized object
+> - `getCategoriesReturnsEmptyListWhenNoCategoriesExist`: send a request to the `/api/categories` without saving a category to the database and the response should have an empty list
+> - `getCategoriesReturnsListOfCategoriesWhenCategoriesExist`: save a few categories to the database and send a request to the `/api/categories` and the response should have a list of the saved categories
 >
->       // Assert:
->       // 1. Retrieve all the recommendations from the database using the recommendationRepository.findAll() method
->       // 2. The attributes (including the category) of the first (and the only) object on the list should match the attributes of the AddReadingRecommendationDto object
->   }
+> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
+
+{: .important-title }
+
+> Exercise 11
 >
-> }
-> ```
+> Implement the following test methods for the `/api/categories/{id}/recommendations`:
 >
-> Replace the arrange, act and assert comments with the actual test implementation. The implementation doesn't have to precisely match the comment descriptions. Make alterations based on your implementation of the `createRecommendation` method. You can run the tests for the project either in Eclipse or by running the command `./mvnw test` in Git Bash.
+> - `getRecommendationsByCategoryIdReturnsEmptyListWhenCategoryDoesNotHaveRecommendations`: save a category without recommendations to the database and send a request to the `/api/categories/{id}/recommendations` and the response should have an empty list
+> - `getRecommendationsByCategoryIdReturnsListOfRecommendationsWhenCategoryHasRecommendations`: save a category with a few recommendations to the database and send a request to the `/api/categories/{id}/recommendations` and the response should have a list of the category's recommendations
+> - `getRecommendationsByCategoryIdReturnsNotFoundWhenCategoryDoesNotExist`: send a request to the `/api/categories/1/recommendations` without saving a category to the database and the response should have a `404 Not Found` status
+>
+> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
 
 ## Test coverage
 
@@ -531,15 +460,7 @@ We have analyzed the code that we are testing and we are quite sure that our tes
 
 If we run the `./mvnw test` command in Git Bash, our tests are executed and JaCoCo will generate a _code coverage report_. Once the command has finished successfully, the code coverage report can be found as an `index.html` file in the `target/site/jacoco` folder. Open the `index.html` file in a web browser.
 
-For the authentication example project, the report looks like this:
-
-![JaCoCo](/assets/jacoco-overall.png)
-
-The "Cov" column determines the _percentage of lines covered by the tests_. Bigger the number, better the coverage.
-
-If we click a package name, we see the classes in the package. By clicking a class name, we see the methods of the class. By clicking a method we see the method's implementation as code. For example the `createMessage` method looks the following:
-
-![JaCoCo](/assets/jacoco-class.png)
+The report displayes the coverage of each package. The "Cov" column determines the _percentage of lines covered by the tests_. Bigger the number, better the coverage. If we click a package name, we see the classes in the package. By clicking a class name, we see the methods of the class. By clicking a method we see the method's implementation as code.
 
 Green highlight indicates that the line _is fully covered_. Yellow highlight indicates that the line is _partially covered_. For example a certain condition of an `if` statement is not covered by a test. Red highlight indicates that line is _not covered_.
 
@@ -549,9 +470,9 @@ Green highlight indicates that the line _is fully covered_. Yellow highlight ind
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 12
 >
-> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the `createRecommendation` method we implemented and tested previously. Are all the lines of the method covered?
+> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the methods in the `ReadingRecommendationRestController` and `CategoryRestController` classes we tested previously. Are all the lines of the methods covered?
 
 ## Authentication
 
@@ -647,7 +568,7 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 13
 >
 > Implement the tasks of the first user story, "As an anonymous user I want to register an account so that I can manage my personal reading recommendations".
 >
@@ -659,7 +580,7 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 >
 > - Start the implementation by adding the spring-boot-starter-security and thymeleaf-extras-springsecurity6 dependencies for the project
 > - Add similar `SecurityConfig` and `UserDetailsServiceImpl` classes as instructed above
-> - See how the user registration is implemented in the [authentication example](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/UserController.java) project
+> - See how the user registration is implemented in the [authentication example](https://github.com/software-development-project-1/authentication-example) project
 
 ### Cross-site request forgery (CSRF)
 
@@ -707,41 +628,39 @@ We should now be able to delete reading recommendations again.
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 14
 >
 > Fix the reading recommendation deletion implemention as instruced above.
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 15
 >
 > Implement the tasks of the second user story, "As an anonymous user I want to sign in so that I can manage my personal reading recommendations".
 >
 > Tips for implementing the tasks:
 >
-> - See how the `/api/users/current` REST API endpoint is implemented in the [UserRestController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/UserRestController.java) class in the authentication example project
+> - To know whether to show the "Add a reading recommendation" button in the frontend, you'll need to implement a REST API endpoint which returns the authenticated user. See how the `/api/users/current` REST API endpoint is implemented in the [UserRestController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/UserRestController.java) class in the authentication example project
 > - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
-> - You can sign out by visiting <http://localhost:8080/logout> in a web browser. You can also add a "Sign out" link to the navigation bar
+> - You can sign out by visiting <http://localhost:8080/logout> in a web browser
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 16
 >
 > Implement the tasks of the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations".
->
-> Put the business logic of "creating a reading recommendation for a user" into the `createRecommendation` method implemented in exercise 6. These changes will probably break the tests implemented in exercise 7. Fix the existing tests, and test that the user is correctly associated with the user (similarly as with the category).
 >
 > The "Edit" link and the "Delete" button should only be visible in the reading recommendation list if the user has added the reading recommendation.
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 17
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 18
 >
 > Deploy the final version of the application to Render and make sure that the application works properly in the production environment.
 
@@ -763,7 +682,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 19
 >
 > Write the peer review for your team members. You can find the link to the peer review form in [Moodle]({{site.peer_review_moodle_link}}).
 
@@ -783,13 +702,13 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 20
 >
 > Write the final report for the course as instructed above.
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 21
 >
 > You can now pat yourself on the back, the project is done! 🎉
 >

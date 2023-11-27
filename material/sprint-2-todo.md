@@ -376,13 +376,13 @@ public class MessageRestController {
   private MessageRepository messageRepository;
 
   @GetMapping("")
-  public List<Message> getMessages() {
+  public List<Message> getAllMessages() {
     return messageRepository.findAll();
   }
 }
 ```
 
-The `@RestController` annotation on the `MessageRestController` class specifies that each method of the controller class produces a JSON response. Instead of returning the name of the Thymeleaf template, we can directly return Java objects. For example the `getMessages` method returns a list of `Message` objects. If we open the page <http://localhost:8080/api/messages> in a web browser we should see this list.
+The `@RestController` annotation on the `MessageRestController` class specifies that each method of the controller class produces a JSON response. Instead of returning the name of the Thymeleaf template, we can directly return Java objects. For example the `getAllMessages` method returns a list of `Message` objects. If we open the page <http://localhost:8080/api/messages> in a web browser we should see this list.
 
 By using JSON as the data representation format we can separate the _client_ (the user interface application) from the server. This allows as to implement many different kinds of client applications with different programming languages. This separation of server and client is one of the corner stones of the _the REST architectural style_.
 
@@ -402,7 +402,15 @@ The resource path has certain naming conventions. The path starts with the resou
 | `PUT`    | `/users/{id}` | Update the user with the provided id |
 | `DELETE` | `/users/{id}` | Delete the user with the provided id |
 
+{: .note }
+
+> Collections are commonly entities which we are storing in the database. The REST API endpoints provide ways to access and manipulate these entities. 
+
 The `{id}` part of the `/users/{id}` path is a _path variable_. For example, the path for user with id 2 would be `/users/2`.
+
+{: .note }
+
+> The "id" refers to the id attribute (the primary key) of the entity. The attribute's name doesn't necessarily have to be "id".
 
 A collection can have _sub-collections_. For example, a path for a user's messages resource would be `/users/{id}/messages`, where "messages" is a sub-collection. [This guide](https://restfulapi.net/resource-naming/) has more information about the resource path naming conventions.
 
@@ -605,11 +613,15 @@ Explore the code in the `frontend` folder. You can start the Vite development se
 
 ## Designing REST API endpoints for user stories
 
-Next, let's consider what kind of REST API endpoints we need for the last three user stories. In the sixth user story, "{{site.sprint_2_user_story_6}}", we need an lists all the quizzes. To follow the REST API naming principles, we can implement a GET method endpoint `/api/quizzes`. We can add a `QuizRestController` class and implement the endpoint with a `getQuizzes` method.
+Next, let's consider what kind of REST API endpoints we need for the last three user stories. In the sixth user story, "{{site.sprint_2_user_story_6}}", we need an lists all the published quizzes. To follow the REST API naming principles, we can implement a GET method endpoint `/api/quizzes`. We can add a `QuizRestController` class and implement the endpoint with a `getQuizzes` method.
 
-In the seventh user story, "{{site.sprint_2_user_story_7}}", we need to display information of a quiz with a specific id. For this use-case we can implement a GET method enpoint `/api/quizzes/{id}`. We also want to list the quiz-related questions. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}/questions`. We can implement the endpoints with a `getQuizById` and a `getQuestionsByQuizId` method in the `QuizRestController` class.
+In the seventh user story, "{{site.sprint_2_user_story_7}}", we need to display information of a quiz with a specific id. For this use-case we can implement a GET method enpoint `/api/quizzes/{id}`. If there is no quiz with the provided id, we should return a `404 Not Found` status as a response. Similarly, if the quiz is not published, we should return a `403 Forbidden` status as a response.
 
-In the eighth user story, "{{site.sprint_2_user_story_8}}", we need save the student's answer to the database. Before implementing the endpoint we need to consider what kind of data we need to store about the student's answer. We want at least to know which questions the answer is related to, what's the answer text and whether the answer was correct or not (we could also infer this information from the question). So, we need to implement the appropriate JPA entity class and a JPA repository class first. Then, we can implement a POST method endpoint `/api/answers` for this use-case. We can add a `AnswerRestController` class and implement the endpoint with a `createAnswer` method.
+We also want to list the quiz-related questions. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}/questions`. We can implement the endpoints with a `getQuizById` and a `getQuestionsByQuizId` method in the `QuizRestController` class. We should implement similar error handling for this endpoint as in the `/api/quizzes/{id}` endpoint.
+
+In the eighth user story, "{{site.sprint_2_user_story_8}}", we need save the student's answer to the database. Before implementing the endpoint we need to consider what kind of data we need to store about the student's answer. We want at least to know which questions the answer is related to, what's the answer text and whether the answer was correct or not (we could also infer this information from the question). So, we need to implement the appropriate JPA entity class and a JPA repository class first.
+
+Then, we can implement a POST method endpoint `/api/answers` for this use-case. We can add a `AnswerRestController` class and implement the endpoint with a `createAnswer` method. If the user is trying to answer a quiz which is not published we should return a `403 Forbidden` status as a response. If the answer is invalid, we should return a `400 Bad Request` status as a response.
 
 Before starting to implement the frontend features, we should test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL, for example <http://localhost:8080/api/quizzes>. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
 

@@ -410,7 +410,15 @@ The resource path has certain naming conventions. The path starts with the resou
 | `PUT`    | `/users/{id}` | Update the user with the provided id |
 | `DELETE` | `/users/{id}` | Delete the user with the provided id |
 
+{: .note }
+
+> Collections are commonly entities which we are storing in the database. The REST API endpoints provide ways to access and manipulate these entities. 
+
 The `{id}` part of the `/users/{id}` path is a _path variable_. For example, the path for user with id 2 would be `/users/2`.
+
+{: .note }
+
+> The "id" refers to the id attribute (the primary key) of the entity. The attribute's name doesn't necessarily have to be "id".
 
 A collection can have _sub-collections_. For example, a path for a user's messages resource would be `/users/{id}/messages`, where "messages" is a sub-collection. [This guide](https://restfulapi.net/resource-naming/) has more information about the resource path naming conventions.
 
