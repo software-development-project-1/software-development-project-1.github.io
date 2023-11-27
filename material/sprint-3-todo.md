@@ -686,7 +686,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 > Exercise 19
 >
-> Write the peer review for your team members. You can find the link to the peer review form in [Moodle]({{site.peer_review_moodle_link}}).
+> Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 
 ## Final report
 
