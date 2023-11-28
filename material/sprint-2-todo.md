@@ -63,6 +63,8 @@ Make sure that everyone follows the event structure and that each team member ge
 
 ## Estimation
 
+![Estimation](/assets/estimation-xkcd.png)
+
 Good user stories are _estimable_ (the "E" of INVEST) and a good Product Backlog is _estimated_ (the "E" of DEEP). _Estimation_ is the process where the Developers consider the efforts required to implement a certain user story in the Product Backlog. The purpose of estimation is not to create financial budgets for the project, but to help the _Product Owner to prioritize the user stories_ in the Product Backlog and _facilitate discussion about the user stories among the Developers_.
 
 The Product Owner isn't commonly a technical person, so they won't be able to come up with estimates for the user stories. That's the job of the Developers. The estimates provided by the Developers have high value for the Product Owner in the prioritization of the user stories. For example if the implementation of a certain user story requires huge amount of effort, it might make sense to lower its priority.
@@ -984,7 +986,7 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 > Exercise 24
 >
-> Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, exessive frontend-related files from the `frontend` folder.
+> Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive frontend-related files from the `frontend` folder.
 
 {: .important-title }
 
@@ -1012,9 +1014,7 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 The Product Owner came up with a feature for the application if we run out of work during the Sprint:
 
-> "It would be very useful if a student would be able to filter quizzes in the student dashboard based on their name or description.
->
-> There could be a search field at the top of the quiz list page. If either the name or the description of a quiz contains the keyword typed in to the field, the quiz would be listed. If there's no keyword, all the quizzes should be listed."
+> "It would be very useful if a student would be able to filter quizzes in the student dashboard based on their name or description. There could be a search field at the top of the quiz list page. If either the name or the description of a quiz contains the keyword typed in to the field, the quiz would be listed. If there's no keyword, all the quizzes should be listed."
 >
 > -- The Product Owner
 

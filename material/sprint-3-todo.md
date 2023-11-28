@@ -125,7 +125,7 @@ Automated tests are implemented with programming language specific _testing fram
 
 ### Unit tests
 
-_Unit tests_ constitutes the bottom of the test pyramid. Most of our application's tests should be unit tests. Unit tests test the smallest testable parts of an application, called _units_. These are commonly simple methods that does some operation based on their parameters and return some value. Units never _integrate_ to other parts of the application code, such as the database.
+_Unit tests_ constitute the bottom of the test pyramid. Most of our application's tests should be unit tests. Unit tests test the smallest testable parts of an application, called _units_. These are commonly simple methods that does some operation based on their parameters and return some value. Units never _integrate_ to other parts of the application code, such as the database.
 
 Here's an example of unit tests for a `calculateWords` method, which returns the number of words in the string provided as the paratamer:
 
@@ -160,7 +160,7 @@ Unit tests have these pros and cons:
 
 ### Integration tests
 
-_Integration tests_ (also known as service tests) constitutes the middle of the test pyramid. We should have quite many (but less than unit tests) integration tests in our application. As the name suggests, integration tests that different parts of our application code work as inteded once they are _integrated_. For example methods that perform database operations are tested with integration tests.
+_Integration tests_ (also known as service tests) constitute the middle of the test pyramid. We should have quite many integration tests for our application. As the name suggests, integration tests test that different parts of our application code work as inteded once they are _integrated_. For example, methods that perform database operations are tested with integration tests.
 
 Here's an example of integration tests for a REST API endpoint `/api/messages` implemented by the `getMessages` method:
 
@@ -198,9 +198,9 @@ Integration tests have these pros and cons:
 
 ### UI tests
 
-_UI tests_ (also known as end-to-end tests) constitutes the top of the test pyramid. We should have a moderate amount of UI tests in our application. As the name suggests, UI tests test that the application works by actually performing actions on the user interface similarly as a real user. This means opening a page on a web browser, filling form fields, clicking buttons and expecting the page to have some content. Because UI tests need the user interface to operate on, they are _slow to execute_. In addition, because the application's user interface commonly changes more often than the code, UI tests are laborious to maintain.
+_UI tests_ (also known as end-to-end tests) constitute the top of the test pyramid. We should have a moderate amount of UI tests in our application. As the name suggests, UI tests test that the application works by actually performing actions on the user interface similarly as a real user. This means opening a page on a web browser, filling form fields, clicking buttons and expecting the page to have some content. Because UI tests need the user interface to operate on, they are _slow to execute_. In addition, because the application's user interface commonly changes more often than the code, UI tests are laborious to maintain.
 
-Here's an example of testing the submission of a message form with the [Robot Framework](https://robotframework.org/) test automation framework:
+Here's an example of testing the submission of the message form with the [Robot Framework](https://robotframework.org/) test automation framework:
 
 ```
 *** Test Cases ***
@@ -242,11 +242,15 @@ The configuration in the `src/test/resources/application.properties` file will b
 >
 > -- Kent C. Dodds
 
-Integration tests are a great balance of reliability and performance. Kent C. Dodds covers the importance of integration tests in his article [Write tests. Not too many. Mostly integration.](https://kentcdodds.com/blog/write-tests).
+Integration tests are a great balance of reliability and performance. Kent C. Dodds covers the importance of integration tests in his article [Write tests. Not too many. Mostly integration.](https://kentcdodds.com/blog/write-tests) As the name of the article implies, Dodds suggests that most of the tests for the application should be integration tests. He makes some fair points to justify this claim:
 
-In Java application, tests implemented and executed with the [JUnit](https://junit.org/junit5/) testing framework. JUnit tests are implemented as test classes. Test classes can be annoted with the `@SpringBootTest` annotation to access the Spring application context in tests. This, for example makes the `@Autowired` annotations work. Methods annotated with the `@Test` annotation are the _test methods_, which test a specific _test scenario_.
+> One thing that it doesn't show though is that as you move up the pyramid, the confidence quotient of each form of testing increases. You get more bang for your buck. So while E2E tests may be slower and more expensive than unit tests, they bring you much more confidence that your application is working as intended.
 
-Test methods usually share certain common setup code, which should be done before each test method. This setup can be put inside a method annotated with the `@BeforeEach` annotation. The tests should be _independent_ from each other, meaning that for example the order in which the tests are executed should not matter. To achieve the independence, each test needs to start with an _empty database_. This is achieved by deleting all entities in the `setUp` method before each test.
+To get some confidence that our application is working as inteded, let's implement some integration tests for our REST API endpoints.
+
+In Java applications, tests are implemented and executed with the [JUnit](https://junit.org/junit5/) testing framework. JUnit tests are implemented as _test classes_. Test classes can be annoted with the `@SpringBootTest` annotation to access the Spring application context in tests. This, for example makes the `@Autowired` annotations work. Methods annotated with the `@Test` annotation are the _test methods_, which test a specific _test scenario_.
+
+Test methods usually share certain common setup code, which should be executed before each test method. This setup can be put inside a method annotated with the `@BeforeEach` annotation. The tests should be _independent_ from each other, meaning that for example the order in which the tests are executed should not matter. To achieve the independence, each test needs to start with an _empty database_. This is achieved by deleting all entities in the `setUp` method before each test.
 
 As an example, let's consider testing the following methods of a `MessageRestController` class:
 
@@ -370,7 +374,7 @@ public void getMessageByIdReturnsMessageWhenMessageExists() throws Exception {
 @Test
 public void getMessageByIdReturnsNotFoundWhenMessageDoesNotExist() throws Exception {
     // Act
-    this.mockMvc.perform(get("/api/messages/123"))
+    this.mockMvc.perform(get("/api/messages/1"))
     // Assert
             .andExpect(status().isNotFound());
 }
@@ -393,6 +397,8 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > You can run the tests for the project either in Eclipse or by running the `./mvnw test` command in Git Bash.
 
+{: .important-title }
+
 > Exercise 8
 >
 > Create a new "test" label for test-related tasks.
@@ -403,8 +409,8 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Create a new package `fi.haagahelia.coolreads.controller` for the project's controller class tests. You can do this in Eclipse by right-clicking the `src/test/java` folder and choosing New > Package. Implement a `ReadingRecommendationRestControllerTest` test class within the package with the following test methods for the `/api/recommendations` REST API endpoint:
 >
-> - `getRecommendationsReturnsEmptyListWhenNoRecommendationsExist`: send a request to the `/api/recommendations` without saving a recommendation to the database and the response should have an empty list
-> - `getRecommendationsReturnsListOfRecommendationsWhenRecommendationsExist`: save a few recommendations to the database and send a request to the `/api/recommendations` and the response should have a list of the saved recommendations
+> - `getRecommendationsReturnsEmptyListWhenNoRecommendationsExist`: send a request to the `/api/recommendations` without saving a recommendation to the database. Then, the response should have an empty list
+> - `getRecommendationsReturnsListOfRecommendationsWhenRecommendationsExist`: save a few recommendations to the database and send a request to the `/api/recommendations`. Then, the response should have a list of the saved recommendations
 >
 > Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
 
@@ -414,8 +420,8 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Implement a `CategoryRestControllerTest` test class with the following test methods for the `/api/categories` REST API endpoint:
 >
-> - `getCategoriesReturnsEmptyListWhenNoCategoriesExist`: send a request to the `/api/categories` without saving a category to the database and the response should have an empty list
-> - `getCategoriesReturnsListOfCategoriesWhenCategoriesExist`: save a few categories to the database and send a request to the `/api/categories` and the response should have a list of the saved categories
+> - `getCategoriesReturnsEmptyListWhenNoCategoriesExist`: send a request to the `/api/categories` without saving a category to the database. Then, the response should have an empty list
+> - `getCategoriesReturnsListOfCategoriesWhenCategoriesExist`: save a few categories to the database and send a request to the `/api/categories`. The, the response should have a list of the saved categories
 >
 > Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
 
@@ -425,9 +431,9 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Implement the following test methods for the `/api/categories/{id}/recommendations`:
 >
-> - `getRecommendationsByCategoryIdReturnsEmptyListWhenCategoryDoesNotHaveRecommendations`: save a category without recommendations to the database and send a request to the `/api/categories/{id}/recommendations` and the response should have an empty list
-> - `getRecommendationsByCategoryIdReturnsListOfRecommendationsWhenCategoryHasRecommendations`: save a category with a few recommendations to the database and send a request to the `/api/categories/{id}/recommendations` and the response should have a list of the category's recommendations
-> - `getRecommendationsByCategoryIdReturnsNotFoundWhenCategoryDoesNotExist`: send a request to the `/api/categories/1/recommendations` without saving a category to the database and the response should have a `404 Not Found` status
+> - `getRecommendationsByCategoryIdReturnsEmptyListWhenCategoryDoesNotHaveRecommendations`: save a category without recommendations to the database and send a request to the `/api/categories/{id}/recommendations`. Then, the response should have an empty list
+> - `getRecommendationsByCategoryIdReturnsListOfRecommendationsWhenCategoryHasRecommendations`: save a category with a few recommendations to the database and send a request to the `/api/categories/{id}/recommendations`. Then, the response should have a list of the category's recommendations
+> - `getRecommendationsByCategoryIdReturnsNotFoundWhenCategoryDoesNotExist`: send a request to the `/api/categories/1/recommendations` without saving a category to the database. Then, the response should have a `404 Not Found` status
 >
 > Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
 
@@ -472,7 +478,7 @@ Green highlight indicates that the line _is fully covered_. Yellow highlight ind
 
 > Exercise 12
 >
-> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the methods in the `ReadingRecommendationRestController` and `CategoryRestController` classes we tested previously. Are all the lines of the methods covered?
+> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the methods in the `ReadingRecommendationRestController` and `CategoryRestController` classes we tested previously. Are all the lines of the methods fully covered by the tests?
 
 ## Authentication
 
@@ -651,7 +657,7 @@ We should now be able to delete reading recommendations again.
 > Implement the tasks of the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations".
 >
 > Tips for implementing the tasks:
-> 
+>
 > - See how the authenticated user is associated with a message in the [MessageController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/MessageController.java) class in the authentication example project
 
 {: .important-title }
