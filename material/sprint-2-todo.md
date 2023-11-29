@@ -270,7 +270,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > ![](/assets/todo-sprint-2-user-story-2.png)
 >
-> Validate that the question text and correct answer is not blank.
+> Validate that the question text and correct answer is not blank. Make sure that you can delete a quiz that has questions. Before deleting a quiz, you need to delete the quiz-related questions.
 
 {: .important-title }
 

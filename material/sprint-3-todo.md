@@ -10,7 +10,7 @@ nav_exclude: true
 
 # Sprint 3
 
-For the final Sprint of the course, the Sprint 3, we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to Git branches, authentication and testing.
+For the final Sprint of the course, the Sprint 3, we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to testing and authentication.
 
 ## Sprint assesment
 
@@ -48,7 +48,7 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 3 goals in the Sprint Planning event:
 
-> "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username, password. User should not be able to register with a blank username or a password less than 12 characters long. The password should also contain at least one letter and at least one number.
+> "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username, password. User should not be able to register with a blank username or a password less than 8 characters long. The password should also contain at least one letter and at least one number.
 
 > After registering, the user should be able to sign in using their username and password provided during the registration. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in form. Once the user is signed in, there should be "Sign out" link in the navigation bar that will sign the user out.
 >
@@ -306,6 +306,7 @@ public class MessageRestControllerTest {
     }
 
     // The test methods go here
+}
 ```
 
 The test methods test specific scenario. We come up with scenarios by analyzing the code (for example a certain method) that we are testing: how does the code behave based on different parameters or database state? For example if we call a method with certain parameters, we expect it to return a certain value. We need to cover all divergences in the code behavior with a test scenario.
@@ -587,6 +588,7 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 > - Start the implementation by adding the spring-boot-starter-security and thymeleaf-extras-springsecurity6 dependencies for the project
 > - Add similar `SecurityConfig` and `UserDetailsServiceImpl` classes as instructed above
 > - See how the user registration is implemented in the [authentication example](https://github.com/software-development-project-1/authentication-example) project
+> - The password can be validated with a regular expression using the [@Pattern](https://www.codeproject.com/Questions/5324493/Jakarta-regex-validation) annotation
 
 ### Cross-site request forgery (CSRF)
 
@@ -676,7 +678,7 @@ We should now be able to delete reading recommendations again.
 
 > Exercise 19
 >
-> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE.txt` at the root folder of your project (the same for that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
+> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE.txt` at the root folder of your repository (the same for that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 
 ## Peer review
 
@@ -705,7 +707,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 Add a file `final-report.md` to the `documentation` folder. In that file, write _the final report_ for the course, which answers the following questions:
 
 - What challenges did you face during each Sprint? Describe both technical and project management related challenges. You can use the Sprint Retrospective notes in the `retrospectives` folder.
-- Where you able to overcome these challenges? If so, how?
+- Were you able to overcome these challenges? If so, how?
 - In which areas did you succeed as a team?
 - In which areas there was room for improvement?
 - What did you learn during the course? What would you have wanted to learn more about? What felt irrellevant?

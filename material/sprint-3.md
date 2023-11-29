@@ -9,4 +9,726 @@ nav_order: 8
 
 # Sprint 3
 
-Coming soon!
+For the final Sprint of the course, the Sprint 3, we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to testing and authentication.
+
+## Sprint assesment
+
+This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
+
+The Sprint assesment is done based on the exercises 1-22. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
+
+During this Sprint, each team member will do a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 10 personal points.
+
+{: .highlight }
+
+> At the end of this Sprint, the team has to write the [final report](#the-final-report) together and each team member needs to do the [peer review](#peer-review). Missing final report will decrease the project points by 5 points and the _peer review is required for a passing grade_. If the peer review is done after the Sprint deadline, the personal points will decrease by 5 points.
+
+## Retrospective
+
+Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we did at the end of the [Sprint 1](/sprint-2#retrospective).
+
+{: .important-title }
+
+> Exercise 1
+>
+> _One of the team members_ should create a new session in Flinga as instructed above. Name the session "Retrospective 2". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event.
+>
+> Did similar issues arise as in Sprint 1 retrospective? If so, try to come up with different actions as before or ask the teacher for tips on how to solve these issues.
+>
+> Once you have completed the Retrospective write down the issues and actions to the repository's `retrospectives/sprint-2.md` file and push the changes to GitHub.
+
+## 🏃‍♂️ Sprint 3 planning
+
+{: .highlight}
+
+> If you weren't able to implement all the user stories during the previous Sprint, start by finishing those before starting to implement the user stories for this Sprint.
+
+The Product Owner was delighted to see how the project has advancend during Sprint 2.
+
+The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 3 goals in the Sprint Planning event:
+
+> "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username, password. User should not be able to register with a blank username or a password less than 8 characters long. The password should also contain at least one letter and at least one number.
+
+> After registering, the user should be able to sign in using their username and password provided during the registration. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in form. Once the user is signed in, there should be "Sign out" link in the navigation bar that will sign the user out.
+>
+> An anonymous user, that is an user who is not signed in, should be able to see the reading recommendation list and the category list. However, they should not be able to add a reading recommendation or a category. That is, the links for adding a reading recommendation and adding a category should not be visible if the user is not signed in.
+>
+> After signing in, the user should be able to add reading recommendations and categories. However, the user should only be able to edit and delete reading recommendations that they have added. That is, the "Edit" link and the "Delete" button in the reading recommendation list should only be visible if the user has added the reading recommendation."
+>
+> -- The Product Owner
+
+After some discussion the Scrum Team came up with the following user stories:
+
+1. As an anonymous user I want to register an account so that I can manage my personal reading recommendations
+2. As an anonymous user I want to sign in so that I can manage my personal reading recommendations
+3. As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations
+
+The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
+
+{: .important-title }
+
+> Exercise 2
+>
+> Create a Sprint Backlog project for the third Sprint in GitHub Projects. Name the project "Sprint 3 Backlog". Use the default project columns, similar as in the Sprint 2 Backlog project. Add a "Sprint 3 Backlog" link for the project to the "Backlogs" section in the `README.md` file.
+
+{: .important-title }
+
+> Exercise 3
+>
+> 1. Create a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) for each user story, such as "user register" and "user sign in"
+> 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column
+
+{: .important-title }
+
+> Exercise 4
+>
+> Make sure that all task related issues that have been completed during the Sprint 2 are _closed_ and their _status is "Done"_ in the Sprint 2 Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
+>
+> If you didn't manage to implement all user stories during Sprint 2, move the task related issues of the unfinished user stories to the Sprint 3 Backlog project.
+
+{: .important-title }
+
+> Exercise 5
+>
+> Come up with tasks for the first user story, "As an anonymous user I want to register an account so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
+
+{: .important-title }
+
+> Exercise 6
+>
+> Come up with tasks for the second user story, "As an anonymous user I want to sign in so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 13 to get tips for the implementation and the [Authentication](#authentication) section for the technical details.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
+
+{: .important-title }
+
+> Exercise 7
+>
+> Come up with tasks for the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 14 to get tips for the implementation and the [Authentication](#authentication) section for the technical details.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
+
+## Testing
+
+When we implement a new feature for the application we need to make sure that it works as intended. That is, we _test_ the implementation of a feature against the requirements. During the development of a feature we are constantly performing _manual testing_ for the implementation, meaning that we use the application ourselfs and see that we can perform certain actions successfully.
+
+Manual testing is important, but we can't perform it _at scale_. When our application becomes more complex, each change to code can potentially break any part of the application. Testing each feature manually after each change to code would be tome time-consuming. That's why we implement _automated tests_: programs that test our code. We can usually execute hundreds of automated tests within just a minute. Martin Fowler explains the purpose of different kind of automated tests and their pros and cons in his article [TestPyramid](https://martinfowler.com/bliki/TestPyramid.html).
+
+![TestPyramid](/assets/test-pyramid.png)
+
+Fowler categorizes different tests in three categories: _unit_, _service_ and _UI_ (user interface) tests. The test pyramid represents the _amount_ of these different kind of tests we should have for our application. There are pros and cons for the different kind of tests. While we go up in the pyramid we get better reliability that our application works as inteaded as a whole, but the tests becomes _laborious to maintain_, _difficult to implement_, and _time consuming to run_. This is why our test portfolio should be balanced.
+
+Automated tests are implemented with programming language specific _testing frameworks_, such as Java's [JUnit](https://junit.org/junit5/) and JavaScript's [Vitest](https://vitest.dev/). During this Sprint we will implement some integration tests for our backend's REST API endpoints using JUnit and the [MockMVC](https://docs.spring.io/spring-framework/reference/testing/spring-mvc-test-framework.html) framework.
+
+### Unit tests
+
+_Unit tests_ constitute the bottom of the test pyramid. Most of our application's tests should be unit tests. Unit tests test the smallest testable parts of an application, called _units_. These are commonly simple methods that does some operation based on their parameters and return some value. Units never _integrate_ to other parts of the application code, such as the database.
+
+Here's an example of unit tests for a `calculateWords` method, which returns the number of words in the string provided as the paratamer:
+
+```java
+@Test
+void calculateWordsCalculatesSingleWordCorrectly() {
+    String message = "Hello";
+
+    assertEquals(1, MessageUtils.calculateWords(message));
+}
+
+@Test
+void calculateWordsCalculatesManyWordsCorrectly() {
+    String message = "Hello world";
+
+    assertEquals(2, MessageUtils.calculateWords(message));
+}
+
+@Test
+void calculateWordsCalculatesZeroWordCorrectly() {
+    String message = "";
+
+    assertEquals(0, MessageUtils.calculateWords(message));
+}
+```
+
+Unit tests have these pros and cons:
+
+- 🟢 Simple to implement and easy to maintain
+- 🟢 Fast to run
+- 🔴 Doesn't provide good reliability that the application works as a whole
+
+### Integration tests
+
+_Integration tests_ (also known as service tests) constitute the middle of the test pyramid. We should have quite many integration tests for our application. As the name suggests, integration tests test that different parts of our application code work as inteded once they are _integrated_. For example, methods that perform database operations are tested with integration tests.
+
+Here's an example of integration tests for a REST API endpoint `/api/messages` implemented by the `getMessages` method:
+
+```java
+@Test
+public void getMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception {
+    this.mockMvc.perform(get("/api/messages"))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$", hasSize(0)));
+}
+
+@Test
+public void getMessagesReturnsListOfMessagesWhenMessagesExist() throws Exception {
+    Message firstMessage = new Message("First message");
+    Message secondMessage = new Message("Second message");
+    messageRepository.saveAll(List.of(firstMessage, secondMessage));
+
+    this.mockMvc.perform(get("/api/messages"))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$", hasSize(2)))
+            .andExpect(jsonPath("$[0].content").value("First message"))
+            .andExpect(jsonPath("$[0].id").value(firstMessage.getId()))
+            .andExpect(jsonPath("$[1].content").value("Second message"))
+            .andExpect(jsonPath("$[1].id").value(secondMessage.getId()));
+}
+```
+
+These tests send a request to the REST API endpoint and verify that the JSON response body contains the required information.
+
+Integration tests have these pros and cons:
+
+- 🟢 Fairly simple to implement and easy to maintain
+- 🟢 Fairly fast to run
+- 🟡 Provides a reasonable reliability that the application works as a whole
+
+### UI tests
+
+_UI tests_ (also known as end-to-end tests) constitute the top of the test pyramid. We should have a moderate amount of UI tests in our application. As the name suggests, UI tests test that the application works by actually performing actions on the user interface similarly as a real user. This means opening a page on a web browser, filling form fields, clicking buttons and expecting the page to have some content. Because UI tests need the user interface to operate on, they are _slow to execute_. In addition, because the application's user interface commonly changes more often than the code, UI tests are laborious to maintain.
+
+Here's an example of testing the submission of the message form with the [Robot Framework](https://robotframework.org/) test automation framework:
+
+```
+*** Test Cases ***
+Submit Valid Message
+    Go To http://localhost:8080/add/message
+    Input Text content "Hello world!"
+    Click Button "Add"
+    Go To http://localhost:8080
+    Page Should Contain "Hello world!"
+```
+
+UI tests have these pros and cons:
+
+- 🟢 Provides a good reliability that the application works as a whole
+- 🔴 Difficult to implement and laborious to maintain
+- 🔴 Slow to run
+
+## Configuration for tests
+
+Because our tests will alter the database we should consider _using a different database for tests_. This is a common practice because we don't want the tests to alter (for example delete) any data we are using during the development.
+
+The database related configuration is in the `src/main/resources/application.properties` configuration file:
+
+```
+spring.datasource.url=jdbc:h2:file:~/cool-reads;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
+```
+
+The _database is stored in a file_ located in `~/cool-reads`. We can use a different, _in-memory database_ for the tests. For this we have a separate `src/test/resources/application.properties` configuration file (note the `test` folder in the path):
+
+```
+spring.datasource.url=jdbc:h2:mem:cool-reads-test;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
+```
+
+The configuration in the `src/test/resources/application.properties` file will be used while we are running the tests, which makes it suitable for test-specific configuration.
+
+## Testing REST API endpoints
+
+> "Write tests. Not too many. Mostly integration."
+>
+> -- Kent C. Dodds
+
+Integration tests are a great balance of reliability and performance. Kent C. Dodds covers the importance of integration tests in his article [Write tests. Not too many. Mostly integration.](https://kentcdodds.com/blog/write-tests) As the name of the article implies, Dodds suggests that most of the tests for the application should be integration tests. He makes some fair points to justify this claim:
+
+> One thing that it doesn't show though is that as you move up the pyramid, the confidence quotient of each form of testing increases. You get more bang for your buck. So while E2E tests may be slower and more expensive than unit tests, they bring you much more confidence that your application is working as intended.
+
+To get some confidence that our application is working as inteded, let's implement some integration tests for our REST API endpoints.
+
+In Java applications, tests are implemented and executed with the [JUnit](https://junit.org/junit5/) testing framework. JUnit tests are implemented as _test classes_. Test classes can be annoted with the `@SpringBootTest` annotation to access the Spring application context in tests. This, for example makes the `@Autowired` annotations work. Methods annotated with the `@Test` annotation are the _test methods_, which test a specific _test scenario_.
+
+Test methods usually share certain common setup code, which should be executed before each test method. This setup can be put inside a method annotated with the `@BeforeEach` annotation. The tests should be _independent_ from each other, meaning that for example the order in which the tests are executed should not matter. To achieve the independence, each test needs to start with an _empty database_. This is achieved by deleting all entities in the `setUp` method before each test.
+
+As an example, let's consider testing the following methods of a `MessageRestController` class:
+
+```java
+@RestController
+@RequestMapping("/api/messages")
+public class MessageRestController {
+	@Autowired
+	private MessageRepository messageRepository;
+
+	@GetMapping("")
+	public List<Message> getMessages() {
+		return messageRepository.findAll();
+	}
+
+	@GetMapping("/{id}")
+	public Message getMessageById(@PathVariable Long id) {
+		return messageRepository.findById(id).orElseThrow(
+				() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + " does not exist"));
+	}
+}
+```
+
+The test class files should be placed to the `src/test/java` folder and the name of the test class should have a `Test` prefix. For example, we can test the `MessageRestController` class with a `MessageRestControllerTest` class.
+
+To make sure that the tests in the test class are independent, the `setUp` method should delete all messages at the beginning of each test:
+
+```java
+package fi.haagahelia.coolreads;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.web.servlet.MockMvc;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+@SpringBootTest
+@AutoConfigureMockMvc
+public class MessageRestControllerTest {
+    @Autowired
+    MessageRepository messageRepository;
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @BeforeEach
+    void setUp() throws Exception {
+        // Make sure that the database is empty before each test
+        messageRepository.deleteAll();
+    }
+
+    // The test methods go here
+}
+```
+
+The test methods test specific scenario. We come up with scenarios by analyzing the code (for example a certain method) that we are testing: how does the code behave based on different parameters or database state? For example if we call a method with certain parameters, we expect it to return a certain value. We need to cover all divergences in the code behavior with a test scenario.
+
+For example, we could have the following test scenarios for the `getMessages` method introduced above:
+
+1. If we send a request to the `/api/messages` REST API endpoint and _there is no messages in the database_, the JSON response body should be an empty list
+2. If we send a request to the `/api/messages` REST API endpoint and _there are messages in the database_, the JSON response body should contain the messages as a list
+
+To structure these test cases as test methods, we can follow the popular [Arrange-Act-Assert](https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/) pattern:
+
+1. _Arrange_ inputs and targets. Arrange steps should set up the test case. Does the test require any objects or special settings? Does it need to prep a database? Does it need to log into a web app? Handle all of these operations at the start of the test
+2. _Act_ on the target behavior. Act steps should cover the main thing to be tested. This could be calling a function or method, calling a REST API, or interacting with a web page. Keep actions focused on the target behavior
+3. _Assert_ expected outcomes. Act steps should elicit some sort of response. Assert steps verify the goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails
+
+Here's the two test methods for our test scenarios:
+
+```java
+@Test
+public void getAllMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception {
+    // Act
+    this.mockMvc.perform(get("/api/messages"))
+    // Assert
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$", hasSize(0)));
+}
+
+@Test
+public void getAllMessagesReturnsListOfMessagesWhenMessagesExist() throws Exception {
+    // Arrange
+    Message firstMessage = new Message("First message");
+    Message secondMessage = new Message("Second message");
+    messageRepository.saveAll(List.of(firstMessage, secondMessage));
+
+    // Act
+    this.mockMvc.perform(get("/api/messages"))
+    // Assert
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$", hasSize(2)))
+            .andExpect(jsonPath("$[0].content").value("First message"))
+            .andExpect(jsonPath("$[0].id").value(firstMessage.getId()))
+            .andExpect(jsonPath("$[1].content").value("Second message"))
+            .andExpect(jsonPath("$[1].id").value(secondMessage.getId()));
+}
+```
+
+The tests use the `perform` method of the `MockMVC` class to send a GET request to the `/api/messages` REST API endpoint. Then, we expect that the HTTP status of the response is `200 OK` and the JSON of the response body contains the messages we saved in the arrange step.
+
+For another example, here's the test methods of the `getMessageById` method introduced above:
+
+```java
+@Test
+public void getMessageByIdReturnsMessageWhenMessageExists() throws Exception {
+    // Arrange
+    Message message = new Message("Message");
+    messageRepository.save(message);
+
+    // Act
+    this.mockMvc.perform(get("/api/messages/" + message.getId()))
+    // Assert
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.content").value("Message"))
+            .andExpect(jsonPath("$.id").value(message.getId()));
+}
+
+@Test
+public void getMessageByIdReturnsNotFoundWhenMessageDoesNotExist() throws Exception {
+    // Act
+    this.mockMvc.perform(get("/api/messages/1"))
+    // Assert
+            .andExpect(status().isNotFound());
+}
+```
+
+The spring-boot-starter-test library provides other test functionalities except the `jsonPath` method used in the expectations. Before we start testing our REST API endpoints, let's add the json-path dependency to the `<dependencies>` list in the `pom.xml` file:
+
+```xml
+<dependency>
+    <groupId>com.jayway.jsonpath</groupId>
+    <artifactId>json-path</artifactId>
+    <version>2.8.0</version>
+    <scope>test</scope>
+</dependency>
+```
+
+While testing your application's REST API endpoints, refer to the examples above and guides, such as [Integration Testing in Spring](https://www.baeldung.com/integration-testing-in-spring).
+
+{: .note }
+
+> You can run the tests for the project either in Eclipse or by running the `./mvnw test` command in Git Bash.
+
+{: .important-title }
+
+> Exercise 8
+>
+> Create a new "test" label for test-related tasks.
+
+{: .important-title }
+
+> Exercise 9
+>
+> Create a new package `fi.haagahelia.coolreads.controller` for the project's controller class tests. You can do this in Eclipse by right-clicking the `src/test/java` folder and choosing New > Package. Implement a `ReadingRecommendationRestControllerTest` test class within the package with the following test methods for the `/api/recommendations` REST API endpoint:
+>
+> - `getRecommendationsReturnsEmptyListWhenNoRecommendationsExist`: send a request to the `/api/recommendations` without saving a recommendation to the database. Then, the response should have an empty list
+> - `getRecommendationsReturnsListOfRecommendationsWhenRecommendationsExist`: save a few recommendations to the database and send a request to the `/api/recommendations`. Then, the response should have a list of the saved recommendations
+>
+> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
+
+{: .important-title }
+
+> Exercise 10
+>
+> Implement a `CategoryRestControllerTest` test class with the following test methods for the `/api/categories` REST API endpoint:
+>
+> - `getCategoriesReturnsEmptyListWhenNoCategoriesExist`: send a request to the `/api/categories` without saving a category to the database. Then, the response should have an empty list
+> - `getCategoriesReturnsListOfCategoriesWhenCategoriesExist`: save a few categories to the database and send a request to the `/api/categories`. The, the response should have a list of the saved categories
+>
+> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
+
+{: .important-title }
+
+> Exercise 11
+>
+> Implement the following test methods for the `/api/categories/{id}/recommendations`:
+>
+> - `getRecommendationsByCategoryIdReturnsEmptyListWhenCategoryDoesNotHaveRecommendations`: save a category without recommendations to the database and send a request to the `/api/categories/{id}/recommendations`. Then, the response should have an empty list
+> - `getRecommendationsByCategoryIdReturnsListOfRecommendationsWhenCategoryHasRecommendations`: save a category with a few recommendations to the database and send a request to the `/api/categories/{id}/recommendations`. Then, the response should have a list of the category's recommendations
+> - `getRecommendationsByCategoryIdReturnsNotFoundWhenCategoryDoesNotExist`: send a request to the `/api/categories/1/recommendations` without saving a category to the database. Then, the response should have a `404 Not Found` status
+>
+> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
+
+## Test coverage
+
+We have analyzed the code that we are testing and we are quite sure that our test scenarios cover everything. The good news is, that we don't need to trust only on our gut. There are so called _test coverage_ tools that analyze which lines of code our test scenarios cover and which they don't.
+
+[JaCoCo](https://www.eclemma.org/jacoco/) is one of the most widely used code coverage tools for Java. Let's add the jacoco-maven-plugin to the `<plugins>` list in the `pom.xml` file:
+
+```xml
+<plugin>
+    <groupId>org.jacoco</groupId>
+    <artifactId>jacoco-maven-plugin</artifactId>
+    <executions>
+        <execution>
+            <goals>
+                <goal>prepare-agent</goal>
+            </goals>
+        </execution>
+        <execution>
+            <id>report</id>
+            <phase>test</phase>
+            <goals>
+                <goal>report</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+```
+
+If we run the `./mvnw test` command in Git Bash, our tests are executed and JaCoCo will generate a _code coverage report_. Once the command has finished successfully, the code coverage report can be found as an `index.html` file in the `target/site/jacoco` folder. Open the `index.html` file in a web browser.
+
+The report displayes the coverage of each package. The "Cov" column determines the _percentage of lines covered by the tests_. Bigger the number, better the coverage. If we click a package name, we see the classes in the package. By clicking a class name, we see the methods of the class. By clicking a method we see the method's implementation as code.
+
+Green highlight indicates that the line _is fully covered_. Yellow highlight indicates that the line is _partially covered_. For example a certain condition of an `if` statement is not covered by a test. Red highlight indicates that line is _not covered_.
+
+{: .note }
+
+> When we change the code (in the tests or in the application), we need to re-run `./mvnw test` to generate the coverage report for the latest tests.
+
+{: .important-title }
+
+> Exercise 12
+>
+> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the methods in the `ReadingRecommendationRestController` and `CategoryRestController` classes we tested previously. Are all the lines of the methods fully covered by the tests?
+
+## Authentication
+
+Most of the application have features that need to verify the user's identity before they are allowed to perform certain actions. This process is referred to as _authentication_. User's identity can be verified in different ways, but a quite common process is to associate a password with a certain username or some other unique identifier such as email. The user who knows the password of a username will be identified as that user.
+
+The user's password is not stored to the database as a plain text, instead a [hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) presentation of the password is stored. Hash is like a secret we put behind a door, lock it with a key and throw the key away. There's no way of getting the original text from a hash. But we can _comprare_ two hashes and see if their value is the same. If the data in the database gets into wrong hands, the password hashes can't be used to authenticate.
+
+In web applications the common authentication flow goes like this:
+
+1. The user sends a request with a username and password to the server
+2. The server fetches the password hash with the given username from the database, hashes the provided password and compares it with the password hash in the database
+3. If the hashes match, the server provides the user with a _token_ that they can use to authenticate the future requests. The server commonly puts the token to a [cookie](https://en.wikipedia.org/wiki/HTTP_cookie) and it is sent to server in each request by the web browser
+
+[Spring Security](https://spring.io/projects/spring-security) is a popular authentication and access-control framework for Spring applications. Let's start using Spring Security in our application by adding the dependency to the `<dependencies>` list in the `pom.xml` file:
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+```
+
+To use authentication related information in Thymeleaf templates, we can use the [Thymeleaf Spring Security dialect](https://github.com/thymeleaf/thymeleaf-extras-springsecurity). Let's also add that dependency to the `<dependencies>` list in the `pom.xml` file:
+
+```xml
+<dependency>
+    <groupId>org.thymeleaf.extras</groupId>
+    <artifactId>thymeleaf-extras-springsecurity6</artifactId>
+</dependency>
+```
+
+Next, we need to configure the Spring Security a bit. Let's add the following `SecurityConfig` configuration class for our project:
+
+```java
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.authorizeHttpRequests((requests) -> requests.requestMatchers(antMatcher("/"), antMatcher("/register"),
+                                antMatcher("/categories"), antMatcher("/frontend/**"), antMatcher("/api/**"), antMatcher("/error")).permitAll().anyRequest()
+                                .authenticated());
+
+        http.formLogin((form) -> form.permitAll());
+        http.logout((logout) -> logout.permitAll());
+
+        return http.build();
+    }
+}
+```
+
+The `passwordEncoder` method returns the password encoder object used to hash passwords. We'll use [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) which is the de facto hash algorithm for passwords.
+
+The `securityFilterChain` returns the configuration object for Spring Security. The first piece of configuration determines the access-control for our application. We will allow anyone (authenticated or not) access the following paths:
+
+- `/`, the reading recommendation list page,
+- `/register`, the registration form and registration form submission
+- `/categories`, the category list page
+- `/frontend/**`, the JavaScript assets required by the frontend application. The `**` part of the path means any path
+- `/api/**`, the REST API endpoints
+
+{: .highlight }
+
+> Change this configuration if your application's paths don't match the ones above.
+
+The `permitAll()` method call _will permit anyone to access the these paths_. This is follow by `anyRequest().authenticated()` method call, which means that _request to any other path will require authentication_.
+
+On top of the configuration class, we need to have class that implements the `UserDetailsService` interface. This class will determine how to fetch the user's information based on the username:
+
+```java
+@Service
+public class UserDetailsServiceImpl implements UserDetailsService {
+    @Autowired
+    private UserRepository userRepository;
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userRepository.findOneByUsername(username)
+                        .orElseThrow(() -> new UsernameNotFoundException(username));
+
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPasswordHash(),
+                    AuthorityUtils.createAuthorityList(user.getRole()));
+    }
+}
+```
+
+The `loadUserByUsername` method will need to return a `User` object based on the username provided by the paramater or throw an `UsernameNotFoundException` exception if no user is found.
+
+{: .important-title }
+
+> Exercise 13
+>
+> Implement the tasks of the first user story, "As an anonymous user I want to register an account so that I can manage my personal reading recommendations".
+>
+> The implementation should look roughly something like this:
+>
+> ![](/assets/sprint-3-user-story-1.png)
+>
+> Tips for implementing the tasks:
+>
+> - Start the implementation by adding the spring-boot-starter-security and thymeleaf-extras-springsecurity6 dependencies for the project
+> - Add similar `SecurityConfig` and `UserDetailsServiceImpl` classes as instructed above
+> - See how the user registration is implemented in the [authentication example](https://github.com/software-development-project-1/authentication-example) project
+> - The password can be validated with a regular expression using the [@Pattern](https://www.codeproject.com/Questions/5324493/Jakarta-regex-validation) annotation
+
+### Cross-site request forgery (CSRF)
+
+If we try deleting a reading recommendation by clicking the "Delete" button after adding the Spring Security for our project, we will notice that it is no longer working. This is because Spring Security adds protection against [Cross Site Request Forgery (CSRF)](https://docs.spring.io/spring-security/reference/features/exploits/csrf.html) attacks. Basically, Spring Security won't permit requests originated outside our application that aren't HTTP GET requests. In practice this enforced by using a so called _CSRF token_ in form submissions.
+
+Thymeleaf will automatically include the CSRF token in forms. The problem is that the request send with the `fetch` function after clicking the "Delete" button doesn't have the CSRF token. Let's fix this problem.
+
+First, we need to make the CSRF token available. We can do this by including it to the HTML content in the `src/main/resources/templates/layout.html` file. Let's add a `<meta>` tag that contains the CSRF token at the end of the `<head>` tag:
+
+```html
+<head>
+  <!-- ... -->
+  <meta id="_csrf" name="_csrf" th:content="${_csrf.token}" />
+</head>
+```
+
+Now, we can read the CSRF token from the `<meta>` tag's `content` attribute and send it as a `X-CSRF-TOKEN` header with the `fetch` function:
+
+```js
+function handleDelete(recommendation) {
+  fetch(`/recommendations/${recommendation.id}/delete`, {
+    method: "POST",
+    headers: {
+      "X-CSRF-TOKEN": document.getElementById("_csrf").getAttribute("content"),
+    },
+  }).then(() => {
+    // Remove the deleted recommendation from the recommendations state variable array
+  });
+}
+```
+
+{: .note }
+
+> We could simplify the code by extracting the business logic of "deleting a reading recommendation" to a `deleteRecommendation` function:
+>
+> ```js
+> function handleDelete(recommendation) {
+>   deleteRecommendation(recommendation.id).then(() => {
+>     // Remove the deleted recommendation from the recommendations state variable array
+>   });
+> }
+> ```
+
+We should now be able to delete reading recommendations again.
+
+{: .important-title }
+
+> Exercise 14
+>
+> Fix the reading recommendation deletion implemention as instruced above.
+
+{: .important-title }
+
+> Exercise 15
+>
+> Implement the tasks of the second user story, "As an anonymous user I want to sign in so that I can manage my personal reading recommendations".
+>
+> Tips for implementing the tasks:
+>
+> - To know whether to show the "Add a reading recommendation" button in the frontend, you'll need to implement a REST API endpoint which returns the authenticated user. See how the `/api/users/current` REST API endpoint is implemented in the [UserRestController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/UserRestController.java) class in the authentication example project
+> - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
+> - You can sign out by visiting <http://localhost:8080/logout> in a web browser
+
+{: .important-title }
+
+> Exercise 16
+>
+> Implement the tasks of the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations".
+>
+> Tips for implementing the tasks:
+>
+> - See how the authenticated user is associated with a message in the [MessageController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/MessageController.java) class in the authentication example project
+
+{: .important-title }
+
+> Exercise 17
+>
+> Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
+
+{: .important-title }
+
+> Exercise 18
+>
+> Deploy the final version of the application to Render and make sure that the application works properly in the production environment.
+
+{: .important-title }
+
+> Exercise 19
+>
+> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE.txt` at the root folder of your repository (the same for that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
+
+## Peer review
+
+{: .highlight }
+
+> Writing a peer review for each team member and receiving a passing grade from the peer reviews is required to pass the course.
+
+The peer review is used to assess each team member. The 10 personal points are based on the peer reviews and the teacher's observations. _Every team member must write a peer review_.
+
+The peer review is conducted with a form. You can find the link for your team's peer review form in [Moodle]({{site.peer_review_moodle_link}}). In the form you will need to assess every team member's (including yourself) efforts in the team work in the following aspects:
+
+- _Activity in team work_: Attendance and active presence during team meetings and communication with team members outside the meetings
+- _Technical contributions_: amount of working code written _or_ active participation in the writing process of the code (for example [pair-programming](https://en.wikipedia.org/wiki/Pair_programming))
+- _Project management and documentation contributions_: Backlog management, efforts to improve the process (for example in Retrospectives), writing project related documentation
+
+You will need to grade each these aspects in scale of 0-5 and provide a short reasoning for the grade. The peer reviews are _anonymous_, the team members won't see each other's peer reviews.
+
+{: .important-title }
+
+> Exercise 20
+>
+> Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
+
+## Final report
+
+Add a file `final-report.md` to the `documentation` folder. In that file, write _the final report_ for the course, which answers the following questions:
+
+- What challenges did you face during each Sprint? Describe both technical and project management related challenges. You can use the Sprint Retrospective notes in the `retrospectives` folder.
+- Were you able to overcome these challenges? If so, how?
+- In which areas did you succeed as a team?
+- In which areas there was room for improvement?
+- What did you learn during the course? What would you have wanted to learn more about? What felt irrellevant?
+
+The final report should also include the name of each team member.
+
+Add a link to the `final-report.md` file in Github to the `README.md` file under the "Documentation" subheading.
+
+{: .important-title }
+
+> Exercise 21
+>
+> Write the final report for the course as instructed above.
+
+{: .important-title }
+
+> Exercise 22
+>
+> You can now pat yourself on the back, the project is done! 🎉
+>
+> As one last request, the teacher would highly appreciate if you could spare a few minutes of your time by [giving feedback on the course]({{site.course_feedback_link}}).
+
+{: .warning }
+
+> Make sure that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint 3 deadline on {{site.sprint_3_deadline}}.
