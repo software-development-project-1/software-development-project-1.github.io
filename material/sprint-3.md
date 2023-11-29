@@ -278,7 +278,7 @@ The test class files should be placed to the `src/test/java` folder and the name
 To make sure that the tests in the test class are independent, the `setUp` method should delete all messages at the beginning of each test:
 
 ```java
-package fi.haagahelia.coolreads;
+package fi.haagahelia.coolreads.controller;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -288,6 +288,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import fi.haagahelia.quiz.model.Message;
+import fi.haagahelia.quiz.repository.MessageRepository;
 
 @SpringBootTest
 @AutoConfigureMockMvc

@@ -93,7 +93,7 @@ The order of the user stories represent the priotity provided by the Product Own
 
 > Exercise 5
 >
-> Come up with tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 to get an idea what the implementation could look like.
+> Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Add the issues to the Sprint 3 Backlog project.
 
@@ -101,7 +101,7 @@ The order of the user stories represent the priotity provided by the Product Own
 
 > Exercise 6
 >
-> Come up with tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
+> Plan the tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
 
@@ -109,7 +109,7 @@ The order of the user stories represent the priotity provided by the Product Own
 
 > Exercise 7
 >
-> Come up with tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
+> Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
 
@@ -117,7 +117,7 @@ The order of the user stories represent the priotity provided by the Product Own
 
 > Exercise 8
 >
-> Come up with tasks for the third user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
+> Plan the tasks for the third user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
 
@@ -265,29 +265,29 @@ As an example, let's consider testing the following methods of a `MessageRestCon
 @RestController
 @RequestMapping("/api/messages")
 public class MessageRestController {
-	@Autowired
-	private MessageRepository messageRepository;
+    @Autowired
+    private MessageRepository messageRepository;
 
-	@GetMapping("")
-	public List<Message> getAllMessages() {
-		return messageRepository.findAll();
-	}
+    @GetMapping("")
+    public List<Message> getAllMessages() {
+        return messageRepository.findAll();
+    }
 
-	@GetMapping("/{id}")
-	public Message getMessageById(@PathVariable Long id) {
-		return messageRepository.findById(id).orElseThrow(
-				() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + " does not exist"));
-	}
+    @GetMapping("/{id}")
+    public Message getMessageById(@PathVariable Long id) {
+        return messageRepository.findById(id).orElseThrow(
+            () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + " does not exist"));
+    }
 
     @PostMapping("")
-	public Message createMessage(@Valid @RequestBody Message message, BindingResult bindingResult) {
-		if (bindingResult.hasErrors()) {
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
-					bindingResult.getAllErrors().get(0).getDefaultMessage());
-		}
+    public Message createMessage(@Valid @RequestBody Message message, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                bindingResult.getAllErrors().get(0).getDefaultMessage());
+        }
 
-		return messageRepository.save(message);
-	}
+        return messageRepository.save(message);
+    }
 }
 ```
 
@@ -296,7 +296,7 @@ The test class files should be placed to the `src/test/java` folder and the name
 To make sure that the tests in the test class are independent, the `setUp` method should delete all messages at the beginning of each test:
 
 ```java
-package fi.haagahelia.quizzer;
+package fi.haagahelia.quizzer.controller;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -308,6 +308,11 @@ import org.springframework.test.web.servlet.MockMvc;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import java.util.List;
+import static org.hamcrest.Matchers.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import fi.haagahelia.quizzer.model.Message;
+import fi.haagahelia.quizzer.repository.MessageRepository;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -413,7 +418,7 @@ public void createMessageSavesValidMessage() throws Exception {
 
     // Act
     this.mockMvc.perform(post("/api/messages").contentType(MediaType.APPLICATION_JSON).content(requestBody))
-            // Assert
+    // Assert
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.content").value("Hello world!"));
 
@@ -430,7 +435,7 @@ public void createMessageDoesNotSaveInvalidMessage() throws Exception {
 
     // Act
     this.mockMvc.perform(post("/api/messages").contentType(MediaType.APPLICATION_JSON).content(requestBody))
-            // Assert
+    // Assert
             .andExpect(status().isBadRequest());
 
     List<Message> messages = messageRepository.findAll();
