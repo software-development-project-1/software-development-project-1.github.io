@@ -540,7 +540,7 @@ Greetings from GitHub
 The mutually exclusive changes are separated with the symbols <, > and =. The word "HEAD" refers to the current commit (or the latest commit of the current branch in the local version), and the long letter and number combination is the id of the conflicting commit, coming in from the remote version. Advanced editors such as Visual Studio Code enable resolving conflicts with just a simple click, but otherwise the only option is to simply remove the lines one doesn't wish to keep in the project.
 
 {: .note }
-> Visual Studio Code has excellent features for Git, including features for solving merge conflicts quickly. These features are covered in the Visual Studio Code's [documentation](https://code.visualstudio.com/docs/sourcecontrol/overview)
+> Visual Studio Code has excellent features for Git, including features for solving merge conflicts quickly. These features are covered in the Visual Studio Code's [documentation](https://code.visualstudio.com/docs/sourcecontrol/overview).
 
 Notably, we'll remove the lines starting with <, > and =. In addition, we could for example combine the two greetings into one. In essence, the person resolving the conflict decides what remains in the file where the conflict is located.
 

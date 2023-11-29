@@ -121,7 +121,7 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 >
 > Scrum emphasize the importance of _transparency_ of the process. It means that the significant aspects of the process should be visible to those responsible for the outcome. Transparency allows each Scrum Team member to track and understand what's really going on in each sprint.
 >
-> How do different Scrum events improve process transparency?
+> How do different Scrum events and artifacts improve process transparency?
 
 {: .important-title }
 

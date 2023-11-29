@@ -16,13 +16,13 @@ The Product Owner has a great project idea and is in desprate need of a talented
 
 > My teacher colleagues at Haaga Helia need an application where they can add different kinds of quizzes for their students. The application should have a dashboard for the teachers where they can manage quizzes and a dashboard for the students where they can take different quizzes. Both students and teachers use the web browser a lot, so it would make sense that the application is a web application.
 >
-> A teacher should be able to add a quiz using a form. A quiz should have a name, for example, "The capital cities of Europe" and a description, for example, "Learn the capital cities of the European countries". The teacher should have a separate page where added quizzes are listed with all their information. It should also be possible to edit the information of a quiz and delete it.
+> A teacher should be able to add a quiz using a form. A quiz should have a name, for example, "The capital cities of Europe" and a description, for example, "Learn the capital cities of the European countries" and a published status indicating whether the students can take the quiz or not. The teacher should have a separate page where added quizzes are listed with all their information. It should also be possible to edit the information of a quiz and delete it.
 >
 > Once a quiz is added, the teacher should be able to add questions for the quiz using a form. A question should have a question content, for example, "What's the capital of Finland?" and a correct answer, for example, "Helsinki". It should also be possible to delete questions.
 >
 > The teacher should be able to register and sign in to manage their personal quizzes. Only signed-in teachers should be able to add a quiz. Once signed in, the teacher should only be able to edit and delete their own quizzes.
 >
-> The student should be able to see a list of added quizzes and take the quizzes by answering the questions of a quiz. After answering a question, the student should get feedback on whether their answer was correct or not. There should also be a page where the results of a quiz are visualized. For example, using a bar chart visualizing the number of correct and wrong answers for each question. The results page should be accessible for both students and teachers.
+> The student should be able to see a list of published quizzes and take the quizzes by answering the questions of a quiz. After answering a question, the student should get feedback on whether their answer was correct or not. There should also be a page where the results of a quiz are visualized. For example, using a pie chart visualizing the number of correct and wrong answers for each question. The results page should be accessible for both students and teachers.
 >
 > -- The Product Owner of Quizzer
 
