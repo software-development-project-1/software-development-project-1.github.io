@@ -4,6 +4,7 @@ title: Sprint 1
 permalink: /sprint-1-todo
 nav_order: 8
 nav_exclude: true
+search_exclude: true
 ---
 
 {% include toc.html %}

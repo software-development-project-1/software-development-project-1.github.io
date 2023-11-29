@@ -4,6 +4,7 @@ title: Sprint 2
 permalink: /sprint-2-todo
 nav_order: 7
 nav_exclude: true
+search_exclude: true
 ---
 
 {% include toc.html %}
@@ -619,7 +620,7 @@ Explore the code in the `frontend` folder. You can start the Vite development se
 
 ## Designing REST API endpoints for user stories
 
-Next, let's consider what kind of REST API endpoints we need for the last three user stories. In the sixth user story, "{{site.sprint_2_user_story_6}}", we need an lists all the published quizzes. To follow the REST API naming principles, we can implement a GET method endpoint `/api/quizzes`. We can add a `QuizRestController` class and implement the endpoint with a `getQuizzes` method.
+Next, let's consider what kind of REST API endpoints we need for the last three user stories. In the sixth user story, "{{site.sprint_2_user_story_6}}", we need an lists all the published quizzes. To follow the REST API naming principles, we can implement a GET method endpoint `/api/quizzes`. We can add a `QuizRestController` class and implement the endpoint with a `getAllQuizzes` method.
 
 In the seventh user story, "{{site.sprint_2_user_story_7}}", we need to display information of a quiz with a specific id. For this use-case we can implement a GET method enpoint `/api/quizzes/{id}`. If there is no quiz with the provided id, we should return a `404 Not Found` status as a response. Similarly, if the quiz is not published, we should return a `403 Forbidden` status as a response.
 

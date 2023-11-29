@@ -325,7 +325,7 @@ Here's the two test methods for our test scenarios:
 
 ```java
 @Test
-public void getAllMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception {
+public void getMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception {
     // Act
     this.mockMvc.perform(get("/api/messages"))
     // Assert
@@ -334,7 +334,7 @@ public void getAllMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception
 }
 
 @Test
-public void getAllMessagesReturnsListOfMessagesWhenMessagesExist() throws Exception {
+public void getMessagesReturnsListOfMessagesWhenMessagesExist() throws Exception {
     // Arrange
     Message firstMessage = new Message("First message");
     Message secondMessage = new Message("Second message");

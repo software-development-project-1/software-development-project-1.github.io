@@ -4,6 +4,7 @@ title: Sprint 3
 permalink: /sprint-3-todo
 nav_order: 8
 nav_exclude: true
+search_exclude: true
 ---
 
 {% include toc.html %}
@@ -16,7 +17,7 @@ For the final Sprint of the course, the Sprint 3, we have a new set of requireme
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
 
-The Sprint assesment is done based on the exercises 1-22. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
+The Sprint assesment is done based on the exercises 1-24. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
 
 During this Sprint, each team member will do a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 10 personal points.
 
@@ -36,7 +37,7 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 >
 > Did similar issues arise as in Sprint 1 retrospective? If so, try to come up with different actions as before or ask the teacher for tips on how to solve these issues.
 >
-> Once you have completed the Retrospective write down the issues and actions to the repository's `retrospectives/sprint-2.md` file and push the changes to GitHub.
+> Once you have completed the Retrospective write down the issues and actions to the repository's `documentation/retrospectives/sprint-2.md` file and push the changes to GitHub.
 
 ## 🏃‍♂️ Sprint 3 planning
 
@@ -48,21 +49,22 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 3 goals in the Sprint Planning event:
 
-> "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username, password. User should not be able to register with a blank username or a password less than 8 characters long. The password should also contain at least one letter and at least one number.
+> "We now have the basic features for managing and taking quizzes. What we still need is a way for the students and teachers to see the quiz results. There should be a page in the student dashboard where the results of a quiz are visualized. For example, the page could have pie charts visualizing the number of correct and wrong answers for each question. There should be a link to the results page next to each quiz in the quiz list page.
 
-> After registering, the user should be able to sign in using their username and password provided during the registration. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in form. Once the user is signed in, there should be "Sign out" link in the navigation bar that will sign the user out.
+> We don't want anyone to be able to add, edit and delete quizzes. So that teachers can manage their personal quizzes, we need the teacher to be able to register with username and password. Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
 >
-> An anonymous user, that is an user who is not signed in, should be able to see the reading recommendation list and the category list. However, they should not be able to add a reading recommendation or a category. That is, the links for adding a reading recommendation and adding a category should not be visible if the user is not signed in.
+> An anonymous user, that is an user who is not signed in, should be able to see the quiz list. However, they should not be able to add a quiz. That is, the links for adding a quiz should not be visible if the user is not signed in.
 >
-> After signing in, the user should be able to add reading recommendations and categories. However, the user should only be able to edit and delete reading recommendations that they have added. That is, the "Edit" link and the "Delete" button in the reading recommendation list should only be visible if the user has added the reading recommendation."
+> After signing in, the teacher should be able to add a quiz. However, the teacher should only be able to edit and delete quizzes they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz."
 >
 > -- The Product Owner
 
 After some discussion the Scrum Team came up with the following user stories:
 
-1. As an anonymous user I want to register an account so that I can manage my personal reading recommendations
-2. As an anonymous user I want to sign in so that I can manage my personal reading recommendations
-3. As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations
+1. {{site.sprint_3_user_story_1}}
+2. {{site.sprint_3_user_story_2}}
+3. {{site.sprint_3_user_story_3}}
+4. {{site.sprint_3_user_story_4}}
 
 The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
 
@@ -91,15 +93,15 @@ The order of the user stories represent the priotity provided by the Product Own
 
 > Exercise 5
 >
-> Come up with tasks for the first user story, "As an anonymous user I want to register an account so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
+> Come up with tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
+> Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Add the issues to the Sprint 3 Backlog project.
 
 {: .important-title }
 
 > Exercise 6
 >
-> Come up with tasks for the second user story, "As an anonymous user I want to sign in so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 13 to get tips for the implementation and the [Authentication](#authentication) section for the technical details.
+> Come up with tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
 
@@ -107,7 +109,15 @@ The order of the user stories represent the priotity provided by the Product Own
 
 > Exercise 7
 >
-> Come up with tasks for the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 14 to get tips for the implementation and the [Authentication](#authentication) section for the technical details.
+> Come up with tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
+
+{: .important-title }
+
+> Exercise 8
+>
+> Come up with tasks for the third user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
 
@@ -225,13 +235,13 @@ Because our tests will alter the database we should consider _using a different 
 The database related configuration is in the `src/main/resources/application.properties` configuration file:
 
 ```
-spring.datasource.url=jdbc:h2:file:~/cool-reads;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
+spring.datasource.url=jdbc:h2:file:~/quizzer;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
 ```
 
-The _database is stored in a file_ located in `~/cool-reads`. We can use a different, _in-memory database_ for the tests. For this we have a separate `src/test/resources/application.properties` configuration file (note the `test` folder in the path):
+The _database is stored in a file_ located in `~/quizzer`. We can use a different, _in-memory database_ for the tests. For this we have a separate `src/test/resources/application.properties` configuration file (note the `test` folder in the path):
 
 ```
-spring.datasource.url=jdbc:h2:mem:cool-reads-test;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
+spring.datasource.url=jdbc:h2:mem:quizzer-test;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
 ```
 
 The configuration in the `src/test/resources/application.properties` file will be used while we are running the tests, which makes it suitable for test-specific configuration.
@@ -262,7 +272,7 @@ public class MessageRestController {
 	private MessageRepository messageRepository;
 
 	@GetMapping("")
-	public List<Message> getMessages() {
+	public List<Message> getAllMessages() {
 		return messageRepository.findAll();
 	}
 
@@ -270,6 +280,16 @@ public class MessageRestController {
 	public Message getMessageById(@PathVariable Long id) {
 		return messageRepository.findById(id).orElseThrow(
 				() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + " does not exist"));
+	}
+
+    @PostMapping("")
+	public Message createMessage(@Valid @RequestBody Message message, BindingResult bindingResult) {
+		if (bindingResult.hasErrors()) {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+					bindingResult.getAllErrors().get(0).getDefaultMessage());
+		}
+
+		return messageRepository.save(message);
 	}
 }
 ```
@@ -279,14 +299,16 @@ The test class files should be placed to the `src/test/java` folder and the name
 To make sure that the tests in the test class are independent, the `setUp` method should delete all messages at the beginning of each test:
 
 ```java
-package fi.haagahelia.coolreads;
+package fi.haagahelia.quizzer;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -298,6 +320,8 @@ public class MessageRestControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
+
+    ObjectMapper mapper = new ObjectMapper();
 
     @BeforeEach
     void setUp() throws Exception {
@@ -313,8 +337,8 @@ The test methods test specific scenario. We come up with scenarios by analyzing 
 
 For example, we could have the following test scenarios for the `getMessages` method introduced above:
 
-1. If we send a request to the `/api/messages` REST API endpoint and _there is no messages in the database_, the JSON response body should be an empty list
-2. If we send a request to the `/api/messages` REST API endpoint and _there are messages in the database_, the JSON response body should contain the messages as a list
+1. If we send a request to the `/api/messages` endpoint and _there is no messages in the database_, the JSON response body should be an empty list
+2. If we send a request to the `/api/messages` endpoint and _there are messages in the database_, the JSON response body should contain the messages as a list
 
 To structure these test cases as test methods, we can follow the popular [Arrange-Act-Assert](https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/) pattern:
 
@@ -353,9 +377,9 @@ public void getAllMessagesReturnsListOfMessagesWhenMessagesExist() throws Except
 }
 ```
 
-The tests use the `perform` method of the `MockMVC` class to send a GET request to the `/api/messages` REST API endpoint. Then, we expect that the HTTP status of the response is `200 OK` and the JSON of the response body contains the messages we saved in the arrange step.
+The tests use the `perform` method of the `MockMVC` class to send a GET request to the `/api/messages` endpoint. Then, we expect that the HTTP status of the response is `200 OK` and the JSON of the response body contains the messages we saved in the arrange step.
 
-For another example, here's the test methods of the `getMessageById` method introduced above:
+For another GET request example, here's the test methods of the `getMessageById` method introduced above:
 
 ```java
 @Test
@@ -381,6 +405,42 @@ public void getMessageByIdReturnsNotFoundWhenMessageDoesNotExist() throws Except
 }
 ```
 
+For a POST request example, here's the test methods of the `createMessage` method introduced above:
+
+```java
+@Test
+public void createMessageSavesValidMessage() throws Exception {
+    // Arrange
+    Message message = new Message("Hello world!");
+    String requestBody = mapper.writeValueAsString(message);
+
+    // Act
+    this.mockMvc.perform(post("/api/messages").contentType(MediaType.APPLICATION_JSON).content(requestBody))
+            // Assert
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.content").value("Hello world!"));
+
+    List<Message> messages = messageRepository.findAll();
+    assertEquals(1, messages.size());
+    assertEquals("Hello world!", messages.get(0).getContent());
+}
+
+@Test
+public void createMessageDoesNotSaveInvalidMessage() throws Exception {
+    // Arrange
+    Message message = new Message("");
+    String requestBody = mapper.writeValueAsString(message);
+
+    // Act
+    this.mockMvc.perform(post("/api/messages").contentType(MediaType.APPLICATION_JSON).content(requestBody))
+            // Assert
+            .andExpect(status().isBadRequest());
+
+    List<Message> messages = messageRepository.findAll();
+    assertEquals(0, messages.size());
+}
+```
+
 The spring-boot-starter-test library provides other test functionalities except the `jsonPath` method used in the expectations. Before we start testing our REST API endpoints, let's add the json-path dependency to the `<dependencies>` list in the `pom.xml` file:
 
 ```xml
@@ -400,29 +460,18 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 9
 >
 > Create a new "test" label for test-related tasks.
 
 {: .important-title }
 
-> Exercise 9
->
-> Create a new package `fi.haagahelia.coolreads.controller` for the project's controller class tests. You can do this in Eclipse by right-clicking the `src/test/java` folder and choosing New > Package. Implement a `ReadingRecommendationRestControllerTest` test class within the package with the following test methods for the `/api/recommendations` REST API endpoint:
->
-> - `getRecommendationsReturnsEmptyListWhenNoRecommendationsExist`: send a request to the `/api/recommendations` without saving a recommendation to the database. Then, the response should have an empty list
-> - `getRecommendationsReturnsListOfRecommendationsWhenRecommendationsExist`: save a few recommendations to the database and send a request to the `/api/recommendations`. Then, the response should have a list of the saved recommendations
->
-> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
-
-{: .important-title }
-
 > Exercise 10
 >
-> Implement a `CategoryRestControllerTest` test class with the following test methods for the `/api/categories` REST API endpoint:
+> Create a new package `fi.haagahelia.quizzer.controller` for the project's controller class tests. You can do this in Eclipse by right-clicking the `src/test/java` folder and choosing New > Package. Implement a `QuizRestControllerTest` test class within the package with the following test methods for the GET `/api/quizzes` endpoint:
 >
-> - `getCategoriesReturnsEmptyListWhenNoCategoriesExist`: send a request to the `/api/categories` without saving a category to the database. Then, the response should have an empty list
-> - `getCategoriesReturnsListOfCategoriesWhenCategoriesExist`: save a few categories to the database and send a request to the `/api/categories`. The, the response should have a list of the saved categories
+> - `getAllQuizzesReturnsEmptyListWhenNoQuizzesExist`: send a GET request to the `/api/quizzes` without saving a quiz to the database. Then, the response should have an empty list
+> - `getAllQuizzesReturnsListOfPublishedQuizzesWhenQuizzesExist`: save a few quizzes (both published and non-published) to the database and send a GET request to the `/api/quizzes`. Then, the response should have a list of the saved _published quizzes_
 >
 > Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
 
@@ -430,11 +479,35 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 11
 >
-> Implement the following test methods for the `/api/categories/{id}/recommendations`:
+> Implement the following test methods for the GET `/api/quizzes/{id}` endpoint:
 >
-> - `getRecommendationsByCategoryIdReturnsEmptyListWhenCategoryDoesNotHaveRecommendations`: save a category without recommendations to the database and send a request to the `/api/categories/{id}/recommendations`. Then, the response should have an empty list
-> - `getRecommendationsByCategoryIdReturnsListOfRecommendationsWhenCategoryHasRecommendations`: save a category with a few recommendations to the database and send a request to the `/api/categories/{id}/recommendations`. Then, the response should have a list of the category's recommendations
-> - `getRecommendationsByCategoryIdReturnsNotFoundWhenCategoryDoesNotExist`: send a request to the `/api/categories/1/recommendations` without saving a category to the database. Then, the response should have a `404 Not Found` status
+> - `getQuizByIdReturnsPublishedQuizWhenItExists`: save a _published quiz_ to the database and send a GET request to the `/api/quizzes/{id}`. Then, the response should have the saved quiz
+> - `getQuizByIdReturnsNotFoundWhenQuizDoesNotExist`: send a GET request to the `/api/quizzes/{id}` without saving a quiz to the database. Then, the response should have a `404 Not Found` status
+> - `getQuizByIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ to the database and send a GET request to the `/api/quizzes/{id}`. Then, the response should have a `403 Forbidden` status
+>
+> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
+
+{: .important-title }
+
+> Exercise 12
+>
+> Implement the following test methods for the GET `/api/quizzes/{id}/questions` endpoint:
+>
+> - `getQuestionsByQuizIdReturnsEmptyListWhenQuizDoesNotQuestions`: save a _published quiz_ without questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have an empty list
+> - `getQuestionsByQuizIdReturnsListOfQuestionsWhenQuizHasQuestions`: save a _published quiz_ with a few questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have a list of the quiz's questions
+> - `getQuestionsByQuizIdReturnsNotFoundWhenQuestionDoesNotExist`: send a GET request to the `/api/quizzes/1/question` without saving a quiz to the database. Then, the response should have a `404 Not Found` status
+> - `getQuestionsByQuizIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ with a few questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have a `403 Forbidden` status
+>
+> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
+
+{: .important-title }
+
+> Exercise 13
+>
+> Implement a `AnswerRestControllerTest` test class with the following test methods for the POST `/api/answers` endpoint:
+>
+> - `createAnswerSavesValidAnswer`: send a POST request to the `/api/answers` with a _valid request body_ (attributes should pass the validation). Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
+> - `createAnswerDoesNotSaveInvalidAnswer`: send a POST request to the `/api/answers` with a _invalid request body_ (attributes should not pass the validation). Then, the response should status have a `400 Bad Request` status and the database should not have any answers
 >
 > Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
 
@@ -477,9 +550,9 @@ Green highlight indicates that the line _is fully covered_. Yellow highlight ind
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 14
 >
-> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the methods in the `ReadingRecommendationRestController` and `CategoryRestController` classes we tested previously. Are all the lines of the methods fully covered by the tests?
+> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the methods in the `QuizRestController` and `AnswerRestController` classes we tested previously. Are all the lines of the methods fully covered by the tests?
 
 ## Authentication
 
@@ -524,12 +597,15 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests((requests) -> requests.requestMatchers(antMatcher("/"), antMatcher("/register"),
-                                antMatcher("/categories"), antMatcher("/frontend/**"), antMatcher("/api/**"), antMatcher("/error")).permitAll().anyRequest()
-                                .authenticated());
+        http.authorizeHttpRequests((requests) -> requests
+                .requestMatchers(antMatcher("/"), antMatcher("/register"), antMatcher("/app/**"),
+                        antMatcher("/assets/**"), antMatcher("/api/**"), antMatcher("/error"))
+                .permitAll().anyRequest()
+                .authenticated());
 
         http.formLogin((form) -> form.permitAll());
         http.logout((logout) -> logout.permitAll());
+        http.csrf((csrf) -> csrf.ignoringRequestMatchers(antMatcher("/api/**")));
 
         return http.build();
     }
@@ -540,10 +616,10 @@ The `passwordEncoder` method returns the password encoder object used to hash pa
 
 The `securityFilterChain` returns the configuration object for Spring Security. The first piece of configuration determines the access-control for our application. We will allow anyone (authenticated or not) access the following paths:
 
-- `/`, the reading recommendation list page,
-- `/register`, the registration form and registration form submission
-- `/categories`, the category list page
-- `/frontend/**`, the JavaScript assets required by the frontend application. The `**` part of the path means any path
+- `/`, the quiz list page,
+- `/register`, the registration form page and registration form submission (for the second user story)
+- `/assets/**`, the JavaScript assets required by the frontend application. The `**` part of the path means any path
+- `/app/**`, the frontend application
 - `/api/**`, the REST API endpoints
 
 {: .highlight }
@@ -575,13 +651,30 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 15
 >
-> Implement the tasks of the first user story, "As an anonymous user I want to register an account so that I can manage my personal reading recommendations".
+> Implement the tasks of the first user story, "{{site.sprint_3_user_story_1}}".
 >
 > The implementation should look roughly something like this:
 >
-> ![](/assets/sprint-3-user-story-1.png)
+> ![](/assets/todo-sprint-3-user-story-1-1.png)
+>
+> ![](/assets/todo-sprint-3-user-story-1-2.png)
+>
+> Tips for implementing the tasks:
+>
+> - You can implement a GET `/api/quizzes/{id}/answers` endpoint, which returns the quiz-related answers
+> - There are many chart libraries for React. One of these is [@mui/x-charts](https://mui.com/x/react-charts/)
+
+{: .important-title }
+
+> Exercise 16
+>
+> Implement the tasks of the second user story, "{{site.sprint_3_user_story_2}}".
+>
+> The implementation should look roughly something like this:
+>
+> ![](/assets/todo-sprint-3-user-story-2.png)
 >
 > Tips for implementing the tasks:
 >
@@ -590,73 +683,28 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 > - See how the user registration is implemented in the [authentication example](https://github.com/software-development-project-1/authentication-example) project
 > - The password can be validated with a regular expression using the [@Pattern](https://www.codeproject.com/Questions/5324493/Jakarta-regex-validation) annotation
 
-### Cross-site request forgery (CSRF)
-
-If we try deleting a reading recommendation by clicking the "Delete" button after adding the Spring Security for our project, we will notice that it is no longer working. This is because Spring Security adds protection against [Cross Site Request Forgery (CSRF)](https://docs.spring.io/spring-security/reference/features/exploits/csrf.html) attacks. Basically, Spring Security won't permit requests originated outside our application that aren't HTTP GET requests. In practice this enforced by using a so called _CSRF token_ in form submissions.
-
-Thymeleaf will automatically include the CSRF token in forms. The problem is that the request send with the `fetch` function after clicking the "Delete" button doesn't have the CSRF token. Let's fix this problem.
-
-First, we need to make the CSRF token available. We can do this by including it to the HTML content in the `src/main/resources/templates/layout.html` file. Let's add a `<meta>` tag that contains the CSRF token at the end of the `<head>` tag:
-
-```html
-<head>
-  <!-- ... -->
-  <meta id="_csrf" name="_csrf" th:content="${_csrf.token}" />
-</head>
-```
-
-Now, we can read the CSRF token from the `<meta>` tag's `content` attribute and send it as a `X-CSRF-TOKEN` header with the `fetch` function:
-
-```js
-function handleDelete(recommendation) {
-  fetch(`/recommendations/${recommendation.id}/delete`, {
-    method: "POST",
-    headers: {
-      "X-CSRF-TOKEN": document.getElementById("_csrf").getAttribute("content"),
-    },
-  }).then(() => {
-    // Remove the deleted recommendation from the recommendations state variable array
-  });
-}
-```
-
-{: .note }
-
-> We could simplify the code by extracting the business logic of "deleting a reading recommendation" to a `deleteRecommendation` function:
->
-> ```js
-> function handleDelete(recommendation) {
->   deleteRecommendation(recommendation.id).then(() => {
->     // Remove the deleted recommendation from the recommendations state variable array
->   });
-> }
-> ```
-
-We should now be able to delete reading recommendations again.
-
 {: .important-title }
 
-> Exercise 14
+> Exercise 17
 >
-> Fix the reading recommendation deletion implemention as instruced above.
-
-{: .important-title }
-
-> Exercise 15
+> Implement the tasks of the third user story, "{{site.sprint_3_user_story_3}}".
 >
-> Implement the tasks of the second user story, "As an anonymous user I want to sign in so that I can manage my personal reading recommendations".
+> The implementation should look roughly something like this:
+>
+> ![](/assets/todo-sprint-3-user-story-3-1.png)
+>
+> ![](/assets/todo-sprint-3-user-story-3-2.png)
 >
 > Tips for implementing the tasks:
 >
-> - To know whether to show the "Add a reading recommendation" button in the frontend, you'll need to implement a REST API endpoint which returns the authenticated user. See how the `/api/users/current` REST API endpoint is implemented in the [UserRestController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/UserRestController.java) class in the authentication example project
 > - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
 > - You can sign out by visiting <http://localhost:8080/logout> in a web browser
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 18
 >
-> Implement the tasks of the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations".
+> Implement the tasks of the first user story, "{{site.sprint_3_user_story_4}}".
 >
 > Tips for implementing the tasks:
 >
@@ -664,19 +712,19 @@ We should now be able to delete reading recommendations again.
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 19
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 20
 >
 > Deploy the final version of the application to Render and make sure that the application works properly in the production environment.
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 21
 >
 > Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE.txt` at the root folder of your repository (the same for that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 
@@ -698,7 +746,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 22
 >
 > Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 
@@ -718,13 +766,13 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 23
 >
 > Write the final report for the course as instructed above.
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 24
 >
 > You can now pat yourself on the back, the project is done! 🎉
 >
