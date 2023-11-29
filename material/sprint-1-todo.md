@@ -530,7 +530,7 @@ Here's a few tips before you start implementing the tasks:
 >   ```java
 >   @PostMapping("/quizzes/{id}/edit")
 >   public String editRecommendation(@PathVariable Long id, /* ... */) {
->     // ...
+>       // ...
 >   }
 >   ```
 >
@@ -588,13 +588,13 @@ Here's a few tips before you start implementing the tasks:
 >   ```java
 >   @GetMapping("/")
 >   public String listQuizzes(@RequestParam(required = false) Boolean published, /* ... */) {
->     model.addAttribute("publishedFilter", published);
+>       model.addAttribute("publishedFilter", published);
 >
->     if (published == null) {
->       // return all quizzes
->     } else {
->       // return quizzes based on the published status
->     }
+>       if (published == null) {
+>           // return all quizzes
+>       } else {
+>           // return quizzes based on the published status
+>       }
 >   }
 >   ```
 >
@@ -758,9 +758,9 @@ The PostgreSQL database requires a suitable driver for the application. Let's ad
 
 ```xml
 <dependency>
-  <groupId>org.postgresql</groupId>
-  <artifactId>postgresql</artifactId>
-  <scope>runtime</scope>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <scope>runtime</scope>
 </dependency>
 ```
 

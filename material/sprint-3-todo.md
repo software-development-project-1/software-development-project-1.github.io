@@ -23,7 +23,7 @@ During this Sprint, each team member will do a [peer review](#peer-review) in wh
 
 {: .highlight }
 
-> At the end of this Sprint, the team has to write the [final report](#the-final-report) together and each team member needs to do the [peer review](#peer-review). Missing final report will decrease the project points by 5 points and the _peer review is required for a passing grade_. If the peer review is done after the Sprint deadline, the personal points will decrease by 5 points.
+> At the end of this Sprint, the team has to write the [final report](#final-report) together and each team member needs to do the [peer review](#peer-review). Missing final report will decrease the project points by 5 points and the _peer review is required for a passing grade_. If the peer review is done after the Sprint deadline, the personal points will decrease by 5 points.
 
 ## Retrospective
 
@@ -143,21 +143,18 @@ Here's an example of unit tests for a `calculateWords` method, which returns the
 @Test
 void calculateWordsCalculatesSingleWordCorrectly() {
     String message = "Hello";
-
     assertEquals(1, MessageUtils.calculateWords(message));
 }
 
 @Test
 void calculateWordsCalculatesManyWordsCorrectly() {
     String message = "Hello world";
-
     assertEquals(2, MessageUtils.calculateWords(message));
 }
 
 @Test
 void calculateWordsCalculatesZeroWordCorrectly() {
     String message = "";
-
     assertEquals(0, MessageUtils.calculateWords(message));
 }
 ```

@@ -185,6 +185,8 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > If you didn't manage to implement all user stories during Sprint 1, move the task related issues of the unfinished user stories to the Sprint 2 Backlog project.
 
+{: .important-title }
+
 > Exercise 5
 >
 > Create an issue for each task of the first user story, "{{site.sprint_2_user_story_1}}". You can use the tasks suggested in the [Sprint 2 planning](#%EF%B8%8F-sprint-2-planning) section, or plan your own tasks. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 2 Backlog project.
@@ -305,10 +307,10 @@ Before we can start using Lombok, we need to add it as dependency for our Maven 
 
 ```xml
 <dependency>
-  <groupId>org.projectlombok</groupId>
-  <artifactId>lombok</artifactId>
-  <version>1.18.30</version>
-  <scope>provided</scope>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.30</version>
+    <scope>provided</scope>
 </dependency>
 ```
 
@@ -324,19 +326,19 @@ Here's an example of using these annotations on the `Message` class:
 @Getter
 @Setter
 public class Message {
-  @Id
-  @GeneratedValue
-  private Long id;
+    @Id
+    @GeneratedValue
+    private Long id;
 
-  @CreationTimestamp
-  private LocalDateTime createdAt;
+    @CreationTimestamp
+    private LocalDateTime createdAt;
 
-  @Column(nullable=false)
-  private String content;
+    @Column(nullable=false)
+    private String content;
 
-  public Message(String content) {
-    this.content = content;
-  }
+    public Message(String content) {
+        this.content = content;
+    }
 }
 ```
 
@@ -379,13 +381,13 @@ Instead of sending a response as an HTML page, we can serialize Java objects int
 @RestController
 @RequestMapping("/api/messages")
 public class MessageRestController {
-  @Autowired
-  private MessageRepository messageRepository;
+    @Autowired
+    private MessageRepository messageRepository;
 
-  @GetMapping("")
-  public List<Message> getAllMessages() {
-    return messageRepository.findAll();
-  }
+    @GetMapping("")
+    public List<Message> getAllMessages() {
+        return messageRepository.findAll();
+    }
 }
 ```
 
@@ -411,7 +413,7 @@ The resource path has certain naming conventions. The path starts with the resou
 
 {: .note }
 
-> Collections are commonly entities which we are storing in the database. The REST API endpoints provide ways to access and manipulate these entities. 
+> Collections are commonly entities which we are storing in the database. The REST API endpoints provide ways to access and manipulate these entities.
 
 The `{id}` part of the `/users/{id}` path is a _path variable_. For example, the path for user with id 2 would be `/users/2`.
 
@@ -431,23 +433,23 @@ We can create a separate controller class for each collection. The `@RequestMapp
 @RestController
 @RequestMapping("/api/messages")
 public class MessageRestController {
-  // ...
+    // ...
 
-  @GetMapping("/{id}")
-  public Message getMessageById(@PathVariable Long id) {
-    return messageRepository.findById(id).orElseThrow(
-      () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + " does not exist"));
-  }
-
-  @PostMapping("")
-  public Message createMessage(@Valid @RequestBody AddMessageDto message, BindingResult bindingResult) {
-    if (bindingResult.hasErrors()) {
-      throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
+    @GetMapping("/{id}")
+    public Message getMessageById(@PathVariable Long id) {
+        return messageRepository.findById(id).orElseThrow(
+            () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + " does not exist"));
     }
 
-    Message newMessage = new Message(message.getContent());
-    return messageRepository.save(newMessage);
-  }
+    @PostMapping("")
+    public Message createMessage(@Valid @RequestBody AddMessageDto message, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
+        }
+
+        Message newMessage = new Message(message.getContent());
+        return messageRepository.save(newMessage);
+    }
 }
 ```
 
@@ -681,7 +683,7 @@ For example we can allow cross-origin requests from `http://localhost:5173` orig
 @RequestMapping("/api/messages")
 @CrossOrigin(origins="http://localhost:5173")
 public class MessageRestController {
-  // ...
+    // ...
 }
 ```
 
@@ -780,9 +782,9 @@ Let's start documenting our API by adding the Spring Doc dependency to the `<dep
 
 ```xml
 <dependency>
-   <groupId>org.springdoc</groupId>
-   <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-   <version>2.0.2</version>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+    <version>2.0.2</version>
 </dependency>
 ```
 
@@ -797,7 +799,7 @@ We can provide more details about the endpoints by using specific annotations fo
 @RequestMapping("/api/quizzes")
 @Tag(name="Quiz", description="Information about quizzes and their answers")
 public class QuizRestController {
-  // ...
+    // ...
 }
 ```
 
@@ -810,16 +812,16 @@ We can also provide more information about a specific endpoint using the `@Opera
 @RequestMapping("/api/quizzes")
 @Tag(name="Quiz", description="Information about quizzes and their answers")
 public class QuizRestController {
-  // ...
-
-  @Operation(
-    summary = "Questions of a quiz",
-    description = "Returns all the questions of a specific quiz"
-  )
-  @GetMapping("/{id}/questions")
-  public List<Question> getQuestionsByQuizId(@PathVariable Long id) {
     // ...
-  }
+
+    @Operation(
+        summary = "Questions of a quiz",
+        description = "Returns all the questions of a specific quiz"
+    )
+    @GetMapping("/{id}/questions")
+    public List<Question> getQuestionsByQuizId(@PathVariable Long id) {
+        // ...
+    }
 }
 ```
 
@@ -884,45 +886,45 @@ Let's add the frontend-maven-plugin to the `<plugins>` list in the `pom.xml` fil
 
 ```xml
 <plugin>
-  <groupId>com.github.eirslett</groupId>
-  <artifactId>frontend-maven-plugin</artifactId>
-  <version>1.14.2</version>
-  <configuration>
-    <installDirectory>./target</installDirectory>
-    <workingDirectory>./frontend</workingDirectory>
-  </configuration>
-  <executions>
-    <execution>
-      <id>install node and npm</id>
-      <goals>
-        <goal>install-node-and-npm</goal>
-      </goals>
-      <phase>generate-resources</phase>
-      <configuration>
-        <nodeVersion>v18.16.0</nodeVersion>
-      </configuration>
-    </execution>
-    <execution>
-      <id>npm install</id>
-      <goals>
-        <goal>npm</goal>
-      </goals>
-      <phase>generate-resources</phase>
-      <configuration>
-        <arguments>install</arguments>
-      </configuration>
-    </execution>
-    <execution>
-      <id>npm build</id>
-      <goals>
-        <goal>npm</goal>
-      </goals>
-      <phase>generate-resources</phase>
-      <configuration>
-        <arguments>run build</arguments>
-      </configuration>
-    </execution>
-  </executions>
+    <groupId>com.github.eirslett</groupId>
+    <artifactId>frontend-maven-plugin</artifactId>
+    <version>1.14.2</version>
+    <configuration>
+        <installDirectory>./target</installDirectory>
+        <workingDirectory>./frontend</workingDirectory>
+    </configuration>
+    <executions>
+        <execution>
+            <id>install node and npm</id>
+            <goals>
+                <goal>install-node-and-npm</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+                <nodeVersion>v18.16.0</nodeVersion>
+            </configuration>
+        </execution>
+        <execution>
+            <id>npm install</id>
+            <goals>
+                <goal>npm</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+                <arguments>install</arguments>
+            </configuration>
+        </execution>
+        <execution>
+            <id>npm build</id>
+            <goals>
+                <goal>npm</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+                <arguments>run build</arguments>
+            </configuration>
+        </execution>
+    </executions>
 </plugin>
 ```
 
@@ -940,9 +942,9 @@ We want the frontend application to be accessible in a certain path of the appli
 @Controller
 public class FrontendController {
     @GetMapping("/app/**")
-	public String renderFrontend(Model model) {
-		return "index";
-	}
+    public String renderFrontend(Model model) {
+        return "index";
+    }
 }
 ```
 
