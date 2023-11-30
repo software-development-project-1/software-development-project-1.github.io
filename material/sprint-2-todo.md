@@ -493,7 +493,7 @@ If we don't throw a `ResponseStatusException` exception, the `200 OK` status cod
 
 ### Omitting attributes from the JSON output
 
-We can omit attributes from the JSON output by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the attribute. We usually want to omit attributes that hold private information or attributes that can potentially contain lots of data, for example the `@OneToMany` annotated attributes. We can for example omit the `questions` attribute of the `Quiz` entity class in the following way:
+We can omit attributes from the JSON output by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the attribute. We usually want to omit attributes that hold private information or attributes that can potentially contain lots of data, for example the `@OneToMany` annotated attributes. We can, for example omit the `questions` attribute of the `Quiz` entity class in the following way:
 
 ```java
 @JsonIgnore
