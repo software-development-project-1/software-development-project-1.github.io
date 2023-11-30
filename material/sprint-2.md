@@ -412,7 +412,7 @@ The resource path has certain naming conventions. The path starts with the resou
 
 {: .note }
 
-> Collections are commonly entities which we are storing in the database (for example reading recommendations and cateogories). The REST API endpoints provide ways to access and manipulate these entities. 
+> Collections are commonly entities which we are storing in the database (for example reading recommendations and categories). The REST API endpoints provide ways to access and manipulate these entities. 
 
 The `{id}` part of the `/users/{id}` path is a _path variable_. For example, the path for user with id 2 would be `/users/2`.
 
