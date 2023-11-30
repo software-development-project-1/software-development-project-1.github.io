@@ -490,11 +490,23 @@ In the `createMessage` method will send a `400 Bad Request` status code with the
 
 If we don't throw a `ResponseStatusException` exception, the `200 OK` status code will be sent with the response, which indicates the that request succeeded.
 
+### Omitting attributes from the JSON output
+
+We can omit attributes from the JSON output by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the attribute. We usually want to omit attributes that hold private information or attributes that can potentially contain lots of data, for example the `@OneToMany` annotated attributes. We can for example omit the `questions` attribute of the `Quiz` entity class in the following way:
+
+```java
+@JsonIgnore
+@OneToMany(mappedBy="category")
+private List<ReadingRecommendation> recommendations;
+```
+
 {: .important-title }
 
 > Exercise 14
 >
 > Create a controller class `ReadingRecommendationRestController` that has a method `getRecommendations`. This method should return _all the reading recommendations_ in path `/api/recommendations` in JSON format. You should be able to see the list of recommendations when opening <http://localhost:8080/api/recommendations> in a web browser. The recommendations should be listed from newest to oldest as specified in the third user story.
+>
+> Omit the category's reading recommendations from the JSON output by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the `@OneToMany` attribute in the `Category` entity class.
 >
 > Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the sixth user story.
 
@@ -504,7 +516,6 @@ If we don't throw a `ResponseStatusException` exception, the `200 OK` status cod
 >
 > Create a controller class `CategoryRestController` that has a method `getCategories`. This method should return _all the categories_ in path `/api/categories` in JSON format. You should be able to see the list of categories when opening <http://localhost:8080/api/categories> in a web browser. The categories should be listed in an alphabetical order by the category name as specified in the fourth user story.
 >
-> Omit the category's reading recommendations from the JSON output by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the `@OneToMany` attribute in the entity class.
 >
 > Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the sixth user story.
 
