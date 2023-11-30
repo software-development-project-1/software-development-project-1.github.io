@@ -466,6 +466,10 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Create a new "test" label for test-related tasks.
 
+{: .highlight }
+>
+> If the implementation of the endpoint doesn't work as described in the test scenarios, fix the implementation.
+
 {: .important-title }
 
 > Exercise 10
@@ -508,10 +512,16 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Implement a `AnswerRestControllerTest` test class with the following test methods for the POST `/api/answers` endpoint:
 >
-> - `createAnswerSavesValidAnswer`: send a POST request to the `/api/answers` with a _valid request body_ (attributes should pass the validation). Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
-> - `createAnswerDoesNotSaveInvalidAnswer`: send a POST request to the `/api/answers` with a _invalid request body_ (attributes should not pass the validation). Then, the response should status have a `400 Bad Request` status and the database should not have any answers
+> - `createAnswerSavesValidAnswer`: save a _published quiz_ with a question to the database and send a POST request to the `/api/answers` with a _valid request body_ (attributes should pass the validation). Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
+> - `createAnswerDoesNotSaveInvalidAnswer`: save a _published quiz_ with a question to the database and send a POST request to the `/api/answers` with a _invalid request body_ (attributes should not pass the validation). Then, the response should status have a `400 Bad Request` status and the database should not have any answers
+> - `createAnswerDoesNotSaveAnswerForNonExistingQuestion`: send a POST request to the `/api/answers` with a non-existing question id in the request body. Then, the response should status have a `404 Not Found` status and the database should not have any answers
+> - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a POST request to the `/api/answers` with a valid request body. Then, the response should status have a `403 Bad Request` status and the database should not have any answers
 >
 > Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
+
+{: .highlight }
+>
+> From now on, implement tests for every new REST API endpoint.
 
 ## Test coverage
 
@@ -545,6 +555,10 @@ If we run the `./mvnw test` command in Git Bash, our tests are executed and JaCo
 The report displayes the coverage of each package. The "Cov" column determines the _percentage of lines covered by the tests_. Bigger the number, better the coverage. If we click a package name, we see the classes in the package. By clicking a class name, we see the methods of the class. By clicking a method we see the method's implementation as code.
 
 Green highlight indicates that the line _is fully covered_. Yellow highlight indicates that the line is _partially covered_. For example a certain condition of an `if` statement is not covered by a test. Red highlight indicates that line is _not covered_.
+
+{: .note }
+
+> Software development teams commonly decide the minimum test coverage percentage for the code. The test coverage is automatically checked each time new code is pushed to the repository. If the new code doesn't fullfill the minimum requirement, the code won't be integrated to the main branch of the repository. This is one of the practices of [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration).
 
 {: .note }
 
@@ -665,7 +679,7 @@ The `loadUserByUsername` method will need to return a `User` object based on the
 >
 > Tips for implementing the tasks:
 >
-> - You can implement a GET `/api/quizzes/{id}/answers` endpoint, which returns the quiz-related answers
+> - You can implement a GET `/api/quizzes/{id}/answers` endpoint, which returns the quiz-related answers. Remember to add [Swagger documentation](/sprint-2#rest-api-documentation-with-swagger) and implement tests for the new endpoint
 > - There are many chart libraries for React. One of these is [@mui/x-charts](https://mui.com/x/react-charts/)
 
 {: .important-title }

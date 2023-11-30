@@ -630,7 +630,7 @@ We also want to list the quiz-related questions. For this use-case we can implem
 
 In the eighth user story, "{{site.sprint_2_user_story_8}}", we need save the student's answer to the database. Before implementing the endpoint we need to consider what kind of data we need to store about the student's answer. We want at least to know which questions the answer is related to, what's the answer text and whether the answer was correct or not (we could also infer this information from the question). So, we need to implement the appropriate JPA entity class and a JPA repository class first.
 
-Then, we can implement a POST method endpoint `/api/answers` for this use-case. We can add a `AnswerRestController` class and implement the endpoint with a `createAnswer` method. If the user is trying to answer a quiz which is not published we should return a `403 Forbidden` status as a response. If the answer is invalid, we should return a `400 Bad Request` status as a response.
+Then, we can implement a POST method endpoint `/api/answers` for this use-case. We can add a `AnswerRestController` class and implement the endpoint with a `createAnswer` method. If the user is trying to answer a quiz which is not published we should return a `403 Forbidden` status as a response. If the user is trying to answer a quiz which does not exist we should return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), we should return a `400 Bad Request` status as a response.
 
 Before starting to implement the frontend features, we should test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL, for example <http://localhost:8080/api/quizzes>. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
 
@@ -770,7 +770,7 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 >
 > - Material UI [Snackbar](https://mui.com/material-ui/react-snackbar/)
 
-## API documentation with Swagger
+## REST API documentation with Swagger
 
 Now that we have implemented REST API endpoints for our application, we should describe to our fellow developers what these endpoints are and what kind of data they provide. We could write this documentation by hand, but there's a high risk that the documentation will become stale in the future. For example, if we make some alteration to the structure of the provided data and forget to update the documentation. That is why API documentation is commonly generated automatically by tools such as [Spring Doc](https://springdoc.org/).
 
@@ -832,6 +832,10 @@ public class QuizRestController {
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
 >
 > For other developers to find the Swagger documentation, add a "Documentation" subheading for the `README.md` file and under that a link to the Swagger documentation at <http://localhost:8080/swagger-ui.html>.
+
+{: .highlight }
+>
+> From now on, add Swagger documentation for every new REST API endpoint.
 
 ## The .gitignore file
 

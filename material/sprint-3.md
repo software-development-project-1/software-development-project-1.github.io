@@ -405,6 +405,10 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Create a new "test" label for test-related tasks.
 
+{: .highlight }
+
+> If the implementation of the endpoint doesn't work as described in the test scenarios, fix the implementation.
+
 {: .important-title }
 
 > Exercise 9
@@ -439,6 +443,10 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
 
+{: .highlight }
+
+> From now on, implement tests for every new REST API endpoint.
+
 ## Test coverage
 
 We have analyzed the code that we are testing and we are quite sure that our test scenarios cover everything. The good news is, that we don't need to trust only on our gut. There are so called _test coverage_ tools that analyze which lines of code our test scenarios cover and which they don't.
@@ -471,6 +479,10 @@ If we run the `./mvnw test` command in Git Bash, our tests are executed and JaCo
 The report displayes the coverage of each package. The "Cov" column determines the _percentage of lines covered by the tests_. Bigger the number, better the coverage. If we click a package name, we see the classes in the package. By clicking a class name, we see the methods of the class. By clicking a method we see the method's implementation as code.
 
 Green highlight indicates that the line _is fully covered_. Yellow highlight indicates that the line is _partially covered_. For example a certain condition of an `if` statement is not covered by a test. Red highlight indicates that line is _not covered_.
+
+{: .note }
+
+> Software development teams commonly decide the minimum test coverage percentage for the code. The test coverage is automatically checked each time new code is pushed to the repository. If the new code doesn't fullfill the minimum requirement, the code won't be integrated to the main branch of the repository. This is one of the practices of [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration).
 
 {: .note }
 
@@ -649,9 +661,10 @@ We should now be able to delete reading recommendations again.
 >
 > Tips for implementing the tasks:
 >
-> - To know whether to show the "Add a reading recommendation" button in the frontend, you'll need to implement a REST API endpoint which returns the authenticated user. See how the `/api/users/current` REST API endpoint is implemented in the [UserRestController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/UserRestController.java) class in the authentication example project
+> - To know whether to show the "Add a reading recommendation" button in the frontend, you'll need to implement a REST API endpoint which returns the authenticated user. See how the `/api/users/current` REST API endpoint is implemented in the [UserRestController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/UserRestController.java) class in the authentication example project. Remember to add [Swagger documentation](/sprint-2#rest-api-documentation-with-swagger) and implement tests for the new endpoint
 > - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
 > - You can sign out by visiting <http://localhost:8080/logout> in a web browser
+> - [Spring Security for Spring Boot Integration Tests](https://www.baeldung.com/spring-security-integration-tests)
 
 {: .important-title }
 

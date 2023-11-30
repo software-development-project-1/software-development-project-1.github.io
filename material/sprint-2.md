@@ -514,7 +514,7 @@ If we don't throw a `ResponseStatusException` exception, the `200 OK` status cod
 >
 > Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the sixth user story.
 
-## API documentation with Swagger
+## REST API documentation with Swagger
 
 Now that we have implemented REST API endpoints for our application, we should describe to our fellow developers what these endpoints are and what kind of data they provide. We could write this documentation by hand, but there's a high risk that the documentation will become stale in the future. For example, if we make some alteration to the structure of the provided data and forget to update the documentation. That is why API documentation is commonly generated automatically by tools such as [Spring Doc](https://springdoc.org/).
 
@@ -576,6 +576,10 @@ public class CategoryRestController {
 > Generate a Swagger documentation for the project as described above. Add proper name and description for both the `ReadingRecommendationRestController` and the `CategoryRestController` controllers using the `@Tag` annotation. For each controller method add a proper summary and description using the `@Operation` annotation.
 >
 > For other developers to find the Swagger documentation, add a "Documentation" subheading for the `README.md` file and under that a link to the Swagger documentation at <http://localhost:8080/swagger-ui.html>.
+
+{: .highlight }
+>
+> From now on, add Swagger documentation for every new REST API endpoint.
 
 ## Communication between frontend and backend
 
