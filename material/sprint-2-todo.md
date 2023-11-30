@@ -501,6 +501,8 @@ We can omit attributes from the JSON output by using the [@JsonIgnore](https://w
 private List<Question> questions;
 ```
 
+To have more control over the attributes in the JSON output, [DTO](https://www.baeldung.com/java-dto-pattern) classes can be used instead of returning the entity classes directly from the controller methods.
+
 ## Communication between frontend and backend
 
 The purpose of the REST APIs we just implemented on the backend is that we can _separate_ the client application from the backend application. In web applications these client applications are commonly called _frontend applications_ and they are implemented using JavaScript programming language.
@@ -653,6 +655,10 @@ Before starting to implement the frontend features, we should test that the endp
 > Exercise 16
 >
 > Create two new labels: "frontend" and "backend". Add the "frontend" label for frontend-related tasks and the "backend" label for backend-related tasks.
+
+{: .highlight}
+
+> Omit the `@OneToMany` attributes from the JSON output in every entity by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the attributes.
 
 {: .important-title }
 
