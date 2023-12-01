@@ -176,7 +176,7 @@ Now let's break down the output.
 
 The first title is called `Changes to be committed.` The changes under this title will be added to the next commit.
 
-`Changes not staged for commit` refers to the changes which Git is aware of, which will **not** be added to the next commit.
+`Changes not staged for commit` refers to the changes which Git is aware of, which _will not_ be added to the next commit.
 
 Finally `Untracked files` contains all the files which are unknown to Git, meaning that the changes inside them are not being followed. For example, Git cannot distinguish what sort of changes have been done to the untracked files. In consequence, the changes are not being added to the next commit.
 
@@ -261,6 +261,10 @@ Date:   Wed Sep 6 12:51:07 2023 +0300
     Add new file
 ```
 
+{: .note }
+
+> You can navigate the log by pressing the up (↑) and down (↓) arrow keys on the keyboard. You can exit the log by pressing `q`.
+
 The command `git log` outputs the author of the commit, the time of its creation and its title. Every commit has a unique id, formed with [SHA-1](https://en.wikipedia.org/wiki/SHA-1). In the output of `git log` the id can be seen as a long string next to the word "commit", which is `51bf544c786a671c28f70713b6cb33d87cc38` in this case.
 
 {: .note }
@@ -284,7 +288,7 @@ Branches are usually used for testing out new features without breaking a workin
 > 3. Add another file called <code>shopping_list.txt</code> to the project, and write down what you need from the store (or just many rows of text).
 > 4. Create a subfolder called <code>school</code> into the project, and create a file called <code>school_file.txt</code> inside. You will need these files in the future exercises.
 > 5. After doing all the changes described above, create a total of three commits: one, where you add the story, a second on where you add the shopping list, and a third one where you add the school folder. Make sure that each commit message is truly descriptive.
-> 6. Using the command <code>git log</code>, check that you have properly created three commits.
+> 6. Using the command <code>git log</code>, check that you have properly created three commits. You can press `q` to exit the log.
 > 7. Add something new to the shopping list, and create another commit. Use the command <code>git add -p</code>.
 > 8. Make sure you can see all the commits in the output of <code>git log</code>.
 
@@ -293,9 +297,11 @@ Branches are usually used for testing out new features without breaking a workin
 > Exercise 4
 >
 > 1. Find out how you can remove changes from the state where they are being added to the next commit (under <code>Changes to be committed</code>), and move them under the headline <code>Changes not staged for commit</code>? Hint: <code>git status</code> will help.
-> 2. Add some new products to the shopping list, and add them to the next commit (so that they are under <code>Changes to be committed</code>). **Don't create the commit yet.**
-> 3. Then remove the changes from the next commit.
-> 4. Then remove the changes, using Git, so that when you open the shopping list, the new products are not there.
+> 2. Add some new products to the shopping list and save the file.
+> 3. Before adding the changes to the next commit, inspect the changes using the `git diff` command. You can navigate the diff by pressing the up (↑) and down (↓) arrow keys on the keyboard. The _removed lines_ have a "-" prefix and a red highlighting. The _added lines_ have a "+" prefix and a green highlighting. You can exit the diff by pressing `q`.
+> 4. Add the changes to the next commit (so that they are under <code>Changes to be committed</code>). _Don't create the commit yet_.
+> 5. Then remove the changes from the next commit.
+> 6. Then remove the changes, using Git, so that when you open the shopping list, the new products are not there.
 
 ## Sharing code via GitHub
 
@@ -345,9 +351,9 @@ A new repository called "origin" is added using an HTTPS connection by running t
 
 > Exercise 6
 >
-> Create a remote repository in GitHub for the project you created locally as instructed above. **Don't let GitHub create a README, license or a .gitignore file when creating the repository**. Doing so will cause problems later. Also, make sure that _the repository is public_ (the "Public" option is selected).
+> Create a remote repository in GitHub for the project you created locally as instructed above. _Don't let GitHub create a README, license or a .gitignore file when creating the repository_. Doing so will cause problems later. Also, make sure that _the repository is public_ (the "Public" option is selected).
 >
-> Add the repository as a remote to your local project using the `git remote add` command as instructed above. **Remember to use the HTTPS address when you copy the repository address in GitHub**. Note that the paste keyboard shortcut does not work on Git Bash. You need to right click the Git Bash window and choose "Paste".
+> Add the repository as a remote to your local project using the `git remote add` command as instructed above. _Remember to use the HTTPS address when you copy the repository address in GitHub_. Note that the paste keyboard shortcut does not work on Git Bash. You need to right click the Git Bash window and choose "Paste".
 
 ### Publishing
 
@@ -385,7 +391,7 @@ git fetch
 git status
 ```
 
-The command `git fetch` fetches the newest state of the project from GitHub, but doesn't change the local version. **If you find that `git status` doesn't show up-to-date information about the state of the remote, you should run `git fetch` first.**
+The command `git fetch` fetches the newest state of the project from GitHub, but doesn't change the local version. _If you find that `git status` doesn't show up-to-date information about the state of the remote, you should run `git fetch` first_.
 
 We still can't see the new line of text locally. However, if you pushed with the flag `-u`, Git will notice that the remote repository contains some changes it doesn't see locally: `Your branch is behind 'origin/main'`is printed at the top of the status output.
 
@@ -419,7 +425,7 @@ In practice the situation handled above corresponds to working on a collaborativ
 
 Next we'll find out what happens, if GitHub contains some information not found in the local version, and vice versa.
 
-Let's change the first row of `git_practice.txt` via GitHub. This will create a new commit to the remote version. Then let's add a new line at the end of the same file in the local version, **but without creating a new commit of the new change**.
+Let's change the first row of `git_practice.txt` via GitHub. This will create a new commit to the remote version. Then let's add a new line at the end of the same file in the local version, _but without creating a new commit of the new change_.
 
 Now if we try to fetch the latest changes with the command `git pull` we'll get:
 
@@ -445,7 +451,7 @@ In situations like this one can put the local changes aside to the _stash_. This
 > 2. Stash the changes you just made using Git.
 > 3. Open the files you changed and check if you can still see the changes
 > 4. Edit the <i>first</i> sentence of the file <code>story.txt</code> in GitHub and create a commit.
-> 5. Then edit the <i>last</i> sentence of the same file locally, but <strong>don't create a commit</strong>.
+> 5. Then edit the <i>last</i> sentence of the same file locally, but _don't create a commit_.
 > 6. Fetch the changes you made to <code>story.txt</code> in the remote repository to the local version. Use the stash.
 > 7. After you have successfully fetched the changes to the local version, create a commit of the changes you made to the last sentence of <code>story.txt</code>.
 > 8. Push the end result to GitHub.
@@ -540,6 +546,7 @@ Greetings from GitHub
 The mutually exclusive changes are separated with the symbols <, > and =. The word "HEAD" refers to the current commit (or the latest commit of the current branch in the local version), and the long letter and number combination is the id of the conflicting commit, coming in from the remote version. Advanced editors such as Visual Studio Code enable resolving conflicts with just a simple click, but otherwise the only option is to simply remove the lines one doesn't wish to keep in the project.
 
 {: .note }
+
 > Visual Studio Code has excellent features for Git, including features for solving merge conflicts quickly. These features are covered in the Visual Studio Code's [documentation](https://code.visualstudio.com/docs/sourcecontrol/overview).
 
 Notably, we'll remove the lines starting with <, > and =. In addition, we could for example combine the two greetings into one. In essence, the person resolving the conflict decides what remains in the file where the conflict is located.
@@ -636,7 +643,7 @@ Of course, the same procedure can be repeated on the command line. You can brows
 
 ## GitHub's workflow
 
-Sites like GitHub make collaboraton in development projects a lot easier. No one notices problems more efficiently than the actual users, and GitHub creates a platform for reporting those complications. Any user can create an _issue_ to a public project in GitHub, where one can report any problems with regards to using the software. Common issue subjects are error messages in edge cases, problems in installing, or missing features. 
+Sites like GitHub make collaboraton in development projects a lot easier. No one notices problems more efficiently than the actual users, and GitHub creates a platform for reporting those complications. Any user can create an _issue_ to a public project in GitHub, where one can report any problems with regards to using the software. Common issue subjects are error messages in edge cases, problems in installing, or missing features.
 
 If one knows the solution to a problem, they can even suggest their own improvements to the project. However, this requires having access to the source code of the project. A public project can be copied to a local computer with the command `git clone <https-address-of-the-repository>`. The command takes the address of the remote repository, which can be acquired from the upper right corner of the project page, as an argument.
 
@@ -694,5 +701,5 @@ Hungry for more? You can read about Git from the following sources:
   - A fun way of getting help to most common Git problems.
   - Some commands include overwriting Git history, which was not covered in this part. This might cause more problems than it helps. However, the site may be helpful in desperate times. Especially the first command `git reflog` can get you out of many complicated situations.
 - <a href="https://try.github.io/">https://try.github.io/</a>
-  - A tutorial by GitHub, starting from the basics. Handles some things which are not covered here, like `git diff`.
+  - A tutorial by GitHub, starting from the basics. Handles some things which are not covered here
 - If you've already gotten to know Git, you might be interested in learning more about its history. Storing commit history, demonstrated in the exercise "A Secret", also enables overwriting history. Although this can be useful for covering up mistakes, rewriting history can be dangerous in collaborative projects, since it can make other people's versions invalid. There is a tutorial on the subject by [Atlassan](https://www.atlassian.com/git/tutorials/rewriting-history). They also have other [advanced tutorials](https://www.atlassian.com/git/tutorials/advanced-overview).
