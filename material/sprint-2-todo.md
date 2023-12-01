@@ -632,13 +632,13 @@ export default function MessageList() {
 
 Explore the code in the `frontend` folder. You can start the Vite development server by runing the `npm run dev` command in the `frontend` folder.
 
-## Designing REST API endpoints for user stories
+## Designing the REST API endpoints for the user stories
 
-Next, let's consider what kind of REST API endpoints we need for the last three user stories. In the sixth user story, "{{site.sprint_2_user_story_6}}", we need an lists all the published quizzes. To follow the REST API naming principles, we can implement a GET method endpoint `/api/quizzes`. We can add a `QuizRestController` class and implement the endpoint with a `getAllQuizzes` method.
+Next, let's consider what kind of REST API endpoints we need for the last three user stories. In the sixth user story, "{{site.sprint_2_user_story_6}}", we need to list all the published quizzes. To follow the REST API naming principles, we can implement a GET method endpoint `/api/quizzes`. We can add a `QuizRestController` class and implement the endpoint with a `getAllQuizzes` method.
 
-In the seventh user story, "{{site.sprint_2_user_story_7}}", we need to display information of a quiz with a specific id. For this use-case we can implement a GET method enpoint `/api/quizzes/{id}`. If there is no quiz with the provided id, we should return a `404 Not Found` status as a response. Similarly, if the quiz is not published, we should return a `403 Forbidden` status as a response.
+In the seventh user story, "{{site.sprint_2_user_story_7}}", we need to display information of a quiz with a specific id. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}`. We can implement the endpoint with a `getQuizById` method in the `QuizRestController` class. If there is no quiz with the provided id, we should return a `404 Not Found` status as a response. Similarly, if the quiz is not published, we should return a `403 Forbidden` status as a response.
 
-We also want to list the quiz-related questions. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}/questions`. We can implement the endpoints with a `getQuizById` and a `getQuestionsByQuizId` method in the `QuizRestController` class. We should implement similar error handling for this endpoint as in the `/api/quizzes/{id}` endpoint.
+We also want to list the quiz-related questions. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}/questions`. We can implement the endpoint with a `getQuestionsByQuizId` method in the `QuizRestController` class. We should implement similar error handling for this endpoint as in the `/api/quizzes/{id}` endpoint.
 
 In the eighth user story, "{{site.sprint_2_user_story_8}}", we need save the student's answer to the database. Before implementing the endpoint we need to consider what kind of data we need to store about the student's answer. We want at least to know which questions the answer is related to, what's the answer text and whether the answer was correct or not (we could also infer this information from the question). So, we need to implement the appropriate JPA entity class and a JPA repository class first.
 
@@ -785,6 +785,16 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 > Tips for implementing the tasks:
 >
 > - Material UI [Snackbar](https://mui.com/material-ui/react-snackbar/)
+> - You can include the answer's question id in the request body in the following way:
+>
+>   ```json
+>   {
+>     "answerText": "Helsinki",
+>     "question": { "id": 1 }
+>   }
+>   ```
+>
+> - It is also possible to implement a simple [DTO](https://www.baeldung.com/java-dto-pattern) class, such as `CreateAnswerDto` for the request body. This way, you will get full control over the request body attributes
 
 ## REST API documentation with Swagger
 
@@ -813,7 +823,7 @@ We can provide more details about the endpoints by using specific annotations fo
 ```java
 @RestController
 @RequestMapping("/api/quizzes")
-@Tag(name="Quiz", description="Information about quizzes and their answers")
+@Tag(name="Quiz", description="Operations for accessing and managing quizzes")
 public class QuizRestController {
     // ...
 }
@@ -826,7 +836,7 @@ We can also provide more information about a specific endpoint using the `@Opera
 ```java
 @RestController
 @RequestMapping("/api/quizzes")
-@Tag(name="Quiz", description="Information about quizzes and their answers")
+@Tag(name="Quiz", description="Operations for accessing and managing quizzes")
 public class QuizRestController {
     // ...
 
@@ -848,10 +858,6 @@ public class QuizRestController {
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
 >
 > For other developers to find the Swagger documentation, add a "Documentation" subheading for the `README.md` file and under that a link to the Swagger documentation at <http://localhost:8080/swagger-ui.html>.
-
-{: .highlight }
-
-> From now on, add Swagger documentation for every new REST API endpoint.
 
 ## The .gitignore file
 

@@ -519,10 +519,6 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
 
-{: .highlight }
->
-> From now on, implement tests for every new REST API endpoint.
-
 ## Test coverage
 
 We have analyzed the code that we are testing and we are quite sure that our test scenarios cover everything. The good news is, that we don't need to trust only on our gut. There are so called _test coverage_ tools that analyze which lines of code our test scenarios cover and which they don't.
