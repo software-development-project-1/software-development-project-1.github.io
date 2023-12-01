@@ -695,11 +695,12 @@ If you run into a strange error message, don't be afraid to ask for help. Avoid 
 
 Hungry for more? You can read about Git from the following sources:
 
-- <a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a>
-  - Pro Git Book is rather heavy, but a comprehensive guide to using Git. It might be best to use as a reference for specific problems. Reading it from cover to cover might be unnecessarily cumbersome.
-- <a href="http://ohshitgit.com/">http://ohshitgit.com/</a>
+- [Git branch](https://www.atlassian.com/git/tutorials/using-branches) and [Git feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
+  - Git branches are commonly used to isolate work-in-progress code from the main branch. The first article covers the basics of Git branches.
+  - The second article describes a common software development workflow which utilizes Git branches.
+- [Oh Shit, Git!?!](http://ohshitgit.com/)
   - A fun way of getting help to most common Git problems.
   - Some commands include overwriting Git history, which was not covered in this part. This might cause more problems than it helps. However, the site may be helpful in desperate times. Especially the first command `git reflog` can get you out of many complicated situations.
-- <a href="https://try.github.io/">https://try.github.io/</a>
-  - A tutorial by GitHub, starting from the basics. Handles some things which are not covered here
-- If you've already gotten to know Git, you might be interested in learning more about its history. Storing commit history, demonstrated in the exercise "A Secret", also enables overwriting history. Although this can be useful for covering up mistakes, rewriting history can be dangerous in collaborative projects, since it can make other people's versions invalid. There is a tutorial on the subject by [Atlassan](https://www.atlassian.com/git/tutorials/rewriting-history). They also have other [advanced tutorials](https://www.atlassian.com/git/tutorials/advanced-overview).
+- [The Pro Git book](https://git-scm.com/book/en/v2)
+  - Pro Git Book is rather heavy, but a comprehensive guide to using Git. It might be best to use as a reference for specific problems. Reading it from cover to cover might be unnecessarily cumbersome.
+- If you've already gotten to know Git, you might be interested in learning more about its history. Storing commit history, demonstrated in the exercise "A Secret", also enables overwriting history. Although this can be useful for covering up mistakes, rewriting history can be dangerous in collaborative projects, since it can make other people's versions invalid. There is a tutorial on the subject by [Atlassian](https://www.atlassian.com/git/tutorials/rewriting-history). They also have other [advanced tutorials](https://www.atlassian.com/git/tutorials/advanced-overview).
