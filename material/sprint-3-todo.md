@@ -93,15 +93,18 @@ The order of the user stories represent the priotity provided by the Product Own
 
 > Exercise 5
 >
-> Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 to get an idea what the implementation could look like.
+> Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Add the issues to the Sprint 3 Backlog project.
+
+{: .note }
+> The [Authentcation](#authentication) section covers topics related to the authentication. Take a look at it before planning the authentication-related tasks. 
 
 {: .important-title }
 
 > Exercise 6
 >
-> Plan the tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
+> Plan the tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
 
@@ -109,7 +112,7 @@ The order of the user stories represent the priotity provided by the Product Own
 
 > Exercise 7
 >
-> Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
+> Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
 
@@ -117,7 +120,7 @@ The order of the user stories represent the priotity provided by the Product Own
 
 > Exercise 8
 >
-> Plan the tasks for the third user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
+> Plan the tasks for the third user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
 
@@ -660,6 +663,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 ```
 
 The `loadUserByUsername` method will need to return a `User` object based on the username provided by the paramater or throw an `UsernameNotFoundException` exception if no user is found.
+
+The [authentication example](https://github.com/software-development-project-1/authentication-example) project demonstrates how the application's authentication can be implemented. Explore the project's code for useful examples that you can apply for the user story's implementation. 
 
 {: .important-title }
 

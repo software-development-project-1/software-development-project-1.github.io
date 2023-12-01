@@ -195,7 +195,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 6
 >
-> Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get tips for the implementation.
+> Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get some implementation tips.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 2 Backlog project.
 
@@ -203,7 +203,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 7
 >
-> Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 to get tips for the implementation.
+> Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 2 Backlog project.
 
@@ -219,7 +219,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 9
 >
-> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 14 to get an idea what the implementation could look like.
+> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 14 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 2 Backlog project.
 

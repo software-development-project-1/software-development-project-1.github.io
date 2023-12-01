@@ -336,7 +336,7 @@ By default we can't see the labels on the issue cards. We can click on the arrow
 
 > Exercise 11
 >
-> Plan the tasks for the second user story, "{{site.sprint_1_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 to get an idea what the implementation could look like.
+> Plan the tasks for the second user story, "{{site.sprint_1_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
 
@@ -344,7 +344,7 @@ By default we can't see the labels on the issue cards. We can click on the arrow
 
 > Exercise 12
 >
-> Plan the tasks for the third user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 to get an idea what the implementation could look like.
+> Plan the tasks for the third user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
 
@@ -352,7 +352,7 @@ By default we can't see the labels on the issue cards. We can click on the arrow
 
 > Exercise 13
 >
-> Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 19 to get an idea what the implementation could look like.
+> Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 19 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
 
@@ -360,7 +360,7 @@ By default we can't see the labels on the issue cards. We can click on the arrow
 
 > Exercise 14
 >
-> Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get an idea what the implementation could look like.
+> Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
 
