@@ -683,8 +683,8 @@ The [authentication example](https://github.com/software-development-project-1/a
 >
 > Tips for implementing the tasks:
 >
-> - You can implement a GET `/api/quizzes/{id}/answers` endpoint, which returns the quiz-related answers. Remember to add [Swagger documentation](/sprint-2#rest-api-documentation-with-swagger) and implement tests for the new endpoint
-> - There are many chart libraries for React. One of these is [@mui/x-charts](https://mui.com/x/react-charts/)
+> - You can implement a GET `/api/quizzes/{id}/answers` endpoint, which returns the quiz-related answers
+> - There are many chart libraries for React. One of such libraries is [@mui/x-charts](https://mui.com/x/react-charts/)
 
 {: .important-title }
 
@@ -750,21 +750,22 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 > Exercise 19
 >
-> Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
+> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
+>
+> Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specefied in the React project's [README.md](https://github.com/facebook/react/blob/main/README.md) file.
+
 
 {: .important-title }
 
 > Exercise 20
 >
-> Deploy the final version of the application to Render and make sure that the application works properly in the production environment.
+> Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
 > Exercise 21
 >
-> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
->
-> Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specefied in the React project's [README.md](https://github.com/facebook/react/blob/main/README.md) file.
+> Deploy the final version of the application to Render and make sure that the application works properly in the production environment.
 
 ## Peer review
 
