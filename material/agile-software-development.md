@@ -219,7 +219,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > What's wrong with the following user stories?
 >
 > 1. "Blog post should have a list of comments"
-> 2. "As a content creator, I want to submit a form that sends an HTTP request to the /api/blog-posts REST API endpoint on the server, which inserts a new row to the blog_posts database table so that I can publish a new blog post for my blog"
+> 2. "As a content creator, I want to submit a form that sends an HTTP POST request to the /api/blog-posts REST API endpoint on the server, which inserts a new row to the blog_posts database table so that I can publish a new blog post for my blog"
 > 3. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
 > 4. "As a content creator, I want my blog's layout to have a modern look so that I can write visually pleasing blog posts"
 
@@ -227,7 +227,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 > Exercise 7
 >
-> The Product Owner came up with the following user stories during the Sprint Planning:
+> The Scrum Team came up with the following user stories during the Sprint Planning:
 >
 > 1. "Blog post should have a list of comments"
 > 2. "As a blog reader, I want to submit a form that sends a HTTP POST request to the /api/comments REST API endpoint on the server, which inserts a new row to the comments database table so that I can share my ideas about the blog post"
