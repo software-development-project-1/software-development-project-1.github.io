@@ -352,7 +352,7 @@ By default we can't see the labels on the issue cards. We can click on the arrow
 
 > Exercise 13
 >
-> Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 19 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 19 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
 
@@ -440,7 +440,7 @@ Let's have a look at the `messagelist.html` file that is using this layout:
 
 The `layout:decorate="~{layout.html}"` on the `html` element specifies that this template is using the `layout.html` file as the layout file. The `div` element that has the `layout:fragment="content"` attribute has the content that will be displayed on the corresponding layout fragment on the `layout.html` file.
 
-## Implementing the tasks
+## Tips for implementing the tasks
 
 Here's a few tips before you start implementing the tasks:
 
@@ -448,7 +448,7 @@ Here's a few tips before you start implementing the tasks:
 - _Push_ code to the GitHub repository often. Once you have some _working_ code, use `git add`, `git commit`, `git push` commands to push the code to GitHub.
 - _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer.
 - While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts).
-- See how the mentioned things are done in the [example project]({{site.example_project_link}}).
+- Take a look at the [example project]({{site.example_project_link}}) for examples.
 
 {: .note }
 

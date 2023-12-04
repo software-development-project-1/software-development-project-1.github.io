@@ -49,11 +49,11 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 3 goals in the Sprint Planning event:
 
-> "We now have the basic features for managing and taking quizzes. What we still need is a way for the students and teachers to see the quiz results. There should be a page in the student dashboard where the results of a quiz are visualized. For example, the page could have pie charts visualizing the number of correct and wrong answers for each question. There should be a link to the results page next to each quiz in the quiz list page.
-
-> We don't want anyone to be able to add, edit and delete quizzes. So that teachers can manage their personal quizzes, we need the teacher to be able to register with username and password. Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
+> "We now have the basic features for managing and taking quizzes. What we still need is a way for the students and teachers to see the quiz results. There should be a page in the student dashboard where the results of a quiz are visualized. For example, the number of correct and wrong answers of each question could be visualized with pie charts. There should be a link to the results page next to each quiz in the quiz list page.
 >
-> An anonymous user, that is an user who is not signed in, should be able to see the quiz list. However, they should not be able to add a quiz. That is, the links for adding a quiz should not be visible if the user is not signed in.
+> So that a teacher can manage their personal quizzes, we need the teacher to be able to register with a username and password. Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
+>
+> An anonymous user, that is an user who is not signed in, should be able to see the quiz list. However, they should not be able to add a quiz. That is, the link for adding a quiz should not be visible if the user is not signed in.
 >
 > After signing in, the teacher should be able to add a quiz. However, the teacher should only be able to edit and delete quizzes they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The quiz list should also display the name of the teacher who has added the quiz."
 >

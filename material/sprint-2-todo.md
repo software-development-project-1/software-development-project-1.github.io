@@ -692,7 +692,7 @@ Web browsers don't allow `fetch` functions to send cross-origin requests by defa
 
 The idea of CORS is that the web browser "asks" the backend if cross-origin request from a certain origin is allowed by sending a special HTTP request. If backend allows the requests, then the web browser will send it. In a Spring Boot application we can use the [@CrossOrigin](https://spring.io/guides/gs/rest-service-cors/) annotation in the class or method level to allow cross-origin requests to certain or all paths of controller.
 
-For example we can allow cross-origin requests from `http://localhost:5173` origin for all `ReadingRecommendationRestController` method paths in the following way:
+For example we can allow cross-origin requests from `http://localhost:5173` origin for all `MessageRestController` method paths in the following way:
 
 ```java
 @RestController
