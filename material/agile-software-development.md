@@ -11,7 +11,7 @@ nav_order: 3
 
 ## Submitting this week's exercises
 
-All of this week's exercises (exercises 1-8) are submitted to [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a _single PDF file_. The submission deadline is on {{site.week_1_deadline}}.
+All of this week's exercises (exercises 1-9) are submitted to [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a _single PDF file_. The submission deadline is on {{site.week_1_deadline}}.
 
 {: .highlight }
 
@@ -141,7 +141,7 @@ In the _requirements phase_ of the software development lifecycle, the stakehold
 
 For example, two separate user stories for a blog application could be the following:
 
-> As a content creator I want to create a new blog so that I can start writing blog posts.
+> As a content creator I want to create a new blog so that I can start writing blog posts for my readers.
 
 > As a blog reader I want to browse list of blog posts of a blog so that I can find interesting posts to read.
 
@@ -150,6 +150,14 @@ A user story is usually written from the user's perspective and follows the form
 > As [a user persona], I want [to perform this action] so that [I can accomplish this goal].
 
 The "a user persona" part describes the user role who wants to use the feature described in the "to perform this action" part. If we can't come up with a specific role we can just call the user persona a "user". The last part of the user story format is the "I can accomplish this goal" part. This justifies, why this user story is important enough to be implemented.
+
+For example, the following user story is not in the specified format:
+
+> ❌ Create a new blog.
+
+This user story doesn't describe the user role and the goal the user can accomplish with the feature described by the user story. Considering these aspects, the correct format for the user story is the following:
+
+> ✅ As a content creator I want to create a new blog so that I can start writing blog posts for my readers.
 
 {: .note }
 
@@ -210,19 +218,22 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > What's wrong with the following user stories?
 >
-> 1. "As a content creator, I want to submit a form that sends an HTTP request to the /api/blog-posts API endpoint on the server, which inserts a new row to the database so that I can publish a new blog post on my blog"
-> 2. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
-> 3. "As a content creator, I want my blog's layout to have a modern look so that I can write visually pleasing blog posts"
+> 1. "Blog post should have a list of comments"
+> 2. "As a content creator, I want to submit a form that sends an HTTP request to the /api/blog-posts API endpoint on the server, which inserts a new row to the database so that I can publish a new blog post on my blog"
+> 3. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
+> 4. "As a content creator, I want my blog's layout to have a modern look so that I can write visually pleasing blog posts"
 
 {: .important-title }
 
 > Exercise 7
 >
-> The Product Owner came up with the following user story during the Sprint Planning:
+> The Product Owner came up with the following user stories during the Sprint Planning:
 >
-> "As a content creator I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
+> 1. "Blog post should have a list of comments"
+> 2. "As a content creator I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
 >
-> How would improve the user story?
+>
+> How would improve these user stories?
 
 {: .important-title }
 
@@ -230,6 +241,18 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).
 >
-> Come up with at least five _well-written_ user stories based on the project description. Use the INVEST criteria to explain, why your user stories are well-written.
+> Come up with at least six _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Briefly justify why each of your user stories are well-written based on the INVEST criteria.
 >
 > Hint: pay attention to the size of the user story. Split big user stories into smaller ones.
+
+{: .important-title }
+
+> Exercise 9
+>
+> Imagine that you are the Product Owner of the project described in the [project description](/project-description).
+>
+> How would you _prioritize_ the six user stories that you came up with in the previous exercise? That is, in which order these user stories should be implemented to maximize the stakeholder's value for the application?
+>
+> On top of the importance of a user story, consider the dependencies between the different user stories. For example, certain user stories might be impossible to implement before some other user story has been implemented. Can we for example list quizzes before a teacher can add one?
+>
+> List the six user stories in the priority order (top-priority user stories at the top of the list). Briefly justify, why you chose this specific prioritization.
