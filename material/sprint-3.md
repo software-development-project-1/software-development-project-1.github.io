@@ -582,7 +582,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 The `loadUserByUsername` method will need to return a `User` object based on the username provided by the paramater or throw an `UsernameNotFoundException` exception if no user is found.
 
-The [authentication example](https://github.com/software-development-project-1/authentication-example) project demonstrates how the application's authentication can be implemented. Explore the project's code for useful examples that you can apply for the user story's implementation. 
+The [authentication example](https://github.com/software-development-project-1/authentication-example) project demonstrates how the application's authentication can be implemented. Explore the project's code for useful examples that you can apply for the user story's implementation.
 
 {: .important-title }
 
@@ -699,7 +699,7 @@ We should now be able to delete reading recommendations again.
 
 The peer review is used to assess each team member. The 10 personal points are based on the peer reviews and the teacher's observations. _Every team member must write a peer review_.
 
-The peer review is conducted with a form. You can find the link for your team's peer review form in [Moodle]({{site.peer_review_moodle_link}}). In the form you will need to assess every team member's (including yourself) efforts in the team work in the following aspects:
+The peer review is conducted with a form. You will receive the link to the form via email from the teacher at the beginning of the Sprint. In the form you will need to assess every team member's (including yourself) efforts in the team work in the following aspects:
 
 - _Activity in team work_: Attendance and active presence during team meetings and communication with team members outside the meetings
 - _Technical contributions_: amount of working code written _or_ active participation in the writing process of the code (for example [pair-programming](https://en.wikipedia.org/wiki/Pair_programming))

@@ -55,7 +55,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > An anonymous user, that is an user who is not signed in, should be able to see the quiz list. However, they should not be able to add a quiz. That is, the links for adding a quiz should not be visible if the user is not signed in.
 >
-> After signing in, the teacher should be able to add a quiz. However, the teacher should only be able to edit and delete quizzes they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz."
+> After signing in, the teacher should be able to add a quiz. However, the teacher should only be able to edit and delete quizzes they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The quiz list should also display the name of the teacher who has added the quiz."
 >
 > -- The Product Owner
 
@@ -98,7 +98,8 @@ The order of the user stories represent the priotity provided by the Product Own
 > Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Add the issues to the Sprint 3 Backlog project.
 
 {: .note }
-> The [Authentcation](#authentication) section covers topics related to the authentication. Take a look at it before planning the authentication-related tasks. 
+
+> The [Authentcation](#authentication) section covers topics related to the authentication. Take a look at it before planning the authentication-related tasks.
 
 {: .important-title }
 
@@ -470,7 +471,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > Create a new "test" label for test-related tasks.
 
 {: .highlight }
->
+
 > If the implementation of the endpoint doesn't work as described in the test scenarios, fix the implementation.
 
 {: .important-title }
@@ -664,7 +665,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 The `loadUserByUsername` method will need to return a `User` object based on the username provided by the paramater or throw an `UsernameNotFoundException` exception if no user is found.
 
-The [authentication example](https://github.com/software-development-project-1/authentication-example) project demonstrates how the application's authentication can be implemented. Explore the project's code for useful examples that you can apply for the user story's implementation. 
+The [authentication example](https://github.com/software-development-project-1/authentication-example) project demonstrates how the application's authentication can be implemented. Explore the project's code for useful examples that you can apply for the user story's implementation.
 
 {: .important-title }
 
@@ -721,11 +722,27 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 > Exercise 18
 >
-> Implement the tasks of the first user story, "{{site.sprint_3_user_story_4}}".
+> Implement the tasks of the fourth user story, "{{site.sprint_3_user_story_4}}".
+>
+> The implementation should look roughly something like this:
+>
+> ![](/assets/todo-sprint-3-user-story-4.png)
 >
 > Tips for implementing the tasks:
 >
 > - See how the authenticated user is associated with a message in the [MessageController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/MessageController.java) class in the authentication example project
+> - You can display content in a Thymeleaf template based on the authenticated user's username in the following way:
+>
+>   ```html
+>   <a
+>     th:href="@{/quizzes/{id}/edit(id = ${quiz.id})}"
+>     class="btn btn-secondary btn-sm"
+>     sec:authorize="isAuthenticated()"
+>     th:if="${#authentication.principal.username == quiz.user?.username}"
+>   >
+>     Edit
+>   </a>
+>   ```
 
 {: .important-title }
 
@@ -743,7 +760,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 > Exercise 21
 >
-> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE.txt` at the root folder of your repository (the same for that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
+> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE.txt` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 
 ## Peer review
 
@@ -753,7 +770,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 The peer review is used to assess each team member. The 10 personal points are based on the peer reviews and the teacher's observations. _Every team member must write a peer review_.
 
-The peer review is conducted with a form. You can find the link for your team's peer review form in [Moodle]({{site.peer_review_moodle_link}}). In the form you will need to assess every team member's (including yourself) efforts in the team work in the following aspects:
+The peer review is conducted with a form. You will receive the link to the form via email from the teacher at the beginning of the Sprint. In the form you will need to assess every team member's (including yourself) efforts in the team work in the following aspects:
 
 - _Activity in team work_: Attendance and active presence during team meetings and communication with team members outside the meetings
 - _Technical contributions_: amount of working code written _or_ active participation in the writing process of the code (for example [pair-programming](https://en.wikipedia.org/wiki/Pair_programming))
