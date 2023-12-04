@@ -47,7 +47,7 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 3 goals in the Sprint Planning event:
 
-> "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username, password. User should not be able to register with a blank username or a password less than 8 characters long. The password should also contain at least one letter and at least one number.
+> "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username, password. User should not be able to register with a blank username or a password less than 8 characters long. The username should not be already taken by another registered user. The password should contain at least one letter and at least one number.
 
 > After registering, the user should be able to sign in using their username and password provided during the registration. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in form. Once the user is signed in, there should be "Sign out" link in the navigation bar that will sign the user out.
 >
@@ -689,7 +689,7 @@ We should now be able to delete reading recommendations again.
 
 > Exercise 19
 >
-> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE.txt` at the root folder of your repository (the same for that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
+> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same for that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 
 ## Peer review
 

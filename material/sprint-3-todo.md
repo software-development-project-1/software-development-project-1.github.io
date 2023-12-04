@@ -51,7 +51,9 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "We now have the basic features for managing and taking quizzes. What we still need is a way for the students and teachers to see the quiz results. There should be a page in the student dashboard where the results of a quiz are visualized. For example, the number of correct and wrong answers of each question could be visualized with pie charts. There should be a link to the results page next to each quiz in the quiz list page.
 >
-> So that a teacher can manage their personal quizzes, we need the teacher to be able to register with a username and password. Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
+> So that a teacher can manage their personal quizzes, we need the teacher to be able to register with a username and password. User should not be able to register with a blank username or a password less than 8 characters long. The username should not be already taken by another registered user. The password should contain at least one letter and at least one number.
+>
+> Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
 >
 > An anonymous user, that is an user who is not signed in, should be able to see the quiz list. However, they should not be able to add a quiz. That is, the link for adding a quiz should not be visible if the user is not signed in.
 >
@@ -760,7 +762,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 > Exercise 21
 >
-> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE.txt` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
+> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 
 ## Peer review
 
