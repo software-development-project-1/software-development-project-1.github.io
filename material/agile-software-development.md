@@ -233,7 +233,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > 2. "As a blog reader, I want to submit a form that sends a HTTP POST request to the /api/comments REST API endpoint on the server, which inserts a new row to the comments database table so that I can share my ideas about the blog post"
 > 3. "As a content creator I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
 >
-> How would improve these user stories?
+> How would improve these user stories? Come up with a _well-written_ version of each user story.
 
 {: .important-title }
 
