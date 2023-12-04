@@ -53,7 +53,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > An anonymous user, that is an user who is not signed in, should be able to see the reading recommendation list and the category list. However, they should not be able to add a reading recommendation or a category. That is, the links for adding a reading recommendation and adding a category should not be visible if the user is not signed in.
 >
-> After signing in, the user should be able to add reading recommendations and categories. However, the user should only be able to edit and delete reading recommendations that they have added. That is, the "Edit" link and the "Delete" button in the reading recommendation list should only be visible if the user has added the reading recommendation."
+> After signing in, the user should be able to add reading recommendations and categories. However, the user should only be able to edit and delete reading recommendations that they have added. That is, the "Edit" link and the "Delete" button in the reading recommendation list should only be visible if the user has added the reading recommendation. The reading recommendation list should also display the username of the user who has added the recommendation."
 >
 > -- The Product Owner
 
