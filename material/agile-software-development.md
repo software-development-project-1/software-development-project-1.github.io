@@ -171,7 +171,7 @@ The user stories described previously sound like fairly good descriptions of sof
 
 Because the Product Owner in the Scrum Team is commonly a non-technical person, user stories should not contain technical details of the implementation. For example, the following user story is too technical:
 
-> ❌ As a blog reader I want to send an HTTP request to the server to get the list of blog posts in a JSON format so that I can find interesting posts to read.
+> ❌ As a blog reader I want to send an HTTP GET request to the server to get the list of blog posts in a JSON format so that I can find interesting posts to read.
 
 A better user story would express the feature from the user's point of view:
 
@@ -219,7 +219,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > What's wrong with the following user stories?
 >
 > 1. "Blog post should have a list of comments"
-> 2. "As a content creator, I want to submit a form that sends an HTTP request to the /api/blog-posts API endpoint on the server, which inserts a new row to the database so that I can publish a new blog post on my blog"
+> 2. "As a content creator, I want to submit a form that sends an HTTP request to the /api/blog-posts REST API endpoint on the server, which inserts a new row to the blog_posts database table so that I can publish a new blog post for my blog"
 > 3. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
 > 4. "As a content creator, I want my blog's layout to have a modern look so that I can write visually pleasing blog posts"
 
@@ -230,8 +230,8 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > The Product Owner came up with the following user stories during the Sprint Planning:
 >
 > 1. "Blog post should have a list of comments"
-> 2. "As a content creator I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
->
+> 2. "As a blog reader, I want to submit a form that sends a HTTP POST request to the /api/comments REST API endpoint on the server, which inserts a new row to the comments database table so that I can share my ideas about the blog post"
+> 3. "As a content creator I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
 >
 > How would improve these user stories?
 
