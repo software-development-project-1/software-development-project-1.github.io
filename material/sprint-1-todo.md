@@ -11,7 +11,7 @@ search_exclude: true
 
 # Sprint 1
 
-This week we'll start working on the project described by the Product Owner in the [project description](/project-description). As we have learned, in Scrum the project advances in short iterations called _Sprints_. Each of our three sprints last two weeks. This week is the start of the Sprint 1.
+This week we'll start working on the project described by the Product Owner in the [project description](/project-description). As we have learned, in Scrum the project advances in short iterations called _Sprints_. Each of our three Sprints last two weeks. This week is the start of the Sprint 1.
 
 {: .highlight }
 
@@ -25,7 +25,7 @@ The Sprint assesment is done based on the exercises 1-22. The team can earn up t
 
 ## Sprint Planning
 
-At the beginning of each Sprint, the _Sprint Planning_ event is organized. During this event the whole Scrum Team participates in planning the requirements for the sprint. As we have learned, these requirements are documented as _user stories_, which are a short, simple description of a feature told from the perspective of the person who desires the new feature in the software. These user stories are added to a _Product Backlog_, which sort of an prioritized todo-list of user stories for the project.
+At the beginning of each Sprint, the _Sprint Planning_ event is organized. During this event the whole Scrum Team participates in planning the requirements for the Sprint. As we have learned, these requirements are documented as _user stories_, which are a short, simple description of a feature told from the perspective of the person who desires the new feature in the software. These user stories are added to a _Product Backlog_, which sort of an prioritized todo-list of user stories for the project.
 
 The idea of Sprint Planning is not to make long term plans, for example what project should look like after three months. Because _requirements tend to change_, we should only do planning for the near future, usually just for the upcoming Sprint. That's why Sprint Planning event commonly only takes at most a few hours.
 
@@ -197,7 +197,7 @@ Taskboards in GitHub Projects are called _projects_. Let's create a project for 
 We now have a project with the default columns: "Todo", "In progress" and "Done". The column will determine the status of the user story. Let's change the column labels by clicking the three dots at the top-right corner of the column. Name the columns in the following manner from left to right:
 
 - "Backlog" for the user stories that are not on any Sprint yet
-- "In sprint" for the user stories that are chosen for the current Sprint
+- "In Sprint" for the user stories that are chosen for the current Sprint
 - "Done" for the user stories that have been completed
 
 Now, let's make sure that our project is public. Click the project's name and the project's settings should open. Scroll down to "Danger zone" section and choose "Visibility" as "Public" from the dropdown menu.
@@ -368,7 +368,7 @@ By default we can't see the labels on the issue cards. We can click on the arrow
 
 > Exercise 15
 >
-> Discuss how you will divide the workload (the tasks) of the sprint among the team members. For example, each team member could be responsible for the tasks of a single user story. Then, add an _assignee_ for each task related issue. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same task together.
+> Discuss how you will divide the workload (the tasks) of the Sprint among the team members. For example, each team member could be responsible for the tasks of a single user story. Then, add an _assignee_ for each task related issue. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same task together.
 
 {: .note }
 
@@ -680,7 +680,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 ## GitHub release
 
-Once the GitHub repository's main branch has a working version of the application with the desired features at the end of the sprint, we should _release_ it for the users. [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is a way to "freeze" the source code of a project at certain point of the commit history and to provide users a working version of the application.
+Once the GitHub repository's main branch has a working version of the application with the desired features at the end of the Sprint, we should _release_ it for the users. [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is a way to "freeze" the source code of a project at certain point of the commit history and to provide users a working version of the application.
 
 Usually a new version of an application is released at the end of each Sprint. When we create a new release at the end of each Sprint, we will create a _release history_ for the project. Users can easily browse and download the source code of different versions of the application by going through the release history.
 

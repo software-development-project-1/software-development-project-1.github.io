@@ -968,7 +968,7 @@ We want the frontend application to be accessible in a certain path of the appli
 @Controller
 public class FrontendController {
     @GetMapping("/app/**")
-    public String renderFrontend(Model model) {
+    public String renderFrontend() {
         return "index";
     }
 }
@@ -979,15 +979,15 @@ Last thing to do is to tell Thymeleaf to search for template files in the `src/m
 ```java
 @Bean
 public ClassLoaderTemplateResolver secondaryTemplateResolver() {
-    ClassLoaderTemplateResolver secondaryTemplateResolver = new ClassLoaderTemplateResolver();
-    secondaryTemplateResolver.setPrefix("static/");
-    secondaryTemplateResolver.setSuffix(".html");
-    secondaryTemplateResolver.setTemplateMode(TemplateMode.HTML);
-    secondaryTemplateResolver.setCharacterEncoding("UTF-8");
-    secondaryTemplateResolver.setOrder(1);
-    secondaryTemplateResolver.setCheckExistence(true);
+    ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
+    templateResolver.setPrefix("static/");
+    templateResolver.setSuffix(".html");
+    templateResolver.setTemplateMode(TemplateMode.HTML);
+    templateResolver.setCharacterEncoding("UTF-8");
+    templateResolver.setOrder(1);
+    templateResolver.setCheckExistence(true);
 
-    return secondaryTemplateResolver;
+    return templateResolver;
 }
 ```
 
