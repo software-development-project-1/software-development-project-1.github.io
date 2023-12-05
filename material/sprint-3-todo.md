@@ -675,7 +675,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 >
 > Implement the tasks of the first user story, "{{site.sprint_3_user_story_1}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
 >
 > ![](/assets/todo-sprint-3-user-story-1-1.png)
 >
@@ -692,7 +692,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 >
 > Implement the tasks of the second user story, "{{site.sprint_3_user_story_2}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
 >
 > ![](/assets/todo-sprint-3-user-story-2.png)
 >
@@ -709,7 +709,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 >
 > Implement the tasks of the third user story, "{{site.sprint_3_user_story_3}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
 >
 > ![](/assets/todo-sprint-3-user-story-3-1.png)
 >
@@ -726,7 +726,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 >
 > Implement the tasks of the fourth user story, "{{site.sprint_3_user_story_4}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
 >
 > ![](/assets/todo-sprint-3-user-story-4.png)
 >

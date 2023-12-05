@@ -239,7 +239,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Implement the tasks of the first user story, "{{site.sprint_2_user_story_1}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
 >
 > ![](/assets/todo-sprint-2-user-story-1.png)
 >
@@ -269,7 +269,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Implement the tasks of the third user story, "{{site.sprint_2_user_story_3}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
 >
 > ![](/assets/todo-sprint-2-user-story-2.png)
 >
@@ -281,7 +281,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Implement the tasks of the fourth user story, "{{site.sprint_2_user_story_4}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look roughly roughly something like this:
 >
 > ![](/assets/todo-sprint-2-user-story-3.png)
 
@@ -291,7 +291,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Implement the tasks of the fifth user story, "{{site.sprint_2_user_story_5}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look roughly roughly something like this:
 >
 > ![](/assets/todo-sprint-2-user-story-4.png)
 
@@ -732,7 +732,7 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 >
 > Implement the tasks of the sixth user story, "{{site.sprint_2_user_story_6}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
 >
 > ![](/assets/todo-sprint-2-user-story-6.png)
 >
@@ -746,7 +746,7 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 >
 > Implement the tasks of the seventh user story, "{{site.sprint_2_user_story_7}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
 >
 > ![](/assets/todo-sprint-2-user-story-7-1.png)
 >
@@ -774,7 +774,7 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 >
 > Implement the tasks of the eighth user story, "{{site.sprint_2_user_story_8}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
 >
 > ![](/assets/todo-sprint-2-user-story-8-1.png)
 >
@@ -857,7 +857,7 @@ public class QuizRestController {
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
 >
-> For other developers to find the Swagger documentation, add a "Documentation" subheading for the `README.md` file and under that a link to the Swagger documentation at <http://localhost:8080/swagger-ui.html>.
+> For other developers to find the Swagger documentation, add a "Documentation" subheading for the `README.md` file and under that a link to the Swagger documentation in the production environment (in Render). The link format is <http://name-of-the-web-service.onrender.com/swagger-ui.html>. Deploy the application to Render and make sure that the Swagger documentation is accessible.
 
 ## The .gitignore file
 
@@ -1057,7 +1057,7 @@ The Product Owner came up with a feature for the application if we run out of wo
 >
 > Come up with a user story based on the Product Owner's description, create an issue for the user story and add it to the Product Backlog project. Then, split the user story into tasks, create an issue for each task and add those to the Sprint 2 Backlog project. Finally, implement the tasks.
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
 >
 > ![](/assets/todo-sprint-2-user-story-bonus.png)
 >
