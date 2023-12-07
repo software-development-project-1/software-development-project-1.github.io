@@ -243,7 +243,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 > ![ER Diagram](./er-diagram.png)
 > ```
 >
-> GitHub also supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain a diagram.
+> GitHub also supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain a diagram. Take a look at Mermaid's [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) documentation for more.
 >
 > _Keep this documentation up-to-date_ when you add new entities for the application.
 
@@ -473,7 +473,7 @@ In this case, the `getMessageById` method will handle GET request to the path `/
 
 > It's handy to use some prefix, such as "api" to distinguish paths that produce JSON responses from paths that produce HTML pages.
 
-### REST API error handling and HTTP status codes
+### HTTP status codes and REST API error handling
 
 Previously we have handled errors in requests by sending a redirect or rendering a Thymeleaf template with some error messages. With REST API endpoints we communicate errors with [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) and JSON formatted error objects containing details about the error. HTTP status codes are numeric codes that describe whether the request was successful or not.
 
@@ -503,7 +503,24 @@ In the `createMessage` method will send a `400 Bad Request` status code with the
 }
 ```
 
-If we don't throw a `ResponseStatusException` exception, the `200 OK` status code will be sent with the response, which indicates the that request succeeded.
+If we don't throw a `ResponseStatusException` exception, the `200 OK` status code will be sent with the response, which indicates the that request succeeded. To get more control over the response, we can use the [ResponseEntity](https://www.baeldung.com/spring-response-entity) class:
+
+```java
+@PostMapping("")
+public ResponseEntity<?> createMessage(@Valid @RequestBody Message message, BindingResult bindingResult) {
+    if (bindingResult.hasErrors()) {
+        List<String> errorMessages = bindingResult.getAllErrors().stream().map((error) -> error.getDefaultMessage())
+                .collect(Collectors.toList());
+
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorMessages);
+    }
+
+    Message newMessage = new Message(message.getContent());
+    messageRepository.save(newMessage);
+
+    return ResponseEntity.status(HttpStatus.CREATED).body(newMessage);
+}
+```
 
 ### Omitting attributes from the JSON output
 

@@ -120,7 +120,7 @@ The order of the user stories represent the priotity provided by the Product Own
 > ![ER Diagram](./er-diagram.png)
 > ```
 >
-> GitHub also supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain a diagram.
+> GitHub also supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain a diagram. Take a look at Mermaid's [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) documentation for more.
 >
 > _Keep this documentation up-to-date_ when you add new entities for the application.
 
