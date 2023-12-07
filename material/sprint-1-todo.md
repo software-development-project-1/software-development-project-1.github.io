@@ -661,8 +661,9 @@ Because developers use different IDEs, it is easier to describe how the applicat
 
 Here's a simple usage guide on how to start the example project application:
 
-1. Start the application by running `./mvnw spring-boot:run` on the command-line
-2. Once the application has started, visit <http://localhost:8080> in a browser to use the application
+1. Clone the GitHub repository
+2. Start the application by running `./mvnw spring-boot:run` on the command-line in the repository folder
+3. Once the application has started, visit <http://localhost:8080> in a browser to use the application
 
 {: .highlight }
 
@@ -674,7 +675,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 > Exercise 21
 >
-> Write a usage guide on _how to start your application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
+> Write a usage guide on _how to start the backend application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
 >
 > You can assume that the reader of the `README.md` file is a software developer who knows how to use a command-line interface, the basic Git commands and install the required Java version.
 

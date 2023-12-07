@@ -17,7 +17,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-27. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-29. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -698,6 +698,12 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Add the issues to the Sprint 2 Backlog project.
 
+{: .important-title }
+
+> Exercise 21
+>
+> Add instructions on _how to start the frontend application_ to the `README.md` file under the "Usage guide" subheading.
+
 ## Cross-Origin Resource Sharing (CORS)
 
 The Vite development server is serving the JavaScript files from an URL that starts with `http://localhost:5173`. Our backend is accessible in the URL `http://localhost:8080`. When we send a request with the `fetch` function from the frontend to our backend, we send a request to a _different origin_. These kind of requests are called _cross-orgin_ requests.
@@ -742,7 +748,7 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
 > Implement the tasks of the sixth user story, "{{site.sprint_2_user_story_6}}".
 >
@@ -756,7 +762,7 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 23
 >
 > Implement the tasks of the seventh user story, "{{site.sprint_2_user_story_7}}".
 >
@@ -784,7 +790,7 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 24
 >
 > Implement the tasks of the eighth user story, "{{site.sprint_2_user_story_8}}".
 >
@@ -867,9 +873,11 @@ public class QuizRestController {
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 25
 >
-> Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Add a link to the Swagger documentation in the production environment (in Render) to the `README.md` file under the "Documentation" subheading. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui.html>. Deploy the application to Render and make sure that the Swagger documentation is accessible.
+> Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
+>
+> Add a link to the Swagger documentation in the production environment (in Render) to the `README.md` file under the "Documentation" subheading. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui.html>. Deploy the application to Render and make sure that the Swagger documentation is accessible.
 
 ## The .gitignore file
 
@@ -1019,7 +1027,7 @@ Now we should be ready to deploy the frontend. Before deploying the application 
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 26
 >
 > Do the required setup for the frontend deployment as instructed above and deploy the application to Render. Make sure that the application (especially the frontend) works properly in the production environment.
 
@@ -1029,19 +1037,19 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 27
 >
 > Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive frontend-related files from the `frontend` folder.
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 28
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 28
+> Exercise 29
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If you managed to deploy the application to Render, demonstrate the features in the production environment.
 >

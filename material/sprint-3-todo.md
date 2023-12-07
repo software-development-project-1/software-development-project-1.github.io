@@ -572,6 +572,12 @@ Green highlight indicates that the line _is fully covered_. Yellow highlight ind
 >
 > Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the methods in the `QuizRestController` and `AnswerRestController` classes we tested previously. Are all the lines of the methods fully covered by the tests?
 
+{: .important-title }
+
+> Exercise 15
+>
+> Add instructions on _how to run the tests_ to the `README.md` file under the "Usage guide" subheading. You can instruct the reader to use the `./mvnw test` command to run the tests.
+
 ## Authentication
 
 Most of the application have features that need to verify the user's identity before they are allowed to perform certain actions. This process is referred to as _authentication_. User's identity can be verified in different ways, but a quite common process is to associate a password with a certain username or some other unique identifier such as email. The user who knows the password of a username will be identified as that user.
@@ -671,7 +677,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 16
 >
 > Implement the tasks of the first user story, "{{site.sprint_3_user_story_1}}".
 >
@@ -688,7 +694,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 17
 >
 > Implement the tasks of the second user story, "{{site.sprint_3_user_story_2}}".
 >
@@ -705,7 +711,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 18
 >
 > Implement the tasks of the third user story, "{{site.sprint_3_user_story_3}}".
 >
@@ -722,7 +728,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 19
 >
 > Implement the tasks of the fourth user story, "{{site.sprint_3_user_story_4}}".
 >
@@ -748,7 +754,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 20
 >
 > Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
@@ -757,13 +763,13 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 21
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
 > Deploy the final version of the application to Render and make sure that the application works properly in the production environment.
 
@@ -785,7 +791,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 23
 >
 > Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 
@@ -805,13 +811,13 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 24
 >
 > Write the final report for the course as instructed above.
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 25
 >
 > You can now pat yourself on the back, the project is done! 🎉
 >
