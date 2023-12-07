@@ -235,7 +235,21 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 10
+>
+> Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a verbal description of the application's data model, which documents the application's entities, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). Add the diagram and the verbal description to a `data-model.md` file in the `documentation` folder. The verbal description should explain the purpose of each entity and their relationship to other entities. Add a link to the file to the `README.md` file under a "Documentation" subheading. If you place the diagram image to the `documentation` folder you can add it to a Markdown file in the following way:
+>
+> ```md
+> ![ER Diagram](./er-diagram.png)
+> ```
+>
+> GitHub also supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain a diagram.
+>
+> _Keep this documentation up-to-date_ when you add new entities for the application.
+
+{: .important-title }
+
+> Exercise 12
 >
 > Implement the tasks of the first user story, "{{site.sprint_2_user_story_1}}".
 >
@@ -254,7 +268,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > Implement the tasks of the second user story, "{{site.sprint_2_user_story_2}}".
 >
@@ -265,7 +279,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > Implement the tasks of the third user story, "{{site.sprint_2_user_story_3}}".
 >
@@ -277,7 +291,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 15
 >
 > Implement the tasks of the fourth user story, "{{site.sprint_2_user_story_4}}".
 >
@@ -287,7 +301,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 16
 >
 > Implement the tasks of the fifth user story, "{{site.sprint_2_user_story_5}}".
 >
@@ -652,7 +666,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 17
 >
 > Create two new labels: "frontend" and "backend". Add the "frontend" label for frontend-related tasks and the "backend" label for backend-related tasks.
 
@@ -662,7 +676,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 18
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get tips for the implementation.
 >
@@ -670,7 +684,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 19
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 21 to get tips for the implementation.
 >
@@ -678,7 +692,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 20
 >
 > Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 22 to get tips for the implementation.
 >
@@ -728,7 +742,7 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 21
 >
 > Implement the tasks of the sixth user story, "{{site.sprint_2_user_story_6}}".
 >
@@ -742,7 +756,7 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
 > Implement the tasks of the seventh user story, "{{site.sprint_2_user_story_7}}".
 >
@@ -770,7 +784,7 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 23
 >
 > Implement the tasks of the eighth user story, "{{site.sprint_2_user_story_8}}".
 >
@@ -853,11 +867,9 @@ public class QuizRestController {
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 24
 >
-> Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
->
-> For other developers to find the Swagger documentation, add a "Documentation" subheading for the `README.md` file and under that a link to the Swagger documentation in the production environment (in Render). The link format is <http://name-of-the-web-service.onrender.com/swagger-ui.html>. Deploy the application to Render and make sure that the Swagger documentation is accessible.
+> Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Add a link to the Swagger documentation in the production environment (in Render) to the `README.md` file under the "Documentation" subheading. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui.html>. Deploy the application to Render and make sure that the Swagger documentation is accessible.
 
 ## The .gitignore file
 
@@ -1007,7 +1019,7 @@ Now we should be ready to deploy the frontend. Before deploying the application 
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 25
 >
 > Do the required setup for the frontend deployment as instructed above and deploy the application to Render. Make sure that the application (especially the frontend) works properly in the production environment.
 
@@ -1017,19 +1029,19 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 26
 >
 > Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive frontend-related files from the `frontend` folder.
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 27
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 28
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If you managed to deploy the application to Render, demonstrate the features in the production environment.
 >
