@@ -44,7 +44,7 @@ In _agile software development_, the development process follows values and prin
 >
 > -- Manifesto for Agile Software Development
 
-One of the key value is the attitude towards _change_. For example, there is often need to change the software's requirements during the development process. Agile software development process should welcome any kind of change with open arms. That is, because _change is inevitable and frequent_ in many business environments.
+One of the key value is the attitude towards _change_. For example, there is often need to change the software's requirements during the development process. Agile software development process should welcome any kind of change with open arms. This is because _change is inevitable and frequent_ in many business environments.
 
 The Manifesto for Agile Software Development doesn't go into details on how to actually _implement_ these values in practice. Different Agile software development process frameworks, such as _Scrum_ and _SAFe_ describe a detailed process that follows these values.
 
