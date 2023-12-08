@@ -263,7 +263,7 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > -- The Product Owner
 
-After some discussion the Scrum Team came up with the following user stories:
+After some discussion the Scrum Team planned the following user stories:
 
 1. {{site.sprint_1_user_story_1}}
 2. {{site.sprint_1_user_story_2}}
@@ -273,7 +273,7 @@ After some discussion the Scrum Team came up with the following user stories:
 
 The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
 
-For the _first user story_, the Developers came up with the following tasks:
+For the _first user story_, the Developers planned the following tasks:
 
 1. Add a Quiz JPA entity class with id (Long), name (String), description (String) and published (Boolean) attributes, and a QuizRepository JPA repository class
 2. Add a Thymeleaf template for the quiz submission form containing fields for title, description and published status
@@ -281,7 +281,7 @@ For the _first user story_, the Developers came up with the following tasks:
 4. Add a method for the QuizController class which saves the quiz to the database
 5. Add validation for quiz name and description
 
-For the _second user story_, the Developers came up with the following tasks:
+For the _second user story_, the Developers planned the following tasks:
 
 1. Add a Thymeleaf template for the quiz list containing a table with columns for title, description and published status
 2. Add a method for rendering the quiz list with all the quizzes for the QuizController class

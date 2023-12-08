@@ -143,7 +143,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > -- The Product Owner
 
-After some discussion the Scrum Team came up with the following user stories:
+After some discussion the Scrum Team planned the following user stories:
 
 1. {{site.sprint_2_user_story_1}}
 2. {{site.sprint_2_user_story_2}}
@@ -154,12 +154,12 @@ After some discussion the Scrum Team came up with the following user stories:
 7. {{site.sprint_2_user_story_7}}
 8. {{site.sprint_2_user_story_8}}
 
-For the _first user story_, the Developers came up with the following tasks:
+For the _first user story_, the Developers planned the following tasks:
 
 1. Add a createdAt attribute with the CreationTimestamp annotation for the Quiz class
 2. Add a "Added on" column which displays the formatted date for the quiz list Thymeleaf template
 
-The tasks for the last three user stories will be covered in the [REST APIs](#rest-apis) and [Communication between frontend and backend](#communication-between-frontend-and-backend) sections.
+The planning of the tasks for the last three user stories will be covered after the [REST APIs](#rest-apis) and [Communication between frontend and backend](#communication-between-frontend-and-backend) sections.
 
 {: .note }
 The tasks described above are suggestions, feel free to alter them or add new tasks.

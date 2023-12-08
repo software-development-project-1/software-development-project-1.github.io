@@ -61,7 +61,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > -- The Product Owner
 
-After some discussion the Scrum Team came up with the following user stories:
+After some discussion the Scrum Team planned the following user stories:
 
 1. {{site.sprint_3_user_story_1}}
 2. {{site.sprint_3_user_story_2}}
