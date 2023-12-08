@@ -442,7 +442,7 @@ public class MessageRestController {
     }
 
     @PostMapping("")
-    public Message createMessage(@Valid @RequestBody AddMessageDto message, BindingResult bindingResult) {
+    public Message createMessage(@Valid @RequestBody Message message, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
         }
@@ -514,7 +514,7 @@ By default _all the attributes_ are present in the JSON output. We can omit attr
 
 ```java
 @JsonIgnore
-@OneToMany(mappedBy="quiz")
+@OneToMany(mappedBy = "quiz")
 private List<Question> questions;
 ```
 
@@ -705,16 +705,17 @@ Before starting to implement the frontend features, we should test that the endp
 
 The Vite development server is serving the JavaScript files from an URL that starts with `http://localhost:5173`. Our backend is accessible in the URL `http://localhost:8080`. When we send a request with the `fetch` function from the frontend to our backend, we send a request to a _different origin_. These kind of requests are called _cross-orgin_ requests.
 
-Web browsers don't allow `fetch` functions to send cross-origin requests by default. This is called the _same-origin policy_. The reason for this is that cross-origin requests can cause [security issues](https://medium.com/@ehayushpathak/security-risks-of-cors-e3f4a25c04d7). We can however allow certain (or every) cross-origin request by using [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (CORS).
+Web browsers don't allow `fetch` functions to send cross-origin requests by default. This is called the _same-origin policy_. We can however allow certain (or every) cross-origin request by using [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (CORS).
 
-The idea of CORS is that the web browser "asks" the backend if cross-origin request from a certain origin is allowed by sending a special HTTP request. If backend allows the requests, then the web browser will send it. In a Spring Boot application we can use the [@CrossOrigin](https://spring.io/guides/gs/rest-service-cors/) annotation in the class or method level to allow cross-origin requests to certain or all paths of controller.
+The idea of CORS is that the web browser "asks" the backend if cross-origin request from a certain origin is allowed by sending a special HTTP request. If the backend allows the requests, then the web browser will send it. In a Spring Boot application we can use the [@CrossOrigin](https://spring.io/guides/gs/rest-service-cors/) annotation in the class or method level to allow cross-origin requests to certain or all paths of controller.
 
 For example we can allow cross-origin requests from `http://localhost:5173` origin for all `MessageRestController` method paths in the following way:
 
 ```java
 @RestController
 @RequestMapping("/api/messages")
-@CrossOrigin(origins="http://localhost:5173")
+// We can also use "*" to allow all origins
+@CrossOrigin(origins = "http://localhost:5173")
 public class MessageRestController {
     // ...
 }
@@ -874,7 +875,7 @@ We can provide more details about the endpoints by using specific annotations fo
 ```java
 @RestController
 @RequestMapping("/api/quizzes")
-@Tag(name="Quiz", description="Operations for accessing and managing quizzes")
+@Tag(name = "Quiz", description = "Operations for accessing and managing quizzes")
 public class QuizRestController {
     // ...
 }
@@ -887,7 +888,7 @@ We can also provide more information about a specific endpoint using the `@Opera
 ```java
 @RestController
 @RequestMapping("/api/quizzes")
-@Tag(name="Quiz", description="Operations for accessing and managing quizzes")
+@Tag(name = "Quiz", description = "Operations for accessing and managing quizzes")
 public class QuizRestController {
     // ...
 
