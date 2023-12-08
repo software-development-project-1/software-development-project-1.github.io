@@ -543,7 +543,7 @@ Here's a few tips before you start implementing the tasks:
 >   ```html
 >   <a
 >     th:href="@{/quizzes/{id}/edit(id = ${quiz.id})}"
->     class="btn btn-secondary"
+>     class="btn btn-secondary btn-sm"
 >   >
 >     Edit
 >   </a>
@@ -565,7 +565,7 @@ Here's a few tips before you start implementing the tasks:
 >
 >   ```html
 >   <form th:action="@{/quizzes/{id}/delete(id = ${quiz.id})}" method="post">
->     <button class="btn btn-danger">Delete</button>
+>     <button class="btn btn-danger btn-sm">Delete</button>
 >   </form>
 >   ```
 

@@ -403,13 +403,13 @@ The request should also contain the _HTTP method_, that determines the operation
 
 The resource path has certain naming conventions. The path starts with the resource _collection_ name in plural, for examples "users". The collection name is followed by resource specifiers, for example the id of the resource. Here's example of RESTful API paths for the "users" collection:
 
-| Method   | Path          | Description                          |
-| -------- | ------------- | ------------------------------------ |
-| `GET`    | `/users`      | List all users                       |
-| `GET`    | `/users/{id}` | Get the user with the provided id    |
-| `POST`   | `/users`      | Create a user                        |
-| `PUT`    | `/users/{id}` | Update the user with the provided id |
-| `DELETE` | `/users/{id}` | Delete the user with the provided id |
+| HTTP method | Path          | Description                          |
+| ----------- | ------------- | ------------------------------------ |
+| `GET`       | `/users`      | List all users                       |
+| `GET`       | `/users/{id}` | Get the user with the provided id    |
+| `POST`      | `/users`      | Create a user                        |
+| `PUT`       | `/users/{id}` | Update the user with the provided id |
+| `DELETE`    | `/users/{id}` | Delete the user with the provided id |
 
 {: .note }
 
@@ -958,7 +958,7 @@ Next, let's add the `src/main/resources/static` folder to the `.gitignore` file 
 src/main/resources/static
 ```
 
-Vite builds the frontend application with the `npm run build` command. We can integrate the frontend's npm scripts with the backend's Maven workflow using the [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin). Using the plugin, we can run all the commands required for the frontend application when we compile the Java code. This will simplify the deployment workflow of the application.
+Vite builds the frontend application with the `npm run build` command. We can integrate the frontend's npm scripts with the backend's Maven workflow using the [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin). Using the plugin, we can run all the commands required to build the frontend application when we compile the Java code. This will simplify the deployment workflow of the application.
 
 Let's add the frontend-maven-plugin to the `<plugins>` list in the `pom.xml` file:
 

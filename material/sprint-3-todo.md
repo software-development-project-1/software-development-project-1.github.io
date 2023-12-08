@@ -123,7 +123,7 @@ The order of the user stories represent the priotity provided by the Product Own
 
 > Exercise 8
 >
-> Plan the tasks for the third user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
 
@@ -175,18 +175,18 @@ Unit tests have these pros and cons:
 
 _Integration tests_ (also known as service tests) constitute the middle of the test pyramid. We should have quite many integration tests for our application. As the name suggests, integration tests test that different parts of our application code work as inteded once they are _integrated_. For example, methods that perform database operations are tested with integration tests.
 
-Here's an example of integration tests for a REST API endpoint `/api/messages` implemented by the `getMessages` method:
+Here's an example of integration tests for a REST API endpoint `/api/messages` implemented by the `getAllMessages` method:
 
 ```java
 @Test
-public void getMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception {
+public void getAllMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception {
     this.mockMvc.perform(get("/api/messages"))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$", hasSize(0)));
 }
 
 @Test
-public void getMessagesReturnsListOfMessagesWhenMessagesExist() throws Exception {
+public void getAllMessagesReturnsListOfMessagesWhenMessagesExist() throws Exception {
     Message firstMessage = new Message("First message");
     Message secondMessage = new Message("Second message");
     messageRepository.saveAll(List.of(firstMessage, secondMessage));
@@ -343,7 +343,7 @@ public class MessageRestControllerTest {
 
 The test methods test specific scenario. We come up with scenarios by analyzing the code (for example a certain method) that we are testing: how does the code behave based on different parameters or database state? For example if we call a method with certain parameters, we expect it to return a certain value. We need to cover all divergences in the code behavior with a test scenario.
 
-For example, we could have the following test scenarios for the `getMessages` method introduced above:
+For example, we could have the following test scenarios for the `getAllMessages` method introduced above:
 
 1. If we send a request to the `/api/messages` endpoint and _there is no messages in the database_, the JSON response body should be an empty list
 2. If we send a request to the `/api/messages` endpoint and _there are messages in the database_, the JSON response body should contain the messages as a list
@@ -764,7 +764,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 >
 > GitHub also supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain a diagram. Take a look at Mermaid's [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) documentation for more.
 >
-> _Keep this documentation up-to-date_ when you add new entities for the application.
+> _Keep this documentation up-to-date_ when you add new entities or attributes for the application.
 
 {: .important-title }
 
