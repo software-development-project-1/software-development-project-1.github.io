@@ -276,10 +276,16 @@ The order of the user stories represent the priotity provided by the Product Own
 For the _first user story_, the Developers came up with the following tasks:
 
 1. Add a Quiz JPA entity class with id (Long), name (String), description (String) and published (Boolean) attributes, and a QuizRepository JPA repository class
-2. Add Thymeleaf template for the quiz submission form containing fields for title, description and the published status
+2. Add a Thymeleaf template for the quiz submission form containing fields for title, description and published status
 3. Add QuizController controller class and a method for rendering the quiz submission form
 4. Add a method for the QuizController class which saves the quiz to the database
 5. Add validation for quiz name and description
+
+For the _second user story_, the Developers came up with the following tasks:
+
+1. Add a Thymeleaf template for the quiz list containing a table with columns for title, description and published status
+2. Add a method for rendering the quiz list with all the quizzes for the QuizController class
+3. Add a link to the quiz list page to the navigation bar
 
 These are the user stories, that you will be working on as a team during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
 
@@ -336,9 +342,7 @@ By default we can't see the labels on the issue cards. We can click on the arrow
 
 > Exercise 11
 >
-> Plan the tasks for the second user story, "{{site.sprint_1_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 for some implementation tips and to get an idea what the implementation could look like.
->
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
+> Create an issue for each task of the second user story, "{{site.sprint_1_user_story_2}}". You can use the tasks suggested in the [Sprint 1 planning](#%EF%B8%8F-sprint-1-planning) section, or plan your own tasks. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
 
 {: .important-title }
 

@@ -235,21 +235,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 10
->
-> Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a verbal description of the application's data model, which documents the application's entities, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). Add the diagram and the verbal description to a `data-model.md` file in the `documentation` folder. The verbal description should explain the purpose of each entity and their relationship to other entities. Add a link to the file to the `README.md` file under a "Documentation" subheading. If you place the diagram image to the `documentation` folder you can add it to a Markdown file in the following way:
->
-> ```md
-> ![ER Diagram](./er-diagram.png)
-> ```
->
-> GitHub also supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain a diagram. Take a look at Mermaid's [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) documentation for more.
->
-> _Keep this documentation up-to-date_ when you add new entities for the application.
-
-{: .important-title }
-
-> Exercise 12
+> Exercise 11
 >
 > Implement the tasks of the first user story, "{{site.sprint_2_user_story_1}}".
 >
@@ -268,7 +254,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 12
 >
 > Implement the tasks of the second user story, "{{site.sprint_2_user_story_2}}".
 >
@@ -279,7 +265,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 13
 >
 > Implement the tasks of the third user story, "{{site.sprint_2_user_story_3}}".
 >
@@ -291,7 +277,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 14
 >
 > Implement the tasks of the fourth user story, "{{site.sprint_2_user_story_4}}".
 >
@@ -301,7 +287,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 15
 >
 > Implement the tasks of the fifth user story, "{{site.sprint_2_user_story_5}}".
 >
@@ -661,7 +647,7 @@ export default function MessageList() {
 
 {% endraw %}
 
-Explore the code in the `frontend` folder. You can start the Vite development server by runing the `npm run dev` command in the `frontend` folder.
+Explore the code in the `frontend` folder. You can start the Vite development server by runing the `npm run dev` command in the `frontend` folder. Once the development server has started, the application should be accessible at <http://localhost:5713>.
 
 ## Designing the REST API endpoints for the user stories
 
@@ -683,7 +669,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 16
 >
 > Create two new labels: "frontend" and "backend". Add the "frontend" label for frontend-related tasks and the "backend" label for backend-related tasks.
 
@@ -693,7 +679,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 17
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get tips for the implementation.
 >
@@ -701,7 +687,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 18
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 21 to get tips for the implementation.
 >
@@ -709,17 +695,11 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 19
 >
 > Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 22 to get tips for the implementation.
 >
 > Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Add the issues to the Sprint 2 Backlog project.
-
-{: .important-title }
-
-> Exercise 21
->
-> Add instructions on _how to start the frontend application_ to the `README.md` file under the "Usage guide" subheading.
 
 ## Cross-Origin Resource Sharing (CORS)
 
@@ -765,7 +745,7 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 20
 >
 > Implement the tasks of the sixth user story, "{{site.sprint_2_user_story_6}}".
 >
@@ -779,7 +759,7 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 21
 >
 > Implement the tasks of the seventh user story, "{{site.sprint_2_user_story_7}}".
 >
@@ -807,7 +787,7 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 22
 >
 > Implement the tasks of the eighth user story, "{{site.sprint_2_user_story_8}}".
 >
@@ -832,6 +812,40 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 >   ```
 >
 > - It is also possible to implement a simple [DTO](https://www.baeldung.com/java-dto-pattern) class, such as `CreateAnswerDto` for the request body. This way, you will get full control over the request body attributes
+
+{: .important-title }
+
+> Exercise 23
+>
+> Add instructions on _how to start the frontend application_ to the `README.md` file under the "Usage guide" subheading. Don't forget important details, such as installing the frontend dependencies.
+>
+> For the sake of clarity, you can add separate subheadings for backend's and frontend's usage guide:
+>
+> ```md
+> ## Usage guide
+>
+> You can access the application's production version at <http://name-of-the-web-service.onrender.com>.
+>
+> ### Backend
+>
+> The backend usage guide goes here.
+>
+> ### Frontend
+>
+> The frontend usage guide goes here.
+> ```
+>
+> You can test how good your user guide is by cloning a new copy of the repository and executing the steps precisely as they are in the usage guide without making any assumptions.
+
+{: .important-title }
+
+> Exercise 24
+>
+> Add a brief description of the _programming languages, frameworks and libraries used in the project's implementation_ to the project description in the `README.md`. Mention at least the following things:
+>
+> 1. Which programming languages, frameworks and major libraries (e.g. Spring Boot) are used in the _backend implementation_?
+> 2. Which database platforms (e.g. H2, PostgreSQL) are used in different environments (development and production environment)?
+> 3. Which programming languages, frameworks and major libraries (e.g. React, Material UI) are used in the _frontend implementation_?
 
 ## REST API documentation with Swagger
 

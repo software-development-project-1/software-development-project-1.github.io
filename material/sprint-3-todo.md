@@ -17,7 +17,7 @@ For the final Sprint of the course, the Sprint 3, we have a new set of requireme
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
 
-The Sprint assesment is done based on the exercises 1-25. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
+The Sprint assesment is done based on the exercises 1-26. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
 
 During this Sprint, each team member will do a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 10 personal points.
 
@@ -480,7 +480,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 10
 >
-> Create a new package `fi.haagahelia.quizzer.controller` for the project's controller class tests. You can do this in Eclipse by right-clicking the `src/test/java` folder and choosing New > Package. Implement a `QuizRestControllerTest` test class within the package with the following test methods for the GET `/api/quizzes` endpoint:
+> Create a new package `fi.haagahelia.quizzer.controller` to the `src/test/java` folder for the project's controller class tests. Implement a `QuizRestControllerTest` test class within the package with the following test methods for the GET `/api/quizzes` endpoint:
 >
 > - `getAllQuizzesReturnsEmptyListWhenNoQuizzesExist`: send a GET request to the `/api/quizzes` without saving a quiz to the database. Then, the response should have an empty list
 > - `getAllQuizzesReturnsListOfPublishedQuizzesWhenQuizzesExist`: save a few quizzes (both published and non-published) to the database and send a GET request to the `/api/quizzes`. Then, the response should have a list of the saved _published quizzes_
@@ -493,7 +493,7 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Implement the following test methods for the GET `/api/quizzes/{id}` endpoint:
 >
-> - `getQuizByIdReturnsPublishedQuizWhenItExists`: save a _published quiz_ to the database and send a GET request to the `/api/quizzes/{id}`. Then, the response should have the saved quiz
+> - `getQuizByIdReturnsPublishedQuizWhenQuizExists`: save a _published quiz_ to the database and send a GET request to the `/api/quizzes/{id}`. Then, the response should have the saved quiz
 > - `getQuizByIdReturnsNotFoundWhenQuizDoesNotExist`: send a GET request to the `/api/quizzes/{id}` without saving a quiz to the database. Then, the response should have a `404 Not Found` status
 > - `getQuizByIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ to the database and send a GET request to the `/api/quizzes/{id}`. Then, the response should have a `403 Forbidden` status
 >
@@ -505,7 +505,7 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Implement the following test methods for the GET `/api/quizzes/{id}/questions` endpoint:
 >
-> - `getQuestionsByQuizIdReturnsEmptyListWhenQuizDoesNotQuestions`: save a _published quiz_ without questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have an empty list
+> - `getQuestionsByQuizIdReturnsEmptyListWhenQuizDoesNotHaveQuestions`: save a _published quiz_ without questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have an empty list
 > - `getQuestionsByQuizIdReturnsListOfQuestionsWhenQuizHasQuestions`: save a _published quiz_ with a few questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have a list of the quiz's questions
 > - `getQuestionsByQuizIdReturnsNotFoundWhenQuestionDoesNotExist`: send a GET request to the `/api/quizzes/1/question` without saving a quiz to the database. Then, the response should have a `404 Not Found` status
 > - `getQuestionsByQuizIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ with a few questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have a `403 Forbidden` status
@@ -756,20 +756,33 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 > Exercise 20
 >
-> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
+> Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a verbal description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). Add the diagram and the verbal description to the `data-model.md` file in the `documentation` folder. The verbal description should explain the purpose of each entity and their relationship to other entities. Add a link to the file to the `README.md` file under a "Documentation" subheading. If you place the diagram image to the `documentation` folder you can add it to a Markdown file in the following way:
 >
-> Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specified in the React project's [README.md](https://github.com/facebook/react/blob/main/README.md) file.
-
+> ```md
+> ![ER Diagram](./er-diagram.png)
+> ```
+>
+> GitHub also supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain a diagram. Take a look at Mermaid's [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) documentation for more.
+>
+> _Keep this documentation up-to-date_ when you add new entities for the application.
 
 {: .important-title }
 
 > Exercise 21
 >
-> Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
+> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
+>
+> Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specified in the React project's [README.md](https://github.com/facebook/react/blob/main/README.md) file.
 
 {: .important-title }
 
 > Exercise 22
+>
+> Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
+
+{: .important-title }
+
+> Exercise 23
 >
 > Deploy the final version of the application to Render and make sure that the application works properly in the production environment.
 
@@ -791,7 +804,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 24
 >
 > Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 
@@ -811,13 +824,13 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 25
 >
 > Write the final report for the course as instructed above.
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 26
 >
 > You can now pat yourself on the back, the project is done! 🎉
 >
