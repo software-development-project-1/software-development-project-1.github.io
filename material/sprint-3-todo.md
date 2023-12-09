@@ -524,57 +524,9 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a POST request to the `/api/answers` with a valid request body. Then, the response should status have a `403 Bad Request` status and the database should not have any answers
 >
 > Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
-
-## Test coverage
-
-We have analyzed the code that we are testing and we are quite sure that our test scenarios cover everything. The good news is, that we don't need to trust only on our gut. There are so called _test coverage_ tools that analyze which lines of code our test scenarios cover and which they don't.
-
-[JaCoCo](https://www.eclemma.org/jacoco/) is one of the most widely used code coverage tools for Java. Let's add the jacoco-maven-plugin to the `<plugins>` list in the `pom.xml` file:
-
-```xml
-<plugin>
-    <groupId>org.jacoco</groupId>
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <executions>
-        <execution>
-            <goals>
-                <goal>prepare-agent</goal>
-            </goals>
-        </execution>
-        <execution>
-            <id>report</id>
-            <phase>test</phase>
-            <goals>
-                <goal>report</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
-```
-
-If we run the `./mvnw test` command in Git Bash, our tests are executed and JaCoCo will generate a _code coverage report_. Once the command has finished successfully, the code coverage report can be found as an `index.html` file in the `target/site/jacoco` folder. Open the `index.html` file in a web browser.
-
-The report displayes the coverage of each package. The "Cov" column determines the _percentage of lines covered by the tests_. Bigger the number, better the coverage. If we click a package name, we see the classes in the package. By clicking a class name, we see the methods of the class. By clicking a method we see the method's implementation as code.
-
-Green highlight indicates that the line _is fully covered_. Yellow highlight indicates that the line is _partially covered_. For example a certain condition of an `if` statement is not covered by a test. Red highlight indicates that line is _not covered_.
-
-{: .note }
-
-> Software development teams commonly decide the minimum test coverage percentage for the code. The test coverage is automatically checked each time new code is pushed to the repository. If the new code doesn't fullfill the minimum requirement, the code won't be integrated to the main branch of the repository. This is one of the practices of [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration).
-
-{: .note }
-
-> When we change the code (in the tests or in the application), we need to re-run `./mvnw test` to generate the coverage report for the latest tests.
-
+ 
 {: .important-title }
-
 > Exercise 14
->
-> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the methods in the `QuizRestController` and `AnswerRestController` classes we tested previously. Are all the lines of the methods fully covered by the tests?
-
-{: .important-title }
-
-> Exercise 15
 >
 > Add instructions on _how to run the tests_ to the `README.md` file under the "Usage guide" subheading. You can instruct the reader to use the `./mvnw test` command to run the tests.
 
@@ -677,7 +629,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 15
 >
 > Implement the tasks of the first user story, "{{site.sprint_3_user_story_1}}".
 >
@@ -694,7 +646,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 16
 >
 > Implement the tasks of the second user story, "{{site.sprint_3_user_story_2}}".
 >
@@ -711,7 +663,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 17
 >
 > Implement the tasks of the third user story, "{{site.sprint_3_user_story_3}}".
 >
@@ -728,7 +680,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 18
 >
 > Implement the tasks of the fourth user story, "{{site.sprint_3_user_story_4}}".
 >
@@ -754,7 +706,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 19
 >
 > Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a verbal description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). Add the diagram and the verbal description to the `data-model.md` file in the `documentation` folder. The verbal description should explain the purpose of each entity and their relationship to other entities. Add a link to the file to the `README.md` file under a "Documentation" subheading. If you place the diagram image to the `documentation` folder you can add it to a Markdown file in the following way:
 >
@@ -768,7 +720,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 20
 >
 > Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
@@ -776,13 +728,13 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 21
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 22
 >
 > Deploy the final version of the application to Render and make sure that the application works properly in the production environment.
 
@@ -804,7 +756,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 23
 >
 > Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 
@@ -824,13 +776,13 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 24
 >
 > Write the final report for the course as instructed above.
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 25
 >
 > You can now pat yourself on the back, the project is done! 🎉
 >
