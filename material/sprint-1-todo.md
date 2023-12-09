@@ -800,7 +800,7 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 > Exercise 23
 >
-> Deploy the application to Render as instructed above. Add the production environment URL of the application (the web service URL in the Render dashboard) to to the "Usage guide" section in the `README.md` file.
+> Deploy the application to Render as instructed above. Add the production environment URL of the application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
 
 ## Sprint Review
 
