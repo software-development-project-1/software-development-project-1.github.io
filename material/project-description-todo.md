@@ -23,7 +23,7 @@ The Product Owner has a great project idea and is in desprate need of a talented
 >
 > The teacher should be able to register and sign in to manage their personal quizzes. Only signed-in teachers should be able to add a quiz. Once signed in, the teacher should only be able to edit and delete their own quizzes.
 >
-> The student should be able to see a list of published quizzes and take the quizzes by answering the questions of a quiz. After answering a question, the student should get feedback on whether their answer was correct or not. There should also be a page where the results of a quiz are visualized. For example, the page could have pie charts visualizing the number of correct and wrong answers for each question. The results page should be accessible for both students and teachers.
+> The student should be able to see a list of published quizzes and take the quizzes by answering the questions of a quiz. After answering a question, the student should get feedback on whether their answer was correct or not. There should also be a page where the results of a quiz are displayed. The page should display the total number of answers and the number of correct and wrong answers for each question. The results page should be accessible for both students and teachers.
 >
 > -- The Product Owner of Quizzer
 
