@@ -818,7 +818,7 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 
 > Exercise 23
 >
-> Add instructions on _how to start the frontend application_ to the `README.md` file under the "Usage guide" subheading. Don't forget important details, such as installing the frontend dependencies.
+> Add instructions on _how to start the frontend application_ to the "Usage guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
 > For the sake of clarity, you can add separate subheadings for backend's and frontend's usage guide:
 >
@@ -909,7 +909,7 @@ public class QuizRestController {
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
 >
-> Add a link to the Swagger documentation in the production environment (in Render) to the `README.md` file under the "Documentation" subheading. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui.html>. Deploy the application to Render and make sure that the Swagger documentation is accessible.
+> Add a link to the Swagger documentation in the production environment (in Render) under a "Documentation" subheading in the `README.md` file. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui.html>. Deploy the application to Render and make sure that the Swagger documentation is accessible.
 
 ## The .gitignore file
 
