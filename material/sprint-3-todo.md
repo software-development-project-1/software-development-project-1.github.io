@@ -17,7 +17,7 @@ For the final Sprint of the course, the Sprint 3, we have a new set of requireme
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
 
-The Sprint assesment is done based on the exercises 1-26. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
+The Sprint assesment is done based on the exercises 1-25. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
 
 During this Sprint, each team member will do a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 10 personal points.
 
@@ -49,7 +49,7 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 3 goals in the Sprint Planning event:
 
-> "We now have the basic features for managing and taking quizzes. What we still need is a way for the students and teachers to see the quiz results. There should be a page in the student dashboard where the results of a quiz are visualized. For example, the number of correct and wrong answers of each question could be visualized with pie charts. There should be a link to the results page next to each quiz in the quiz list page.
+> "We now have the basic features for managing and taking quizzes. What we still need is a way for the students and teachers to see the quiz results. There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question. The results page should be accessible for both students and teachers. There should be a link to the results page next to each quiz in the quiz list page.
 >
 > So that a teacher can manage their personal quizzes, we need the teacher to be able to register with a username and password. User should not be able to register with a blank username or a password less than 8 characters long. The username should not be already taken by another registered user. The password should contain at least one letter and at least one number.
 >
@@ -286,7 +286,7 @@ public class MessageRestController {
     }
 
     @PostMapping("")
-    public Message createMessage(@Valid @RequestBody Message message, BindingResult bindingResult) {
+    public Message createMessage(@Valid @RequestBody CreateMessageDto message, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
                 bindingResult.getAllErrors().get(0).getDefaultMessage());
@@ -419,7 +419,7 @@ For a POST request example, here's the test methods of the `createMessage` metho
 @Test
 public void createMessageSavesValidMessage() throws Exception {
     // Arrange
-    Message message = new Message("Hello world!");
+    Message message = new CreateMessageDto("Hello world!");
     String requestBody = mapper.writeValueAsString(message);
 
     // Act
@@ -436,7 +436,7 @@ public void createMessageSavesValidMessage() throws Exception {
 @Test
 public void createMessageDoesNotSaveInvalidMessage() throws Exception {
     // Arrange
-    Message message = new Message("");
+    Message message = new CreateMessageDto("");
     String requestBody = mapper.writeValueAsString(message);
 
     // Act
@@ -642,7 +642,6 @@ The [authentication example](https://github.com/software-development-project-1/a
 > Tips for implementing the tasks:
 >
 > - You can implement a GET `/api/quizzes/{id}/answers` endpoint, which returns the quiz-related answers
-> - There are many chart libraries for React. One of such libraries is [@mui/x-charts](https://mui.com/x/react-charts/)
 
 {: .important-title }
 
@@ -676,7 +675,6 @@ The [authentication example](https://github.com/software-development-project-1/a
 > Tips for implementing the tasks:
 >
 > - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
-> - You can sign out by visiting <http://localhost:8080/logout> in a web browser
 
 {: .important-title }
 

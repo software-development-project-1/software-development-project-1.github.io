@@ -333,7 +333,7 @@ public class Message {
     @CreationTimestamp
     private LocalDateTime createdAt;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String content;
 
     public Message(String content) {
@@ -391,7 +391,7 @@ public class MessageRestController {
 }
 ```
 
-The `@RestController` annotation on the `MessageRestController` class specifies that each method of the controller class produces a JSON response. Instead of returning the name of the Thymeleaf template, we can directly return Java objects. For example the `getAllMessages` method returns a list of `Message` objects. If we open the page <http://localhost:8080/api/messages> in a web browser we should see this list.
+The `@RestController` annotation on the `MessageRestController` class specifies that each method of the controller class produces a JSON response body. Instead of returning the name of the Thymeleaf template, we can directly return Java objects. For example the `getAllMessages` method returns a list of `Message` objects. If we open the page <http://localhost:8080/api/messages> in a web browser we should see this list.
 
 By using JSON as the data representation format we can separate the _client_ (the user interface application) from the server. This allows as to implement many different kinds of client applications with different programming languages. This separation of server and client is one of the corner stones of the _the REST architectural style_.
 
@@ -442,7 +442,7 @@ public class MessageRestController {
     }
 
     @PostMapping("")
-    public Message createMessage(@Valid @RequestBody Message message, BindingResult bindingResult) {
+    public Message createMessage(@Valid @RequestBody CreateMessageDto message, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
         }
@@ -457,7 +457,22 @@ In this case, the `getMessageById` method will handle GET request to the path `/
 
 {: .note }
 
-> It's handy to use some prefix, such as "api" to distinguish paths that produce JSON responses from paths that produce HTML pages.
+> It's handy to use some prefix, such as "api" to distinguish paths that produce JSON response from paths that produce HTML pages.
+
+### Controlling the request and response body format with DTO classes
+
+To have full control over the format of the request and response body we can use [DTO](https://www.baeldung.com/java-dto-pattern) classes. Especially with the request body annotated by the `@RequestBody` annotation, we should _always_ use a DTO class object instead of a entity class object. This is because using an entity class object might accidently allow users to update undesired attributes of an entity as described [here](https://rules.sonarsource.com/java/tag/spring/RSPEC-4684/).
+
+For example, in the `createMessage` method the request body format is defined with the [CreateMessageDto](https://github.com/software-development-project-1/spring-boot-vite-example/blob/main/src/main/java/fi/haagahelia/quizzer/dto/CreateMessageDto.java) class:
+
+```java
+public class CreateMessageDto {
+    @NotBlank(message = "Content is required")
+    private String content;
+
+    // constructors, getters and setters
+}
+```
 
 ### HTTP status codes and REST API error handling
 
@@ -493,7 +508,7 @@ If we don't throw a `ResponseStatusException` exception, the `200 OK` status cod
 
 ```java
 @PostMapping("")
-public ResponseEntity<?> createMessage(@Valid @RequestBody Message message, BindingResult bindingResult) {
+public ResponseEntity<?> createMessage(@Valid @RequestBody CreateMessageDto message, BindingResult bindingResult) {
     if (bindingResult.hasErrors()) {
         List<String> errorMessages = bindingResult.getAllErrors().stream().map((error) -> error.getDefaultMessage())
                 .collect(Collectors.toList());
@@ -508,9 +523,9 @@ public ResponseEntity<?> createMessage(@Valid @RequestBody Message message, Bind
 }
 ```
 
-### Omitting attributes from the JSON output
+### Omitting attributes from the JSON response body
 
-By default _all the attributes_ are present in the JSON output. We can omit attributes from the JSON output by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on an attribute. We usually want to omit attributes that hold private information, for example user's password hash, or attributes that can potentially contain lots of data, for example, the `@OneToMany` annotated attributes. We can, for example omit the `questions` attribute of the `Quiz` entity class in the following way:
+By default _all the attributes_ are present in the JSON response body. We can omit attributes from the JSON response body by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on an attribute. We usually want to omit attributes that hold private information, for example user's password hash, or attributes that can potentially contain lots of data, for example, the `@OneToMany` annotated attributes. We can, for example omit the `questions` attribute of the `Quiz` entity class in the following way:
 
 ```java
 @JsonIgnore
@@ -518,7 +533,7 @@ By default _all the attributes_ are present in the JSON output. We can omit attr
 private List<Question> questions;
 ```
 
-To have more control over the attributes in the JSON output, [DTO](https://www.baeldung.com/java-dto-pattern) classes can be used instead of returning the entity classes directly from the controller methods.
+To have more control over the attributes in the JSON response, [DTO](https://www.baeldung.com/java-dto-pattern) classes can be used instead of returning the entity classes directly from the controller methods.
 
 ## Communication between frontend and backend
 
@@ -675,7 +690,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .highlight}
 
-> Omit the `@OneToMany` attributes from the JSON output in every entity by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the attributes.
+> Omit the `@OneToMany` attributes from the JSON response in every entity by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the attributes.
 
 {: .important-title }
 
@@ -803,16 +818,19 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 > Tips for implementing the tasks:
 >
 > - Material UI [Snackbar](https://mui.com/material-ui/react-snackbar/)
-> - You can include the answer's question id in the request body in the following way:
+> - You can implement a [DTO](https://www.baeldung.com/java-dto-pattern) class for the request body:
 >
->   ```json
->   {
->     "answerText": "Helsinki",
->     "question": { "id": 1 }
+>   ```java
+>   public class CreateAnswerDto {
+>       @NotBlank(message = "Answer text is required")
+>       private String answerText;
+>
+>       @NotNull(message = "Question id is required")
+>       private Long questionId;
+>
+>       // constructors, getters and setters
 >   }
 >   ```
->
-> - It is also possible to implement a simple [DTO](https://www.baeldung.com/java-dto-pattern) class, such as `CreateAnswerDto` for the request body. This way, you will get full control over the request body attributes
 
 {: .important-title }
 
