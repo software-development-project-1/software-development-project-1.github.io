@@ -463,7 +463,7 @@ In this case, the `getMessageById` method will handle GET request to the path `/
 
 To have full control over the format of the request and response body we can use [DTO](https://www.baeldung.com/java-dto-pattern) classes. Especially with the request body annotated by the `@RequestBody` annotation, we should _always_ use a DTO class object instead of a entity class object. This is because using an entity class object might accidently allow users to update undesired attributes of an entity as described [here](https://rules.sonarsource.com/java/tag/spring/RSPEC-4684/).
 
-For example, in the `createMessage` method the request body format is defined with the [CreateMessageDto](https://github.com/software-development-project-1/spring-boot-vite-example/blob/main/src/main/java/fi/haagahelia/quizzer/dto/CreateMessageDto.java) class:
+For example, in the `createMessage` method the request body format is defined by the [CreateMessageDto](https://github.com/software-development-project-1/spring-boot-vite-example/blob/main/src/main/java/fi/haagahelia/quizzer/dto/CreateMessageDto.java) class:
 
 ```java
 public class CreateMessageDto {
@@ -995,7 +995,7 @@ Let's add the frontend-maven-plugin to the `<plugins>` list in the `pom.xml` fil
             <goals>
                 <goal>install-node-and-npm</goal>
             </goals>
-            <phase>generate-resources</phase>
+            <phase>prepare-package</phase>
             <configuration>
                 <nodeVersion>v18.16.0</nodeVersion>
             </configuration>
@@ -1005,7 +1005,7 @@ Let's add the frontend-maven-plugin to the `<plugins>` list in the `pom.xml` fil
             <goals>
                 <goal>npm</goal>
             </goals>
-            <phase>generate-resources</phase>
+            <phase>prepare-package</phase>
             <configuration>
                 <arguments>install</arguments>
             </configuration>
@@ -1015,7 +1015,7 @@ Let's add the frontend-maven-plugin to the `<plugins>` list in the `pom.xml` fil
             <goals>
                 <goal>npm</goal>
             </goals>
-            <phase>generate-resources</phase>
+            <phase>prepare-package</phase>
             <configuration>
                 <arguments>run build</arguments>
             </configuration>
@@ -1030,7 +1030,7 @@ The plugin will execute three commands when we generate the resources for the pr
 2. Run `npm install` command to install frontend dependencies
 3. Run `npm run build` command to generate a minified bundle of the frontend code, suitable for the production version of the application
 
-Now, if we run the `./mvnw spring-boot:run` command, the command output indicates that the frontend related commands are executed. We should also see that the `src/main/resources/static` folder has a `assets` folder with the frontend files.
+Now, if we run the `./mvnw package` command, the command output indicates that the frontend related commands are executed. We should also see that the `src/main/resources/static` folder has a `assets` folder with the frontend files.
 
 We want the frontend application to be accessible in a certain path of the application, for example `http://localhost:8080/app`. We can achieve this by rendering the `src/main/resources/static/index.html` in the `/app` path. Let's add a `FrontendController` controller class to handle that:
 

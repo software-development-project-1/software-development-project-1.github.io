@@ -665,9 +665,8 @@ Because developers use different IDEs, it is easier to describe how the applicat
 
 Here's a simple usage guide on how to start the example project application:
 
-1. Clone the GitHub repository
-2. Start the application by running `./mvnw spring-boot:run` on the command-line in the repository folder
-3. Once the application has started, visit <http://localhost:8080> in a browser to use the application
+1. Start the application by running the `./mvnw spring-boot:run` command on the command-line in the repository folder
+2. Once the application has started, visit <http://localhost:8080> in a web browser to use the application
 
 {: .highlight }
 
