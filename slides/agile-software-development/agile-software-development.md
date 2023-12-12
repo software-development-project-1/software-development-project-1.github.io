@@ -85,9 +85,9 @@ Welcome to the Software Development Project 1 course!
 
 # Agile software development
 
-> _able to move quickly and easily_
+> _"able to move quickly and easily"_
 >
-> ⎯ Dictionary definition for the word _agile_
+> ⎯ Dictionary definition for the word _"agile"_
 
 - The word _agile_ is often used in many industries to describe the way of working in organizations
 - The word is commonly used in a positive manner, for example, "we are an _agile_ organization", or "we work in a _agile_ manner"

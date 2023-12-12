@@ -57,15 +57,15 @@ During Sprint Planning Developers discuss the technical steps required to implem
 
 While discussing the technical details, the Developers document a todo-list of tasks with a short description. Developers also consider the order of the tasks:
 
-> Task 1: Add Thymeleaf template for the blog submission form containing fields for name and description
+> Task 1: Add a Thymeleaf template for the blog submission form containing fields for name and description
 
-> Task 2: Add BlogController controller class and a method for rendering the blog submission form
+> Task 2: Add a BlogController controller class and a method for rendering the blog submission form
 
-> Task 3: Add H2 and Hibernate dependencies for the project
+> Task 3: Add Spring Data JPA and H2 database dependencies and configuration
 
-> Task 4: Add Blog JPA entity class and BlogRepository JPA repository class
+> Task 4: Add a Blog JPA entity class and a BlogRepository JPA repository class
 
-> Task 5: Add a method for the BlogController that adds the blog to database
+> Task 5: Add a method for the BlogController that save the blog to database
 
 These tasks are added to the Sprint specific, _Sprint Backlog_.
 
