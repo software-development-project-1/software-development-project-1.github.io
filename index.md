@@ -7,7 +7,7 @@ nav_order: 1
 
 # Software Development Project 1
 
-Welcome to the Software Development Project 1 course!
+Welcome to the Software Development Project 1 course! 👋
 
 During this course, we will learn how to manage the software development process and how to work as a member of a software development team. We will learn these skills in practice by developing a software development project in a software development team consisting of 4-5 students.
 
