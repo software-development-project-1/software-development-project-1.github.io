@@ -168,7 +168,10 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 2
 >
-> Create a Sprint Backlog project for the second Sprint in GitHub Projects. Name the project "Sprint 2 Backlog". Use the default project columns, similar as in the Sprint 1 Backlog project. Add a "Sprint 2 Backlog" link for the project to the "Backlogs" section in the `README.md` file.
+> Create a new milestone for the second Sprint. Set the milestone title as "Sprint 2". In the Sprint Backlog project, name the "View 1" view as "Active Sprint" by clicking the view name. To only display the issues of the active Sprint in the Sprint Backlog, type "milestone" to the filter field and choose the "Sprint 1" milestone as the filter. Finally, click "Save" to save the configuration.
+
+{: .note }
+> [Project views](https://docs.github.com/en/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/managing-your-views) are used to create different kind of variations of the project, for example by filtering or grouping the issues.
 
 {: .important-title }
 
@@ -181,15 +184,15 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 4
 >
-> Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Sprint 1 Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
+> Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Sprint Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
-> If you didn't manage to implement all user stories during Sprint 1, move the task related issues of the unfinished user stories to the Sprint 2 Backlog project.
+> If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 2".
 
 {: .important-title }
 
 > Exercise 5
 >
-> Create an issue for each task of the first user story, "{{site.sprint_2_user_story_1}}". You can use the tasks suggested in the [Sprint 2 planning](#%EF%B8%8F-sprint-2-planning) section, or plan your own tasks. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 2 Backlog project.
+> Create an issue for each task of the first user story, "{{site.sprint_2_user_story_1}}". You can use the tasks suggested in the [Sprint 2 planning](#%EF%B8%8F-sprint-2-planning) section, or plan your own tasks. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
 
 {: .important-title }
 
@@ -197,7 +200,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get some implementation tips.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 2 Backlog project.
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
 
 {: .important-title }
 
@@ -205,7 +208,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 2 Backlog project.
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
 
 {: .important-title }
 
@@ -213,7 +216,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 13 to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 2 Backlog project.
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
 
 {: .important-title }
 
@@ -221,7 +224,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 14 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 2 Backlog project.
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
 
 {: .important-title }
 
@@ -461,7 +464,7 @@ In this case, the `getMessageById` method will handle GET request to the path `/
 
 ### Controlling the request and response body format with DTO classes
 
-To have full control over the format of the request and response body we can use [DTO](https://www.baeldung.com/java-dto-pattern) classes. Especially with the request body annotated by the `@RequestBody` annotation, we should _always_ use a DTO class object instead of a entity class object. This is because using an entity class object might accidently allow users to update undesired attributes of an entity as described [here](https://rules.sonarsource.com/java/tag/spring/RSPEC-4684/).
+To have full control over the format of the request and response body we can use [DTO](https://www.baeldung.com/java-dto-pattern) classes. Especially with the request body annotated by the `@RequestBody` annotation, we should _always_ use a DTO class object instead of an entity class object. This is because using an entity class object might accidently allow users to update undesired attributes of an entity as described [here](https://rules.sonarsource.com/java/tag/spring/RSPEC-4684/).
 
 For example, in the `createMessage` method the request body format is defined by the [CreateMessageDto](https://github.com/software-development-project-1/spring-boot-vite-example/blob/main/src/main/java/fi/haagahelia/quizzer/dto/CreateMessageDto.java) class:
 
@@ -698,7 +701,7 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get tips for the implementation.
 >
-> Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Add the issues to the Sprint 2 Backlog project.
+> Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues.  Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
 
 {: .important-title }
 
@@ -706,7 +709,7 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 21 to get tips for the implementation.
 >
-> Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Add the issues to the Sprint 2 Backlog project.
+> Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
 
 {: .important-title }
 
@@ -714,7 +717,7 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 22 to get tips for the implementation.
 >
-> Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Add the issues to the Sprint 2 Backlog project.
+> Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
 
 ## Cross-Origin Resource Sharing (CORS)
 
@@ -1125,7 +1128,7 @@ The Product Owner came up with a feature for the application if we run out of wo
 
 > Bonus exercise
 >
-> Come up with a user story based on the Product Owner's description, create an issue for the user story and add it to the Product Backlog project. Then, split the user story into tasks, create an issue for each task and add those to the Sprint 2 Backlog project. Finally, implement the tasks.
+> Come up with a user story based on the Product Owner's description, create an issue for the user story and add it to the Product Backlog project. Then, split the user story into tasks, create an issue for each task and add those to the Sprint Backlog project. Finally, implement the tasks.
 >
 > The implementation could look something like this:
 >

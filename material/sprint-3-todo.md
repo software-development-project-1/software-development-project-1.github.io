@@ -74,7 +74,7 @@ The order of the user stories represent the priotity provided by the Product Own
 
 > Exercise 2
 >
-> Create a Sprint Backlog project for the third Sprint in GitHub Projects. Name the project "Sprint 3 Backlog". Use the default project columns, similar as in the Sprint 2 Backlog project. Add a "Sprint 3 Backlog" link for the project to the "Backlogs" section in the `README.md` file.
+> Create a new milestone for the third Sprint. Set the milestone title as "Sprint 3". Update the milestone filter in the Sprint Backlog to display the issues of the active Sprint.
 
 {: .important-title }
 
@@ -87,9 +87,9 @@ The order of the user stories represent the priotity provided by the Product Own
 
 > Exercise 4
 >
-> Make sure that all task related issues that have been completed during the Sprint 2 are _closed_ and their _status is "Done"_ in the Sprint 2 Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
+> Make sure that all task related issues that have been completed during the Sprint 2 are _closed_ and their _status is "Done"_ in the Sprint Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
-> If you didn't manage to implement all user stories during Sprint 2, move the task related issues of the unfinished user stories to the Sprint 3 Backlog project.
+> If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 3".
 
 {: .important-title }
 
@@ -97,7 +97,7 @@ The order of the user stories represent the priotity provided by the Product Own
 >
 > Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Add the issues to the Sprint 3 Backlog project.
+> Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 3". Add the issues to the Sprint Backlog project.
 
 {: .note }
 
@@ -109,7 +109,7 @@ The order of the user stories represent the priotity provided by the Product Own
 >
 > Plan the tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 3". Add the issues to the Sprint Backlog project.
 
 {: .important-title }
 
@@ -117,7 +117,7 @@ The order of the user stories represent the priotity provided by the Product Own
 >
 > Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 3". Add the issues to the Sprint Backlog project.
 
 {: .important-title }
 
@@ -125,7 +125,7 @@ The order of the user stories represent the priotity provided by the Product Own
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 3". Add the issues to the Sprint Backlog project.
 
 ## Testing
 
@@ -485,7 +485,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getAllQuizzesReturnsEmptyListWhenNoQuizzesExist`: send a GET request to the `/api/quizzes` without saving a quiz to the database. Then, the response should have an empty list
 > - `getAllQuizzesReturnsListOfPublishedQuizzesWhenQuizzesExist`: save a few quizzes (both published and non-published) to the database and send a GET request to the `/api/quizzes`. Then, the response should have a list of the saved _published quizzes_
 >
-> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
+> Create an issue for this task and add it to the Sprint Backlog project. Add "test" and "task" labels for the issue. Set the milestone as "Sprint 3". You don't need to add a user story label for the issue.
 
 {: .important-title }
 
@@ -497,7 +497,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getQuizByIdReturnsNotFoundWhenQuizDoesNotExist`: send a GET request to the `/api/quizzes/{id}` without saving a quiz to the database. Then, the response should have a `404 Not Found` status
 > - `getQuizByIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ to the database and send a GET request to the `/api/quizzes/{id}`. Then, the response should have a `403 Forbidden` status
 >
-> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
+> Create an issue for this task and add it to the Sprint Backlog project. Add "test" and "task" labels for the issue. Set the milestone as "Sprint 3". You don't need to add a user story label for the issue.
 
 {: .important-title }
 
@@ -510,7 +510,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getQuestionsByQuizIdReturnsNotFoundWhenQuestionDoesNotExist`: send a GET request to the `/api/quizzes/1/question` without saving a quiz to the database. Then, the response should have a `404 Not Found` status
 > - `getQuestionsByQuizIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ with a few questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have a `403 Forbidden` status
 >
-> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
+> Create an issue for this task and add it to the Sprint Backlog project. Add "test" and "task" labels for the issue. Set the milestone as "Sprint 3". You don't need to add a user story label for the issue.
 
 {: .important-title }
 
@@ -523,7 +523,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `createAnswerDoesNotSaveAnswerForNonExistingQuestion`: send a POST request to the `/api/answers` with a non-existing question id in the request body. Then, the response should status have a `404 Not Found` status and the database should not have any answers
 > - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a POST request to the `/api/answers` with a valid request body. Then, the response should status have a `403 Bad Request` status and the database should not have any answers
 >
-> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
+> Create an issue for this task and add it to the Sprint Backlog project. Add "test" and "task" labels for the issue. Set the milestone as "Sprint 3". You don't need to add a user story label for the issue.
  
 {: .important-title }
 > Exercise 14

@@ -21,7 +21,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 2. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-24. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-25. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Sprint Planning
 
@@ -210,13 +210,13 @@ The project will be empty for now, but we will add some user stories for the pro
 >
 > Create the "Product Backlog" project for the project as instructed above. Make sure that the project is public.
 
-Each Sprint should have a separate Sprint Backlog for the Sprint's tasks. Let's create a project for the Sprint 1 Backlog. Create a project similarly as with the Product Backlog project. Name the project "Sprint 1 Backlog". We can use the default "Todo", "In progress" and "Done" columns for the project. Make sure that project is pulic as we did with the Sprint Backlog project. The project will be empty for now, but we will add some tasks for the project after the Sprint Planning event.
+Next, we need a Sprint Backlog for the Sprint's tasks. Let's create a project for the Sprint Backlog. Create a project similarly as with the Product Backlog project. Name the project "Sprint Backlog". We can use the default "Todo", "In progress" and "Done" columns for the project. Make sure that project is pulic as we did with the Product Backlog project. The project will be empty for now, but we will add some tasks for the project after the Sprint Planning event.
 
 {: .important-title }
 
 > Exercise 6
 >
-> Create the "Sprint 1 Backlog" project for the project as instructed above. Make sure that the project is public.
+> Create the "Sprint Backlog" project for the project as instructed above. Make sure that the project is public.
 
 ## The README file
 
@@ -241,7 +241,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 > 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
 > 3. Below the description, add a subheading "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name.
 > 4. Each team member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
-> 5. Below the "Team members" section, add a subheading "Backlogs" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) that has links "Product Backlog" and "Sprint 1 Backlog". The link should point to the backlog's project (open the backlog's project in GitHub and copy the URL from the web browser's address bar)
+> 5. Below the "Team members" section, add a subheading "Backlogs" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) that has links "Product Backlog" and "Sprint Backlog". The link should point to the backlog's project (open the backlog's project in GitHub and copy the URL from the web browser's address bar)
 >
 > Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 
@@ -316,7 +316,15 @@ Then, let's create a label _for each user story_ so that we can better organize 
 >
 > Create the "user story" and "task" labels and a label _for each user story_ as described above. Come up with a _short description_ for each user story for the labels, such as "add quiz".
 
-Now that we have the labels, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "{{site.sprint_1_user_story_1}}". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose labels "user story" and "add quiz", which indicate that this issue is related to a certain user story. Then, click "Projects" on the right and choose "Product Backlog". This will add the issue to the Product Backlog project. Finally, click the "Submit a new issue" button to create the issue.
+Next, we need to specify the Sprint the issue is related to. We can use Sprint-specific [milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) to group the issues based on a Sprint. Let's create a milestone for the first Sprint. First, click the "Issues" tab to open the issues page. Then, click the "Milestones" button next to the "Labels" button. On the Milestones page, click the "Create a new Milestone" button. Set the milestone title as "Sprint 1". You can also specify a due date and a description if you want. Finally, click the "Create milestone" button to create the milestone.
+
+{: .important-title }
+
+> Exercise 9
+>
+> Create the "Sprint 1" milestone.
+
+Now that we have the labels and a milestone, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "{{site.sprint_1_user_story_1}}". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose labels "user story" and "add quiz", which indicate that this issue is related to a certain user story. Then, click "Projects" and choose "Product Backlog". This will add the issue to the Product Backlog project. To specify the Sprint the issue is related to, click "Milestone" and choose "Sprint 1". Finally, click the "Submit a new issue" button to create the issue.
 
 {: .note }
 
@@ -324,53 +332,53 @@ Now that we have the labels, let's create an issue for each user story. Click th
 
 Let's open the "Projects" tab and open the Sprint Backlog project. We should see that the issue we created is now in the project. We can move the issue to a column by dragging the issue card. This will change the status of the issue. Let's move the issue we created to the "In Sprint" column, which indicates that this user story is in the current Sprint.
 
-By default we can't see the labels on the issue cards. We can click on the arrow button next to "View 1" below the project name and click "Fields" under "Configuration". There, check "Labels" and finally click the green "Save" button to save the configuration.
-
-{: .important-title }
-
-> Exercise 9
->
-> Create an issue for each _user story_. Add the "user story" label and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column. Make sure that the user stories are _prioritized_ (the "P" of DEEP). That is, they are listed in the project in the order that the Product Owner described in the Sprint Planning.
+By default we can't see the labels or the milestone on the issue cards. We can click on the arrow button next to "View 1" below the project name and click "Fields" under "Configuration". There, check "Labels" and "Milestone". Finally, click the green "Save" button to save the configuration.
 
 {: .important-title }
 
 > Exercise 10
 >
-> Create an issue for each task of the first user story, "{{site.sprint_1_user_story_1}}". You can use the tasks suggested in the [Sprint 1 planning](#%EF%B8%8F-sprint-1-planning) section, or plan your own tasks. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
+> Create an issue for each _user story_. Add the "user story" label and the user story's label for each issue. Set the milestone as "Sprint 1". Add the issues to the Product Backlog project and move them to the "In Sprint" column. Make sure that the user stories are _prioritized_ (the "P" of DEEP). That is, they are listed in the project in the order that the Product Owner described in the Sprint Planning.
 
 {: .important-title }
 
 > Exercise 11
 >
-> Create an issue for each task of the second user story, "{{site.sprint_1_user_story_2}}". You can use the tasks suggested in the [Sprint 1 planning](#%EF%B8%8F-sprint-1-planning) section, or plan your own tasks. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
+> Create an issue for each task of the first user story, "{{site.sprint_1_user_story_1}}". You can use the tasks suggested in the [Sprint 1 planning](#%EF%B8%8F-sprint-1-planning) section, or plan your own tasks. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 1". Add the issues to the Sprint Backlog project.
 
 {: .important-title }
 
 > Exercise 12
 >
-> Plan the tasks for the third user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 for some implementation tips and to get an idea what the implementation could look like.
->
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
+> Create an issue for each task of the second user story, "{{site.sprint_1_user_story_2}}". You can use the tasks suggested in the [Sprint 1 planning](#%EF%B8%8F-sprint-1-planning) section, or plan your own tasks. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 1". Add the issues to the Sprint Backlog project.
 
 {: .important-title }
 
 > Exercise 13
 >
-> Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 19 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the third user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 19 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 1". Add the issues to the Sprint Backlog project.
 
 {: .important-title }
 
 > Exercise 14
 >
-> Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 1 Backlog project.
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 1". Add the issues to the Sprint Backlog project.
 
 {: .important-title }
 
 > Exercise 15
+>
+> Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 21 for some implementation tips and to get an idea what the implementation could look like.
+>
+> Create an issue for each task. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 1". Add the issues to the Sprint Backlog project.
+
+{: .important-title }
+
+> Exercise 16
 >
 > Discuss how you will divide the workload (the tasks) of the Sprint among the team members. For example, each team member could be responsible for the tasks of a single user story. Then, add an _assignee_ for each task related issue. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same task together.
 
@@ -391,7 +399,7 @@ When you complete a task, you should _close_ the task related issue. This can be
 
 {: .highlight }
 
-> Don't close the user story related issues before the Sprint Review. The Product Owner needs to accept the user stories before they are completed.
+> Don't close the _user story related issues_ before the Sprint Review. The Product Owner needs to accept the user stories before they are completed.
 
 ## Thymeleaf page layouts
 
@@ -460,7 +468,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 17
 >
 > Implement the tasks of the first user story, "{{site.sprint_1_user_story_1}}".
 >
@@ -478,7 +486,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 18
 >
 > Implement the tasks of the second user story, "{{site.sprint_1_user_story_2}}".
 >
@@ -503,7 +511,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 19
 >
 > Implement the tasks of the third user story, "{{site.sprint_1_user_story_3}}".
 >
@@ -551,7 +559,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 20
 >
 > Implement the tasks of the fourth user story, "{{site.sprint_1_user_story_4}}".
 >
@@ -571,7 +579,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 21
 >
 > Implement the tasks of the fifth user story, "{{site.sprint_1_user_story_5}}".
 >
@@ -676,7 +684,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
 > Write a usage guide on _how to start the backend application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
 >
@@ -694,7 +702,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 23
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -797,7 +805,7 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 24
 >
 > Deploy the application to Render as instructed above. Add the production environment URL of the application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
 
@@ -809,7 +817,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 25
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If you managed to deploy the application to Render, demonstrate the features in the production environment.
 >
