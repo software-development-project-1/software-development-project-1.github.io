@@ -131,7 +131,7 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 2 goals in the Sprint Planning event:
 
-> "It's great that we can now add, list, edit and delete quizzes! What we now need is a way for the teacher to add questions for the quizzes and student to take the quizzes.
+> "It's great that we can now add, list, edit and delete quizzes! What we now need is a way for the teacher to add questions for the quizzes and student to take the published quizzes.
 >
 > Let's start with a small user-experience improvement. It would nice if the quiz list would display the date when the quiz was added. This way, the teacher would know how old the quiz is. Also, quizzes should be listed from newest to oldest. This way, the teacher can find the latest quizzes quickly at the top of the list.
 >
@@ -168,9 +168,10 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 2
 >
-> Create a new milestone for the second Sprint. Set the milestone title as "Sprint 2". In the Sprint Backlog project, name the "View 1" view as "Active Sprint" by clicking the view name. To only display the issues of the active Sprint in the Sprint Backlog, type "milestone" to the filter field and choose the "Sprint 1" milestone as the filter. Finally, click "Save" to save the configuration.
+> Create a new milestone for the second Sprint. Set the milestone title as "Sprint 2".
 
 {: .note }
+
 > [Project views](https://docs.github.com/en/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/managing-your-views) are used to create different kind of variations of the project, for example by filtering or grouping the issues.
 
 {: .important-title }
@@ -178,13 +179,13 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 > Exercise 3
 >
 > 1. Create a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) for each user story, such as "quiz creation date" and "add question"
-> 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column
+> 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Backlog project and move them to the "Sprint Backlog" column
 
 {: .important-title }
 
 > Exercise 4
 >
-> Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Sprint Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
+> Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
 > If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 2".
 
@@ -192,7 +193,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 5
 >
-> Create an issue for each task of the first user story, "{{site.sprint_2_user_story_1}}". You can use the tasks suggested in the [Sprint 2 planning](#%EF%B8%8F-sprint-2-planning) section, or plan your own tasks. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
+> Create an issue for each task of the first user story, "{{site.sprint_2_user_story_1}}". You can use the tasks suggested in the [Sprint 2 planning](#%EF%B8%8F-sprint-2-planning) section, or plan your own tasks. Add the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -200,7 +201,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get some implementation tips.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
+> Create an issue for each task. Add the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -208,7 +209,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
+> Create an issue for each task. Add the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -216,7 +217,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 13 to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
+> Create an issue for each task. Add the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -224,7 +225,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 14 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
+> Create an issue for each task. Add the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -558,24 +559,19 @@ The example project has a simple [Vite](https://vitejs.dev/) frontend applicatio
 The communication between the frontend application and the backend application is performed using the JavaScript's [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The Fetch API provides the `fetch` function, which can be used to send a HTTP request to a specific URL:
 
 ```js
-fetch("/api/messages")
+fetch("http://localhost:8080/api/messages")
   .then((response) => response.json())
   .then((messages) => {
     console.log(messages);
   });
 ```
 
-{: .note }
-
-> You might wonder, why the URL in the `fetch` function call is `/api/messages` and not `http://localhost:8080/api/messages`. We will cover the reason for this in the [
-> Cross-Origin Resource Sharing (CORS) ](#cross-origin-resource-sharing-cors) section.
-
 The `fetch` function returns a [Promise](https://javascript.info/promise-basics) object. The promise resolves a `Response` object, which contains the response from the server. The response's JSON payload can be parsed into JavaScript objects using the `response.json()` method.
 
 The default request method is GET. We can also send a POST request with a JSON formatted request body by providing addional options for the `fetch` call:
 
 ```js
-fetch("/api/messages", {
+fetch("http://localhost:8080/api/messages", {
   method: "POST",
   headers: {
     Accept: "application/json",
@@ -596,12 +592,16 @@ fetch("/api/messages", {
 In the example project, the logic of fetching and creating messages is extracted into `getAllMessages` and `createMessage` functions, which can be found in the `frontend/src/services/messageService.js` file:
 
 ```js
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL ?? "";
+
 export function getAllMessages() {
-  return fetch("/api/messages").then((response) => response.json());
+  return fetch(`${BACKEND_URL}/api/messages`).then((response) =>
+    response.json()
+  );
 }
 
 export function createMessage(message) {
-  return fetch("/api/messages", {
+  return fetch(`${BACKEND_URL}/api/messages`, {
     method: "post",
     body: JSON.stringify(message),
     headers: {
@@ -617,6 +617,10 @@ export function createMessage(message) {
   });
 }
 ```
+
+{: .note }
+
+> The `VITE_BACKEND_URL` is an [environment variable](https://vitejs.dev/guide/env-and-mode). We have a different backend URL in the development and the production environment.
 
 These are simple _abstractions_ for fetching and creating messages, but they are quite handy. If for example the logic for fetching the messages (for example the API URL) changes, we only need to change the logic inside the `getAllMessages` function and nowhere else.
 
@@ -667,6 +671,23 @@ export default function MessageList() {
 
 Explore the code in the `frontend` folder. You can start the Vite development server by runing the `npm run dev` command in the `frontend` folder. Once the development server has started, the application should be accessible at <http://localhost:5713>.
 
+## Cross-Origin Resource Sharing (CORS)
+
+The Vite development server is serving the JavaScript files from an URL that starts with `http://localhost:5173`. Our backend is accessible in the URL `http://localhost:8080`. When we send a request with the `fetch` function from the frontend to our backend, we send a request to a _different origin_. These kind of requests are called _cross-orgin_ requests.
+
+Web browsers don't allow `fetch` functions to send cross-origin requests by default. This is called the _same-origin policy_. We can however allow certain (or every) cross-origin request by using [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (CORS).
+
+The idea of CORS is that the web browser "asks" the backend if cross-origin request from a certain origin is allowed by sending a special HTTP request. If the backend allows the requests, then the web browser will send it. In a Spring Boot application we can use the [@CrossOrigin](https://spring.io/guides/gs/rest-service-cors/) annotation in the class or method level to allow cross-origin requests to certain or all paths of controller. For example we can allow cross-origin requests from all origins for all `MessageRestController` method paths in the following way:
+
+```java
+@RestController
+@RequestMapping("/api/messages")
+@CrossOrigin(origins = "*")
+public class MessageRestController {
+    // ...
+}
+```
+
 ## Designing the REST API endpoints for the user stories
 
 Next, let's consider what kind of REST API endpoints we need for the last three user stories. In the sixth user story, "{{site.sprint_2_user_story_6}}", we need to list all the published quizzes. To follow the REST API naming principles, we can implement a GET method endpoint `/api/quizzes`. We can add a `QuizRestController` class and implement the endpoint with a `getAllQuizzes` method.
@@ -701,7 +722,7 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get tips for the implementation.
 >
-> Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues.  Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
+> Create an issue for each task. Add the user story's label and either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -709,7 +730,7 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 21 to get tips for the implementation.
 >
-> Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
+> Create an issue for each task. Add the user story's label and either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -717,50 +738,7 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 22 to get tips for the implementation.
 >
-> Create an issue for each task. Add the "task" label, the user story's label and either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Sprint Backlog project.
-
-## Cross-Origin Resource Sharing (CORS)
-
-The Vite development server is serving the JavaScript files from an URL that starts with `http://localhost:5173`. Our backend is accessible in the URL `http://localhost:8080`. When we send a request with the `fetch` function from the frontend to our backend, we send a request to a _different origin_. These kind of requests are called _cross-orgin_ requests.
-
-Web browsers don't allow `fetch` functions to send cross-origin requests by default. This is called the _same-origin policy_. We can however allow certain (or every) cross-origin request by using [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (CORS).
-
-The idea of CORS is that the web browser "asks" the backend if cross-origin request from a certain origin is allowed by sending a special HTTP request. If the backend allows the requests, then the web browser will send it. In a Spring Boot application we can use the [@CrossOrigin](https://spring.io/guides/gs/rest-service-cors/) annotation in the class or method level to allow cross-origin requests to certain or all paths of controller.
-
-For example we can allow cross-origin requests from `http://localhost:5173` origin for all `MessageRestController` method paths in the following way:
-
-```java
-@RestController
-@RequestMapping("/api/messages")
-// We can also use "*" to allow all origins
-@CrossOrigin(origins = "http://localhost:5173")
-public class MessageRestController {
-    // ...
-}
-```
-
-However, with the Vite development server there is a better way to handle the CORS issue, which is the [proxy](https://vitejs.dev/config/server-options.html#server-proxy) feature. With the proxy, the Vite development server will serve as a man-in-the-middle for our `fetch` requests. For example, we can send a request to `http://localhost:5173/api/messages` (which doesn't violate the same-origin policy) and the proxy will forward the the request to `http://localhost:8080/api/messages` and provides us with the response.
-
-The proxy is configured in the `frontend/vite.config.js` file in the following way:
-
-```js
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    proxy: {
-      "/api": {
-        target: "http://localhost:8080/api",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
-      },
-    },
-  },
-});
-```
-
-The proxy will forward every request starting with `/api` to `http://localhost:8080/api`.
-
-Proxy is also handy because we don't need to hard-code origins in the `@CrossOrigin` annotation in the backend. Also, we don't have to configure development and production backend URL in the frontend while we are deploying our application.
+> Create an issue for each task. Add the user story's label and either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -846,8 +824,6 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 > ```md
 > ## Usage guide
 >
-> You can access the application's production version at <http://name-of-the-web-service.onrender.com>.
->
 > ### Backend
 >
 > The backend usage guide goes here.
@@ -863,11 +839,12 @@ Proxy is also handy because we don't need to hard-code origins in the `@CrossOri
 
 > Exercise 24
 >
-> Add a brief description of the _programming languages, frameworks and libraries used in the project's implementation_ to the project description in the `README.md`. Mention at least the following things:
+> Add a brief description of the project's _overall architecture_ and the _implementation technologies_ to the project description in the `README.md`. Mention at least the following things:
 >
-> 1. Which programming languages, frameworks and major libraries (e.g. Spring Boot) are used in the _backend implementation_?
-> 2. Which database platforms (e.g. H2, PostgreSQL) are used in different environments (development and production environment)?
-> 3. Which programming languages, frameworks and major libraries (e.g. React, Material UI) are used in the _frontend implementation_?
+> 1. From which components (backend and frontend) your project's overall architecture consists of? What is the purpose of each component? How does the components communicate with each other?
+> 2. Which programming languages, frameworks and major libraries (e.g. Spring Boot) are used in the _backend implementation_?
+> 3. Which database platforms (e.g. H2, PostgreSQL) are used in different environments (development and production environment)?
+> 4. Which programming languages, frameworks and major libraries (e.g. React, Material UI) are used in the _frontend implementation_?
 
 ## REST API documentation with Swagger
 
@@ -896,6 +873,7 @@ We can provide more details about the endpoints by using specific annotations fo
 ```java
 @RestController
 @RequestMapping("/api/quizzes")
+@CrossOrigin(origins = "*")
 @Tag(name = "Quiz", description = "Operations for accessing and managing quizzes")
 public class QuizRestController {
     // ...
@@ -909,6 +887,7 @@ We can also provide more information about a specific endpoint using the `@Opera
 ```java
 @RestController
 @RequestMapping("/api/quizzes")
+@CrossOrigin(origins = "*")
 @Tag(name = "Quiz", description = "Operations for accessing and managing quizzes")
 public class QuizRestController {
     // ...
@@ -930,7 +909,7 @@ public class QuizRestController {
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
 >
-> Add a link to the Swagger documentation in the production environment (in Render) under a "Documentation" subheading in the `README.md` file. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui.html>. Deploy the application to Render and make sure that the Swagger documentation is accessible.
+> Add a link to the Swagger documentation in the production environment (in Render) to the "Documentation" section in the `README.md` file. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui.html>. Deploy the backend application to Render and make sure that the Swagger documentation is accessible.
 
 ## The .gitignore file
 
@@ -951,138 +930,36 @@ These two lines will ignore both the `node_modules` and `dist` folders in the `f
 
 ## Deploying the frontend
 
-We managed to deploy the backend during the previous Sprint, but we still haven't deployed the frontend. We can use the backend to serve the frontend files from the `src/resources/static` folder so that we don't need a separate deployment for the frontend.
+We managed to deploy the backend during the previous Sprint, but we still haven't deployed the frontend. We can deploy the frontend to Render with the following steps:
 
-First, let's configure Vite so that it builds the output files to the `src/resources/static` folder. We can do this by adding the `build` configuration for the `frontend/vite.config.js` file:
+1. In the `frontend` folder, add a `.env.production` [environment variable](https://vitejs.dev/guide/env-and-mode) file. The `.env.production` file should contain a `VITE_BACKEND_URL` environmet variable for the backend's _production environment URL_. For example:
 
-```js
-export default defineConfig({
-  plugins: [react()],
-  build: {
-    outDir: "../src/main/resources/static",
-  },
-  server: {
-    proxy: {
-      "/api": {
-        target: "http://localhost:8080/api",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
-      },
-    },
-  },
-});
-```
+   ```
+   VITE_BACKEND_URL=https://name-of-the-backend-service.onrender.com
+   ```
 
-Next, let's add the `src/main/resources/static` folder to the `.gitignore` file in the root folder of our application (same folder that has the `pom.xml` file). This is because we don't want the frontend build files to end-up in the repository. Just add the following line at the end of the file:
+   Make sure that every `fetch` function call has the environment variable as the URL prefix. For example:
 
-```
-src/main/resources/static
-```
+   ```js
+   fetch(`${import.meta.env.VITE_BACKEND_URL}/api/quizzes`).then((response) => {
+     // ...
+   });
+   ```
 
-Vite builds the frontend application with the `npm run build` command. We can integrate the frontend's npm scripts with the backend's Maven workflow using the [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin). Using the plugin, we can run all the commands required to build the frontend application when we compile the Java code. This will simplify the deployment workflow of the application.
+   Finally, _push the changes to GitHub_
 
-Let's add the frontend-maven-plugin to the `<plugins>` list in the `pom.xml` file:
-
-```xml
-<plugin>
-    <groupId>com.github.eirslett</groupId>
-    <artifactId>frontend-maven-plugin</artifactId>
-    <version>1.14.2</version>
-    <configuration>
-        <installDirectory>./target</installDirectory>
-        <workingDirectory>./frontend</workingDirectory>
-    </configuration>
-    <executions>
-        <execution>
-            <id>install node and npm</id>
-            <goals>
-                <goal>install-node-and-npm</goal>
-            </goals>
-            <phase>prepare-package</phase>
-            <configuration>
-                <nodeVersion>v18.16.0</nodeVersion>
-            </configuration>
-        </execution>
-        <execution>
-            <id>npm install</id>
-            <goals>
-                <goal>npm</goal>
-            </goals>
-            <phase>prepare-package</phase>
-            <configuration>
-                <arguments>install</arguments>
-            </configuration>
-        </execution>
-        <execution>
-            <id>npm build</id>
-            <goals>
-                <goal>npm</goal>
-            </goals>
-            <phase>prepare-package</phase>
-            <configuration>
-                <arguments>run build</arguments>
-            </configuration>
-        </execution>
-    </executions>
-</plugin>
-```
-
-The plugin will execute three commands when we generate the resources for the project:
-
-1. Install a _project-specific_ Node.js version into the `node` folder. This won't effect your other Node.js installations
-2. Run `npm install` command to install frontend dependencies
-3. Run `npm run build` command to generate a minified bundle of the frontend code, suitable for the production version of the application
-
-Now, if we run the `./mvnw package` command, the command output indicates that the frontend related commands are executed. We should also see that the `src/main/resources/static` folder has a `assets` folder with the frontend files.
-
-We want the frontend application to be accessible in a certain path of the application, for example `http://localhost:8080/app`. We can achieve this by rendering the `src/main/resources/static/index.html` in the `/app` path. Let's add a `FrontendController` controller class to handle that:
-
-```java
-@Controller
-public class FrontendController {
-    @GetMapping("/app/**")
-    public String renderFrontend() {
-        return "index";
-    }
-}
-```
-
-Last thing to do is to tell Thymeleaf to search for template files in the `src/main/resources/static` folder. Let's add the following method for the `ThymeleafConfig` class:
-
-```java
-@Bean
-public ClassLoaderTemplateResolver secondaryTemplateResolver() {
-    ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
-    templateResolver.setPrefix("static/");
-    templateResolver.setSuffix(".html");
-    templateResolver.setTemplateMode(TemplateMode.HTML);
-    templateResolver.setCharacterEncoding("UTF-8");
-    templateResolver.setOrder(1);
-    templateResolver.setCheckExistence(true);
-
-    return templateResolver;
-}
-```
-
-We still have one problem, which is related to React Router. React Router assumes that the basepath of the application is `/`, but in our case it is `/app`. We only want to change the basepath in the production version of the application. To achieve this, we can use [environment variables](https://vitejs.dev/guide/env-and-mode). Let's add a `env.production` file to the `frontend` folder with the following content:
-
-```
-VITE_ROUTER_BASENAME=/app
-```
-
-We can define the basename of the `BrowserRouter` component in the following way:
-
-```jsx
-<BrowserRouter basename={import.meta.env.VITE_ROUTER_BASENAME}>
-```
-
-Now we should be ready to deploy the frontend. Before deploying the application to Render, generate a JAR file with the `./mvnw package` command and start the application with the `java -jar target/quizzer-0.0.1-SNAPSHOT.jar` command. The frontend should be accessible at <http://localhost:8080/app>.
+1. On the Render dashboard, click the "New" button and choose "Static Site"
+1. From the repository list, find you project's repository and click the "Connect" button
+1. Come up with the name for the service. Set "Root Directory" as `frontend`, "Build Command" as `npm run build` and "Publish Directory" as `dist`
+1. Click the "Advanced" button and set "Auto-Deploy" as "No"
+1. Click the "Create Static Site" button to create the service
+1. On the service's page, click "Redirects/Rewrites" from the navigation on the left. Set the "Source" as `/*`, "Destination" as `/index.html` and "Action" as "Rewrite". Finally, click the "Save Changes" button. This configuration will make the frontend routing work
 
 {: .important-title }
 
 > Exercise 26
 >
-> Do the required setup for the frontend deployment as instructed above and deploy the application to Render. Make sure that the application (especially the frontend) works properly in the production environment.
+> Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
 
 ## Sprint Review
 
@@ -1104,7 +981,7 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 > Exercise 29
 >
-> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If you managed to deploy the application to Render, demonstrate the features in the production environment.
+> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the features in the production environment.
 >
 > As in the previous Sprint Review, prepare some _sensible_ test data for the Sprint Review.
 
