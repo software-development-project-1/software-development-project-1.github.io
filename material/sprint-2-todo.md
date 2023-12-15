@@ -384,6 +384,7 @@ Instead of sending a response as an HTML page, we can serialize Java objects int
 ```java
 @RestController
 @RequestMapping("/api/messages")
+@CrossOrigin(origins = "*")
 public class MessageRestController {
     @Autowired
     private MessageRepository messageRepository;
@@ -436,6 +437,7 @@ We can create a separate controller class for each collection. The `@RequestMapp
 ```java
 @RestController
 @RequestMapping("/api/messages")
+@CrossOrigin(origins = "*")
 public class MessageRestController {
     // ...
 
@@ -841,7 +843,7 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Add a brief description of the project's _overall architecture_ and the _implementation technologies_ to the project description in the `README.md`. Mention at least the following things:
 >
-> 1. From which components (backend and frontend) your project's overall architecture consists of? What is the purpose of each component? How does the components communicate with each other?
+> 1. From which components (backend and frontend) your project's overall architecture consists of? What is the purpose of each component? How do the components communicate with each other?
 > 2. Which programming languages, frameworks and major libraries (e.g. Spring Boot) are used in the _backend implementation_?
 > 3. Which database platforms (e.g. H2, PostgreSQL) are used in different environments (development and production environment)?
 > 4. Which programming languages, frameworks and major libraries (e.g. React, Material UI) are used in the _frontend implementation_?
@@ -860,11 +862,11 @@ Let's start documenting our API by adding the Spring Doc dependency to the `<dep
 <dependency>
     <groupId>org.springdoc</groupId>
     <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-    <version>2.0.2</version>
+    <version>2.3.0</version>
 </dependency>
 ```
 
-Then, let's start our application and open <http://localhost:8080/v3/api-docs> in a browser. We should see the JSON formatted description of our REST API in the OpenAPI format. For a more user-friendly description, the Swagger documentation can be found at <http://localhost:8080/swagger-ui.html>. In the Swagger documentation, we can see a documentation for two controllers: the `QuizRestController` controller and the `AnswerRestController` controller.
+Then, let's start our application and open <http://localhost:8080/v3/api-docs> in a browser. We should see the JSON formatted description of our REST API in the OpenAPI format. For a more user-friendly description, the Swagger documentation can be found at <http://localhost:8080/swagger-ui/index.html>. In the Swagger documentation, we can see a documentation for two controllers: the `QuizRestController` controller and the `AnswerRestController` controller.
 
 Let's have a look at the documentation for the `/api/quizzes/{id}/questions` endpoint under the "quiz-rest-controller". We see all relevant information about the endpoint: the path, path parameters, and an example of the response. We can send a test request by clicking the "Try it out" button on the right. This is handy while we are exploring an API that we aren't familiar with.
 
@@ -880,7 +882,7 @@ public class QuizRestController {
 }
 ```
 
-Now, if we open <http://localhost:8080/swagger-ui.html> again, we should see the new name and the description for the category API.
+Now, if we open <http://localhost:8080/swagger-ui/index.html> again, we should see the new name and the description for the category API.
 
 We can also provide more information about a specific endpoint using the `@Operation` annotation:
 
@@ -893,7 +895,7 @@ public class QuizRestController {
     // ...
 
     @Operation(
-        summary = "Questions of a quiz",
+        summary = "Get all questions of a quiz",
         description = "Returns all the questions of a specific quiz"
     )
     @GetMapping("/{id}/questions")
@@ -909,7 +911,7 @@ public class QuizRestController {
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
 >
-> Add a link to the Swagger documentation in the production environment (in Render) to the "Documentation" section in the `README.md` file. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui.html>. Deploy the backend application to Render and make sure that the Swagger documentation is accessible.
+> Add a link to the Swagger documentation in the production environment (in Render) to the "Documentation" section in the `README.md` file. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui/index.html>. Deploy the backend application to Render and make sure that the Swagger documentation is accessible.
 
 ## The .gitignore file
 
