@@ -155,7 +155,7 @@ For example, the following user story is not in the specified format:
 
 > ❌ Create a new blog.
 
-This user story doesn't describe the user role and the goal the user can accomplish with the feature described by the user story. Considering these aspects, the correct format for the user story is the following:
+This user story doesn't describe the user role and the goal the user can accomplish with the feature described by the user story. Considering these aspects, the preferred format for the user story is the following:
 
 > ✅ As a content creator I want to create a new blog so that I can start writing blog posts for my readers.
 
@@ -241,7 +241,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).
 >
-> Come up with at least six _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Briefly justify why each of your user stories are well-written based on the INVEST criteria.
+> Come up with at least five _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Briefly justify why each of your user stories are well-written based on the INVEST criteria.
 >
 > Hint: pay attention to the size of the user story. Split big user stories into smaller ones.
 
@@ -251,7 +251,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > Imagine that you are the Product Owner of the project described in the [project description](/project-description).
 >
-> How would you _prioritize_ the six user stories that you came up with in the previous exercise? That is, in which order these user stories should be implemented to maximize the stakeholder's value for the application?
+> How would you _prioritize_ the five user stories that you came up with in the previous exercise? That is, in which order these user stories should be implemented to maximize the stakeholder's value for the application?
 >
 > On top of the importance of a user story, consider the dependencies between the different user stories. For example, certain user stories might be impossible to implement before some other user story has been implemented. Can we for example list quizzes before a teacher can add one?
 >
