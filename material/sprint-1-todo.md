@@ -152,7 +152,7 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 
 > Exercise 2
 >
-> _One of the team members_ should fork the [example project repository]({{site.example_project_link}}). Choose the "Owner" as the organization you created previously and give the repository a descriptive name, such as "quizzer" and a description. The forked repository will become your project's repository where you start working on the project.
+> _One of the team members_ should fork the [example project repository]({{site.example_project_link}}). Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description. The forked repository will become your project's repository where you start working on the project.
 
 {: .important-title }
 
