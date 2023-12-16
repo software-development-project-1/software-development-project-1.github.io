@@ -81,7 +81,7 @@ The order of the user stories represent the priotity provided by the Product Own
 > Exercise 3
 >
 > 1. Create a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) for each user story, such as "user register" and "user sign in"
-> 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column
+> 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Backlog project and move them to the "Sprint Backlog" column
 
 {: .important-title }
 
@@ -733,7 +733,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 > Exercise 21
 >
-> Deploy the final version of the application to Render and make sure that the application works properly in the production environment.
+> Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
 
 ## Peer review
 
