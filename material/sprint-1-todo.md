@@ -379,7 +379,7 @@ When you complete a task, you should _close_ the task related issue. This can be
 
 {: .highlight }
 
-> Don't close the _user story related issues_ before the Sprint Review. The Product Owner needs to accept the user stories before they are completed. You can leave the user story related issues to the "In progress" column or create a separate "Review" colum before the "Done" column in the Backlog project for the items that require the Product Owner's review.
+> Don't close the _user story related issues_ before the Sprint Review. The Product Owner needs to accept the user stories before they are completed. You can leave the user story related issues to the "In progress" column or create a separate "In review" colum before the "Done" column in the Backlog project for the items that require the Product Owner's review.
 
 ## Thymeleaf page layouts
 
