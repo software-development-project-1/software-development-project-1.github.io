@@ -151,14 +151,6 @@ A user story is written from the user's perspective and commonly follows the fol
 
 The "a user persona" part describes the user role who wants to use the feature described in the "to perform this action" part. If we can't come up with a specific role we can just call the user persona a "user". The last part of the user story format is the "I can accomplish this goal" part. This justifies, why this user story is important enough to be implemented.
 
-For example, the following user story is not in the specified format:
-
-> ❌ Create a new blog.
-
-This user story doesn't describe the user role and the goal the user can accomplish with the feature described by the user story. Considering these aspects, the preferred format for the user story is the following:
-
-> ✅ As a content creator, I want to create a new blog so that I can start writing blog posts for my readers.
-
 {: .note }
 
 > User stories are sort of todo items, like "go to the store", "take out the trash" and "pick up kids from school". They are there so that the Scrum Team remembers what kind of features need to be implemented for the software.
@@ -218,10 +210,9 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > What's wrong with the following user stories?
 >
-> 1. "Blog post should have a list of comments"
-> 2. "As a content creator, I want to submit a form that sends an HTTP POST request to the /api/blog-posts REST API endpoint on the server, which inserts a new row to the blog_posts database table so that I can publish a new blog post for my blog"
-> 3. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
-> 4. "As a content creator, I want my blog's layout to have a modern look so that I can write visually pleasing blog posts"
+> 1. "As a content creator, I want to submit a form that sends an HTTP POST request to the /api/blog-posts REST API endpoint on the server, which inserts a new row to the blog_posts database table so that I can publish a new blog post for my blog"
+> 2. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
+> 3. "As a content creator, I want my blog's layout to have a modern look so that I can write visually pleasing blog posts"
 
 {: .important-title }
 
@@ -229,9 +220,8 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > The Scrum Team came up with the following user stories during the Sprint Planning:
 >
-> 1. "Blog post should have a list of comments"
-> 2. "As a blog reader, I want to submit a form that sends a HTTP POST request to the /api/comments REST API endpoint on the server, which inserts a new row to the comments database table so that I can share my ideas about the blog post"
-> 3. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
+> 1. "As a blog reader, I want to submit a form that sends an HTTP POST request to the /api/comments REST API endpoint on the server, which inserts a new row to the comments database table so that I can share my ideas about the blog post"
+> 2. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
 >
 > How would improve these user stories? Come up with a _well-written_ version of each user story.
 
@@ -241,7 +231,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).
 >
-> Come up with at least five _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Briefly justify why each of your user stories are well-written based on the INVEST criteria.
+> Come up with at least six _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Briefly justify why each of your user stories are well-written based on the INVEST criteria.
 >
 > Hint: pay attention to the size of the user story. Split big user stories into smaller ones.
 
@@ -251,7 +241,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > Imagine that you are the Product Owner of the project described in the [project description](/project-description).
 >
-> How would you _prioritize_ the five user stories that you came up with in the previous exercise? That is, in which order these user stories should be implemented to maximize the stakeholder's value for the application?
+> How would you _prioritize_ the six user stories that you came up with in the previous exercise? That is, in which order these user stories should be implemented to maximize the stakeholder's value for the application?
 >
 > On top of the importance of a user story, consider the dependencies between the different user stories. For example, certain user stories might be impossible to implement before some other user story has been implemented. Can we for example list quizzes before a teacher can add one?
 >
