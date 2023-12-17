@@ -59,11 +59,11 @@ While discussing the technical details, the Developers document a todo-list of t
 
 > Task 1: Add a Blog JPA entity class and a BlogRepository JPA repository class
 
-> Task 2: Add a Thymeleaf template for the blog submission form containing fields for name and description
+> Task 2: Add a Thymeleaf template for the blog creation form containing fields for name and description
 
-> Task 3: Add a BlogController controller class and a method for rendering the blog submission form
+> Task 3: Add a BlogController controller class and a method for rendering the blog creation form
 
-> Task 4: Add a method for the BlogController that save the blog to database
+> Task 4: Add a method for the BlogController class which handles the blog creation form submission
 
 These tasks are added to the Sprint-specific _Sprint Backlog_.
 
