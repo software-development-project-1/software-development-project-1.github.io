@@ -258,9 +258,9 @@ The order of the user stories represent the priotity provided by the Product Own
 For the _first user story_, the Developers planned the following tasks:
 
 1. Add a Quiz JPA entity class with id, name, description and published attributes, and a QuizRepository JPA repository class
-2. Add a Thymeleaf template for the quiz submission form containing fields for title, description and published status
-3. Add QuizController controller class and a method for rendering the quiz submission form
-4. Add a method for the QuizController class which saves the quiz to the database
+2. Add a Thymeleaf template for the quiz creation form containing fields for name, description and published status
+3. Add QuizController controller class and a method for rendering the quiz creation form
+4. Add a method for the QuizController class which handles the quiz creation form submission
 
 For the _second user story_, the Developers planned the following tasks:
 
