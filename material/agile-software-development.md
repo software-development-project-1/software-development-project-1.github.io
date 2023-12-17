@@ -145,7 +145,7 @@ For example, two separate user stories for a blog application could be the follo
 
 > As a blog reader I want to browse list of blog posts of a blog so that I can find interesting posts to read.
 
-A user story is usually written from the user's perspective and follows the format:
+A user story is written from the user's perspective and commonly follows the following format:
 
 > As [a user persona], I want [to perform this action] so that [I can accomplish this goal].
 
@@ -157,7 +157,7 @@ For example, the following user story is not in the specified format:
 
 This user story doesn't describe the user role and the goal the user can accomplish with the feature described by the user story. Considering these aspects, the preferred format for the user story is the following:
 
-> ✅ As a content creator I want to create a new blog so that I can start writing blog posts for my readers.
+> ✅ As a content creator, I want to create a new blog so that I can start writing blog posts for my readers.
 
 {: .note }
 
@@ -171,11 +171,11 @@ The user stories described previously sound like fairly good descriptions of sof
 
 Because the Product Owner in the Scrum Team is commonly a non-technical person, user stories should not contain technical details of the implementation. For example, the following user story is too technical:
 
-> ❌ As a blog reader I want to send an HTTP GET request to the server to get the list of blog posts in a JSON format so that I can find interesting posts to read.
+> ❌ As a blog reader, I want to send an HTTP GET request to the server to get the list of blog posts of a blog in JSON format so that I can find interesting blog posts to read.
 
 A better user story would express the feature from the user's point of view:
 
-> ✅ As a blog reader I want to browse the list of blog posts of a blog so that I can find interesting posts to read.
+> ✅ As a blog reader, I want to browse the list of blog posts of a blog so that I can find interesting blog posts to read.
 
 There are also other common guidelines for a good user story. One popular guideline is the _INVEST criteria_:
 
@@ -188,15 +188,15 @@ There are also other common guidelines for a good user story. One popular guidel
 
 A common violation of the INVEST criteria is that the user story is too large (violating the _small_ criteria):
 
-> ❌ As a content creator I want to register with a username and password, a profile picture, and a profile description so that I can start writing blog posts.
+> ❌ As a content creator, I want to register with a username and password, a profile picture, and a profile description so that I can start writing blog posts.
 
 These kinds of user stories are tedious for the Developers to implement because the implementation could take several Sprints. It is better to split these kinds of big user stories into multiple smaller user stories:
 
-> ✅ As a content creator I want to register with a username and password so that I can start writing blog posts.
+> ✅ As a content creator, I want to register with a username and password so that I can start writing blog posts.
 
-> ✅ As a content creator I want to register with a profile picture so that my readers know what I look like.
+> ✅ As a content creator, I want to register with a profile picture so that my readers know what I look like.
 
-> ✅ As a content creator I want to register with a profile description so that my readers know about me.
+> ✅ As a content creator, I want to register with a profile description so that my readers know about me.
 
 {: .note }
 
@@ -204,11 +204,11 @@ These kinds of user stories are tedious for the Developers to implement because 
 
 Another fairly common violation is that the user story doesn't have a good enough description so that it is _estimable_. For example, it is very difficult to estimate how long it would take for the Developers to implement the following user story:
 
-> ❌ As a content creator I want to export blog posts from all kinds of social media platforms so that I don't have to write the same blog post twice.
+> ❌ As a content creator, I want to export blog posts from all kinds of social media platforms so that I don't have to write the same blog post twice.
 
 In these kinds of cases we should write a more concrete description of the feature:
 
-> ✅ As a content creator I want to export blog posts from Medium so that I don't have to write the same blog post twice.
+> ✅ As a content creator, I want to export blog posts from Medium so that I don't have to write the same blog post twice.
 
 There's still a bit uncertainty of about the implementation. For example, how in practice can we export blog posts from Medium? But at least the scope of the user story is narrower.
 
@@ -231,7 +231,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > 1. "Blog post should have a list of comments"
 > 2. "As a blog reader, I want to submit a form that sends a HTTP POST request to the /api/comments REST API endpoint on the server, which inserts a new row to the comments database table so that I can share my ideas about the blog post"
-> 3. "As a content creator I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
+> 3. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
 >
 > How would improve these user stories? Come up with a _well-written_ version of each user story.
 
