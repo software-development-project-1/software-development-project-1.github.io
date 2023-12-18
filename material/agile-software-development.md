@@ -159,11 +159,11 @@ In Scrum, the whole Scrum Team participates in writing the user stories. This is
 
 ## Writing good user stories
 
-The user stories described previously sound like fairly good descriptions of software features. But what makes a good user story?
+The user stories described previously sound like fairly good descriptions of software features. But what makes a good user story? A good user story describes a _feature that provides value for the end user of the software_. This means, that the description should be written so that the _customer can understand it_.
 
 Because the Product Owner in the Scrum Team is commonly a non-technical person, user stories should not contain technical details of the implementation. For example, the following user story is too technical:
 
-> ❌ As a blog reader, I want to send an HTTP GET request to the server to get the list of blog posts of a blog in JSON format so that I can find interesting blog posts to read.
+> ❌ As a blog reader, I want to send an HTTP GET request to the /api/blogs/{id}/blog-posts REST API endpoint on the server to get the list of blog posts of a blog in JSON format so that I can find interesting blog posts to read.
 
 A better user story would express the feature from the user's point of view:
 
@@ -202,7 +202,7 @@ In these kinds of cases we should write a more concrete description of the featu
 
 > ✅ As a content creator, I want to export blog posts from Medium so that I don't have to write the same blog post twice.
 
-There's still a bit uncertainty of about the implementation. For example, how in practice can we export blog posts from Medium? But at least the scope of the user story is narrower.
+There's still a bit uncertainty of about the implementation. For example, how in practice can we export blog posts from Medium? But at least the scope of the user story is narrower. Commonly [spikes](https://www.mountaingoatsoftware.com/blog/spikes) are used to tackle such uncertainty in the user stories.
 
 {: .important-title }
 
@@ -213,6 +213,8 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > 1. "As a content creator, I want to submit a form that sends an HTTP POST request to the /api/blog-posts REST API endpoint on the server, which inserts a new row to the blog_posts database table so that I can publish a new blog post for my blog"
 > 2. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
 > 3. "As a content creator, I want my blog's layout to have a modern look so that I can write visually pleasing blog posts"
+>
+> Justify your answer based on the INVEST criteria and general guideliness of a good user story.
 
 {: .important-title }
 

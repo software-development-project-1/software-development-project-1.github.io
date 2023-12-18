@@ -178,8 +178,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 3
 >
-> 1. Create a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) for each user story, such as "quiz creation date" and "add question"
-> 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Backlog project and move them to the "Sprint Backlog" column
+> Create an issue for each _user story_. Add the "user story" label for each issue. Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -193,7 +192,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 > Exercise 5
 >
-> Create an issue for each task of the first user story, "{{site.sprint_2_user_story_1}}". You can use the tasks suggested in the [Sprint 2 planning](#%EF%B8%8F-sprint-2-planning) section, or plan your own tasks. Add the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task of the first user story, "{{site.sprint_2_user_story_1}}". You can use the tasks suggested in the [Sprint 2 planning](#%EF%B8%8F-sprint-2-planning) section, or plan your own tasks. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -201,7 +200,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get some implementation tips.
 >
-> Create an issue for each task. Add the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -209,7 +208,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -217,7 +216,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 13 to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -225,7 +224,7 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 14 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the user story's label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -724,7 +723,7 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get tips for the implementation.
 >
-> Create an issue for each task. Add the user story's label and either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -732,7 +731,7 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 21 to get tips for the implementation.
 >
-> Create an issue for each task. Add the user story's label and either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -740,7 +739,7 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 22 to get tips for the implementation.
 >
-> Create an issue for each task. Add the user story's label and either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -912,6 +911,8 @@ public class QuizRestController {
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
 >
 > Add a link to the Swagger documentation in the production environment (in Render) to the "Documentation" section in the `README.md` file. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui/index.html>. Deploy the backend application to Render and make sure that the Swagger documentation is accessible.
+>
+> Create an issue for the task. The "documentation" label is suitable for documentation-related issues.
 
 ## The .gitignore file
 

@@ -278,21 +278,19 @@ These are the user stories, that you will be working on as a team during this Sp
 
 [GitHub issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are used to track ideas, feedback, tasks, or bugs for work on GitHub. Open source projects commonly use issues for feature suggestions and bug reports (something is not working as inteded). [Here](https://github.com/facebook/react/issues) is an example of issues in the React library's repository. We will use issues to organize the user stories, tasks and bug reports in our project.
 
-Before we start creating issues, let's add some [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) so that we can better organize our issues. Open your repository in GitHub and click the "Issues" tab. Then, on the right, click the "Labels" button.
+Before we start creating issues, let's add some [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) so that we can better organize our issues. Open your repository in GitHub and click the "Issues" tab. Then, on the right, click the "Labels" button. So that we can separate the user story issues from other issues, let's add a "user story" label by clicking the "New label" button.
 
 {: .highlight }
 
 > If you don't see the "Issues" tab in the repository, follow [this guide](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-issues) to enable the issues. In our case the "Issues" checkbox should be checked.
 
-So that we can separate the user story issues from other issues, let's add a "user story" label by clicking the "New label" button. Then, let's create a label _for each user story_ so that we can better organize the tasks. Create a label with a _short description_ (_not_ the full user story description) for each user story. For example "add quiz" and "list quizzes" for the first two user stories.
-
 {: .important-title }
 
 > Exercise 7
 >
-> Create the "user story" label and a label _for each user story_ as described above. Come up with a _short description_ for each user story for the labels, such as "add quiz".
+> Create the "user story" label.
 
-Next, we need to specify the Sprint the issue is related to. We can use Sprint-specific [milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) to group the issues based on a Sprint. Let's create a milestone for the first Sprint. First, click the "Issues" tab to open the issues page. Then, click the "Milestones" button next to the "Labels" button. On the Milestones page, click the "Create a new Milestone" button. Set the milestone title as "Sprint 1". You can also specify a due date and a description if you want. Finally, click the "Create milestone" button to create the milestone.
+Next, we need to specify the Sprint the issue is worked on. We can use Sprint-specific [milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) to group the issues based on a Sprint. Let's create a milestone for the first Sprint. First, click the "Issues" tab to open the issues page. Then, click the "Milestones" button next to the "Labels" button. On the Milestones page, click the "Create a new Milestone" button. Set the milestone title as "Sprint 1". You can also specify a due date and a description if you want. Finally, click the "Create milestone" button to create the milestone.
 
 {: .important-title }
 
@@ -300,13 +298,9 @@ Next, we need to specify the Sprint the issue is related to. We can use Sprint-s
 >
 > Create the "Sprint 1" milestone.
 
-Now that we have the labels and a milestone, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "{{site.sprint_1_user_story_1}}". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose labels "user story" and "add quiz", which indicate that this issue is related to a certain user story. Then, click "Projects" and choose the "Backlog" project. This will add the issue to the Backlog project. To specify the issue's Sprint, click "Milestone" and choose "Sprint 1". Finally, click the "Submit a new issue" button to create the issue.
+Now that we have the "user story" label and the "Sprint 1" milestone, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "{{site.sprint_1_user_story_1}}". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose the "user story" label which indicates that this issue is a user story. Then, click "Projects" and choose the "Backlog" project. This will add the issue to the Backlog project. To specify the issue's Sprint, click "Milestone" and choose "Sprint 1". Finally, click the "Submit a new issue" button to create the issue.
 
-{: .note }
-
-> You can easily find the issues related to certain user story by opening the "Issues" tab and choosing the user story label from the "Label" dropdown menu.
-
-Let's open the "Projects" tab and open the Backlog project. We should see that the issue we created is now in the project. We can move the issue to a column by dragging the issue card. This will change the status of the issue. Let's move the issue we created to the "Sprint Backlog" column, which indicates that this user story is in the current Sprint.
+Next, let's open the "Projects" tab and open the Backlog project. We should see that the issue we created is now in the project. We can move the issue to a column by dragging the issue card. This will change the status of the issue. Let's move the issue we created to the "Sprint Backlog" column, which indicates that this user story is in the current Sprint.
 
 By default we can't see the labels or the milestone on the issue cards. We can click on the arrow button next to "View 1" below the project name and click "Fields" under "Configuration". There, check "Labels" and "Milestone". Finally, click the green "Save" button to save the configuration.
 
@@ -314,7 +308,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 > Exercise 9
 >
-> Create an issue for each _user story_. Add the "user story" label and the user story's label for each issue. Set the milestone as "Sprint 1". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
+> Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 1". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -322,7 +316,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Create an issue for each task of the first user story, "{{site.sprint_1_user_story_1}}". You can use the tasks suggested in the [Sprint 1 planning](#%EF%B8%8F-sprint-1-planning) section, or plan your own tasks.
 >
-> Add the user story's label for the issues. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -330,7 +324,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Create an issue for each task of the second user story, "{{site.sprint_1_user_story_2}}". You can use the tasks suggested in the [Sprint 1 planning](#%EF%B8%8F-sprint-1-planning) section, or plan your own tasks.
 >
-> Add the user story's label for the issues. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -338,7 +332,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Plan the tasks for the third user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the user story's label for the issues. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -346,7 +340,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 19 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the user story's label for the issues. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -354,7 +348,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the user story's label for the issues. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -362,11 +356,13 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Discuss how you will divide the workload (the tasks) of the Sprint among the team members. For example, each team member could be responsible for the tasks of a single user story. Then, add an _assignee_ for each issue. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same issue together.
 
-{: .note }
+{: .highlight }
 
-> You can easily find the issues assigned to you by opening the "Issues" tab and choosing your GitHub account from the "Assignee" dropdown menu.
+> When you complete a task, you should _close_ the task related issue. This can be done by clicking the issue title in the Backlog project and clicking the "Close issue" button.
 
-When you complete a task, you should _close_ the task related issue. This can be done by opening the issue and clicking the "Close issue" button at the bottom of the page.
+{: .highlight }
+
+> Don't close the _user story related issues_ before the Sprint Review event. The Product Owner needs to accept the user stories before they are completed. You can leave the user story related issues to the "In progress" column or create a separate "In review" colum before the "Done" column in the Backlog project for the items that require the Product Owner's review.
 
 {: .highlight }
 
@@ -377,9 +373,21 @@ When you complete a task, you should _close_ the task related issue. This can be
 >
 > Use the Sprint Backlog to track the Sprint progress. Always start a team meeting by looking at the Sprint Backlog.
 
-{: .highlight }
+{: .note }
 
-> Don't close the _user story related issues_ before the Sprint Review. The Product Owner needs to accept the user stories before they are completed. You can leave the user story related issues to the "In progress" column or create a separate "In review" colum before the "Done" column in the Backlog project for the items that require the Product Owner's review.
+> You can easily find the issues assigned to you by opening the "Issues" tab and choosing your GitHub account from the "Assignee" dropdown menu.
+
+{: .note }
+
+> User story related tasks can be included in the user story issue's description as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists):
+>
+> ```md
+> - [] #5
+> - [] #6
+> - [] #7
+> ```
+>
+> Task list item with a "#" prefix is a reference to a certain issue. You can type "#" and GitHub will suggest issues. Task list makes it easier to know which user story the task is related to and to track the progress of a user story. GitHub will automatically mark the task list item as done when the related issue is closed.
 
 ## Thymeleaf page layouts
 

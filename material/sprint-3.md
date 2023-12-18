@@ -114,7 +114,7 @@ The order of the user stories represent the priotity provided by the Product Own
 
 > Exercise 8
 >
-> Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a verbal description of the application's data model, which documents the application's entities, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). Add the diagram and the verbal description to a `data-model.md` file in the `documentation` folder. The verbal description should explain the purpose of each entity and their relationship to other entities. Add a link to the file to the `README.md` file under the "Documentation" subheading. If you place the diagram image to the `documentation` folder you can add it to a Markdown file in the following way:
+> Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a verbal description of the application's data model, which documents the application's entities, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). Add the diagram and the verbal description to a `data-model.md` file in the `documentation` folder. The verbal description should explain the purpose of each entity and their relationship to other entities. Add a link to the file to "Documentation" section in the `README.md` file. If you place the diagram image to the `documentation` folder you can add it to a Markdown file in the following way:
 >
 > ```md
 > ![ER Diagram](./er-diagram.png)
