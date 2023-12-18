@@ -464,13 +464,21 @@ Here's a few tips before you start implementing the tasks:
 >
 > ![](/assets/todo-sprint-1-user-story-1.png)
 >
-> Validate that the name or the description is not blank. Alter the `layout.html` file mentioned above to change the navigation bar content.
+> Validate that the quiz name or the description is not blank. Alter the `layout.html` file mentioned above to change the navigation bar content.
 >
 > Tips for implementing the tasks:
 >
 > - [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
 > - [Validating Form Input](https://spring.io/guides/gs/validating-form-input/)
 > - Bootstrap [forms](https://getbootstrap.com/docs/5.3/forms/form-control/), [checks & radios](https://getbootstrap.com/docs/5.3/forms/checks-radios/) and [buttons](https://getbootstrap.com/docs/5.3/components/buttons/)
+> - The quiz published status field can be implemented with a checkbox element:
+>
+>   ```html
+>   <div class="form-check">
+>     <input class="form-check-input" type="checkbox" th:field="*{published}" />
+>     <label class="form-check-label" for="published1">Published</label>
+>   </div>
+>   ```
 
 {: .important-title }
 

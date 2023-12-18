@@ -717,6 +717,11 @@ Before starting to implement the frontend features, we should test that the endp
 
 > Omit the `@OneToMany` attributes from the JSON response in every entity by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the attributes.
 
+{: .highlight}
+
+> Use the `@CrossOrigin` annnotation on the REST controller classes to allow cross-origin requests from the frontend application.
+
+
 {: .important-title }
 
 > Exercise 17
