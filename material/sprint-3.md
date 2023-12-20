@@ -35,7 +35,7 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 >
 > Did similar issues arise as in Sprint 1 retrospective? If so, try to come up with different actions as before or ask the teacher for tips on how to solve these issues.
 >
-> Once you have completed the Retrospective write down the issues and actions to the repository's `retrospectives/sprint-2.md` file and push the changes to GitHub.
+> Once you have completed the Retrospective write down the issues and actions to the repository's `documentation/retrospectives/sprint-2.md` file and push the changes to GitHub.
 
 ## 🏃‍♂️ Sprint 3 planning
 
@@ -47,21 +47,24 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 3 goals in the Sprint Planning event:
 
-> "The basic features for adding and organizing the reading recommendations work great! What we now need, is the possibility for the user to manage their own personl reading recommendations. This means that user should be able to register an account with an username, password. User should not be able to register with a blank username or a password less than 8 characters long. The username should not be already taken by another registered user. The password should contain at least one letter and at least one number.
-
-> After registering, the user should be able to sign in using their username and password provided during the registration. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in form. Once the user is signed in, there should be "Sign out" link in the navigation bar that will sign the user out.
+> "We now have the basic features for managing and taking quizzes. What we still need is a way for the students and teachers to see the quiz results. There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question. The results page should be accessible for both students and teachers. There should be a link to the results page next to each quiz in the quiz list page.
 >
-> An anonymous user, that is an user who is not signed in, should be able to see the reading recommendation list and the category list. However, they should not be able to add a reading recommendation or a category. That is, the links for adding a reading recommendation and adding a category should not be visible if the user is not signed in.
+> So that a teacher can manage their personal quizzes, we need the teacher to be able to register with a username and password. User should not be able to register with a blank username or a password less than 8 characters long. The username should not be already taken by another registered user. The password should contain at least one letter and at least one number. It would also be nice if the user would need to retype the password to make sure that they don't accidently mistype the password.
 >
-> After signing in, the user should be able to add reading recommendations and categories. However, the user should only be able to edit and delete reading recommendations that they have added. That is, the "Edit" link and the "Delete" button in the reading recommendation list should only be visible if the user has added the reading recommendation. The reading recommendation list should also display the username of the user who has added the recommendation."
+> Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
+>
+> An anonymous user, that is an user who is not signed in, should be able to see the quiz list. However, they should not be able to add a quiz. That is, the link for adding a quiz should not be visible if the user is not signed in.
+>
+> After signing in, the teacher should be able to add a quiz. However, the teacher should only be able to edit and delete quizzes they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The quiz list should also display the username of the teacher who has added the quiz."
 >
 > -- The Product Owner
 
-After some discussion the Scrum Team came up with the following user stories:
+After some discussion the Scrum Team planned the following user stories:
 
-1. As an anonymous user I want to register an account so that I can manage my personal reading recommendations
-2. As an anonymous user I want to sign in so that I can manage my personal reading recommendations
-3. As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations
+1. {{site.sprint_3_user_story_1}}
+2. {{site.sprint_3_user_story_2}}
+3. {{site.sprint_3_user_story_3}}
+4. {{site.sprint_3_user_story_4}}
 
 The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
 
@@ -69,61 +72,57 @@ The order of the user stories represent the priotity provided by the Product Own
 
 > Exercise 2
 >
-> Create a Sprint Backlog project for the third Sprint in GitHub Projects. Name the project "Sprint 3 Backlog". Use the default project columns, similar as in the Sprint 2 Backlog project. Add a "Sprint 3 Backlog" link for the project to the "Backlogs" section in the `README.md` file.
+> Create a new milestone for the third Sprint. Set the milestone title as "Sprint 3".
 
 {: .important-title }
 
 > Exercise 3
 >
-> 1. Create a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) for each user story, such as "user register" and "user sign in"
-> 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column
+> Make sure that all task related issues that have been completed during the Sprint 2 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
+>
+> If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 3".
 
 {: .important-title }
 
 > Exercise 4
 >
-> Make sure that all task related issues that have been completed during the Sprint 2 are _closed_ and their _status is "Done"_ in the Sprint 2 Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
->
-> If you didn't manage to implement all user stories during Sprint 2, move the task related issues of the unfinished user stories to the Sprint 3 Backlog project.
+> Create an issue for each _user story_. Add the "user story" label for each issue. Add the issues to the Backlog project and move them to the "Sprint Backlog" column
 
 {: .important-title }
 
 > Exercise 5
 >
-> Come up with tasks for the first user story, "As an anonymous user I want to register an account so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get an idea what the implementation could look like and the [Authentication](#authentication) section for the technical details.
+> Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
+> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+
+{: .note }
+
+> The [Authentication](#authentication) section covers topics related to the authentication. Take a look at it before planning the authentication-related tasks.
 
 {: .important-title }
 
 > Exercise 6
 >
-> Come up with tasks for the second user story, "As an anonymous user I want to sign in so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 13 to get tips for the implementation and the [Authentication](#authentication) section for the technical details.
+> Plan the tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
+> Create an issue for each task. Add the "backend" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
 > Exercise 7
 >
-> Come up with tasks for the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 14 to get tips for the implementation and the [Authentication](#authentication) section for the technical details.
+> Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "task" label and the user story's label for the issues. Add the issues to the Sprint 3 Backlog project.
+> Create an issue for each task. Add the "backend" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
 > Exercise 8
 >
-> Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a verbal description of the application's data model, which documents the application's entities, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). Add the diagram and the verbal description to a `data-model.md` file in the `documentation` folder. The verbal description should explain the purpose of each entity and their relationship to other entities. Add a link to the file to "Documentation" section in the `README.md` file. If you place the diagram image to the `documentation` folder you can add it to a Markdown file in the following way:
+> Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 for some implementation tips and to get an idea what the implementation could look like.
 >
-> ```md
-> ![ER Diagram](./er-diagram.png)
-> ```
->
-> GitHub also supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain a diagram. Take a look at Mermaid's [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) documentation for more.
->
-> _Keep this documentation up-to-date_ when you add new entities for the application.
-
+> Create an issue for each task. Add the "backend" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 ## Testing
 
@@ -147,21 +146,18 @@ Here's an example of unit tests for a `calculateWords` method, which returns the
 @Test
 void calculateWordsCalculatesSingleWordCorrectly() {
     String message = "Hello";
-
     assertEquals(1, MessageUtils.calculateWords(message));
 }
 
 @Test
 void calculateWordsCalculatesManyWordsCorrectly() {
     String message = "Hello world";
-
     assertEquals(2, MessageUtils.calculateWords(message));
 }
 
 @Test
 void calculateWordsCalculatesZeroWordCorrectly() {
     String message = "";
-
     assertEquals(0, MessageUtils.calculateWords(message));
 }
 ```
@@ -176,18 +172,18 @@ Unit tests have these pros and cons:
 
 _Integration tests_ (also known as service tests) constitute the middle of the test pyramid. We should have quite many integration tests for our application. As the name suggests, integration tests test that different parts of our application code work as inteded once they are _integrated_. For example, methods that perform database operations are tested with integration tests.
 
-Here's an example of integration tests for a REST API endpoint `/api/messages` implemented by the `getMessages` method:
+Here's an example of integration tests for a REST API endpoint `/api/messages` implemented by the `getAllMessages` method:
 
 ```java
 @Test
-public void getMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception {
+public void getAllMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception {
     this.mockMvc.perform(get("/api/messages"))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$", hasSize(0)));
 }
 
 @Test
-public void getMessagesReturnsListOfMessagesWhenMessagesExist() throws Exception {
+public void getAllMessagesReturnsListOfMessagesWhenMessagesExist() throws Exception {
     Message firstMessage = new Message("First message");
     Message secondMessage = new Message("Second message");
     messageRepository.saveAll(List.of(firstMessage, secondMessage));
@@ -239,13 +235,13 @@ Because our tests will alter the database we should consider _using a different 
 The database related configuration is in the `src/main/resources/application.properties` configuration file:
 
 ```
-spring.datasource.url=jdbc:h2:file:~/cool-reads;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
+spring.datasource.url=jdbc:h2:file:~/quizzer;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
 ```
 
-The _database is stored in a file_ located in `~/cool-reads`. We can use a different, _in-memory database_ for the tests. For this we have a separate `src/test/resources/application.properties` configuration file (note the `test` folder in the path):
+The _database is stored in a file_ located in `~/quizzer`. We can use a different, _in-memory database_ for the tests. For this we have a separate `src/test/resources/application.properties` configuration file (note the `test` folder in the path):
 
 ```
-spring.datasource.url=jdbc:h2:mem:cool-reads-test;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
+spring.datasource.url=jdbc:h2:mem:quizzer-test;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
 ```
 
 The configuration in the `src/test/resources/application.properties` file will be used while we are running the tests, which makes it suitable for test-specific configuration.
@@ -271,20 +267,31 @@ As an example, let's consider testing the following methods of a `MessageRestCon
 ```java
 @RestController
 @RequestMapping("/api/messages")
+@CrossOrigin(origins = "*")
 public class MessageRestController {
-	@Autowired
-	private MessageRepository messageRepository;
+    @Autowired
+    private MessageRepository messageRepository;
 
-	@GetMapping("")
-	public List<Message> getMessages() {
-		return messageRepository.findAll();
-	}
+    @GetMapping("")
+    public List<Message> getAllMessages() {
+        return messageRepository.findAll();
+    }
 
-	@GetMapping("/{id}")
-	public Message getMessageById(@PathVariable Long id) {
-		return messageRepository.findById(id).orElseThrow(
-				() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + " does not exist"));
-	}
+    @GetMapping("/{id}")
+    public Message getMessageById(@PathVariable Long id) {
+        return messageRepository.findById(id).orElseThrow(
+            () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + " does not exist"));
+    }
+
+    @PostMapping("")
+    public Message createMessage(@Valid @RequestBody CreateMessageDto message, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                bindingResult.getAllErrors().get(0).getDefaultMessage());
+        }
+
+        return messageRepository.save(message);
+    }
 }
 ```
 
@@ -293,18 +300,23 @@ The test class files should be placed to the `src/test/java` folder and the name
 To make sure that the tests in the test class are independent, the `setUp` method should delete all messages at the beginning of each test:
 
 ```java
-package fi.haagahelia.coolreads.controller;
+package fi.haagahelia.quizzer.controller;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import fi.haagahelia.quiz.model.Message;
-import fi.haagahelia.quiz.repository.MessageRepository;
+import java.util.List;
+import static org.hamcrest.Matchers.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import fi.haagahelia.quizzer.model.Message;
+import fi.haagahelia.quizzer.repository.MessageRepository;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -314,6 +326,8 @@ public class MessageRestControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
+
+    ObjectMapper mapper = new ObjectMapper();
 
     @BeforeEach
     void setUp() throws Exception {
@@ -327,10 +341,10 @@ public class MessageRestControllerTest {
 
 The test methods test specific scenario. We come up with scenarios by analyzing the code (for example a certain method) that we are testing: how does the code behave based on different parameters or database state? For example if we call a method with certain parameters, we expect it to return a certain value. We need to cover all divergences in the code behavior with a test scenario.
 
-For example, we could have the following test scenarios for the `getMessages` method introduced above:
+For example, we could have the following test scenarios for the `getAllMessages` method introduced above:
 
-1. If we send a request to the `/api/messages` REST API endpoint and _there is no messages in the database_, the JSON response body should be an empty list
-2. If we send a request to the `/api/messages` REST API endpoint and _there are messages in the database_, the JSON response body should contain the messages as a list
+1. If we send a request to the `/api/messages` endpoint and _there is no messages in the database_, the JSON response body should be an empty list
+2. If we send a request to the `/api/messages` endpoint and _there are messages in the database_, the JSON response body should contain the messages as a list
 
 To structure these test cases as test methods, we can follow the popular [Arrange-Act-Assert](https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/) pattern:
 
@@ -342,7 +356,7 @@ Here's the two test methods for our test scenarios:
 
 ```java
 @Test
-public void getMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception {
+public void getAllMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception {
     // Act
     this.mockMvc.perform(get("/api/messages"))
     // Assert
@@ -351,7 +365,7 @@ public void getMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception {
 }
 
 @Test
-public void getMessagesReturnsListOfMessagesWhenMessagesExist() throws Exception {
+public void getAllMessagesReturnsListOfMessagesWhenMessagesExist() throws Exception {
     // Arrange
     Message firstMessage = new Message("First message");
     Message secondMessage = new Message("Second message");
@@ -369,9 +383,9 @@ public void getMessagesReturnsListOfMessagesWhenMessagesExist() throws Exception
 }
 ```
 
-The tests use the `perform` method of the `MockMVC` class to send a GET request to the `/api/messages` REST API endpoint. Then, we expect that the HTTP status of the response is `200 OK` and the JSON of the response body contains the messages we saved in the arrange step.
+The tests use the `perform` method of the `MockMVC` class to send a GET request to the `/api/messages` endpoint. Then, we expect that the HTTP status of the response is `200 OK` and the JSON of the response body contains the messages we saved in the arrange step.
 
-For another example, here's the test methods of the `getMessageById` method introduced above:
+For another GET request example, here's the test methods of the `getMessageById` method introduced above:
 
 ```java
 @Test
@@ -394,6 +408,42 @@ public void getMessageByIdReturnsNotFoundWhenMessageDoesNotExist() throws Except
     this.mockMvc.perform(get("/api/messages/1"))
     // Assert
             .andExpect(status().isNotFound());
+}
+```
+
+For a POST request example, here's the test methods of the `createMessage` method introduced above:
+
+```java
+@Test
+public void createMessageSavesValidMessage() throws Exception {
+    // Arrange
+    Message message = new CreateMessageDto("Hello world!");
+    String requestBody = mapper.writeValueAsString(message);
+
+    // Act
+    this.mockMvc.perform(post("/api/messages").contentType(MediaType.APPLICATION_JSON).content(requestBody))
+    // Assert
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.content").value("Hello world!"));
+
+    List<Message> messages = messageRepository.findAll();
+    assertEquals(1, messages.size());
+    assertEquals("Hello world!", messages.get(0).getContent());
+}
+
+@Test
+public void createMessageDoesNotSaveInvalidMessage() throws Exception {
+    // Arrange
+    Message message = new CreateMessageDto("");
+    String requestBody = mapper.writeValueAsString(message);
+
+    // Act
+    this.mockMvc.perform(post("/api/messages").contentType(MediaType.APPLICATION_JSON).content(requestBody))
+    // Assert
+            .andExpect(status().isBadRequest());
+
+    List<Message> messages = messageRepository.findAll();
+    assertEquals(0, messages.size());
 }
 ```
 
@@ -428,88 +478,56 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 10
 >
-> Create a new package `fi.haagahelia.coolreads.controller` for the project's controller class tests. You can do this in Eclipse by right-clicking the `src/test/java` folder and choosing New > Package. Implement a `ReadingRecommendationRestControllerTest` test class within the package with the following test methods for the `/api/recommendations` REST API endpoint:
+> Create a new package `fi.haagahelia.quizzer.controller` to the `src/test/java` folder for the project's controller class tests. Implement a `QuizRestControllerTest` test class within the package with the following test methods for the GET `/api/quizzes` endpoint:
 >
-> - `getRecommendationsReturnsEmptyListWhenNoRecommendationsExist`: send a request to the `/api/recommendations` without saving a recommendation to the database. Then, the response should have an empty list
-> - `getRecommendationsReturnsListOfRecommendationsWhenRecommendationsExist`: save a few recommendations to the database and send a request to the `/api/recommendations`. Then, the response should have a list of the saved recommendations
+> - `getAllQuizzesReturnsEmptyListWhenNoQuizzesExist`: send a GET request to the `/api/quizzes` without saving a quiz to the database. Then, the response should have an empty list
+> - `getAllQuizzesReturnsListOfPublishedQuizzesWhenQuizzesExist`: save a few quizzes (both published and non-published) to the database and send a GET request to the `/api/quizzes`. Then, the response should have a list of the saved _published quizzes_
 >
-> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
+> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3". You don't need to add a user story label for the issue.
 
 {: .important-title }
 
 > Exercise 11
 >
-> Implement a `CategoryRestControllerTest` test class with the following test methods for the `/api/categories` REST API endpoint:
+> Implement the following test methods for the GET `/api/quizzes/{id}` endpoint:
 >
-> - `getCategoriesReturnsEmptyListWhenNoCategoriesExist`: send a request to the `/api/categories` without saving a category to the database. Then, the response should have an empty list
-> - `getCategoriesReturnsListOfCategoriesWhenCategoriesExist`: save a few categories to the database and send a request to the `/api/categories`. The, the response should have a list of the saved categories
+> - `getQuizByIdReturnsPublishedQuizWhenQuizExists`: save a _published quiz_ to the database and send a GET request to the `/api/quizzes/{id}`. Then, the response should have the saved quiz
+> - `getQuizByIdReturnsNotFoundWhenQuizDoesNotExist`: send a GET request to the `/api/quizzes/{id}` without saving a quiz to the database. Then, the response should have a `404 Not Found` status
+> - `getQuizByIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ to the database and send a GET request to the `/api/quizzes/{id}`. Then, the response should have a `403 Forbidden` status
 >
-> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
+> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3". You don't need to add a user story label for the issue.
 
 {: .important-title }
 
 > Exercise 12
 >
-> Implement the following test methods for the `/api/categories/{id}/recommendations`:
+> Implement the following test methods for the GET `/api/quizzes/{id}/questions` endpoint:
 >
-> - `getRecommendationsByCategoryIdReturnsEmptyListWhenCategoryDoesNotHaveRecommendations`: save a category without recommendations to the database and send a request to the `/api/categories/{id}/recommendations`. Then, the response should have an empty list
-> - `getRecommendationsByCategoryIdReturnsListOfRecommendationsWhenCategoryHasRecommendations`: save a category with a few recommendations to the database and send a request to the `/api/categories/{id}/recommendations`. Then, the response should have a list of the category's recommendations
-> - `getRecommendationsByCategoryIdReturnsNotFoundWhenCategoryDoesNotExist`: send a request to the `/api/categories/1/recommendations` without saving a category to the database. Then, the response should have a `404 Not Found` status
+> - `getQuestionsByQuizIdReturnsEmptyListWhenQuizDoesNotHaveQuestions`: save a _published quiz_ without questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have an empty list
+> - `getQuestionsByQuizIdReturnsListOfQuestionsWhenQuizHasQuestions`: save a _published quiz_ with a few questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have a list of the quiz's questions
+> - `getQuestionsByQuizIdReturnsNotFoundWhenQuestionDoesNotExist`: send a GET request to the `/api/quizzes/1/question` without saving a quiz to the database. Then, the response should have a `404 Not Found` status
+> - `getQuestionsByQuizIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ with a few questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have a `403 Forbidden` status
 >
-> Create an issue for this task and add it to the Sprint 3 Backlog project. Add "test" and "task" labels for the issue. You don't need to add a user story label for the issue.
-
-## Test coverage
-
-We have analyzed the code that we are testing and we are quite sure that our test scenarios cover everything. The good news is, that we don't need to trust only on our gut. There are so called _test coverage_ tools that analyze which lines of code our test scenarios cover and which they don't.
-
-[JaCoCo](https://www.eclemma.org/jacoco/) is one of the most widely used code coverage tools for Java. Let's add the jacoco-maven-plugin to the `<plugins>` list in the `pom.xml` file:
-
-```xml
-<plugin>
-    <groupId>org.jacoco</groupId>
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <executions>
-        <execution>
-            <goals>
-                <goal>prepare-agent</goal>
-            </goals>
-        </execution>
-        <execution>
-            <id>report</id>
-            <phase>test</phase>
-            <goals>
-                <goal>report</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
-```
-
-If we run the `./mvnw test` command in Git Bash, our tests are executed and JaCoCo will generate a _code coverage report_. Once the command has finished successfully, the code coverage report can be found as an `index.html` file in the `target/site/jacoco` folder. Open the `index.html` file in a web browser.
-
-The report displayes the coverage of each package. The "Cov" column determines the _percentage of lines covered by the tests_. Bigger the number, better the coverage. If we click a package name, we see the classes in the package. By clicking a class name, we see the methods of the class. By clicking a method we see the method's implementation as code.
-
-Green highlight indicates that the line _is fully covered_. Yellow highlight indicates that the line is _partially covered_. For example a certain condition of an `if` statement is not covered by a test. Red highlight indicates that line is _not covered_.
-
-{: .note }
-
-> Software development teams commonly decide the minimum test coverage percentage for the code. The test coverage is automatically checked each time new code is pushed to the repository. If the new code doesn't fullfill the minimum requirement, the code won't be integrated to the main branch of the repository. This is one of the practices of [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration).
-
-{: .note }
-
-> When we change the code (in the tests or in the application), we need to re-run `./mvnw test` to generate the coverage report for the latest tests.
+> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3". You don't need to add a user story label for the issue.
 
 {: .important-title }
 
 > Exercise 13
 >
-> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the methods in the `ReadingRecommendationRestController` and `CategoryRestController` classes we tested previously. Are all the lines of the methods fully covered by the tests?
+> Implement a `AnswerRestControllerTest` test class with the following test methods for the POST `/api/answers` endpoint:
+>
+> - `createAnswerSavesValidAnswer`: save a _published quiz_ with a question to the database and send a POST request to the `/api/answers` with a _valid request body_ (attributes should pass the validation). Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
+> - `createAnswerDoesNotSaveInvalidAnswer`: save a _published quiz_ with a question to the database and send a POST request to the `/api/answers` with a _invalid request body_ (attributes should not pass the validation). Then, the response should status have a `400 Bad Request` status and the database should not have any answers
+> - `createAnswerDoesNotSaveAnswerForNonExistingQuestion`: send a POST request to the `/api/answers` with a non-existing question id in the request body. Then, the response should status have a `404 Not Found` status and the database should not have any answers
+> - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a POST request to the `/api/answers` with a valid request body. Then, the response should status have a `403 Bad Request` status and the database should not have any answers
+>
+> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3". You don't need to add a user story label for the issue.
 
 {: .important-title }
 
 > Exercise 14
 >
-> Add instructions on _how to run the tests_ to the `README.md` file under the "Usage guide" subheading. You can instruct the reader to use the `./mvnw test` command to run the tests.
+> Add instructions on _how to run the tests_ to the "Usage guide" section in the `README.md` file. You can instruct the reader to use the `./mvnw test` command to run the tests.
 
 ## Authentication
 
@@ -554,12 +572,26 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests((requests) -> requests.requestMatchers(antMatcher("/"), antMatcher("/register"),
-                                antMatcher("/categories"), antMatcher("/frontend/**"), antMatcher("/api/**"), antMatcher("/error")).permitAll().anyRequest()
-                                .authenticated());
+        http.authorizeHttpRequests((requests) -> requests
+            .requestMatchers(
+                antMatcher("/"),
+                antMatcher("/register"),
+                antMatcher("/api/**"),
+                antMatcher("/error"),
+                // Swagger documentation paths
+                antMatcher("/v3/api-docs/**"),
+                antMatcher("/configuration/ui"),
+                antMatcher("/swagger-resources/**"),
+                antMatcher("/configuration/security"),
+                antMatcher("/swagger-ui/**"))
+            .permitAll()
+            .anyRequest()
+            .authenticated());
 
         http.formLogin((form) -> form.permitAll());
         http.logout((logout) -> logout.permitAll());
+        http.cors(Customizer.withDefaults());
+        http.csrf((csrf) -> csrf.ignoringRequestMatchers(antMatcher("/api/**")));
 
         return http.build();
     }
@@ -570,17 +602,17 @@ The `passwordEncoder` method returns the password encoder object used to hash pa
 
 The `securityFilterChain` returns the configuration object for Spring Security. The first piece of configuration determines the access-control for our application. We will allow anyone (authenticated or not) access the following paths:
 
-- `/`, the reading recommendation list page,
-- `/register`, the registration form and registration form submission
-- `/categories`, the category list page
-- `/frontend/**`, the JavaScript assets required by the frontend application. The `**` part of the path means any path
+- `/`, the quiz list page
+- `/register`, the registration form page and registration form submission (for the second user story)
+- `/error`, the error page
 - `/api/**`, the REST API endpoints
+- Swagger documentation related paths
 
 {: .highlight }
 
 > Change this configuration if your application's paths don't match the ones above.
 
-The `permitAll()` method call _will permit anyone to access the these paths_. This is follow by `anyRequest().authenticated()` method call, which means that _request to any other path will require authentication_.
+The `permitAll()` method call _will permit anyone to access these paths_. This is follow by `anyRequest().authenticated()` method call, which means that _request to any other path will require authentication_.
 
 On top of the configuration class, we need to have class that implements the `UserDetailsService` interface. This class will determine how to fetch the user's information based on the username:
 
@@ -609,11 +641,27 @@ The [authentication example](https://github.com/software-development-project-1/a
 
 > Exercise 15
 >
-> Implement the tasks of the first user story, "As an anonymous user I want to register an account so that I can manage my personal reading recommendations".
+> Implement the tasks of the first user story, "{{site.sprint_3_user_story_1}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
 >
-> ![](/assets/sprint-3-user-story-1.png)
+> ![](/assets/sprint-3-user-story-1-1.png)
+>
+> ![](/assets/sprint-3-user-story-1-2.png)
+>
+> Tips for implementing the tasks:
+>
+> - You can implement a GET `/api/quizzes/{id}/answers` endpoint, which returns the quiz-related answers
+
+{: .important-title }
+
+> Exercise 16
+>
+> Implement the tasks of the second user story, "{{site.sprint_3_user_story_2}}".
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-3-user-story-2.png)
 >
 > Tips for implementing the tasks:
 >
@@ -622,83 +670,53 @@ The [authentication example](https://github.com/software-development-project-1/a
 > - See how the user registration is implemented in the [authentication example](https://github.com/software-development-project-1/authentication-example) project
 > - The password can be validated with a regular expression using the [@Pattern](https://www.codeproject.com/Questions/5324493/Jakarta-regex-validation) annotation
 
-### Cross-site request forgery (CSRF)
-
-If we try deleting a reading recommendation by clicking the "Delete" button after adding the Spring Security for our project, we will notice that it is no longer working. This is because Spring Security adds protection against [Cross Site Request Forgery (CSRF)](https://docs.spring.io/spring-security/reference/features/exploits/csrf.html) attacks. Basically, Spring Security won't permit requests originated outside our application that aren't HTTP GET requests. In practice this enforced by using a so called _CSRF token_ in form submissions.
-
-Thymeleaf will automatically include the CSRF token in forms. The problem is that the request send with the `fetch` function after clicking the "Delete" button doesn't have the CSRF token. Let's fix this problem.
-
-First, we need to make the CSRF token available. We can do this by including it to the HTML content in the `src/main/resources/templates/layout.html` file. Let's add a `<meta>` tag that contains the CSRF token at the end of the `<head>` tag:
-
-```html
-<head>
-  <!-- ... -->
-  <meta id="_csrf" name="_csrf" th:content="${_csrf.token}" />
-</head>
-```
-
-Now, we can read the CSRF token from the `<meta>` tag's `content` attribute and send it as a `X-CSRF-TOKEN` header with the `fetch` function:
-
-```js
-function handleDelete(recommendation) {
-  fetch(`/recommendations/${recommendation.id}/delete`, {
-    method: "POST",
-    headers: {
-      "X-CSRF-TOKEN": document.getElementById("_csrf").getAttribute("content"),
-    },
-  }).then(() => {
-    // Remove the deleted recommendation from the recommendations state variable array
-  });
-}
-```
-
-{: .note }
-
-> We could simplify the code by extracting the business logic of "deleting a reading recommendation" to a `deleteRecommendation` function:
->
-> ```js
-> function handleDelete(recommendation) {
->   deleteRecommendation(recommendation.id).then(() => {
->     // Remove the deleted recommendation from the recommendations state variable array
->   });
-> }
-> ```
-
-We should now be able to delete reading recommendations again.
-
-{: .important-title }
-
-> Exercise 16
->
-> Fix the reading recommendation deletion implemention as instruced above.
-
 {: .important-title }
 
 > Exercise 17
 >
-> Implement the tasks of the second user story, "As an anonymous user I want to sign in so that I can manage my personal reading recommendations".
+> Implement the tasks of the third user story, "{{site.sprint_3_user_story_3}}".
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-3-user-story-3-1.png)
+>
+> ![](/assets/sprint-3-user-story-3-2.png)
 >
 > Tips for implementing the tasks:
 >
-> - To know whether to show the "Add a reading recommendation" button in the frontend, you can implement a REST API endpoint which returns the authenticated user. See how the `/api/users/current` REST API endpoint is implemented in the [UserRestController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/UserRestController.java) class in the authentication example project
 > - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
-> - You can sign out by visiting <http://localhost:8080/logout> in a web browser
 
 {: .important-title }
 
 > Exercise 18
 >
-> Implement the tasks of the third user story, "As a signed in user I want to associate the added reading recommendation with my account so that I can manage my personal reading recommendations".
+> Implement the tasks of the fourth user story, "{{site.sprint_3_user_story_4}}".
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-3-user-story-4.png)
 >
 > Tips for implementing the tasks:
 >
-> - See how the authenticated user is associated with a message in the [MessageController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/coolreads/controller/MessageController.java) class in the authentication example project
+> - See how the authenticated user is associated with a message in the [MessageController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/messenger/controller/MessageController.java) class in the authentication example project
+> - You can display content in a Thymeleaf template based on the authenticated user's username in the following way:
+>
+>   ```html
+>   <a
+>     th:href="@{/quizzes/{id}/edit(id = ${quiz.id})}"
+>     class="btn btn-secondary btn-sm"
+>     sec:authorize="isAuthenticated()"
+>     th:if="${#authentication.principal.username == quiz.user?.username}"
+>   >
+>     Edit
+>   </a>
+>   ```
 
 {: .important-title }
 
 > Exercise 19
 >
-> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same for that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
+> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
 > Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specified in the React project's [README.md](https://github.com/facebook/react/blob/main/README.md) file.
 
@@ -712,7 +730,7 @@ We should now be able to delete reading recommendations again.
 
 > Exercise 21
 >
-> Deploy the final version of the application to Render and make sure that the application works properly in the production environment.
+> Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
 
 ## Peer review
 
@@ -738,15 +756,13 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 ## Final report
 
-Add a file `final-report.md` to the `documentation` folder. In that file, write _the final report_ for the course, which answers the following questions:
+Add a file `final-report.md` to the `documentation` folder. In that file, write the _final report_ for the course, which answers the following questions:
 
-- What challenges did you face during each Sprint? Describe both technical and project management related challenges. You can use the Sprint Retrospective notes in the `retrospectives` folder.
+- What challenges did you face during each Sprint? Describe both technical and project management related challenges. You can use the Sprint Retrospective notes.
 - Were you able to overcome these challenges? If so, how?
 - In which areas did you succeed as a team?
 - In which areas there was room for improvement?
 - What did you learn during the course? What would you have wanted to learn more about? What felt irrellevant?
-
-The final report should also include the name of each team member.
 
 Add a link to the `final-report.md` file in Github to the `README.md` file under the "Documentation" subheading.
 

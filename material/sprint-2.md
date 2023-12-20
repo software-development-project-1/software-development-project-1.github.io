@@ -15,7 +15,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-26. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-29. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -58,9 +58,11 @@ Make sure that everyone follows the event structure and that each team member ge
 >
 > _One of the team members_ should create a new session in Flinga as instructed above. Name the session "Retrospective 1". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event as instructed above.
 >
-> Once you have completed the Retrospective write down the issues and actions to the repository's `retrospectives/sprint-1.md` file and push the changes to GitHub.
+> Once you have completed the Retrospective write down the issues and actions to the repository's `documentation/retrospectives/sprint-1.md` file and push the changes to GitHub.
 
 ## Estimation
+
+![Estimation](/assets/estimation-xkcd.png)
 
 Good user stories are _estimable_ (the "E" of INVEST) and a good Product Backlog is _estimated_ (the "E" of DEEP). _Estimation_ is the process where the Developers consider the efforts required to implement a certain user story in the Product Backlog. The purpose of estimation is not to create financial budgets for the project, but to help the _Product Owner to prioritize the user stories_ in the Product Backlog and _facilitate discussion about the user stories among the Developers_.
 
@@ -70,9 +72,9 @@ User stories aren't commonly estimated by considering the working hours required
 
 For example let's consider these three user stories from the previous Sprint:
 
-1. As a user I want to add a reading recommendation so that I can gather a collection of recommendations
-2. As a user I want to list the added reading recommendations so that I can find interesting things to read
-3. As a user I want to be able to edit a reading recommendation so that I can change its information
+1. {{site.sprint_1_user_story_1}}
+2. {{site.sprint_1_user_story_2}}
+3. {{site.sprint_1_user_story_3}}
 
 Some team member could estimate that the implementation of the _first user story_ requires the double amount of effort compared to the implementation of the _second user story_. Also, some could estimate that the implementation of the _first_ and the _third user story_ require somewhat the same amount of effort.
 
@@ -84,7 +86,7 @@ During estimation the Developers usually have a different view of how many story
 
 ### Planning poker
 
-[Planning poker](https://en.wikipedia.org/wiki/Planning_poker) is a (fun) technique to facilitate estimation of user stories. We first need to decide which are the number of story points we use for the estimation. The [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is a common choice: 1, 2, 3, 5 or 8 story points. Then we need to make sure that everyone knows the amount of effort required for a certain amount of story points. Let's say that the user story "As a user I want to list the added reading recommendations so that I can find interesting things to read" is worth _2 story points_ and we should compare the effort of other user stories to that.
+[Planning poker](https://en.wikipedia.org/wiki/Planning_poker) is a (fun) technique to facilitate estimation of user stories. We first need to decide which are the number of story points we use for the estimation. The [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is a common choice: 1, 2, 3, 5 or 8 story points. Then we need to make sure that everyone knows the amount of effort required for a certain amount of story points. Let's say that the user story "{{site.sprint_1_user_story_1}}" is worth _2 story points_ and we should compare the effort of other user stories to that.
 
 Here's a table describing the worth of the available story points:
 
@@ -98,7 +100,7 @@ Here's a table describing the worth of the available story points:
 
 As mentioned, the reference user story is the first user story of the previous Sprint:
 
-> As a user I want to list the added reading recommendations so that I can find interesting things to read
+> {{site.sprint_1_user_story_1}}
 
 {: .note }
 
@@ -107,7 +109,7 @@ As mentioned, the reference user story is the first user story of the previous S
 Once we have "calibrated" the worth of a story point we can start the actual planning poker event. For each user story under estimation we should perform the following steps:
 
 1. Discuss the technical requirements (tasks) for the user story. Make sure that everyone is on the same page what is required to implement the user story.
-2. Everyone will consider _by themself_ (no dicussion) how many story points the user story is worth. The estimate needs to be 1, 2, 3, 5 or 8 story points. Compare the effort to the user story "As a user I want to list the added reading recommendations so that I can find interesting things to read" which is worth 2 story points
+2. Everyone will consider _by themself_ (no dicussion) how many story points the user story is worth. The estimate needs to be 1, 2, 3, 5 or 8 story points. Compare the effort to the user story "{{site.sprint_1_user_story_1}}" which is worth 2 story points
 3. Everyone will write down their story point estimate.
 4. Once everyone is ready, everyone will show their estimate at the same time
 5. If there's more than one point difference in the least and most amount of story points in the suggested estimates, discuss the implementation further to find out why there is such difference in the estimates. Then, repeat the steps 1 - 5 until you have an agreement.
@@ -127,88 +129,97 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 2 goals in the Sprint Planning event:
 
-> "It's great that we can now add, list, edit and delete reading recommendations! But, after adding many recommendations it gets really hard to find the right kind of recommendations from the list.
+> "It's great that we can now add, list, edit and delete quizzes! What we now need is a way for the teacher to add questions for the quizzes and student to take the published quizzes.
 >
-> It would nice if the reading recommendation list would display the date when the recommendation was added. This way, the user would know how old the recommendation is. Also, recommendations should be listed from newest to oldest. This way, the user can quickly find the latest recommendations at the top of the list.
+> Let's start with a small user-experience improvement. It would nice if the quiz list would display the date when the quiz was added. This way, the teacher would know how old the quiz is. Also, quizzes should be listed from newest to oldest. This way, the teacher can find the latest quizzes quickly at the top of the list.
 >
-> To better organize the reading recommendations, it would be useful to be able to add different categories, like "Programming tutorials" or "Video game news". User should be able to add a category using a form. The form should only have a field for the category name. The user should not be able to add a category with a blank name or a name that already exists. There should also be a page that lists all the added categories and has a "Add a category" link that takes the user to the form. The categories should be listed in an alphabetical order by the category name.
+> The teacher should be able to add questions for the quizzes. For example the "The capital cities of Europe" of quiz could have questions "What is the capital of Finland?" and "What is the capital of Sweden?". In addition to the question text, the teacher should be able to provide the correct answer for questions, for example "Helsinki" and "Stockholm". A question can be added in the quiz edit form we implemented during the previous Sprint. The added questions for the quiz should be listed and below the list there should be a form for adding a question. The form should have fields for the question text and the correct answer. The teacher should not be able to add a question with a blank text or correct answer. Once a question has been added for the quiz, the teacher should be able to delete it. The question list should have a "Delete" button next to each question.
 >
-> After adding a category, the user should be able to select a category from a dropdown menu while adding a recommendation. Once a reading recommendation has been added, the user should be able to change the category in the edit form. The reading recommendation's category should be displayed on the reading recommendation list.
+> Once we have this basic set of features for the teachers, we can start working on the student dashboard. The student dashboard should have a separate page that lists the published quizzes with the quiz name, description and the date when it was added. These quizzes should be listed from newest to oldest as well. Each quiz name should be a link to a separate page where the quiz name, description and the questions are displayed.
 >
-> In the reading recommendation list, the user should be able to filter the recommendations based on the category. For example if user chooses a "Programming tutorials" category from a dropdown menu, only the recommendations in that category will be listed. The dropdown menu should also have an "Any category" option to list all the reading recommendations."
+> In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be displayed one by one and the student should see the quiz progress with some kind of a progress bar. When the student answers a question, there should be some kind of feedback which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, the correct answer is "Helsinki"". The casing or leading or trailing whitespace of the answer should not be considered when checking if the student's answer is correct or not. For example, "helsinki" answer is correct when the correct answer is "Helsinki". To collect answer statistics, the answer text, the correctness status of the answer and the reference to the question should be stored. Once the student has answered all the questions there should be a summary of the results, for example "You got 1 out of 5 questions correct" and a button "Retake the quiz" which the student can click to take the same quiz again.
 >
 > -- The Product Owner
 
-After some discussion the Scrum Team came up with the following user stories:
+After some discussion the Scrum Team planned the following user stories:
 
-1. As a user I want to know the date when the reading recommendation was added so that I know how old it is
-2. As a user I want to add a category so that I can organize my recommendations
-3. As a user I want the reading recommendations to be listed from newest to oldest so that I can find the latest recommendations quickly
-4. As a user I want to see a list of categories so that I know which categories exist
-5. As a user I want to provide a category for a reading recommendation so that I can organize my recommendations
-6. As a user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier
+1. {{site.sprint_2_user_story_1}}
+2. {{site.sprint_2_user_story_2}}
+3. {{site.sprint_2_user_story_3}}
+4. {{site.sprint_2_user_story_4}}
+5. {{site.sprint_2_user_story_5}}
+6. As a student, I want to see a list of published quizzes so that I know what kind of quizzes I can take
+7. {{site.sprint_2_user_story_7}}
+8. {{site.sprint_2_user_story_8}}
 
-For the _first user story_, the Developers came up with the following tasks:
+For the _first user story_, the Developers planned the following tasks:
 
-1. Add a createdAt attribute with the CreationTimestamp annotation for the ReadingRecommendation entity
-2. Add a "Added on" column which displays the formatted date for the reading recommendation list Thymeleaf template
+1. Add a createdAt attribute with the CreationTimestamp annotation for the Quiz class
+2. Add a "Added on" column which displays the formatted createdAt value for the quiz list Thymeleaf template
 
-For the _second user story_, the Developers came up with the following tasks:
-
-1. Add a Category JPA entity class with id and name attributes, and a CategoryRepository JPA repository class
-2. Add a Thymeleaf template for the category submission form containing a field for the category name
-3. Add a CategoryController controller class and a method for rendering the category submission form
-4. Add a method for the CategoryController class that saves the category to the database
-5. Add validation for the category name
-
-The tasks for the sixth user story will be covered in the [REST APIs](#rest-apis) and [Communication between frontend and backend](#communication-between-frontend-and-backend) sections.
-
-{: .note }
-The tasks described above are suggestions, feel free to alter them or add new tasks.
+The planning of the tasks for the last three user stories will be covered after the [REST APIs](#rest-apis) and [Communication between frontend and backend](#communication-between-frontend-and-backend) sections.
 
 {: .important-title }
 
 > Exercise 2
 >
-> Create a Sprint Backlog project for the second Sprint in GitHub Projects. Name the project "Sprint 2 Backlog". Use the default project columns, similar as in the Sprint 1 Backlog project. Add a "Sprint 2 Backlog" link for the project to the "Backlogs" section in the `README.md` file.
+> Create a new milestone for the second Sprint. Set the milestone title as "Sprint 2".
 
 {: .important-title }
 
 > Exercise 3
 >
-> Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Sprint 1 Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
+> Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
-> If you didn't manage to implement all user stories during Sprint 1, move the task related issues of the unfinished user stories to the Sprint 2 Backlog project.
+> If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 2".
 
 {: .important-title }
 
 > Exercise 4
 >
-> Come up with tasks for the third user story, "As a user I want the reading recommendations to be listed from newest to oldest so that I can find the latest recommendations quickly". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get tips for the implementation.
+> Create an issue for each _user story_. Add the "user story" label for each issue. Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
 
 {: .important-title }
 
 > Exercise 5
 >
-> Come up with tasks for the fourth user story, "As a user I want to see a list of categories so that I know which categories exist". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 to get an idea what the implementation could look like.
+> Create an issue for each task of the first user story, "{{site.sprint_2_user_story_1}}". You can use the tasks suggested in the [Sprint 2 planning](#%EF%B8%8F-sprint-2-planning) section, or plan your own tasks. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
 > Exercise 6
 >
-> Come up with tasks for the fifth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 13 to get an idea what the implementation could look like.
+> Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get some implementation tips.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
 > Exercise 7
 >
-> 1. Create a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) for each user story, such as "recommendation creation date" and "add category"
-> 2. Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column.
-> 3. Create an issue for each _tasks_ of the _first five user stories_. If the task description is long, use a short version of the description as the issue title and add the full description as the issue description. Add a label "task" and the task related user story's label for each issue. Add the issues to the Sprint 2 Backlog project and move them to the "Todo" column.
+> Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 for some implementation tips and to get an idea what the implementation could look like.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
 > Exercise 8
+>
+> Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 13 to get an idea what the implementation could look like.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+
+{: .important-title }
+
+> Exercise 9
+>
+> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 14 for some implementation tips and to get an idea what the implementation could look like.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+
+{: .important-title }
+
+> Exercise 10
 >
 > The Product Owner needs your help in estimating user stories.
 >
@@ -218,11 +229,11 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 11
 >
-> Implement the tasks of the first user story, "As a user I want to know the date when a reading recommendation was added so that I know how old it is".
+> Implement the tasks of the first user story, "{{site.sprint_2_user_story_1}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
 >
 > ![](/assets/sprint-2-user-story-1.png)
 >
@@ -237,62 +248,46 @@ The tasks described above are suggestions, feel free to alter them or add new ta
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 12
 >
-> Implement the tasks of the second user story, "As a user I want to add a category so that I can organize my recommendations".
->
-> The implementation should look roughly something like this:
->
-> ![](/assets/sprint-2-user-story-2.png)
->
-> Validate that the category name is not blank and it is unique (category with the same name should not exists).
-
-{: .important-title }
-
-> Exercise 11
->
-> Implement the tasks of the third user story, "As a user I want the reading recommendations to be listed from newest to oldest so that I can find the latest recommendations quickly".
+> Implement the tasks of the second user story, "{{site.sprint_2_user_story_2}}".
 >
 > Tips for implementing the tasks:
 >
-> - Use the `createdAt` attribute (see the tasks of the first user story) in ordering the recommendations
+> - Use the `createdAt` attribute (see the tasks of the first user story) in ordering the quizzes
 > - [Sorting Query Results with Spring Data](https://www.baeldung.com/spring-data-sorting)
-
-{: .important-title }
-
-> Exercise 12
->
-> Implement the tasks of the fourth user story, "As a user I want to see a list of categories so that I know which categories exist".
->
-> The implementation should look roughly something like this:
->
-> ![](/assets/sprint-2-user-story-3.png)
->
-> User should be able to visit the page by clicking a "Categories" link in the navigation bar. The categories should be listed in an alphabetical order by the catogory name.
 
 {: .important-title }
 
 > Exercise 13
 >
-> Implement the tasks of the fifth user story, "As a user I want to provide a category for a reading recommendation so that I can organize my recommendations".
+> Implement the tasks of the third user story, "{{site.sprint_2_user_story_3}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-4-1.png)
+> ![](/assets/sprint-2-user-story-2.png)
 >
-> ![](/assets/sprint-2-user-story-4-3.png)
+> Validate that the question text and correct answer is not blank. Make sure that you can delete a quiz that has questions. Before deleting a quiz, you need to delete the quiz-related questions. You can use an appropriate [Cascade Type](https://www.baeldung.com/jpa-cascade-types) to achieve this automatically.
+
+{: .important-title }
+
+> Exercise 14
 >
-> ![](/assets/sprint-2-user-story-4-2.png)
+> Implement the tasks of the fourth user story, "{{site.sprint_2_user_story_4}}".
 >
-> Tips for implementing the tasks:
+> The implementation could look roughly roughly something like this:
 >
-> - [OneToMany](https://www.baeldung.com/hibernate-one-to-many)
-> - [Working with Select and Option in Thymeleaf](https://www.baeldung.com/thymeleaf-select-option)
-> - The reading recommendation category is `null` for the old reading recommendations. We can access possibly `null` values safely, with the `?` operator in a Thymeleaf template in the following way:
+> ![](/assets/sprint-2-user-story-3.png)
+
+{: .important-title }
+
+> Exercise 15
 >
->   ```html
->   <td th:text="${recommendation.category?.name}"></td>
->   ```
+> Implement the tasks of the fifth user story, "{{site.sprint_2_user_story_5}}".
+>
+> The implementation could look roughly roughly something like this:
+>
+> ![](/assets/sprint-2-user-story-4.png)
 
 ## Reducing boilerplate code with Lombok
 
@@ -306,10 +301,10 @@ Before we can start using Lombok, we need to add it as dependency for our Maven 
 
 ```xml
 <dependency>
-  <groupId>org.projectlombok</groupId>
-  <artifactId>lombok</artifactId>
-  <version>1.18.30</version>
-  <scope>provided</scope>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.30</version>
+    <scope>provided</scope>
 </dependency>
 ```
 
@@ -325,19 +320,19 @@ Here's an example of using these annotations on the `Message` class:
 @Getter
 @Setter
 public class Message {
-  @Id
-  @GeneratedValue
-  private Long id;
+    @Id
+    @GeneratedValue
+    private Long id;
 
-  @CreationTimestamp
-  private LocalDateTime createdAt;
+    @CreationTimestamp
+    private LocalDateTime createdAt;
 
-  @Column(nullable=false)
-  private String content;
+    @Column(nullable = false)
+    private String content;
 
-  public Message(String content) {
-    this.content = content;
-  }
+    public Message(String content) {
+        this.content = content;
+    }
 }
 ```
 
@@ -347,7 +342,7 @@ Wow, that eliminates a lot of boilerplate code! Lombok has many other useful ann
 
 So far the user has interacted with our web application in the following manner:
 
-1. The user opens a page at certain path, for example `/`, on a web browser.
+1. The user opens a page at certain path, for example `/`, in a web browser.
 2. The web browser sends a request to the server (the backend) for the resource of that path.
 3. On the server, the request is delegated to the controller method responsible for handling requests for the path.
 4. The controller method retrieves the required data from the database and based on the data creates an HTML page.
@@ -374,23 +369,24 @@ const jsonData = JSON.stringify(data);
 console.log(jsonData); // '["This", "is", "a", "JavaScript", "array"]'
 ```
 
-Instead of sending a response as an HTML page, we can serialize Java objects into JSON strings and send it as a response. Let's have a look at the [MessageRestController](https://github.com/software-development-project-1/example-project/blob/main/src/main/java/fi/haagahelia/coolreads/controller/MessageRestController.java) controller class in the example project:
+Instead of sending a response as an HTML page, we can serialize Java objects into JSON strings and send it as a response. Let's have a look at the [MessageRestController](https://github.com/software-development-project-1/spring-boot-vite-example/blob/main/src/main/java/fi/haagahelia/quizzer/controller/MessageRestController.java) controller class in the example project:
 
 ```java
 @RestController
 @RequestMapping("/api/messages")
+@CrossOrigin(origins = "*")
 public class MessageRestController {
-  @Autowired
-  private MessageRepository messageRepository;
+    @Autowired
+    private MessageRepository messageRepository;
 
-  @GetMapping("")
-  public List<Message> getMessages() {
-    return messageRepository.findAll();
-  }
+    @GetMapping("")
+    public List<Message> getAllMessages() {
+        return messageRepository.findAll();
+    }
 }
 ```
 
-The `@RestController` annotation on the `MessageRestController` class specifies that each method of the controller class produces a JSON response. Instead of returning the name of the Thymeleaf template, we can directly return Java objects. For example the `getMessages` method returns a list of `Message` objects. If we open the page <http://localhost:8080/api/messages> in a web browser we should see this list.
+The `@RestController` annotation on the `MessageRestController` class specifies that each method of the controller class produces a JSON response body. Instead of returning the name of the Thymeleaf template, we can directly return Java objects. For example the `getAllMessages` method returns a list of `Message` objects. If we open the page <http://localhost:8080/api/messages> in a web browser we should see this list.
 
 By using JSON as the data representation format we can separate the _client_ (the user interface application) from the server. This allows as to implement many different kinds of client applications with different programming languages. This separation of server and client is one of the corner stones of the _the REST architectural style_.
 
@@ -402,17 +398,17 @@ The request should also contain the _HTTP method_, that determines the operation
 
 The resource path has certain naming conventions. The path starts with the resource _collection_ name in plural, for examples "users". The collection name is followed by resource specifiers, for example the id of the resource. Here's example of RESTful API paths for the "users" collection:
 
-| Method   | Path          | Description                          |
-| -------- | ------------- | ------------------------------------ |
-| `GET`    | `/users`      | List all users                       |
-| `GET`    | `/users/{id}` | Get the user with the provided id    |
-| `POST`   | `/users`      | Create a user                        |
-| `PUT`    | `/users/{id}` | Update the user with the provided id |
-| `DELETE` | `/users/{id}` | Delete the user with the provided id |
+| HTTP method | Path          | Description                          |
+| ----------- | ------------- | ------------------------------------ |
+| `GET`       | `/users`      | List all users                       |
+| `GET`       | `/users/{id}` | Get the user with the provided id    |
+| `POST`      | `/users`      | Create a user                        |
+| `PUT`       | `/users/{id}` | Update the user with the provided id |
+| `DELETE`    | `/users/{id}` | Delete the user with the provided id |
 
 {: .note }
 
-> Collections are commonly entities which we are storing in the database (for example reading recommendations and categories). The REST API endpoints provide ways to access and manipulate these entities. 
+> Collections are commonly entities which we are storing in the database (for example quizzes and questions). The REST API endpoints provide ways to access and manipulate these entities.
 
 The `{id}` part of the `/users/{id}` path is a _path variable_. For example, the path for user with id 2 would be `/users/2`.
 
@@ -424,31 +420,32 @@ A collection can have _sub-collections_. For example, a path for a user's messag
 
 When we design and implement REST API endpoints we should consider the use case. We don't implement endpoints arbitrary, there should be a _need for the endpoint_ first, for example a certain feature in a frontend application needs to display some data in the database. Based on the feature we consider what kind of data and operations the REST API needs to provide. These requirements will determine the endpoints we will implement.
 
-We should however remember to _follow the implementation conventions_ to keep the REST API endpoints _reusable_ throughout the application. For example we don't want to implement a `/api/recommendations-for-home-page` endpoint just to provide data for a specific feature. Instead, we should be implement a single `/api/recommendations` endpoint, which is reusable for other features as well.
+We should however remember to _follow the implementation conventions_ to keep the REST API endpoints _reusable_ throughout the application. For example we don't want to implement a `/api/quizzes-for-home-page` endpoint just to provide data for a specific feature. Instead, we should be implement a single `/api/quizzes` endpoint, which is reusable for other features as well.
 
 We can create a separate controller class for each collection. The `@RequestMapping` annotation can be used the define the collection name prefix of the path. Each method will automatically get the prefix in the path, so we don't need to have it in the `@GetMapping` or `@PostMapping` annotations:
 
 ```java
 @RestController
 @RequestMapping("/api/messages")
+@CrossOrigin(origins = "*")
 public class MessageRestController {
-  // ...
+    // ...
 
-  @GetMapping("/{id}")
-  public Message getMessageById(@PathVariable Long id) {
-    return messageRepository.findById(id).orElseThrow(
-      () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + " does not exist"));
-  }
-
-  @PostMapping("")
-  public Message createMessage(@Valid @RequestBody AddMessageDto message, BindingResult bindingResult) {
-    if (bindingResult.hasErrors()) {
-      throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
+    @GetMapping("/{id}")
+    public Message getMessageById(@PathVariable Long id) {
+        return messageRepository.findById(id).orElseThrow(
+            () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + " does not exist"));
     }
 
-    Message newMessage = new Message(message.getContent());
-    return messageRepository.save(newMessage);
-  }
+    @PostMapping("")
+    public Message createMessage(@Valid @RequestBody CreateMessageDto message, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
+        }
+
+        Message newMessage = new Message(message.getContent());
+        return messageRepository.save(newMessage);
+    }
 }
 ```
 
@@ -456,9 +453,24 @@ In this case, the `getMessageById` method will handle GET request to the path `/
 
 {: .note }
 
-> It's handy to use some prefix, such as "api" to distinguish paths that produce JSON responses from paths that produce HTML pages.
+> It's handy to use some prefix, such as "api" to distinguish paths that produce JSON response from paths that produce HTML pages.
 
-### REST API error handling and HTTP status codes
+### Controlling the request and response body format with DTO classes
+
+To have full control over the format of the request and response body we can use [DTO](https://www.baeldung.com/java-dto-pattern) classes. Especially with the request body annotated by the `@RequestBody` annotation, we should _always_ use a DTO class object instead of an entity class object. This is because using an entity class object might accidently allow users to update undesired attributes of an entity as described [here](https://rules.sonarsource.com/java/tag/spring/RSPEC-4684/).
+
+For example, in the `createMessage` method the request body format is defined by the [CreateMessageDto](https://github.com/software-development-project-1/spring-boot-vite-example/blob/main/src/main/java/fi/haagahelia/quizzer/dto/CreateMessageDto.java) class:
+
+```java
+public class CreateMessageDto {
+    @NotBlank(message = "Content is required")
+    private String content;
+
+    // constructors, getters and setters
+}
+```
+
+### HTTP status codes and REST API error handling
 
 Previously we have handled errors in requests by sending a redirect or rendering a Thymeleaf template with some error messages. With REST API endpoints we communicate errors with [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) and JSON formatted error objects containing details about the error. HTTP status codes are numeric codes that describe whether the request was successful or not.
 
@@ -488,157 +500,61 @@ In the `createMessage` method will send a `400 Bad Request` status code with the
 }
 ```
 
-If we don't throw a `ResponseStatusException` exception, the `200 OK` status code will be sent with the response, which indicates the that request succeeded.
+If we don't throw a `ResponseStatusException` exception, the `200 OK` status code will be sent with the response, which indicates the that request succeeded. To get more control over the response, we can use the [ResponseEntity](https://www.baeldung.com/spring-response-entity) class:
 
-### Omitting attributes from the JSON output
+```java
+@PostMapping("")
+public ResponseEntity<?> createMessage(@Valid @RequestBody CreateMessageDto message, BindingResult bindingResult) {
+    if (bindingResult.hasErrors()) {
+        List<String> errorMessages = bindingResult.getAllErrors().stream().map((error) -> error.getDefaultMessage())
+                .collect(Collectors.toList());
 
-By default _all the attributes_ are present in the JSON output. We can omit attributes from the JSON output by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on an attribute. We usually want to omit attributes that hold private information, for example user's password hash, or attributes that can potentially contain lots of data, for example, the `@OneToMany` annotated attributes. We can, for example omit the `recommendations` attribute of the `Category` entity class in the following way:
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorMessages);
+    }
+
+    Message newMessage = new Message(message.getContent());
+    messageRepository.save(newMessage);
+
+    return ResponseEntity.status(HttpStatus.CREATED).body(newMessage);
+}
+```
+
+### Omitting attributes from the JSON response body
+
+By default _all the attributes_ are present in the JSON response body. We can omit attributes from the JSON response body by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on an attribute. We usually want to omit attributes that hold private information, for example user's password hash, or attributes that can potentially contain lots of data, for example, the `@OneToMany` annotated attributes. We can, for example omit the `questions` attribute of the `Quiz` entity class in the following way:
 
 ```java
 @JsonIgnore
-@OneToMany(mappedBy="category")
-private List<ReadingRecommendation> recommendations;
+@OneToMany(mappedBy = "quiz")
+private List<Question> questions;
 ```
 
-To have more control over the attributes in the JSON output, [DTO](https://www.baeldung.com/java-dto-pattern) classes can be used instead of returning the entity classes directly from the controller methods.
-
-{: .important-title }
-
-> Exercise 14
->
-> Create a controller class `ReadingRecommendationRestController` that has a method `getRecommendations`. This method should return _all the reading recommendations_ in path `/api/recommendations` in JSON format. You should be able to see the list of recommendations when opening <http://localhost:8080/api/recommendations> in a web browser. The recommendations should be listed from newest to oldest as specified in the third user story.
->
-> Omit the category's reading recommendations from the JSON output by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the `@OneToMany` attribute in the `Category` entity class.
->
-> Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the sixth user story.
-
-{: .important-title }
-
-> Exercise 15
->
-> Create a controller class `CategoryRestController` that has a method `getCategories`. This method should return _all the categories_ in path `/api/categories` in JSON format. You should be able to see the list of categories when opening <http://localhost:8080/api/categories> in a web browser. The categories should be listed in an alphabetical order by the category name as specified in the fourth user story.
->
->
-> Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the sixth user story.
-
-{: .important-title }
-
-> Exercise 16
->
-> Create a method `getRecommendationsByCategoryId` for the `CategoryRestController` class. This method should return _reading recommendations in a specific category_ in path `/api/categories/{categoryId}/recommendations` in JSON format. The `categoryId` path variable should determine the category id. You should be able to see the list of reading recommendation when opening <http://localhost:8080/api/categories/CATEGORY_ID/recommendations> in a web browser (just replace `CATEGORY_ID` with id of some category that has recommendations). If the category by the provided category id doesn't exist, send a `404 Not Found` HTTP status code and an appropriate error message with the response. The recommendations should be listed from newest to oldest as specified in the third user story.
->
-> Create an issue for this task and add it to the Sprint 2 Backlog project. This task is related to the sixth user story.
-
-## REST API documentation with Swagger
-
-Now that we have implemented REST API endpoints for our application, we should describe to our fellow developers what these endpoints are and what kind of data they provide. We could write this documentation by hand, but there's a high risk that the documentation will become stale in the future. For example, if we make some alteration to the structure of the provided data and forget to update the documentation. That is why API documentation is commonly generated automatically by tools such as [Spring Doc](https://springdoc.org/).
-
-Spring Doc is a library for generating a JSON-formatted description of a REST API from our controller classes and their methods. This description follows a common format called the [OpenAPI Specification](https://swagger.io/docs/specification/about/) format. Once the OpenAPI formatted description is generated, there are tools to display the information in a user-friendly way as a user interface. One of such tools is [Swagger](https://swagger.io/).
-
-Swagger provides documentation for the API endpoints we define in the controller methods. The documentation is a user interface that lists the endpoints and provides information for each one, such as what the request for the endpoint looks like and what's in the response. We can also easily send requests and inspect the response using the user interface. [Here](https://petstore.swagger.io/) is an example of a Swagger documentation.
-
-Let's start documenting our API by adding the Spring Doc dependency to the `<dependencies>` list in the `pom.xml` file:
-
-```xml
-<dependency>
-   <groupId>org.springdoc</groupId>
-   <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-   <version>2.0.2</version>
-</dependency>
-```
-
-Then, let's start our application and open <http://localhost:8080/v3/api-docs> in a browser. We should see the JSON formatted description of our REST API in the OpenAPI format. For a more user-friendly description, the Swagger documentation can be found at <http://localhost:8080/swagger-ui.html>. In the Swagger documentation, we can see a documentation for two controllers: the `ReadingRecommendationRestController` controller and the `CategoryRestController` controller.
-
-Let's have a look at the documentation for the `/api/categories/{id}/recommendations` endpoint under the "category-rest-controller". We see all relevant information about the endpoint: the path, path parameters, and an example of the response. We can send a test request by clicking the "Try it out" button on the right. This is handy while we are exploring an API that we aren't familiar with.
-
-We can provide more details about the endpoints by using specific annotations for the controller classes and methods. For example, we can provide a better name and a description for the category API using the `@Tag` annotation:
-
-```java
-@RestController
-@RequestMapping("/api/categories")
-@Tag(name="Category", description="Information about categories and their reading recommendations")
-public class CategoryRestController {
-  // ...
-}
-```
-
-Now, if we open <http://localhost:8080/swagger-ui.html> again, we should see the new name and the description for the category API.
-
-We can also provide more information about a specific endpoint using the `@Operation` annotation:
-
-```java
-@RestController
-@RequestMapping("/api/categories")
-@Tag(name="Category", description="Information about categories and their reading recommendations")
-public class CategoryRestController {
-  // ...
-
-  @Operation(
-    summary = "Reading recommendations of a cateogry",
-    description = "Fetches all the reading recommendations of a specific category"
-  )
-  @GetMapping("/{id}/recommendations")
-  public List<ReadingRecommendation> getReadingRecommendationsByCategoryId(@PathVariable Long id) {
-    // ...
-  }
-}
-```
-
-{: .important-title }
-
-> Exercise 17
->
-> Generate a Swagger documentation for the project as described above. Add proper name and description for both the `ReadingRecommendationRestController` and the `CategoryRestController` controllers using the `@Tag` annotation. For each controller method add a proper summary and description using the `@Operation` annotation.
->
-> For other developers to find the Swagger documentation, add a "Documentation" subheading for the `README.md` file and under that a link to the Swagger documentation at <http://localhost:8080/swagger-ui.html>.
-
-{: .highlight }
->
-> From now on, add Swagger documentation for every new REST API endpoint.
+To have more control over the attributes in the JSON response, [DTO](https://www.baeldung.com/java-dto-pattern) classes can be used instead of returning the entity classes directly from the controller methods.
 
 ## Communication between frontend and backend
 
 The purpose of the REST APIs we just implemented on the backend is that we can _separate_ the client application from the backend application. In web applications these client applications are commonly called _frontend applications_ and they are implemented using JavaScript programming language.
 
-It's very difficult to implement complex frontend applications using plain JavaScript. That's is why libraries such as [React](https://react.dev/) are used. React allows us to build user interfaces out of individual pieces called _components_. Components represent a visual element on the page, such as `MessageList`, or `MessageListItem`:
+It's very difficult to implement complex frontend applications using plain JavaScript. That's is why libraries such as [React](https://react.dev/) are used. React allows us to build user interfaces out of individual pieces called _components_. Components represent a visual element on the page.
 
-```jsx
-import React from "react";
-
-// We can use props object to reuse components, just like regular functions
-export default function MessageListItem(props) {
-  return <li>{props.message.content}</li>;
-}
-```
-
-If you aren't familiar with React yet, React's documentation has great [tutorials](https://react.dev/learn).
-
-{: .note }
-
-> This material doesn't go into React details. It is recommended that those team members who have completed (or currently completing) the Front End Development course will be working on the exercises in this section.
-
-The example project has a simple React frontend application in the `frontend/messageList` folder. We will be using this application as an example.
+The example project has a simple [Vite](https://vitejs.dev/) frontend application in the `frontend` folder. We will be using this application as an example and as the starting point for the student dashboard which we start implementing during the last three user stories.
 
 The communication between the frontend application and the backend application is performed using the JavaScript's [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The Fetch API provides the `fetch` function, which can be used to send a HTTP request to a specific URL:
 
 ```js
-fetch("/api/messages")
+fetch("http://localhost:8080/api/messages")
   .then((response) => response.json())
   .then((messages) => {
     console.log(messages);
   });
 ```
 
-{: .note }
-
-> Our frontend application's source is served from the same _origin_ as the backend, which is <http://localhost:8080>. This is why don't need to specify the full URL in the `fetch` call, which is <http://localhost:8080/api/messages>. Instead we can specify just the path. For example, the Vite development server serves the source files from a different origin (by default <http://localhost:5173>) and in this case we would need to use the full URL.
-
 The `fetch` function returns a [Promise](https://javascript.info/promise-basics) object. The promise resolves a `Response` object, which contains the response from the server. The response's JSON payload can be parsed into JavaScript objects using the `response.json()` method.
 
 The default request method is GET. We can also send a POST request with a JSON formatted request body by providing addional options for the `fetch` call:
 
 ```js
-fetch("/api/messages", {
+fetch("http://localhost:8080/api/messages", {
   method: "POST",
   headers: {
     Accept: "application/json",
@@ -656,477 +572,385 @@ fetch("/api/messages", {
 
 > The `fetch` calls require somewhat boilerplate code, especially while sending JSON formatted data to the server with a POST request. Different HTTP client libraries such as [Axios](https://axios-http.com/docs/intro) are used to reduce this boiplerate code and to provide useful additional features.
 
-In the example project, fetching the messages is extracted into a function called `fetchMessages`, which can be found in the `frontend/messageList/fetchMessages.js` file:
+In the example project, the logic of fetching and creating messages is extracted into `getAllMessages` and `createMessage` functions, which can be found in the `frontend/src/services/message.js` file:
 
 ```js
-export default function fetchMessages() {
-  return fetch("/api/messages").then((response) => response.json());
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL ?? "";
+
+export function getAllMessages() {
+  return fetch(`${BACKEND_URL}/api/messages`).then((response) =>
+    response.json()
+  );
+}
+
+export function createMessage(message) {
+  return fetch(`${BACKEND_URL}/api/messages`, {
+    method: "post",
+    body: JSON.stringify(message),
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  }).then((response) => {
+    if (!response.ok) {
+      throw new Error("Failed to create the message");
+    }
+
+    return response.json();
+  });
 }
 ```
 
-This is a simple _abstraction_ for fetching the messages, but it's quite handy. If the logic for fetching the messages (for example the API URL) changes, we only need to change the logic inside the `fetchMessages` function and nowhere else.
+{: .note }
 
-The `MessageList` component in the `frontend/messageList/MessageList.jsx` calls the `fetchMessages` function to display the message list:
+> The `VITE_BACKEND_URL` is an [environment variable](https://vitejs.dev/guide/env-and-mode). We have a different backend URL in the development and the production environment.
+
+These are simple _abstractions_ for fetching and creating messages, but they are quite handy. If for example the logic for fetching the messages (for example the API URL) changes, we only need to change the logic inside the `getAllMessages` function and nowhere else.
+
+The `MessageList` component in the `frontend/src/routes/MessageList.jsx` calls the `getAllMessages` function to display the message list:
+
+{% raw %}
 
 ```jsx
-import React, { useEffect, useState } from "react";
-import MessageListItem from "./MessageListItem";
-import fetchMessages from "./fetchMessages";
+import { useEffect, useState } from "react";
+import { Typography, Button } from "@mui/material";
+import { Link } from "react-router-dom";
+
+import { getAllMessages } from "../services/message";
 
 export default function MessageList() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    fetchMessages().then((fetchedMessages) => setMessages(fetchedMessages));
+    getAllMessages().then((messages) => {
+      setMessages(messages);
+    });
   }, []);
 
   return (
-    <div>
-      <h1>Messages</h1>
-
+    <>
+      <Typography variant="h4" component="h1">
+        Messages
+      </Typography>
       <ul>
         {messages.map((message) => (
-          <MessageListItem message={message} key={message.id} />
+          <li key={message.id}>{message.content}</li>
         ))}
       </ul>
-
-      <a className="btn btn-primary" href="/messages/add">
+      <Button
+        component={Link}
+        to="/messages/add"
+        variant="contained"
+        sx={{ marginBottom: 2 }}
+      >
         Add a message
-      </a>
-    </div>
+      </Button>
+    </>
   );
 }
 ```
 
-The `MessageList` component is rendered on the page in the `frontend/messageList/renderMessageList.jsx` file:
+{% endraw %}
 
-```jsx
-import React from "react";
-import { createRoot } from "react-dom/client";
-import MessageList from "./MessageList";
+Explore the code in the `frontend` folder. You can start the Vite development server by runing the `npm run dev` command in the `frontend` folder. Once the development server has started, the application should be accessible at <http://localhost:5713>.
 
-const root = createRoot(document.getElementById("messageListRoot"));
-root.render(<MessageList />);
-```
+## Cross-Origin Resource Sharing (CORS)
 
-The component is rendered on a HTML element with an id "messageListRoot". This element can be found in the `src/main/resources/templates/reactmessagelist.html` template file:
+The Vite development server is serving the JavaScript files from an URL that starts with `http://localhost:5173`. Our backend is accessible in the URL `http://localhost:8080`. When we send a request with the `fetch` function from the frontend to our backend, we send a request to a _different origin_. These kind of requests are called _cross-orgin_ requests.
 
-```html
-<!DOCTYPE html>
-<html
-  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-  layout:decorate="~{layout.html}"
->
-  <head>
-    <script th:src="@{/frontend/renderMessageList.js}" defer></script>
-  </head>
-  <body>
-    <div layout:fragment="content">
-      <div id="messageListRoot"></div>
-    </div>
-  </body>
-</html>
-```
+Web browsers don't allow `fetch` functions to send cross-origin requests by default. This is called the _same-origin policy_. We can however allow certain (or every) cross-origin request by using [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (CORS).
 
-The JavaScript file for the frontend application is added with a `script` tag:
+The idea of CORS is that the web browser "asks" the backend if cross-origin request from a certain origin is allowed by sending a special HTTP request. If the backend allows the requests, then the web browser will send it. In a Spring Boot application we can use the [@CrossOrigin](https://spring.io/guides/gs/rest-service-cors/) annotation in the class or method level to allow cross-origin requests to certain or all paths of controller. For example we can allow cross-origin requests from all origins for all `MessageRestController` method paths in the following way:
 
-```html
-<script th:src="@{/frontend/renderMessageList.js}" defer></script>
-```
-
-The JavaScript file is bundled using a _bundler_. The bundler will combines many JavaScript code files into a single file that is loadable in the browser. We will be using the [esbuild](https://esbuild.github.io/) bundler.
-
-If we take a look at the `scripts` section of the `package.json` file in the root folder of the project, we'll see three scripts:
-
-```json
-{
-  "esbuild-bundle": "esbuild frontend/messageList/renderMessageList.jsx --bundle --sourcemap --outdir=src/main/resources/static/frontend",
-  "dev": "npm run esbuild-bundle -- --watch",
-  "build": "npm run esbuild-bundle -- --minify"
+```java
+@RestController
+@RequestMapping("/api/messages")
+@CrossOrigin(origins = "*")
+public class MessageRestController {
+    // ...
 }
 ```
 
-Here's what the scripts do:
+## Designing the REST API endpoints for the user stories
 
-- The `esbuild-bundle` script will bundle the `frontend/messageList/renderMessageList.jsx` entry file and output the result to the `src/main/resources/static/frontend` folder.
-- The `dev` script will execute the `esbuild-bundle` script with a `--watch` flag, which will generate the output files each time one of the source files changes. Use this script while writing the frontend code. This is handy while we are developing the frontend.
-- The `build` script will generate a [minified](https://esbuild.github.io/api/#minify) bundle of the code. This version should be used for the _production version_ of the application due to its smaller file size that is faster to download through the network.
+Next, let's consider what kind of REST API endpoints we need for the last three user stories. In the sixth user story, "{{site.sprint_2_user_story_6}}", we need to list all the published quizzes. To follow the REST API naming principles, we can implement a GET method endpoint `/api/quizzes`. We can add a `QuizRestController` class and implement the endpoint with a `getAllQuizzes` method.
 
-Let's open the open project folder in an editor. If you have previously written frontend code using Visual Studio Code, you can use that instead of Eclipse. Then, open the project folder in a command-line interface such as Git Bash or the Visual Studio Code's integrated terminal.
+In the seventh user story, "{{site.sprint_2_user_story_7}}", we need to display information of a quiz with a specific id. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}`. We can implement the endpoint with a `getQuizById` method in the `QuizRestController` class. If there is no quiz with the provided id, we should return a `404 Not Found` status as a response. Similarly, if the quiz is not published, we should return a `403 Forbidden` status as a response.
 
-Start by installing the frontend dependencies by running the `npm install` command. Then, run `npm run dev` command to bundle the frontend code. Next, open <http://localhost:8080/react-messages> in browser and you should see a list of messages if there's any. If the list is empty, add a message in <http://localhost:8080/messages/add> and check again.
+We also want to list the quiz-related questions. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}/questions`. We can implement the endpoint with a `getQuestionsByQuizId` method in the `QuizRestController` class. We should implement similar error handling for this endpoint as in the `/api/quizzes/{id}` endpoint.
 
-{: .note }
+In the eighth user story, "{{site.sprint_2_user_story_8}}", we need save the student's answer to the database. Before implementing the endpoint we need to consider what kind of data we need to store about the student's answer. We want at least to know which questions the answer is related to, what's the answer text and whether the answer was correct or not. So, we need to implement the appropriate JPA entity class and a JPA repository class first.
 
-> Run the `npm run dev` command when you are developing the frontend application.
+Then, we can implement a POST method endpoint `/api/answers` for this use-case. We can add a `AnswerRestController` class and implement the endpoint with a `createAnswer` method. If the user is trying to answer a quiz which is not published we should return a `403 Forbidden` status as a response. If the user is trying to answer a quiz which does not exist we should return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), we should return a `400 Bad Request` status as a response.
 
-Now that we have the <http://localhost:8080/api/recommendations> REST API, we can implement a frontend application for the recommendations list. Create a folder `recommendationList` in the `frontend` folder. In that folder, create a file `renderRecommendationList.jsx` with the following content:
+Before starting to implement the frontend features, we should test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL, for example <http://localhost:8080/api/quizzes>. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
 
-```jsx
-import React from "react";
-import { createRoot } from "react-dom/client";
+{: .highlight}
 
-const root = createRoot(document.getElementById("recommendationListRoot"));
-root.render(<h1>Reading recommendation list coming soon!</h1>);
-```
+> The last three user stories are related to the student dashboard and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend. Use the Vite application in the `frontend` folder as the staring point of your implementation.
 
-Next, alter the template file for the reading recommendation list so that it only has the root element for the React application:
+{: .important-title }
 
-```html
-<!DOCTYPE html>
-<html
-  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-  layout:decorate="~{layout.html}"
+> Exercise 16
 >
-  <head>
-    <script th:src="@{/frontend/renderRecommendationList.js}" defer></script>
-  </head>
-  <body>
-    <div layout:fragment="content">
-      <div id="recommendationListRoot"></div>
-    </div>
-  </body>
-</html>
-```
+> Create two new labels: "frontend" and "backend". Add the "frontend" label for frontend-related tasks and the "backend" label for backend-related tasks.
 
-In order to bundle the `renderRecommendationList.jsx` file with esbuild, we'll need to alter the `esbuild-bundle` script in the `package.json` file:
+{: .highlight}
 
-```json
-{
-  "esbuild-bundle": "esbuild frontend/recommendationList/renderRecommendationList.jsx --bundle --sourcemap --outdir=src/main/resources/static/frontend",
-  "dev": "npm run esbuild-bundle -- --watch",
-  "build": "npm run esbuild-bundle -- --minify"
-}
-```
+> Omit the `@OneToMany` attributes from the JSON response in every entity by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the attributes.
 
-So, we replaced the previous `frontend/messageList/renderMessageList.jsx` entry file with the `frontend/recommendationList/renderRecommendationList.jsx` entry file. If you still have the `npm run dev` command running, stop it by pressing `ctrl` and `c` keys in the command-line window. Then run the `npm run dev` command again to apply the changes we made for the `dev` script.
+{: .highlight}
 
-Open <http://localhost:8080> in browser. We should see the text "Reading recommendation list coming soon!" where used to be the list of reading recommendations. Change the text in the `renderRecommendationList.jsx` and save the changes. Then, reaload the page and you should see that the text has changed.
+> Use the `@CrossOrigin` annnotation on the REST controller classes to allow cross-origin requests from the frontend application.
 
-Next we will implement the list of reading recommendations as a React frontend application. After that we will implement the the sixth user story "As a user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
+{: .important-title }
 
-For the _sixth user story_ we can have the following tasks in addition to the REST API tasks mentioned before:
-
-1. Add a RecommendationList component which lists reading recommendations from the /api/recommendations REST API endpoint
-2. Add the category filter for the RecommendationList component
+> Exercise 17
+>
+> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get tips for the implementation.
+>
+> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
 > Exercise 18
 >
-> Create issues for the the remaining tasks of the _sixth user story_ and add them to the Sprint 2 Backlog project.
+> Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 21 to get tips for the implementation.
+>
+> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
 > Exercise 19
 >
-> Implement a React frontend application to the `frontend/recommendationList` folder which lists the reading recommendations _similarly as before_. The frontend application should fully replace the implementation in the Thymeleaf template. That is, the `<body>` tag should only contain the following:
+> Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 22 to get tips for the implementation.
 >
-> ```html
-> <body>
->   <div layout:fragment="content">
->     <div id="recommendationListRoot"></div>
->   </div>
-> </body>
-> ```
->
-> Use the `fetch` function to fetch the recommendations from <http://localhost:8080/api/recommendations>. Take a look at the files in the `frontend/messageList` folder for examples.
->
-> For now the "Delete" button can be implemented with a form:
->
-> ```jsx
-> <form method="POST" action={`/recommendations/${recommendation.id}/delete`}>
->   <button class="btn btn-danger">Delete</button>
-> </form>
-> ```
->
-> We will improve the user experience of the feature in exercise 21.
+> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
 > Exercise 20
 >
-> Implement the rest of the tasks of the sixth user story "As a user I want to filter reading recommendations based on the category so that I can find interesting recommendations easier".
+> Implement the tasks of the sixth user story, "{{site.sprint_2_user_story_6}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-5-1.png)
+> ![](/assets/sprint-2-user-story-6.png)
 >
-> The select menu should list all added categories. If the user chooses the "Any category" option, all recommendations should be listed. Otherwise only recommendations in the selected category.
+> Tips for implementing the tasks:
 >
-> If you have trouble with the implementation, here's a high-level idea of the implementation:
->
-> ```jsx
-> export default function RecommendationList() {
->   const [categories, setCategories] = useState([]);
->   // "any" is used as the id of the "Any category" option
->   const [selectedCategoryId, setSelectedCategoryId] = useState("any");
->   const [recommendations, setRecommendations] = useState([]);
->
->   // effect for fetching categories
->   useEffect(() => {
->     // fetch categories
->   }, []);
->
->   // effect for fetching recommendations
->   useEffect(() => {
->     if (selectedCategoryId !== "any") {
->       // If category is selected fetch recommendations from /api/categories/{id}/recommendations
->     } else {
->       // If no category is selected fetch recommendations from /api/recommendations
->     }
->   }, [selectedCategoryId]); // Re-run the effect when selectedCategoryId changes
->
->   function handleCategoryFilterChange(event) {
->     setSelectedCategoryId(event.target.value);
->   }
->
->   return (
->     <div>
->       <div class="mb-3">
->         <label class="form-label">Filter by a category</label>
->         <select
->           class="form-select"
->           onChange={handleCategoryFilterChange}
->           value={selectedCategoryId}
->         >
->           <option value="any">Any category</option>
->           {categories.map((category) => (
->             <option value={category.id} key={category.id}>
->               {category.name}
->             </option>
->           ))}
->         </select>
->       </div>
->       {/* The list of reading recommendations goes here */}
->     </div>
->   );
-> }
-> ```
+> - Material UI [Table](https://mui.com/material-ui/react-table/)
 
 {: .important-title }
 
 > Exercise 21
 >
-> The form implementation of the "Delete" button has a few drawbacks in the user experience:
+> Implement the tasks of the seventh user story, "{{site.sprint_2_user_story_7}}".
 >
-> - Submitting the form causes a full page reload. This will lose the state of the page (for example the current category filter) and will feel slow and unresponsive for the user
-> - Submitting the form doesn't request a confirmation from the user. User might accidently delete a reading recommendation quite easily
+> The implementation could look something like this:
 >
-> Improve the user experience by replacing the form submission with a `fetch` call:
+> ![](/assets/sprint-2-user-story-7-1.png)
 >
-> ```js
-> function handleDelete(recommendation) {
->   fetch(`/recommendations/${recommendation.id}/delete`, {
->     method: "POST",
->   }).then(() => {
->     // Remove the deleted recommendation from the recommendations state variable array
->   });
-> }
-> ```
+> ![](/assets/sprint-2-user-story-7-2.png)
 >
-> You can use the [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method to create a new array without the deleted recommendation and set that as the state. The user confirmation can be requested using the [window.confirm](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) method.
+> ![](/assets/sprint-2-user-story-7-3.png)
 >
-> ![](/assets/sprint-2-user-story-5-2.png)
-
-## Cross-Origin Resource Sharing (CORS)
-
-In our case the frontend application's JavaScript file is served by the backend from URL of form `http://localhost:8080/frontend/renderRecommendationList-RANDOM_HASH.js`. The frontend application is sending requests using the `fetch` function to URLs that start with `http://localhost:8080`. That is, the JavaScript file is sending request to the _same origin_, which is `http://localhost:8080`.
-
-That's not case all the time. For example a Vite development server is serving the JavaScript files from an URL that starts with `http://localhost:5173`. If we would send a request from a frontend application served from the Vite development server to our backend, we would send a request to a _different origin_. These kind of requests are called _cross-orgin_ requests.
-
-Web browsers don't allow `fetch` functions to send cross-origin requests by default. This is called the Same-origin Policy. The reason for this is that cross-origin requests can cause [security issues](https://medium.com/@ehayushpathak/security-risks-of-cors-e3f4a25c04d7). We can however allow certain (or every) cross-origin request by using [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (CORS).
-
-The idea of CORS is that the web browser "asks" the backend if cross-origin request from a certain origin is allowed by sending a special HTTP request. If backend allows the requests, then the web browser will send it. In a Spring Boot application we can use the [@CrossOrigin](https://spring.io/guides/gs/rest-service-cors/) annotation in the class or method level to allow cross-origin requests to certain or all paths of controller.
-
-For example we can allow cross-origin requests from `http://localhost:5173` origin for all `ReadingRecommendationRestController` method paths in the following way:
-
-```java
-@RestController
-@RequestMapping("/api/messages")
-@CrossOrigin(origins="http://localhost:5173")
-public class MessageRestController {
-  // ...
-}
-```
-
-## The .gitignore file
-
-In the root folder of our repository there is a [.gitignore](https://git-scm.com/docs/gitignore) file. The `.gitignore` file has a special role in the Git project. It specificies _which files Git should ignore_. There are a few reason why we want specific files or entire folders being ignored by Git:
-
-- The file contains _sensitive information_, such as database usernames and passwords. We don't want these to end up in our repository for everyone to see
-- The file or folder contains content _that can be generated by running a certain command_. En example of such folder is the `node_modules` folder, which contains the library dependencies for the frontend. This folder is usally quite big and we can always generate it by running `npm install`. Another such example is the `target` folder where Maven generates different files.
-
-Let's open our project's `.gitignore` file and have a look at it. Eclipse doesn't list files that start by "." by default, but Visual Studio Code should. Most of the contents of the file is provided by the [Spring Initializr](https://start.spring.io/). Here's a few lines from the file:
-
-```
-node_modules
-src/main/resources/static/frontend
-```
-
-Each line specifies a file or folder to ignore. The first line ignores the `node_modules` folder and all files inside it. The second line ignores the frontend files generated by the `npm run dev` and `npm run build` commands.
-
-## Frontend workflow with Maven
-
-We can integrate the frontend's npm scripts with the backend's Maven workflow using the [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin). Using the plugin, we can run all the commands required for the frontend application when we compile the Java code. This will simplify the development workflow of the whole application.
-
-Let's add the frontend-maven-plugin to the `<plugins>` list in the `pom.xml` file:
-
-```xml
-<plugin>
-  <groupId>com.github.eirslett</groupId>
-  <artifactId>frontend-maven-plugin</artifactId>
-  <version>1.14.2</version>
-  <configuration>
-    <installDirectory>target</installDirectory>
-  </configuration>
-  <executions>
-    <execution>
-      <id>install node and npm</id>
-      <goals>
-        <goal>install-node-and-npm</goal>
-      </goals>
-      <phase>generate-resources</phase>
-      <configuration>
-        <nodeVersion>v18.16.0</nodeVersion>
-      </configuration>
-    </execution>
-    <execution>
-      <id>npm install</id>
-      <goals>
-        <goal>npm</goal>
-      </goals>
-      <phase>generate-resources</phase>
-      <configuration>
-        <arguments>install</arguments>
-      </configuration>
-    </execution>
-    <execution>
-      <id>npm build</id>
-      <goals>
-        <goal>npm</goal>
-      </goals>
-      <phase>generate-resources</phase>
-      <configuration>
-        <arguments>run build</arguments>
-      </configuration>
-    </execution>
-  </executions>
-</plugin>
-```
-
-The plugin will execute three commands when we generate the resources for the project:
-
-1. Install a _project-specific_ Node.js version into the `node` folder. This won't effect your other Node.js installations
-2. Run `npm install` command to install frontend dependencies
-3. Run `npm run build` command to generate a minified bundle of the frontend code, suitable for the production version of the application
-
-Now, if we run the `./mvnw spring-boot:run` command, the command output indicates that the frontend related commands are executed.
+> ![](/assets/sprint-2-user-story-7-4.png)
+>
+> Tips for implementing the tasks:
+>
+> - You can store the active question index to a state variable:
+>
+>   ```js
+>   const [questions, setQuestions] = useState([]);
+>   const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
+>   const activeQuestion = questions[activeQuestionIndex];
+>   ```
+>
+> - Material UI [Card](https://mui.com/material-ui/react-card/) and [LinearProgress](https://mui.com/material-ui/react-progress/)
 
 {: .important-title }
 
 > Exercise 22
 >
-> Use the frontend-maven-plugin in the project as instructed above.
-
-## JAR
-
-A JAR (Java Archive) is a package file format typically used to aggregate many Java class files and associated metadata and resources (such as CSS files, JavaScript files and other assets) into one file to distribute application software or libraries on the Java platform. If a user wants to use our application, instead of providing them with the entire source code, we can just provide a JAR file containing everything needed to run our application.
-
-We can generate a JAR file for the application with the following command:
-
-```bash
-./mvnw package
-```
-
-The command will generate the JAR file under the `target` folder. Inside the folder there should be a file `cool-reads-0.0.1-SNAPSHOT.jar`. Because we added the frontend-maven-plugin for the project previously, the JAR file will contain the JavaScript files required by the frontend.
-
-If the application is currently running, for example in Eclipse, stop it. Then, run `java -jar target/cool-reads-0.0.1-SNAPSHOT.jar` to run the application with the JAR file. Open the application in <http://localhost:8080> and see that it is working.
-
-{: .note }
-
-> When you change the application's code, you need to re-generate the JAR file with the `./mvnw package` command to have a JAR file for the latest version of the application.
-
-## Deployment
-
-So far we have been using and developing our application in an isolated environment on our own computer. This environment used during the development of the application is referred to as the _development environment_. In the software development lifecycle the _deployment phase_ is the phase in which the implemented software is distributed to the users. For example, a web application is published online so that users can access it with their web browsers. This environment is referred to as the _production environment_.
-
-The deployment phase is crucial because unless users can use the application, it has no real value for the stakeholders. That is why in the agile software development process, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint. There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). During the course, we will be using Render to deploy our application.
-
-Let's deploy our application to Render so that the users can start using it. First, [sign in](https://dashboard.render.com/) to Render using your GitHub account. Then, we will need to set up a _production database_ for our application. The H2 database is convenient in the development environment but not suitable for the production environment. We can create a [PostgreSQL](https://www.postgresql.org/) database instance in Render dashboard by clicking the "New" button on the navigation bar and choosing "PostgreSQL". Name the PostgreSQL instance "cool-reads-database" and the database "coolreads". Then, scroll to the bottom and click the "Create database" button.
-
-Once the PostgreSQL instance has been created, open its information in the Render dashboard. In the PostgreSQL instance's page, scroll to "Connections" section. Copy the values for "Username", "Password" and "Internal Database URL" and paste the values temporary to an editor. We will need these values soon.
-
-Next, let's add "instructions" for Render on how to start our application to our project. Render supports deploying [Docker](https://www.docker.com/) containers which are isolated environments for running all kinds of applications. A Docker image is a set of instructions used to run containers. These instructions are defined with a [Dockerfile](https://docs.docker.com/engine/reference/builder/). Add the following `Dockerfile` file (the file name is just `Dockerfile` without a file extension) to the root folder of the project (same folder that has the `pom.xml` file):
-
-```dockerfile
-FROM maven:3.8.7-openjdk-18-slim AS build
-COPY . .
-RUN mvn clean package -DskipTests
-
-FROM openjdk:21-jdk-slim
-ENV SPRING_CONFIG_NAME=application,production
-COPY --from=build /target/cool-reads-0.0.1-SNAPSHOT.jar coolreads.jar
-EXPOSE 8080
-ENTRYPOINT ["java","-jar","coolreads.jar"]
-```
-
-The `Dockerfile` has some familiar commands. Basically we just generate a JAR file for the project and start the application using the JAR file.
-
-Because we use PostgreSQL as the production database, we will need to specific production environment configuration. Add a file `production.properties` to the `src/main/resources` folder (same folder that has the `application.properties` file) with the following content:
-
-```
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
-spring.datasource.url=${POSTGRES_URL}
-spring.datasource.username=${POSTGRES_USERNAME}
-spring.datasource.password=${POSTGRES_PASSWORD}
-spring.datasource.driver-class-name=org.postgresql.Driver
-```
-
-The `Dockerfile` sets the environment variable `ENV SPRING_CONFIG_NAME=application,production`, which tells Spring to merge properties from `application.properties` and `production.properties` files. The properties are merged from left to right, so the properties in the `production.properties` file will override any properties in the `application.properties` file. The values inside `${...}` are [environment variables](https://en.wikipedia.org/wiki/Environment_variable). We will define them in Render soon.
-
-The PostgreSQL database requires a suitable driver for the application. Let's add the PostgreSQL driver dependency to the `<dependencies>` list in the `pom.xml` file:
-
-```xml
-<dependency>
-  <groupId>org.postgresql</groupId>
-  <artifactId>postgresql</artifactId>
-  <scope>runtime</scope>
-</dependency>
-```
-
-Push these changes to GitHub.
-
-Finally, for the application itself, we need to create a web service. Complete the following steps to create a web service in the Render dashboard:
-
-1. Click the "New" button on the navigation bar and choose "Web Service"
-2. Choose "Build and deploy from a Git repository" and click the "Next" button
-3. In the create web service page, click "Configure accounts" in the "Github" section on the right. Choose your GitHub organization from the list, choose "All repositories" and click the "Install" button
-4. Back in the create web service page, choose your project repository in the "Connect a repository" section by clicking the "Connect" button next to the repository's name
-5. Come up with a name for the web service that isn't already in use. The name will be visible in the application's URL so try to come up with a sensible name
-6. Choose "Docker" as the runtime in the dropdown menu
-7. Click the "Advanced" button at the bottom of the page. In the advanced options section, click the "Add environment variable" button to add three environment variables (key, value):
-
-   - `POSTGRES_URL`: the _internal URL in correct format_ of the PostgreSQL instance. The URL format is `jdbc:postgresql://dpg-<something>/coolreads`. Basically, you can take everything after the "@" symbol in the internal URL you copied previously and the environment variable value is `jdbc:postgresql://<everything-after-the-@-symbol>`
-   - `POSTGRES_USERNAME`: the _username_ of the PostgreSQL instance
-   - `POSTGRES_PASSWORD`: the _password_ of the PostgreSQL instance
-
-   ![Render environment variables](/assets/render-environment-variables.png)
-
-8. Set "Auto-Deploy" as "No" from the dropdown menu
-9. Click the "Create Web service" button at the bottom of the page
-
-Open the created web service in the Render dashboard. The deployment of the application should have started and it will take some time to finish. You can always deploy the application by clicking the "Manual Deploy" button and choosing "Deploy latest commit". Once the deployment is complete the application will be accessible to everyone in the URL that is displayed under the web service's name.
-
-{: .highlight }
-
-> It might take a very long time for the application to open in the web browser.
+> Implement the tasks of the eighth user story, "{{site.sprint_2_user_story_8}}".
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-8-1.png)
+>
+> ![](/assets/sprint-2-user-story-8-2.png)
+>
+> ![](/assets/sprint-2-user-story-8-3.png)
+>
+> Tips for implementing the tasks:
+>
+> - Material UI [Snackbar](https://mui.com/material-ui/react-snackbar/)
+> - You can implement a [DTO](https://www.baeldung.com/java-dto-pattern) class for the request body:
+>
+>   ```java
+>   public class CreateAnswerDto {
+>       @NotBlank(message = "Answer text is required")
+>       private String answerText;
+>
+>       @NotNull(message = "Question id is required")
+>       private Long questionId;
+>
+>       // constructors, getters and setters
+>   }
+>   ```
 
 {: .important-title }
 
 > Exercise 23
 >
-> Deploy the application to Render as instructed above. Add the production environment URL of the application (the web service URL in the Render dashboard) to to the "Usage guide" section in the `README.md` file.
+> Add instructions on _how to start the frontend application_ to the "Usage guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
+>
+> For the sake of clarity, you can add separate subheadings for backend's and frontend's usage guide:
+>
+> ```md
+> ## Usage guide
+>
+> ### Backend
+>
+> The backend usage guide goes here.
+>
+> ### Frontend
+>
+> The frontend usage guide goes here.
+> ```
+>
+> You can test how good your user guide is by cloning a new copy of the repository and executing the steps precisely as they are in the usage guide without making any assumptions.
+
+{: .important-title }
+
+> Exercise 24
+>
+> Add a brief description of the project's _overall architecture_ and the _implementation technologies_ to the project description in the `README.md`. Mention at least the following things:
+>
+> 1. From which components (backend and frontend) your project's overall architecture consists of? What is the purpose of each component? How do the components communicate with each other?
+> 2. Which programming languages, frameworks and major libraries (e.g. Spring Boot) are used in the _backend implementation_?
+> 3. Which database platforms (e.g. H2, PostgreSQL) are used in different environments (development and production environment)?
+> 4. Which programming languages, frameworks and major libraries (e.g. React, Material UI) are used in the _frontend implementation_?
+
+## REST API documentation with Swagger
+
+Now that we have implemented REST API endpoints for our application, we should describe to our fellow developers what these endpoints are and what kind of data they provide. We could write this documentation by hand, but there's a high risk that the documentation will become stale in the future. For example, if we make some alteration to the structure of the provided data and forget to update the documentation. That is why API documentation is commonly generated automatically by tools such as [Spring Doc](https://springdoc.org/).
+
+Spring Doc is a library for generating a JSON-formatted description of a REST API from our controller classes and their methods. This description follows a common format called the [OpenAPI Specification](https://swagger.io/docs/specification/about/) format. Once the OpenAPI formatted description is generated, there are tools to display the information in a user-friendly way as a user interface. One of such tools is [Swagger](https://swagger.io/).
+
+Swagger provides documentation for the API endpoints we define in the controller methods. The documentation is a user interface that lists the endpoints and provides information for each one, such as what the request for the endpoint looks like and what's in the response. We can also easily send requests and inspect the response using the user interface. [Here](https://petstore.swagger.io/) is an example of a Swagger documentation.
+
+Let's start documenting our API by adding the Spring Doc dependency to the `<dependencies>` list in the `pom.xml` file:
+
+```xml
+<dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+    <version>2.3.0</version>
+</dependency>
+```
+
+Then, let's start our application and open <http://localhost:8080/v3/api-docs> in a browser. We should see the JSON formatted description of our REST API in the OpenAPI format. For a more user-friendly description, the Swagger documentation can be found at <http://localhost:8080/swagger-ui/index.html>. In the Swagger documentation, we can see a documentation for two controllers: the `QuizRestController` controller and the `AnswerRestController` controller.
+
+Let's have a look at the documentation for the `/api/quizzes/{id}/questions` endpoint under the "quiz-rest-controller". We see all relevant information about the endpoint: the path, path parameters, and an example of the response. We can send a test request by clicking the "Try it out" button on the right. This is handy while we are exploring an API that we aren't familiar with.
+
+We can provide more details about the endpoints by using specific annotations for the controller classes and methods. For example, we can provide a better name and a description for the category API using the `@Tag` annotation:
+
+```java
+@RestController
+@RequestMapping("/api/quizzes")
+@CrossOrigin(origins = "*")
+@Tag(name = "Quiz", description = "Operations for accessing and managing quizzes")
+public class QuizRestController {
+    // ...
+}
+```
+
+Now, if we open <http://localhost:8080/swagger-ui/index.html> again, we should see the new name and the description for the category API.
+
+We can also provide more information about a specific endpoint using the `@Operation` annotation:
+
+```java
+@RestController
+@RequestMapping("/api/quizzes")
+@CrossOrigin(origins = "*")
+@Tag(name = "Quiz", description = "Operations for accessing and managing quizzes")
+public class QuizRestController {
+    // ...
+
+    @Operation(
+        summary = "Get all questions of a quiz",
+        description = "Returns all the questions of a specific quiz"
+    )
+    @GetMapping("/{id}/questions")
+    public List<Question> getQuestionsByQuizId(@PathVariable Long id) {
+        // ...
+    }
+}
+```
+
+{: .important-title }
+
+> Exercise 25
+>
+> Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
+>
+> Test each REST API endpoint by opening the endpoint's documentation and cliking the "Try it out" button. Remember to also test that the error responses work properly by for example sending a request to the `/api/quizzes/{id}` endpoint with an `id` path parameter value of a non-existing quiz.
+>
+> Add a link to the Swagger documentation in the production environment (in Render) to the "Documentation" section in the `README.md` file. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui/index.html>. Deploy the backend application to Render and make sure that the Swagger documentation is accessible.
+>
+> Create an issue for the task. The "documentation" label is suitable for documentation-related issues.
+
+## The .gitignore file
+
+In the root folder of our repository there is a [.gitignore](https://git-scm.com/docs/gitignore) file. There's also one in the `frontend` folder. The `.gitignore` file has a special role in the Git project. It specificies _which files Git should ignore_. There are a few reason why we want specific files or entire folders being ignored by Git:
+
+- The file contains _sensitive information_, such as database usernames and passwords. We don't want these to end up in our repository for everyone to see.
+- The file or folder contains content _that can be generated by running a certain command_. An example of such folder is the `node_modules` folder, which contains the library dependencies for the frontend. This folder is usally quite big and we can always generate it by running `npm install`. Another such example is the `target` folder where Maven generates different files.
+- The file or folder contains IDE specific configuration that is only relevant for a certain developer. An example of such folder is the `.vscode` folder.
+
+In the `.gitignore` file (generated by [Vite](https://vitejs.dev/)) in the `frontend` folder we have for example the following lines:
+
+```
+node_modules
+dist
+```
+
+These two lines will ignore both the `node_modules` and `dist` folders in the `frontend` folder. The `.gitignore` file makes sure that when we run the `git add` command, we don't accidently add files or folders that shouldn't end up in the repository.
+
+## Deploying the frontend
+
+We managed to deploy the backend during the previous Sprint, but we still haven't deployed the frontend. We can deploy the frontend to Render with the following steps:
+
+1. In the `frontend` folder, add a `.env.production` [environment variable](https://vitejs.dev/guide/env-and-mode) file. The `.env.production` file should contain a `VITE_BACKEND_URL` environmet variable for the backend's _production environment URL_. For example:
+
+   ```
+   VITE_BACKEND_URL=https://name-of-the-backend-service.onrender.com
+   ```
+
+   Make sure that every `fetch` function call has the environment variable as the URL prefix. For example:
+
+   ```js
+   fetch(`${import.meta.env.VITE_BACKEND_URL}/api/quizzes`).then((response) => {
+     // ...
+   });
+   ```
+
+   Finally, _push the changes to GitHub_
+
+1. On the Render dashboard, click the "New" button and choose "Static Site"
+1. From the repository list, find you project's repository and click the "Connect" button
+1. Come up with the name for the service. Set "Root Directory" as `frontend`, "Build Command" as `npm run build` and "Publish Directory" as `dist`
+1. Click the "Advanced" button and set "Auto-Deploy" as "No"
+1. Click the "Create Static Site" button to create the service
+1. On the service's page, click "Redirects/Rewrites" from the navigation on the left. Set the "Source" as `/*`, "Destination" as `/index.html` and "Action" as "Rewrite". Finally, click the "Save Changes" button. This configuration will make the frontend routing work
+
+{: .important-title }
+
+> Exercise 26
+>
+> Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
 
 ## Sprint Review
 
@@ -1134,27 +958,23 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 27
 >
-> Once you have implemented the user stories of the Sprint, remove the excessive Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive `messageList` folder from the `frontend` folder.
+> Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive frontend-related files from the `frontend` folder.
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 28
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
->
-> Also generate a _JAR file for the application_ as instructed previously. Make sure to check that the application can be started using the `java -jar <path-to-the-jar-file>` command and it is working as expected. Add the JAR file to the release by clicking the "Attach binaries by dropping them here or selecting them." section in the release form.
->
-> Add the instructions to the "Usage guide" section in the `README.md` file on how the user can download the JAR file from the latest release and start the application with the `java -jar <path-to-the-jar-file>` command.
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 29
 >
-> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If you managed to deploy the application to Render, demonstrate the features in the production environment.
+> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the features in the production environment.
 >
-> Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/)) for the Sprint Review. This means that you should add a few categories and a few reading recommendations using the application so that you can easily demonstrate the user stories.
+> As in the previous Sprint Review, prepare some _sensible_ test data for the Sprint Review.
 
 {: .warning }
 
@@ -1168,9 +988,7 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 The Product Owner came up with a feature for the application if we run out of work during the Sprint:
 
-> "The category filter on the reading recommendation list is very useful for finding the right things to read. But it would even more useful if a user would be able to filter reading recommendations based on their title or description.
->
-> There could be a search field in the reading recommendation list page. If either the title or the description of a reading recommendation contains the keyword typed in to the field, the reading recommendation would be listed. If there's no keyword, all the reading recommendations would be listed."
+> "It would be very useful if a student would be able to filter quizzes in the student dashboard based on their name or description. There could be a search field at the top of the quiz list page. If either the name or the description of a quiz contains the keyword typed in to the field, the quiz would be listed. If there's no keyword, all the quizzes should be listed."
 >
 > -- The Product Owner
 
@@ -1178,9 +996,9 @@ The Product Owner came up with a feature for the application if we run out of wo
 
 > Bonus exercise
 >
-> Come up with a user story based on the Product Owner's description, create an issue for the user story and add it to the "Product Backlog" project. Then, split the user story into tasks, create an issue for each task and add those to the Sprint 2 Backlog project. Finally, implement the tasks.
+> Come up with a user story based on the Product Owner's description, create an issue for the user story and add it to the Product Backlog project. Then, split the user story into tasks, create an issue for each task and add those to the Sprint Backlog project. Finally, implement the tasks.
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
 >
 > ![](/assets/sprint-2-user-story-bonus.png)
 >

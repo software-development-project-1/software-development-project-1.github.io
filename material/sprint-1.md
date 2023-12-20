@@ -9,7 +9,7 @@ nav_order: 6
 
 # Sprint 1
 
-This week we'll start working on the project described by the Product Owner in the [project description](/project-description). As we have learned, in Scrum the project advances in short iterations called _Sprints_. Each of our three sprints last two weeks. This week is the start of the Sprint 1.
+This week we'll start working on the project described by the Product Owner in the [project description](/project-description). As we have learned, in Scrum the project advances in short iterations called _Sprints_. Each of our three Sprints last two weeks. This week is the start of the Sprint 1.
 
 {: .highlight }
 
@@ -19,11 +19,11 @@ This week we'll start working on the project described by the Product Owner in t
 
 All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 2. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-20. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-24. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Sprint Planning
 
-At the beginning of each Sprint, the _Sprint Planning_ event is organized. During this event the whole Scrum Team participates in planning the requirements for the sprint. As we have learned, these requirements are documented as _user stories_, which are a short, simple description of a feature told from the perspective of the person who desires the new feature in the software. These user stories are added to a _Product Backlog_, which sort of an prioritized todo-list of user stories for the project.
+At the beginning of each Sprint, the _Sprint Planning_ event is organized. During this event the whole Scrum Team participates in planning the requirements for the Sprint. As we have learned, these requirements are documented as _user stories_, which are a short, simple description of a feature told from the perspective of the person who desires the new feature in the software. These user stories are added to a _Product Backlog_, which sort of an prioritized todo-list of user stories for the project.
 
 The idea of Sprint Planning is not to make long term plans, for example what project should look like after three months. Because _requirements tend to change_, we should only do planning for the near future, usually just for the upcoming Sprint. That's why Sprint Planning event commonly only takes at most a few hours.
 
@@ -49,23 +49,21 @@ During Sprint Planning Developers discuss the technical steps required to implem
 >
 > -- Mary, one of the Developers
 
-> "Sounds good to me, Mary. What about the form submission? I think we need a controller method for that as well. We should add a new blog entry to the database based on the submitted name and description. For this we could use the H2 database and Hibernate. We need a JPA entity and repository class class for the blog.
+> "Sounds good to me, Mary. What about the form submission? I think we need a controller method for that as well. We should add a new blog entry to the database based on the submitted name and description. For this we could use the H2 database and Hibernate. We need a JPA entity and JPA repository class class for the blog.
 >
 > -- Jane, one of the Developers
 
 While discussing the technical details, the Developers document a todo-list of tasks with a short description. Developers also consider the order of the tasks:
 
-> Task 1: Add Thymeleaf template for the blog submission form containing fields for name and description
+> Task 1: Add a Blog JPA entity class and a BlogRepository JPA repository class
 
-> Task 2: Add BlogController controller class and a method for rendering the blog submission form
+> Task 2: Add a Thymeleaf template for the blog creation form containing fields for name and description
 
-> Task 3: Add H2 and Hibernate dependencies for the project
+> Task 3: Add a BlogController controller class and a method for rendering the blog creation form
 
-> Task 4: Add Blog JPA entity class and BlogRepository JPA repository class
+> Task 4: Add a method for the BlogController class which handles the blog creation form submission
 
-> Task 5: Add a method for the BlogController that adds the blog to database
-
-These tasks are added to the Sprint specific, _Sprint Backlog_.
+These tasks are added to the Sprint-specific _Sprint Backlog_.
 
 ## Scrum backlogs
 
@@ -73,7 +71,7 @@ The "Scrum Artifacts" section of the [Scrum Guide](https://scrumguides.org/scrum
 
 ### Product backlog
 
-The _Product Backlog_ is a _prioritized_ list of requirements for the developed software. Commonly these requirements are documented as user stories. The Product Backlog is altered constantly during the Sprints, mostly during the Sprint Planning event. For example, new user stories are added, old ones are edited or their priority is changed.
+The _Product Backlog_ is a _prioritized_ list of requirements for the developed software. Commonly these requirements are documented as user stories. On top of new features, Product Backlog items can also be for example bug fixes. The Product Backlog is altered constantly during the Sprints, mostly during the Sprint Planning event. For example, new user stories are added, old ones are edited or their priority is changed.
 
 The Product Owner's responsibility is to prioritize the user stories in the Product Backlog, but the whole Scrum Team participates in the definition of the user stories. The Product Owner should also make sure that the user stories implemented during a Sprint match the stakeholder's requirements. Once a user story is implemented during a Sprint and the implementation is accepted by the Product Owner, the user story can be removed from the Product Backlog.
 
@@ -110,9 +108,7 @@ This information is constantly kept up-to-date during the Sprint. For example, i
 
 {: .note }
 
-> Sprint Backlog can be thought as the todo-list of tasks for the current Sprint. Each task is related to a certain user story on the Product Backlog.
-
-Each Sprint has _its own_ Sprint Backlog. That means that a new Sprint Backlog is created at the beginning of each Sprint.
+> Sprint Backlog can be thought as the todo-list of tasks for the current Sprint. Each task is commonly related to a certain user story on the Product Backlog.
 
 ### Backlog platforms
 
@@ -144,7 +140,7 @@ Once the organization is created, a team member can be invited by clicking the "
 
 Instead of starting a repository from scratch, we can create a copy an existing repository and use that as a starting point for our project. In GitHub terminology this is called _forking a repository_ and the copied repository is called a _fork_.
 
-To get started faster, start your project by forking the [example-project repository]({{site.example_project_link}}). The repository has a simple Java Spring Boot application initialized with [Spring Initializr](https://start.spring.io/). It has some code samples of Thymeleaf templates, controllers, JPA entities and JPA repositories.
+To get started faster, start your project by forking the [example project repository]({{site.example_project_link}}). The repository has a simple Java Spring Boot application initialized with [Spring Initializr](https://start.spring.io/). It has some code samples of Thymeleaf templates, controllers, JPA entities and JPA repositories.
 
 A repository can be forked by cliking the "Fork" button on right side of the repository's name.
 
@@ -154,13 +150,13 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 
 > Exercise 2
 >
-> _One of the team members_ should fork the [example-project repository]({{site.example_project_link}}). Choose the "Owner" as the organization you created previously and give the repository a descriptive name, such as "cool-reads" and a description. The forked repository will become your project's repository where you start working on the project.
+> _One of the team members_ should fork the [example project repository]({{site.example_project_link}}). Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description. The forked repository will become your project's repository where you start working on the project.
 
 {: .important-title }
 
 > Exercise 3
 >
-> Each team member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example-project repository. _Remember to use the HTTPS address_ of the GitHub repository with the command. See the [Git instructions](/git#githubs-workflow) if you have trouble.
+> Each team member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example project repository. _Remember to use the HTTPS address_ of the GitHub repository with the command. See the [Git instructions](/git#githubs-workflow) if you have trouble.
 >
 > Once you have cloned the repository, open the code in an editor such as Eclipse or Visual Studio Code. In Eclipse you can open the project folder from "File > Open Project from Filesystem". The project requires _Java version 17_.
 >
@@ -178,43 +174,30 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 > 4. _Each team member_ checks that the changes are visible in GitHub.
 > 5. Once changes have been pushed to GitHub, _each team member_ pulls the changes from GitHub using the `git pull` command. If you see `CONFLICT` in the command output, see the [Git instructions](/git#merge-conflicts) to figure out how to solve conflicts.
 > 6. Once everybody sees the changes on their local `README.md` file, repeat the the steps from step 3. for each team member until everyone has pushed some changes to the GitHub repository.
->
-> If you didn't manage to cause a [merge conflict](/git#merge-conflicts), let's cause one:
->
-> 7. _One of the team members_ change a specific line in the `README.md` file and pushes the changes to GitHub.
-> 8. _Other team member_ changes _the same line_ in the `README.md` file and _creates a commit for the changes, but does push the changes to GitHub_. After creating the commit, the team member will pull changes from GitHub using the `git pull` command. Solve the merge conflict by following the [Git instructions](/git#merge-conflicts) and push the changes to GitHub.
->
-> Repeat the steps 7 and 8 for each team member so that everyone can solve one merge conflict.
 
 ## GitHub Projects
 
 [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) is a platform for managing taskboards. We will be using it for managing the user stories in our Product Backlog and the tasks in our Sprint Backlogs.
 
-Taskboards in GitHub Projects are called _projects_. Let's create a project for our Product Backlog for the user stories of our project. Open your repository in GitHub and click the "Projects" tab. Then, click the green "New project" button on the right. Click the arrow next to the button, if the button label is different. This should open a dialog. From the left side of the dialog, choose "Board". This determines what the project will look like and you can change it later. Name the project "Product Backlog". Finally, click the "Create" button to create the project.
+Taskboards in GitHub Projects are called _projects_. Let's create a project for our backlogs. Open your repository in GitHub and click the "Projects" tab. Then, click the green "New project" button on the right. Click the arrow next to the button, if the button label is different. This should open a dialog. From the left side of the dialog, choose "Board". This determines what the project will look like and you can change it later. Name the project "Backlog". Finally, click the "Create" button to create the project.
 
-We now have a project with the default columns: "Todo", "In progress" and "Done". The column will determine the status of the user story. Let's change the column labels by clicking the three dots at the top-right corner of the column. Name the columns in the following manner from left to right:
+We now have a project with the default columns: "Todo", "In progress" and "Done". The column will determine the status of the backlog items. We can edit the column names by clicking the three dots at the top-right corner of the column. We can add a new column by pressing the "+" button on the right side of the last column. Let's change the columns so that they are the following from left to right:
 
-- "Backlog" for the user stories that are not on any Sprint yet
-- "In sprint" for the user stories that are chosen for the current Sprint
-- "Done" for the user stories that have been completed
+- "Product Backlog". This column is for the _Product Backlog_ items. That is, items that are requirements for the project but aren't currently worked on. The items should be listed in the _priority_ order (the "P" of DEEP Product Backlog) defined by the Product Owner.
+- "Sprint Backlog". This column is for the _Sprint Backlog_ items. That is, user stories and tasks that are chosen for the current Sprint. Top-priority items are chosen from the "Product Backlog" column and moved to this column during the Sprint Planning event.
+- "In progress". This column is for the items that some team member is currently working on.
+- "In review". This column is for items that require other Developer's or Product Owner's acceptance before they can be moved to the "Done" column.
+- "Done". This column is for the items that have been completed.
 
-Now, let's make sure that our project is public. Click the project's name and the project's settings should open. Scroll down to "Danger zone" section and choose "Visibility" as "Public" from the dropdown menu.
+Finally, let's make sure that our project is public. Click the project's name and the project's settings should open. Scroll down to "Danger zone" section and choose "Visibility" as "Public" from the dropdown menu.
 
-The project will be empty for now, but we will add some user stories for the project after the Sprint Planning event.
+The project will be empty for now, but we will add some user stories and tasks for the project after the Sprint Planning event.
 
 {: .important-title }
 
 > Exercise 5
 >
-> Create the "Product Backlog" project for the project as instructed above. Make sure that the project is public.
-
-Each Sprint should have a separate Sprint Backlog for the Sprint's tasks. Let's create a project for the Sprint 1 Backlog. Create a project similarly as with the Product Backlog project. Name the project "Sprint 1 Backlog". We can use the default "Todo", "In progress" and "Done" columns for the project. Make sure that project is pulic as we did with the Sprint Backlog project. The project will be empty for now, but we will add some tasks for the project after the Sprint Planning event.
-
-{: .important-title }
-
-> Exercise 6
->
-> Create the "Sprint 1 Backlog" project for the project as instructed above. Make sure that the project is public.
+> Create the "Backlog" project as instructed above. Make sure that the project is public.
 
 ## The README file
 
@@ -231,15 +214,15 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 6
 >
 > Open the `README.md` for editing for example in GitHub or in Visual Studio Code. You might not be able to edit the file in Eclipse. Replace the current contents of the repository's `README.md` file with the following information using Markdown:
 >
-> 1. At the beginning of the file add the project name "Cool Reads" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
+> 1. At the beginning of the file add the project name "Quizzer" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
 > 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
 > 3. Below the description, add a subheading "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name.
 > 4. Each team member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
-> 5. Below the "Team members" section, add a subheading "Backlogs" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) that has links "Product Backlog" and "Sprint 1 Backlog". The link should point to the backlog's project (open the backlog's project in GitHub and copy the URL from the web browser's address bar)
+> 5. Below the "Team members" section, add a subheading "Documentation" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) that has at the moment just one "Backlog" link. The link should point to the Backlog project (open the backlog's project in GitHub and copy the URL from the web browser's address bar)
 >
 > Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 
@@ -247,40 +230,42 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Planning event:
 
-> "Let's start from the basics. We need a simple web application which allows the user to add a reading recommendation and list the added reading recommendations. In addition, to be able to manage the added reading recommendations, the user should also be able to edit and delete reading recommendations.
+> "Let's start from the basics. We need a simple web application which allows the teacher to add, list, edit and delete quizzes.
 >
-> When the user opens the application on a web browser, there should be page where the added reading recommendations are listed. There should also be a link that says "Add a reading recommendation" which takes the user to another page, where they can add a reading recommendation using a form.
+> When the teacher opens the application on a web browser, there should be page where the added quizzes are listed. There should also be a link that says "Add a quiz" which takes the teacher to another page, where they can add a quiz using a form.
 >
-> For now, it is enough that a reading recommendation has a title, for example "The 2020 Scrum Guide", a link, for example "https://scrumguides.org/scrum-guide.html" and a short description, for example "All you need to know about Scrum". Each of these should have field on the form and they should be displayed on the list. The user should not be able to add a reading recommendation with a blank title, link or description. Also, the link should be a valid link.
+> For now, it is enough that a quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries" and a published status. A quiz is either published or not. Each of these values should have field in the form. The published status could be for example a checkbox. The user should not be able to add a quiz with a blank title or description. The quiz should not be published by default.
 >
-> It would be convinient that the user could edit the added reading recommendation if, for example they made a typo in the title or the description. The reading recommendation list should have an "Edit" link next to each reading recommendation. The link should take the user to an edit form, where they can edit all the added information.
+> It would be convinient that the teacher could edit the added quizzes if, for example they want to publish the quiz or change its name or description. The quiz list should have an "Edit" link next to each quiz. The link should take the teacher to an edit form, where they can edit all the information of the quiz.
 >
-> The user should also be able to get rid of reading recommendations they don't need. Next to the "Edit" link, there should be a "Delete" button in the reading recommendation list. When the user clicks the button, the reading recommendation should be deleted."
+> The teacher should also be able to get rid of quizzes they don't need. Next to the "Edit" link, there should be a "Delete" button in the quiz list. When the user clicks the button, the quiz should be deleted.
+>
+> The teacher should be able to quickly see which quizzes are published and which are not in the quiz list. There should be some way for the teacher to filter the quiz list based on the published status. There could be for example "All", "Published", and "Not published" tabs at the top of the list."
 >
 > -- The Product Owner
 
-After some discussion the Scrum Team came up with the following user stories:
+After some discussion the Scrum Team planned the following user stories:
 
-1. As a user I want to add a reading recommendation so that I can gather a collection of recommendations
-2. As a user I want to list the added reading recommendations so that I can find interesting things to read
-3. As a user I want to be able to edit a reading recommendation so that I can change its information
-4. As a user I want to be able to delete a reading recommendation so that I can get rid of recommendations I don't need
+1. {{site.sprint_1_user_story_1}}
+2. {{site.sprint_1_user_story_2}}
+3. {{site.sprint_1_user_story_3}}
+4. {{site.sprint_1_user_story_4}}
+5. {{site.sprint_1_user_story_5}}
 
 The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
 
-For the _first user story_, the Developers came up with the following tasks:
+For the _first user story_, the Developers planned the following tasks:
 
-1. Add a ReadingRecommendation JPA entity class with id, title, link and description attributes, and a ReadingRecommendationRepository JPA repository class
-2. Add Thymeleaf template for the reading recommendation submission form containing fields for title, link and description
-3. Add ReadingRecommendationController controller class and a method for rendering the reading recommendation submission form
-4. Add a method for the ReadingRecommendationController class that saves the reading recommendation to the database
-5. Add validation for reading recommendation title, link and description
+1. Add a Quiz JPA entity class with id, name, description and published attributes, and a QuizRepository JPA repository class
+2. Add a Thymeleaf template for the quiz creation form containing fields for name, description and published status
+3. Add QuizController controller class and a method for rendering the quiz creation form
+4. Add a method for the QuizController class which handles the quiz creation form submission
 
-For the _second user story_, the Developers came up with the following tasks:
+For the _second user story_, the Developers planned the following tasks:
 
-1. Add Thymeleaf template for listing the added reading recommendations with title, link and description
-2. Add a method for rendering the reading recommendation list for the ReadingRecommendationController class
-3. Add a link to the reading recommendation list page to the navigation bar
+1. Add a Thymeleaf template for the quiz list containing a table with columns for title, description and published status
+2. Add a method for rendering the quiz list with all the quizzes for the QuizController class
+3. Add a link to the quiz list page to the navigation bar
 
 These are the user stories, that you will be working on as a team during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
 
@@ -288,104 +273,121 @@ These are the user stories, that you will be working on as a team during this Sp
 
 > The tasks that you come up with during the Sprint Planning event _should not be set in stone_. These tasks are there to get you started with implementing the user stories. You might come up with new tasks or notice that the current tasks need alterations during the actual implementation. In such case, do the necessary changes for the Sprint Backlog.
 
-### Tips for implementing the tasks
-
-- It is recommended to implement the user stories in the described order. During this Sprint it is easier to do most of the tasks together because they are so tightly connected.
-- _Push_ code to the GitHub repository often. Once you have some _working_ code, use `git add`, `git commit`, `git push` commands to push the code to GitHub.
-- _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer.
-- While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts).
-- See how the mentioned things are done in the [example project]({{site.example_project_link}}).
-- The example project is using [Bootstrap](https://getbootstrap.com/) frontend toolkit. You can use it to make your application look nice. [Forms](https://getbootstrap.com/docs/5.3/forms/form-control/), [buttons](https://getbootstrap.com/docs/5.3/components/buttons/) and [tables](https://getbootstrap.com/docs/5.3/content/tables/) are useful guides for the user stories in this Sprint.
-- [Controllers](https://www.baeldung.com/spring-controllers)
-- [Using Thymeleaf in Spring](https://www.baeldung.com/thymeleaf-in-spring-mvc)
-- [JPA Entities](https://www.baeldung.com/jpa-entities)
-- [JPA Repositories](https://www.baeldung.com/spring-data-repositories)
-
-{: .important-title }
-
-> Exercise 8
->
-> Decide how you will communicate outside the weekly sessions. Choose a communication platform, such as Teams, Telegram or Discord. Also schedule at least one weekly time slot when you work on the exercises together outside the weekly sessions. If possible, meet physically on the campus or some other location.
-
-{: .important-title }
-
-> Exercise 9
->
-> Come up with tasks for the third user story, "As a user I want to be able to edit a reading recommendation so that I can change its information". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 to get an idea what the implementation could look like.
-
-{: .important-title }
-
-> Exercise 10
->
-> Come up with tasks for the fourth user story, "As a user I want to be able to delete a reading recommendation so that I can get rid of recommendations I don't need". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 to get an idea what the implementation could look like.
-
 ## GitHub issues
 
 [GitHub issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are used to track ideas, feedback, tasks, or bugs for work on GitHub. Open source projects commonly use issues for feature suggestions and bug reports (something is not working as inteded). [Here](https://github.com/facebook/react/issues) is an example of issues in the React library's repository. We will use issues to organize the user stories, tasks and bug reports in our project.
 
-Before we start creating issues, let's add some [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) so that we can better organize our issues. Open your repository in GitHub and click the "Issues" tab. Then, on the right, click the "Labels" button.
+Before we start creating issues, let's add some [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) so that we can better organize our issues. Open your repository in GitHub and click the "Issues" tab. Then, on the right, click the "Labels" button. So that we can separate the user story issues from other issues, let's add a "user story" label by clicking the "New label" button.
 
 {: .highlight }
 
 > If you don't see the "Issues" tab in the repository, follow [this guide](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-issues) to enable the issues. In our case the "Issues" checkbox should be checked.
 
-Let's add the following labels by clicking the "New label" button:
+{: .important-title }
 
-- "user story" label indicates that the issue is a _user story_
-- "task" label indicates that the issue is a _task_
+> Exercise 7
+>
+> Create the "user story" label.
 
-Then, let's create a label _for each user story_ so that we can better organize the tasks. Create a label with a _short description_ (_not_ the full user story description) for each user story. For example "add recommendation" and "list recommendations" for the first two user stories.
+Next, we need to specify the Sprint the issue is worked on. We can use Sprint-specific [milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) to group the issues based on a Sprint. Let's create a milestone for the first Sprint. First, click the "Issues" tab to open the issues page. Then, click the "Milestones" button next to the "Labels" button. On the Milestones page, click the "Create a new Milestone" button. Set the milestone title as "Sprint 1". You can also specify a due date and a description if you want. Finally, click the "Create milestone" button to create the milestone.
+
+{: .important-title }
+
+> Exercise 8
+>
+> Create the "Sprint 1" milestone.
+
+Now that we have the "user story" label and the "Sprint 1" milestone, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "{{site.sprint_1_user_story_1}}". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose the "user story" label which indicates that this issue is a user story. Then, click "Projects" and choose the "Backlog" project. This will add the issue to the Backlog project. To specify the issue's Sprint, click "Milestone" and choose "Sprint 1". Finally, click the "Submit a new issue" button to create the issue.
+
+Next, let's open the "Projects" tab and open the Backlog project. We should see that the issue we created is now in the project. We can move the issue to a column by dragging the issue card. This will change the status of the issue. Let's move the issue we created to the "Sprint Backlog" column, which indicates that this user story is in the current Sprint.
+
+By default we can't see the labels or the milestone on the issue cards. We can click on the arrow button next to "View 1" below the project name and click "Fields" under "Configuration". There, check "Labels" and "Milestone". Finally, click the green "Save" button to save the configuration.
+
+{: .important-title }
+
+> Exercise 9
+>
+> Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 1". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
+
+{: .important-title }
+
+> Exercise 10
+>
+> Create an issue for each task of the first user story, "{{site.sprint_1_user_story_1}}". You can use the tasks suggested in the [Sprint 1 planning](#%EF%B8%8F-sprint-1-planning) section, or plan your own tasks.
+>
+> Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
 > Exercise 11
 >
-> Create the "user story" and "task" labels and a label _for each user story_ as described above. Come up with a _short description_ for each user story for the labels, such as "add recommendation".
-
-Now that we have the labels, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "As a user I want to add a reading recommendation so that I can gather a collection of recommendations". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose labels "user story" and "add recommendation", which indicate that this issue is related to a certain user story. Then, click "Projects" on the right and choose "Product Backlog". This will add the issue to the Product Backlog project. Finally, click the "Submit a new issue" button to create the issue.
-
-{: .note }
-
-> You can easily find the issues related to certain user story by opening the "Issues" tab and choosing the user story label from the "Label" dropdown menu.
-
-Let's open the "Projects" tab and open the Sprint Backlog project. We should see that the issue we created is now in the project. We can move the issue to a column by dragging the issue card. This will change the status of the issue. Let's move the issue we created to the "In Sprint" column, which indicates that this user story is in the current Sprint.
-
-By default we can't see the labels on the issue cards. We can click on the arrow button next to "View 1" below the project name and click "Fields" under "Configuration". There, check "Labels" and finally click the green "Save" button to save the configuration.
+> Create an issue for each task of the second user story, "{{site.sprint_1_user_story_2}}". You can use the tasks suggested in the [Sprint 1 planning](#%EF%B8%8F-sprint-1-planning) section, or plan your own tasks.
+>
+> Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
 > Exercise 12
 >
-> Create an issue for each _user story_. Add a label "user story" and the user story's label for each issue. Add the issues to the Product Backlog project and move them to the "In Sprint" column. Make sure that the user stories are _prioritized_ (the "P" of DEEP). That is, they are listed in the project in the order that the Product Owner described in the Sprint Planning.
-
-{: .important-title }
+> Plan the tasks for the third user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 for some implementation tips and to get an idea what the implementation could look like.
+>
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
 > Exercise 13
 >
-> Create an issue for each _task_. If the task description is long, use a short version of the description as the issue title and add the full description as the issue description. Add a label "task" and the task related user story's label for each issue. Add the issues to the Sprint 1 Backlog project and move them to the "Todo" column.
+> Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 19 for some implementation tips and to get an idea what the implementation could look like.
+>
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
-Once you start working on task, _assign_ the task related issue to you. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same task together.
+{: .important-title }
 
-{: .note }
+> Exercise 14
+>
+> Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 for some implementation tips and to get an idea what the implementation could look like.
+>
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
-> You can easily find the issues assigned to you by opening the "Issues" tab and choosing your GitHub account from the "Assignee" dropdown menu.
+{: .important-title }
 
-When you complete a task, you should _close_ the task related issue. This can be done by opening the issue and clicking the "Close issue" button at the bottom of the page.
+> Exercise 15
+>
+> Discuss how you will divide the workload (the tasks) of the Sprint among the team members. For example, each team member could be responsible for the tasks of a single user story. Then, add an _assignee_ for each issue. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same issue together.
+
+{: .highlight }
+
+> When you complete a task, you should _close_ the task related issue. This can be done by clicking the issue title in the Backlog project and clicking the "Close issue" button. Also, move the issue to the "Done" column in the Backlog project.
+
+{: .highlight }
+
+> Don't close the _user story related issues_ before the Sprint Review event. The Product Owner needs to accept the user stories before they are completed. Once all user story related tasks are completed, move the user story related issue to the "In review" column.
 
 {: .highlight }
 
 > While working on the tasks, keep the Sprint Backlog up-to-date:
 >
-> - When you start working on a task, mark it assigned to you and move it to the "In progress" state in the project
-> - When you complete a task, move it to the "Done" state in the project. Also remember to _close_ the task related issue
+> - When you start working on a task, assign it to you and move it to the "In progress" column in the project
+> - When you complete a task, move it to the "Done" column in the project. Also remember to _close_ the task related issue
+> - When all user story related tasks are completed, move the user story related issue to the "In review" column to wait for the Product Owner's review in Sprint Review event
 >
 > Use the Sprint Backlog to track the Sprint progress. Always start a team meeting by looking at the Sprint Backlog.
 
-{: .highlight }
+{: .note }
 
-> Don't close the user story related issues before the Sprint Review. The Product Owner needs to accept the user stories before they are completed.
+> You can easily find the issues assigned to you by opening the "Issues" tab and choosing your GitHub account from the "Assignee" dropdown menu.
+
+{: .note }
+
+> User story related tasks can be included in the user story issue's description as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists):
+>
+> ```md
+> - [] #5
+> - [] #6
+> - [] #7
+> ```
+>
+> Task list item with a "#" prefix is a reference to a certain issue. You can type "#" and GitHub will suggest issues. Task list makes it easier to know which user story the task is related to and to track the progress of a user story. GitHub will automatically mark the task list item as done when the related issue is closed.
 
 ## Thymeleaf page layouts
 
@@ -402,7 +404,7 @@ If we take a look at the example project's `layout.html` file in the `src/main/r
 >
   <head>
     <meta charset="utf-8" />
-    <title>Cool Reads</title>
+    <title>Quizzer</title>
     <!-- ... -->
   </head>
   <body>
@@ -427,12 +429,10 @@ Let's have a look at the `messagelist.html` file that is using this layout:
   <body>
     <div layout:fragment="content">
       <h1>Messages</h1>
-
-      <ul>
+      <ul class="mb-3">
         <li th:each="message: ${messages}" th:text="${message.content}"></li>
       </ul>
-
-      <a class="btn btn-primary" href="/messages/add">Add a message </a>
+      <a class="btn btn-primary" href="/messages/add">Add a message</a>
     </div>
   </body>
 </html>
@@ -440,55 +440,84 @@ Let's have a look at the `messagelist.html` file that is using this layout:
 
 The `layout:decorate="~{layout.html}"` on the `html` element specifies that this template is using the `layout.html` file as the layout file. The `div` element that has the `layout:fragment="content"` attribute has the content that will be displayed on the corresponding layout fragment on the `layout.html` file.
 
-{: .important-title }
+## Tips for implementing the tasks
 
-> Exercise 14
->
-> Implement the tasks of the first user story, "As a user I want to add a reading recommendation so that I can build a collection of reading recommendations".
->
-> The implementation should look roughly something like this:
->
-> ![](/assets/sprint-1-user-story-1.png)
->
-> Add some simple validation for the form fields:
->
-> - The title should not be blank
-> - The link should not not be blank and it should start with "http://" or "https://"
-> - The description should not be blank
->
-> Alter the `layout.html` file mentioned above to change the navigation bar content.
->
-> Tips for implementing the tasks:
->
-> - [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
-> - [Validating Form Input](https://spring.io/guides/gs/validating-form-input/)
-> - The link can be validated with a regular expression using the [@Pattern](https://www.codeproject.com/Questions/5324493/Jakarta-regex-validation) annotation
+Here's a few tips before you start implementing the tasks:
 
-{: .important-title }
+- It is recommended to implement the user stories in the order they are in the Product Backlog.
+- _Push_ code to the GitHub repository often. Once you have some _working_ code, use `git add`, `git commit`, `git push` commands to push the code to GitHub.
+- _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer.
+- While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts).
+- Take a look at the [example project]({{site.example_project_link}}) for examples.
 
-> Exercise 15
->
-> Implement the tasks of the second user story, "As a user I want to list the added reading recommendations so that I can easily find interesting things to read".
->
-> The implementation should look roughly something like this:
->
-> ![](/assets/sprint-1-user-story-2.png)
->
-> This page should be visible on the root path (the `/` path) of the application. Change the `@GetMapping` of the `listMessages` method in the `MessageController` class, for example to `@GetMapping("/messages")`.
+{: .note }
+
+> The visual aspect of the application is not as important as the functionality. The most important things is that the user has some kind of functionality for the features described in the user stories.
 
 {: .important-title }
 
 > Exercise 16
 >
-> Implement the tasks of the third user story, "As a user I want to be able to edit a reading recommendation so that I can change its information".
+> Implement the tasks of the first user story, "{{site.sprint_1_user_story_1}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-1-user-story-1.png)
+>
+> Remember to implement the appropriate validation for the form. Alter the `layout.html` file mentioned above to change the navigation bar content.
+>
+> Tips for implementing the tasks:
+>
+> - [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
+> - [Validating Form Input](https://spring.io/guides/gs/validating-form-input/)
+> - Bootstrap [forms](https://getbootstrap.com/docs/5.3/forms/form-control/), [checks & radios](https://getbootstrap.com/docs/5.3/forms/checks-radios/) and [buttons](https://getbootstrap.com/docs/5.3/components/buttons/)
+> - The quiz published status field can be implemented with a checkbox element:
+>
+>   ```html
+>   <div class="form-check">
+>     <input class="form-check-input" type="checkbox" th:field="*{published}" />
+>     <label class="form-check-label" for="published1">Published</label>
+>   </div>
+>   ```
+
+{: .important-title }
+
+> Exercise 17
+>
+> Implement the tasks of the second user story, "{{site.sprint_1_user_story_2}}".
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-1-user-story-2.png)
+>
+> This page should be visible on the root path (the `/` path) of the application. Change the `@GetMapping` of the `listMessages` method in the `MessageController` class, for example to `@GetMapping("/messages")`.
+>
+> Tips for implementing the tasks:
+>
+> - Bootstrap [badges](https://getbootstrap.com/docs/5.3/components/badge/)
+> - You can add a `class` attribute value conditionally with Thymeleaf in the following way:
+>
+>   ```html
+>   <span
+>     class="badge"
+>     th:classappend="${quiz.published}? text-bg-primary : text-bg-secondary"
+>     th:text="${quiz.published}? 'Published' : 'Not published'"
+>   ></span>
+>   ```
+
+{: .important-title }
+
+> Exercise 18
+>
+> Implement the tasks of the third user story, "{{site.sprint_1_user_story_3}}".
+>
+> The implementation could look something like this:
 >
 > ![](/assets/sprint-1-user-story-3-1.png)
 >
 > ![](/assets/sprint-1-user-story-3-2.png)
 >
-> Add similar validation for the form as in the first user story.
+> Remember to implement the appropriate validation for the form.
 >
 > Tips for implementing the tasks:
 >
@@ -496,8 +525,8 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 >
 >   ```html
 >   <form
->     th:action="@{/recommendations/{id}/edit(id = ${recommendation.id})}"
->     th:object="${recommendation}"
+>     th:action="@{/quizzes/{id}/edit(id = ${quiz.id})}"
+>     th:object="${quiz}"
 >     method="post"
 >   >
 >     <!-- ... -->
@@ -507,9 +536,9 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 > - You can access the path variable in a controller method like this:
 >
 >   ```java
->   @PostMapping("/recommendations/{id}/edit")
+>   @PostMapping("/quizzes/{id}/edit")
 >   public String editRecommendation(@PathVariable Long id, /* ... */) {
->     // ...
+>       // ...
 >   }
 >   ```
 >
@@ -517,19 +546,20 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 >
 >   ```html
 >   <a
->     th:href="@{/recommendations/{id}/edit(id = ${recommendation.id})}"
->     th:text="${recommendation.link}"
+>     th:href="@{/quizzes/{id}/edit(id = ${quiz.id})}"
+>     class="btn btn-secondary btn-sm"
 >   >
+>     Edit
 >   </a>
 >   ```
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 19
 >
-> Implement the tasks of the fourth user story, "As a user I want to be able to delete a reading recommendation so that I can get rid of recommendations I don’t need".
+> Implement the tasks of the fourth user story, "{{site.sprint_1_user_story_4}}".
 >
-> The implementation should look roughly something like this:
+> The implementation could look roughly something like this:
 >
 > ![](/assets/sprint-1-user-story-4.png)
 >
@@ -538,17 +568,74 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 > - You can implemented the "Delete" button with a form with only a submit button:
 >
 >   ```html
->   <form
->     th:action="@{/recommendations/{id}/delete(id = ${recommendation.id})}"
->     method="post"
->   >
->     <button class="btn btn-danger">Delete</button>
+>   <form th:action="@{/quizzes/{id}/delete(id = ${quiz.id})}" method="post">
+>     <button class="btn btn-danger btn-sm">Delete</button>
 >   </form>
 >   ```
 
-{: .note }
+{: .important-title }
 
-> The visual aspect of the application is not as important as the functionality. The most important things is that the user has some kind of functionality for the features described in the user stories.
+> Exercise 20
+>
+> Implement the tasks of the fifth user story, "{{site.sprint_1_user_story_5}}".
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-1-user-story-5-1.png)
+>
+> ![](/assets/sprint-1-user-story-5-2.png)
+>
+> ![](/assets/sprint-1-user-story-5-3.png)
+>
+> Tips for implementing the tasks:
+>
+> - Bootstrap [navs & tabs](https://getbootstrap.com/docs/5.3/components/navs-tabs/)
+> - Filters are a good use-cases for _request parameters_. Request parameters are key-value pairs we can use to provide additional parameters for the path without using a path variable. For example `http://localhost:8080/?variable1=value1&variable2=value2`.
+> - We can access request parameters in a controller method with the [@RequestParam](https://www.baeldung.com/spring-request-param) annotation in the following way:
+>
+>   ```java
+>   @GetMapping("/")
+>   public String listQuizzes(@RequestParam(required = false) Boolean published, /* ... */) {
+>       model.addAttribute("publishedFilter", published);
+>
+>       if (published == null) {
+>           // return all quizzes
+>       } else {
+>           // return quizzes based on the published status
+>       }
+>   }
+>   ```
+>
+> - In the quiz list Thymeleaf template we can add the request parameter to the links:
+>
+>   ```html
+>   <ul class="nav nav-pills my-3">
+>     <li class="nav-item">
+>       <a
+>         class="nav-link"
+>         href="/"
+>         th:classappend="${publishedFilter == null}? active"
+>         >All</a
+>       >
+>     </li>
+>     <li class="nav-item">
+>       <a
+>         class="nav-link"
+>         href="/?published=true"
+>         th:classappend="${publishedFilter == true}? active"
+>         >Published</a
+>       >
+>     </li>
+>     <li class="nav-item">
+>       <a
+>         class="nav-link"
+>         href="/?published=false"
+>         th:classappend="${publishedFilter == false}? active"
+>         >Not published</a
+>       >
+>     </li>
+>   </ul>
+>   ```
 
 ## Daily Scrum
 
@@ -582,8 +669,8 @@ Because developers use different IDEs, it is easier to describe how the applicat
 
 Here's a simple usage guide on how to start the example project application:
 
-1. Start the application by running `./mvnw spring-boot:run` on the command-line
-2. Once the application has started, visit <http://localhost:8080> in a browser to use the application
+1. Start the application by running the `./mvnw spring-boot:run` command on the command-line in the repository folder
+2. Once the application has started, visit <http://localhost:8080> in a web browser to use the application
 
 {: .highlight }
 
@@ -593,15 +680,15 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 21
 >
-> Write a usage guide on _how to start your application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
+> Write a usage guide on _how to start the backend application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
 >
 > You can assume that the reader of the `README.md` file is a software developer who knows how to use a command-line interface, the basic Git commands and install the required Java version.
 
 ## GitHub release
 
-Once the GitHub repository's main branch has a working version of the application with the desired features at the end of the sprint, we should _release_ it for the users. [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is a way to "freeze" the source code of a project at certain point of the commit history and to provide users a working version of the application.
+Once the GitHub repository's main branch has a working version of the application with the desired features at the end of the Sprint, we should _release_ it for the users. [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is a way to "freeze" the source code of a project at certain point of the commit history and to provide users a working version of the application.
 
 Usually a new version of an application is released at the end of each Sprint. When we create a new release at the end of each Sprint, we will create a _release history_ for the project. Users can easily browse and download the source code of different versions of the application by going through the release history.
 
@@ -611,9 +698,112 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 22
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
+
+## JAR
+
+A JAR (Java Archive) is a package file format typically used to aggregate many Java class files and associated metadata and resources (such as CSS files, JavaScript files and other assets) into one file to distribute application software or libraries on the Java platform. If a user wants to use our application, instead of providing them with the entire source code, we can just provide a JAR file containing everything needed to run our application.
+
+We can generate a JAR file for the application with the following command:
+
+```bash
+./mvnw package
+```
+
+{: .highlight }
+
+> If you have trouble generating the JAR file with the `./mvnw package` command, see if [this](problems-and-solutions#warning-java_home-environment-variable-is-not-set) solves the problem.
+
+The command will generate the JAR file under the `target` folder. Inside the folder there should be a file `quizzer-0.0.1-SNAPSHOT.jar`. Because we added the frontend-maven-plugin for the project previously, the JAR file will contain the JavaScript files required by the frontend.
+
+If the application is currently running, for example in Eclipse, stop it. Then, run `java -jar target/quizzer-0.0.1-SNAPSHOT.jar` to run the application with the JAR file. Open the application in <http://localhost:8080> and see that it is working.
+
+{: .note }
+
+> When you change the application's code, you need to re-generate the JAR file with the `./mvnw package` command to have a JAR file for the latest version of the application.
+
+## Deployment
+
+So far we have been using and developing our application in an isolated environment on our own computer. This environment used during the development of the application is referred to as the _development environment_. In the software development lifecycle the _deployment phase_ is the phase in which the implemented software is distributed to the users. For example, a web application is published online so that users can access it with their web browsers. This environment is referred to as the _production environment_.
+
+The deployment phase is crucial because unless users can use the application, it has no real value for the stakeholders. That is why in the agile software development process, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint. There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). During the course, we will learn how to deploy our application to Render.
+
+Let's have a look, how we can deploy our application to Render so that the users can start using it. First, [sign in](https://dashboard.render.com/) to Render using your GitHub account. Then, we will need to set up a _production database_ for our application. The H2 database is convenient in the development environment but not suitable for the production environment. We can create a [PostgreSQL](https://www.postgresql.org/) database instance in Render dashboard by clicking the "New" button on the navigation bar and choosing "PostgreSQL". Name the PostgreSQL instance "quizzer-database" and the database "quizzer". Then, scroll to the bottom and click the "Create database" button.
+
+Once the PostgreSQL instance has been created, open its information in the Render dashboard. In the PostgreSQL instance's page, scroll to "Connections" section. Copy the values for "Username", "Password" and "Internal Database URL" and paste the values temporary to an editor. We will need these values soon.
+
+Next, let's add "instructions" for Render on how to start our application to our project. Render supports deploying [Docker](https://www.docker.com/) containers which are isolated environments for running all kinds of applications. A Docker image is a set of instructions used to run containers. These instructions are defined with a [Dockerfile](https://docs.docker.com/engine/reference/builder/). Add the following `Dockerfile` file (the file name is just `Dockerfile` without a file extension) to the root folder of the project (same folder that has the `pom.xml` file):
+
+```dockerfile
+FROM maven:3.8.7-openjdk-18-slim AS build
+COPY . .
+RUN mvn clean package -DskipTests
+
+FROM openjdk:21-jdk-slim
+COPY --from=build /target/quizzer-0.0.1-SNAPSHOT.jar quizzer.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","quizzer.jar"]
+```
+
+The `Dockerfile` has some familiar commands. Basically we just generate a JAR file for the project and start the application using the JAR file.
+
+Because we use PostgreSQL as the production database, we will need to specific production environment configuration. Add a file `application-production.properties` to the `src/main/resources` folder (same folder that has the `application.properties` file) with the following content:
+
+```
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.datasource.url=${POSTGRES_URL}
+spring.datasource.username=${POSTGRES_USERNAME}
+spring.datasource.password=${POSTGRES_PASSWORD}
+spring.datasource.driver-class-name=org.postgresql.Driver
+```
+
+The values inside `${...}` are [environment variables](https://en.wikipedia.org/wiki/Environment_variable). We will define them in Render soon.
+
+The PostgreSQL database requires a suitable driver for the application. Let's add the PostgreSQL driver dependency to the `<dependencies>` list in the `pom.xml` file:
+
+```xml
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <scope>runtime</scope>
+</dependency>
+```
+
+Push these changes to GitHub.
+
+Finally, for the application itself, we need to create a web service. Complete the following steps to create a web service in the Render dashboard:
+
+1. Click the "New" button on the navigation bar and choose "Web Service"
+2. Choose "Build and deploy from a Git repository" and click the "Next" button
+3. In the create web service page, click "Configure accounts" in the "Github" section on the right. Choose your GitHub organization from the list, choose "All repositories" and click the "Install" button
+4. Back in the create web service page, choose your project repository in the "Connect a repository" section by clicking the "Connect" button next to the repository's name
+5. Come up with a name for the web service that isn't already in use. The name will be visible in the application's URL so try to come up with a sensible name
+6. Choose "Docker" as the runtime in the dropdown menu
+7. Click the "Advanced" button at the bottom of the page. In the advanced options section, click the "Add environment variable" button to add three environment variables (key, value):
+
+   - `POSTGRES_URL`: the _internal URL in correct format_ of the PostgreSQL instance. The URL format is `jdbc:postgresql://<url>`. Basically, you can take everything _after_ the "@" symbol in the internal URL you copied previously and the environment variable value is `jdbc:postgresql://<everything-after-the-@-symbol>`
+   - `POSTGRES_USERNAME`: the _username_ of the PostgreSQL instance
+   - `POSTGRES_PASSWORD`: the _password_ of the PostgreSQL instance
+   - `SPRING_PROFILES_ACTIVE`: set as `production`
+
+   ![Render environment variables](/assets/render-environment-variables.png)
+
+8. Set "Auto-Deploy" as "No" from the dropdown menu
+9. Click the "Create Web service" button at the bottom of the page
+
+Open the created web service in the Render dashboard. The deployment of the application should have started and it will take some time to finish. You can always deploy the application by clicking the "Manual Deploy" button and choosing "Deploy latest commit". Once the deployment is complete the application will be accessible to everyone in the URL that is displayed under the web service's name.
+
+{: .highlight }
+
+> It might take a very long time for the application to open in the web browser.
+
+{: .important-title }
+
+> Exercise 23
+>
+> Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
 
 ## Sprint Review
 
@@ -623,11 +813,11 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 24
 >
-> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application on their computer and is able to show how the new features work in the user's perspective.
+> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >
-> You can use the source code of the release you created earlier to get the working version of the application. Click the "Releases" link in GitHub and choose "Source code" under the "Assets" heading.
+> Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/), "asd", or "foobar") for the Sprint Review. This means that you should add a few sensible quizzes using the application so that you can easily demonstrate the user stories.
 
 {: .warning }
 
