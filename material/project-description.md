@@ -11,7 +11,7 @@ At week three, the Scrum Team will start working on a project in Sprint 1. Stude
 
 ## Quizzer
 
-The Product Owner has a great project idea and is in desprate need of a talented developer team. Here's how the Product Owner describes the project that he has named "Quizzer":
+The Product Owner has a great project idea and is in desperate need of a talented developer team. Here's how the Product Owner describes the project that he has named "Quizzer":
 
 > My teacher colleagues at Haaga Helia need an application where they can add different kinds of quizzes for their students. Quizzes have questions related to the topic of the quiz. By answering the questions of a quiz the students can learn about course-related topics. The application should have a dashboard for the teachers where they can manage quizzes and a dashboard for the students where they can take different quizzes. Both students and teachers use the web browser a lot, so it would make sense that the application is a web application.
 >
