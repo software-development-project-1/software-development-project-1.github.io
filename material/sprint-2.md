@@ -685,15 +685,13 @@ Then, we can implement a POST method endpoint `/api/answers` for this use-case. 
 
 Before starting to implement the frontend features, we should test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL, for example <http://localhost:8080/api/quizzes>. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
 
+{: .note }
+
+> The GET method endpoint error responses will be displayed as a HTML error page in a web browser. To see what the JSON error response looks like, use Postman to send the request.
+
 {: .highlight}
 
 > The last three user stories are related to the student dashboard and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend. Use the Vite application in the `frontend` folder as the staring point of your implementation.
-
-{: .important-title }
-
-> Exercise 16
->
-> Create two new labels: "frontend" and "backend". Add the "frontend" label for frontend-related tasks and the "backend" label for backend-related tasks.
 
 {: .highlight}
 
@@ -702,6 +700,12 @@ Before starting to implement the frontend features, we should test that the endp
 {: .highlight}
 
 > Use the `@CrossOrigin` annnotation on the REST controller classes to allow cross-origin requests from the frontend application.
+
+{: .important-title }
+
+> Exercise 16
+>
+> Create two new labels: "frontend" and "backend". Add the "frontend" label for frontend-related tasks and the "backend" label for backend-related tasks.
 
 {: .important-title }
 
