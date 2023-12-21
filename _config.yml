@@ -25,7 +25,7 @@ project_teams_moodle_link: "https://hhmoodle.haaga-helia.fi/course/view.php?id=3
 week_1_moodle_submission_link: "https://hhmoodle.haaga-helia.fi/mod/assign/view.php?id=2634199"
 week_2_moodle_submission_link: "https://hhmoodle.haaga-helia.fi/mod/assign/view.php?id=2634203"
 sprint_1_moodle_submission_link: "https://hhmoodle.haaga-helia.fi/mod/assign/view.php?id=2634208"
-example_project_link: "https://github.com/software-development-project-1/spring-boot-vite-example"
+example_project_link: "https://github.com/software-development-project-1/example-project"
 week_1_deadline: "2.11. at 10:00"
 week_2_deadline: "9.11. at 10:00"
 sprint_1_deadline: "23.11. at 10:00"

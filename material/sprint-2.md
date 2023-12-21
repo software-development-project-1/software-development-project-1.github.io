@@ -369,7 +369,7 @@ const jsonData = JSON.stringify(data);
 console.log(jsonData); // '["This", "is", "a", "JavaScript", "array"]'
 ```
 
-Instead of sending a response as an HTML page, we can serialize Java objects into JSON strings and send it as a response. Let's have a look at the [MessageRestController](https://github.com/software-development-project-1/spring-boot-vite-example/blob/main/src/main/java/fi/haagahelia/quizzer/controller/MessageRestController.java) controller class in the example project:
+Instead of sending a response as an HTML page, we can serialize Java objects into JSON strings and send it as a response. Let's have a look at the [MessageRestController](https://github.com/software-development-project-1/example-project/blob/main/src/main/java/fi/haagahelia/quizzer/controller/MessageRestController.java) controller class in the example project:
 
 ```java
 @RestController
@@ -459,7 +459,7 @@ In this case, the `getMessageById` method will handle GET request to the path `/
 
 To have full control over the format of the request and response body we can use [DTO](https://www.baeldung.com/java-dto-pattern) classes. Especially with the request body annotated by the `@RequestBody` annotation, we should _always_ use a DTO class object instead of an entity class object. This is because using an entity class object might accidently allow users to update undesired attributes of an entity as described [here](https://rules.sonarsource.com/java/tag/spring/RSPEC-4684/).
 
-For example, in the `createMessage` method the request body format is defined by the [CreateMessageDto](https://github.com/software-development-project-1/spring-boot-vite-example/blob/main/src/main/java/fi/haagahelia/quizzer/dto/CreateMessageDto.java) class:
+For example, in the `createMessage` method the request body format is defined by the [CreateMessageDto](https://github.com/software-development-project-1/example-project/blob/main/src/main/java/fi/haagahelia/quizzer/dto/CreateMessageDto.java) class:
 
 ```java
 public class CreateMessageDto {
