@@ -590,7 +590,7 @@ Here's a few tips before you start implementing the tasks:
 > Tips for implementing the tasks:
 >
 > - Bootstrap [navs & tabs](https://getbootstrap.com/docs/5.3/components/navs-tabs/)
-> - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param) Request parameters are key-value pairs we can use to provide additional parameters for the path without using a path variable. For example `http://localhost:8080/?variable1=value1&variable2=value2`.
+> - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). Request parameters are key-value pairs we can use to provide additional parameters for the path without using a path variable. For example `http://localhost:8080/?variable1=value1&variable2=value2`.
 > - We can access request parameters in a controller method with the [@RequestParam](https://www.baeldung.com/spring-request-param) annotation in the following way:
 >
 >   ```java
