@@ -609,32 +609,15 @@ Here's a few tips before you start implementing the tasks:
 > - In the quiz list Thymeleaf template we can add the request parameter to the links:
 >
 >   ```html
->   <ul class="nav nav-pills my-3">
->     <li class="nav-item">
->       <a
->         class="nav-link"
->         href="/"
->         th:classappend="${publishedFilter == null}? active"
->         >All</a
->       >
->     </li>
->     <li class="nav-item">
->       <a
->         class="nav-link"
->         href="/?published=true"
->         th:classappend="${publishedFilter == true}? active"
->         >Published</a
->       >
->     </li>
->     <li class="nav-item">
->       <a
->         class="nav-link"
->         href="/?published=false"
->         th:classappend="${publishedFilter == false}? active"
->         >Not published</a
->       >
->     </li>
->   </ul>
+>   <li class="nav-item">
+>     <a
+>       class="nav-link"
+>       href="/?published=true"
+>       th:classappend="${publishedFilter == true}? active"
+>     >
+>       Published
+>     </a>
+>   </li>
 >   ```
 
 ## Daily Scrum
