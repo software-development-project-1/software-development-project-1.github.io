@@ -1000,10 +1000,8 @@ The Product Owner came up with a feature for the application if we run out of wo
 
 > Bonus exercise
 >
-> Come up with a user story based on the Product Owner's description, create an issue for the user story and add it to the Product Backlog project. Then, split the user story into tasks, create an issue for each task and add those to the Sprint Backlog project. Finally, implement the tasks.
+> Come up with a user story based on the Product Owner's description, create an issue for the user story and add it to the Backlog project. Then, split the user story into tasks, create an issue for each task and add those to the Backlog project. Finally, implement the tasks.
 >
 > The implementation could look something like this:
 >
 > ![](/assets/sprint-2-user-story-bonus.png)
->
-> The [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method might be useful for the implementation.
