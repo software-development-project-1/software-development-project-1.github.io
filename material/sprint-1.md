@@ -597,9 +597,9 @@ Here's a few tips before you start implementing the tasks:
 >       model.addAttribute("publishedFilter", published);
 >
 >       if (published == null) {
->           // return all quizzes
+>           // all quizzes requested
 >       } else {
->           // return quizzes based on the published status
+>           // quizzes based on a published status requested
 >       }
 >   }
 >   ```
