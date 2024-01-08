@@ -309,18 +309,6 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 1". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
 
-{: .note }
-
-> User story related tasks can be included in the user story issue's description as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists):
->
-> ```md
-> - [] #5
-> - [] #6
-> - [] #7
-> ```
->
-> Task list item with a "#" prefix is a reference to a certain issue. You can type "#" and GitHub will suggest issues. Task list makes it easier to know which user story the task is related to and to track the progress of a user story. GitHub will automatically mark the task list item as done when the related issue is closed.
-
 {: .important-title }
 
 > Exercise 10
@@ -361,6 +349,19 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
+{: .note }
+
+> User story related tasks can be included in the user story issue's description as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists):
+>
+> ```md
+> ## Tasks
+> - [] #5
+> - [] #6
+> - [] #7
+> ```
+>
+> Task list item with a "#" prefix is a reference to a certain issue. You can type "#" and GitHub will suggest issues. Task list makes it easier to know which user story the task is related to and to track the progress of a user story. GitHub will automatically mark the task list item as done when the related issue is closed.
+
 {: .important-title }
 
 > Exercise 15
@@ -381,7 +382,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > - When you start working on a task, assign it to you and move it to the "In progress" column in the project
 > - When you complete a task, move it to the "Done" column in the project. Also remember to _close_ the task related issue
-> - When all user story related tasks are completed, move the user story related issue to the "In review" column to wait for the Product Owner's review in Sprint Review event
+> - When all user story related tasks are completed, move the user story related issue to the "In review" column to wait for the Product Owner's review in the Sprint Review event
 >
 > Use the Sprint Backlog to track the Sprint progress. Always start a team meeting by looking at the Sprint Backlog.
 
