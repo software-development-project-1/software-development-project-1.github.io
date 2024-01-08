@@ -7,7 +7,7 @@ nav_order: 2
 
 # Schedule
 
-The course has weekly sessions on Thursdays at 14:00 - 16:45 in class room 4012. Attendance on weekly sessions is _mandatory_.
+The course has weekly sessions on {{site.teaching_sessions_text}}. Attendance on weekly sessions is _mandatory_.
 
 {: .highlight }
 

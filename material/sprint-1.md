@@ -309,6 +309,18 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 1". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
 
+{: .note }
+
+> User story related tasks can be included in the user story issue's description as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists):
+>
+> ```md
+> - [] #5
+> - [] #6
+> - [] #7
+> ```
+>
+> Task list item with a "#" prefix is a reference to a certain issue. You can type "#" and GitHub will suggest issues. Task list makes it easier to know which user story the task is related to and to track the progress of a user story. GitHub will automatically mark the task list item as done when the related issue is closed.
+
 {: .important-title }
 
 > Exercise 10
@@ -376,18 +388,6 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 {: .note }
 
 > You can easily find the issues assigned to you by opening the "Issues" tab and choosing your GitHub account from the "Assignee" dropdown menu.
-
-{: .note }
-
-> User story related tasks can be included in the user story issue's description as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists):
->
-> ```md
-> - [] #5
-> - [] #6
-> - [] #7
-> ```
->
-> Task list item with a "#" prefix is a reference to a certain issue. You can type "#" and GitHub will suggest issues. Task list makes it easier to know which user story the task is related to and to track the progress of a user story. GitHub will automatically mark the task list item as done when the related issue is closed.
 
 ## Thymeleaf page layouts
 
@@ -470,7 +470,6 @@ Here's a few tips before you start implementing the tasks:
 >
 > - [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
 > - [Validating Form Input](https://spring.io/guides/gs/validating-form-input/)
-> - Bootstrap [forms](https://getbootstrap.com/docs/5.3/forms/form-control/), [checks & radios](https://getbootstrap.com/docs/5.3/forms/checks-radios/) and [buttons](https://getbootstrap.com/docs/5.3/components/buttons/)
 > - The quiz published status field can be implemented with a checkbox element:
 >
 >   ```html
@@ -494,7 +493,6 @@ Here's a few tips before you start implementing the tasks:
 >
 > Tips for implementing the tasks:
 >
-> - Bootstrap [badges](https://getbootstrap.com/docs/5.3/components/badge/)
 > - You can add a `class` attribute value conditionally with Thymeleaf in the following way:
 >
 >   ```html
@@ -589,7 +587,6 @@ Here's a few tips before you start implementing the tasks:
 >
 > Tips for implementing the tasks:
 >
-> - Bootstrap [navs & tabs](https://getbootstrap.com/docs/5.3/components/navs-tabs/)
 > - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). Request parameters are key-value pairs we can use to provide additional parameters for the path without using a path variable. For example `http://localhost:8080/?variable1=value1&variable2=value2`.
 > - We can access request parameters in a controller method with the [@RequestParam](https://www.baeldung.com/spring-request-param) annotation in the following way:
 >
@@ -609,15 +606,13 @@ Here's a few tips before you start implementing the tasks:
 > - In the quiz list Thymeleaf template we can add the request parameter to a link:
 >
 >   ```html
->   <li class="nav-item">
->     <a
->       class="nav-link"
->       href="/?published=true"
->       th:classappend="${publishedFilter == true}? active"
->     >
->       Published
->     </a>
->   </li>
+>   <a
+>     class="nav-link"
+>     href="/?published=true"
+>     th:classappend="${publishedFilter == true}? active"
+>   >
+>     Published
+>   </a>
 >   ```
 
 ## Daily Scrum
