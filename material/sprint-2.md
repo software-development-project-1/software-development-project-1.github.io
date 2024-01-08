@@ -240,11 +240,7 @@ The planning of the tasks for the last three user stories will be covered after 
 > Tips for implementing the tasks:
 >
 > - [CreationTimestamp](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
-> - You can format an [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object in a Thymeleaf template in the following way:
->
->   ```html
->   <td th:text="${#temporals.format(message.createdAt,'dd.MM.yyyy')}"></td>
->   ```
+> - You can format an [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object in a Thymeleaf template with the [#temporals.format](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html#temporals-java.time) utility
 
 {: .important-title }
 
