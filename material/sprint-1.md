@@ -329,7 +329,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 > Exercise 12
 >
-> Plan the tasks for the third user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the third user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -337,7 +337,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 > Exercise 13
 >
-> Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 19 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 19 to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
