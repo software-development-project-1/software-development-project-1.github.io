@@ -694,9 +694,7 @@ We can generate a JAR file for the application with the following command:
 
 > If you have trouble generating the JAR file with the `./mvnw package` command, see if [this](problems-and-solutions#warning-java_home-environment-variable-is-not-set) solves the problem.
 
-The command will generate the JAR file under the `target` folder. Inside the folder there should be a file `quizzer-0.0.1-SNAPSHOT.jar`. Because we added the frontend-maven-plugin for the project previously, the JAR file will contain the JavaScript files required by the frontend.
-
-If the application is currently running, for example in Eclipse, stop it. Then, run `java -jar target/quizzer-0.0.1-SNAPSHOT.jar` to run the application with the JAR file. Open the application in <http://localhost:8080> and see that it is working.
+The command will generate the JAR file under the `target` folder. Inside the folder there should be a file `quizzer-0.0.1-SNAPSHOT.jar`. If the application is currently running, for example in Eclipse, stop it. Then, run `java -jar target/quizzer-0.0.1-SNAPSHOT.jar` to run the application with the JAR file. Open the application in <http://localhost:8080> and see that it is working.
 
 {: .note }
 
