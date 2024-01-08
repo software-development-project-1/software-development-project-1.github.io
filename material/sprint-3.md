@@ -66,8 +66,6 @@ After some discussion the Scrum Team planned the following user stories:
 3. {{site.sprint_3_user_story_3}}
 4. {{site.sprint_3_user_story_4}}
 
-The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
-
 {: .important-title }
 
 > Exercise 2
