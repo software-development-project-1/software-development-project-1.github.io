@@ -491,18 +491,6 @@ Here's a few tips before you start implementing the tasks:
 > ![](/assets/sprint-1-user-story-2.png)
 >
 > This page should be visible on the root path (the `/` path) of the application. Change the `@GetMapping` of the `listMessages` method in the `MessageController` class, for example to `@GetMapping("/messages")`.
->
-> Tips for implementing the tasks:
->
-> - You can add a `class` attribute value conditionally with Thymeleaf in the following way:
->
->   ```html
->   <span
->     class="badge"
->     th:classappend="${quiz.published}? text-bg-primary : text-bg-secondary"
->     th:text="${quiz.published}? 'Published' : 'Not published'"
->   ></span>
->   ```
 
 {: .important-title }
 
@@ -517,40 +505,6 @@ Here's a few tips before you start implementing the tasks:
 > ![](/assets/sprint-1-user-story-3-2.png)
 >
 > Remember to implement the appropriate validation for the form.
->
-> Tips for implementing the tasks:
->
-> - You can add a path variable to the form's `th:action` attribute like this:
->
->   ```html
->   <form
->     th:action="@{/quizzes/{id}/edit(id = ${quiz.id})}"
->     th:object="${quiz}"
->     method="post"
->   >
->     <!-- ... -->
->   </form>
->   ```
->
-> - You can access the path variable in a controller method like this:
->
->   ```java
->   @PostMapping("/quizzes/{id}/edit")
->   public String editRecommendation(@PathVariable Long id, /* ... */) {
->       // ...
->   }
->   ```
->
-> - Similarly, you can add a path variable to the "Edit" link like this:
->
->   ```html
->   <a
->     th:href="@{/quizzes/{id}/edit(id = ${quiz.id})}"
->     class="btn btn-secondary btn-sm"
->   >
->     Edit
->   </a>
->   ```
 
 {: .important-title }
 
@@ -561,16 +515,6 @@ Here's a few tips before you start implementing the tasks:
 > The implementation could look roughly something like this:
 >
 > ![](/assets/sprint-1-user-story-4.png)
->
-> Tips for implementing the tasks:
->
-> - You can implemented the "Delete" button with a form with only a submit button:
->
->   ```html
->   <form th:action="@{/quizzes/{id}/delete(id = ${quiz.id})}" method="post">
->     <button class="btn btn-danger btn-sm">Delete</button>
->   </form>
->   ```
 
 {: .important-title }
 
@@ -607,11 +551,7 @@ Here's a few tips before you start implementing the tasks:
 > - In the quiz list Thymeleaf template we can add the request parameter to a link:
 >
 >   ```html
->   <a
->     class="nav-link"
->     href="/?published=true"
->     th:classappend="${publishedFilter == true}? active"
->   >
+>   <a href="/?published=true">
 >     Published
 >   </a>
 >   ```
