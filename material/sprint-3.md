@@ -466,7 +466,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 9
 >
-> Create a new "test" label for test-related tasks.
+> To classify test-related issues, create a new "test" [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels). Add the "test" label for issues that are related to testing (automated or manual) some part of the application.
 
 {: .highlight }
 
@@ -481,7 +481,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getAllQuizzesReturnsEmptyListWhenNoQuizzesExist`: send a GET request to the `/api/quizzes` without saving a quiz to the database. Then, the response should have an empty list
 > - `getAllQuizzesReturnsListOfPublishedQuizzesWhenQuizzesExist`: save a few quizzes (both published and non-published) to the database and send a GET request to the `/api/quizzes`. Then, the response should have a list of the saved _published quizzes_
 >
-> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3". You don't need to add a user story label for the issue.
+> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3".
 
 {: .important-title }
 
@@ -493,7 +493,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getQuizByIdReturnsNotFoundWhenQuizDoesNotExist`: send a GET request to the `/api/quizzes/{id}` without saving a quiz to the database. Then, the response should have a `404 Not Found` status
 > - `getQuizByIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ to the database and send a GET request to the `/api/quizzes/{id}`. Then, the response should have a `403 Forbidden` status
 >
-> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3". You don't need to add a user story label for the issue.
+> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3".
 
 {: .important-title }
 
@@ -506,7 +506,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getQuestionsByQuizIdReturnsNotFoundWhenQuestionDoesNotExist`: send a GET request to the `/api/quizzes/1/question` without saving a quiz to the database. Then, the response should have a `404 Not Found` status
 > - `getQuestionsByQuizIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ with a few questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have a `403 Forbidden` status
 >
-> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3". You don't need to add a user story label for the issue.
+> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3".
 
 {: .important-title }
 
@@ -519,7 +519,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `createAnswerDoesNotSaveAnswerForNonExistingQuestion`: send a POST request to the `/api/answers` with a non-existing question id in the request body. Then, the response should status have a `404 Not Found` status and the database should not have any answers
 > - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a POST request to the `/api/answers` with a valid request body. Then, the response should status have a `403 Bad Request` status and the database should not have any answers
 >
-> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3". You don't need to add a user story label for the issue.
+> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3".
 
 {: .important-title }
 

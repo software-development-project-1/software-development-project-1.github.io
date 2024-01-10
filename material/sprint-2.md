@@ -86,17 +86,18 @@ During estimation the Developers usually have a different view of how many story
 
 ### Planning poker
 
-[Planning poker](https://en.wikipedia.org/wiki/Planning_poker) is a (fun) technique to facilitate estimation of user stories. We first need to decide which are the number of story points we use for the estimation. The [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is a common choice: 1, 2, 3, 5 or 8 story points. Then we need to make sure that everyone knows the amount of effort required for a certain amount of story points. Let's say that the user story "{{site.sprint_1_user_story_1}}" is worth _2 story points_ and we should compare the effort of other user stories to that.
+[Planning poker](https://en.wikipedia.org/wiki/Planning_poker) is a (fun) technique to facilitate estimation of user stories. We first need to decide which are the number of story points we use for the estimation. The [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is a common choice: 1, 2, 3, 5, 8 or 13 story points. Then we need to make sure that everyone knows the amount of effort required for a certain amount of story points. Let's say that the user story "{{site.sprint_1_user_story_1}}" is worth _2 story points_ and we should compare the effort of other user stories to that.
 
 Here's a table describing the worth of the available story points:
 
-| The required effort                                             | Story points   |
-| --------------------------------------------------------------- | -------------- |
-| _Half the effort_ compared to the reference user story          | 1 story point  |
-| _Somewhat the same effort_ compared to the reference user story | 2 story points |
-| _A bit more effort_ compared to the reference user story        | 3 story points |
-| _Double the effort_ compared to the reference user story        | 5 story points |
-| _Four times the effort_ compared to the reference user story    | 8 story points |
+| The required effort                                             | Story points    |
+| --------------------------------------------------------------- | --------------- |
+| _Half the effort_ compared to the reference user story          | 1 story point   |
+| _Somewhat the same effort_ compared to the reference user story | 2 story points  |
+| _A bit more effort_ compared to the reference user story        | 3 story points  |
+| _Double the effort_ compared to the reference user story        | 5 story points  |
+| _Four times the effort_ compared to the reference user story    | 8 story points  |
+| _Six times the effort_ compared to the reference user story     | 13 story points |
 
 As mentioned, the reference user story is the first user story of the previous Sprint:
 
@@ -104,12 +105,12 @@ As mentioned, the reference user story is the first user story of the previous S
 
 {: .note }
 
-> The Fibonacci sequence is commonly used instead of a linear sequence (1, 2, 3, 4...) because _larger user stories are more difficult to estimate_. The Fibonacci sequence starts to grow quickly after five, so we don't need to be very accurate while estimating large user stories. On the other hand, if we have a user story worth more than 8 story points, we should really consider splitting it into smaller user stories.
+> The Fibonacci sequence is commonly used instead of a linear sequence (1, 2, 3, 4...) because _larger user stories are more difficult to estimate_. The Fibonacci sequence starts to grow quickly after 13, so we don't need to be very accurate while estimating large user stories. On the other hand, if we have a user story worth more than 13 story points, we should really consider splitting it into smaller user stories.
 
 Once we have "calibrated" the worth of a story point we can start the actual planning poker event. For each user story under estimation we should perform the following steps:
 
 1. Discuss the technical requirements (tasks) for the user story. Make sure that everyone is on the same page what is required to implement the user story.
-2. Everyone will consider _by themself_ (no dicussion) how many story points the user story is worth. The estimate needs to be 1, 2, 3, 5 or 8 story points. Compare the effort to the user story "{{site.sprint_1_user_story_1}}" which is worth 2 story points
+2. Everyone will consider _by themself_ (no dicussion) how many story points the user story is worth. The estimate needs to be 1, 2, 3, 5, 8 or 13 story points. Compare the effort to the user story "{{site.sprint_1_user_story_1}}" which is worth 2 story points
 3. Everyone will write down their story point estimate.
 4. Once everyone is ready, everyone will show their estimate at the same time
 5. If there's more than one point difference in the least and most amount of story points in the suggested estimates, discuss the implementation further to find out why there is such difference in the estimates. Then, repeat the steps 1 - 5 until you have an agreement.
@@ -223,7 +224,7 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > The Product Owner needs your help in estimating user stories.
 >
-> 1. Create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) "1 story point", "2 story points", "3 story points", "5 story points" and "8 story points"
+> 1. To visualize the user story issue's story point estimate, create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) "story points: 1", "story points: 2", "story points: 3", "story points: 5", "story points: 8" and "story points: 13"
 > 2. Facilitate a planning poker event where you estimate the _first five user stories_ of the Sprint
 > 3. Based on the user story estimation, add the story point labels for the five user story related issues
 
@@ -701,7 +702,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 > Exercise 16
 >
-> Create two new labels: "frontend" and "backend". Add the "frontend" label for frontend-related tasks and the "backend" label for backend-related tasks.
+> To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation.
 
 {: .important-title }
 

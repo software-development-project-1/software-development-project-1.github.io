@@ -277,7 +277,7 @@ These are the user stories, that you will be working on as a team during this Sp
 
 [GitHub issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are used to track ideas, feedback, tasks, or bugs for work on GitHub. Open source projects commonly use issues for feature suggestions and bug reports (something is not working as inteded). [Here](https://github.com/facebook/react/issues) is an example of issues in the React library's repository. We will use issues to organize the user stories, tasks and bug reports in our project.
 
-Before we start creating issues, let's add some [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) so that we can better organize our issues. Open your repository in GitHub and click the "Issues" tab. Then, on the right, click the "Labels" button. So that we can separate the user story issues from other issues, let's add a "user story" label by clicking the "New label" button.
+Before we start creating issues, let's add some [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) so that we can categorize our issues. Open your repository in GitHub and click the "Issues" tab. Then, on the right, click the "Labels" button. So that we can separate the user story issues from other issues, let's add a "user story" label by clicking the "New label" button.
 
 {: .highlight }
 
@@ -287,7 +287,7 @@ Before we start creating issues, let's add some [labels](https://docs.github.com
 
 > Exercise 7
 >
-> Create the "user story" label.
+> Create the "user story" label to classify user story related issues.
 
 Next, we need to specify the Sprint the issue is worked on. We can use Sprint-specific [milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) to group the issues based on a Sprint. Let's create a milestone for the first Sprint. First, click the "Issues" tab to open the issues page. Then, click the "Milestones" button next to the "Labels" button. On the Milestones page, click the "Create a new Milestone" button. Set the milestone title as "Sprint 1". You can also specify a due date and a description if you want. Finally, click the "Create milestone" button to create the milestone.
 
@@ -295,7 +295,7 @@ Next, we need to specify the Sprint the issue is worked on. We can use Sprint-sp
 
 > Exercise 8
 >
-> Create the "Sprint 1" milestone.
+> Create the "Sprint 1" milestone to group the issues of the first Sprint.
 
 Now that we have the "user story" label and the "Sprint 1" milestone, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "{{site.sprint_1_user_story_1}}". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose the "user story" label which indicates that this issue is a user story. Then, click "Projects" and choose the "Backlog" project. This will add the issue to the Backlog project. To specify the issue's Sprint, click "Milestone" and choose "Sprint 1". Finally, click the "Submit a new issue" button to create the issue.
 
