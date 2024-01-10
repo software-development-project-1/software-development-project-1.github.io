@@ -230,7 +230,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Planning event:
 
-> "Let's start from the basics. We need a simple web application which allows the teacher to add, list, edit and delete quizzes.
+> "Let's start from the basics. First, we need a teacher dashboard application which allows teachers to manage quizzes.
 >
 > When the teacher opens the application on a web browser, there should be page where the added quizzes are listed. There should also be a link that says "Add a quiz" which takes the teacher to another page, where they can add a quiz using a form.
 >
