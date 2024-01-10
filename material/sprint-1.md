@@ -13,7 +13,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 {: .highlight }
 
-> Starting from this week, you will be working with your team. That means that, you will be working on the exercises together. You also need to work on the exercises outside the weekly sessions. If you don't know your team members, you can find their names on [Moodle]({{site.project_teams_moodle_link}}).
+> Starting from this week, you will be working with your team. That means that, you will be working on the exercises together. You also need to work on the exercises outside the weekly sessions. If you don't know your team members, you can find their names on [Moodle]({{site.moodle_link}}).
 
 ## Sprint assesment
 
