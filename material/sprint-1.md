@@ -230,11 +230,11 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Planning event:
 
-> "Let's start from the basics. First, we need a teacher dashboard application which allows teachers to manage quizzes.
+> "To get started with the project, we need to implement a basic set of features for the teacher dashboard application so that the teachers can manage quizzes.
 >
 > When the teacher opens the application on a web browser, there should be page where the added quizzes are listed. There should also be a link that says "Add a quiz" which takes the teacher to another page, where they can add a quiz using a form.
 >
-> For now, it is enough that a quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries" and a published status. A quiz is either published or not. Each of these values should have field in the form. The published status could be for example a checkbox. The user should not be able to add a quiz with a blank title or description. The quiz should not be published by default.
+> For now, it is enough that a quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries" and a published status. A quiz is either published or not. Each of these values should have field in the form. The published status could be for example a checkbox. The user should not be able to add a quiz with a blank name or description. The quiz should not be published by default.
 >
 > It would be convinient that the teacher could edit the added quizzes if, for example they want to publish the quiz or change its name or description. The quiz list should have an "Edit" link next to each quiz. The link should take the teacher to an edit form, where they can edit all the information of the quiz.
 >
