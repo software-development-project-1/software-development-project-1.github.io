@@ -600,7 +600,7 @@ export function createMessage(message) {
 
 {: .note }
 
-> The `VITE_BACKEND_URL` is an [environment variable](https://vitejs.dev/guide/env-and-mode). We have a different backend URL in the development and the production environment.
+> The `VITE_BACKEND_URL` is an [environment variable](https://vitejs.dev/guide/env-and-mode). We have a different backend URL in the development and in the production environment.
 
 These are simple _abstractions_ for fetching and creating messages, but they are quite handy. If for example the logic for fetching the messages (for example the API URL) changes, we only need to change the logic inside the `getAllMessages` function and nowhere else.
 

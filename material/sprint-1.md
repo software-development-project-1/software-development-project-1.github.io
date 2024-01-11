@@ -472,7 +472,7 @@ Here's a few tips before you start implementing the tasks:
 >
 > - [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
 > - [Validating Form Input](https://spring.io/guides/gs/validating-form-input/)
-> - The quiz published status can be implemented with a [checkbox field](https://www.thymeleaf.org/doc/tutorials/3.1/thymeleafspring.html#checkbox-fields)
+> - The quiz published status can be implemented as a [Boolean](https://www.geeksforgeeks.org/java-lang-boolean-class-java/) attribute and with a [checkbox field](https://www.thymeleaf.org/doc/tutorials/3.1/thymeleafspring.html#checkbox-fields)
 
 {: .important-title }
 
@@ -545,7 +545,13 @@ Here's a few tips before you start implementing the tasks:
 > - In the quiz list Thymeleaf template we can add the request parameter to a link:
 >
 >   ```html
->   <a href="/?published=true">Published</a>
+>   <a
+>     href="/?published=true"
+>     class="nav-link"
+>     th:classappend="${publishedFilter == true}? active"
+>   >
+>     Published
+>   </a>
 >   ```
 
 ## Daily Scrum
