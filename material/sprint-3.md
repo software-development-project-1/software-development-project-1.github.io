@@ -650,6 +650,7 @@ The [authentication example](https://github.com/software-development-project-1/a
 > Tips for implementing the tasks:
 >
 > - You can implement a GET `/api/quizzes/{id}/answers` endpoint, which returns the quiz-related answers
+> - If the `Answer` entity's `Question` entity reference is in a `question` attribute and the `Question` entity's `Quiz` entity reference is in a `quiz` attribute, the JPA repository method `findByQuestionQuizId` can be implemented in the `AnswerRepository` class to find answers by a quiz id
 
 {: .important-title }
 
