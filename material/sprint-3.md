@@ -49,7 +49,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "We now have the basic features for managing and taking quizzes. What we still need is a way for the students and teachers to see the quiz results. There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question. The results page should be accessible for both students and teachers. There should be a link to the results page next to each quiz in the quiz list page.
 >
-> So that a teacher can manage their personal quizzes, we need the teacher to be able to register with a username and password. User should not be able to register with a blank username or a password less than 8 characters long. The username should not be already taken by another registered user. The password should contain at least one letter and at least one number. It would also be nice if the user would need to retype the password to make sure that they don't accidently mistype the password.
+> So that a teacher can manage their personal quizzes, we need the teacher to be able to register with a username and password. User should not be able to register with a blank username or a password less than 8 characters long. The username should not be already taken by another registered user. It would also be nice if the user would need to retype the password to make sure that they didn't accidently mistype the password.
 >
 > Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
 >
@@ -667,7 +667,6 @@ The [authentication example](https://github.com/software-development-project-1/a
 > - Start the implementation by adding the spring-boot-starter-security and thymeleaf-extras-springsecurity6 dependencies for the project
 > - Add similar `SecurityConfig` and `UserDetailsServiceImpl` classes as instructed above
 > - See how the user registration is implemented in the [authentication example](https://github.com/software-development-project-1/authentication-example) project
-> - The password can be validated with a regular expression using the [@Pattern](https://www.codeproject.com/Questions/5324493/Jakarta-regex-validation) annotation
 
 {: .important-title }
 
