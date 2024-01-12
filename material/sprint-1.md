@@ -168,9 +168,9 @@ A repository can be forked by cliking the "Fork" button on right side of the rep
 >
 > Once each team member has the repository on their local computer, do the following:
 >
-> 1. _Each team member_ opens the cloned repository folder in Eclipse or in some other editor.
+> 1. _Each team member_ opens the cloned repository folder with an editor.
 > 2. _Each team member_ opens the cloned repository folder in Git Bash. Right-click the repository folder in the File Explorer and choose "Git Bash Here".
-> 3. _One of the team members_ locally edits the contents of the `README.md` file in the repository folder. Push changes to the remote GitHub repository using `git add`, `git commit` and `git push` commands. See the [Git instructions](/git#starting-a-git-project) if you have trouble.
+> 3. _One of the team members_ locally edits the contents of the `README.md` file in the repository folder. If you aren't able to edit the file with Eclipse, use for example Visual Studio Code instead. Push changes to the remote GitHub repository using `git add`, `git commit` and `git push` commands. See the [Git instructions](/git#starting-a-git-project) if you have trouble.
 > 4. _Each team member_ checks that the changes are visible in GitHub.
 > 5. Once changes have been pushed to GitHub, _each team member_ pulls the changes from GitHub using the `git pull` command. If you see `CONFLICT` in the command output, see the [Git instructions](/git#merge-conflicts) to figure out how to solve conflicts.
 > 6. Once everybody sees the changes on their local `README.md` file, repeat the the steps from step 3. for each team member until everyone has pushed some changes to the GitHub repository.
