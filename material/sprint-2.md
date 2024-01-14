@@ -760,14 +760,6 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Tips for implementing the tasks:
 >
-> - You can store the active question index to a state variable:
->
->   ```js
->   const [questions, setQuestions] = useState([]);
->   const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
->   const activeQuestion = questions[activeQuestionIndex];
->   ```
->
 > - Material UI [Card](https://mui.com/material-ui/react-card/) and [LinearProgress](https://mui.com/material-ui/react-progress/)
 
 {: .important-title }
