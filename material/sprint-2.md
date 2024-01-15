@@ -173,7 +173,7 @@ The planning of the tasks for the last three user stories will be covered after 
 
 > Exercise 4
 >
-> Create an issue for each _user story_. Add the "user story" label for each issue. Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
+> Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 2". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
 
 {: .important-title }
 
