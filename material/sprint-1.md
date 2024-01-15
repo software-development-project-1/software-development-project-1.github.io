@@ -527,8 +527,7 @@ Here's a few tips before you start implementing the tasks:
 > Tips for implementing the tasks:
 >
 > - [Derived Query Methods in Spring Data JPA Repositories](https://www.baeldung.com/spring-data-derived-queries)
-> - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). Request parameters are key-value pairs we can use to provide additional parameters for the path without using a path variable. For example `http://localhost:8080/?variable1=value1&variable2=value2`.
-> - We can access request parameters in a controller method with the [@RequestParam](https://www.baeldung.com/spring-request-param) annotation in the following way:
+> - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). We can access request parameters in a controller method with the `@RequestParam` annotation in the following way:
 >
 >   ```java
 >   @GetMapping("/")
