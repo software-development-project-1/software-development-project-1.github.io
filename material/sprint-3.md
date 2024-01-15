@@ -476,7 +476,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 10
 >
-> Create a new package `fi.haagahelia.quizzer.controller` to the `src/test/java` folder for the project's controller class tests. Implement a `QuizRestControllerTest` test class within the package with the following test methods for the GET `/api/quizzes` endpoint:
+> Create a new package `fi.haagahelia.quizzer.controller` to the `src/test/java` folder for the project's controller class tests. Implement a test class within the package with the following test methods for the GET `/api/quizzes` endpoint:
 >
 > - `getAllQuizzesReturnsEmptyListWhenNoQuizzesExist`: send a GET request to the `/api/quizzes` without saving a quiz to the database. Then, the response should have an empty list
 > - `getAllQuizzesReturnsListOfPublishedQuizzesWhenQuizzesExist`: save a few quizzes (both published and non-published) to the database and send a GET request to the `/api/quizzes`. Then, the response should have a list of the saved _published quizzes_
@@ -512,7 +512,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 13
 >
-> Implement a `AnswerRestControllerTest` test class with the following test methods for the POST `/api/answers` endpoint:
+> Implement test class with the following test methods for the POST `/api/answers` endpoint:
 >
 > - `createAnswerSavesValidAnswer`: save a _published quiz_ with a question to the database and send a POST request to the `/api/answers` with a _valid request body_ (attributes should pass the validation). Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
 > - `createAnswerDoesNotSaveInvalidAnswer`: save a _published quiz_ with a question to the database and send a POST request to the `/api/answers` with a _invalid request body_ (attributes should not pass the validation). Then, the response should status have a `400 Bad Request` status and the database should not have any answers
