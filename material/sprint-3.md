@@ -512,7 +512,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 13
 >
-> Implement test class with the following test methods for the POST `/api/answers` endpoint:
+> Implement a test class with the following test methods for the POST `/api/answers` endpoint:
 >
 > - `createAnswerSavesValidAnswer`: save a _published quiz_ with a question to the database and send a POST request to the `/api/answers` with a _valid request body_ (attributes should pass the validation). Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
 > - `createAnswerDoesNotSaveInvalidAnswer`: save a _published quiz_ with a question to the database and send a POST request to the `/api/answers` with a _invalid request body_ (attributes should not pass the validation). Then, the response should status have a `400 Bad Request` status and the database should not have any answers
