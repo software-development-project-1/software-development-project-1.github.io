@@ -317,9 +317,6 @@ public class Message {
     @GeneratedValue
     private Long id;
 
-    @CreationTimestamp
-    private LocalDateTime createdAt;
-
     @Column(nullable = false)
     private String content;
 
