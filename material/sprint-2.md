@@ -251,7 +251,6 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > Tips for implementing the tasks:
 >
-> - Use the `createdAt` attribute (see the tasks of the first user story) in ordering the quizzes
 > - [Sorting Query Results with Spring Data](https://www.baeldung.com/spring-data-sorting)
 
 {: .important-title }
