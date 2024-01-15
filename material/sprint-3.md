@@ -84,7 +84,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 > Exercise 4
 >
-> Create an issue for each _user story_. Add the "user story" label for each issue. Add the issues to the Backlog project and move them to the "Sprint Backlog" column
+> Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project and move them to the "Sprint Backlog" column
 
 {: .important-title }
 
