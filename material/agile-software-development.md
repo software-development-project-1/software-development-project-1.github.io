@@ -110,10 +110,9 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 >
 > Read the "Scrum Artifacts" chapter of the Scrum Guide and answer the following questions in your own words:
 >
-> 1. What are the Scrum Artifacts and what is their purpose for the process?
-> 2. What is the Product Backlog?
-> 3. What is the Sprint Backlog?
-> 4. What is the difference between the Product Backlog and the Sprint Backlog?
+> 1. What is the Product Backlog?
+> 2. What is the Sprint Backlog?
+> 3. What is the difference between the Product Backlog and the Sprint Backlog?
 
 {: .important-title }
 
@@ -233,7 +232,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).
 >
-> Come up with at least six _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Briefly justify why each of your user stories are well-written based on the INVEST criteria.
+> Come up with at least eight _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Briefly justify why each of your user stories are well-written based on the INVEST criteria.
 >
 > Hint: pay attention to the size of the user story. Split big user stories into smaller ones.
 
@@ -243,7 +242,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > Imagine that you are the Product Owner of the project described in the [project description](/project-description).
 >
-> How would you _prioritize_ the six user stories that you came up with in the previous exercise? That is, in which order these user stories should be implemented to maximize the stakeholder's value for the application?
+> How would you _prioritize_ the eight user stories that you came up with in the previous exercise? That is, in which order these user stories should be implemented to maximize the stakeholder's value for the application?
 >
 > On top of the importance of a user story, consider the dependencies between the different user stories. For example, certain user stories might be impossible to implement before some other user story has been implemented. Can we for example list quizzes before a teacher can add one?
 >
