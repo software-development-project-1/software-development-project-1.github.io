@@ -642,15 +642,17 @@ public class MessageRestController {
 
 ## Designing the REST API endpoints for the user stories
 
-Next, let's consider what kind of REST API endpoints we need for the last three user stories. In the sixth user story, "{{site.sprint_2_user_story_6}}", we need to list all the published quizzes. To follow the [REST API naming principles](https://restfulapi.net/resource-naming/), we can implement a GET method endpoint `/api/quizzes`.
+Next, let's consider what kind of REST API endpoints we need for the last three user stories. In the fifth user story, "{{site.sprint_2_user_story_5}}", we need to list all the published quizzes. To follow the [REST API naming principles](https://restfulapi.net/resource-naming/), we can implement a GET method endpoint `/api/quizzes`.
 
-In the seventh user story, "{{site.sprint_2_user_story_7}}", we need to display information of a quiz with a specific id. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}`. If there is no quiz with the provided id, we should return a `404 Not Found` status as a response. Similarly, if the quiz is not published, we should return a `403 Forbidden` status as a response.
+In the sixth user story, "{{site.sprint_2_user_story_6}}", we need to display information of a quiz with a specific id. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}`. If there is no quiz with the provided id, we should return a `404 Not Found` status as a response. Similarly, if the quiz is not published, we should return a `403 Forbidden` status as a response.
 
 We also want to list the quiz-related questions. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}/questions`. We should implement similar error handling for this endpoint as in the `/api/quizzes/{id}` endpoint.
 
-In the eighth user story, "{{site.sprint_2_user_story_8}}", we need save the student's answer to a quiz question. Before implementing the endpoint we need to consider what kind of data we need to store about the student's answer. We want at least to know which question the answer is related to, what's the answer text and whether the answer was correct or not. So, we need to implement the appropriate JPA entity class and a JPA repository class first.
+In the seventh user story, "{{site.sprint_2_user_story_7}}", we need save the student's answer to a quiz question. Before implementing the endpoint we need to consider what kind of data we need to store about the student's answer. We want at least to know which question the answer is related to, what's the answer text and whether the answer was correct or not. So, we need to implement the appropriate JPA entity class and a JPA repository class first.
 
 Then, we can implement a POST method endpoint `/api/answers` for this use-case. If the user is trying to answer a quiz which is not published we should return a `403 Forbidden` status as a response. If the user is trying to answer a quiz which does not exist we should return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), we should return a `400 Bad Request` status as a response.
+
+In the eighth user story, "{{site.sprint_2_user_story_8}}", we need to display the information related to the answers of a quiz's questions. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}/answers`. We should implement similar error handling for this endpoint as in the `/api/quizzes/{id}` endpoint.
 
 Before starting to implement the frontend features, we should test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL, for example <http://localhost:8080/api/quizzes>. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
 
