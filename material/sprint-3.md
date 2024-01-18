@@ -47,15 +47,17 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 3 goals in the Sprint Planning event:
 
-> "We now have the basic features for managing and taking quizzes. What we still need is a way for the students and teachers to see the quiz results. There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question. The results page should be accessible for both students and teachers. There should be a link to the results page next to each quiz in the quiz list page.
+> "We now have the basic features for managing and taking quizzes. What we still need is a way for the teachers to manage their personal quizzes.
 >
-> So that a teacher can manage their personal quizzes, we need the teacher to be able to register with a username and password. User should not be able to register with a blank username or a password less than 8 characters long. The username should not be already taken by another registered user. It would also be nice if the user would need to retype the password to make sure that they didn't accidently mistype the password.
+> The teacher should be able to register with a username and password in the teacher dashboard. The teacher should not be able to register with a blank username or a password less than 8 characters long. The username should not be already taken by another registered user. It would also be nice if the user would need to retype the password to make sure that they didn't accidently mistype the password.
 >
 > Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
 >
 > An anonymous user, that is an user who is not signed in, should be able to see the quiz list. However, they should not be able to add a quiz. That is, the link for adding a quiz should not be visible if the user is not signed in.
 >
-> After signing in, the teacher should be able to add a quiz. However, the teacher should only be able to edit and delete quizzes they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The quiz list should also display the username of the teacher who has added the quiz."
+> After signing in, the teacher should be able to add a quiz. However, the teacher should only be able to edit and delete quizzes they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The quiz list should also display the username of the teacher who has added the quiz.
+>
+> In the student dashboard, the username of the user who added the quiz should be displayed in the quiz list. The username should be a link to a separate page where the quizzes added by the user are listed."
 >
 > -- The Product Owner
 
@@ -86,17 +88,17 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project and move them to the "Sprint Backlog" column
 
+{: .note }
+
+> The [Authentication](#authentication) section covers topics related to the authentication. Take a look at it before planning the authentication-related tasks.
+
 {: .important-title }
 
 > Exercise 5
 >
 > Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
-
-{: .note }
-
-> The [Authentication](#authentication) section covers topics related to the authentication. Take a look at it before planning the authentication-related tasks.
+> Create an issue for each task. Add the "backend" label for the issues. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
@@ -120,7 +122,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "backend" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Add either "frontend" or "backend" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 ## Testing
 
