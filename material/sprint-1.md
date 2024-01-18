@@ -240,9 +240,9 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > The teacher should also be able to get rid of quizzes they don't need. Next to the "Edit" link, there should be a "Delete" button in the quiz list. When the user clicks the button, the quiz should be deleted.
 >
-> To quickly see which quizzes are published and which are not, there should be some way for the teacher to filter the quiz list based on the published status. There could be for example "All", "Published", and "Not published" tabs at the top of the list."
+> To quickly see which quizzes are published and which are not, there should be some way for the teacher to filter the quiz list based on the published status. There could be for example "All", "Published", and "Not published" tabs at the top of the list.
 >
-> It would be convenient, if the quiz list would display the date when the quiz was added. This way, the teacher would know how old the quiz is.
+> It would be convenient, if the quiz list would display the date when the quiz was added. This way, the teacher would know how old the quiz is."
 >
 > -- The Product Owner
 
