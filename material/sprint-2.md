@@ -140,6 +140,8 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be displayed one by one and the student should see the quiz progress with some kind of a progress bar. When the student answers a question, there should be some kind of feedback which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, the correct answer is "Helsinki"". The casing or leading or trailing whitespace of the answer should not be considered when checking if the student's answer is correct or not. For example, "helsinki" answer is correct when the correct answer is "Helsinki". To collect answer statistics, the answer text, the correctness status of the answer and the reference to the question should be stored. Once the student has answered all the questions there should be a summary of the results, for example "You got 1 out of 5 questions correct" and a button "Retake the quiz" which the student can click to take the same quiz again.
 >
+> There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. There should be a link to the results page next to the quiz in the quiz list page.
+>
 > -- The Product Owner
 
 After some discussion the Scrum Team planned the following user stories:
