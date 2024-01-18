@@ -631,9 +631,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 }
 ```
 
-The `loadUserByUsername` method will need to return a `User` object based on the username provided by the paramater or throw an `UsernameNotFoundException` exception if no user is found.
-
-The [authentication example](https://github.com/software-development-project-1/authentication-example) project demonstrates how the application's authentication can be implemented. Explore the project's code for useful examples that you can apply for the user story's implementation.
+The `loadUserByUsername` method will need to return a `UserDetails` object based on the username provided by the paramater or throw an `UsernameNotFoundException` exception if no user is found.
 
 {: .important-title }
 
