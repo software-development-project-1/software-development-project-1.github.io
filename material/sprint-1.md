@@ -234,13 +234,13 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > When the teacher opens the application on a web browser, there should be page where the added quizzes are listed. There should also be a link that says "Add a quiz" which takes the teacher to another page, where they can add a quiz using a form.
 >
-> For now, it is enough that a quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries" and a published status. A quiz is either published or not. Each of these values should have field in the form. The published status could be for example a checkbox. The user should not be able to add a quiz with a blank name or description. The quiz should not be published by default.
+> A quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries" and a published status. A quiz is either published or not. Each of these values should have field in the form. The published status could be for example a checkbox. The user should not be able to add a quiz with a blank name or description. The quiz should not be published by default.
 >
-> It would be convinient that the teacher could edit the added quizzes if, for example they want to publish the quiz or change its name or description. The quiz list should have an "Edit" link next to each quiz. The link should take the teacher to an edit form, where they can edit all the information of the quiz.
+> The teacher should be able to edit the information of a quiz if, for example they want to publish the quiz or change its name or description. The quiz list should have an "Edit" link next to each quiz. The link should take the teacher to an edit form, where they can edit all the information of the quiz.
 >
 > The teacher should also be able to get rid of quizzes they don't need. Next to the "Edit" link, there should be a "Delete" button in the quiz list. When the user clicks the button, the quiz should be deleted.
 >
-> The teacher should be able to quickly see which quizzes are published and which are not in the quiz list. There should be some way for the teacher to filter the quiz list based on the published status. There could be for example "All", "Published", and "Not published" tabs at the top of the list."
+> To quickly see which quizzes are published and which are not, there should be some way for the teacher to filter the quiz list based on the published status. There could be for example "All", "Published", and "Not published" tabs at the top of the list."
 >
 > It would be convenient, if the quiz list would display the date when the quiz was added. This way, the teacher would know how old the quiz is.
 >
