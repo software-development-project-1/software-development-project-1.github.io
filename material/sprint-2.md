@@ -132,7 +132,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "It's great that we can now add, list, edit and delete quizzes! What we now need is a way for the teacher to add questions for the quizzes and student to take the published quizzes.
 >
-> Let's start with a small user-experience improvement. It would nice if the quiz list would display the date when the quiz was added. This way, the teacher would know how old the quiz is. Also, quizzes should be listed from newest to oldest. This way, the teacher can find the latest quizzes quickly at the top of the list.
+> Let's start with a small user-experience improvement. It would nice, if the quizzes on the quiz list were listed from newest to oldest. This way, the teacher can find the latest quizzes quickly at the top of the list.
 >
 > The teacher should be able to add questions for the quizzes. For example the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". In addition to the question text, the teacher should be able to provide the correct answer for the question, for example "Helsinki". A question could be added using the quiz edit form implemented during the previous Sprint. The quiz-related questions should be listed and below the list there should be a form for adding a question. The form should have fields for the question text and the correct answer. The teacher should not be able to add a question with a blank text or correct answer. Once a question has been added for the quiz, the teacher should be able to delete it. The question list should have a "Delete" button next to each question.
 >
@@ -149,11 +149,11 @@ After some discussion the Scrum Team planned the following user stories:
 3. {{site.sprint_2_user_story_3}}
 4. {{site.sprint_2_user_story_4}}
 5. {{site.sprint_2_user_story_5}}
-6. As a student, I want to see a list of published quizzes so that I know what kind of quizzes I can take
+6. {{site.sprint_2_user_story_6}} 
 7. {{site.sprint_2_user_story_7}}
 8. {{site.sprint_2_user_story_8}}
 
-The planning of the tasks for the last three user stories will be covered after the [REST APIs](#rest-apis) and [Communication between frontend and backend](#communication-between-frontend-and-backend) sections.
+The planning of the tasks for the last four user stories will be covered after the [REST APIs](#rest-apis) and [Communication between frontend and backend](#communication-between-frontend-and-backend) sections.
 
 {: .important-title }
 
