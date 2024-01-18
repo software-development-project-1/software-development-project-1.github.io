@@ -229,7 +229,7 @@ The planning of the tasks for the last four user stories will be covered after t
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 11
 >
 > Implement the tasks of the second user story, "{{site.sprint_2_user_story_2}}".
 >
@@ -241,7 +241,7 @@ The planning of the tasks for the last four user stories will be covered after t
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 12
 >
 > Implement the tasks of the third user story, "{{site.sprint_2_user_story_3}}".
 >
@@ -251,7 +251,7 @@ The planning of the tasks for the last four user stories will be covered after t
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 13
 >
 > Implement the tasks of the fourth user story, "{{site.sprint_2_user_story_4}}".
 >
@@ -670,13 +670,22 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 14
 >
 > To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation.
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 15
+>
+> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get tips for the implementation.
+>
+> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+
+
+{: .important-title }
+
+> Exercise 16
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get tips for the implementation.
 >
@@ -684,7 +693,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 17
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 21 to get tips for the implementation.
 >
@@ -692,7 +701,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 18
 >
 > Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 22 to get tips for the implementation.
 >
@@ -700,9 +709,9 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 19
 >
-> Implement the tasks of the sixth user story, "{{site.sprint_2_user_story_6}}".
+> Implement the tasks of the fifth user story, "{{site.sprint_2_user_story_5}}".
 >
 > The implementation could look something like this:
 >
@@ -714,9 +723,9 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 20
 >
-> Implement the tasks of the seventh user story, "{{site.sprint_2_user_story_7}}".
+> Implement the tasks of the sixth user story, "{{site.sprint_2_user_story_6}}".
 >
 > The implementation could look something like this:
 >
@@ -734,9 +743,9 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 21
 >
-> Implement the tasks of the eighth user story, "{{site.sprint_2_user_story_8}}".
+> Implement the tasks of the seventh user story, "{{site.sprint_2_user_story_7}}".
 >
 > The implementation could look something like this:
 >
@@ -763,6 +772,22 @@ Before starting to implement the frontend features, we should test that the endp
 >   }
 >   ```
 > - [trim](https://www.baeldung.com/string/trim) and [equalsIgnoreCase](https://www.baeldung.com/java-string-equalsignorecase) methods might come in handy while checking for the correctness of the user's answer
+
+{: .important-title }
+
+> Exercise 22
+>
+> Implement the tasks of the eighth user story, "{{site.sprint_2_user_story_8}}".
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-3-user-story-1-1.png)
+>
+> ![](/assets/sprint-3-user-story-1-2.png)
+>
+> Tips for implementing the tasks:
+>
+> - If the `Answer` entity's `Question` entity reference is in a `question` attribute and the `Question` entity's `Quiz` entity reference is in a `quiz` attribute, the JPA repository method `findByQuestionQuizId` can be implemented in the `AnswerRepository` class to find answers by a quiz id
 
 {: .important-title }
 
