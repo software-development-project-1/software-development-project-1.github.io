@@ -242,6 +242,8 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > The teacher should be able to quickly see which quizzes are published and which are not in the quiz list. There should be some way for the teacher to filter the quiz list based on the published status. There could be for example "All", "Published", and "Not published" tabs at the top of the list."
 >
+> It would be convenient, if the quiz list would display the date when the quiz was added. This way, the teacher would know how old the quiz is.
+>
 > -- The Product Owner
 
 After some discussion the Scrum Team planned the following user stories:
