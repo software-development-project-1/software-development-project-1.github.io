@@ -664,7 +664,6 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 >
 > - Start the implementation by adding the spring-boot-starter-security and thymeleaf-extras-springsecurity6 dependencies for the project
 > - Add similar `SecurityConfig` and `UserDetailsServiceImpl` classes as instructed above
-> - See how the user registration is implemented in the [authentication example](https://github.com/software-development-project-1/authentication-example) project
 
 {: .important-title }
 
@@ -694,18 +693,11 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 >
 > Tips for implementing the tasks:
 >
-> - See how the authenticated user is associated with a message in the [MessageController](https://github.com/software-development-project-1/authentication-example/blob/main/src/main/java/fi/haagahelia/messenger/controller/MessageController.java) class in the authentication example project
+> - [Retrieve User Information in Spring Security](https://www.baeldung.com/get-user-in-spring-security)
 > - You can display content in a Thymeleaf template based on the authenticated user's username in the following way:
 >
 >   ```html
->   <a
->     th:href="@{/quizzes/{id}/edit(id = ${quiz.id})}"
->     class="btn btn-secondary btn-sm"
->     sec:authorize="isAuthenticated()"
->     th:if="${#authentication.principal.username == quiz.user?.username}"
->   >
->     Edit
->   </a>
+>  th:if="${#authentication.principal.username == quiz.user?.username}"
 >   ```
 
 {: .important-title }
