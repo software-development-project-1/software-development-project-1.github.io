@@ -179,7 +179,7 @@ The planning of the tasks for the last four user stories will be covered after t
 
 > Exercise 5
 >
-> Plan the tasks for the first user story, "{{site.sprint_2_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get some implementation tips.
+> Plan the tasks for the first user story, "{{site.sprint_2_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 10 to get some implementation tips.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -187,7 +187,7 @@ The planning of the tasks for the last four user stories will be covered after t
 
 > Exercise 6
 >
-> Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 to get some implementation tips.
+> Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -195,7 +195,7 @@ The planning of the tasks for the last four user stories will be covered after t
 
 > Exercise 7
 >
-> Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 13 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -203,7 +203,7 @@ The planning of the tasks for the last four user stories will be covered after t
 
 > Exercise 8
 >
-> Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 14 to get an idea what the implementation could look like.
+> Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 13 to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -211,40 +211,17 @@ The planning of the tasks for the last four user stories will be covered after t
 
 > Exercise 9
 >
-> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 for some implementation tips and to get an idea what the implementation could look like.
+> The Product Owner needs your help in estimating user stories.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> 1. To visualize the user story issue's story point estimate, create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) "story points: 1", "story points: 2", "story points: 3", "story points: 5", "story points: 8" and "story points: 13"
+> 2. Facilitate a planning poker event where you estimate the _first four user stories_ of the Sprint
+> 3. Based on the user story estimation, add the story point labels for the five user story related issues
 
 {: .important-title }
 
 > Exercise 10
 >
-> The Product Owner needs your help in estimating user stories.
->
-> 1. To visualize the user story issue's story point estimate, create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) "story points: 1", "story points: 2", "story points: 3", "story points: 5", "story points: 8" and "story points: 13"
-> 2. Facilitate a planning poker event where you estimate the _first five user stories_ of the Sprint
-> 3. Based on the user story estimation, add the story point labels for the five user story related issues
-
-{: .important-title }
-
-> Exercise 11
->
 > Implement the tasks of the first user story, "{{site.sprint_2_user_story_1}}".
->
-> The implementation could look something like this:
->
-> ![](/assets/sprint-2-user-story-1.png)
->
-> Tips for implementing the tasks:
->
-> - [Hibernate CreationTimestamp annotation](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
-> - You can format an [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object in a Thymeleaf template with the [#temporals.format](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html#temporals-java.time) utility
-
-{: .important-title }
-
-> Exercise 12
->
-> Implement the tasks of the second user story, "{{site.sprint_2_user_story_2}}".
 >
 > Tips for implementing the tasks:
 >
@@ -254,7 +231,7 @@ The planning of the tasks for the last four user stories will be covered after t
 
 > Exercise 13
 >
-> Implement the tasks of the third user story, "{{site.sprint_2_user_story_3}}".
+> Implement the tasks of the second user story, "{{site.sprint_2_user_story_2}}".
 >
 > The implementation could look something like this:
 >
@@ -266,7 +243,7 @@ The planning of the tasks for the last four user stories will be covered after t
 
 > Exercise 14
 >
-> Implement the tasks of the fourth user story, "{{site.sprint_2_user_story_4}}".
+> Implement the tasks of the third user story, "{{site.sprint_2_user_story_3}}".
 >
 > The implementation could look roughly roughly something like this:
 >
@@ -276,7 +253,7 @@ The planning of the tasks for the last four user stories will be covered after t
 
 > Exercise 15
 >
-> Implement the tasks of the fifth user story, "{{site.sprint_2_user_story_5}}".
+> Implement the tasks of the fourth user story, "{{site.sprint_2_user_story_4}}".
 >
 > The implementation could look roughly roughly something like this:
 >
