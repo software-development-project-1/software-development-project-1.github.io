@@ -120,7 +120,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 > Exercise 8
 >
-> Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add either "frontend" or "backend" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -643,23 +643,6 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 >
 > The implementation could look something like this:
 >
-> ![](/assets/sprint-3-user-story-1-1.png)
->
-> ![](/assets/sprint-3-user-story-1-2.png)
->
-> Tips for implementing the tasks:
->
-> - You can implement a GET `/api/quizzes/{id}/answers` endpoint, which returns the quiz-related answers
-> - If the `Answer` entity's `Question` entity reference is in a `question` attribute and the `Question` entity's `Quiz` entity reference is in a `quiz` attribute, the JPA repository method `findByQuestionQuizId` can be implemented in the `AnswerRepository` class to find answers by a quiz id
-
-{: .important-title }
-
-> Exercise 16
->
-> Implement the tasks of the second user story, "{{site.sprint_3_user_story_2}}".
->
-> The implementation could look something like this:
->
 > ![](/assets/sprint-3-user-story-2.png)
 >
 > Tips for implementing the tasks:
@@ -669,9 +652,9 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 16
 >
-> Implement the tasks of the third user story, "{{site.sprint_3_user_story_3}}".
+> Implement the tasks of the second user story, "{{site.sprint_3_user_story_2}}".
 >
 > The implementation could look something like this:
 >
@@ -685,9 +668,9 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 17
 >
-> Implement the tasks of the fourth user story, "{{site.sprint_3_user_story_4}}".
+> Implement the tasks of the third user story, "{{site.sprint_3_user_story_3}}".
 >
 > The implementation could look something like this:
 >
@@ -701,6 +684,17 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 >   ```html
 > th:if="${#authentication.principal.username == quiz.user?.username}"
 >   ```
+
+{: .important-title }
+
+> Exercise 18
+>
+> Implement the tasks of the fourth user story, "{{site.sprint_3_user_story_4}}".
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-3-user-story-5-1.png)
+> ![](/assets/sprint-3-user-story-5-2.png)
 
 {: .important-title }
 
