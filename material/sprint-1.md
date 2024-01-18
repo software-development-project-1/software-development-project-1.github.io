@@ -251,6 +251,8 @@ After some discussion the Scrum Team planned the following user stories:
 3. {{site.sprint_1_user_story_3}}
 4. {{site.sprint_1_user_story_4}}
 5. {{site.sprint_1_user_story_5}}
+6. {{site.sprint_1_user_story_6}}
+
 
 The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
 
@@ -349,6 +351,15 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
+
+{: .important-title }
+
+> Exercise 15
+>
+> Plan the tasks for the sixth user story, "{{site.sprint_1_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 21 for some implementation tips and to get an idea what the implementation could look like.
+>
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+
 {: .note }
 
 > User story related tasks can be included in the user story issue's description as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists):
@@ -365,7 +376,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 16
 >
 > Discuss how you will divide the workload (the tasks) of the Sprint among the team members. For example, each team member could be responsible for the tasks of a single user story. Then, add an _assignee_ for each issue. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same issue together.
 
@@ -458,7 +469,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 17
 >
 > Implement the tasks of the first user story, "{{site.sprint_1_user_story_1}}".
 >
@@ -476,7 +487,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 18
 >
 > Implement the tasks of the second user story, "{{site.sprint_1_user_story_2}}".
 >
@@ -488,7 +499,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 19
 >
 > Implement the tasks of the third user story, "{{site.sprint_1_user_story_3}}".
 >
@@ -502,7 +513,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 20
 >
 > Implement the tasks of the fourth user story, "{{site.sprint_1_user_story_4}}".
 >
@@ -512,7 +523,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 21
 >
 > Implement the tasks of the fifth user story, "{{site.sprint_1_user_story_5}}".
 >
@@ -553,6 +564,21 @@ Here's a few tips before you start implementing the tasks:
 >     Published
 >   </a>
 >   ```
+
+{: .important-title }
+
+> Exercise 22
+>
+> Implement the tasks of the sixth user story, "{{site.sprint_1_user_story_6}}".
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-1.png)
+>
+> Tips for implementing the tasks:
+>
+> - [Hibernate CreationTimestamp annotation](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
+> - You can format an [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object in a Thymeleaf template with the [#temporals.format](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html#temporals-java.time) utility
 
 ## Daily Scrum
 
@@ -597,7 +623,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 23
 >
 > Write a usage guide on _how to start the backend application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
 >
@@ -700,7 +726,7 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 24
 >
 > Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
 
@@ -716,7 +742,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 25
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -728,7 +754,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 26
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >
