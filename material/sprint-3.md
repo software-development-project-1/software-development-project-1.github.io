@@ -15,7 +15,7 @@ For the final Sprint of the course, the Sprint 3, we have a new set of requireme
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
 
-The Sprint assesment is done based on the exercises 1-23. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
+The Sprint assesment is done based on the exercises 1-24. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
 
 During this Sprint, each team member will do a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 10 personal points.
 
@@ -688,19 +688,33 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 > Exercise 18
 >
+> Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a verbal description of the application's data model, which documents the application's entities, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). Add the diagram and the verbal description to a `data-model.md` file in the `documentation` folder. The verbal description should explain the purpose of each entity and their relationship to other entities. Add a link to the file to "Documentation" section in the `README.md` file.
+>
+> If you place the diagram image to the `documentation` folder you can add it to a Markdown file in the following way:
+>
+> ```md
+> ![ER Diagram](./er-diagram.png)
+> ```
+>
+> GitHub also supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain a diagrams. Take a look at Mermaid's [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) documentation for more information.
+
+{: .important-title }
+
+> Exercise 19
+>
 > Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
 > Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specified in the React project's [README.md](https://github.com/facebook/react/blob/main/README.md) file.
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 20
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 21
 >
 > Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
 
@@ -722,7 +736,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
 > Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 
@@ -740,13 +754,13 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 23
 >
 > Write the final report for the course as instructed above.
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 24
 >
 > You can now pat yourself on the back, the project is done! 🎉
 >
