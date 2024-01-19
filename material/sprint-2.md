@@ -719,7 +719,7 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > The implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-6.png)
+> ![](/assets/sprint-2-user-story-5.png)
 >
 > Tips for implementing the tasks:
 >
@@ -733,13 +733,13 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > The implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-7-1.png)
+> ![](/assets/sprint-2-user-story-6-1.png)
 >
-> ![](/assets/sprint-2-user-story-7-2.png)
+> ![](/assets/sprint-2-user-story-6-2.png)
 >
-> ![](/assets/sprint-2-user-story-7-3.png)
+> ![](/assets/sprint-2-user-story-6-3.png)
 >
-> ![](/assets/sprint-2-user-story-7-4.png)
+> ![](/assets/sprint-2-user-story-6-4.png)
 >
 > Tips for implementing the tasks:
 >
@@ -753,11 +753,11 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > The implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-8-1.png)
+> ![](/assets/sprint-2-user-story-7-1.png)
 >
-> ![](/assets/sprint-2-user-story-8-2.png)
+> ![](/assets/sprint-2-user-story-7-2.png)
 >
-> ![](/assets/sprint-2-user-story-8-3.png)
+> ![](/assets/sprint-2-user-story-7-3.png)
 >
 > Tips for implementing the tasks:
 >
@@ -785,9 +785,9 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > The implementation could look something like this:
 >
-> ![](/assets/sprint-3-user-story-1-1.png)
+> ![](/assets/sprint-2-user-story-8-1.png)
 >
-> ![](/assets/sprint-3-user-story-1-2.png)
+> ![](/assets/sprint-2-user-story-8-2.png)
 >
 > Tips for implementing the tasks:
 >

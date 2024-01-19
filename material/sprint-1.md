@@ -575,7 +575,7 @@ Here's a few tips before you start implementing the tasks:
 >
 > The implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-1.png)
+> ![](/assets/sprint-1-user-story-6.png)
 >
 > Tips for implementing the tasks:
 >
