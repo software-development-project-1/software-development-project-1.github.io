@@ -50,4 +50,3 @@ sprint_2_user_story_8: "As a user, I want to see the number of correct and wrong
 sprint_3_user_story_1: "As a teacher, I want to register an account so that I can manage my personal quizzes"
 sprint_3_user_story_2: "As a teacher, I want to sign in so that I can manage my personal quizzes"
 sprint_3_user_story_3: "As a teacher, I want to associate the added quiz with my account so that I can manage my personal quizzes"
-sprint_3_user_story_4: "As a user, I want to see a list of quizzes added by a user so that I can easily find all user's quizzes"
