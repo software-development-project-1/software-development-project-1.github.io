@@ -217,7 +217,7 @@ The planning of the tasks for the last four user stories will be covered after t
 >
 > 1. To visualize the user story issue's story point estimate, create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) "story points: 1", "story points: 2", "story points: 3", "story points: 5", "story points: 8" and "story points: 13"
 > 2. Facilitate a planning poker event where you estimate the _first four user stories_ of the Sprint
-> 3. Based on the user story estimation, add the story point labels for the five user story related issues
+> 3. Based on the user story estimation, add the story point labels for the four user story related issues
 
 {: .important-title }
 
