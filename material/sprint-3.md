@@ -520,7 +520,6 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3".
 
-
 {: .important-title }
 
 > Exercise 14
@@ -682,7 +681,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 > - You can display content in a Thymeleaf template based on the authenticated user's username in the following way:
 >
 >   ```html
-> th:if="${#authentication.principal.username == quiz.user?.username}"
+>   th:if="${#authentication.principal.username == quiz.user?.username}"
 >   ```
 
 {: .important-title }
