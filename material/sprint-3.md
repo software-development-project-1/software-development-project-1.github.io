@@ -55,9 +55,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > An anonymous user, that is an user who is not signed in, should be able to see the quiz list. However, they should not be able to add a quiz. That is, the link for adding a quiz should not be visible if the user is not signed in.
 >
-> After signing in, the teacher should be able to add a quiz. However, the teacher should only be able to edit and delete quizzes they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The quiz list should also display the username of the teacher who has added the quiz.
->
-> In the student dashboard, the username of the user who added the quiz should be displayed in the quiz list. The username should be a link to a separate page where the quizzes added by the user are listed."
+> After signing in, the teacher should be able to add a quiz. However, the teacher should only be able to edit and delete quizzes they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The quiz list should also display the username of the teacher who has added the quiz"
 >
 > -- The Product Owner
 
@@ -66,7 +64,6 @@ After some discussion the Scrum Team planned the following user stories:
 1. {{site.sprint_3_user_story_1}}
 2. {{site.sprint_3_user_story_2}}
 3. {{site.sprint_3_user_story_3}}
-4. {{site.sprint_3_user_story_4}}
 
 {: .important-title }
 
@@ -115,14 +112,6 @@ After some discussion the Scrum Team planned the following user stories:
 > Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "backend" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
-
-{: .important-title }
-
-> Exercise 8
->
-> Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 to get an idea what the implementation could look like.
->
-> Create an issue for each task. Add either "frontend" or "backend" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 ## Testing
 
@@ -466,7 +455,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 8
 >
 > To classify test-related issues, create a new "test" [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels). Add the "test" label for issues that are related to testing (automated or manual) some part of the application.
 
@@ -476,7 +465,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 9
 >
 > Create a new package `fi.haagahelia.quizzer.controller` to the `src/test/java` folder for the project's controller class tests. Implement a test class within the package with the following test methods for the GET `/api/quizzes` endpoint:
 >
@@ -487,7 +476,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 10
 >
 > Implement the following test methods for the GET `/api/quizzes/{id}` endpoint:
 >
@@ -499,7 +488,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 11
 >
 > Implement the following test methods for the GET `/api/quizzes/{id}/questions` endpoint:
 >
@@ -512,7 +501,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 12
 >
 > Implement a test class with the following test methods for the POST `/api/answers` endpoint:
 >
@@ -522,6 +511,15 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a POST request to the `/api/answers` with a valid request body. Then, the response should status have a `403 Bad Request` status and the database should not have any answers
 >
 > Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3".
+
+{: .important-title }
+
+> Exercise 13
+>
+> Come up with appropriate test scenarios for the GET `/api/quizzes/{id}/answers` endpoint and implement the test methods for the scenarios.
+>
+> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3".
+
 
 {: .important-title }
 
@@ -689,30 +687,19 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 > Exercise 18
 >
-> Implement the tasks of the fourth user story, "{{site.sprint_3_user_story_4}}".
->
-> The implementation could look something like this:
->
-> ![](/assets/sprint-3-user-story-5-1.png)
-> ![](/assets/sprint-3-user-story-5-2.png)
-
-{: .important-title }
-
-> Exercise 19
->
 > Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
 > Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specified in the React project's [README.md](https://github.com/facebook/react/blob/main/README.md) file.
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 19
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 20
 >
 > Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
 
@@ -734,7 +721,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 21
 >
 > Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 
@@ -752,13 +739,13 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 22
 >
 > Write the final report for the course as instructed above.
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 23
 >
 > You can now pat yourself on the back, the project is done! 🎉
 >
