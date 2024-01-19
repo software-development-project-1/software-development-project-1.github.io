@@ -506,7 +506,7 @@ The purpose of the REST APIs we just implemented on the backend is that we can _
 
 It's very difficult to implement complex frontend applications using plain JavaScript. That's is why libraries such as [React](https://react.dev/) are used. React allows us to build user interfaces out of individual pieces called _components_. Components represent a visual element on the page.
 
-The example project has a simple React application in the `frontend` folder. We will be using this application as an example and as the starting point for the student dashboard which we start implementing during the last three user stories.
+The example project has a simple React application in the `frontend` folder. We will be using this application as an example and as the starting point for the student dashboard application.
 
 The communication between the frontend application and the backend application is performed using the JavaScript's [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The Fetch API provides the `fetch` function, which can be used to send a HTTP request to a specific URL:
 
