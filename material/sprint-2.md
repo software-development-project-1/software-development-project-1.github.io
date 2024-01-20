@@ -619,7 +619,7 @@ export default function MessageList() {
 
 {% endraw %}
 
-Explore the code in the `frontend` folder. You can start the Vite development server by runing the `npm run dev` command in the `frontend` folder. Once the development server has started, the application is accessible at <http://localhost:5713>.
+Explore the code in the `frontend` folder. Install the dependencies by running the `npm install` command in the `frontend` folder. Then, start the Vite development server by runing the `npm run dev` command. Once the development server has started, the application is accessible at <http://localhost:5713>.
 
 ## Cross-Origin Resource Sharing (CORS)
 
@@ -662,7 +662,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 > The last four user stories are related to the student dashboard application and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend. Use the React application in the `frontend` folder as the starting point for your implementation.
 >
-> You can start the Vite development server by runing the `npm run dev` command in the `frontend` folder. Once the development server has started, the application is accessible at <http://localhost:5713>.
+> Install the dependencies by running the `npm install` command in the `frontend` folder. Then, start the Vite development server by runing the `npm run dev` command. Once the development server has started, the application is accessible at <http://localhost:5713>.
 
 {: .highlight}
 
