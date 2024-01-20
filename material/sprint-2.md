@@ -502,9 +502,7 @@ To have more control over the attributes in the JSON response, [DTO](https://www
 
 ## Communication between frontend and backend
 
-The purpose of the REST APIs we just implemented on the backend is that we can _separate_ the client application from the backend application. In web applications these client applications are commonly called _frontend applications_ and they are implemented using JavaScript programming language.
-
-It's very difficult to implement complex frontend applications using plain JavaScript. That's is why libraries such as [React](https://react.dev/) are used. React allows us to build user interfaces out of individual pieces called _components_. Components represent a visual element on the page.
+With REST APIs we can _separate_ the client application from the backend application. In web applications these client applications are commonly called _frontend applications_ and they are implemented using the JavaScript programming language. It's very difficult to implement complex frontend applications using plain JavaScript. That's is why libraries such as [React](https://react.dev/) are used.
 
 The example project has a simple React application in the `frontend` folder. We will be using this application as an example and as the starting point for the student dashboard application.
 
