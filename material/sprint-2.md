@@ -737,13 +737,9 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > ![](/assets/sprint-2-user-story-6-2.png)
 >
-> ![](/assets/sprint-2-user-story-6-3.png)
->
-> ![](/assets/sprint-2-user-story-6-4.png)
->
 > Tips for implementing the tasks:
 >
-> - Material UI [Card](https://mui.com/material-ui/react-card/), [Chip](https://mui.com/material-ui/react-chip/) and [LinearProgress](https://mui.com/material-ui/react-progress/)
+> - Material UI [Card](https://mui.com/material-ui/react-card/) and [Chip](https://mui.com/material-ui/react-chip/)
 
 {: .important-title }
 
@@ -756,8 +752,6 @@ Before starting to implement the frontend features, we should test that the endp
 > ![](/assets/sprint-2-user-story-7-1.png)
 >
 > ![](/assets/sprint-2-user-story-7-2.png)
->
-> ![](/assets/sprint-2-user-story-7-3.png)
 >
 > Tips for implementing the tasks:
 >
