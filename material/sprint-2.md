@@ -662,7 +662,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .highlight}
 
-> The last three user stories are related to the student dashboard and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend. Use the Vite application in the `frontend` folder as the staring point of your implementation.
+> The last four user stories are related to the student dashboard and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend. Use the Vite application in the `frontend` folder as the staring point of your implementation.
 
 {: .highlight}
 
@@ -815,10 +815,9 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Add a brief description of the project's _overall architecture_ and the _implementation technologies_ to the project description in the `README.md`. Mention at least the following things:
 >
-> 1. From which components (backend and frontend) your project's overall architecture consists of? What is the purpose of each component? How do the components communicate with each other?
-> 2. Which programming languages, frameworks and major libraries (e.g. Spring Boot) are used in the _backend implementation_?
-> 3. Which database platforms (e.g. H2, PostgreSQL) are used in different environments (development and production environment)?
-> 4. Which programming languages, frameworks and major libraries (e.g. React, Material UI) are used in the _frontend implementation_?
+> 1. Which programming languages, frameworks and major libraries (e.g. Spring Boot) are used in the _backend implementation_?
+> 2. Which database platforms (e.g. H2, PostgreSQL) are used in different environments (development and production environment)?
+> 3. Which programming languages, frameworks and major libraries (e.g. React, Material UI) are used in the _frontend implementation_?
 
 ## REST API documentation with Swagger
 
