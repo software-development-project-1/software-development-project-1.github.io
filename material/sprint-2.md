@@ -660,7 +660,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .highlight}
 
-> The last four user stories are related to the student dashboard and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend. Use the React application in the `frontend` folder as the staring point of your implementation.
+> The last four user stories are related to the student dashboard application and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend. Use the React application in the `frontend` folder as the starting point for your implementation.
 >
 > You can start the Vite development server by runing the `npm run dev` command in the `frontend` folder. Once the development server has started, the application is accessible at <http://localhost:5713>.
 
