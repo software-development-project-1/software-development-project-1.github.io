@@ -502,9 +502,9 @@ To have more control over the attributes in the JSON response, [DTO](https://www
 
 ## Communication between frontend and backend
 
-With REST APIs we can _separate_ the client application from the backend application. In web applications these client applications are commonly called _frontend applications_.
+With REST APIs we can _separate_ the client application from the server application. In web applications these client applications are commonly called _frontend applications_.
 
-The example project has a simple React frontend application in the `frontend` folder. We will be using this application as an example and as the starting point for the student dashboard application.
+The example project has a simple React frontend application in the `frontend` folder, which uses the [Vite](https://vitejs.dev/) build tool. We will be using this application as an example and as the starting point for the student dashboard application.
 
 The communication between the frontend application and the backend application is performed using the JavaScript's [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The Fetch API provides the `fetch` function, which can be used to send a HTTP request to a specific URL:
 
@@ -660,7 +660,9 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .highlight}
 
-> The last four user stories are related to the student dashboard and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend. Use the Vite application in the `frontend` folder as the staring point of your implementation.
+> The last four user stories are related to the student dashboard and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend. Use the React application in the `frontend` folder as the staring point of your implementation.
+>
+> You can start the Vite development server by runing the `npm run dev` command in the `frontend` folder. Once the development server has started, the application is accessible at <http://localhost:5713>.
 
 {: .highlight}
 
