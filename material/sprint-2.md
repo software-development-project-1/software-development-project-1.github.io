@@ -134,7 +134,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > Let's start with a small user-experience improvement. It would nice, if the quizzes on the quiz list were listed from newest to oldest. This way, the teacher can find the latest quizzes quickly at the top of the list.
 >
-> The teacher should be able to add questions for the quizzes. For example the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". In addition to the question text, the teacher should be able to provide the correct answer for the question, for example "Helsinki". A question could be added using the quiz edit form implemented during the previous Sprint. The quiz-related questions should be listed and below the list there should be a form for adding a question. The form should have fields for the question text and the correct answer. The teacher should not be able to add a question with a blank text or correct answer. Once a question has been added for the quiz, the teacher should be able to delete it. The question list should have a "Delete" button next to each question.
+> The teacher should be able to add questions for the quizzes. For example the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?", a correct answer, for example "Helsinki" and a difficulty level. Difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal". A question could be added using the quiz edit form implemented during the previous Sprint. The quiz-related questions should be listed and below the list there should be a form for adding a question. The teacher should not be able to add a question with a blank text or correct answer. Once a question has been added for the quiz, the teacher should be able to delete it. The question list should have a "Delete" button next to each question.
 >
 > Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description and the date when it was added. These quizzes should be listed from newest to oldest. Each quiz name should be a link to a separate page where the quiz name, description and the questions are displayed.
 >
@@ -743,7 +743,7 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Tips for implementing the tasks:
 >
-> - Material UI [Card](https://mui.com/material-ui/react-card/) and [LinearProgress](https://mui.com/material-ui/react-progress/)
+> - Material UI [Card](https://mui.com/material-ui/react-card/), [Chip](https://mui.com/material-ui/react-chip/) and [LinearProgress](https://mui.com/material-ui/react-progress/)
 
 {: .important-title }
 

@@ -63,16 +63,19 @@ Learn the capital cities of the European countries</textarea
           <tr>
             <th>Question text</th>
             <th>Correct answer</th>
+            <th>Difficulty level</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>What is the capital of Finland?</td>
             <td>Helsinki</td>
+            <td><span class="badge text-bg-success">Easy</span></td>
           </tr>
           <tr>
             <td>What is the capital of Sweden?</td>
             <td>Stockholm</td>
+            <td><span class="badge text-bg-danger">Hard</span></td>
           </tr>
         </tbody>
       </table>
@@ -88,6 +91,28 @@ Learn the capital cities of the European countries</textarea
         <div class="mb-3">
           <label class="form-label">Correct answer</label>
           <input type="text" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Difficulty level</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="difficulty" id="difficulty">
+            <label class="form-check-label" for="difficulty" checked>
+              Easy
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="difficulty" id="difficulty">
+            <label class="form-check-label" for="difficulty">
+              Normal
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="difficulty" id="difficulty">
+            <label class="form-check-label" for="difficulty">
+              Hard
+            </label>
+          </div>
         </div>
 
         <button class="btn btn-primary">Add</button>
