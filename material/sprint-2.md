@@ -134,7 +134,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > Let's start with a small user-experience improvement. It would nice, if the quizzes on the quiz list were listed from newest to oldest. This way, the teacher can find the latest quizzes quickly at the top of the list.
 >
-> The teacher should be able to add questions for the quizzes. For example the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?", a correct answer, for example "Helsinki" and a difficulty level. Difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal". A question could be added using the quiz edit form implemented during the previous Sprint. The quiz-related questions should be listed and below the list there should be a form for adding a question. The teacher should not be able to add a question with a blank text or correct answer. Once a question has been added for the quiz, the teacher should be able to delete it. The question list should have a "Delete" button next to each question.
+> The teacher should be able to add questions for the quizzes. For example the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?" and a correct answer, for example "Helsinki". A question could be added using the quiz edit form implemented during the previous Sprint. The quiz-related questions should be listed and below the list there should be a form for adding a question. The teacher should not be able to add a question with a blank text or correct answer. Once a question has been added for the quiz, the teacher should be able to delete it. The question list should have a "Delete" button next to each question.
 >
 > Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description and the date when it was added. These quizzes should be listed from newest to oldest. Each quiz name should be a link to a separate page where the quiz name, description and the questions are displayed.
 >
@@ -151,7 +151,7 @@ After some discussion the Scrum Team planned the following user stories:
 3. {{site.sprint_2_user_story_3}}
 4. {{site.sprint_2_user_story_4}}
 5. {{site.sprint_2_user_story_5}}
-6. {{site.sprint_2_user_story_6}} 
+6. {{site.sprint_2_user_story_6}}
 7. {{site.sprint_2_user_story_7}}
 8. {{site.sprint_2_user_story_8}}
 
@@ -686,7 +686,6 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
-
 {: .important-title }
 
 > Exercise 16
@@ -739,7 +738,7 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Tips for implementing the tasks:
 >
-> - Material UI [Card](https://mui.com/material-ui/react-card/) and [Chip](https://mui.com/material-ui/react-chip/)
+> - Material UI [Card](https://mui.com/material-ui/react-card/)
 
 {: .important-title }
 
@@ -756,7 +755,7 @@ Before starting to implement the frontend features, we should test that the endp
 > Tips for implementing the tasks:
 >
 > - Material UI [Snackbar](https://mui.com/material-ui/react-snackbar/)
-> - You can implement a [DTO](https://www.baeldung.com/java-dto-pattern) class for the request body:
+> - The request body format can be defined by a [DTO](https://www.baeldung.com/java-dto-pattern) class:
 >
 >   ```java
 >   public class CreateAnswerDto {
@@ -769,6 +768,16 @@ Before starting to implement the frontend features, we should test that the endp
 >       // constructors, getters and setters
 >   }
 >   ```
+>
+>   Then, the frontend can send a request body in the following format:
+>
+>   ```json
+>   {
+>     "answerText": "helsinki",
+>     "questionId": 1
+>   }
+>   ```
+>
 > - [trim](https://www.baeldung.com/string/trim) and [equalsIgnoreCase](https://www.baeldung.com/java-string-equalsignorecase) methods might come in handy while checking for the correctness of the user's answer
 
 {: .important-title }
