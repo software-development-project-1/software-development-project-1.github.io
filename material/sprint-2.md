@@ -319,26 +319,7 @@ So far the user has interacted with our web application in the following manner:
 
 So the representation of our application's data is an HTML page. But what if we would like to implement the user interface with JavaScript, for example using React? In this case, instead of representing the data as HTML pages we need a proper _application programming interface_ (API) for the data.
 
-There are different kinds text-based data presentation formats that programming languages, such as JavaScript, know how to _parse_ and _serialize_. One such format is JavaScript Object Notation (JSON). The server can send text-based JSON data as a response and JavaScript has built-in functions to parse the data as JavaScript objects:
-
-```js
-// jsonData contains a string of JSON data (note the quotes around the array brackets)
-const jsonData = '["This", "is", "a", "JSON", "array"]';
-// parsedData contains a JavaScript array
-const parsedData = JSON.parse(jsonData);
-console.log(parsedData.length); // 5
-```
-
-Similarly, we can serialize a JavaScript object into a text-based JSON string and send it to the server:
-
-```js
-const data = ["This", "is", "a", "JavaScript", "array"];
-// jsonData contains a string of JSON data
-const jsonData = JSON.stringify(data);
-console.log(jsonData); // '["This", "is", "a", "JavaScript", "array"]'
-```
-
-Instead of sending a response as an HTML page, we can serialize Java objects into JSON strings and send it as a response. Let's have a look at the [MessageRestController](https://github.com/software-development-project-1/example-project/blob/main/src/main/java/fi/haagahelia/quizzer/controller/MessageRestController.java) controller class in the example project:
+Instead of sending a response as an HTML page, we can serialize Java objects into _JSON_ strings and send it as a response. Let's have a look at the [MessageRestController](https://github.com/software-development-project-1/example-project/blob/main/src/main/java/fi/haagahelia/quizzer/controller/MessageRestController.java) controller class in the example project:
 
 ```java
 @RestController
