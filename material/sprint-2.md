@@ -652,6 +652,11 @@ Then, we can implement a POST method endpoint `/api/answers` for this use-case. 
 
 In the eighth user story, "{{site.sprint_2_user_story_8}}", we need to display the information related to the answers of a quiz's questions. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}/answers`. We should implement similar error handling for this endpoint as in the `/api/quizzes/{id}` endpoint.
 
+The remaining user stories include both backend-related and frontend-related tasks. For example, for the _fifth user story_ we could have the following tasks:
+
+1. Add a QuizRestController class and a method for the /api/quizzes endpoint which returns published quizzes
+2. Add a React component which lists published quizzes
+
 Before starting to implement the frontend features, we should test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL, for example <http://localhost:8080/api/quizzes>. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
 
 {: .note }
@@ -682,7 +687,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 > Exercise 15
 >
-> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 19 to get tips for the implementation.
+> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". You can use the tasks suggested above, or plan your own tasks. Take a look at the exercise 19 to get tips for the implementation.
 >
 > Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
