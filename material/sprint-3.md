@@ -730,8 +730,6 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 Add a file `final-report.md` to the `documentation` folder. In that file, write the _final report_ for the course, which answers the following questions:
 
-- What challenges did you face during each Sprint? Describe both technical and project management related challenges. You can use the Sprint Retrospective notes.
-- Were you able to overcome these challenges? If so, how?
 - In which areas did you succeed as a team?
 - In which areas there was room for improvement?
 - What did you learn during the course? What would you have wanted to learn more about? What felt irrellevant?
