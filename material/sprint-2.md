@@ -629,8 +629,6 @@ In the seventh user story, "{{site.sprint_2_user_story_7}}", we need save the st
 
 Then, we can implement a POST method endpoint `/api/answers` for this use-case. If the user is trying to answer a quiz which is not published we should return a `403 Forbidden` status as a response. If the user is trying to answer a quiz which does not exist we should return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), we should return a `400 Bad Request` status as a response.
 
-In the eighth user story, "{{site.sprint_2_user_story_8}}", we need to display the information related to the answers of a quiz's questions. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}/answers`. We should implement similar error handling for this endpoint as in the `/api/quizzes/{id}` endpoint.
-
 The remaining user stories include both backend-related and frontend-related tasks. For example, for the _fifth user story_ we could have the following tasks:
 
 1. Add a QuizRestController class and a method for the /api/quizzes endpoint which returns published quizzes
@@ -690,14 +688,6 @@ Before starting to implement the frontend features, we should test that the endp
 
 > Exercise 18
 >
-> Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 22 to get tips for the implementation.
->
-> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
-
-{: .important-title }
-
-> Exercise 19
->
 > Implement the tasks of the fifth user story, "{{site.sprint_2_user_story_5}}".
 >
 > The implementation could look something like this:
@@ -710,7 +700,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 19
 >
 > Implement the tasks of the sixth user story, "{{site.sprint_2_user_story_6}}".
 >
@@ -726,7 +716,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 20
 >
 > Implement the tasks of the seventh user story, "{{site.sprint_2_user_story_7}}".
 >
@@ -766,23 +756,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 22
->
-> Implement the tasks of the eighth user story, "{{site.sprint_2_user_story_8}}".
->
-> The implementation could look something like this:
->
-> ![](/assets/sprint-2-user-story-8-1.png)
->
-> ![](/assets/sprint-2-user-story-8-2.png)
->
-> Tips for implementing the tasks:
->
-> - If the `Answer` entity's `Question` entity reference is in a `question` attribute and the `Question` entity's `Quiz` entity reference is in a `quiz` attribute, the JPA repository method `findByQuestionQuizId` can be implemented in the `AnswerRepository` class to find answers by a quiz id
-
-{: .important-title }
-
-> Exercise 23
+> Exercise 21
 >
 > Add instructions on _how to start the frontend application_ to the "Usage guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
@@ -804,7 +778,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 22
 >
 > Add a brief description of the project's _overall architecture_ and the _implementation technologies_ to the project description in the `README.md`. Mention at least the following things:
 >
@@ -871,7 +845,7 @@ public class QuizRestController {
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 23
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
 >
@@ -927,7 +901,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 24
 >
 > Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
 
@@ -937,19 +911,19 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 25
 >
 > Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive frontend-related files from the `frontend` folder.
 
 {: .important-title }
 
-> Exercise 28
+> Exercise 26
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 29
+> Exercise 27
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the features in the production environment.
 >
