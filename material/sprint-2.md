@@ -687,7 +687,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 > Exercise 15
 >
-> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". You can use the tasks suggested above, or plan your own tasks. Take a look at the exercise 19 to get tips for the implementation.
+> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". You can use the tasks suggested above, or plan your own tasks. Take a look at the exercise 19 to get tips for the implementation and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -695,7 +695,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 > Exercise 16
 >
-> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get tips for the implementation.
+> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get tips for the implementation and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -703,7 +703,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 > Exercise 17
 >
-> Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 21 to get tips for the implementation.
+> Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 21 to get tips for the implementation and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
