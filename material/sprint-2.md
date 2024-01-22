@@ -389,8 +389,6 @@ A collection can have _sub-collections_. For example, a path for a user's messag
 
 When we design and implement REST API endpoints we should consider the use case. We don't implement endpoints arbitrary, there should be a _need for the endpoint_ first, for example a certain feature in a frontend application needs to display some data in the database. Based on the feature we consider what kind of data and operations the REST API needs to provide. These requirements will determine the endpoints we will implement.
 
-We should however remember to _follow the implementation conventions_ to keep the REST API endpoints _reusable_ throughout the application. For example we don't want to implement a `/api/quizzes-for-home-page` endpoint just to provide data for a specific feature. Instead, we should be implement a single `/api/quizzes` endpoint, which is reusable for other features as well.
-
 We can create a separate controller class for each collection. The `@RequestMapping` annotation can be used the define the collection name prefix of the path. Each method will automatically get the prefix in the path, so we don't need to have it in the `@GetMapping` or `@PostMapping` annotations:
 
 ```java
