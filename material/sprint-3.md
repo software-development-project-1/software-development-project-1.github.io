@@ -66,7 +66,7 @@ After some discussion the Scrum Team planned the following user stories:
 1. {{site.sprint_3_user_story_1}}
 2. {{site.sprint_3_user_story_2}}
 3. {{site.sprint_3_user_story_3}}
-4. {{site.sprint_2_user_story_8}}
+4. {{site.sprint_3_user_story_4}}
 
 {: .important-title }
 
@@ -92,9 +92,9 @@ After some discussion the Scrum Team planned the following user stories:
 
 > Exercise 5
 >
-> Plan the tasks for the first user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 to get tips for the implementation and to get an idea what the implementation could look like.
+> Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 to get tips for the implementation and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 
 {: .note }
@@ -105,25 +105,25 @@ After some discussion the Scrum Team planned the following user stories:
 
 > Exercise 6
 >
-> Plan the tasks for the second user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "backend" label for the issues. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
 > Exercise 7
 >
-> Plan the tasks for the third user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "backend" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
 > Exercise 8
 >
-> Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 for some implementation tips and to get an idea what the implementation could look like.
 >
-> Create an issue for each task. Add the "backend" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 ## Testing
 
@@ -640,7 +640,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 > Exercise 15
 >
-> Implement the tasks of the first user story, "{{site.sprint_2_user_story_8}}".
+> Implement the tasks of the first user story, "{{site.sprint_3_user_story_1}}".
 >
 > The implementation could look something like this:
 >
@@ -650,13 +650,14 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 >
 > Tips for implementing the tasks:
 >
+> - You can implement a `/api/quizzes/{id}/answers` endpoint to return quiz-related answers
 > - If the `Answer` entity's `Question` entity reference is in a `question` attribute and the `Question` entity's `Quiz` entity reference is in a `quiz` attribute, the JPA repository method `findByQuestionQuizId` can be implemented in the `AnswerRepository` class to find answers by a quiz id
 
 {: .important-title }
 
 > Exercise 16
 >
-> Implement the tasks of the second user story, "{{site.sprint_3_user_story_1}}".
+> Implement the tasks of the second user story, "{{site.sprint_3_user_story_2}}".
 >
 > The implementation could look something like this:
 >
@@ -671,7 +672,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 > Exercise 17
 >
-> Implement the tasks of the third user story, "{{site.sprint_3_user_story_2}}".
+> Implement the tasks of the third user story, "{{site.sprint_3_user_story_3}}".
 >
 > The implementation could look something like this:
 >
@@ -687,7 +688,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 > Exercise 18
 >
-> Implement the tasks of the fourth user story, "{{site.sprint_3_user_story_3}}".
+> Implement the tasks of the fourth user story, "{{site.sprint_3_user_story_4}}".
 >
 > The implementation could look something like this:
 >
