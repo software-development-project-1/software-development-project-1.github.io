@@ -762,14 +762,6 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 >
 > Write the final report for the course as instructed above.
 
-{: .important-title }
-
-> Exercise 24
->
-> You can now pat yourself on the back, the project is done! 🎉
->
-> As one last request, the teacher would highly appreciate if you could spare a few minutes of your time by [giving feedback on the course]({{site.course_feedback_link}}).
-
 {: .warning }
 
 > Make sure that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint 3 deadline on {{site.sprint_3_deadline}}.
