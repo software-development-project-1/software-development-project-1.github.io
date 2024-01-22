@@ -85,31 +85,40 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project and move them to the "Sprint Backlog" column
 
+{: .important-title }
+
+> Exercise 5
+>
+> Plan the tasks for the first user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 22 to get tips for the implementation and to get an idea what the implementation could look like.
+>
+> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+
+
 {: .note }
 
 > The [Authentication](#authentication) section covers topics related to the authentication. Take a look at it before planning the authentication-related tasks.
 
 {: .important-title }
 
-> Exercise 5
+> Exercise 6
 >
-> Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the second user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "backend" label for the issues. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 7
 >
-> Plan the tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the third user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "backend" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 8
 >
-> Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add the "backend" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -455,7 +464,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 9
 >
 > To classify test-related issues, create a new "test" [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels). Add the "test" label for issues that are related to testing (automated or manual) some part of the application.
 
@@ -465,7 +474,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 10
 >
 > Create a new package `fi.haagahelia.quizzer.controller` to the `src/test/java` folder for the project's controller class tests. Implement a test class within the package with the following test methods for the GET `/api/quizzes` endpoint:
 >
@@ -476,7 +485,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 11
 >
 > Implement the following test methods for the GET `/api/quizzes/{id}` endpoint:
 >
@@ -488,7 +497,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 12
 >
 > Implement the following test methods for the GET `/api/quizzes/{id}/questions` endpoint:
 >
@@ -501,7 +510,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > Implement a test class with the following test methods for the POST `/api/answers` endpoint:
 >
@@ -514,7 +523,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > Add instructions on _how to run the tests_ to the "Usage guide" section in the `README.md` file. You can instruct the reader to use the `./mvnw test` command to run the tests.
 
@@ -626,7 +635,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 15
 >
 > Implement the tasks of the first user story, "{{site.sprint_3_user_story_1}}".
 >
@@ -641,7 +650,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 16
 >
 > Implement the tasks of the second user story, "{{site.sprint_3_user_story_2}}".
 >
@@ -657,7 +666,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 17
 >
 > Implement the tasks of the third user story, "{{site.sprint_3_user_story_3}}".
 >
@@ -678,7 +687,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 18
 >
 > Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
