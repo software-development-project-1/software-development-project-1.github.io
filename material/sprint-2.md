@@ -138,9 +138,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description and the date when it was added. These quizzes should be listed from newest to oldest. Each quiz name should be a link to a separate page where the quiz name, description and the questions are displayed.
 >
-> In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to type in and submit their answer for each question. When the student submits their answer, there should be some kind of feedback which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, the correct answer is "Helsinki"". The casing or leading or trailing whitespace of the answer should not be considered when checking if the student's answer is correct or not. For example, "helsinki" answer is correct when the correct answer is "Helsinki".
->
-> There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. There should be a link to the results page next to the quiz in the quiz list page."
+> In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to type in and submit their answer for each question. When the student submits their answer, there should be some kind of feedback which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, the correct answer is "Helsinki"". The casing or leading or trailing whitespace of the answer should not be considered when checking if the student's answer is correct or not. For example, "helsinki" answer is correct when the correct answer is "Helsinki""
 >
 > -- The Product Owner
 
@@ -153,9 +151,8 @@ After some discussion the Scrum Team planned the following user stories:
 5. {{site.sprint_2_user_story_5}}
 6. {{site.sprint_2_user_story_6}}
 7. {{site.sprint_2_user_story_7}}
-8. {{site.sprint_2_user_story_8}}
 
-The planning of the tasks for the last four user stories will be covered after the [REST APIs](#rest-apis) and [Communication between frontend and backend](#communication-between-frontend-and-backend) sections.
+The planning of the tasks for the last three user stories will be covered after the [REST APIs](#rest-apis) and [Communication between frontend and backend](#communication-between-frontend-and-backend) sections.
 
 {: .important-title }
 
