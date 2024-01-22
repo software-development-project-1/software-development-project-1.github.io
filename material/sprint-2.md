@@ -319,7 +319,7 @@ So far the user has interacted with our web application in the following manner:
 
 So the representation of our application's data is an HTML page. But what if we would like to implement the user interface with JavaScript, for example using React? In this case, instead of representing the data as HTML pages we need a proper _application programming interface_ (API) for the data.
 
-Instead of sending a response as an HTML page, we can serialize Java objects into _JSON_ strings and send it as a response. Let's have a look at the [MessageRestController](https://github.com/software-development-project-1/example-project/blob/main/src/main/java/fi/haagahelia/quizzer/controller/MessageRestController.java) controller class in the example project:
+Instead of sending a response as an HTML page, we can serialize Java objects into text-based _JSON format_ and send it as a response. Let's have a look at the [MessageRestController](https://github.com/software-development-project-1/example-project/blob/main/src/main/java/fi/haagahelia/quizzer/controller/MessageRestController.java) controller class in the example project:
 
 ```java
 @RestController
