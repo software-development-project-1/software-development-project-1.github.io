@@ -764,11 +764,12 @@ The remaining user stories include both backend-related and frontend-related tas
 
 > Exercise 22
 >
-> Add a brief description of the project's _overall architecture_ and the _implementation technologies_ to the project description in the `README.md`. Mention at least the following things:
+> Add a description of the project's _overall architecture_ and the _implementation technologies_ to the project description in the `README.md`. Mention at least the following things:
 >
-> 1. Which programming languages, frameworks and major libraries (e.g. Spring Boot) are used in the _backend implementation_?
-> 2. Which database platforms (e.g. H2, PostgreSQL) are used in different environments (development and production environment)?
-> 3. Which programming languages, frameworks and major libraries (e.g. React, Material UI) are used in the _frontend implementation_?
+> 1. From which components (backend, database, frontend) does the project's overall architecture consist of? What is the purpose of each component?
+> 2. Which programming language, frameworks and major libraries are used in the _backend implementation_?
+> 3. Which database platforms are used in different environments (development and production environment)?
+> 4. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
 
 ## REST API documentation with Swagger
 
