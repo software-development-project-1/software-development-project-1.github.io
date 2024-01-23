@@ -650,7 +650,6 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 >
 > Tips for implementing the tasks:
 >
-> - You can implement a `/api/quizzes/{id}/answers` endpoint to return quiz-related answers
 > - If the `Answer` entity's `Question` entity reference is in a `question` attribute and the `Question` entity's `Quiz` entity reference is in a `quiz` attribute, the JPA repository method `findByQuestionQuizId` can be implemented in the `AnswerRepository` class to find answers by a quiz id
 
 {: .important-title }
