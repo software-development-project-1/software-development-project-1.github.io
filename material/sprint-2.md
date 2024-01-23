@@ -626,7 +626,7 @@ In the seventh user story, "{{site.sprint_2_user_story_7}}", we need save the st
 
 Then, we can implement a POST method endpoint `/api/answers` for this use-case. If the user is trying to answer a quiz which is not published we should return a `403 Forbidden` status as a response. If the user is trying to answer a quiz which does not exist we should return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), we should return a `400 Bad Request` status as a response.
 
-The remaining user stories include both backend-related and frontend-related tasks. Before starting to implement the frontend features, we should test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL, for example <http://localhost:8080/api/quizzes>. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
+The remaining user stories include both backend-related and frontend-related tasks. Before starting to implement the frontend tasks, we should test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL, for example <http://localhost:8080/api/quizzes>. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
 
 {: .note }
 
