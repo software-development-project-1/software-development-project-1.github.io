@@ -365,7 +365,7 @@ The `{id}` part of the `/users/{id}` path is a _path variable_. For example, the
 
 A collection can have _sub-collections_. For example, a path for a user's messages resource would be `/users/{id}/messages`, where "messages" is a sub-collection. [This guide](https://restfulapi.net/resource-naming/) has more information about the resource path naming conventions.
 
-When we design and implement REST API endpoints we should consider the use case. We don't implement endpoints arbitrary, there should be a _need for the endpoint_ first, for example a certain feature in a frontend application needs to display some data in the database. Based on the feature we consider what kind of data and operations the REST API needs to provide. These requirements will determine the endpoints we will implement.
+When we design and implement REST API endpoints we should consider the use-case. We don't implement endpoints arbitrary, there should be a _need for the endpoint_ first, for example a certain feature in a frontend application needs to display some data in the database. Based on the feature we consider what kind of data and operations the REST API needs to provide. These requirements will determine the endpoints we will implement.
 
 We can create a separate controller class for each collection. The `@RequestMapping` annotation can be used the define the collection name prefix of the path. Each method will automatically get the prefix in the path, so we don't need to have it in the `@GetMapping` or `@PostMapping` annotations:
 
@@ -626,12 +626,7 @@ In the seventh user story, "{{site.sprint_2_user_story_7}}", we need save the st
 
 Then, we can implement a POST method endpoint `/api/answers` for this use-case. If the user is trying to answer a quiz which is not published we should return a `403 Forbidden` status as a response. If the user is trying to answer a quiz which does not exist we should return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), we should return a `400 Bad Request` status as a response.
 
-The remaining user stories include both backend-related and frontend-related tasks. For example, for the _fifth user story_ we could have the following tasks:
-
-1. Add a QuizRestController class and a method for the /api/quizzes endpoint which returns published quizzes
-2. Add a React component which lists published quizzes
-
-Before starting to implement the frontend features, we should test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL, for example <http://localhost:8080/api/quizzes>. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
+The remaining user stories include both backend-related and frontend-related tasks. Before starting to implement the frontend features, we should test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL, for example <http://localhost:8080/api/quizzes>. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
 
 {: .note }
 
@@ -661,7 +656,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 > Exercise 15
 >
-> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". You can use the tasks suggested above, or plan your own tasks. Take a look at the exercise 18 to get an idea what the implementation could look like.
+> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
