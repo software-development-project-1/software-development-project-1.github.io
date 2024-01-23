@@ -661,7 +661,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 > Exercise 15
 >
-> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". You can use the tasks suggested above, or plan your own tasks. Take a look at the exercise 19 to get tips for the implementation and to get an idea what the implementation could look like.
+> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". You can use the tasks suggested above, or plan your own tasks. Take a look at the exercise 19 to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -669,7 +669,7 @@ Before starting to implement the frontend features, we should test that the endp
 
 > Exercise 16
 >
-> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get tips for the implementation and to get an idea what the implementation could look like.
+> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -690,10 +690,6 @@ Before starting to implement the frontend features, we should test that the endp
 > The implementation could look something like this:
 >
 > ![](/assets/sprint-2-user-story-5.png)
->
-> Tips for implementing the tasks:
->
-> - Material UI [Table](https://mui.com/material-ui/react-table/)
 
 {: .important-title }
 
@@ -706,10 +702,6 @@ Before starting to implement the frontend features, we should test that the endp
 > ![](/assets/sprint-2-user-story-6-1.png)
 >
 > ![](/assets/sprint-2-user-story-6-2.png)
->
-> Tips for implementing the tasks:
->
-> - Material UI [Card](https://mui.com/material-ui/react-card/)
 
 {: .important-title }
 
@@ -725,7 +717,7 @@ Before starting to implement the frontend features, we should test that the endp
 >
 > Tips for implementing the tasks:
 >
-> - Material UI [Snackbar](https://mui.com/material-ui/react-snackbar/)
+> - Feedback notification can be implemented with Material UI [Snackbar](https://mui.com/material-ui/react-snackbar/) or with a library such as [notistack](https://notistack.com/)
 > - The request body format can be defined by a [DTO](https://www.baeldung.com/java-dto-pattern) class:
 >
 >   ```java
