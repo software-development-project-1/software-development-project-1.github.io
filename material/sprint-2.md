@@ -777,7 +777,7 @@ The remaining user stories include both backend-related and frontend-related tas
 > Add a description of the project's _overall architecture_ and the _implementation technologies_ to the project description in the `README.md`. Mention at least the following things:
 >
 > 1. From which components (backend, database, frontend) does the project's overall architecture consist of? What is the purpose of each component?
-> 2. Implement a simple [flow chart](https://mermaid.js.org/syntax/flowchart.html) which describes how the components communicate with each other. For example does the frontend communicate with the database directly?
+> 2. Implement a simple [flow chart](https://mermaid.js.org/syntax/flowchart.html) which describes how the components communicate with each other. For example does the frontend communicate with the database directly? Use the [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax to implement the diagram
 > 3. Which programming language, frameworks and major libraries are used in the _backend implementation_?
 > 4. Which database platforms are used in different environments (development and production environment)?
 > 5. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
