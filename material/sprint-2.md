@@ -528,7 +528,7 @@ fetch("http://localhost:8080/api/messages", {
 In the example project, the logic of fetching and creating messages is extracted into `getAllMessages` and `createMessage` functions, which can be found in the `frontend/src/services/message.js` file:
 
 ```js
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL ?? "";
+const BACKEND_URL = "http://localhost:8080";
 
 export function getAllMessages() {
   return fetch(`${BACKEND_URL}/api/messages`).then((response) =>
@@ -554,50 +554,70 @@ export function createMessage(message) {
 }
 ```
 
-{: .note }
-
-> The `VITE_BACKEND_URL` is an [environment variable](https://vitejs.dev/guide/env-and-mode). We have a different backend URL in the development and in the production environment.
-
 These are simple _abstractions_ for fetching and creating messages, but they are quite handy. If for example the logic for fetching the messages (for example the API URL) changes, we only need to change the logic inside the `getAllMessages` function and nowhere else.
 
-The `MessageList` component in the `frontend/src/routes/MessageList.jsx` calls the `getAllMessages` function to display the message list:
+The `MessageList` component in the `frontend/src/components/MessageList.jsx` calls the `getAllMessages` function to display the message list:
 
 {% raw %}
 
 ```jsx
 import { useEffect, useState } from "react";
-import { Typography, Button } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Typography, Button, Box, TextField } from "@mui/material";
 
-import { getAllMessages } from "../services/message";
+import { getAllMessages, createMessage } from "../services/message";
 
 export default function MessageList() {
   const [messages, setMessages] = useState([]);
+  const [content, setContent] = useState("");
 
-  useEffect(() => {
+  function fetchMessages() {
     getAllMessages().then((messages) => {
       setMessages(messages);
     });
+  }
+
+  function handleSubmitMessage(event) {
+    event.preventDefault();
+
+    createMessage({ content }).then(() => {
+      setContent("");
+      fetchMessages();
+    });
+  }
+
+  useEffect(() => {
+    fetchMessages();
   }, []);
 
   return (
     <>
-      <Typography variant="h4" component="h1">
-        Messages
-      </Typography>
+      <Typography variant="h4">Messages</Typography>
+
       <ul>
         {messages.map((message) => (
           <li key={message.id}>{message.content}</li>
         ))}
       </ul>
-      <Button
-        component={Link}
-        to="/messages/add"
-        variant="contained"
-        sx={{ marginBottom: 2 }}
-      >
-        Add a message
-      </Button>
+
+      <Box sx={{ marginTop: 2 }}>
+        <form onSubmit={handleSubmitMessage}>
+          <TextField
+            label="Content"
+            variant="outlined"
+            value={content}
+            onChange={(event) => setContent(event.target.value)}
+            required
+            multiline
+            fullWidth
+          />
+
+          <Box sx={{ marginTop: 2 }}>
+            <Button type="submit" variant="contained">
+              Add a message
+            </Button>
+          </Box>
+        </form>
+      </Box>
     </>
   );
 }
@@ -872,10 +892,10 @@ These two lines will ignore both the `node_modules` and `dist` folders in the `f
 
 We managed to deploy the backend during the previous Sprint, but we still haven't deployed the frontend. We can deploy the frontend to Render with the following steps:
 
-1. In the `frontend` folder, add a `.env.production` [environment variable](https://vitejs.dev/guide/env-and-mode) file. The `.env.production` file should contain a `VITE_BACKEND_URL` environmet variable for the backend's _production environment URL_. For example:
+1. In the `frontend` folder, add a `.env` [environment variable](https://vitejs.dev/guide/env-and-mode) file for the _development environment_. The `.env` file should contain a `VITE_BACKEND_URL` environment variable for the backend's _development environment URL_:
 
    ```
-   VITE_BACKEND_URL=https://name-of-the-backend-service.onrender.com
+   VITE_BACKEND_URL=http://localhost:8080
    ```
 
    Make sure that every `fetch` function call has the environment variable as the URL prefix. For example:
@@ -884,6 +904,12 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/quizzes`).then((response) => {
      // ...
    });
+   ```
+
+1. Add a `.env.production` environment variable file for the _production environment_. The `.env.production` file should contain a `VITE_BACKEND_URL` environment variable for the backend's _production environment URL_. For example:
+
+   ```
+   VITE_BACKEND_URL=https://name-of-the-backend-service.onrender.com
    ```
 
    Finally, _push the changes to GitHub_
