@@ -646,7 +646,7 @@ public class MessageRestController {
 
 ## Designing the REST API endpoints for the user stories
 
-Next, let's consider what kind of REST API endpoints we need for the last three user stories. Implement the following four endpoints by following the [REST API naming principles](https://restfulapi.net/resource-naming/):
+Next, let's consider what kind of REST API endpoints we need for the last three user stories. Implement the following four endpoints by following the [REST API naming conventions](https://restfulapi.net/resource-naming/):
 
 1. GET `/api/quizzes` to get all _published_ quizzes
 2. GET `/api/quizzes/{id}` to get a quiz by id. If there is no quiz with the provided id, return a `404 Not Found` status as a response. If the quiz is not published, return a `403 Forbidden` status as a response.
