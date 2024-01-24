@@ -646,17 +646,14 @@ public class MessageRestController {
 
 ## Designing the REST API endpoints for the user stories
 
-Next, let's consider what kind of REST API endpoints we need for the last three user stories. In the fifth user story, "{{site.sprint_2_user_story_5}}", we need to list all the published quizzes. To follow the [REST API naming principles](https://restfulapi.net/resource-naming/), we can implement a GET method endpoint `/api/quizzes`.
+Next, let's consider what kind of REST API endpoints we need for the last three user stories. Plan and implement the following four endpoints by following the [REST API naming principles](https://restfulapi.net/resource-naming/):
 
-In the sixth user story, "{{site.sprint_2_user_story_6}}", we need to display information of a quiz with a specific id. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}`. If there is no quiz with the provided id, we should return a `404 Not Found` status as a response. Similarly, if the quiz is not published, we should return a `403 Forbidden` status as a response.
+1. Get all published quizzes
+2. Get a quiz by id. If there is no quiz with the provided id, return a `404 Not Found` status as a response. If the quiz is not published, return a `403 Forbidden` status as a response.
+3. Get all questions of a quiz by id. Implement similar error handling as with the second endpoint
+4. Create an answer for a quiz question. Information about the answer text, correctness status (was the answer correct or not based on the question's correct answer) and the question reference should be stored. If the user is trying to answer a quiz which is not published, return a `403 Forbidden` status as a response. If the user is trying to answer a quiz which does not exist, return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), return a `400 Bad Request` status as a response
 
-We also want to list the quiz-related questions. For this use-case we can implement a GET method endpoint `/api/quizzes/{id}/questions`. We should implement similar error handling for this endpoint as in the `/api/quizzes/{id}` endpoint.
-
-In the seventh user story, "{{site.sprint_2_user_story_7}}", we need save the student's answer to a quiz question. Before implementing the endpoint we need to consider what kind of data we need to store about the student's answer. We want at least to know which question the answer is related to, what's the answer text and whether the answer was correct or not. So, we need to implement the appropriate JPA entity class and a JPA repository class first.
-
-Then, we can implement a POST method endpoint `/api/answers` for this use-case. If the user is trying to answer a quiz which is not published we should return a `403 Forbidden` status as a response. If the user is trying to answer a quiz which does not exist we should return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), we should return a `400 Bad Request` status as a response.
-
-The remaining user stories include both backend-related and frontend-related tasks. Before starting to implement the frontend tasks, we should test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL, for example <http://localhost:8080/api/quizzes>. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
+The remaining user stories include both backend-related and frontend-related tasks. Before starting to implement the frontend tasks, we should test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
 
 {: .note }
 
@@ -754,15 +751,6 @@ The remaining user stories include both backend-related and frontend-related tas
 >       private Long questionId;
 >
 >       // constructors, getters and setters
->   }
->   ```
->
->   Then, the frontend can send a request body in the following format:
->
->   ```json
->   {
->     "answerText": "helsinki",
->     "questionId": 1
 >   }
 >   ```
 >
