@@ -665,6 +665,15 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
    }
    ```
 
+Then, the frontend can send a JSON request body in the following format:
+
+   ```json
+   {
+     "answerText": "helsinki",
+     "questionId": 1
+   }
+   ```
+
 The remaining user stories include both backend-related and frontend-related tasks. Before starting to implement the frontend tasks, test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
 
 {: .note }
