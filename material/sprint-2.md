@@ -651,7 +651,19 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 1. GET `/api/quizzes` to get all _published_ quizzes
 2. GET `/api/quizzes/{id}` to get a quiz by id. If there is no quiz with the provided id, return a `404 Not Found` status as a response. If the quiz is not published, return a `403 Forbidden` status as a response
 3. GET `/api/quizzes/{id}/questions` to get the questions of a quiz by id. Implement similar error handling as with the second endpoint
-4. POST `/api/answers` to create an answer for a quiz's question. Information about the answer's text, correctness status (is the answer correct or not based on the question's correct answer) and the question reference should be stored. If the user is trying to answer a quiz which is not published, return a `403 Forbidden` status as a response. If the user is trying to answer a quiz which does not exist, return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), return a `400 Bad Request` status as a response
+4. POST `/api/answers` to create an answer for a quiz's question. Information about the answer's text, correctness status (is the answer correct or not based on the question's correct answer) and the question reference should be stored. If the user is trying to answer a quiz which is not published, return a `403 Forbidden` status as a response. If the user is trying to answer a quiz which does not exist, return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), return a `400 Bad Request` status as a response. The request body format can be defined by a [DTO](https://www.baeldung.com/java-dto-pattern) class:
+
+   ```java
+   public class CreateAnswerDto {
+       @NotBlank(message = "Answer text is required")
+       private String answerText;
+
+       @NotNull(message = "Question id is required")
+       private Long questionId;
+
+       // constructors, getters and setters
+   }
+   ```
 
 The remaining user stories include both backend-related and frontend-related tasks. Before starting to implement the frontend tasks, test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
 
@@ -740,21 +752,6 @@ The remaining user stories include both backend-related and frontend-related tas
 > Tips for implementing the tasks:
 >
 > - Feedback notification can be implemented with Material UI [Snackbar](https://mui.com/material-ui/react-snackbar/) or with a library such as [notistack](https://notistack.com/)
-> - The request body format can be defined by a [DTO](https://www.baeldung.com/java-dto-pattern) class:
->
->   ```java
->   public class CreateAnswerDto {
->       @NotBlank(message = "Answer text is required")
->       private String answerText;
->
->       @NotNull(message = "Question id is required")
->       private Long questionId;
->
->       // constructors, getters and setters
->   }
->   ```
->
-> - [trim](https://www.baeldung.com/string/trim) and [equalsIgnoreCase](https://www.baeldung.com/java-string-equalsignorecase) methods might come in handy while checking for the correctness of the user's answer
 
 {: .important-title }
 
