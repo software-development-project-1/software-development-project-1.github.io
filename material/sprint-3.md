@@ -698,11 +698,6 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 > Tips for implementing the tasks:
 >
 > - [Retrieve User Information in Spring Security](https://www.baeldung.com/get-user-in-spring-security)
-> - You can display content in a Thymeleaf template based on the authenticated user's username in the following way:
->
->   ```html
->   th:if="${#authentication.principal.username == quiz.user?.username}"
->   ```
 
 {: .important-title }
 
