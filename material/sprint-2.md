@@ -665,7 +665,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
    }
    ```
 
-Then, the frontend can send a JSON request body in the following format:
+  Then, the frontend can send a JSON request body in the following format:
 
    ```json
    {
