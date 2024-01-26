@@ -477,6 +477,15 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 > You can easily find the issues assigned to you by opening the "Issues" tab and choosing your GitHub account from the "Assignee" dropdown menu.
 
+## Tips for implementing the tasks
+
+Here's a few tips before you start implementing the tasks:
+
+- _Push_ code to the GitHub repository often. Once you have some _working_ code, use `git add`, `git commit`, `git push` commands to push the code to GitHub.
+- _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer.
+- While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts).
+- Take a look at the [example project]({{site.example_project_link}}) for examples.
+
 ## Thymeleaf page layouts
 
 If we start the example project application and visit the [message list page](http://localhost:8080) at and the [add message page](http://localhost:8080/messages/add), we see that the pages share a common structure. They both have the navigation bar at the top of the page. If we dig deeper into the HTML structure, there's also common `link` and `script` elements. We could simply copy-paste the navigation bar HTML to both pages, but once we implement more pages and want to update the navigation bar, things start to get out of hand. Instead, we can have a common _layout_ for the application that each page can share. This can be achieved using the [Thymeleaf Layout Dialect](https://ultraq.github.io/thymeleaf-layout-dialect/) which has been configured for the project in the [ThymeleafConfig](https://github.com/software-development-project-1/example-project/blob/main/src/main/java/fi/haagahelia/quizzer/config/ThymeleafConfig.java) class.
@@ -527,16 +536,6 @@ Let's have a look at the `messagelist.html` file that is using this layout:
 ```
 
 The `layout:decorate="~{layout.html}"` on the `html` element specifies that this template is using the `layout.html` file as the layout file. The `div` element that has the `layout:fragment="content"` attribute has the content that will be displayed on the corresponding layout fragment on the `layout.html` file.
-
-## Tips for implementing the tasks
-
-Here's a few tips before you start implementing the tasks:
-
-- It is recommended to implement the user stories in the order they are in the Product Backlog.
-- _Push_ code to the GitHub repository often. Once you have some _working_ code, use `git add`, `git commit`, `git push` commands to push the code to GitHub.
-- _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer.
-- While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts).
-- Take a look at the [example project]({{site.example_project_link}}) for examples.
 
 ## Daily Scrum
 
