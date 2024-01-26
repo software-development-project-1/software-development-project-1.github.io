@@ -15,7 +15,7 @@ For the final Sprint of the course, the Sprint 3, we have a new set of requireme
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
 
-The Sprint assesment is done based on the exercises 1-24. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
+The Sprint assesment is done based on the exercises 1-19. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
 
 During this Sprint, each team member will do a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 10 personal points.
 
@@ -92,10 +92,19 @@ After some discussion the Scrum Team planned the following user stories:
 
 > Exercise 5
 >
-> Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 15 to get tips for the implementation and to get an idea what the implementation could look like.
+> Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
-
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-8-1.png)
+>
+> ![](/assets/sprint-2-user-story-8-2.png)
+>
+> Tips for the tasks:
+>
+> - GET `/api/quizzes/{id}/answers` REST API endpoint can be implemented to get the answers of a quiz
 
 {: .note }
 
@@ -105,25 +114,49 @@ After some discussion the Scrum Team planned the following user stories:
 
 > Exercise 6
 >
-> Plan the tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 16 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+> 
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-3-user-story-1.png)
 
 {: .important-title }
 
 > Exercise 7
 >
-> Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 17 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-3-user-story-2-1.png)
+>
+> ![](/assets/sprint-3-user-story-2-2.png)
+>
+> Tips for implementing the tasks:
+>
+> - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
 
 {: .important-title }
 
 > Exercise 8
 >
-> Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 18 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-3-user-story-3-1.png)
+>
+> ![](/assets/sprint-3-user-story-3-2.png)
+>
+> Tips for the tasks:
+>
+> - [Retrieve User Information in Spring Security](https://www.baeldung.com/get-user-in-spring-security)
 
 ## Testing
 
@@ -636,72 +669,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 The `loadUserByUsername` method will need to return a `UserDetails` object based on the username provided by the paramater or throw an `UsernameNotFoundException` exception if no user is found.
 
-{: .important-title }
+{: .important-title}
 
 > Exercise 15
->
-> Implement the tasks of the first user story, "{{site.sprint_3_user_story_1}}".
->
-> The implementation could look something like this:
->
-> ![](/assets/sprint-2-user-story-8-1.png)
->
-> ![](/assets/sprint-2-user-story-8-2.png)
->
-> Tips for implementing the tasks:
->
-> - GET `/api/quizzes/{id}/answers` REST API endpoint can be implemented to get the answers of a quiz
-
-{: .important-title }
-
-> Exercise 16
->
-> Implement the tasks of the second user story, "{{site.sprint_3_user_story_2}}".
->
-> The implementation could look something like this:
->
-> ![](/assets/sprint-3-user-story-1.png)
->
-> Tips for implementing the tasks:
->
-> - Start the implementation by adding the spring-boot-starter-security and thymeleaf-extras-springsecurity6 dependencies for the project
-> - Add similar `SecurityConfig` and `UserDetailsServiceImpl` classes as instructed above
-
-{: .important-title }
-
-> Exercise 17
->
-> Implement the tasks of the third user story, "{{site.sprint_3_user_story_3}}".
->
-> The implementation could look something like this:
->
-> ![](/assets/sprint-3-user-story-2-1.png)
->
-> ![](/assets/sprint-3-user-story-2-2.png)
->
-> Tips for implementing the tasks:
->
-> - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
-
-{: .important-title }
-
-> Exercise 18
->
-> Implement the tasks of the fourth user story, "{{site.sprint_3_user_story_4}}".
->
-> The implementation could look something like this:
->
-> ![](/assets/sprint-3-user-story-3-1.png)
->
-> ![](/assets/sprint-3-user-story-3-2.png)
->
-> Tips for implementing the tasks:
->
-> - [Retrieve User Information in Spring Security](https://www.baeldung.com/get-user-in-spring-security)
-
-{: .important-title }
-
-> Exercise 19
 >
 > Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
@@ -709,13 +679,13 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 16
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 17
 >
 > Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
 
@@ -737,7 +707,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 18
 >
 > Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 
@@ -753,7 +723,7 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 19
 >
 > Write the final report for the course as instructed above.
 
