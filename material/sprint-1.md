@@ -381,7 +381,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 > Exercise 14
 >
-> Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 21 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 > 
@@ -402,7 +402,6 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >   @GetMapping("/")
 >   public String listQuizzes(@RequestParam(required = false) Boolean published, /* ... */) {
 >       model.addAttribute("publishedFilter", published);
->
 >       // ...
 >   }
 >   ```
