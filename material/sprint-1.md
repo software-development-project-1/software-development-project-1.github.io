@@ -384,16 +384,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 21 for some implementation tips and to get an idea what the implementation could look like.
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
-
-
-{: .important-title }
-
-> Exercise 15
->
-> Plan the tasks for the sixth user story, "{{site.sprint_1_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
->
+> 
 > The implementation could look something like this:
 >
 > ![](/assets/sprint-1-user-story-5-1.png)
@@ -427,6 +418,23 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >     Published
 >   </a>
 >   ```
+
+{: .important-title }
+
+> Exercise 15
+>
+> Plan the tasks for the sixth user story, "{{site.sprint_1_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-1-user-story-6.png)
+>
+> Tips for the tasks:
+>
+> - [Hibernate CreationTimestamp annotation](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
+> - You can format an [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object in a Thymeleaf template with the [#temporals.format](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html#temporals-java.time) utility
 
 {: .note }
 
