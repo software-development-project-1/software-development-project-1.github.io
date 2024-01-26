@@ -193,6 +193,13 @@ The planning of the tasks for the last three user stories will be covered after 
 > Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-2.png)
+>
+> - Remember to implement the appropriate validation for the form
+> - Make sure that you can delete a quiz that has questions. Before deleting a quiz, you need to delete the quiz-related questions. You can use an appropriate [Cascade Type](https://www.baeldung.com/jpa-cascade-types) to achieve this automatically
 
 {: .important-title }
 
@@ -201,6 +208,10 @@ The planning of the tasks for the last three user stories will be covered after 
 > Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-3.png)
 
 {: .important-title }
 
@@ -209,6 +220,10 @@ The planning of the tasks for the last three user stories will be covered after 
 > Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-4.png)
 
 {: .important-title }
 
@@ -220,34 +235,6 @@ The planning of the tasks for the last three user stories will be covered after 
 > 2. Facilitate a planning poker event where you estimate the _first four user stories_ of the Sprint
 > 3. Based on the user story estimation, add the story point labels for the four user story related issues
 
-{: .important-title }
-
-> Exercise 10
->
-> Implement the tasks of the first user story, "{{site.sprint_2_user_story_1}}".
-
-
-{: .important-title }
-
-> Exercise 11
->
-> Implement the tasks of the second user story, "{{site.sprint_2_user_story_2}}".
->
-> The implementation could look something like this:
->
-> ![](/assets/sprint-2-user-story-2.png)
->
-> Validate that the question text and correct answer is not blank. Make sure that you can delete a quiz that has questions. Before deleting a quiz, you need to delete the quiz-related questions. You can use an appropriate [Cascade Type](https://www.baeldung.com/jpa-cascade-types) to achieve this automatically.
-
-{: .important-title }
-
-> Exercise 12
->
-> Implement the tasks of the third user story, "{{site.sprint_2_user_story_3}}".
->
-> The implementation could look roughly roughly something like this:
->
-> ![](/assets/sprint-2-user-story-3.png)
 
 {: .important-title }
 
@@ -255,9 +242,7 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > Implement the tasks of the fourth user story, "{{site.sprint_2_user_story_4}}".
 >
-> The implementation could look roughly roughly something like this:
->
-> ![](/assets/sprint-2-user-story-4.png)
+> 
 
 {: .important-title }
 
