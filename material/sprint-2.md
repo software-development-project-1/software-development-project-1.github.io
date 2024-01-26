@@ -178,15 +178,19 @@ The planning of the tasks for the last three user stories will be covered after 
 
 > Exercise 5
 >
-> Plan the tasks for the first user story, "{{site.sprint_2_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 10 to get some implementation tips.
+> Plan the tasks for the first user story, "{{site.sprint_2_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> Tips for the tasks:
+>
+> - [Sorting Query Results with Spring Data](https://www.baeldung.com/spring-data-sorting)
 
 {: .important-title }
 
 > Exercise 6
 >
-> Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 11 to get some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -194,7 +198,7 @@ The planning of the tasks for the last three user stories will be covered after 
 
 > Exercise 7
 >
-> Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 12 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -202,7 +206,7 @@ The planning of the tasks for the last three user stories will be covered after 
 
 > Exercise 8
 >
-> Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 13 to get an idea what the implementation could look like.
+> Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -221,10 +225,7 @@ The planning of the tasks for the last three user stories will be covered after 
 > Exercise 10
 >
 > Implement the tasks of the first user story, "{{site.sprint_2_user_story_1}}".
->
-> Tips for implementing the tasks:
->
-> - [Sorting Query Results with Spring Data](https://www.baeldung.com/spring-data-sorting)
+
 
 {: .important-title }
 
