@@ -15,7 +15,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-28. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-21. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -235,18 +235,9 @@ The planning of the tasks for the last three user stories will be covered after 
 > 2. Facilitate a planning poker event where you estimate the _first four user stories_ of the Sprint
 > 3. Based on the user story estimation, add the story point labels for the four user story related issues
 
-
 {: .important-title }
 
-> Exercise 13
->
-> Implement the tasks of the fourth user story, "{{site.sprint_2_user_story_4}}".
->
-> 
-
-{: .important-title }
-
-> Exercise 14
+> Exercise 10
 >
 > Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a verbal description of the application's data model, which documents the application's entities, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). Add the diagram and the verbal description to a `data-model.md` file in the `documentation` folder. The verbal description should explain the purpose of each entity and their relationship to other entities. Add a link to the file to "Documentation" section in the `README.md` file.
 >
@@ -682,39 +673,17 @@ The remaining user stories include both backend-related and frontend-related tas
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 11
 >
 > To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation.
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 12
 >
-> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 19 to get an idea what the implementation could look like.
->
-> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
-
-{: .important-title }
-
-> Exercise 17
->
-> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get an idea what the implementation could look like.
+> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
-
-{: .important-title }
-
-> Exercise 18
->
-> Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 21 to get tips for the implementation and to get an idea what the implementation could look like.
->
-> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
-
-{: .important-title }
-
-> Exercise 19
->
-> Implement the tasks of the fifth user story, "{{site.sprint_2_user_story_5}}".
 >
 > The implementation could look something like this:
 >
@@ -722,9 +691,11 @@ The remaining user stories include both backend-related and frontend-related tas
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 13
 >
-> Implement the tasks of the sixth user story, "{{site.sprint_2_user_story_6}}".
+> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
 > The implementation could look something like this:
 >
@@ -734,9 +705,11 @@ The remaining user stories include both backend-related and frontend-related tas
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 14
 >
-> Implement the tasks of the seventh user story, "{{site.sprint_2_user_story_7}}".
+> Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
 > The implementation could look something like this:
 >
@@ -744,13 +717,13 @@ The remaining user stories include both backend-related and frontend-related tas
 >
 > ![](/assets/sprint-2-user-story-7-2.png)
 >
-> Tips for implementing the tasks:
+> Tips for the tasks:
 >
 > - Feedback notification can be implemented with Material UI [Snackbar](https://mui.com/material-ui/react-snackbar/) or with a library such as [notistack](https://notistack.com/)
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 15
 >
 > Add instructions on _how to start the frontend application_ to the "Usage guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
@@ -772,7 +745,7 @@ The remaining user stories include both backend-related and frontend-related tas
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 16
 >
 > Add a description of the project's _overall architecture_ and the _implementation technologies_ to the project description in the `README.md`. Mention at least the following things:
 >
@@ -841,7 +814,7 @@ public class QuizRestController {
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 17
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
 >
@@ -903,7 +876,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 18
 >
 > Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
 
@@ -913,19 +886,19 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 19
 >
 > Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive frontend-related files from the `frontend` folder.
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 20
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 28
+> Exercise 21
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the features in the production environment.
 >
