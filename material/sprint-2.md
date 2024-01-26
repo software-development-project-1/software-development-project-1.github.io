@@ -402,6 +402,12 @@ public class CreateMessageDto {
 }
 ```
 
+This corresponds to the following JSON format for the request body:
+
+```json
+{ "content": "Hello world!" }
+```
+
 ### HTTP status codes and REST API error handling
 
 Previously we have handled errors in requests by sending a redirect or rendering a Thymeleaf template with some error messages. With REST API endpoints we communicate errors with [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) and JSON formatted error objects containing details about the error. HTTP status codes are numeric codes that describe whether the request was successful or not.
