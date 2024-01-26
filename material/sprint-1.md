@@ -320,6 +320,16 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > Create an issue for each task of the first user story, "{{site.sprint_1_user_story_1}}". You can use the tasks suggested in the [Sprint 1 planning](#%EF%B8%8F-sprint-1-planning) section, or plan your own tasks.
 >
 > Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-1-user-story-1.png)
+>
+> Tips for the tasks:
+>
+> - The quiz published status can be implemented as a [Boolean](https://www.geeksforgeeks.org/java-lang-boolean-class-java/) attribute and with a [checkbox field](https://www.thymeleaf.org/doc/tutorials/3.1/thymeleafspring.html#checkbox-fields)
+> - Remember to implement the appropriate validation for the form
+> - Alter the `layout.html` file mentioned above to change the navigation bar content
 
 {: .important-title }
 
@@ -328,22 +338,44 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > Create an issue for each task of the second user story, "{{site.sprint_1_user_story_2}}". You can use the tasks suggested in the [Sprint 1 planning](#%EF%B8%8F-sprint-1-planning) section, or plan your own tasks.
 >
 > Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-1-user-story-2.png)
+>
+> Tips for the tasks:
+> 
+> - This page should be visible on the root path (the `/` path) of the application. Change the `@GetMapping` of the `listMessages` method in the `MessageController` class, for example to `@GetMapping("/messages")`
 
 {: .important-title }
 
 > Exercise 12
 >
-> Plan the tasks for the third user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 19 to get an idea what the implementation could look like.
+> Plan the tasks for the third user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-1-user-story-3-1.png)
+>
+> ![](/assets/sprint-1-user-story-3-2.png)
+>
+> Tips for the tasks:
+> 
+> - Remember to implement the appropriate validation for the form
 
 {: .important-title }
 
 > Exercise 13
 >
-> Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 20 to get an idea what the implementation could look like.
+> Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-1-user-story-4.png)
 
 {: .important-title }
 
@@ -358,9 +390,43 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 > Exercise 15
 >
-> Plan the tasks for the sixth user story, "{{site.sprint_1_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks. Take a look at the exercise 22 for some implementation tips and to get an idea what the implementation could look like.
+> Plan the tasks for the sixth user story, "{{site.sprint_1_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The implementation could look something like this:
+>
+> ![](/assets/sprint-1-user-story-5-1.png)
+>
+> ![](/assets/sprint-1-user-story-5-2.png)
+>
+> ![](/assets/sprint-1-user-story-5-3.png)
+>
+> Tips for the tasks:
+>
+> - [Derived Query Methods in Spring Data JPA Repositories](https://www.baeldung.com/spring-data-derived-queries)
+> - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). We can access request parameters in a controller method with the `@RequestParam` annotation in the following way:
+>
+>   ```java
+>   @GetMapping("/")
+>   public String listQuizzes(@RequestParam(required = false) Boolean published, /* ... */) {
+>       model.addAttribute("publishedFilter", published);
+>
+>       // ...
+>   }
+>   ```
+>
+> - In the Thymeleaf template we can add the request parameter to a link:
+>
+>   ```html
+>   <a
+>     href="/?published=true"
+>     class="nav-link"
+>     th:classappend="${publishedFilter == true}? active"
+>   >
+>     Published
+>   </a>
+>   ```
 
 {: .note }
 
