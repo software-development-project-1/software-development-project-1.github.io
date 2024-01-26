@@ -433,7 +433,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > Tips for the tasks:
 >
 > - [Hibernate CreationTimestamp annotation](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
-> - You can format an [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object in a Thymeleaf template with the [#temporals.format](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html#temporals-java.time) utility
+> - [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object can be formatted in a Thymeleaf template with the [#temporals.format](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html#temporals-java.time) utility
 
 {: .note }
 
