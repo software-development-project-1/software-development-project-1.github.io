@@ -19,7 +19,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 2. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-26. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-20. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Sprint Planning
 
@@ -539,39 +539,6 @@ Here's a few tips before you start implementing the tasks:
 - While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts).
 - Take a look at the [example project]({{site.example_project_link}}) for examples.
 
-{: .note }
-
-> The visual aspect of the application is not as important as the functionality. The most important things is that the user has some kind of functionality for the features described in the user stories.
-
-{: .important-title }
-
-> Exercise 17
->
-> Implement the tasks of the first user story, "{{site.sprint_1_user_story_1}}".
->
-> The implementation could look something like this:
->
-> ![](/assets/sprint-1-user-story-1.png)
->
-> Remember to implement the appropriate validation for the form. Alter the `layout.html` file mentioned above to change the navigation bar content.
->
-> Tips for implementing the tasks:
->
-> - [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
-> - [Validating Form Input](https://spring.io/guides/gs/validating-form-input/)
-> - The quiz published status can be implemented as a [Boolean](https://www.geeksforgeeks.org/java-lang-boolean-class-java/) attribute and with a [checkbox field](https://www.thymeleaf.org/doc/tutorials/3.1/thymeleafspring.html#checkbox-fields)
-
-{: .important-title }
-
-> Exercise 18
->
-> Implement the tasks of the second user story, "{{site.sprint_1_user_story_2}}".
->
-> The implementation could look something like this:
->
-> ![](/assets/sprint-1-user-story-2.png)
->
-> This page should be visible on the root path (the `/` path) of the application. Change the `@GetMapping` of the `listMessages` method in the `MessageController` class, for example to `@GetMapping("/messages")`.
 
 {: .important-title }
 
