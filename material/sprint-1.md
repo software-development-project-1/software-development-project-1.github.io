@@ -539,90 +539,6 @@ Here's a few tips before you start implementing the tasks:
 - While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts).
 - Take a look at the [example project]({{site.example_project_link}}) for examples.
 
-
-{: .important-title }
-
-> Exercise 19
->
-> Implement the tasks of the third user story, "{{site.sprint_1_user_story_3}}".
->
-> The implementation could look something like this:
->
-> ![](/assets/sprint-1-user-story-3-1.png)
->
-> ![](/assets/sprint-1-user-story-3-2.png)
->
-> Remember to implement the appropriate validation for the form.
-
-{: .important-title }
-
-> Exercise 20
->
-> Implement the tasks of the fourth user story, "{{site.sprint_1_user_story_4}}".
->
-> The implementation could look roughly something like this:
->
-> ![](/assets/sprint-1-user-story-4.png)
-
-{: .important-title }
-
-> Exercise 21
->
-> Implement the tasks of the fifth user story, "{{site.sprint_1_user_story_5}}".
->
-> The implementation could look something like this:
->
-> ![](/assets/sprint-1-user-story-5-1.png)
->
-> ![](/assets/sprint-1-user-story-5-2.png)
->
-> ![](/assets/sprint-1-user-story-5-3.png)
->
-> Tips for implementing the tasks:
->
-> - [Derived Query Methods in Spring Data JPA Repositories](https://www.baeldung.com/spring-data-derived-queries)
-> - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). We can access request parameters in a controller method with the `@RequestParam` annotation in the following way:
->
->   ```java
->   @GetMapping("/")
->   public String listQuizzes(@RequestParam(required = false) Boolean published, /* ... */) {
->       model.addAttribute("publishedFilter", published);
->
->       if (published == null) {
->           // all quizzes requested
->       } else {
->           // quizzes based on a published status requested
->       }
->   }
->   ```
->
-> - In the Thymeleaf template we can add the request parameter to a link:
->
->   ```html
->   <a
->     href="/?published=true"
->     class="nav-link"
->     th:classappend="${publishedFilter == true}? active"
->   >
->     Published
->   </a>
->   ```
-
-{: .important-title }
-
-> Exercise 22
->
-> Implement the tasks of the sixth user story, "{{site.sprint_1_user_story_6}}".
->
-> The implementation could look something like this:
->
-> ![](/assets/sprint-1-user-story-6.png)
->
-> Tips for implementing the tasks:
->
-> - [Hibernate CreationTimestamp annotation](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
-> - You can format an [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object in a Thymeleaf template with the [#temporals.format](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html#temporals-java.time) utility
-
 ## Daily Scrum
 
 The Daily Scrum is a 15-minute event, commonly held on daily basis. The purpose of the Daily Scrum is for the Scrum Team to inspect and adapt its progress. During the event each team member typically answers the following three questions:
@@ -666,7 +582,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 17
 >
 > Write a usage guide on _how to start the backend application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
 >
@@ -769,7 +685,7 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 18
 >
 > Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
 
@@ -785,7 +701,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 19
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -797,7 +713,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 20
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >
