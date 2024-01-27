@@ -631,7 +631,7 @@ public class MessageRestController {
 
 Next, let's consider what kind of REST API endpoints we need for the last three user stories. Implement the following four endpoints by following the [REST API naming conventions](https://restfulapi.net/resource-naming/):
 
-1. GET `/api/quizzes` to get all _published_ quizzes from newest to oldest order
+1. GET `/api/quizzes` to get all _published_ quizzes in newest to oldest order
 2. GET `/api/quizzes/{id}` to get a quiz by id. If there is no quiz with the provided id, return a `404 Not Found` status as a response. If the quiz is not published, return a `403 Forbidden` status as a response
 3. GET `/api/quizzes/{id}/questions` to get the questions of a quiz by id. Implement similar error handling as with the second endpoint
 4. POST `/api/answers` to create an answer for a quiz's question. Information about the answer's text, correctness (is the answer correct or not based on the question's correct answer) and the question reference should be stored in the database. If the user is trying to answer a quiz which is not published, return a `403 Forbidden` status as a response. If the user is trying to answer a quiz which does not exist, return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), return a `400 Bad Request` status as a response. Define the request body format with a [DTO](https://www.baeldung.com/java-dto-pattern) class. The frontend can send a JSON request body for example in the following format:
