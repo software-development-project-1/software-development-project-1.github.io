@@ -63,16 +63,19 @@ Learn the capital cities of the European countries</textarea
           <tr>
             <th>Question text</th>
             <th>Correct answer</th>
+            <th>Difficulty level</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>What is the capital of Finland?</td>
             <td>Helsinki</td>
+            <th><span class="badge text-bg-secondary">Easy</span></th>
           </tr>
           <tr>
             <td>What is the capital of Sweden?</td>
             <td>Stockholm</td>
+            <th><span class="badge text-bg-secondary">Hard</span></th>
           </tr>
         </tbody>
       </table>
@@ -85,6 +88,46 @@ Learn the capital cities of the European countries</textarea
         <div class="mb-3">
           <label class="form-label">Correct answer</label>
           <input type="text" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Difficulty level</label>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Easy
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Normal
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Hard
+            </label>
+          </div>
         </div>
 
         <button class="btn btn-primary">Add</button>
