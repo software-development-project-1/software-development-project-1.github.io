@@ -685,7 +685,12 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 >
 > Explore an open source project repositories in GitHub. You can for example search for your favorite library (such as React) on the [GitHub's home page](https://github.com/) using the search field at the top of the page. Alternatively, you can use Google.
 >
-> Find the issues and the pull requests, the people who have contributed to the project, and the statistics associated with them.
+> Find the issues and the pull requests, the people who have contributed to the project, and the statistics associated with them. _Include the following information about the repository to the Moodle submission_:
+> 
+> 1. Link to the GitHub repository
+> 2. Link to the latest issue in the repository
+> 3. Link to the latest pull request in the repository
+> 4. Link to the latest commit in the repository and the GitHub username of the commit's author
 
 ## The End
 
