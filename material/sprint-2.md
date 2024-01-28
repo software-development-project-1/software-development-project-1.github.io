@@ -243,6 +243,8 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > GitHub supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain diagrams. Take a look at Mermaid's [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) documentation for more information.
 >
+> Create an issue for the task. The "documentation" label is suitable for documentation-related issues.
+>
 > _Keep this documentation (like all other documentation) up-to-date_ when you add new entities for the application.
 
 ## Reducing boilerplate code with Lombok
@@ -692,7 +694,7 @@ public class MessageRestController {
 
 {: .highlight}
 
-> The last four user stories are related to the student dashboard application and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend. Use the React application in the `frontend` folder as the starting point for your implementation.
+> The last three user stories are related to the student dashboard application and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend. Use the React application in the `frontend` folder as the starting point for your implementation.
 >
 > Install the dependencies by running the `npm install` command in the `frontend` folder. Then, start the Vite development server by runing the `npm run dev` command. Once the development server has started, the application is accessible at <http://localhost:5713>.
 
@@ -844,8 +846,6 @@ public class QuizRestController {
 > Test each REST API endpoint by opening the endpoint's documentation and cliking the "Try it out" button. Remember to also test that the error responses work properly by for example sending a request to the `/api/quizzes/{id}` endpoint with an `id` path parameter value of a non-existing quiz.
 >
 > Add a link to the Swagger documentation in the production environment (in Render) to the "Documentation" section in the `README.md` file. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui/index.html>. Deploy the backend application to Render and make sure that the Swagger documentation is accessible.
->
-> Create an issue for the task. The "documentation" label is suitable for documentation-related issues.
 
 ## The .gitignore file
 
