@@ -15,7 +15,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-21. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-25. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -469,6 +469,65 @@ private List<Question> questions;
 
 To have more control over the attributes in the JSON response, [DTO](https://www.baeldung.com/java-dto-pattern) classes can be used instead of returning the entity classes directly from the controller methods.
 
+## Designing the REST API endpoints for the user stories
+
+Next, let's consider what kind of REST API endpoints we need for the last three user stories. Implement the following four endpoints by following the [REST API naming conventions](https://restfulapi.net/resource-naming/).
+
+{: .important-title }
+
+> Exercise 11
+>
+> To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation.
+
+{: .highlight}
+
+> Omit the `@OneToMany` attributes from the JSON response in every entity by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the attributes.
+
+{: .important-title }
+
+> Exercise 12
+>
+> Implement a GET `/api/quizzes` endpoint for _getting all published quizzes_ in newest to oldest order.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+
+{: .important-title }
+
+> Exercise 13
+>
+> Implement a GET `/api/quizzes/{id}` endpoint for _getting a quiz by id_. If there is no quiz with the provided id, return a `404 Not Found` status as a response. If the quiz is not published, return a `403 Forbidden` status as a response.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+
+{: .important-title }
+
+> Exercise 14
+>
+> Implement a GET `/api/quizzes/{id}/questions` endpoint for _getting the questions of a quiz by id_. Implement similar error handling as with the second endpoint as with the previous endpoint.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+
+{: .important-title }
+
+> Exercise 15
+>
+> Implement a POST `/api/answers` endpoint for _creating an answer for a quiz's question_. Information about the answer's text, correctness (is the answer correct or not based on the question's correct answer) and the question reference should be stored in the database. If the user is trying to answer a quiz which is not published, return a `403 Forbidden` status as a response. If the user is trying to answer a question which does not exist, return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), return a `400 Bad Request` status as a response.
+>
+> Define the request body format with a [DTO](https://www.baeldung.com/java-dto-pattern) class. The frontend can send a JSON request body for example in the following format:
+>
+> ```json
+> {
+>   "answerText": "helsinki",
+>   "questionId": 1
+> }
+> ```
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+
+{: .note }
+
+> The GET method endpoint error responses will be displayed as a HTML error page in a web browser. To see what the JSON error response looks like, use Postman to send the request.
+
 ## Communication between frontend and backend
 
 With REST APIs we can _separate_ the client application from the server application. In web applications these client applications are commonly called _frontend applications_.
@@ -627,28 +686,6 @@ public class MessageRestController {
 }
 ```
 
-## Designing the REST API endpoints for the user stories
-
-Next, let's consider what kind of REST API endpoints we need for the last three user stories. Implement the following four endpoints by following the [REST API naming conventions](https://restfulapi.net/resource-naming/):
-
-1. GET `/api/quizzes` to get all _published_ quizzes in newest to oldest order
-2. GET `/api/quizzes/{id}` to get a quiz by id. If there is no quiz with the provided id, return a `404 Not Found` status as a response. If the quiz is not published, return a `403 Forbidden` status as a response
-3. GET `/api/quizzes/{id}/questions` to get the questions of a quiz by id. Implement similar error handling as with the second endpoint
-4. POST `/api/answers` to create an answer for a quiz's question. Information about the answer's text, correctness (is the answer correct or not based on the question's correct answer) and the question reference should be stored in the database. If the user is trying to answer a quiz which is not published, return a `403 Forbidden` status as a response. If the user is trying to answer a question which does not exist, return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), return a `400 Bad Request` status as a response. Define the request body format with a [DTO](https://www.baeldung.com/java-dto-pattern) class. The frontend can send a JSON request body for example in the following format:
-
-   ```json
-   {
-     "answerText": "helsinki",
-     "questionId": 1
-   }
-   ```
-
-The remaining user stories include both backend-related and frontend-related tasks. Before starting to implement the frontend tasks, test that the endpoints work as expected. GET method endpoints are easy to test with a web browser by just visiting the endpoint URL. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
-
-{: .note }
-
-> The GET method endpoint error responses will be displayed as a HTML error page in a web browser. To see what the JSON error response looks like, use Postman to send the request.
-
 {: .highlight}
 
 > The last four user stories are related to the student dashboard application and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend. Use the React application in the `frontend` folder as the starting point for your implementation.
@@ -657,25 +694,15 @@ The remaining user stories include both backend-related and frontend-related tas
 
 {: .highlight}
 
-> Omit the `@OneToMany` attributes from the JSON response in every entity by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the attributes.
-
-{: .highlight}
-
 > Use the `@CrossOrigin` annnotation on the REST controller classes to allow cross-origin requests from the frontend application.
 
 {: .important-title }
 
-> Exercise 11
->
-> To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation.
-
-{: .important-title }
-
-> Exercise 12
+> Exercise 16
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
 > The implementation could look something like this:
 >
@@ -683,11 +710,11 @@ The remaining user stories include both backend-related and frontend-related tas
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 17
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
 > The implementation could look something like this:
 >
@@ -697,11 +724,11 @@ The remaining user stories include both backend-related and frontend-related tas
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 18
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Add either "frontend" or "backend" label for the issues. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
 > The implementation could look something like this:
 >
@@ -715,7 +742,7 @@ The remaining user stories include both backend-related and frontend-related tas
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 19
 >
 > Add instructions on _how to start the frontend application_ to the "Usage guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
@@ -737,7 +764,7 @@ The remaining user stories include both backend-related and frontend-related tas
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 20
 >
 > Add a description of the project's _overall architecture_ and the _implementation technologies_ to the project description in the `README.md`. Mention at least the following things:
 >
@@ -806,7 +833,7 @@ public class QuizRestController {
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 21
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
 >
@@ -868,7 +895,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 22
 >
 > Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
 
@@ -878,19 +905,19 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 23
 >
 > Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive frontend-related files from the `frontend` folder.
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 24
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 25
 >
 > Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the features in the production environment.
 >

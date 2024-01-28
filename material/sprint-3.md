@@ -104,7 +104,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Tips for the tasks:
 >
-> - GET `/api/quizzes/{id}/answers` REST API endpoint can be implemented to get the answers of a quiz
+> - Implement an appropriate REST API endpoint for getting the answers of a quiz by id
 
 {: .note }
 
@@ -117,7 +117,7 @@ After some discussion the Scrum Team planned the following user stories:
 > Plan the tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
-> 
+>
 > The implementation could look something like this:
 >
 > ![](/assets/sprint-3-user-story-1.png)
