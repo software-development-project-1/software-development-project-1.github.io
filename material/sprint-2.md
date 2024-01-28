@@ -507,7 +507,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 > Exercise 14
 >
-> Implement a GET `/api/quizzes/{id}/questions` endpoint for _getting the questions of a quiz by id_. Implement similar error handling as with the second endpoint as with the previous endpoint.
+> Implement a GET `/api/quizzes/{id}/questions` endpoint for _getting the questions of a quiz by id_. Implement similar error handling as with the previous endpoint.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
