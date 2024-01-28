@@ -15,7 +15,7 @@ nav_order: 4
 
 ## Submitting this week's exercises
 
-All of this week's exercises (exercises 1-14) are submitted to [this Moodle submission]({{site.week_2_moodle_submission_link}}). The submission should only contain the link to your GitHub repository created in exercise 6. The submission deadline is on {{site.week_2_deadline}}.
+All of this week's exercises (exercises 1-14) are submitted to [this Moodle submission]({{site.week_2_moodle_submission_link}}). The submission should only contain the link to your GitHub repository created in exercise 6 and the information mentioned in exercise 14. The submission deadline is on {{site.week_2_deadline}}.
 
 ## Version control
 
@@ -690,7 +690,8 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > 1. Link to the GitHub repository
 > 2. Link to the latest issue in the repository
 > 3. Link to the latest pull request in the repository
-> 4. Link to the latest commit in the repository and the GitHub username of the commit's author
+> 4. GitHub username of the user who has the most commits in the repository (hint: check the repository's contributors)
+> 5. Link to the latest commit in the repository and the GitHub username of the commit's author
 
 ## The End
 
