@@ -483,6 +483,10 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 > Omit the `@OneToMany` attributes from the JSON response in every entity by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the attributes.
 
+{: .note }
+
+> GET method endpoints are easy to test with a web browser by just visiting the endpoint URL. POST method endpoints can be tested with tools such as [Postman](https://www.postman.com/).
+
 {: .important-title }
 
 > Exercise 12
