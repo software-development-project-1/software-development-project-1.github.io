@@ -512,30 +512,30 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 10
 >
-> Create a new package `fi.haagahelia.quizzer.controller` to the `src/test/java` folder for the project's controller class tests. Implement a test class within the package with the following test methods for the GET `/api/quizzes` endpoint:
+> Create a new package `fi.haagahelia.quizzer.controller` to the `src/test/java` folder for the project's controller class tests. Implement a test class within the package with the following test methods for the endpoint for _getting all published quizzes_:
 >
-> - `getAllQuizzesReturnsEmptyListWhenNoQuizzesExist`: send a GET request to the `/api/quizzes` without saving a quiz to the database. Then, the response should have an empty list
-> - `getAllQuizzesReturnsListOfPublishedQuizzesWhenQuizzesExist`: save a few quizzes (both published and non-published) to the database and send a GET request to the `/api/quizzes`. Then, the response should have a list of the saved _published quizzes_
+> - `getAllQuizzesReturnsEmptyListWhenNoQuizzesExist`: send a request without saving a quiz to the database. Then, the response should have an empty list
+> - `getAllQuizzesReturnsListOfPublishedQuizzesWhenQuizzesExist`: save a few quizzes (both published and non-published) to the database and send a request. Then, the response should have a list of the saved _published quizzes_
 >
-> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3".
+> Create an issue for this task and add it to the Sprint Backlog project. Set the milestone as "Sprint 3".
 
 {: .important-title }
 
 > Exercise 11
 >
-> Implement the following test methods for the GET `/api/quizzes/{id}` endpoint:
+> Implement the following test methods for the endpoint for _getting a quiz by id_:
 >
-> - `getQuizByIdReturnsPublishedQuizWhenQuizExists`: save a _published quiz_ to the database and send a GET request to the `/api/quizzes/{id}`. Then, the response should have the saved quiz
-> - `getQuizByIdReturnsNotFoundWhenQuizDoesNotExist`: send a GET request to the `/api/quizzes/{id}` without saving a quiz to the database. Then, the response should have a `404 Not Found` status
-> - `getQuizByIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ to the database and send a GET request to the `/api/quizzes/{id}`. Then, the response should have a `403 Forbidden` status
+> - `getQuizByIdReturnsPublishedQuizWhenQuizExists`: save a _published quiz_ to the database and send a request. Then, the response should have the saved quiz
+> - `getQuizByIdReturnsNotFoundWhenQuizDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have a `404 Not Found` status
+> - `getQuizByIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ to the database and send a request. Then, the response should have a `403 Forbidden` status
 >
-> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3".
+> Create an issue for this task and add it to the Sprint Backlog project. Set the milestone as "Sprint 3".
 
 {: .important-title }
 
 > Exercise 12
 >
-> Implement the following test methods for the GET `/api/quizzes/{id}/questions` endpoint:
+> Implement the following test methods for the endpoint for _getting the questions of a quiz_:
 >
 > - `getQuestionsByQuizIdReturnsEmptyListWhenQuizDoesNotHaveQuestions`: save a _published quiz_ without questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have an empty list
 > - `getQuestionsByQuizIdReturnsListOfQuestionsWhenQuizHasQuestions`: save a _published quiz_ with a few questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have a list of the quiz's questions
