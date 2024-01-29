@@ -517,7 +517,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getAllQuizzesReturnsEmptyListWhenNoQuizzesExist`: send a request without saving a quiz to the database. Then, the response should have an empty list
 > - `getAllQuizzesReturnsListOfPublishedQuizzesWhenQuizzesExist`: save a few quizzes (both published and non-published) to the database and send a request. Then, the response should have a list of the saved _published quizzes_
 >
-> Create an issue for this task and add it to the Sprint Backlog project. Set the milestone as "Sprint 3".
+> Create an issue for this task.
 
 {: .important-title }
 
@@ -529,7 +529,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getQuizByIdReturnsNotFoundWhenQuizDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have a `404 Not Found` status
 > - `getQuizByIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ to the database and send a request. Then, the response should have a `403 Forbidden` status
 >
-> Create an issue for this task and add it to the Sprint Backlog project. Set the milestone as "Sprint 3".
+> Create an issue for this task.
 
 {: .important-title }
 
@@ -542,7 +542,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getQuestionsByQuizIdReturnsNotFoundWhenQuestionDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have a `404 Not Found` status
 > - `getQuestionsByQuizIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ with a few questions to the database and send a request. Then, the response should have a `403 Forbidden` status
 >
-> Create an issue for this task and add it to the Sprint Backlog project. Set the milestone as "Sprint 3".
+> Create an issue for this task.
 
 {: .important-title }
 
@@ -555,7 +555,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `createAnswerDoesNotSaveAnswerForNonExistingQuestion`: send a request with a non-existing question id in the request body. Then, the response should status have a `404 Not Found` status and the database should not have any answers
 > - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a request with a valid request body. Then, the response should status have a `403 Bad Request` status and the database should not have any answers
 >
-> Create an issue for this task and add it to the Sprint Backlog project. Set the milestone as "Sprint 3".
+> Create an issue for this task.
 
 {: .important-title }
 
