@@ -104,7 +104,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Tips for the tasks:
 >
-> - Implement an appropriate REST API endpoint for getting the answers of a quiz by id
+> - Implement an appropriate REST API endpoint for getting the answers of a quiz
 
 {: .note }
 
@@ -537,25 +537,25 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Implement the following test methods for the endpoint for _getting the questions of a quiz_:
 >
-> - `getQuestionsByQuizIdReturnsEmptyListWhenQuizDoesNotHaveQuestions`: save a _published quiz_ without questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have an empty list
-> - `getQuestionsByQuizIdReturnsListOfQuestionsWhenQuizHasQuestions`: save a _published quiz_ with a few questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have a list of the quiz's questions
-> - `getQuestionsByQuizIdReturnsNotFoundWhenQuestionDoesNotExist`: send a GET request to the `/api/quizzes/1/question` without saving a quiz to the database. Then, the response should have a `404 Not Found` status
-> - `getQuestionsByQuizIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ with a few questions to the database and send a GET request to the `/api/quizzes/{id}/questions`. Then, the response should have a `403 Forbidden` status
+> - `getQuestionsByQuizIdReturnsEmptyListWhenQuizDoesNotHaveQuestions`: save a _published quiz_ without questions to the database and send a request. Then, the response should have an empty list
+> - `getQuestionsByQuizIdReturnsListOfQuestionsWhenQuizHasQuestions`: save a _published quiz_ with a few questions to the database and send a request. Then, the response should have a list of the quiz's questions
+> - `getQuestionsByQuizIdReturnsNotFoundWhenQuestionDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have a `404 Not Found` status
+> - `getQuestionsByQuizIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ with a few questions to the database and send a request. Then, the response should have a `403 Forbidden` status
 >
-> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3".
+> Create an issue for this task and add it to the Sprint Backlog project. Set the milestone as "Sprint 3".
 
 {: .important-title }
 
 > Exercise 13
 >
-> Implement a test class with the following test methods for the POST `/api/answers` endpoint:
+> Implement a test class with the following test methods for the endpoint for _creating an answer_:
 >
-> - `createAnswerSavesValidAnswer`: save a _published quiz_ with a question to the database and send a POST request to the `/api/answers` with a _valid request body_ (attributes should pass the validation). Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
-> - `createAnswerDoesNotSaveInvalidAnswer`: save a _published quiz_ with a question to the database and send a POST request to the `/api/answers` with a _invalid request body_ (attributes should not pass the validation). Then, the response should status have a `400 Bad Request` status and the database should not have any answers
-> - `createAnswerDoesNotSaveAnswerForNonExistingQuestion`: send a POST request to the `/api/answers` with a non-existing question id in the request body. Then, the response should status have a `404 Not Found` status and the database should not have any answers
-> - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a POST request to the `/api/answers` with a valid request body. Then, the response should status have a `403 Bad Request` status and the database should not have any answers
+> - `createAnswerSavesValidAnswer`: save a _published quiz_ with a question to the database and send a request with a _valid request body_ (attributes should pass the validation). Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
+> - `createAnswerDoesNotSaveInvalidAnswer`: save a _published quiz_ with a question to the database and send a request with a _invalid request body_ (attributes should not pass the validation). Then, the response should status have a `400 Bad Request` status and the database should not have any answers
+> - `createAnswerDoesNotSaveAnswerForNonExistingQuestion`: send a request with a non-existing question id in the request body. Then, the response should status have a `404 Not Found` status and the database should not have any answers
+> - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a request with a valid request body. Then, the response should status have a `403 Bad Request` status and the database should not have any answers
 >
-> Create an issue for this task and add it to the Sprint Backlog project. Add the "test" label for the issue. Set the milestone as "Sprint 3".
+> Create an issue for this task and add it to the Sprint Backlog project. Set the milestone as "Sprint 3".
 
 {: .important-title }
 
