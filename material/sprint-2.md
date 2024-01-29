@@ -831,7 +831,7 @@ public class MessageRestController {
         description = "Returns the message with the provided id"
     )
     @GetMapping("/{id}")
-    public  Message getMessageById(@PathVariable Long id) {
+    public Message getMessageById(@PathVariable Long id) {
         // ...
     }
 }
