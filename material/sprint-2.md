@@ -800,38 +800,38 @@ Let's start documenting our API by adding the Spring Doc dependency to the `<dep
 
 Then, let's start our application and open <http://localhost:8080/v3/api-docs> in a browser. We should see the JSON formatted description of our REST API in the OpenAPI format. For a more user-friendly description, the Swagger documentation can be found at <http://localhost:8080/swagger-ui/index.html>. In the Swagger documentation, we can see a documentation for the REST controller classes.
 
-Let's have a look at the documentation for the `/api/quizzes/{id}/questions` endpoint under the section named by the REST controller class. We see all relevant information about the endpoint: the path, path parameters, and an example of the response. We can send a test request by clicking the "Try it out" button on the right. This is handy while we are exploring an API that we aren't familiar with.
+Let's have a look at the documentation for the `/api/messages/{id}` endpoint under the section named by the REST controller class. We see all relevant information about the endpoint: the path, path parameters, and an example of the response. We can send a test request by clicking the "Try it out" button on the right. This is handy while we are exploring an API that we aren't familiar with.
 
-We can provide more details about the endpoints by using specific annotations for the controller classes and methods. For example, we can provide a better name and a description for the category API using the `@Tag` annotation:
+We can provide more details about the endpoints by using specific annotations for the controller classes and methods. For example, we can provide a better name and a description for the message API using the `@Tag` annotation:
 
 ```java
 @RestController
-@RequestMapping("/api/quizzes")
+@RequestMapping("/api/messages")
 @CrossOrigin(origins = "*")
-@Tag(name = "Quiz", description = "Operations for accessing and managing quizzes")
-public class QuizRestController {
+@Tag(name = "Message", description = "Operations for accessing and managing messages")
+public class MessageRestController {
     // ...
 }
 ```
 
-Now, if we open <http://localhost:8080/swagger-ui/index.html> again, we should see the new name and the description for the category API.
+Now, if we open <http://localhost:8080/swagger-ui/index.html> again, we should see the new name and the description for the message API.
 
 We can also provide more information about a specific endpoint using the `@Operation` annotation:
 
 ```java
 @RestController
-@RequestMapping("/api/quizzes")
+@RequestMapping("/api/messages")
 @CrossOrigin(origins = "*")
-@Tag(name = "Quiz", description = "Operations for accessing and managing quizzes")
-public class QuizRestController {
+@Tag(name = "Message", description = "Operations for accessing and managing messages")
+public class MessageRestController {
     // ...
 
     @Operation(
-        summary = "Get all questions of a quiz",
-        description = "Returns all the questions of a specific quiz"
+        summary = "Get a message by id",
+        description = "Returns the message with the provided id"
     )
-    @GetMapping("/{id}/questions")
-    public List<Question> getQuestionsByQuizId(@PathVariable Long id) {
+    @GetMapping("/{id}")
+    public  Message getMessageById(@PathVariable Long id) {
         // ...
     }
 }
@@ -843,7 +843,7 @@ public class QuizRestController {
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
 >
-> Test each REST API endpoint by opening the endpoint's documentation and cliking the "Try it out" button. Remember to also test that the error responses work properly by for example sending a request to the `/api/quizzes/{id}` endpoint with an `id` path parameter value of a non-existing quiz.
+> Test each REST API endpoint by opening the endpoint's documentation and cliking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an `id` path parameter value of a non-existing quiz.
 >
 > Add a link to the Swagger documentation in the production environment (in Render) to the "Documentation" section in the `README.md` file. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui/index.html>. Deploy the backend application to Render and make sure that the Swagger documentation is accessible.
 
