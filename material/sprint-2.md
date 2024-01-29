@@ -473,7 +473,7 @@ To have more control over the attributes in the JSON response, [DTO](https://www
 
 ## Designing the REST API endpoints for the user stories
 
-Next, let's consider what kind of REST API endpoints we need for the last three user stories. Implement the following four endpoints by following the [REST API naming conventions](https://restfulapi.net/resource-naming/).
+Next, let's consider what kind of REST API endpoints we need for the last three user stories. Implement the following four endpoints _by following the REST API naming conventions for the endpoint path names_.
 
 {: .important-title }
 
@@ -493,7 +493,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 > Exercise 12
 >
-> Implement a GET `/api/quizzes` endpoint for _getting all published quizzes_ in newest to oldest order.
+> Implement a REST API endpoint for _getting all published quizzes_ in newest to oldest order.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -501,7 +501,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 > Exercise 13
 >
-> Implement a GET `/api/quizzes/{id}` endpoint for _getting a quiz by id_. If there is no quiz with the provided id, return a `404 Not Found` status as a response. If the quiz is not published, return a `403 Forbidden` status as a response.
+> Implement a REST API endpoint for _getting a quiz by id_. If there is no quiz with the provided id, return a `404 Not Found` status as a response. If the quiz is not published, return a `403 Forbidden` status as a response.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -509,7 +509,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 > Exercise 14
 >
-> Implement a GET `/api/quizzes/{id}/questions` endpoint for _getting the questions of a quiz by id_. Implement similar error handling as with the previous endpoint.
+> Implement a REST API endpoint for _getting the questions of a quiz by id_. Implement similar error handling as with the previous endpoint.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -517,7 +517,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 > Exercise 15
 >
-> Implement a POST `/api/answers` endpoint for _creating an answer for a quiz's question_. Information about the answer's text, correctness (is the answer correct or not based on the question's correct answer) and the question reference should be stored in the database. If the user is trying to answer a quiz which is not published, return a `403 Forbidden` status as a response. If the user is trying to answer a question which does not exist, return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), return a `400 Bad Request` status as a response.
+> Implement a REST API endpoint for _creating an answer for a quiz's question_. Information about the answer's text, correctness (is the answer correct or not based on the question's correct answer) and the question reference should be stored in the database. If the user is trying to answer a quiz which is not published, return a `403 Forbidden` status as a response. If the user is trying to answer a question which does not exist, return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), return a `400 Bad Request` status as a response.
 >
 > Define the request body format with a [DTO](https://www.baeldung.com/java-dto-pattern) class. The frontend can send a JSON request body for example in the following format:
 >
@@ -877,7 +877,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
    Make sure that every `fetch` function call has the environment variable as the URL prefix. For example:
 
    ```js
-   fetch(`${import.meta.env.VITE_BACKEND_URL}/api/quizzes`).then((response) => {
+   fetch(`${import.meta.env.VITE_BACKEND_URL}/api/messages`).then((response) => {
      // ...
    });
    ```
