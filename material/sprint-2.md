@@ -92,7 +92,7 @@ During estimation the Developers usually have a different view of how many story
 
 ### Planning poker
 
-[Planning poker](https://en.wikipedia.org/wiki/Planning_poker) is a (fun) technique to facilitate estimation of user stories. We first need to decide which are the number of story points we use for the estimation. The [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is a common choice: 1, 2, 3, 5, 8 or 13 story points. Then we need to make sure that everyone knows the amount of effort required for a certain amount of story points. Let's say that the user story "{{site.sprint_1_user_story_1}}" is worth _2 story points_ and we should compare the effort of other user stories to that.
+[Planning poker](https://en.wikipedia.org/wiki/Planning_poker) is a (fun) technique to facilitate estimation of user stories. We first need to decide which are the number of story points we use for the estimation. The [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is a common choice: 1, 2, 3, 5 or 8 story points. Then we need to make sure that everyone knows the amount of effort required for a certain amount of story points. Let's say that the user story "{{site.sprint_1_user_story_1}}" is worth _2 story points_ and we should compare the effort of other user stories to that.
 
 Here's a table describing the worth of the available story points:
 
@@ -103,7 +103,6 @@ Here's a table describing the worth of the available story points:
 | _A bit more effort_ compared to the reference user story        | 3 story points  |
 | _Double the effort_ compared to the reference user story        | 5 story points  |
 | _Four times the effort_ compared to the reference user story    | 8 story points  |
-| _Six times the effort_ compared to the reference user story     | 13 story points |
 
 As mentioned, the reference user story is the first user story of the previous Sprint:
 
@@ -116,7 +115,7 @@ As mentioned, the reference user story is the first user story of the previous S
 Once we have "calibrated" the worth of a story point we can start the actual planning poker event. For each user story under estimation we should perform the following steps:
 
 1. Discuss the technical requirements (tasks) for the user story. Make sure that everyone is on the same page what is required to implement the user story.
-2. Everyone will consider _by themself_ (no dicussion) how many story points the user story is worth. The estimate needs to be 1, 2, 3, 5, 8 or 13 story points. Compare the effort to the user story "{{site.sprint_1_user_story_1}}" which is worth 2 story points
+2. Everyone will consider _by themself_ (no dicussion) how many story points the user story is worth. The estimate needs to be 1, 2, 3, 5 or 8 story points. Compare the effort to the user story "{{site.sprint_1_user_story_1}}" which is worth 2 story points
 3. Everyone will write down their story point estimate.
 4. Once everyone is ready, everyone will show their estimate at the same time
 5. If there's more than one point difference in the least and most amount of story points in the suggested estimates, discuss the implementation further to find out why there is such difference in the estimates. Then, repeat the steps 1 - 5 until you have an agreement.
@@ -237,8 +236,8 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > The Product Owner needs your help in estimating user stories.
 >
-> 1. To visualize the user story issue's story point estimate, create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) "story points: 1", "story points: 2", "story points: 3", "story points: 5", "story points: 8" and "story points: 13"
-> 2. Facilitate a planning poker event in which you estimate the _first four user stories_ of the Sprint
+> 1. To visualize the user story issue's story point estimate, create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) "story points: 1", "story points: 2", "story points: 3", "story points: 5" and "story points: 8"
+> 2. Organize a planning poker event in which you estimate the _first four user stories_ of the Sprint
 > 3. Based on the user story estimation, add the story point labels for the four user story related issues
 
 {: .important-title }
