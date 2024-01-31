@@ -110,7 +110,7 @@ As mentioned, the reference user story is the first user story of the previous S
 
 {: .note }
 
-> The Fibonacci sequence is commonly used instead of a linear sequence (1, 2, 3, 4...) because _larger user stories are more difficult to estimate_. The Fibonacci sequence starts to grow quickly after 13, so we don't need to be very accurate while estimating large user stories. On the other hand, if we have a user story worth more than 13 story points, we should really consider splitting it into smaller user stories.
+> The Fibonacci sequence is commonly used instead of a linear sequence (1, 2, 3, 4...) because _larger user stories are more difficult to estimate_. The Fibonacci sequence starts to grow quickly after 8, so we don't need to be very accurate while estimating large user stories. On the other hand, if we have a user story worth more than 8 story points, we should really consider splitting it into smaller user stories.
 
 Once we have "calibrated" the worth of a story point we can start the actual planning poker event. For each user story under estimation we should perform the following steps:
 
