@@ -31,11 +31,17 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 
 > Exercise 1
 >
-> _One of the team members_ should create a new session in Flinga as instructed above. Name the session "Retrospective 2". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event.
+> The Scrum Master should create a new session in Flinga as instructed above. Name the session "Retrospective 2". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event.
 >
 > Did similar issues arise as in Sprint 1 retrospective? If so, try to come up with different actions as before or ask the teacher for tips on how to solve these issues.
 >
 > Once you have completed the Retrospective write down the issues and actions to the repository's `documentation/retrospectives/sprint-2.md` file and push the changes to GitHub.
+
+{: .important-title }
+
+> Exercise 2
+>
+> Choose a new Scrum Master among the team members for the third Sprint.
 
 ## 🏃‍♂️ Sprint 3 planning
 
@@ -70,13 +76,13 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 2
+> Exercise 3
 >
 > Create a new milestone for the third Sprint. Set the milestone title as "Sprint 3".
 
 {: .important-title }
 
-> Exercise 3
+> Exercise 4
 >
 > Make sure that all task related issues that have been completed during the Sprint 2 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
@@ -84,13 +90,13 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 4
+> Exercise 5
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project and move them to the "Sprint Backlog" column
 
 {: .important-title }
 
-> Exercise 5
+> Exercise 6
 >
 > Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -112,7 +118,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 7
 >
 > Plan the tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -124,7 +130,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 8
 >
 > Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -142,7 +148,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 9
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -500,7 +506,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 10
 >
 > To classify test-related issues, create a new "test" [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels). Add the "test" label for issues that are related to testing (automated or manual) some part of the application.
 
@@ -510,7 +516,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 11
 >
 > Create a new package `fi.haagahelia.quizzer.controller` to the `src/test/java` folder for the project's controller class tests. Implement a test class within the package with the following test methods for the endpoint for _getting all (published) quizzes_:
 >
@@ -521,7 +527,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 12
 >
 > Implement the following test methods for the endpoint for _getting a quiz by id_:
 >
@@ -533,7 +539,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > Implement the following test methods for the endpoint for _getting the questions of a quiz_:
 >
@@ -546,7 +552,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > Implement a test class with the following test methods for the endpoint for _creating an answer_:
 >
@@ -559,7 +565,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 15
 >
 > Add instructions on _how to run the tests_ to the "Usage guide" section in the `README.md` file. You can instruct the reader to use the `./mvnw test` command to run the tests.
 
@@ -671,7 +677,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title}
 
-> Exercise 15
+> Exercise 16
 >
 > Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
@@ -679,13 +685,13 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 17
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 18
 >
 > Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
 
@@ -707,7 +713,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 19
 >
 > Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 
@@ -723,7 +729,7 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 20
 >
 > Write the final report for the course as instructed above.
 

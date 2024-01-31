@@ -19,7 +19,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 2. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-20. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-22. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Sprint Planning
 
@@ -255,7 +255,6 @@ After some discussion the Scrum Team planned the following user stories:
 5. {{site.sprint_1_user_story_5}}
 6. {{site.sprint_1_user_story_6}}
 
-
 The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
 
 For the _first user story_, the Developers planned the following tasks:
@@ -265,17 +264,17 @@ For the _first user story_, the Developers planned the following tasks:
 3. Add QuizController controller class and a method for rendering the quiz creation form
 4. Add a method for the QuizController class which handles the quiz creation form submission
 
-For the _second user story_, the Developers planned the following tasks:
-
-1. Add a Thymeleaf template for the quiz list containing a table with columns for title, description and published status
-2. Add a method for rendering the quiz list with all the quizzes for the QuizController class
-3. Add a link to the quiz list page to the navigation bar
-
 These are the user stories, that you will be working on as a team during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
 
 {: .highlight }
 
 > The tasks that you come up with during the Sprint Planning event _should not be set in stone_. These tasks are there to get you started with implementing the user stories. You might come up with new tasks or notice that the current tasks need alterations during the actual implementation. In such case, do the necessary changes for the Sprint Backlog.
+
+{: .important-title }
+
+> Exercise 7
+>
+> Choose the [Scrum Master](https://scrumguides.org/scrum-guide.html#scrum-master) among the team members for the first Sprint. The Scrum Master should facilitate the team's meetings and make sure that the backlogs are up-to-date.
 
 ## GitHub issues
 
@@ -289,7 +288,7 @@ Before we start creating issues, let's add some [labels](https://docs.github.com
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 8
 >
 > Create the "user story" label to classify user story related issues.
 
@@ -297,7 +296,7 @@ Next, we need to specify the Sprint the issue is worked on. We can use Sprint-sp
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 9
 >
 > Create the "Sprint 1" milestone to group the issues of the first Sprint.
 
@@ -309,13 +308,27 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 10
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 1". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
 
+{: .note }
+
+> User story related tasks can be included in the user story issue's description as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists):
+>
+> ```md
+> ## Tasks
+>
+> - [] #5
+> - [] #6
+> - [] #7
+> ```
+>
+> Task list item with a "#" prefix is a reference to a certain issue. You can type "#" and GitHub will suggest issues. Task list makes it easier to know which user story the task is related to and to track the progress of a user story. GitHub will automatically mark the task list item as done when the related issue is closed.
+
 {: .important-title }
 
-> Exercise 10
+> Exercise 11
 >
 > Create an issue for each task of the first user story, "{{site.sprint_1_user_story_1}}". You can use the tasks suggested in the [Sprint 1 planning](#%EF%B8%8F-sprint-1-planning) section, or plan your own tasks.
 >
@@ -333,9 +346,9 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 12
 >
-> Create an issue for each task of the second user story, "{{site.sprint_1_user_story_2}}". You can use the tasks suggested in the [Sprint 1 planning](#%EF%B8%8F-sprint-1-planning) section, or plan your own tasks.
+> Create an issue for each task of the second user story, "{{site.sprint_1_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
@@ -349,7 +362,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > Plan the tasks for the third user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -367,7 +380,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -379,7 +392,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 15
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -420,7 +433,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 16
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_1_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -435,23 +448,9 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > - [Hibernate CreationTimestamp annotation](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
 > - [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object can be formatted in a Thymeleaf template with the [#temporals.format](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html#temporals-java.time) utility
 
-{: .note }
-
-> User story related tasks can be included in the user story issue's description as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists):
->
-> ```md
-> ## Tasks
->
-> - [] #5
-> - [] #6
-> - [] #7
-> ```
->
-> Task list item with a "#" prefix is a reference to a certain issue. You can type "#" and GitHub will suggest issues. Task list makes it easier to know which user story the task is related to and to track the progress of a user story. GitHub will automatically mark the task list item as done when the related issue is closed.
-
 {: .important-title }
 
-> Exercise 16
+> Exercise 17
 >
 > Discuss how you will divide the workload (the tasks) of the Sprint among the team members. For example, each team member could be responsible for the tasks of a single user story. Then, add an _assignee_ for each issue. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same issue together.
 
@@ -559,6 +558,12 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 > You don't need to have a Daily Scrum event on a daily basis. Just start each team meeting (including the weekly sessions) with a Daily Scrum.
 
+{: .important-title }
+
+> Exercise 18
+>
+> Facilitate a Daily Scrum event with the lead of the Scrum Master.
+
 ## Usage guide documentation
 
 Now that we have implemented some features for our application that the users can use it is time to describe _how_ to use the application. The _usage guide_ is perhaps one of the most important pieces of documentation for the application. It will describe our fellow developers how to technically use the application. This means for example, how to start the application, how to package the application, and how to run tests.
@@ -580,7 +585,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 19
 >
 > Write a usage guide on _how to start the backend application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
 >
@@ -683,7 +688,7 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 20
 >
 > Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
 
@@ -699,7 +704,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 21
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -711,9 +716,9 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 22
 >
-> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
+> The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >
 > Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/), "asd", or "foobar") for the Sprint Review. This means that you should add a few sensible quizzes using the application so that you can easily demonstrate the user stories.
 

@@ -56,9 +56,15 @@ Make sure that everyone follows the event structure and that each team member ge
 
 > Exercise 1
 >
-> _One of the team members_ should create a new session in Flinga as instructed above. Name the session "Retrospective 1". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event as instructed above.
+> The Scrum Master should create a new session in Flinga as instructed above. Name the session "Retrospective 1". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event as instructed above.
 >
 > Once you have completed the Retrospective write down the issues and actions to the repository's `documentation/retrospectives/sprint-1.md` file and push the changes to GitHub.
+
+{: .important-title }
+
+> Exercise 2
+>
+> Choose a new Scrum Master among the team members for the second Sprint.
 
 ## Estimation
 
@@ -156,13 +162,13 @@ The planning of the tasks for the last three user stories will be covered after 
 
 {: .important-title }
 
-> Exercise 2
+> Exercise 3
 >
 > Create a new milestone for the second Sprint. Set the milestone title as "Sprint 2".
 
 {: .important-title }
 
-> Exercise 3
+> Exercise 4
 >
 > Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
@@ -170,13 +176,13 @@ The planning of the tasks for the last three user stories will be covered after 
 
 {: .important-title }
 
-> Exercise 4
+> Exercise 5
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 2". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
 
 {: .important-title }
 
-> Exercise 5
+> Exercise 6
 >
 > Plan the tasks for the first user story, "{{site.sprint_2_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -188,7 +194,7 @@ The planning of the tasks for the last three user stories will be covered after 
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 7
 >
 > Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -203,7 +209,7 @@ The planning of the tasks for the last three user stories will be covered after 
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 8
 >
 > Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -215,7 +221,7 @@ The planning of the tasks for the last three user stories will be covered after 
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 9
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -227,17 +233,17 @@ The planning of the tasks for the last three user stories will be covered after 
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 10
 >
 > The Product Owner needs your help in estimating user stories.
 >
 > 1. To visualize the user story issue's story point estimate, create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) "story points: 1", "story points: 2", "story points: 3", "story points: 5", "story points: 8" and "story points: 13"
-> 2. Facilitate a planning poker event where you estimate the _first four user stories_ of the Sprint
+> 2. Facilitate a planning poker event with the lead of the Scrum Master where you estimate the _first four user stories_ of the Sprint
 > 3. Based on the user story estimation, add the story point labels for the four user story related issues
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 11
 >
 > Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a verbal description of the application's data model, which documents the application's entities, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). Add the diagram and the verbal description to a `data-model.md` file in the `documentation` folder. The verbal description should explain the purpose of each entity and their relationship to other entities. Add a link to the file to "Documentation" section in the `README.md` file.
 >
@@ -477,7 +483,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 12
 >
 > To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation.
 
@@ -491,7 +497,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > Implement a REST API endpoint for _getting all (published) quizzes_ in newest to oldest order.
 >
@@ -499,7 +505,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > Implement a REST API endpoint for _getting a quiz by id_. If there is no quiz with the provided id, return a `404 Not Found` status as a response. If the quiz is not published, return a `403 Forbidden` status as a response.
 >
@@ -507,7 +513,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 15
 >
 > Implement a REST API endpoint for _getting the questions of a quiz_. Implement similar error handling as with the previous endpoint.
 >
@@ -515,7 +521,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 16
 >
 > Implement a REST API endpoint for _creating an answer_ for a quiz's question. Information about the answer's text, correctness (is the answer correct or not based on the question's correct answer) and the question reference should be stored in the database. If the user is trying to answer a quiz which is not published, return a `403 Forbidden` status as a response. If the user is trying to answer a question which does not exist, return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), return a `400 Bad Request` status as a response.
 >
@@ -704,7 +710,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 17
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -716,7 +722,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 18
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -730,7 +736,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 19
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -748,7 +754,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 20
 >
 > Add instructions on _how to start the frontend application_ to the "Usage guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
@@ -770,7 +776,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 21
 >
 > Add a description of the project's _overall architecture_ and the _implementation technologies_ to the project description in the `README.md`. Mention at least the following things:
 >
@@ -839,7 +845,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
 >
@@ -899,7 +905,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 23
 >
 > Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
 
@@ -909,21 +915,21 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 24
 >
 > Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive frontend-related files from the `frontend` folder.
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 25
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 26
 >
-> Decide which team member gives the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the features in the production environment.
+> The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The team member should be _someone else as the one who gave it previously_. This team member should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the features in the production environment.
 >
 > As in the previous Sprint Review, prepare some _sensible_ test data for the Sprint Review.
 
