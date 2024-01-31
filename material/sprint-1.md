@@ -409,7 +409,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > Tips for the tasks:
 >
 > - [Derived Query Methods in Spring Data JPA Repositories](https://www.baeldung.com/spring-data-derived-queries)
-> - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). We can access request parameters in a controller method with the `@RequestParam` annotation in the following way:
+> - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). Request parameters can be accessed in a controller method with the `@RequestParam` annotation in the following way:
 >
 >   ```java
 >   @GetMapping("/")
@@ -419,7 +419,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >   }
 >   ```
 >
-> - In the Thymeleaf template we can add the request parameter to a link:
+> - In the Thymeleaf template the request parameter can be added to a link in the following way:
 >
 >   ```html
 >   <a
