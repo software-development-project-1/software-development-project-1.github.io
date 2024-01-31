@@ -554,15 +554,11 @@ The Sprint Backlog should be open during the event so that the whole Scrum Team 
 
 A funny fact: it is common that during the Daily Scrum the whole Scrum Team is standing. This is why the Daily Scrum is often called the "daily stand-up". The reason is very practical: the event tends to be shorter because standing for a long period of time can become tedious.
 
-{: .note }
-
-> You don't need to have a Daily Scrum event on a daily basis. Just start each team meeting (including the weekly sessions) with a Daily Scrum.
-
 {: .important-title }
 
 > Exercise 18
 >
-> Facilitate a Daily Scrum event with the lead of the Scrum Master.
+> Organize a Daily Scrum event at least once a week during each Sprint.
 
 ## Usage guide documentation
 
