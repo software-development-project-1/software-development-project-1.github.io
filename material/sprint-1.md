@@ -341,7 +341,6 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > Tips for the tasks:
 >
 > - The quiz published status can be implemented as a [Boolean](https://www.geeksforgeeks.org/java-lang-boolean-class-java/) attribute and with a [checkbox field](https://www.thymeleaf.org/doc/tutorials/3.1/thymeleafspring.html#checkbox-fields)
-> - Remember to implement the appropriate validation for the form
 > - Alter the `layout.html` file mentioned above to change the navigation bar content
 
 {: .important-title }
@@ -373,10 +372,6 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > ![](/assets/sprint-1-user-story-3-1.png)
 >
 > ![](/assets/sprint-1-user-story-3-2.png)
->
-> Tips for the tasks:
-> 
-> - Remember to implement the appropriate validation for the form
 
 {: .important-title }
 
