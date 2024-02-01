@@ -203,8 +203,7 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > ![](/assets/sprint-2-user-story-2.png)
 >
-> - Remember to implement the appropriate validation for the form
-> - Make sure that you can delete a quiz that has questions. Before deleting a quiz, you need to delete the quiz-related questions. You can use an appropriate [Cascade Type](https://www.baeldung.com/jpa-cascade-types) to achieve this automatically
+> - Make sure that you can delete a quiz that has questions. Before deleting a quiz, the quiz's questions need to be deleted. [Cascading](https://www.baeldung.com/jpa-cascade-types) can be used to achieve this automatically
 
 {: .important-title }
 
