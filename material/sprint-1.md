@@ -59,9 +59,7 @@ While discussing the technical details, the Developers document a todo-list of t
 
 > Task 2: Add a Thymeleaf template for the blog creation form containing fields for name and description
 
-> Task 3: Add a BlogController controller class and a method for rendering the blog creation form
-
-> Task 4: Add a method for the BlogController class which handles the blog creation form submission
+> Task 3: Add a BlogController controller class and methods for rendering and handling the submission of the blog creation form
 
 These tasks are added to the Sprint-specific _Sprint Backlog_.
 
