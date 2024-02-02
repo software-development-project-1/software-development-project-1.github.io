@@ -261,8 +261,7 @@ For the _first user story_, the Developers planned the following tasks:
 
 1. Add a Quiz JPA entity class with id, name, description and published attributes, and a QuizRepository JPA repository class
 2. Add a Thymeleaf template for the quiz creation form containing fields for name, description and published status
-3. Add QuizController controller class and a method for rendering the quiz creation form
-4. Add a method for the QuizController class which handles the quiz creation form submission
+3. Add QuizController controller class and methods for rendering and handling the submission of the quiz creation form
 
 These are the user stories, that you will be working on as a team during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
 
