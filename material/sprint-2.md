@@ -567,8 +567,6 @@ fetch("http://localhost:8080/api/messages")
   });
 ```
 
-The `fetch` function returns a [Promise](https://javascript.info/promise-basics) object. The promise resolves a `Response` object, which contains the response from the server. The response's JSON payload can be parsed into JavaScript objects using the `response.json()` method.
-
 The default request method is GET. We can use a different request method, such as POST, by providing addional options for the `fetch` call:
 
 ```js
@@ -627,7 +625,8 @@ The `MessageList` component in the `frontend/src/components/MessageList.jsx` cal
 
 ```jsx
 import { useEffect, useState } from "react";
-import { Typography, Button, Box, TextField } from "@mui/material";
+
+// ...
 
 import { getAllMessages, createMessage } from "../services/message";
 
@@ -654,37 +653,7 @@ export default function MessageList() {
     fetchMessages();
   }, []);
 
-  return (
-    <>
-      <Typography variant="h4">Messages</Typography>
-
-      <ul>
-        {messages.map((message) => (
-          <li key={message.id}>{message.content}</li>
-        ))}
-      </ul>
-
-      <Box sx={{ marginTop: 2 }}>
-        <form onSubmit={handleSubmitMessage}>
-          <TextField
-            label="Content"
-            variant="outlined"
-            value={content}
-            onChange={(event) => setContent(event.target.value)}
-            required
-            multiline
-            fullWidth
-          />
-
-          <Box sx={{ marginTop: 2 }}>
-            <Button type="submit" variant="contained">
-              Add a message
-            </Button>
-          </Box>
-        </form>
-      </Box>
-    </>
-  );
+  // ...
 }
 ```
 
