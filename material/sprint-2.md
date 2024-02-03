@@ -393,7 +393,7 @@ public class MessageRestController {
 
 In this case, the `getMessageById` method will handle GET request to the path `/api/messages/{id}` and the `createMessage` method will handle POST request to the path `/api/messages`.
 
-In the `createMessage` method, the `CreateMessageDto` object annotated with the `@RequestBody` annotation contains the data send as the request body. For example the frontend can send the request body with the `fetch` function call:
+In the `createMessage` method, the `CreateMessageDto` object annotated with the `@RequestBody` annotation contains the data in the request body. For example with JavaScript, the request body can be set with the `fetch` function call in the following way:
 
 ```js
 fetch("http://localhost:8080/api/messages", {
@@ -402,6 +402,7 @@ fetch("http://localhost:8080/api/messages", {
     Accept: "application/json",
     "Content-Type": "application/json",
   },
+  // This is the data in the request body
   body: JSON.stringify({ content: "Hello world!" }),
 })
 ```
