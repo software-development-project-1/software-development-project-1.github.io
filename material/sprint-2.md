@@ -360,7 +360,7 @@ A collection can have _sub-collections_. For example, a path for a user's messag
 
 When we design and implement REST API endpoints we should consider the use-case. We don't implement endpoints arbitrary, there should be a _need for the endpoint_ first, for example a certain feature in a frontend application needs to display some data in the database. Based on the feature we consider what kind of data and operations the REST API needs to provide. These requirements will determine the endpoints we will implement.
 
-We can create a separate controller class for each collection. The `@RequestMapping` annotation can be applied to the controller class the define the collection name prefix of the path. Each method will automatically get the prefix in the path, so we don't need to repeat it in the method's request mapping annotations:
+We can create a separate controller class for each collection. The `@RequestMapping` annotation can be applied to the controller class to define the collection name prefix of the path. Each method will automatically get the prefix in the path, so we don't need to repeat it in the method's request mapping annotations:
 
 ```java
 @RestController
