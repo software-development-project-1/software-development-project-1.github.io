@@ -569,7 +569,7 @@ fetch("http://localhost:8080/api/messages")
 
 The `fetch` function returns a [Promise](https://javascript.info/promise-basics) object. The promise resolves a `Response` object, which contains the response from the server. The response's JSON payload can be parsed into JavaScript objects using the `response.json()` method.
 
-The default request method is GET. We can also send a POST request with a JSON formatted request body by providing addional options for the `fetch` call:
+The default request method is GET. We can use a different request method, such as POST, by providing addional options for the `fetch` call:
 
 ```js
 fetch("http://localhost:8080/api/messages", {
