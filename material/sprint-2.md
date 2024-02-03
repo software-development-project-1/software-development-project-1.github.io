@@ -387,26 +387,24 @@ public class MessageRestController {
 }
 ```
 
-In this case, the `getMessageById` method will handle GET request to the path `/api/messages/{id}` and the `createMessage` method will handle POST request to the path `/api/messages`.
-
-{: .note }
-
-> The object annotated with the `@RequestBody` annotation contains the data send as the request body. For example the frontend can send the request body with the `fetch` function call:
->
-> ```js
-> fetch("http://localhost:8080/api/messages", {
->  method: "POST",
->  headers: {
->    Accept: "application/json",
->    "Content-Type": "application/json",
->  },
->  body: JSON.stringify({ content: "Hello world!" }),
-> })
-> ```
-
 {: .note }
 
 > It's handy to use some prefix, such as "api" to distinguish paths that produce JSON response from paths that produce HTML pages.
+
+In this case, the `getMessageById` method will handle GET request to the path `/api/messages/{id}` and the `createMessage` method will handle POST request to the path `/api/messages`.
+
+In the `createMessage` method, the `CreateMessageDto` object annotated with the `@RequestBody` annotation contains the data send as the request body. For example the frontend can send the request body with the `fetch` function call:
+
+```js
+fetch("http://localhost:8080/api/messages", {
+  method: "POST",
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ content: "Hello world!" }),
+})
+```
 
 ### Controlling the request and response body format with DTO classes
 
