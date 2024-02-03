@@ -338,13 +338,13 @@ The request should also contain the _HTTP method_, that determines the operation
 
 The resource path has certain naming conventions. The path starts with the resource _collection_ name in plural, for examples "users". The collection name is followed by resource specifiers, for example the id of the resource. Here's example of RESTful API paths for the "users" collection:
 
-| HTTP method | Path          | Description                          |
-| ----------- | ------------- | ------------------------------------ |
-| `GET`       | `/users`      | List all users                       |
-| `GET`       | `/users/{id}` | Get the user with the provided id    |
-| `POST`      | `/users`      | Create a user                        |
-| `PUT`       | `/users/{id}` | Update the user with the provided id |
-| `DELETE`    | `/users/{id}` | Delete the user with the provided id |
+| HTTP method | Path          | Request mapping | Description                          |
+| ----------- | ----------- | ------------- | ------------------------------------ |
+| `GET`       | `/users`      | `@GetMapping("/users")` | List all users                       |
+| `GET`       | `/users/{id}` | `@GetMapping("/users/{id}")` | Get the user with the provided id    |
+| `POST`      | `/users`      | `@PostMapping("/users")` | Create a user                        |
+| `PUT`       | `/users/{id}` | `@PutMapping("/users/{id}")` | Update the user with the provided id |
+| `DELETE`    | `/users/{id}` | `@DeleteMapping("/users/{id}")` | Delete the user with the provided id |
 
 {: .note }
 
@@ -360,7 +360,7 @@ A collection can have _sub-collections_. For example, a path for a user's messag
 
 When we design and implement REST API endpoints we should consider the use-case. We don't implement endpoints arbitrary, there should be a _need for the endpoint_ first, for example a certain feature in a frontend application needs to display some data in the database. Based on the feature we consider what kind of data and operations the REST API needs to provide. These requirements will determine the endpoints we will implement.
 
-We can create a separate controller class for each collection. The `@RequestMapping` annotation can be applied to the controller class the define the collection name prefix of the path. Each method will automatically get the prefix in the path, so we don't need to repeat it in the method's mapping annotations:
+We can create a separate controller class for each collection. The `@RequestMapping` annotation can be applied to the controller class the define the collection name prefix of the path. Each method will automatically get the prefix in the path, so we don't need to repeat it in the method's request mapping annotations:
 
 ```java
 @RestController
