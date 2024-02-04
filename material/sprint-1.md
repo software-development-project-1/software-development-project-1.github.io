@@ -503,7 +503,7 @@ The `layout:decorate="~{layout.html}"` on the `html` element specifies that this
 
 ## The README file
 
-The `README.md` file we worked with in the previous exercise has a special meaning in software development projects. When a software developer starts exploring a project, the first thing they should do is to look for the README file. This file should have all the relevant information about the project, for example:
+The `README.md` file we worked with previously has a special meaning in software development projects. When a software developer starts exploring a project, the first thing they should do is to look for the README file. This file should have all the relevant information about the project, for example:
 
 - What's the project about?
 - How to use the project?
