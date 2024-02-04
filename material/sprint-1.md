@@ -311,7 +311,6 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > Tips for the tasks:
 >
 > - The quiz published status can be implemented as a [Boolean](https://www.geeksforgeeks.org/java-lang-boolean-class-java/) attribute and with a [checkbox field](https://www.thymeleaf.org/doc/tutorials/3.1/thymeleafspring.html#checkbox-fields)
-> - Alter the `layout.html` file mentioned above to change the navigation bar content
 
 {: .important-title }
 
