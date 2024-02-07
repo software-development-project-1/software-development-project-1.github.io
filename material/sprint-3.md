@@ -100,7 +100,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
 > The implementation could look something like this:
 >
