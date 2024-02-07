@@ -307,10 +307,6 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > The implementation could look something like this:
 >
 > ![](/assets/sprint-1-user-story-1.png)
->
-> Tips for the tasks:
->
-> - The quiz published status can be implemented as a [Boolean](https://www.geeksforgeeks.org/java-lang-boolean-class-java/) attribute and with a [checkbox field](https://www.thymeleaf.org/doc/tutorials/3.1/thymeleafspring.html#checkbox-fields)
 
 {: .important-title }
 
@@ -325,7 +321,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > ![](/assets/sprint-1-user-story-2.png)
 >
 > Tips for the tasks:
-> 
+>
 > - This page should be visible on the root path (the `/` path) of the application. Change the `@GetMapping` of the `listMessages` method in the `MessageController` class, for example to `@GetMapping("/messages")`
 
 {: .important-title }
@@ -361,7 +357,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
-> 
+>
 > The implementation could look something like this:
 >
 > ![](/assets/sprint-1-user-story-5-1.png)
