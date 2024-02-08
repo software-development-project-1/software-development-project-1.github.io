@@ -19,7 +19,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 2. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-22. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-23. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Sprint Planning
 
@@ -213,7 +213,7 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > To quickly see which quizzes are published and which are not, there should be some way for the teacher to filter the quiz list based on the published status. There could be for example "All", "Published", and "Not published" tabs at the top of the list.
 >
-> It would be convenient, if the quiz list would display the date when the quiz was added. This way, the teacher would know how old the quiz is."
+> The quiz list should display the date when the quiz was added. This way, the teacher would know how old the quiz is. Also, the quizzes should be listed from newest to oldest. This way, the teacher can find the latest quizzes quickly at the top of the list."
 >
 > -- The Product Owner
 
@@ -225,6 +225,7 @@ After some discussion the Scrum Team planned the following user stories:
 4. {{site.sprint_1_user_story_4}}
 5. {{site.sprint_1_user_story_5}}
 6. {{site.sprint_1_user_story_6}}
+7. {{site.sprint_1_user_story_7}}
 
 The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
 
@@ -412,6 +413,18 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 > Exercise 16
 >
+> Plan the tasks for the seventh user story, "{{site.sprint_1_user_story_7}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> Tips for the tasks:
+>
+> - [Sorting Query Results with Spring Data](https://www.baeldung.com/spring-data-sorting)
+
+{: .important-title }
+
+> Exercise 17
+>
 > Discuss how you will divide the workload (the tasks) of the Sprint among the team members. For example, each team member could be responsible for the tasks of a single user story. Then, add an _assignee_ for each issue. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same issue together.
 
 {: .highlight }
@@ -511,7 +524,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 18
 >
 > Open the `README.md` file for editing for example in GitHub or in Visual Studio Code. You might not be able to edit the file in Eclipse. Replace the current contents of the repository's `README.md` file with the following information using Markdown:
 >
@@ -543,7 +556,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 19
 >
 > Organize a Daily Scrum event at least once a week during each Sprint.
 
@@ -568,7 +581,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 20
 >
 > Write a usage guide on _how to start the backend application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
 >
@@ -671,7 +684,7 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 21
 >
 > Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
 
@@ -687,7 +700,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -699,7 +712,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 23
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >
