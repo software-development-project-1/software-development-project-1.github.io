@@ -15,7 +15,7 @@ For the final Sprint of the course, the Sprint 3, we have a new set of requireme
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
 
-The Sprint assesment is done based on the exercises 1-21. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
+The Sprint assesment is done based on the exercises 1-22. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
 
 During this Sprint, each team member will do a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 10 personal points.
 
@@ -701,6 +701,12 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 >
 > Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
 
+{: .important-title }
+
+> Exercise 20
+>
+> Make sure that all project-related documentation, such as project description, data model documentation and Swagger documentation is up-to-date. Also, add a few screenshots of the application's most important features, such as adding a quiz, taking a quiz and seeing the quiz's results to the project description in the `README.md` file. [This guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images) explains how work with images in Markdown.
+
 ## Peer review
 
 {: .highlight }
@@ -719,7 +725,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 21
 >
 > Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 
@@ -735,7 +741,7 @@ Add a link to the `final-report.md` file in Github to the `README.md` file under
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
 > Write the final report for the course as instructed above.
 
