@@ -693,19 +693,19 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 > Exercise 18
 >
-> Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
+> Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
 
 {: .important-title }
 
 > Exercise 19
 >
-> Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
+> Make sure that all project-related documentation, such as project description, data model documentation and Swagger documentation is up-to-date. Also, add a few screenshots of the application's most important features, such as adding a quiz, taking a quiz and seeing the quiz's results to the project description in the `README.md` file. [This guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images) explains how work with images in Markdown.
 
 {: .important-title }
 
 > Exercise 20
 >
-> Make sure that all project-related documentation, such as project description, data model documentation and Swagger documentation is up-to-date. Also, add a few screenshots of the application's most important features, such as adding a quiz, taking a quiz and seeing the quiz's results to the project description in the `README.md` file. [This guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images) explains how work with images in Markdown.
+> Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
 ## Peer review
 
