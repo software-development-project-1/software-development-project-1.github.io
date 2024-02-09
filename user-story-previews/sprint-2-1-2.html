@@ -24,70 +24,21 @@
       </div>
     </nav>
     <div class="container my-3">
-      <h1>The capital cities of Europe</h1>
+      <h1>Add a question to "The capital cities of Europe"</h1>
+
       <form>
         <div class="mb-3">
-          <label class="form-label">Name</label>
+          <label class="form-label">Question text</label>
           <input
             type="text"
             class="form-control"
-            value="The capital cities of Europe"
+            value="What is the capital of Finland?"
           />
         </div>
 
         <div class="mb-3">
-          <label class="form-label">Description</label>
-          <textarea class="form-control">
-Learn the capital cities of the European countries</textarea
-          >
-        </div>
-
-        <div class="mb-3">
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="published"
-            />
-            <label class="form-check-label" for="published"> Published </label>
-          </div>
-        </div>
-
-        <button class="btn btn-primary">Edit</button>
-        <a href="#" class="btn btn-secondary">Cancel</a>
-      </form>
-      <h2 class="mt-3">Questions</h2>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Question text</th>
-            <th>Correct answer</th>
-            <th>Difficulty level</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>What is the capital of Finland?</td>
-            <td>Helsinki</td>
-            <th><span class="badge text-bg-secondary">Easy</span></th>
-          </tr>
-          <tr>
-            <td>What is the capital of Sweden?</td>
-            <td>Stockholm</td>
-            <th><span class="badge text-bg-secondary">Hard</span></th>
-          </tr>
-        </tbody>
-      </table>
-      <form>
-        <div class="mb-3">
-          <label class="form-label">Question text</label>
-          <input type="text" class="form-control" />
-        </div>
-
-        <div class="mb-3">
           <label class="form-label">Correct answer</label>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control" value="Helsinki" />
         </div>
 
         <div class="mb-3">
@@ -99,6 +50,7 @@ Learn the capital cities of the European countries</textarea
               type="radio"
               name="flexRadioDefault"
               id="flexRadioDefault1"
+              checked
             />
             <label class="form-check-label" for="flexRadioDefault1">
               Easy
@@ -131,6 +83,7 @@ Learn the capital cities of the European countries</textarea
         </div>
 
         <button class="btn btn-primary">Add</button>
+        <a href="#" class="btn btn-secondary">Cancel</a>
       </form>
     </div>
   </body>

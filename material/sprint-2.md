@@ -137,9 +137,11 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "It's great that we now have the basic functionality for managing quizzes! What we now need is a way for the teacher to add questions for the quizzes and student to take the published quizzes.
 >
-> The teacher should be able to add questions for the quizzes. For example the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?", a correct answer, for example "Helsinki" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal". A question could be added using the quiz edit form implemented during the previous Sprint. 
+> The teacher should be able to add questions for the quizzes. For example the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?", a correct answer, for example "Helsinki" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal". 
 >
-> The quiz's questions should be listed and below the list there should be a form for adding a question. The teacher should not be able to add a question with a blank question text or correct answer, or without a difficulty level. Once a question has been added for the quiz, the teacher should be able to delete it. The question list should have a "Delete" button next to each question. The teacher should be able to filter the the question list based on the difficulty level. Similarly as with the quiz list, there could be for example "All", "Easy", "Normal" and "Hard" tabs at the top of the list.
+> There should be a page with a form for adding a question to a quiz. The teacher should not be able to add a question with a blank question text or correct answer, or without a difficulty level. Added questions of a quiz should be listed on a separate page. There should be a link to both these pages in the quiz edit page.
+>
+> Once a question has been added to a quiz, the teacher should be able to delete it. The question list should have a "Delete" button next to each question. The teacher should also be able to filter the question list based on the difficulty level. Similarly as with the quiz list, there could be for example "All", "Easy", "Normal" and "Hard" tabs at the top of the list.
 >
 > Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description and the date when it was added. These quizzes should be listed from newest to oldest. Each quiz name should be a link to a separate page where the quiz name, description and the questions are displayed. There should also be some kind of navigation menu from which the student can navigate to the quiz list page.
 >
@@ -189,7 +191,9 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > The implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-1.png)
+> ![](/assets/sprint-2-user-story-1-1.png)
+>
+> ![](/assets/sprint-2-user-story-1-2.png)
 >
 > - Make sure that you can delete a quiz that has questions. Before deleting a quiz, the quiz's questions need to be deleted. [Cascading](https://www.baeldung.com/jpa-cascade-types) can be used to achieve this automatically
 
@@ -203,7 +207,9 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > The implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-2.png)
+> ![](/assets/sprint-2-user-story-2-1.png)
+>
+> ![](/assets/sprint-2-user-story-2-2.png)
 
 {: .important-title }
 
