@@ -135,9 +135,9 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 2 goals in the Sprint Planning event:
 
-> "It's great that we now have the basic functionality for managing quizzes! What we now need is a way for the teacher to add questions for the quizzes and student to take the published quizzes.
+> "It's great that we now have the basic functionality for managing quizzes! What we now need is a way for the teacher to add questions to quiz and student to take the published quizzes.
 >
-> The teacher should be able to add questions for the quizzes. For example the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?", a correct answer, for example "Helsinki" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal". 
+> The teacher should be able to add questions to a quiz. For example the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?", a correct answer, for example "Helsinki" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal". 
 >
 > There should be a page with a form for adding a question to a quiz. The teacher should not be able to add a question with a blank question text or correct answer, or without a difficulty level. Added questions of a quiz should be listed on a separate page. There should be a link to both these pages in the quiz edit page.
 >
