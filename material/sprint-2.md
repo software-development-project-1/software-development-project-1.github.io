@@ -195,6 +195,8 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > ![](/assets/sprint-2-user-story-1-2.png)
 >
+> Tips for the tasks:
+>
 > - Make sure that you can delete a quiz that has questions. Before deleting a quiz, the quiz's questions need to be deleted. [Cascading](https://www.baeldung.com/jpa-cascade-types) can be used to achieve this automatically
 
 {: .important-title }
