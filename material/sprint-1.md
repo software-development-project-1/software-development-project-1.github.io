@@ -315,7 +315,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Plan the tasks for the second user story, "{{site.sprint_1_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
 > The implementation could look something like this:
 >
