@@ -333,7 +333,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
-> The implementation could look something like this:
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-1-user-story-3-1.png)
 >
@@ -347,7 +347,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
-> The implementation could look something like this:
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-1-user-story-4.png)
 
@@ -359,7 +359,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
-> The implementation could look something like this:
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-1-user-story-5-1.png)
 >
@@ -400,7 +400,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
-> The implementation could look something like this:
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-1-user-story-6.png)
 >
