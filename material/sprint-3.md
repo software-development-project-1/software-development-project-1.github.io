@@ -65,7 +65,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. There should be a link to the results page next to the quiz in the quiz list page.
 >
-> Because students have different skill levels, it would useful if the student could choose the difficulty level when taking a quiz in the student dashboard. There could be a dropdown menu in the quiz page with options "Any", "Easy", "Normal" and "Hard". If the student chooses the "Any" option, all the questions will be displayed. Otherwise, only the questions with the chosen difficulty level will be displayed."
+> Because students have different skill levels, it would be useful if the student could choose the difficulty level when taking a quiz in the student dashboard. There could be a dropdown menu in the quiz page with options "Any", "Easy", "Normal" and "Hard". If the student chooses the "Any" option, all the questions will be displayed. Otherwise, only the questions with the chosen difficulty level will be displayed."
 >
 > -- The Product Owner
 
