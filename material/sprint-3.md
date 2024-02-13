@@ -102,7 +102,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
-> The implementation could look something like this:
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-2-user-story-8-1.png)
 >
@@ -124,7 +124,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
-> The implementation could look something like this:
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-3-user-story-1.png)
 
@@ -136,7 +136,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
-> The implementation could look something like this:
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-3-user-story-2-1.png)
 >
@@ -154,7 +154,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
-> The implementation could look something like this:
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-3-user-story-3-1.png)
 >
