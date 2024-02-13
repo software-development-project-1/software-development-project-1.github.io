@@ -63,7 +63,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > After signing in, the teacher should be able to add a quiz. However, the teacher should only be able to edit and delete quizzes they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The quiz list should also display the username of the teacher who has added the quiz both in teacher and student dashboard.
 >
-> There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. There should be a link to the results page next to the quiz in the quiz list page. "
+> There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. There should be a link to the results page next to the quiz in the quiz list page. "
 >
 > -- The Product Owner
 
