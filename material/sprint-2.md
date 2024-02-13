@@ -189,7 +189,7 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
-> The implementation could look something like this:
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-2-user-story-1-1.png)
 >
@@ -207,7 +207,7 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
-> The implementation could look something like this:
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-2-user-story-2-1.png)
 >
@@ -221,7 +221,7 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
-> The implementation could look something like this:
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-2-user-story-3.png)
 
@@ -233,7 +233,7 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
-> The implementation could look something like this:
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-2-user-story-4.png)
 
@@ -705,7 +705,7 @@ public class MessageRestController {
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
-> The implementation could look something like this:
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-2-user-story-5.png)
 
@@ -717,7 +717,7 @@ public class MessageRestController {
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
-> The implementation could look something like this:
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-2-user-story-6-1.png)
 >
@@ -731,7 +731,7 @@ public class MessageRestController {
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
-> The implementation could look something like this:
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-2-user-story-7-1.png)
 >
