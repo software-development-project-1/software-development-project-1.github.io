@@ -377,7 +377,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >   public String listQuizzes(@RequestParam(required = false) Boolean published, /* ... */) {
 >       model.addAttribute("publishedFilter", published);
 >   
->       if(published == null) {
+>       if (published == null) {
 >         // all quizzes requested
 >       } else {
 >         // quizzes by a published status requested
