@@ -15,7 +15,7 @@ nav_order: 4
 
 ## Submitting this week's exercises
 
-All of this week's exercises (exercises 1-14) are submitted to [this Moodle submission]({{site.week_2_moodle_submission_link}}). The submission should only contain the link to your GitHub repository created in exercise 6 and the information mentioned in exercise 14. The submission deadline is on {{site.week_2_deadline}}.
+All of this week's exercises (exercises 1-15) are submitted to [this Moodle submission]({{site.week_2_moodle_submission_link}}). The submission should only contain the link to your GitHub repository created in exercise 7 and the information mentioned in exercise 15. The submission deadline is on {{site.week_2_deadline}}.
 
 ## Version control
 
@@ -71,7 +71,7 @@ The command should print basic introductions on how to use the `git` command.
 
 {: .important-title }
 
-> Exercise 2
+> Exercise 3
 >
 > Let's configure Git a bit.
 >
@@ -281,7 +281,7 @@ Branches are usually used for testing out new features without breaking a workin
 
 {: .important-title}
 
-> Exercise 3
+> Exercise 4
 >
 > 1. Open the `git-practice` folder we turned it into a Git project earlier both in an editor (for example Visual Studio Code) and in Git Bash.
 > 2. Create a file called <code>story.txt</code> in your project. Add a lot of text inside.
@@ -294,7 +294,7 @@ Branches are usually used for testing out new features without breaking a workin
 
 {: .important-title}
 
-> Exercise 4
+> Exercise 5
 >
 > 1. Find out how you can remove changes from the state where they are being added to the next commit (under <code>Changes to be committed</code>), and move them under the headline <code>Changes not staged for commit</code>? Hint: <code>git status</code> will help.
 > 2. Add some new products to the shopping list and save the file.
@@ -340,7 +340,7 @@ A new repository called "origin" is added using an HTTPS connection by running t
 
 {: .important-title }
 
-> Exercise 5
+> Exercise 6
 >
 > When we start making changes to a remote repository on GitHub, we need to authenticate. So that we don't need to input our GitHub credentials every time we access the remote repository, let's configure the Git's [Credential Storage](https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage):
 >
@@ -349,7 +349,7 @@ A new repository called "origin" is added using an HTTPS connection by running t
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 7
 >
 > Create a remote repository in GitHub for the project you created locally as instructed above. _Don't let GitHub create a README, license or a .gitignore file when creating the repository_. Doing so will cause problems later. Also, make sure that _the repository is public_ (the "Public" option is selected).
 >
@@ -369,7 +369,7 @@ Let's push the changes we made to the file `git_practice.txt` by running `git pu
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 8
 >
 > 1. Push the three commits you made earlier to the main branch of the remote repository.
 > 2. Check on GitHub that you can find all the changes in the remote.
@@ -415,7 +415,7 @@ Now you can find the new line of text in the file you changed via GitHub.
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 9
 >
 > Create a new file to the `school` subfolder via GitHub, and fetch it to your local version. You can add file in GitHub by click the `school` folder name on GitHub and cliking "Add a file" on top right corner. Then commit changes similarly as while editing the file.
 
@@ -445,7 +445,7 @@ In situations like this one can put the local changes aside to the _stash_. This
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 10
 >
 > 1. Make changes to some files which you have already added to Git once (i.e. they are not under the headline <code>untracked</code> in the output of <code>git status</code>).
 > 2. Stash the changes you just made using Git.
@@ -512,7 +512,7 @@ Now according to the output of `git status` we have created two commits, (`ahead
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 11
 >
 > 1. Create two non-conflicting commits, one directly to the remote repository, and another to the local version. For example, edit the first line of your shopping list via GitHub, and the last line on the local version.
 > 2. Try pushing the local commit to the remote repository and observe the error message.
@@ -595,7 +595,7 @@ Merge conflicts can also occur when taking changes out of the stash, if the hidd
 
 {: .important-title}
 
-> Exercise 11
+> Exercise 12
 >
 > Create a merge conflict in your project and resolve it. Make sure to push the end result to GitHub.
 
@@ -629,7 +629,7 @@ Of course, the same procedure can be repeated on the command line. You can brows
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > 1. Create a new file to you project called <code>secret.txt</code>, and write something inside such as "this is a very important secret".
 > 2. Create a new commit of the new file and the contents added to it.
@@ -673,7 +673,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > 1. Clone the git-practice repository to your local computer as instructed above and open the repository folder in Git Bash and in an editor such as Visual Studio Code.
 > 2. Change the contents of some file (for example the `git_practice.txt`) file and push the changes to GitHub. Open the repository in GitHub and see that it has the commit you created.
@@ -681,7 +681,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 15
 >
 > Explore an open source project repositories in GitHub. You can for example search for your favorite library (such as React) on the [GitHub's home page](https://github.com/) using the search field at the top of the page. Alternatively, you can use Google.
 >
