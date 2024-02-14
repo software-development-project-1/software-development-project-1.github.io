@@ -382,6 +382,8 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >       } else {
 >         // quizzes by a published status requested
 >       }
+>
+>       // ...
 >   }
 >   ```
 >
