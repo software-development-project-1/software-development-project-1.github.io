@@ -48,11 +48,11 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 
 {: .important-title }
 
-> Exercise 2
+> Exercise 1
 >
 > _Each team member_ should do the steps mentioned above to create their own branch named by their GitHub username and push it to GitHub.
 
-We can also pull remote (in GitHub) branches for our local computer and make changes to them. Check the list of branches on GitHub and pick _some other team member's branch_. Once you have picked a branch, switch to main branch first:
+We can also pull remote (in GitHub) branches for our local computer and make commits to them. Check the list of branches on GitHub and pick _some other team member's branch_. Once you have picked a branch, switch to main branch first:
 
 ```bash
 git checkout main
@@ -90,56 +90,10 @@ But, GitHub supports a better way to merge branches using [pull requests](https:
 
 {: .important-title }
 
-> Exercise 4
+> Exercise 2
 >
 > 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions.
-> 2. Take a look at some other team member's pull request. Check the changes introduced by the pull request in GitHub. Pull the branch from GitHub to your local repository and take a look at the changes. 
-
-
-Let's switch to the our branch first and see if there is any changes in GitHub:
-
-```bash
-git checkout <name-of-my-branch>
-```
-
-We can pull changes from GitHub with the `git pull` command:
-
-```bash
-git pull
-```
-
-Once we have the changes on our local computer, let's switch to the main branch:
-
-```bash
-git checkout main
-```
-
-Now, to merge our branch with the main branch we can do the following:
-
-```bash
-git merge <name-of-my-branch>
-```
-
-This creates a _merge commit_ for the main branch containing all the changes done in the other branch. Let's push the changes to GitHub:
-
-```bash
-git push
-```
-
-Now if we open the repository in GitHub, we should see that the main branch has our file in the `documentation` folder.
-
-{: .highlight }
-
-> Merge commits can cause _merge conflicts_. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts).
-
-{: .important-title }
-
-> Exercise 4
->
-> Pull changes for _your branch_ from GitHub with the `git pull` command. Then, merge _your branch_ with the main branch. Check in GitHub that you changes are visible in the main branch.
-
-{: .highlight }
-
-> Once everyone is done with these exercises, remove each team member's file from the `documentation` folder in the main branch and push the changes to GitHub.
+> 2. Take a look at some other team member's pull request. Check the changes introduced by the pull request in GitHub. Pull the branch from GitHub to your local computer and take a look at the changes. If everything looks good, add a comment, such as "Looks good to me", for the pull request in GitHub
+> 3. Once you have received a comment from a team member for your pull request, merge it to the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions
 
 If you want to learn more about branches and how they are used in the software development workflow, read the [Git feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) tutorial by Atlassian.
