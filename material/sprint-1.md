@@ -456,14 +456,15 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 > You can easily find the issues assigned to you by opening the "Issues" tab and choosing your GitHub account from the "Assignee" dropdown menu.
 
-## Tips for implementing the tasks
+## Tips for the teamwork
 
 Here's a few tips before you start implementing the tasks:
 
-- _Push_ code to the GitHub repository often. Once you have some _working_ code, use `git add`, `git commit`, `git push` commands to push the code to GitHub.
-- _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer.
-- While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts).
-- Take a look at the [example project]({{site.example_project_link}}) for examples.
+- Use the full potential of your team and _work together_. Plan the tasks together, implement the tasks together and support each other
+- _Push_ code to the GitHub repository often. Once you have some _working_ code, use `git add`, `git commit`, `git push` commands to push the code to GitHub
+- _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer
+- While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts)
+- Take a look at the [example project]({{site.example_project_link}}) for examples
 
 ## Thymeleaf page layouts
 
