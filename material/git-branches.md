@@ -12,7 +12,7 @@ git branch kaltsoon
 
 {: .note }
 
-> Typically, the branch name describes the feature develop in the branch or some other purpose of the branch, for example `filter-recommendations-by-category`.
+> Typically, the branch name describes the feature develop in the branch or some other purpose of the branch, for example `delete-quiz` or `filter-quizzes-by-published-status`.
 
 Now, let's check the repository's branches with the `git branch` command. We should see that our branch is added to the list. We can also see that there's an astrisk symbol (\*) before the main branch. This means that we are currently on the main branch. The current branch is also displayed in brackets in the Git Bash after the path to the current folder.
 
@@ -22,9 +22,11 @@ We can switch branches using the `git checkout <name-of-the-branch>` command. Sw
 git checkout <name-of-my-branch>
 ```
 
-Next, create a Markdown file to the `documentation` folder which is named after you GitHub username (for example `kaltsoon.md`). Add some text to the file and save it. Check the status with `git status` command, add the changes with the `git add` command and create a commit with the `git commit` command. Then let's switch back to the main branch with the `git checkout main` command. If we check the contents of `documentation` folder, we don't see our file there. That's because these changes _only exist in our other branch_.
+Next, make some small change for the project, for example by changing a button text or color in a Thymeleaf template or changing a variable name in a method. If there's some small code or user interface improvement you have in mind, this is the time to do it. Once you have made the change, check the status with `git status` command, add the changes with the `git add` command and create a commit with the `git commit` command. Feel free to do multiple commits if needed.
 
-Let's switch back to our branch with the `git checkout` command. Change the contents of your file in the `documentation` folder and create one more commit. Then, push the changes to GitHub with the `git push` command. We get the following error message:
+Then let's switch back to the main branch with the `git checkout main` command. If we check for the changes we made in the other branch, we see that they are no longer present. That's because the commits we made _only exist in our other branch_.
+
+Let's switch back to our branch with the `git checkout` command. Then, push the changes to GitHub with the `git push` command. We get the following error message:
 
 ```bash
 fatal: The current branch kaltsoon has no upstream branch.
@@ -42,7 +44,7 @@ The error means that the current branch is not in GitHub yet, just on our local 
 git push --set-upstream origin kaltsoon
 ```
 
-Now, let's check that our branch is pushed to GitHub. Open the repository in GitHub and click the branch selector which says "main" below the repository name. We should see our branch there. Click the branch and check that the file exists in the `documentation` folder.
+Now, let's check that our branch is pushed to GitHub. Open the repository in GitHub and click the branch selector which says "main" below the repository name. We should see our branch there. Click the branch and check that the changes are visible in GitHub.
 
 {: .important-title }
 
@@ -76,15 +78,23 @@ git pull
 
 <!-- TODO: tuleeko virhe? -->
 
-Once we have pulled the changes from GitHub, let's change the contents of the team member's file in the `documentation` folder and push these changes to GitHub similarly as we did before. Once you have pushed the changes, check that changes are visible in GitHub like you did with your own branch.
+Once we have happy with the changes we have made in the branch, we should _merge_ it with the main branch. This basically means applying all the commits we have made for the branch to the main branch. For this we _could_ use the `git merge` command:
+
+```bash
+git checkout main
+git merge <name-of-my-branch>
+git push
+```
+
+But, GitHub supports a better way to merge branches using [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). Pull requests are "requests" to merge a branch on to another branch (commonly the main branch). The benefit over using the `git merge` command is that pull requests provide a way to achieve _quality assurance_ for example through a code review process.
 
 {: .important-title }
 
-> Exercise 3
+> Exercise 4
 >
-> Pull _some other team member's_ branch from GitHub and make some changes for _their file_ in `documentation` folder. Push these changes to GitHub.
+> 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions.
+> 2. Take a look at some other team member's pull request. Check the changes introduced by the pull request in GitHub. Pull the branch from GitHub to your local repository and take a look at the changes. 
 
-Once we have happy with the changes we have made in the branch, we should _merge_ it with the main branch. This basically means applying all the commits we have made for the branch to the main branch. For this we can use the `git merge` command.
 
 Let's switch to the our branch first and see if there is any changes in GitHub:
 
