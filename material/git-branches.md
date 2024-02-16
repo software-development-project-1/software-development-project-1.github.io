@@ -2,7 +2,7 @@
 
 So far, we have only created commits for the _main branch_ of our repository. _Git branches_ allows us to _diverge from the main branch commit history_ by creating a new branch. We can add commits for our branch without effecting the main branch commit history and at some point we _merge_ the commits of branch to the main branch.
 
-Branches are commonly used to isolate work-in-progress code from the main branch. This can be for example the development of certain user story. Commonly, the main branch should only contain _working code_, which produces _deployment ready features_. This means that the _latest working version_ of our application can be found in the main branch at all times. We should be able to deploy this application for our users at any moment without issues.
+Branches are commonly used to isolate work-in-progress code from the main branch. This can be for example the development of certain user story. Commonly, the main branch should only contain _working code_ and _deployment ready features_. This means that the latest working version of our application can be found in the main branch at all times. We should be able to deploy this application for our users at any moment without issues. The Git workflow where feature development is isolated into feature-specific branch is referred to as [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow). This workflow is a very common workflow in the industry.
 
 A new branch can be created with the `git branch <name-of-the-branch>` (replace the `<name-of-the-branch>` with name of the branch) command in Git Bash. Let's create a branch and _name it our GitHub username with lowercase letters_. For example, I would create the following branch:
 
@@ -97,5 +97,3 @@ But, GitHub supports a better way to merge branches using [pull requests](https:
 > 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions.
 > 2. Take a look at some other team member's pull request and conduct a code review. Check the changes introduced by the pull request in GitHub. Pull the branch from GitHub to your local computer and take a look at the changes. If everything looks good, add a comment, such as "Looks good to me", for the pull request in GitHub
 > 3. Once you have received a comment from a team member for your pull request, merge it to the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions
-
-If you want to learn more about branches and how they are used in the software development workflow, read the [Git feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) tutorial by Atlassian.
