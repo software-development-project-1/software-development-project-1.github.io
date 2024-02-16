@@ -4,10 +4,10 @@ So far, we have only created commits for the _main branch_ of our repository. _G
 
 Branches are commonly used to isolate work-in-progress code from the main branch. This can be for example the development of certain user story. Commonly, the main branch should only contain _working code_ and _deployment ready features_. This means that the latest working version of our application can be found in the main branch at all times. We should be able to deploy this application for our users at any moment without issues. The Git workflow where feature development is isolated into feature-specific branch is referred to as [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow). This workflow is a very common workflow in the industry.
 
-A new branch can be created with the `git branch <name-of-the-branch>` (replace the `<name-of-the-branch>` with name of the branch) command in Git Bash. Let's create a branch and _name it our GitHub username with lowercase letters_. For example, I would create the following branch:
+A new branch can be created with the `git branch <name-of-the-branch>` (replace the `<name-of-the-branch>` with name of the branch) command in Git Bash. Let's create a branch and _name it our GitHub username with lowercase letters_. First, pull the latest changes from GitHub using the `git pull` command. Then, create the branch:
 
 ```bash
-git branch kaltsoon
+git branch <name-of-my-branch>
 ```
 
 {: .note }
@@ -21,6 +21,10 @@ We can switch branches using the `git checkout <name-of-the-branch>` command. Sw
 ```bash
 git checkout <name-of-my-branch>
 ```
+
+{: .highlight }
+
+> We usually want to create new branch of the main branch. This means that before creating a new branch with the `git branch <name-of-the-branch>` command, switch to the main branch by running the `git checkout main` command. If you are uncertain which is the current branch, check it with the `git branch` command.
 
 Next, make some small change for the project, for example by changing a button text or color in a Thymeleaf template or changing a variable name in a method. If there's some small code or user interface improvement you have in mind, this is the time to do it. Once you have made the change, check the status with `git status` command, add the changes with the `git add` command and create a commit with the `git commit` command. Feel free to do multiple commits if needed.
 
@@ -52,31 +56,11 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 >
 > _Each team member_ should do the steps mentioned above to create their own branch named by their GitHub username and push it to GitHub.
 
-We can also pull remote (in GitHub) branches for our local computer and make commits to them. Check the list of branches on GitHub and pick _some other team member's branch_. Once you have picked a branch, switch to main branch first:
-
-```bash
-git checkout main
-```
-
-Then, create a branch that _has the same name_ as the one you picked from GitHub:
-
-```bash
-git branch <name-of-other-team-member-branch>
-```
-
-Once created, switch to the created branch:
+We can also pull remote (in GitHub) branches for our local computer. Check the list of branches in GitHub and pick _some other team member's branch_. Then, to pull the remote branches from GitHub using the `git pull` command. Finally, switch to the team member's branch:
 
 ```bash
 git checkout <name-of-other-team-member-branch>
 ```
-
-Now, we can pull the branch changes from GitHub with the `git pull` command:
-
-```bash
-git pull
-```
-
-<!-- TODO: tuleeko virhe? -->
 
 ### Merging branches and pull requests
 
