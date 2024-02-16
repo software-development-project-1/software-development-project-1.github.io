@@ -11,7 +11,7 @@ So far, we have only created commits for the _main branch_ of our repository. _G
 
 ![Git branches](/assets/git-branch.svg){: width="500" }
 
-Branches are commonly used to isolate work-in-progress code from the main branch. This can be for example the development of certain user story. Commonly, the main branch should only contain _working code_ and _deployment ready features_. This means that the latest working version of our application can be found in the main branch at all times. We should be able to deploy this application for our users at any moment without issues. The Git workflow where feature development is isolated into feature-specific branch is referred to as [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow). This workflow is a very common workflow in the industry.
+Branches are commonly used to isolate work-in-progress code from the main branch. This can be for example the development of certain user story. Commonly, the main branch should only contain _working code_ and _deployment ready features_. This means that the latest working version of our application can be found in the main branch at all times. We should be able to deploy this application for our users at any moment without issues. The Git workflow where feature development is isolated into a feature-specific branch is referred to as [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow). This workflow is a very common workflow in the industry.
 
 A new branch can be created with the `git branch <name-of-the-branch>` (replace the `<name-of-the-branch>` with name of the branch) command in Git Bash. Let's create a branch and _name it our GitHub username with lowercase letters_. First, pull the latest changes from GitHub using the `git pull` command. Then, create the branch:
 
@@ -21,7 +21,7 @@ git branch <name-of-my-branch>
 
 {: .note }
 
-> Typically, the branch name describes the feature develop in the branch or some other purpose of the branch, for example `delete-quiz` or `filter-quizzes-by-published-status`.
+> Typically, the branch name describes the feature developed in the branch or some other purpose of the branch, for example `delete-quiz` or `filter-quizzes-by-published-status`.
 
 Now, let's check the repository's branches with the `git branch` command. We should see that our branch is added to the list. We can also see that there's an astrisk symbol (\*) before the main branch. This means that we are currently on the main branch. The current branch is also displayed in brackets in the Git Bash after the path to the current folder.
 
