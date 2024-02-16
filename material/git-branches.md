@@ -96,4 +96,22 @@ But, GitHub supports a better way to merge branches using [pull requests](https:
 >
 > 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions.
 > 2. Take a look at some other team member's pull request and conduct a code review. Check the changes introduced by the pull request in GitHub. Pull the branch from GitHub to your local computer and take a look at the changes. If everything looks good, add a comment, such as "Looks good to me", for the pull request in GitHub
-> 3. Once you have received a comment from a team member for your pull request, merge it to the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions
+> 3. Once you have received a comment from a team member for your pull request, merge it to the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below
+
+### Resolving conflicts in branches
+
+If the pull request can't be automatically merged due to conflicts, we'll need to solve them manually. First, switch to main branch and pull the latest changes:
+
+```bash
+git checkout main
+git pull
+```
+
+Then, switch to your branch and merge the main branch on to it:
+
+```bash
+git checkout <name-of-my-branch>
+git merge main
+```
+
+Finally, resolve the conflicts and add, commit and push the changes to GitHub. Now, we should be able to merge the pull request in GitHub.
