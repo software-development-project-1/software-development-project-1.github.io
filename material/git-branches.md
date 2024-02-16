@@ -1,6 +1,15 @@
+---
+layout: page
+title: Git branches
+permalink: /git-branches
+nav_exclude: true
+---
+
 ## Git branches
 
 So far, we have only created commits for the _main branch_ of our repository. _Git branches_ allows us to _diverge from the main branch commit history_ by creating a new branch. We can add commits for our branch without effecting the main branch commit history and at some point we _merge_ the commits of a branch into the main branch.
+
+![Git branches](/assets/git-branch.svg){: width="500" }
 
 Branches are commonly used to isolate work-in-progress code from the main branch. This can be for example the development of certain user story. Commonly, the main branch should only contain _working code_ and _deployment ready features_. This means that the latest working version of our application can be found in the main branch at all times. We should be able to deploy this application for our users at any moment without issues. The Git workflow where feature development is isolated into feature-specific branch is referred to as [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow). This workflow is a very common workflow in the industry.
 
@@ -45,7 +54,7 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.
 The error means that the current branch is not in GitHub yet, just on our local computer. Let's run the command that Git suggests:
 
 ```bash
-git push --set-upstream origin kaltsoon
+git push --set-upstream origin <name-of-my-branch>
 ```
 
 Now, let's check that our branch is pushed to GitHub. Open the repository in GitHub and click the branch selector which says "main" below the repository name. We should see our branch there. Click the branch and check that the changes are visible in GitHub.
@@ -56,7 +65,7 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 >
 > _Each team member_ should do the steps mentioned above to create their own branch named by their GitHub username and push it to GitHub.
 
-We can also pull remote (in GitHub) branches for our local computer. Check the list of branches in GitHub and pick _some other team member's branch_. Then, to pull the remote branches from GitHub using the `git pull` command. Finally, switch to the team member's branch:
+We can also pull remote branches from GitHub to our local computer. Check the list of branches in GitHub and pick _some other team member's branch_. Then, to pull the remote branches from GitHub using the `git pull` command. Finally, switch to the team member's branch:
 
 ```bash
 git checkout <name-of-other-team-member-branch>
@@ -79,8 +88,9 @@ But, GitHub supports a better way to merge branches using [pull requests](https:
 > Exercise 2
 >
 > 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions.
-> 2. Take a look at some other team member's pull request and conduct a code review. Check the changes introduced by the pull request in GitHub. Pull the branch from GitHub to your local computer and take a look at the changes. If everything looks good, add a comment, such as "Looks good to me", for the pull request in GitHub
+> 2. Take a look at some other team member's pull request and conduct a code review. Check the changes introduced by the pull request in GitHub. You can see the changes in the "Files changed" tab in the pull request. Also pull the branch from GitHub to your local computer and take a look at the changes. If everything looks good, add a comment, such as "Looks good to me", for the pull request in GitHub
 > 3. Once you have received a comment from a team member for your pull request, merge it into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below
+> 4. Switch back to main branch with the `git checkout main` command and pull the changes from GitHub with the `git pull` command. You should now see the changes made in your branch in the main branch as well
 
 ### Resolving conflicts in branches
 
