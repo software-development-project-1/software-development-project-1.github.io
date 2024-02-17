@@ -81,15 +81,15 @@ git merge <name-of-my-branch>
 git push
 ```
 
-But, GitHub supports a better way to merge branches using [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). Pull requests are "requests" to merge a branch on to another branch (commonly the main branch). The benefit over using the `git merge` command is that pull requests provide a way to perform _quality assurance_, for example through _code reviews_.
+But, GitHub supports a better way to merge branches using [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). Pull requests are "requests" to merge a branch on to another branch (commonly the main branch). The benefit over using the `git merge` command is that pull requests provide a way to perform _quality assurance_, for example through _code reviews_. In a code review other team members inspect the chanhes introduced by the pull request and give constructive feedback. This feedback is used to improve the code quality and find potential bugs.
 
 {: .important-title }
 
 > Exercise 2
 >
 > 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions.
-> 2. Take a look at some other team member's pull request and conduct a code review. Check the changes introduced by the pull request in GitHub. You can see the changes in the "Files changed" tab in the pull request. Also pull the branch from GitHub to your local computer and take a look at the changes. If everything looks good, add a comment, such as "Looks good to me", for the pull request in GitHub
-> 3. Once you have received a comment from a team member for your pull request, merge it into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below
+> 2. Take a look at some other team member's pull request and conduct a code review. Check the changes introduced by the pull request in GitHub. You can see the changes in the "Files changed" tab in the pull request. Also pull the branch from GitHub to your local computer and take a look at the changes. If everything looks good, add an approving comment, such as "Looks good to me", for the pull request in GitHub. Otherwise, propose changes with a comment
+> 3. Once you have received an approving comment from a team member for your pull request, merge it into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below
 > 4. Switch back to main branch with the `git checkout main` command and pull the changes from GitHub with the `git pull` command. You should now see the changes made in your branch in the main branch as well
 
 ### Resolving conflicts in branches
