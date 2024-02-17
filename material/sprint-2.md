@@ -164,7 +164,7 @@ After some discussion the Scrum Team planned the following user stories:
 7. {{site.sprint_2_user_story_7}}
 8. {{site.sprint_2_user_story_8}}
 
-The planning of the tasks for the last three user stories will be covered after the [REST APIs](#rest-apis) and [Communication between frontend and backend](#communication-between-frontend-and-backend) sections.
+The planning of the tasks for the last four user stories will be covered after the [REST APIs](#rest-apis) and [Communication between frontend and backend](#communication-between-frontend-and-backend) sections.
 
 {: .important-title }
 
