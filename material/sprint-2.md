@@ -15,7 +15,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-27. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-29. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -66,64 +66,109 @@ Make sure that everyone follows the event structure and that each team member ge
 >
 > Choose a new Scrum Master among the team members for the second Sprint.
 
-## Estimation
+## Git branches
+So far, we have only created commits for the _main branch_ of our repository. _Git branches_ allows us to _diverge from the main branch commit history_ by creating a new branch. We can add commits for our branch without effecting the main branch commit history and at some point we _merge_ the commits of a branch into the main branch.
 
-![Estimation](/assets/estimation-xkcd.png)
+![Git branches](/assets/git-branch.svg){: width="500" }
 
-Good user stories are _estimable_ (the "E" of INVEST) and a good Product Backlog is _estimated_ (the "E" of DEEP). _Estimation_ is the process where the Developers consider the efforts required to implement a certain user story in the Product Backlog. The purpose of estimation is not to create financial budgets for the project, but to help the _Product Owner to prioritize the user stories_ in the Product Backlog and _facilitate discussion about the user stories among the Developers_.
+Branches are commonly used to isolate work-in-progress code from the main branch. This can be for example the development of certain user story. Commonly, the main branch should only contain _working code_ and _deployment ready features_. This means that the latest working version of our application can be found in the main branch at all times. We should be able to deploy this application for our users at any moment without issues. The Git workflow where feature development is isolated into a feature-specific branch is referred to as [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow). This workflow is a very common workflow in the industry.
 
-The Product Owner isn't commonly a technical person, so they won't be able to come up with estimates for the user stories. That's the job of the Developers. The estimates provided by the Developers have high value for the Product Owner in the prioritization of the user stories. For example if the implementation of a certain user story requires huge amount of effort, it might make sense to lower its priority.
+A new branch can be created with the `git branch <name-of-the-branch>` (replace the `<name-of-the-branch>` with name of the branch) command in Git Bash. Let's create a branch and _name it our GitHub username with lowercase letters_. First, pull the latest changes from GitHub using the `git pull` command. Then, create the branch:
 
-User stories aren't commonly estimated by considering the working hours required to implement a user story. That's because such estimate is very hard to come up with and thus it is very unreliable. Instead we consider the _relative effort_ required compared to some other user story.
-
-For example let's consider these three user stories from the previous Sprint:
-
-1. {{site.sprint_1_user_story_1}}
-2. {{site.sprint_1_user_story_2}}
-3. {{site.sprint_1_user_story_3}}
-
-Some team member could estimate that the implementation of the _first user story_ requires the double amount of effort compared to the implementation of the _second user story_. Also, some could estimate that the implementation of the _first_ and the _third user story_ require somewhat the same amount of effort.
-
-In Scrum, the user story estimation is commonly provided in _story points_. A story point isn't based on time (working hours) required for the implementation. The Scrum Team will define themselves what amount of effort one story point represents so that their estimations are "calibrated".
-
-We could say, for example that the _second user story_ from the previous Sprint is worth _2 story points_. In our estimations we would then compare other user stories to this user story. This would mean that the estimate suggested above would estimate that the _first_ and the _third user stories_ are worth _4 story points_ (double the amount effort). Estimates from a different team members _could be different_ (and probably are) but at least they are comparing the effort with the same user story.
-
-During estimation the Developers usually have a different view of how many story points a certain user story is worth. However, in the end they need to come up with an single estimate for each user story that _everyone agrees on_. There are different techniques to facilitate the estimation so that the agreement can be eventually accomplished. One such technique is the _planning poker_.
-
-### Planning poker
-
-[Planning poker](https://en.wikipedia.org/wiki/Planning_poker) is a (fun) technique to facilitate estimation of user stories. We first need to decide which are the number of story points we use for the estimation. The [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is a common choice: 1, 2, 3, 5 or 8 story points. Then we need to make sure that everyone knows the amount of effort required for a certain amount of story points. Let's say that the user story "{{site.sprint_1_user_story_1}}" is worth _2 story points_ and we should compare the effort of other user stories to that.
-
-Here's a table describing the worth of the available story points:
-
-| The required effort                                             | Story points    |
-| --------------------------------------------------------------- | --------------- |
-| _Half the effort_ compared to the reference user story          | 1 story point   |
-| _Somewhat the same effort_ compared to the reference user story | 2 story points  |
-| _A bit more effort_ compared to the reference user story        | 3 story points  |
-| _Double the effort_ compared to the reference user story        | 5 story points  |
-| _Four times the effort_ compared to the reference user story    | 8 story points  |
-
-As mentioned, the reference user story is the first user story of the previous Sprint:
-
-> {{site.sprint_1_user_story_1}}
+```bash
+git branch <name-of-my-branch>
+```
 
 {: .note }
 
-> The Fibonacci sequence is commonly used instead of a linear sequence (1, 2, 3, 4...) because _larger user stories are more difficult to estimate_. The Fibonacci sequence starts to grow quickly after 8, so we don't need to be very accurate while estimating large user stories. On the other hand, if we have a user story worth more than 8 story points, we should really consider splitting it into smaller user stories.
+> Typically, the branch name describes the feature developed in the branch or some other purpose of the branch, for example `delete-quiz` or `filter-quizzes-by-published-status`.
 
-Once we have "calibrated" the worth of a story point we can start the actual planning poker event. For each user story under estimation we should perform the following steps:
+Now, let's check the repository's branches with the `git branch` command. We should see that our branch is added to the list. We can also see that there's an astrisk symbol (\*) before the main branch. This means that we are currently on the main branch. The current branch is also displayed in brackets in the Git Bash after the path to the current folder.
 
-1. Discuss the technical requirements (tasks) for the user story. Make sure that everyone is on the same page what is required to implement the user story.
-2. Everyone will consider _by themself_ (no dicussion) how many story points the user story is worth. The estimate needs to be 1, 2, 3, 5 or 8 story points. Compare the effort to the user story "{{site.sprint_1_user_story_1}}" which is worth 2 story points
-3. Everyone will write down their story point estimate.
-4. Once everyone is ready, everyone will show their estimate at the same time
-5. If there's more than one point difference in the least and most amount of story points in the suggested estimates, discuss the implementation further to find out why there is such difference in the estimates. Then, repeat the steps 1 - 5 until you have an agreement.
-6. Once the team has agreed on the user story estimate for the user story, the estimate should be added to the Product Backlog. We can for example add a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) with the story points for the user story related issue.
+We can switch branches using the `git checkout <name-of-the-branch>` command. Switch to the branch you just created:
 
-{: .note }
+```bash
+git checkout <name-of-my-branch>
+```
 
-> In a traditional planning poker session, each team member will have a card for different story points (for example card for 1, 2, 3, 5 and 8 story points). Team members are sitting in a round table revealing their cards. Because the session is a bit like a poker game, the "planning poker" name is suitable.
+{: .highlight }
+
+> We usually want to create new branch of the main branch. This means that before creating a new branch with the `git branch <name-of-the-branch>` command, switch to the main branch by running the `git checkout main` command. If you are uncertain which is the current branch, check it with the `git branch` command.
+
+Next, make some small change for the project, for example by changing a button text or color in a Thymeleaf template or changing a variable name in a method. If there's some small code or user interface improvement you have in mind, this is the time to do it. Once you have made the change, check the status with `git status` command, add the changes with the `git add` command and create a commit with the `git commit` command. Feel free to do multiple commits if needed.
+
+Then let's switch back to the main branch with the `git checkout main` command. If we check for the changes we made in the other branch, we see that they are no longer present. That's because the commits we made _only exist in our other branch_.
+
+Let's switch back to our branch with the `git checkout` command. Then, push the changes to GitHub with the `git push` command. We get the following error message:
+
+```bash
+fatal: The current branch kaltsoon has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin kaltsoon
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+```
+
+The error means that the current branch is not in GitHub yet, just on our local computer. Let's run the command that Git suggests:
+
+```bash
+git push --set-upstream origin <name-of-my-branch>
+```
+
+Now, let's check that our branch is pushed to GitHub. Open the repository in GitHub and click the branch selector which says "main" below the repository name. We should see our branch there. Click the branch and check that the changes are visible in GitHub.
+
+{: .important-title }
+
+> Exercise 1
+>
+> _Each team member_ should do the steps mentioned above to create their own branch named by their GitHub username and push it to GitHub.
+
+We can also pull remote branches from GitHub to our local computer. Check the list of branches in GitHub and pick _some other team member's branch_. Then, to pull the remote branches from GitHub using the `git pull` command. Finally, switch to the team member's branch:
+
+```bash
+git checkout <name-of-other-team-member-branch>
+```
+
+### Merging branches and pull requests
+
+Once we are happy with the changes we have made in the branch, we should _merge_ it into the main branch. This basically means applying all the commits we have made for the branch to the main branch. For this we could use the `git merge` command:
+
+```bash
+git checkout main
+git merge <name-of-my-branch>
+git push
+```
+
+But, GitHub supports a better way to merge branches using [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). Pull requests are "requests" to merge a branch on to another branch (commonly the main branch). The benefit over using the `git merge` command is that pull requests provide a way to perform _quality assurance_, for example through _code reviews_. In a code review other team members inspect the chanhes introduced by the pull request and give constructive feedback. This feedback is used to improve the code quality and find potential bugs.
+
+{: .important-title }
+
+> Exercise 2
+>
+> 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions.
+> 2. Take a look at some other team member's pull request and conduct a code review by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) instructions. Pull the branch from GitHub to your local computer and take a look at the changes. If everything looks good, approve the changes. Otherwise, propose changes.
+> 3. Once you have received an approving review from a team member for your pull request, merge it into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below
+> 4. Switch back to main branch with the `git checkout main` command and pull the changes from GitHub with the `git pull` command. You should now see the changes made in your branch in the main branch as well
+
+### Resolving conflicts in branches
+
+If the pull request can't be automatically merged due to conflicts, we'll need to solve them manually. First, switch to the main branch and pull the latest changes:
+
+```bash
+git checkout main
+git pull
+```
+
+Then, switch to your branch and merge the main branch into it:
+
+```bash
+git checkout <name-of-my-branch>
+git merge main
+```
+
+Finally, resolve the conflicts and add, commit and push the changes to GitHub. Now, we should be able to merge the pull request in GitHub.
 
 ## 🏃‍♂️ Sprint 2 planning
 
@@ -168,13 +213,13 @@ The planning of the tasks for the last three user stories will be covered after 
 
 {: .important-title }
 
-> Exercise 3
+> Exercise 5
 >
 > Create a new milestone for the second Sprint. Set the milestone title as "Sprint 2".
 
 {: .important-title }
 
-> Exercise 4
+> Exercise 6
 >
 > Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
@@ -182,13 +227,19 @@ The planning of the tasks for the last three user stories will be covered after 
 
 {: .important-title }
 
-> Exercise 5
+> Exercise 7
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 2". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 8
+>
+> Implement _at least two_ user stories during the Sprint in a separate feature branch. Name the branch based on the feature, for example `add-quiz-question`. Once the implementation is ready, open a pull request. At least one other team member should conduct a code review and either approve or request changes for the pull request. Once the pull request has been approved, merge it to the main branch.
+
+{: .important-title }
+
+> Exercise 9
 >
 > Plan the tasks for the first user story, "{{site.sprint_2_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -206,7 +257,7 @@ The planning of the tasks for the last three user stories will be covered after 
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 10
 >
 > Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -220,7 +271,7 @@ The planning of the tasks for the last three user stories will be covered after 
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 11
 >
 > Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -232,7 +283,7 @@ The planning of the tasks for the last three user stories will be covered after 
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 12
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -244,17 +295,7 @@ The planning of the tasks for the last three user stories will be covered after 
 
 {: .important-title }
 
-> Exercise 10
->
-> The Product Owner needs your help in estimating user stories.
->
-> 1. To visualize the user story issue's story point estimate, create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) "story points: 1", "story points: 2", "story points: 3", "story points: 5" and "story points: 8"
-> 2. Organize a planning poker event in which you estimate the _first four user stories_ of the Sprint
-> 3. Based on the user story estimation, add the story point labels for the four user story related issues
-
-{: .important-title }
-
-> Exercise 11
+> Exercise 13
 >
 > Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). Add the diagram and the description to a `data-model.md` file in the `documentation` folder. The description should explain the purpose of each entity and their relationship to other entities. Add a link to the file to "Documentation" section in the `README.md` file.
 >
@@ -508,7 +549,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 14
 >
 > To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation.
 
@@ -522,7 +563,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 15
 >
 > Implement a REST API endpoint for _getting all (published) quizzes_ in newest to oldest order.
 >
@@ -530,7 +571,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 16
 >
 > Implement a REST API endpoint for _getting a quiz by id_. If there is no quiz with the provided id, return a `404 Not Found` status as a response. If the quiz is not published, return a `403 Forbidden` status as a response.
 >
@@ -538,7 +579,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 17
 >
 > Implement a REST API endpoint for _getting the questions of a quiz_. Implement similar error handling as with the previous endpoint.
 >
@@ -546,7 +587,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 18
 >
 > Implement a REST API endpoint for _creating an answer_ for a quiz's question. Information about the answer's text, correctness (is the answer correct or not based on the question's correct answer) and the question reference should be stored in the database. If the user is trying to answer a quiz which is not published, return a `403 Forbidden` status as a response. If the user is trying to answer a question which does not exist, return a `404 Not Found` status as a response. If the answer is invalid (for example blank answer text), return a `400 Bad Request` status as a response.
 >
@@ -704,7 +745,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 19
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -716,7 +757,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 20
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -730,7 +771,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 21
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -748,7 +789,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 22
 >
 > Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -760,7 +801,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 23
 >
 > Add instructions on _how to start the frontend application_ to the "Usage guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
@@ -782,7 +823,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 24
 >
 > Add a description of the project's _overall architecture_ and _implementation technologies_ to the project description in the `README.md`. Mention at least the following things:
 >
@@ -851,7 +892,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 25
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
 >
@@ -911,7 +952,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 26
 >
 > Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
 
@@ -921,19 +962,19 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 27
 >
 > Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive frontend-related files from the `frontend` folder.
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 28
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 29
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the features in the production environment.
 >
