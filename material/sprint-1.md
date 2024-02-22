@@ -80,8 +80,6 @@ A good Product Backlog has the [DEEP](https://www.romanpichler.com/blog/make-the
 - _Emergent_: the Product Backlog evolves constantly: old user stories are completed, new user stories emerge and priorization changes
 - _Prioritized_: all user stories are in a prioritized order in the Product Backlog. The user stories at the top of the Product Backlog are the ones that Product Owner considers to produce most value for the stakeholders.
 
-We aren't estimating the user stories during the first Sprint. That's because estimation is especially hard at the beginning of the project. We will discuss more about estimation during the third Sprint.
-
 {: .note }
 
 > Product Backlog can be thought as the todo-list of user stories for the project. Like in a todo-list, the user stories are in the order that they should be completed. That is, most important user stories are on the top of the list.
