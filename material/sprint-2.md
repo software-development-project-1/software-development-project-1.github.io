@@ -148,7 +148,7 @@ But, GitHub supports a better way to merge branches using [pull requests](https:
 > Exercise 4
 >
 > 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions.
-> 2. Take a look at some other team member's pull request and conduct a code review by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) instructions. Pull the branch from GitHub to your local computer and take a look at the changes. If everything looks good, approve the changes. Otherwise, propose changes.
+> 2. Take a look at some other team member's pull request and conduct a code review by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) instructions. The pull request title should describe the changes, for example "Change submit button color in the add quiz form". The description provides additional details. Pull the branch from GitHub to your local computer and take a look at the changes. If everything looks good, approve the changes. Otherwise, propose changes.
 > 3. Once you have received an approving review from a team member for your pull request, merge it into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below
 > 4. Switch back to main branch with the `git checkout main` command and pull the changes from GitHub with the `git pull` command. You should now see the changes made in your branch in the main branch as well
 
@@ -236,6 +236,8 @@ The planning of the tasks for the last four user stories will be covered after t
 > Exercise 8
 >
 > Implement _at least two_ user stories during the Sprint in a separate feature branch. Name the branch based on the feature, for example `add-quiz-question`. Once the implementation is ready, open a pull request. At least one other team member should conduct a code review and either approve or request changes for the pull request. Once the pull request has been approved, merge it to the main branch.
+>
+> Note that _task is not completed until it has been merged to the main branch_. Move the issues that are waiting for a review to the "In review" column in the Backlog project.
 
 {: .important-title }
 
