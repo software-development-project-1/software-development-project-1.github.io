@@ -145,7 +145,7 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 > Are the following statements true or false? Justify your answer.
 >
 > 1. Only the Product Owner plans the requirements for the upcoming Sprint during the Sprint Planning event
-> 2. Only the Developers should be able to see the Sprint Backlog
+> 2. The Sprint Backlog is a very important artifact for the Daily Scrum event
 > 3. Sprint duration of two weeks is better than two months
 > 4. The requirements for the project are carefully documented to the Product Backlog at the beginning of the project and remain unchanged throughout the project
 > 5. The Retrospective event supports adaptation
