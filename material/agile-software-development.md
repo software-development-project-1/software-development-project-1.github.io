@@ -254,7 +254,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).
 >
-> Come up with at least eight _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Briefly justify why each of your user stories are well-written based on the INVEST criteria.
+> Come up with at least seven _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories.
 >
 > Hint: pay attention to the size of the user story. Split big user stories into smaller ones.
 
@@ -264,8 +264,8 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > Imagine that you are the Product Owner of the project described in the [project description](/project-description).
 >
-> How would you _prioritize_ the eight user stories that you came up with in the previous exercise? That is, in which order these user stories should be implemented to maximize the stakeholder's value for the application?
+> How would you _prioritize_ the seven user stories that you came up with in the previous exercise? That is, in which order these user stories should be implemented to maximize the stakeholder's value for the application?
 >
 > On top of the importance of a user story, consider the dependencies between the different user stories. For example, certain user stories might be impossible to implement before some other user story has been implemented. Can we for example list quizzes before a teacher can add one?
 >
-> List the six user stories in the priority order (top-priority user stories at the top of the list). Briefly justify, why you chose this specific prioritization.
+> List the seven user stories in the priority order (top-priority user stories at the top of the list). Briefly justify, why you chose this specific prioritization.
