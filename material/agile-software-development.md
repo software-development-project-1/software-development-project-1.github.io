@@ -126,6 +126,22 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 
 > Exercise 5
 >
+> Transparency enables _inspection_. It means that the Scrum artifacts and the progress toward agreed goals must be inspected frequently to detect potential problems.
+>
+> How is inspection performed in different Scrum events?
+
+{: .important-title }
+
+> Exercise 6
+>
+> Inspection enables _adaptation_. It means the ability to adapt based on the results of the inspection to continuously improve the process and the product.
+>
+> How is adaptation performed in different Scrum events?
+
+{: .important-title }
+
+> Exercise 7
+>
 > "Responding to change over following a plan" is one of the core principles of agile.
 >
 > How does Scrum carry out this principle in practice?
@@ -205,7 +221,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 8
 >
 > What's wrong with the following user stories?
 >
@@ -217,7 +233,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 9
 >
 > The Scrum Team came up with the following user stories during the Sprint Planning:
 >
@@ -228,7 +244,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 10
 >
 > During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).
 >
@@ -238,7 +254,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 11
 >
 > Imagine that you are the Product Owner of the project described in the [project description](/project-description).
 >
