@@ -11,7 +11,7 @@ nav_order: 3
 
 ## Submitting this week's exercises
 
-All of this week's exercises (exercises 1-9) are submitted to [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a _single PDF file_. The submission deadline is on {{site.week_1_deadline}}.
+All of this week's exercises (exercises 1-11) are submitted to [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a _single PDF file_. The submission deadline is on {{site.week_1_deadline}}.
 
 {: .highlight }
 
@@ -118,33 +118,25 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 
 > Exercise 4
 >
-> Scrum emphasize the importance of _transparency_ of the process. It means that the significant aspects of the process should be visible to those responsible for the outcome. Transparency allows each Scrum Team member to track and understand what's really going on in each sprint.
->
-> How do different Scrum events and artifacts improve process transparency?
+> Scrum emphasize the importance of _transparency_ of the process. What does it mean and how do different Scrum events and artifacts improve the process transparency?
 
 {: .important-title }
 
 > Exercise 5
 >
-> Transparency enables _inspection_. It means that the Scrum artifacts and the progress toward agreed goals must be inspected frequently to detect potential problems.
->
-> How is inspection performed in different Scrum events?
+> Transparency enables _inspection_. What does it mean and how is inspection performed in different Scrum events?
 
 {: .important-title }
 
 > Exercise 6
 >
-> Inspection enables _adaptation_. It means the ability to adapt based on the results of the inspection to continuously improve the process and the product.
->
-> How is adaptation performed in different Scrum events?
+> Inspection enables _adaptation_. What does it mean and how is adaptation performed in different Scrum events?
 
 {: .important-title }
 
 > Exercise 7
 >
-> "Responding to change over following a plan" is one of the core principles of agile.
->
-> How does Scrum carry out this principle in practice?
+> "Responding to change over following a plan" is one of the core principles of agile. How does Scrum carry out this principle in practice?
 
 ## Agile requirement specification
 
