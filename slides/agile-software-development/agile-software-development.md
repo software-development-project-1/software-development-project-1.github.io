@@ -65,7 +65,7 @@ Welcome to the Software Development Project 1 course!
 
 - The final grade (1-5) is composed of the project points (maximum of 30 points) and the personal points (maximum of 10 points)
 - The following are necessary to pass the course:
-  - At least 70% of the first two week's exercises have to be completed before their deadlines to pass the course
+  - At least 80% of the first two week's exercises have to be completed before their deadlines to pass the course
   - Written peer review for each team member
   - Passing grade from the peer reviews
 
