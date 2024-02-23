@@ -147,7 +147,7 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 > 1. Only the Product Owner plans the requirements for the upcoming Sprint during the Sprint Planning event
 > 2. Only the Developers should be able to see the Sprint Backlog
 > 3. Sprint duration of two weeks is better than two months
-> 4. The requirements for the project are carefully documented to the Product Backlog before the beginning of the project and remain unchanged throughout the project
+> 4. The requirements for the project are carefully documented to the Product Backlog at the beginning of the project and remain unchanged throughout the project
 > 5. The Retrospective event supports adaptation
 > 6. A larger Scrum Team is more productive than a smaller one
 > 7. The Manifesto for Agile Software Development provides a detailed description of how to manage a software development process
