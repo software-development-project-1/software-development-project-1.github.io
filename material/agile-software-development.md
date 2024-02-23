@@ -138,6 +138,20 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 >
 > "Responding to change over following a plan" is one of the core principles of agile. How does Scrum carry out this principle in practice?
 
+{: .important-title }
+
+> Exercise 8
+>
+> Are the following statements true or false? Justify your answer.
+>
+> 1. Only the Product Owner plans the requirements for the upcoming Sprint during the Sprint Planning event
+> 2. Only the Developers should be able to see the Sprint Backlog
+> 3. Sprint duration of two weeks is better than two months
+> 4. The requirements for the project are carefully documented to the Product Backlog before the beginning of the project and remain unchanged throughout the project
+> 5. The Retrospective event supports adaptation
+> 6. A larger Scrum Team is more productive than a smaller one
+> 7. The Manifesto for Agile Software Development provides a detailed description of how to manage the software development process
+
 ## Agile requirement specification
 
 In the _requirements phase_ of the software development lifecycle, the stakeholders' requirements for the software are defined and documented. In agile software development, requirements are commonly written as _user stories_. A user story is a short, simple description of a feature told from the perspective of the person who desires the new feature in the software. During each Sprint, the Developers of the Scrum Team implement features for the software based on the user stories.
@@ -213,7 +227,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 9
 >
 > What's wrong with the following user stories?
 >
@@ -225,7 +239,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 10
 >
 > The Scrum Team came up with the following user stories during the Sprint Planning:
 >
@@ -236,7 +250,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 11
 >
 > During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).
 >
@@ -246,7 +260,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 12
 >
 > Imagine that you are the Product Owner of the project described in the [project description](/project-description).
 >
