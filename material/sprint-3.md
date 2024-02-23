@@ -98,7 +98,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 > Exercise 6
 >
-> Implement _at least two_ user stories during the Sprint in a separate feature branch. Once the implementation is ready, open a pull request. At least one other team member should conduct a code review and either approve or request changes for the pull request. Once the pull request has been approved, merge it to the main branch.
+> Implement _at least two_ user stories during the Sprint in a separate feature branch. Once the implementation is ready, open a pull request. At least one other team member should conduct a code review for the pull request and either approve or request changes. Once the pull request has been approved, merge it to the main branch.
 
 {: .important-title }
 
