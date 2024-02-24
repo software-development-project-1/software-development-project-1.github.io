@@ -118,7 +118,7 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 
 > Exercise 4
 >
-> Scrum emphasize the importance of _transparency_ of the process. What does it mean and how do different Scrum events and artifacts improve the process transparency?
+> Scrum emphasizes the importance of _transparency_ of the process and it is one of the [Three Pillars of Scrum](https://www.atlassian.com/agile/project-management/3-pillars-scrum). What does it mean and how do different Scrum events and artifacts improve the process transparency?
 
 {: .important-title }
 
