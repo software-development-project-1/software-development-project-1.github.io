@@ -306,6 +306,10 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-1-user-story-1.png)
+>
+> Tips for the task:
+>
+> - The published status field in the form can be implemented using a [checkbox field](https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html#checkbox-fields)
 
 {: .important-title }
 
@@ -380,8 +384,6 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >       } else {
 >         // quizzes by a published status requested
 >       }
->
->       // ...
 >   }
 >   ```
 >
