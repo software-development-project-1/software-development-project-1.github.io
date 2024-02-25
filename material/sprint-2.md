@@ -15,7 +15,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-29. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-28. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -163,7 +163,7 @@ git checkout main
 git pull
 ```
 
-Then, switch to your branch and merge the main branch into it:
+Then, switch to your branch and merge the main branch to it:
 
 ```bash
 git checkout <name-of-my-branch>
@@ -192,8 +192,6 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description and the date when it was added. These quizzes should be listed from newest to oldest.
 >
-> The student should be able to filter quizzes in the quiz list based on their name or description. There could be a search field above the quiz list. If either the name or the description of a quiz contains the keyword typed in to the field, the quiz should be listed. If there's no keyword, all the quizzes should be listed.
->
 > Each quiz name on the quiz list should be a link to a separate page where the quiz name, description and the questions are displayed. There should also be some kind of navigation menu from which the student can navigate to the quiz list page.
 >
 > In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to type in and submit their answer for each question. When the student submits their answer, there should be some kind of feedback which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, the correct answer is "Helsinki"". The casing or leading or trailing whitespace of the answer should not be considered when checking if the student's answer is correct or not. For example, "helsinki" answer is correct when the correct answer is "Helsinki"."
@@ -209,9 +207,8 @@ After some discussion the Scrum Team planned the following user stories:
 5. {{site.sprint_2_user_story_5}}
 6. {{site.sprint_2_user_story_6}}
 7. {{site.sprint_2_user_story_7}}
-8. {{site.sprint_2_user_story_8}}
 
-The planning of the tasks for the last four user stories will be covered after the [REST APIs](#rest-apis) and [Communication between frontend and backend](#communication-between-frontend-and-backend) sections.
+The planning of the tasks for the last three user stories will be covered after the [REST APIs](#rest-apis) and [Communication between frontend and backend](#communication-between-frontend-and-backend) sections.
 
 {: .important-title }
 
@@ -237,7 +234,7 @@ The planning of the tasks for the last four user stories will be covered after t
 
 > Exercise 8
 >
-> Implement _at least one_ user story in a separate feature branch. Name the branches based on the feature, for example `add-quiz-question`. Once the implementation is ready, open a pull request. At least one other team member should conduct a code review for the pull request and either approve it or request changes. Once the pull request has been approved, merge it to the main branch.
+> Implement _at least two_ user stories in separate feature branches. Name the branches based on the feature, for example `add-quiz-question`. Once the implementation is ready, open a pull request. At least one other team member should conduct a code review for the pull request and either approve it or request changes. Once the pull request has been approved, merge it to the main branch.
 >
 > Note that _task is not completed until it has been merged to the main branch_. Move the issues that are waiting for a review to the "In review" column in the Backlog project.
 
@@ -795,18 +792,6 @@ public class MessageRestController {
 
 > Exercise 22
 >
-> Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-2-user-story-8.png)
-
-{: .important-title }
-
-> Exercise 23
->
 > Add instructions on _how to start the frontend application_ to the "Usage guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
 > For the sake of clarity, you can add separate subheadings for backend's and frontend's usage guide:
@@ -827,7 +812,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 23
 >
 > Add a description of the project's _overall architecture_ and _implementation technologies_ to the project description in the `README.md`. Mention at least the following things:
 >
@@ -896,7 +881,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 24
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
 >
@@ -956,7 +941,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 25
 >
 > Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
 
@@ -966,19 +951,19 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 26
 >
 > Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive frontend-related files from the `frontend` folder.
 
 {: .important-title }
 
-> Exercise 28
+> Exercise 27
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 29
+> Exercise 28
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the features in the production environment.
 >
