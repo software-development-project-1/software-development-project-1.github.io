@@ -234,9 +234,9 @@ The planning of the tasks for the last three user stories will be covered after 
 
 > Exercise 8
 >
-> Implement _at least two_ user stories in separate feature branches. Name the branches based on the feature, for example `add-quiz-question`. Once the implementation is ready, open a pull request. At least one other team member should conduct a code review for the pull request and either approve it or request changes. Once the pull request has been approved, merge it to the main branch.
+> Implement _at least one_ user story in a separate feature branch. Name the branch based on the feature, for example `add-quiz-question`. Once the implementation is ready, open a pull request. At least one other team member should conduct a code review for the pull request and either approve it or request changes. Once the pull request has been approved, merge it to the main branch.
 >
-> Note that _task is not completed until it has been merged to the main branch_. Move the issues that are waiting for a review to the "In review" column in the Backlog project.
+> Note that _task is not completed until it has been merged to the main branch_. Move the issues that are waiting for a review to the "In review" column in the Backlog project and ask a team member to review your pull request.
 
 {: .important-title }
 
