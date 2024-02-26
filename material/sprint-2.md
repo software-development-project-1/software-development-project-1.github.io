@@ -254,6 +254,7 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > Tips for the tasks:
 >
+> - [Thymeleaf radio button fields](https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html#radio-button-fields)
 > - Make sure that you can delete a quiz that has questions. Before deleting a quiz, the quiz's questions need to be deleted. [Cascading](https://www.baeldung.com/jpa-cascade-types) can be used to achieve this automatically
 
 {: .important-title }
