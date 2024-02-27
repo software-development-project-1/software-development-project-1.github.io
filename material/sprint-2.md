@@ -67,6 +67,7 @@ Make sure that everyone follows the event structure and that each team member ge
 > Choose a new Scrum Master among the team members for the second Sprint.
 
 ## Git branches
+
 So far, we have only created commits for the _main branch_ of our repository. _Git branches_ allows us to _diverge from the main branch commit history_ by creating a new branch. We can add commits for our branch without effecting the main branch commit history and at some point we _merge_ the commits of a branch into the main branch.
 
 ![Git branches](/assets/git-branch.svg){: width="500" }
@@ -117,7 +118,7 @@ The error means that the current branch is not in GitHub yet, just on our local 
 git push --set-upstream origin <name-of-my-branch>
 ```
 
-Now, let's check that our branch is pushed to GitHub. Open the repository in GitHub and click the branch selector which says "main" below the repository name. We should see our branch there. Click the branch and check that the changes are visible in GitHub.
+Now, let's check that our branch is pushed to GitHub. Open the repository in GitHub and click the branch selector which says "main" above the file tree view in the "Code" tab. We should see our branch there. Click the branch and check that the changes are visible in GitHub.
 
 {: .important-title }
 
