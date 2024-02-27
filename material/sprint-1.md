@@ -398,6 +398,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >     Published
 >   </a>
 >   ```
+> - [Bootstrap tabs](https://getbootstrap.com/docs/5.0/components/navs-tabs/#tabs)
 
 {: .important-title }
 
