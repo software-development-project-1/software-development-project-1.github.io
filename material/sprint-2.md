@@ -118,7 +118,7 @@ The error means that the current branch is not in GitHub yet, just on our local 
 git push --set-upstream origin <name-of-my-branch>
 ```
 
-Now, let's check that our branch is pushed to GitHub. Open the repository in GitHub and click the branch selector which says "main" above the file tree view in the "Code" tab. We should see our branch there. Click the branch and check that the changes are visible in GitHub.
+Now, let's check that our branch is pushed to GitHub. Open the repository in GitHub and click the branch selector which says "main" above the file tree view in the "Code" tab. [These](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/viewing-branches-in-your-repository) instructions have more details, if you have trouble. We should see our branch there. Click the branch and check that the changes are visible in GitHub.
 
 {: .important-title }
 
