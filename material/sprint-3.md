@@ -21,7 +21,7 @@ During this Sprint, each team member will do a [peer review](#peer-review) in wh
 
 {: .highlight }
 
-> At the end of this Sprint, the team has to write the [final report](#final-report) together and each team member needs to do the [peer review](#peer-review). Missing final report will decrease the project points by 3 points and the _peer review is required for a passing grade_. If the peer review is done after the Sprint deadline, the personal points will decrease by 3 points.
+> At the end of this Sprint, each team member has to submit the [final report](#final-report) and the [peer review](#peer-review). Both of them are _required to pass the course_. Submitting either of them after the Sprint deadline will decrease the total points by 4 points.
 
 ## Retrospective
 
@@ -737,19 +737,20 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 ## Final report
 
-Add a file `final-report.md` to the `documentation` folder. In that file, write the _final report_ for the course, which answers the following questions:
+Write the final report for the course, which covers the following questions:
 
-- In which areas did you succeed as a team?
-- In which areas there was room for improvement?
-- What did you learn during the course? What would you have wanted to learn more about? What felt irrellevant?
+- In which areas did you succeed _as a team_? In which areas there was room for improvement?
+- In which areas did you succeed _personally_? In which areas there was room for improvement?
+- Based on your experience during the course, what would be three important advice you would give to a new software development team? Justify why these advice are important
+- What did you learn during the course? What would you have wanted to learn more about?
 
-Add a link to the `final-report.md` file in Github to the `README.md` file under the "Documentation" subheading.
+Submit the final report as _a single PDF file_ to [this Moodle submission]({{site.final_report_moodle_submission_link}}).
 
 {: .important-title }
 
 > Exercise 23
 >
-> Write the final report for the course as instructed above.
+> Write the final report as instructed above.
 
 {: .warning }
 

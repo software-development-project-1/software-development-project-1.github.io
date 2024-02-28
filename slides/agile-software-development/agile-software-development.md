@@ -68,6 +68,7 @@ Welcome to the Software Development Project 1 course!
   - At least 80% of the first two week's exercises have to be completed before their deadlines to pass the course
   - Written peer review for each team member
   - Passing grade from the peer reviews
+  - Written final report
 
 ---
 

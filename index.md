@@ -58,3 +58,4 @@ The final grade (1-5) is composed of the project points (maximum of 30 points) a
 > - At least 80% of the first two week's exercises have to be completed before their deadlines
 > - Written peer review for each team member
 > - Passing grade from the peer reviews
+> - Written final report
