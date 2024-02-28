@@ -297,11 +297,6 @@ The planning of the tasks for the last three user stories will be covered after 
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-2-user-story-4.png)
->
-> Tips for the tasks:
->
-> - Similarly as in the quiz list published status filtering, a [request parameter](https://www.baeldung.com/spring-request-param) can be used to pass the difficulty level to the controller method
-> - Implement an appropriate JPA repository [query method](https://docs.spring.io/spring-data/commons/reference/repositories/query-methods-details.html) for finding questions by quiz id _and_ difficulty level
 
 {: .important-title }
 
