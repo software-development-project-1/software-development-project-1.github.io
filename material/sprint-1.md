@@ -372,7 +372,6 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > Tips for the tasks:
 >
 > - [Derived Query Methods in Spring Data JPA Repositories](https://www.baeldung.com/spring-data-derived-queries)
-> - [Bootstrap tabs](https://getbootstrap.com/docs/5.3/components/navs-tabs/#tabs)
 > - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). Request parameters can be accessed in a controller method with the `@RequestParam` annotation in the following way:
 >
 >   ```java
