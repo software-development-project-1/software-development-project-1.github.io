@@ -705,7 +705,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 > Exercise 20
 >
-> Make sure that all project-related documentation, such as project description, data model documentation and Swagger documentation is up-to-date. Also, add a few screenshots of the application's most important features, such as adding a quiz, taking a quiz and seeing the quiz's results to the project description in the `README.md` file. [This guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images) explains how work with images in Markdown.
+> Make sure that all project-related documentation, such as project description, data model documentation and Swagger documentation is up-to-date.
 
 {: .important-title }
 
