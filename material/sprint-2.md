@@ -154,7 +154,6 @@ But, GitHub supports a better way to merge branches using [pull requests](https:
 > 2. Take a look at some other team member's pull request and conduct a code review by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) instructions. Pull the branch from GitHub to your local computer and take a look at the changes. If everything looks good, approve the changes with a short comment, such as "Looks good to me". Otherwise, request changes
 > 3. Once you have received an approving review from a team member for your pull request, merge it into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below
 > 4. Switch back to the main branch with the `git checkout main` command and pull the changes from GitHub with the `git pull` command. Make sure that you can see the changes made in your branch in the main branch as well
-> 5. Follow [these](https://www.atlassian.com/git/tutorials/using-branches) instructions to delete your branch locally and in the remote GitHub repository. Once deleted, check that your branch no longer exists with the `git branch` command. Also check that the branch no longer exists in GitHub
 
 ### Resolving conflicts in branches
 
