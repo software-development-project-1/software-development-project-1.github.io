@@ -741,7 +741,7 @@ Write the final report for the course, which covers the following questions:
 
 - In which areas did you succeed _as a team_? In which areas there was room for improvement?
 - In which areas did you succeed _personally_? In which areas there was room for improvement?
-- Based on your experience during the course, what would be three important advice you would give to a new software development team? Justify why these advice are important
+- Based on your experiences during the course, what would be three important advice you would give to a new software development team? Justify why these advice are important
 - What did you learn during the course? What would you have wanted to learn more about?
 
 Submit the final report as _a single PDF file_ to [this Moodle submission]({{site.final_report_moodle_submission_link}}).
