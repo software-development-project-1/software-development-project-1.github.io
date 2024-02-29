@@ -544,8 +544,8 @@ While testing your application's REST API endpoints, refer to the examples above
 > Implement the following test methods for the endpoint for _getting a quiz by id_:
 >
 > - `getQuizByIdReturnsPublishedQuizWhenQuizExists`: save a _published quiz_ to the database and send a request. Then, the response should have the saved quiz
-> - `getQuizByIdReturnsNotFoundWhenQuizDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have a `404 Not Found` status
-> - `getQuizByIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ to the database and send a request. Then, the response should have a `403 Forbidden` status
+> - `getQuizByIdReturnsErrorWhenQuizDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
+> - `getQuizByIdReturnsErrorWhenQuizIsNotPublished`: save a _non-published quiz_ to the database and send a request. Then, the response should have an appropriate HTTP status
 >
 > Create an issue for this task.
 
@@ -557,8 +557,8 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > - `getQuestionsByQuizIdReturnsEmptyListWhenQuizDoesNotHaveQuestions`: save a _published quiz_ without questions to the database and send a request. Then, the response should have an empty list
 > - `getQuestionsByQuizIdReturnsListOfQuestionsWhenQuizHasQuestions`: save a _published quiz_ with a few questions to the database and send a request. Then, the response should have a list of the quiz's questions
-> - `getQuestionsByQuizIdReturnsNotFoundWhenQuestionDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have a `404 Not Found` status
-> - `getQuestionsByQuizIdReturnsForbiddenWhenQuizIsNotPublished`: save a _non-published quiz_ with a few questions to the database and send a request. Then, the response should have a `403 Forbidden` status
+> - `getQuestionsByQuizIdReturnsErrorWhenQuestionDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
+> - `getQuestionsByQuizIdReturnsErrorWhenQuizIsNotPublished`: save a _non-published quiz_ with a few questions to the database and send a request. Then, the response should have an appropriate HTTP status
 >
 > Create an issue for this task.
 
@@ -569,9 +569,9 @@ While testing your application's REST API endpoints, refer to the examples above
 > Implement a test class with the following test methods for the endpoint for _creating an answer_:
 >
 > - `createAnswerSavesValidAnswer`: save a _published quiz_ with a question to the database and send a request with a _valid request body_ (attributes should pass the validation). Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
-> - `createAnswerDoesNotSaveInvalidAnswer`: save a _published quiz_ with a question to the database and send a request with a _invalid request body_ (attributes should not pass the validation). Then, the response should status have a `400 Bad Request` status and the database should not have any answers
-> - `createAnswerDoesNotSaveAnswerForNonExistingQuestion`: send a request with a non-existing question id in the request body. Then, the response should status have a `404 Not Found` status and the database should not have any answers
-> - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a request with a valid request body. Then, the response should status have a `403 Bad Request` status and the database should not have any answers
+> - `createAnswerDoesNotSaveInvalidAnswer`: save a _published quiz_ with a question to the database and send a request with a _invalid request body_ (attributes should not pass the validation). Then, the response should status have an appropriate HTTP status and the database should not have any answers
+> - `createAnswerDoesNotSaveAnswerForNonExistingQuestion`: send a request with a non-existing question id in the request body. Then, the response should status have an appropriate HTTP status and the database should not have any answers
+> - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a request with a valid request body. Then, the response should status have an appropriate HTTP status and the database should not have any answers
 >
 > Create an issue for this task.
 
