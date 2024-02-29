@@ -831,7 +831,7 @@ public class MessageRestController {
 > Add a description of the project's _overall architecture_ and _implementation technologies_ to the project description in the `README.md` file. Mention the following things:
 >
 > 1. The project's overall architecture consists of three components: the backend, the database and the frontend. Mention these components and briefly explain the purpose of each component
-> 2. Implement a [flow chart](https://mermaid.js.org/syntax/flowchart.html) which visualizes how the components communicate with each other. Does for example the frontend communicate with the database directly?
+> 2. Implement a [flow chart](https://mermaid.js.org/syntax/flowchart.html) using the [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax which visualizes how the components communicate with each other. Does for example the frontend communicate with the database directly?
 > 3. Which programming language, frameworks and major libraries are used in the _backend implementation_?
 > 4. Which database platforms are used in different environments (development and production environment)?
 > 5. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
