@@ -116,7 +116,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Tips for the tasks:
 >
-> - Implement an appropriate REST API endpoint for getting the answers of a quiz
+> - Implement an appropriate REST API endpoint for getting the answers of a quiz. Remember to return appropriate HTTP status code and error message in error cases
 
 {: .note }
 
