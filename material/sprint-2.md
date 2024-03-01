@@ -301,7 +301,7 @@ The planning of the tasks for the last three user stories will be covered after 
 > Tips for the tasks:
 >
 > - Take a look at the tips for the quiz published status filtering user story from the previous Sprint
-> - Construct a JPA repository [query method](https://docs.spring.io/spring-data/jpa/reference/repositories/query-methods-details.html) for finding questions by the quiz id _and_ difficulty level attributes
+> - Define a JPA repository [query method](https://docs.spring.io/spring-data/jpa/reference/repositories/query-methods-details.html) for finding questions by the quiz id _and_ difficulty level attributes
 
 {: .important-title }
 
