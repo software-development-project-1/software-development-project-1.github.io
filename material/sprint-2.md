@@ -235,7 +235,7 @@ The planning of the tasks for the last three user stories will be covered after 
 
 > Exercise 8
 >
-> Implement _at least two_ user stories in separate feature branches. Name the branches based on the feature, for example `delete-question`. Remember to _switch to the main branch before creating a new branch_ by using the `git checkout main` command. Use the `git branch` command if you are unsure what the current branch is.
+> Implement _at least one_ user story in a separate feature branch. Name the branch based on the feature, for example `delete-question`. Remember to _switch to the main branch before creating a new branch_ by using the `git checkout main` command. Use the `git branch` command if you are unsure what the current branch is.
 >
 > Once the implementation is ready, open a pull request. At least one other team member should conduct a code review for the pull request and either approve it or request changes. Once the pull request has been approved, merge it to the main branch. Finally, switch back to the main branch and pull the changes from GitHub.
 >
@@ -831,7 +831,7 @@ public class MessageRestController {
 > Add a description of the project's _overall architecture_ and _implementation technologies_ to the project description in the `README.md` file. Mention the following things:
 >
 > 1. The project's overall architecture consists of three components: the backend, the database and the frontend. Mention these components and briefly explain the purpose of each component
-> 2. Implement a [flow chart](https://mermaid.js.org/syntax/flowchart.html) using the [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax which visualizes how the components communicate with each other. Does for example the frontend communicate with the database directly?
+> 2. Implement a [flow chart](https://mermaid.js.org/syntax/flowchart.html) using the [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax which visualizes how the components communicate with each other. Does for example the frontend communicate with the database directly? What's the direction of the communication (the arrow direction in the chart)? Does for example backend send requests to the frontend (the arrow would point to the frontend) or the other way around?
 > 3. Which programming language, frameworks and major libraries are used in the _backend implementation_?
 > 4. Which database platforms are used in different environments (development and production environment)?
 > 5. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
