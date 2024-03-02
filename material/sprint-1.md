@@ -615,7 +615,7 @@ The command will generate the JAR file under the `target` folder. Inside the fol
 
 > Exercise 21
 >
-> Generate a JAR file for the application and run the application using the JAR file. Add instructions on how to generate and execute the JAR file to the "Usage guide" section in the `README.md` file.
+> Generate a JAR file for the application and run the application using the JAR file.
 
 {: .note }
 
