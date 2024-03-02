@@ -297,11 +297,6 @@ The planning of the tasks for the last three user stories will be covered after 
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-2-user-story-4.png)
->
-> Tips for the tasks:
->
-> - Take a look at the tips for the quiz published status filtering user story from the previous Sprint
-> - Define a JPA repository [query method](https://docs.spring.io/spring-data/jpa/reference/repositories/query-methods-details.html) for finding questions by the quiz id _and_ difficulty level attributes
 
 {: .important-title }
 
