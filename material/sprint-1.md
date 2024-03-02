@@ -227,13 +227,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
 
-For the _first user story_, the Developers planned the following tasks:
-
-1. Add a Quiz JPA entity class with id, name, description and published attributes, and a QuizRepository JPA repository class
-2. Add a Thymeleaf template for the quiz creation form containing fields for name, description and published status
-3. Add QuizController controller class and methods for rendering and handling the submission of the quiz creation form
-
-These are the user stories, that you will be working on as a team during this Sprint. The tasks described above are suggestions, feel free to alter them or add new tasks.
+These are the user stories, that you will be working on as a team during this Sprint. The next step of the Sprint Planning event is to split these user stories into codings tasks.
 
 {: .highlight }
 
@@ -615,7 +609,7 @@ The command will generate the JAR file under the `target` folder. Inside the fol
 
 > Exercise 21
 >
-> Generate a JAR file for the application and run the application using the JAR file.
+> Generate a JAR file for the application and run the application using the JAR file. Add instructions on how to generate and execute the JAR file to the "Usage guide" section in the `README.md` file.
 
 {: .note }
 
