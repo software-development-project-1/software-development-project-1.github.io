@@ -293,9 +293,9 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 > Exercise 10
 >
-> Create an issue for each task of the first user story, "{{site.sprint_1_user_story_1}}". You can use the tasks suggested in the [Sprint 1 planning](#%EF%B8%8F-sprint-1-planning) section, or plan your own tasks.
+> Create an issue for each task of the first user story, "{{site.sprint_1_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
