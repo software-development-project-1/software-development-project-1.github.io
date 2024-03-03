@@ -297,9 +297,9 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Consider the following while planning the tasks:
 >
-> - What data requirements does the user story have? What kind of JPA entity and repository class need to be implemented?
-> - What user interface requirements does the user story have? What kind of Thymeleaf template need to be implemented?
-> - What kind of controller requirements does the user story have? What kind of controller class need to be implemented?
+> - What data requirements does the user story have? What kind of JPA entity and repository class needs to be implemented?
+> - What user interface requirements does the user story have? What kind of Thymeleaf template needs to be implemented?
+> - What kind of controller requirements does the user story have? What kind of controller class needs to be implemented?
 > 
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
