@@ -229,10 +229,6 @@ The order of the user stories represent the priotity provided by the Product Own
 
 These are the user stories, that you will be working on as a team during this Sprint. The next step of the Sprint Planning event is to split these user stories into codings tasks.
 
-{: .highlight }
-
-> The tasks that you come up with during the Sprint Planning event _should not be set in stone_. These tasks are there to get you started with implementing the user stories. You might come up with new tasks or notice that the current tasks need alterations during the actual implementation. In such case, do the necessary changes for the Sprint Backlog.
-
 {: .important-title }
 
 > Exercise 6
@@ -289,17 +285,19 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Task list item with a "#" prefix is a reference to a certain issue. You can type "#" and GitHub will suggest issues. Task list makes it easier to know which user story the task is related to and to track the progress of a user story. GitHub will automatically mark the task list item as done when the related issue is closed.
 
+{: .highlight }
+
+> The tasks that you come up with during the Sprint Planning event _should not be set in stone_. These tasks are there to get you started with implementing the user stories. You might come up with new tasks or notice that the current tasks need alterations during the actual implementation. In such case, do the necessary changes for the Sprint Backlog.
+
 {: .important-title }
 
 > Exercise 10
 >
 > Plan the tasks for the first user story, "{{site.sprint_1_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> You can consider for example the following tasks:
+> Consider the following while planning the tasks:
 >
-> - Add a Quiz JPA entity class and a QuizRepository JPA repository class
-> - Add a Thymeleaf template for the quiz creation form containing fields for name, description and published status
-> - Add QuizController controller class and methods for rendering and handling the submission of the quiz creation form
+> - What data requirements does the user story have? What kind of JPA entity and repository class need to be implemented?> > - What user interface requirements does the user story have? What kind of Thymeleaf template need to be implemented?> - What kind of controller requirements does the user story have? What kind of controller class need to be implemented?
 > 
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
