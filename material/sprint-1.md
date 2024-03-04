@@ -297,7 +297,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 > Exercise 10
 >
-> Read through the [User stories and tasks](#user-stories-and-tasks). Then, plan the tasks for the first user story, "{{site.sprint_1_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Read through the [User stories and tasks](#user-stories-and-tasks) section. Then, plan the tasks for the first user story, "{{site.sprint_1_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > You can consider for example the following tasks:
 > 
