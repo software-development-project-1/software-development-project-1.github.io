@@ -55,11 +55,11 @@ During Sprint Planning Developers discuss the technical steps required to implem
 
 While discussing the technical details, the Developers document a todo-list of tasks with a short description. Developers also consider the order of the tasks:
 
-> Task 1: Add a Blog JPA entity class and a BlogRepository JPA repository class
+> Add a Blog JPA entity class and a BlogRepository JPA repository class
 
-> Task 2: Add a Thymeleaf template for the blog creation form containing fields for name and description
+> Add a Thymeleaf template for the blog creation form containing fields for name and description
 
-> Task 3: Add a BlogController controller class and methods for rendering and handling the submission of the blog creation form
+> Add a BlogController controller class and methods for rendering and handling the submission of the blog creation form
 
 These tasks are added to the _Sprint Backlog_.
 
@@ -289,11 +289,15 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 > The tasks that you come up with during the Sprint Planning event _should not be set in stone_. These tasks are there to get you started with implementing the user stories. You might come up with new tasks or notice that the current tasks need alterations during the actual implementation. In such case, do the necessary changes for the Sprint Backlog.
 
+{: .highlight }
+
+> Use all the knowledge in your team and _plan the tasks together_.
+
 {: .important-title }
 
 > Exercise 10
 >
-> Plan the tasks for the first user story, "{{site.sprint_1_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Read through the [User stories and tasks](#user-stories-and-tasks). Then, plan the tasks for the first user story, "{{site.sprint_1_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > You can consider for example the following tasks:
 > 
