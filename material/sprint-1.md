@@ -271,20 +271,6 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 1". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
 
-{: .note }
-
-> User story related tasks can be included in the user story issue's description as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists):
->
-> ```md
-> ## Tasks
->
-> - [] #5
-> - [] #6
-> - [] #7
-> ```
->
-> Task list item with a "#" prefix is a reference to a certain issue. You can type "#" and GitHub will suggest issues. Task list makes it easier to know which user story the task is related to and to track the progress of a user story. GitHub will automatically mark the task list item as done when the related issue is closed.
-
 {: .highlight }
 
 > The tasks that you come up with during the Sprint Planning event _should not be set in stone_. These tasks are there to get you started with implementing the user stories. You might come up with new tasks or notice that the current tasks need alterations during the actual implementation. In such case, do the necessary changes for the Sprint Backlog.
@@ -361,82 +347,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 > Exercise 14
 >
-> Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-1-user-story-5-1.png)
->
-> ![](/assets/sprint-1-user-story-5-2.png)
->
-> ![](/assets/sprint-1-user-story-5-3.png)
->
-> Tips for the tasks:
->
-> - [Derived Query Methods in Spring Data JPA Repositories](https://www.baeldung.com/spring-data-derived-queries)
-> - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). Request parameters can be accessed in a controller method with the `@RequestParam` annotation in the following way:
->
->   ```java
->   @GetMapping("/")
->   public String listQuizzes(@RequestParam(required = false) Boolean published, /* ... */) {
->       model.addAttribute("publishedFilter", published);
->   
->       if (published == null) {
->         // all quizzes requested
->       } else {
->         // quizzes by a published status requested
->       }
->   }
->   ```
->
-> - In the Thymeleaf template the request parameter can be added to a link in the following way:
->
->   ```html
->   <a
->     href="/?published=true"
->     class="nav-link"
->     th:classappend="${publishedFilter == true}? active"
->   >
->     Published
->   </a>
->   ```
-
-{: .important-title }
-
-> Exercise 15
->
-> Plan the tasks for the sixth user story, "{{site.sprint_1_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-1-user-story-6.png)
->
-> Tips for the tasks:
->
-> - [Hibernate CreationTimestamp annotation](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
-> - [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object can be formatted in a Thymeleaf template with the [#temporals.format](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html#temporals-java.time) utility
-
-{: .important-title }
-
-> Exercise 16
->
-> Plan the tasks for the seventh user story, "{{site.sprint_1_user_story_7}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> Tips for the tasks:
->
-> - [Sorting Query Results with Spring Data](https://www.baeldung.com/spring-data-sorting)
-
-{: .important-title }
-
-> Exercise 17
->
-> Discuss how you will divide the workload (the tasks) of the Sprint among the team members. For example, each team member could be responsible for the tasks of a single user story. Then, add an _assignee_ for each issue. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same issue together.
+> Discuss how you will divide the the tasks of the _first four user stories_ among the team members. For example, each team member could be responsible for the tasks of a single user story. Then, add an _assignee_ for each issue. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same issue together.
 
 {: .highlight }
 
@@ -536,7 +447,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 15
 >
 > Open the `README.md` file for editing for example in GitHub or in Visual Studio Code. You might not be able to edit the file in Eclipse. Replace the current contents of the repository's `README.md` file with the following information using Markdown:
 >
@@ -568,9 +479,84 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 16
 >
 > Organize a Daily Scrum event at least once a week during each Sprint.
+
+{: .important-title }
+
+> Exercise 17
+>
+> Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-1-user-story-5-1.png)
+>
+> ![](/assets/sprint-1-user-story-5-2.png)
+>
+> ![](/assets/sprint-1-user-story-5-3.png)
+>
+> Tips for the tasks:
+>
+> - [Derived Query Methods in Spring Data JPA Repositories](https://www.baeldung.com/spring-data-derived-queries)
+> - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). Request parameters can be accessed in a controller method with the `@RequestParam` annotation in the following way:
+>
+>   ```java
+>   @GetMapping("/")
+>   public String listQuizzes(@RequestParam(required = false) Boolean published, /* ... */) {
+>       model.addAttribute("publishedFilter", published);
+>   
+>       if (published == null) {
+>         // all quizzes requested
+>       } else {
+>         // quizzes by a published status requested
+>       }
+>   }
+>   ```
+>
+> - In the Thymeleaf template the request parameter can be added to a link in the following way:
+>
+>   ```html
+>   <a
+>     href="/?published=true"
+>     class="nav-link"
+>     th:classappend="${publishedFilter == true}? active"
+>   >
+>     Published
+>   </a>
+>   ```
+
+{: .important-title }
+
+> Exercise 18
+>
+> Plan the tasks for the sixth user story, "{{site.sprint_1_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-1-user-story-6.png)
+>
+> Tips for the tasks:
+>
+> - [Hibernate CreationTimestamp annotation](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
+> - [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object can be formatted in a Thymeleaf template with the [#temporals.format](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html#temporals-java.time) utility
+
+{: .important-title }
+
+> Exercise 19
+>
+> Plan the tasks for the seventh user story, "{{site.sprint_1_user_story_7}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> Tips for the tasks:
+>
+> - [Sorting Query Results with Spring Data](https://www.baeldung.com/spring-data-sorting)
 
 ## Usage guide documentation
 
