@@ -306,7 +306,7 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > GitHub supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain diagrams. Take a look at Mermaid's [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) documentation for more information.
 >
-> Add the documentation to a `data-model.md` file in the `documentation` folder. Add a link to the file to "Documentation" section in the `README.md` file. GitHub supports [relative links](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#relative-links) to files in a repository, so you don't need the full URL to the file in the link. _Keep this documentation (like all other documentation) up-to-date_ when you add new entities for the application.
+> Add the documentation to a `data-model.md` file in the `documentation` folder. Add a link to the file to the "Documentation" section in the `README.md` file. GitHub supports [relative links](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#relative-links) to files in a repository, so you don't need the full URL to the file in the link. _Keep this documentation (like all other documentation) up-to-date_ when you add new entities for the application.
 
 ## Reducing boilerplate code with Lombok
 
@@ -834,7 +834,7 @@ public class MessageRestController {
 > 4. Which database platforms are used in different environments (development and production environment)?
 > 5. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
 >
-> Add the documentation to a `architecture.md` file in the `documentation` folder Add a link to the file to "Documentation" section in the `README.md` file.
+> Add the documentation to a `architecture.md` file in the `documentation` folder. Add a link to the file to the "Documentation" section in the `README.md` file.
 
 ## REST API documentation with Swagger
 
