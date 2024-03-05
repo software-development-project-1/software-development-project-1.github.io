@@ -558,15 +558,15 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 >
 > - [Sorting Query Results with Spring Data](https://www.baeldung.com/spring-data-sorting)
 
-## Usage guide documentation
+## Developer guide documentation
 
-Now that we have implemented some features for our application that the users can use it is time to describe _how_ to use the application. The _usage guide_ is perhaps one of the most important pieces of documentation for the application. It will describe our fellow developers how to technically use the application. This means for example, how to start the application, how to package the application, and how to run tests.
+Now that we have implemented some features for our application that the users can use it is time to describe _how_ to use the application. The _developer guide_ is perhaps one of the most important pieces of documentation for the application. It will describe our fellow developers how to technically use the application. This means for example, how to start the application, how to package the application, and how to run tests.
 
-The usage guide shouldn't make too many assumptions, for example, that the reader of the documentation happens to know that the `application.properties` file needs alterations before the application can be started. If something needs to be done, even a simple thing, _mention it_. It is helpful not only for others but also for yourself. We should also describe the _system requirements_ for the application. For example, the required Java version. The example project uses Spring Boot version 3, which requires Java version 17 or higher.
+The developer guide shouldn't make too many assumptions, for example, that the reader of the documentation happens to know that the `application.properties` file needs alterations before the application can be started. If something needs to be done, even a simple thing, _mention it_. It is helpful not only for others but also for yourself. We should also describe the _system requirements_ for the application. For example, the required Java version. The example project uses Spring Boot version 3, which requires Java version 17 or higher.
 
 Because developers use different IDEs, it is easier to describe how the application can be used using a command-line interface (such as Git Bash). On the command-line, we can use the Maven command `mvn` or the alias `./mvnw` to run different Maven commands. Using `./mvnw` (the [Maven wrapper](https://www.baeldung.com/maven-wrapper)) is a bit more convenient because it doesn't require Maven to be installed.
 
-Here's a simple usage guide on how to start the example project application:
+Here's a simple developer guide on how to start the example project's backend application:
 
 1. Start the application by running the `./mvnw spring-boot:run` command on the command-line in the repository folder
 2. Once the application has started, visit <http://localhost:8080> in a web browser to use the application
@@ -581,9 +581,11 @@ The description should be so clear that your fellow student who knows nothing ab
 
 > Exercise 20
 >
-> Write a usage guide on _how to start the backend application_ to the `README.md` file. Add it under a "Usage guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
+> Write a developer guide on _how to start the backend application_ to the `README.md` file. Add it under a "Developer guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown. 
 >
-> You can assume that the reader of the `README.md` file is a software developer who knows how to use a command-line interface, the basic Git commands and install the required Java version. _Make sure that instructions on the usage guide work_ by cloning a new version of the repository and executing the steps on the usage guide one by one.
+> You can assume that the reader of the `README.md` file is a software developer who knows how to use a command-line interface, the basic Git commands and install the required Java version. _Make sure that instructions on the developer guide work_ by cloning a new version of the repository and executing the steps on the developer guide one by one.
+>
+> Create an issue for the task. The "documentation" label is suitable for documentation-related issues.
 
 ## JAR
 
@@ -690,7 +692,7 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 > Exercise 22
 >
-> Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
+> Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the "Developer guide" section in the `README.md` file.
 
 ## GitHub release
 

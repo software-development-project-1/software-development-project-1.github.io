@@ -302,13 +302,11 @@ The planning of the tasks for the last three user stories will be covered after 
 
 > Exercise 13
 >
-> Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). Add the diagram and the description to a `data-model.md` file in the `documentation` folder. The description should explain the purpose of each entity and their relationship to other entities. Add a link to the file to "Documentation" section in the `README.md` file.
+> Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities.
 >
 > GitHub supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain diagrams. Take a look at Mermaid's [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) documentation for more information.
 >
-> Create an issue for the task. The "documentation" label is suitable for documentation-related issues.
->
-> _Keep this documentation (like all other documentation) up-to-date_ when you add new entities for the application.
+> Add the documentation to a `data-model.md` file in the `documentation` folder. Add a link to the file to "Documentation" section in the `README.md` file. GitHub supports [relative links](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#relative-links) to files in a repository, so you don't need the full URL to the file in the link. _Keep this documentation (like all other documentation) up-to-date_ when you add new entities for the application.
 
 ## Reducing boilerplate code with Lombok
 
@@ -806,35 +804,37 @@ public class MessageRestController {
 
 > Exercise 22
 >
-> Add instructions on _how to start the frontend application_ to the "Usage guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
+> Add instructions on _how to start the frontend application_ to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
-> For the sake of clarity, you can add separate subheadings for backend's and frontend's usage guide:
+> For the sake of clarity, you can add separate subheadings for backend's and frontend's developer guide:
 >
 > ```md
-> ## Usage guide
+> ## Developer guide
 >
 > ### Backend
 >
-> The backend usage guide goes here.
+> The backend developer guide goes here.
 >
 > ### Frontend
 >
-> The frontend usage guide goes here.
+> The frontend developer guide goes here.
 > ```
 >
-> You can test how good your user guide is by cloning a new copy of the repository and executing the steps precisely as they are in the usage guide without making any assumptions.
+> You can test how good your user guide is by cloning a new copy of the repository and executing the steps precisely as they are in the developer guide without making any assumptions.
 
 {: .important-title }
 
 > Exercise 23
 >
-> Add a description of the project's _overall architecture_ and _implementation technologies_ to the project description in the `README.md` file. Mention the following things:
+> Write the first version of the project's _architecture documentation_. The documentation should contain the following things:
 >
 > 1. The project's overall architecture consists of three components: the backend, the database and the frontend. Mention these components and briefly explain the purpose of each component
 > 2. Implement a [flow chart](https://mermaid.js.org/syntax/flowchart.html) using the [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax which visualizes how the components communicate with each other. Does for example the frontend communicate with the database directly? What's the direction of the communication (the arrow direction in the chart)? Does for example backend send requests to the frontend (the arrow would point to the frontend) or the other way around?
 > 3. Which programming language, frameworks and major libraries are used in the _backend implementation_?
 > 4. Which database platforms are used in different environments (development and production environment)?
 > 5. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
+>
+> Add the documentation to a `architecture.md` file in the `documentation` folder Add a link to the file to "Documentation" section in the `README.md` file.
 
 ## REST API documentation with Swagger
 
@@ -979,7 +979,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 > Exercise 25
 >
-> Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Usage guide" section in the `README.md` file.
+> Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Developer guide" section in the `README.md` file.
 
 ## Sprint Review
 

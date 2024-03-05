@@ -579,7 +579,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 17
 >
-> Add instructions on _how to run the tests_ to the "Usage guide" section in the `README.md` file. You can instruct the reader to use the `./mvnw test` command to run the tests.
+> Add instructions on _how to run the tests_ to the "Developer guide" section in the `README.md` file. You can instruct the reader to use the `./mvnw test` command to run the tests.
 
 ## Authentication
 
