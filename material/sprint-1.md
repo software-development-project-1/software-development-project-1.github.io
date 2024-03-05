@@ -392,13 +392,11 @@ If we take a look at the example project's `layout.html` file in the `src/main/r
 >
   <head>
     <meta charset="utf-8" />
-    <title>Quizzer</title>
+    <title>Messages</title>
     <!-- ... -->
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <!-- ... -->
-    </nav>
+    <!-- ... -->
     <div class="container my-3" layout:fragment="content"></div>
   </body>
 </html>

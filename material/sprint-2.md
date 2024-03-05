@@ -693,8 +693,6 @@ The `MessageList` component in the `frontend/src/components/MessageList.jsx` cal
 ```jsx
 import { useEffect, useState } from "react";
 
-// ...
-
 import { getAllMessages, createMessage } from "../services/message";
 
 export default function MessageList() {
