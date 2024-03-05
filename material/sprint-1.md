@@ -285,11 +285,11 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Read through the [User stories and tasks](#user-stories-and-tasks) section. Then, plan the tasks for the first user story, "{{site.sprint_1_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> You can consider for example the following tasks:
+> Consider the following things in the tasks:
 > 
-> - Add a Quiz JPA entity class and a QuizRepository JPA repository class
-> - Add a Thymeleaf template for the quiz creation form containing fields for name, description and published status
-> - Add QuizController controller class and methods for rendering and handling the submission of the quiz creation form
+> - What kind of data requirements does the user story have? What kind of JPA entity and repository class needs to be implemented?
+> - What kind of user interface requirements does the user story have? What kind of Thymeleaf template needs to be implemented?
+> - What kind of controller requirements does the user story have? What kind of controller class needs to be implemented?
 > 
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
