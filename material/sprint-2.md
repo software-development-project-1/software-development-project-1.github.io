@@ -9,7 +9,7 @@ nav_order: 7
 
 # Sprint 2
 
-For the Sprint 2 we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to Retrospective, Estimation, REST APIs and communication between frontend and backend.
+For the Sprint 2 we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to Retrospective, Git branches, REST APIs and communication between frontend and backend.
 
 ## Sprint assesment
 
