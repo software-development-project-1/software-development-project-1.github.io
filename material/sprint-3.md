@@ -705,7 +705,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 > Exercise 20
 >
-> Make sure that all project-related documentation, such as project description, data model documentation and Swagger documentation is up-to-date.
+> Make sure that all project-related documentation, such as project description, data model documentation, architecture documentation and Swagger documentation is up-to-date.
 
 {: .important-title }
 
