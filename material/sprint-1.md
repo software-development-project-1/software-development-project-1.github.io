@@ -296,10 +296,6 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-1-user-story-1.png)
->
-> Tips for the tasks:
->
-> - [Thymeleaf checkbox fields](https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html#checkbox-fields)
 
 {: .important-title }
 
@@ -508,12 +504,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 >   @GetMapping("/")
 >   public String listQuizzes(@RequestParam(required = false) Boolean published, /* ... */) {
 >       model.addAttribute("publishedFilter", published);
->   
->       if (published == null) {
->         // all quizzes requested
->       } else {
->         // quizzes by a published status requested
->       }
+>       // ...  
 >   }
 >   ```
 >
@@ -607,7 +598,7 @@ The command will generate the JAR file under the `target` folder. Inside the fol
 
 > Exercise 21
 >
-> Generate a JAR file for the application and run the application using the JAR file.
+> Generate a JAR file for the application and run the application using the JAR file. Add instructions on how to generate and run the application using the JAR file to the "Developer guide" section in the `README.md` file.
 
 {: .note }
 
