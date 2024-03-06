@@ -555,10 +555,13 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Create an issue for this task.
 
+{: .important-title }
 
 > Exercise 15
 >
 > Implement appropriate test methods for the endpoint for _getting all categories_.
+>
+> Create an issue for this task.
 
 {: .important-title }
 
