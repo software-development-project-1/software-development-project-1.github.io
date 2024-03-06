@@ -9,7 +9,7 @@ nav_order: 7
 
 # Sprint 2
 
-For the Sprint 2 we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to Retrospective, Estimation, REST APIs and communication between frontend and backend.
+For the Sprint 2 we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to Retrospective, Git branches, REST APIs and communication between frontend and backend.
 
 ## Sprint assesment
 
@@ -600,7 +600,7 @@ To have more control over the attributes in the JSON response, [DTO](https://www
 
 ## Designing the REST API endpoints for the user stories
 
-Next, let's consider what kind of REST API endpoints we need for the last three user stories. Implement the following four endpoints _by following the REST API naming conventions for the endpoint path names_.
+Next, let's consider what kind of REST API endpoints we need for the last four user stories. Implement the following endpoints _by following the REST API naming conventions for the endpoint path names_.
 
 {: .important-title }
 
