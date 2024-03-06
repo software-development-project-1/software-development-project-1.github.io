@@ -15,7 +15,7 @@ For the final Sprint of the course, the Sprint 3, we have a new set of requireme
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
 
-The Sprint assesment is done based on the exercises 1-23. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
+The Sprint assesment is done based on the exercises 1-24. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
 
 During this Sprint, each team member will write a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 10 personal points.
 
@@ -59,11 +59,13 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
 >
-> An anonymous user, that is an user who is not signed in, should be able to see the quiz list. However, they should not be able to add a quiz. That is, the link for adding a quiz should not be visible if the user is not signed in.
+> An anonymous user, that is an user who is not signed in, should be able to see the quiz list. However, they should not be able to add a quiz or category. That is, the link for adding a quiz should not be visible if the user is not signed in.
 >
-> After signing in, the teacher should be able to add a quiz. However, the teacher should only be able to edit and delete quizzes they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The quiz list should also display the username of the teacher who has added the quiz both in teacher and student dashboard.
+> After signing in, the teacher should be able to add a quiz or a category. However, the teacher should only be able to edit and delete quizzes they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The quiz list should also display the username of the teacher who has added the quiz both in teacher and student dashboard.
 >
-> There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. There should be a link to the results page next to the quiz in the quiz list page."
+> There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. There should be a link to the results page next to the quiz in the quiz list page.
+>
+> Students have different skill levels so it would be useful if the student could filter the questions of quiz by the difficulty level in the quiz page. There could be dropdown menu at the top of the page from which the student can select the difficulty level for the questions."
 >
 > -- The Product Owner
 
@@ -73,6 +75,7 @@ After some discussion the Scrum Team planned the following user stories:
 2. {{site.sprint_3_user_story_2}}
 3. {{site.sprint_3_user_story_3}}
 4. {{site.sprint_3_user_story_4}}
+5. {{site.sprint_3_user_story_5}}
 
 {: .important-title }
 
@@ -169,6 +172,20 @@ After some discussion the Scrum Team planned the following user stories:
 > Tips for the tasks:
 >
 > - [Retrieve User Information in Spring Security](https://www.baeldung.com/get-user-in-spring-security)
+
+{: .important-title }
+
+> Exercise 11
+>
+> Implementation requirement: the filtering should be performed _in the backend_. The REST API endpoint for getting the questions of a quiz should support an optional [request parameter](https://www.baeldung.com/spring-request-param) for filtering the questions by a difficulty level, such as `?difficulty=Easy`.
+>
+> Plan the tasks for the fifth user story, "{{site.sprint_3_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-3-user-story-5.png)
 
 ## Testing
 
@@ -294,7 +311,7 @@ The configuration in the `src/test/resources/application.properties` file will b
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 12
 >
 > Add a test-specific configuration file and configure a separate database for the tests. Make sure that running the tests doesn't alter (for example delete any data) the development environment database.
 
@@ -518,7 +535,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > To classify test-related issues, create a new "test" [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels). Add the "test" label for issues that are related to testing (automated or manual) some part of the application.
 
@@ -528,7 +545,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > Create a new package `fi.haagahelia.quizzer.controller` to the `src/test/java` folder for the project's controller class tests. Implement a test class within the package with the following test methods for the endpoint for _getting all (published) quizzes_:
 >
@@ -539,7 +556,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 15
 >
 > Implement the following test methods for the endpoint for _getting a quiz by id_:
 >
@@ -551,7 +568,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 16
 >
 > Implement the following test methods for the endpoint for _getting the questions of a quiz_:
 >
@@ -564,7 +581,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 17
 >
 > Implement a test class with the following test methods for the endpoint for _creating an answer_:
 >
@@ -577,7 +594,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 18
 >
 > Add instructions on _how to run the tests_ to the "Developer guide" section in the `README.md` file. You can instruct the reader to use the `./mvnw test` command to run the tests.
 
@@ -689,7 +706,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title}
 
-> Exercise 18
+> Exercise 19
 >
 > Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
@@ -697,19 +714,19 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 20
 >
 > Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 21
 >
 > Make sure that all project-related documentation, such as project description, data model documentation, architecture documentation and Swagger documentation is up-to-date.
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -731,7 +748,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 23
 >
 > Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 
@@ -748,7 +765,7 @@ Submit the final report as _a single PDF file_ to [this Moodle submission]({{sit
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 24
 >
 > Write the final report as instructed above.
 

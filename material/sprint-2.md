@@ -15,7 +15,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-28. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-31. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -82,7 +82,7 @@ git branch <name-of-my-branch>
 
 {: .note }
 
-> Typically, the branch name describes the feature developed in the branch or some other purpose of the branch, for example `delete-quiz` or `filter-quizzes-by-published-status`.
+> Typically, the branch name describes the feature developed in the branch or some other purpose of the branch, for example `delete-quiz` or `add-question`.
 
 Now, let's check the repository's branches with the `git branch` command. We should see that our branch is added to the list. We can also see that there's an astrisk symbol (\*) before the main branch. This means that we are currently on the main branch. The current branch is also displayed in brackets in the Git Bash after the path to the current folder.
 
@@ -183,15 +183,17 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 2 goals in the Sprint Planning event:
 
-> "It's great that we now have the basic functionality for managing quizzes! What we now need is a way for the teacher to add questions to quizzes and student to take the published quizzes.
+> "It's great that we now have the basic functionality for managing quizzes! What we now need is a way for the teacher to categorize quizzes and student to take the published quizzes.
 >
-> The teacher should be able to add questions to a quiz. For example the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?", a correct answer, for example "Helsinki" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal". 
+> To quickly see which quizzes are published and which are not, there should be some way for the teacher to filter the quiz list based on the published status. There could be for example "All", "Published", and "Not published" tabs at the top of the list. Similarly, the teacher should also be able to filter the question list based on the difficulty level. Like with the quiz list, there could be for example "All", "Easy", "Normal" and "Hard" tabs at the top of the list.
+> 
+> To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". The name can't be blank and there can't be multiple categories with the same name. The description is optional. There should be a form for adding a category and a separate page for listing the added categories. The categories should be listed in an alphabetical order based on the name.
 >
-> There should be a page with a form for adding a question to a quiz. The teacher should not be able to add a question with a blank question text or correct answer, or without a difficulty level. Added questions of a quiz should be listed on a separate page. There should be a link to both these pages in the quiz edit page.
->
-> Once a question has been added to a quiz, the teacher should be able to delete it. The question list should have a "Delete" button next to each question. The teacher should also be able to filter the question list based on the difficulty level. Similarly as with the quiz list, there could be for example "All", "Easy", "Normal" and "Hard" tabs at the top of the list.
+> The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu in both forms where categories are listed in an alphabetical order based on the name.
 >
 > Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description and the date when it was added. These quizzes should be listed from newest to oldest.
+>
+> Different students are interested in different quiz categories. To find interesting quizzes quickly, the student should be able to filter the quiz list based on the category. There could be dropdown menu at the top of the page for filtering the quizzes by a specific category.
 >
 > Each quiz name on the quiz list should be a link to a separate page where the quiz name, description and the questions are displayed. There should also be some kind of navigation menu from which the student can navigate to the quiz list page.
 >
@@ -208,8 +210,8 @@ After some discussion the Scrum Team planned the following user stories:
 5. {{site.sprint_2_user_story_5}}
 6. {{site.sprint_2_user_story_6}}
 7. {{site.sprint_2_user_story_7}}
-
-The planning of the tasks for the last three user stories will be covered after the [REST APIs](#rest-apis) and [Communication between frontend and backend](#communication-between-frontend-and-backend) sections.
+8. {{site.sprint_2_user_story_8}}
+9. {{site.sprint_2_user_story_9}}
 
 {: .important-title }
 
@@ -235,7 +237,7 @@ The planning of the tasks for the last three user stories will be covered after 
 
 > Exercise 8
 >
-> Implement _at least two_ user stories in separate feature branches. Name the branches based on the feature, for example `delete-question`. Remember to _switch to the main branch before creating a new branch_ by using the `git checkout main` command. Use the `git branch` command if you are unsure what the current branch is.
+> Implement _at least two_ user stories in separate feature branches. Name the branches based on the feature, for example `add-category`. Remember to _switch to the main branch before creating a new branch_ by using the `git checkout main` command. Use the `git branch` command if you are unsure what the current branch is.
 >
 > Once the implementation is ready, open a pull request. At least one other team member should conduct a code review for the pull request and either approve it or request changes. Once the pull request has been approved, merge it to the main branch. Finally, switch back to the main branch and pull the changes from GitHub.
 >
@@ -255,9 +257,31 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > ![](/assets/sprint-2-user-story-1-2.png)
 >
+> ![](/assets/sprint-2-user-story-1-3.png)
+>
 > Tips for the tasks:
 >
-> - Make sure that you can delete a quiz that has questions. Before deleting a quiz, the quiz's questions need to be deleted. [Cascading](https://www.baeldung.com/jpa-cascade-types) can be used to achieve this automatically
+> - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). Request parameters can be accessed in a controller method with the `@RequestParam` annotation in the following way:
+>
+>   ```java
+>   @GetMapping("/")
+>   public String listQuizzes(@RequestParam(required = false) Boolean published, /* ... */) {
+>       model.addAttribute("publishedFilter", published);
+>       // ...  
+>   }
+>   ```
+>
+> - In the Thymeleaf template the request parameter can be added to a link in the following way:
+>
+>   ```html
+>   <a
+>     href="/?published=true"
+>     class="nav-link"
+>     th:classappend="${publishedFilter == true}? active"
+>   >
+>     Published
+>   </a>
+>   ```
 
 {: .important-title }
 
@@ -269,9 +293,7 @@ The planning of the tasks for the last three user stories will be covered after 
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-2-1.png)
->
-> ![](/assets/sprint-2-user-story-2-2.png)
+> ![](/assets/sprint-2-user-story-2.png)
 
 {: .important-title }
 
@@ -301,11 +323,42 @@ The planning of the tasks for the last three user stories will be covered after 
 
 > Exercise 13
 >
+> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-5-1.png)
+>
+> ![](/assets/sprint-2-user-story-5-2.png)
+
+{: .important-title }
+
+> Exercise 14
+>
 > Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities.
 >
 > GitHub supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain diagrams. Take a look at Mermaid's [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) documentation for more information.
 >
-> Add the documentation to a `data-model.md` file in the `documentation` folder. Add a link to the file to the "Documentation" section in the `README.md` file. GitHub supports [relative links](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#relative-links) to files in a repository, so you don't need the full URL to the file in the link. _Keep this documentation (like all other documentation) up-to-date_ when you add new entities for the application.
+> Add the documentation to a `data-model.md` file in the `documentation` folder. Add a link to the file to the "Documentation" section in the `README.md` file. GitHub supports [relative links](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#relative-links) to files in a repository, so you don't need the full URL to the file in the link. 
+>
+> _NB: Keep this documentation (like all other documentation) up-to-date when you add new entities for the application._
+
+{: .important-title }
+
+> Exercise 15
+>
+> Write the first version of the project's _architecture documentation_. The documentation should contain the following things:
+>
+> 1. At the moment the project's overall architecture consists of two components: the backend and the database. Mention these components and briefly explain the purpose of each component
+> 2. Implement a [flow chart](https://mermaid.js.org/syntax/flowchart.html) using the [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax which visualizes how the components communicate with each other. What's the direction of the communication (the arrow direction in the chart)? Does for example database send requests to the backend (the arrow would point to the backend) or the other way around?
+> 3. Which programming language, frameworks and major libraries are used in the _backend implementation_?
+> 4. Which _database platforms_ are used in different environments (development and production environment)?
+>
+> Add the documentation to a `architecture.md` file in the `documentation` folder. Add a link to the file to the "Documentation" section in the `README.md` file.
+>
+> _NB: We will soon add the frontend component to the architecture. Remember to keep this documentation up-to-date._
 
 ## Reducing boilerplate code with Lombok
 
@@ -551,7 +604,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 16
 >
 > To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation.
 
@@ -565,15 +618,23 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 17
 >
-> Implement a REST API endpoint for _getting all (published) quizzes_ in newest to oldest order.
+> Implement a REST API endpoint for _getting all categories_ in alphabetical order by the name.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 18
+>
+> Implement a REST API endpoint for _getting all (published) quizzes_ in newest to oldest order. The endpoint should support an optional [request parameter](https://www.baeldung.com/spring-request-param) for filtering the quizzes by a category, such as `?categoryId=1`.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+
+{: .important-title }
+
+> Exercise 19
 >
 > Implement a REST API endpoint for _getting a quiz by id_. Return an appropriate HTTP status code and error message in the following error cases:
 >
@@ -584,7 +645,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 20
 >
 > Implement a REST API endpoint for _getting the questions of a quiz_. Return an appropriate HTTP status code and error message in the following error cases:
 >
@@ -595,7 +656,7 @@ Next, let's consider what kind of REST API endpoints we need for the last three 
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 21
 >
 > Implement a REST API endpoint for _creating an answer_ for a quiz's question. Information about the answer's text, correctness (is the answer correct or not based on the question's correct answer) and the question reference should be stored in the database. Return an appropriate HTTP status code and error message in the following error cases:
 >
@@ -755,19 +816,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 19
->
-> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-2-user-story-5.png)
-
-{: .important-title }
-
-> Exercise 20
+> Exercise 22
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -775,13 +824,11 @@ public class MessageRestController {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-6-1.png)
->
-> ![](/assets/sprint-2-user-story-6-2.png)
+> ![](/assets/sprint-2-user-story-6.png)
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 23
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -792,6 +839,20 @@ public class MessageRestController {
 > ![](/assets/sprint-2-user-story-7-1.png)
 >
 > ![](/assets/sprint-2-user-story-7-2.png)
+
+{: .important-title }
+
+> Exercise 24
+>
+> Plan the tasks for the eight user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-8-1.png)
+>
+> ![](/assets/sprint-2-user-story-8-2.png)
 >
 > Tips for the tasks:
 >
@@ -799,7 +860,19 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 25
+>
+> Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_9}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-9.png)
+
+{: .important-title }
+
+> Exercise 26
 >
 > Add instructions on _how to start the frontend application_ to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
@@ -818,20 +891,6 @@ public class MessageRestController {
 > ```
 >
 > You can test how good your user guide is by cloning a new copy of the repository and executing the steps precisely as they are in the developer guide without making any assumptions.
-
-{: .important-title }
-
-> Exercise 23
->
-> Write the first version of the project's _architecture documentation_. The documentation should contain the following things:
->
-> 1. The project's overall architecture consists of three components: the backend, the database and the frontend. Mention these components and briefly explain the purpose of each component
-> 2. Implement a [flow chart](https://mermaid.js.org/syntax/flowchart.html) using the [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax which visualizes how the components communicate with each other. Does for example the frontend communicate with the database directly? What's the direction of the communication (the arrow direction in the chart)? Does for example backend send requests to the frontend (the arrow would point to the frontend) or the other way around?
-> 3. Which programming language, frameworks and major libraries are used in the _backend implementation_?
-> 4. Which database platforms are used in different environments (development and production environment)?
-> 5. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
->
-> Add the documentation to a `architecture.md` file in the `documentation` folder. Add a link to the file to the "Documentation" section in the `README.md` file.
 
 ## REST API documentation with Swagger
 
@@ -914,7 +973,7 @@ public Message getMessageById(@PathVariable Long id) {
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 27
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response. 
 >
@@ -974,7 +1033,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 28
 >
 > Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Developer guide" section in the `README.md` file.
 
@@ -984,19 +1043,19 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 29
 >
 > Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive frontend-related files from the `frontend` folder.
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 30
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 28
+> Exercise 31
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the features in the production environment.
 >
