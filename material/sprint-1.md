@@ -384,7 +384,7 @@ Here's a few tips before you start implementing the tasks:
 
 ## Thymeleaf page layouts
 
-If we start the example project application and visit the [message list page](http://localhost:8080) at and the [add message page](http://localhost:8080/messages/add), we see that the pages share a common structure. They both have the navigation bar at the top of the page. If we dig deeper into the HTML structure, there's also common `link` and `script` elements. We could simply copy-paste the navigation bar HTML to both pages, but once we implement more pages and want to update the navigation bar, things start to get out of hand. Instead, we can have a common _layout_ for the application that each page can share. This can be achieved using the [Thymeleaf Layout Dialect](https://ultraq.github.io/thymeleaf-layout-dialect/) which has been configured for the project in the [ThymeleafConfig](https://github.com/software-development-project-1/example-project/blob/main/src/main/java/fi/haagahelia/quizzer/config/ThymeleafConfig.java) class.
+If we start the example project application and visit the [message list page](http://localhost:8080) at and the [add message page](http://localhost:8080/messages/add), we see that the pages share a common structure. They both have the "Messages application" heading and the "Messages" link the top of the page. If we dig deeper into the HTML structure, there's also other common HTML elements. We could simply copy-paste the common HTML content to both pages, but once we implement more pages and want to update the common structure, things start to get out of hand. Instead, we can have a common _layout_ for the application that each page can share. This can be achieved using the [Thymeleaf Layout Dialect](https://ultraq.github.io/thymeleaf-layout-dialect/) which has been configured for the project in the [ThymeleafConfig](https://github.com/software-development-project-1/example-project/blob/main/src/main/java/fi/haagahelia/quizzer/config/ThymeleafConfig.java) class.
 
 If we take a look at the example project's `layout.html` file in the `src/main/resources/templates` folder we'll see that the file has a common structure for each page:
 
@@ -398,16 +398,20 @@ If we take a look at the example project's `layout.html` file in the `src/main/r
   <head>
     <meta charset="utf-8" />
     <title>Messages</title>
-    <!-- ... -->
   </head>
   <body>
-    <!-- ... -->
-    <div class="container my-3" layout:fragment="content"></div>
+    <h1>Messages application</h1>
+    <a href="/">Messages</a>
+    <div layout:fragment="content"></div>
   </body>
 </html>
 ```
 
-The `<div class="container my-3" layout:fragment="content"></div>` element is a _layout fragment_ called "content". It will contain the page-specific content. The layout can have multiple fragments, which could come in handy if we have for example a footer that has page-specific content.
+{: .note }
+
+Consider adding for example your [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/download/) `link` and `script` tags inside the `head` tag of the `layout.html` file.
+
+The `<div layout:fragment="content"></div>` element is a _layout fragment_ called "content". It will contain the page-specific content. The layout can have multiple fragments, which could come in handy if we have for example a footer that has page-specific content.
 
 Let's have a look at the `messagelist.html` file that is using this layout:
 
@@ -423,7 +427,7 @@ Let's have a look at the `messagelist.html` file that is using this layout:
       <ul class="mb-3">
         <li th:each="message: ${messages}" th:text="${message.content}"></li>
       </ul>
-      <a class="btn btn-primary" href="/messages/add">Add a message</a>
+      <a href="/messages/add">Add a message</a>
     </div>
   </body>
 </html>
