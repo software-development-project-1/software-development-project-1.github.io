@@ -19,7 +19,7 @@ The Product Owner has a great project idea and is in desperate need of a talente
 >
 > Once a quiz is added, the teacher should be able to add questions for the quiz using a form. A question should have a question content, for example, "What is the capital of Finland?" and a correct answer, for example, "Helsinki". It should also be possible to delete questions from a quiz. To categorize quizzes, the teacher should be able to add different categories, such as "Vocabulary" and "Geography" and choose the category of a quiz. 
 >
-> The teacher should be able to register and sign in to manage their personal quizzes. Only signed-in teachers should be able to add a quiz. Once signed in, the teacher should only be able to edit and delete their own quizzes.
+> The teacher should be able to register and sign in to manage their personal quizzes. Only signed-in teachers should be able to add a quiz or category. Once signed in, the teacher should only be able to edit and delete their own quizzes.
 >
 > The student should be able to see a list of published quizzes and take the quizzes by answering the questions of a quiz in the student dashboard. After answering a question, the student should get feedback on whether their answer was correct or not. There should also be a page where the results of a quiz are displayed. The page should display the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question.
 >
