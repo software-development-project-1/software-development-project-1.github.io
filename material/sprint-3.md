@@ -55,15 +55,15 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "We now have the basic features for managing and taking quizzes. What we still need is a way for the teachers to manage their personal quizzes.
 >
-> The teacher should be able to register with a username and password in the teacher dashboard. The teacher should not be able to register with a blank username or a password less than 8 characters long. The username should not be already taken by another registered user. It would also be nice if the user would need to retype the password to make sure that they didn't accidently mistype the password.
+> The teacher should be able to register with a username and password in the teacher dashboard. The teacher should not be able to register with a username less than three characters long or a password less than eight characters long. The username should not be already taken by another registered user. The user should also be required to retype the password to make sure that they didn't accidently mistype the password.
 >
 > Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
 >
-> An anonymous user, that is an user who is not signed in, should be able to see the quiz list. However, they should not be able to add a quiz or category. That is, the link for adding a quiz should not be visible if the user is not signed in.
+> An anonymous user, that is an user who is not signed in, should be able to see the quiz and category list. However, they should not be able to add a quiz or category. That is, the links for adding a quiz and category should not be visible if the user is not signed in.
 >
 > After signing in, the teacher should be able to add a quiz or a category. However, the teacher should only be able to edit and delete quizzes they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The quiz list should also display the username of the teacher who has added the quiz both in teacher and student dashboard.
 >
-> The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should fill in all this information in order to submit the review. The review page should list the added reviews from newest to oldest order. Each review should display the information submitted by the student and the date when the review was written."
+> The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should not be able to add a review with a nickname less than three characters long, review text less than ten chracters long or without a rating between 1 and 5. The review page should list the added reviews from newest to oldest order. Each review should display the information submitted by the student and the date when the review was written."
 >
 > -- The Product Owner
 
