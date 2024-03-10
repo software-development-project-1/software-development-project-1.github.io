@@ -19,7 +19,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 2. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-25. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-29. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Sprint Planning
 
@@ -211,9 +211,9 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > The teacher should be able to add questions to a quiz. For example the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?", a correct answer, for example "Helsinki" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal". 
 >
-> There should be a page with a form for adding a question to a quiz. The teacher should not be able to add a question with a blank question text or correct answer, or without a difficulty level. Added questions of a quiz should be listed on a separate page. There should be a link to both these pages in the quiz edit page.
+> There should be a page with a form for adding a question to a quiz. The teacher should not be able to add a question with a blank question text or correct answer, or without a difficulty level. Added questions of a quiz should be listed on a separate page. There should be a link to both these pages in the quiz edit page. Once a question has been added to a quiz, the teacher should be able to delete it. The question list should have a "Delete" button next to each question.
 >
-> Once a question has been added to a quiz, the teacher should be able to delete it. The question list should have a "Delete" button next to each question.
+> To quickly see which quizzes are published and which are not, there should be some way for the teacher to filter the quiz list based on the published status. There could be for example "All", "Published", and "Not published" tabs at the top of the list.
 >
 > The quiz list should display the date when the quiz was added. This way, the teacher would know how old the quiz is. Also, the quizzes should be listed from newest to oldest. This way, the teacher can find the latest quizzes quickly at the top of the list."
 >
@@ -229,6 +229,7 @@ After some discussion the Scrum Team planned the following user stories:
 6. {{site.sprint_1_user_story_6}}
 7. {{site.sprint_1_user_story_7}}
 8. {{site.sprint_1_user_story_8}}
+9. {{site.sprint_1_user_story_9}}
 
 The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
 
@@ -553,6 +554,164 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 > - [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object can be formatted in a Thymeleaf template with the [#temporals.format](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html#temporals-java.time) utility
 > - [Sorting Query Results with Spring Data](https://www.baeldung.com/spring-data-sorting)
 
+{: .important-title }
+
+> Exercise 21
+>
+> Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-1-user-story-9-1.png)
+>
+> ![](/assets/sprint-1-user-story-9-2.png)
+>
+> ![](/assets/sprint-1-user-story-9-3.png)
+>
+> Tips for the tasks:
+>
+> - [Derived Query Methods in Spring Data JPA Repositories](https://www.baeldung.com/spring-data-derived-queries)
+> - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). Request parameters can be accessed in a controller method with the `@RequestParam` annotation in the following way:
+>
+>   ```java
+>   @GetMapping("/")
+>   public String listQuizzes(@RequestParam(required = false) Boolean published, /* ... */) {
+>       model.addAttribute("publishedFilter", published);
+>       // ...  
+>   }
+>   ```
+>
+> - In the Thymeleaf template the request parameter can be added to a link in the following way:
+>
+>   ```html
+>   <a
+>     href="/?published=true"
+>     class="nav-link"
+>     th:classappend="${publishedFilter == true}? active"
+>   >
+>     Published
+>   </a>
+>   ```
+
+## Git branches
+
+So far, we have only created commits for the _main branch_ of our repository. _Git branches_ allows us to _diverge from the main branch commit history_ by creating a new branch. We can add commits for our branch without effecting the main branch commit history and at some point we _merge_ the commits of a branch into the main branch.
+
+![Git branches](/assets/git-branch.svg){: width="500" }
+
+Branches are commonly used to isolate work-in-progress code from the main branch. This can be for example the development of certain user story. Commonly, the main branch should only contain _working code_ and _deployment ready features_. This means that the latest working version of our application can be found in the main branch at all times. We should be able to deploy this application for our users at any moment without issues. The Git workflow where feature development is isolated into a feature-specific branch is referred to as [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow). This workflow is a very common workflow in the industry.
+
+A new branch can be created with the `git branch <name-of-the-branch>` (replace the `<name-of-the-branch>` with name of the branch) command in Git Bash. Let's create a branch and _name it our GitHub username with lowercase letters_. First, pull the latest changes from GitHub using the `git pull` command. Then, create the branch:
+
+```bash
+git branch <name-of-my-branch>
+```
+
+{: .note }
+
+> Typically, the branch name describes the feature developed in the branch or some other purpose of the branch, for example `delete-quiz` or `add-question`.
+
+Now, let's check the repository's branches with the `git branch` command. We should see that our branch is added to the list. We can also see that there's an astrisk symbol (\*) before the main branch. This means that we are currently on the main branch. The current branch is also displayed in brackets in the Git Bash after the path to the current folder.
+
+We can switch branches using the `git checkout <name-of-the-branch>` command. Switch to the branch you just created:
+
+```bash
+git checkout <name-of-my-branch>
+```
+
+{: .highlight }
+
+> We usually want to create new branch of the main branch. This means that before creating a new branch with the `git branch <name-of-the-branch>` command, switch to the main branch by running the `git checkout main` command. If you are uncertain which is the current branch, check it with the `git branch` command.
+
+Next, make some small change for the project, for example by changing a button text or color in a Thymeleaf template or changing a variable name in a method. If there's some small code or user interface improvement you have in mind, this is the time to do it. Once you have made the change, check the status with `git status` command, add the changes with the `git add` command and create a commit with the `git commit` command. Feel free to do multiple commits if needed.
+
+Then let's switch back to the main branch with the `git checkout main` command. If we check for the changes we made in the other branch, we see that they are no longer present. That's because the commits we made _only exist in our other branch_.
+
+Let's switch back to our branch with the `git checkout` command. Then, push the changes to GitHub with the `git push` command. We get the following error message:
+
+```bash
+fatal: The current branch kaltsoon has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin kaltsoon
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+```
+
+The error means that the current branch is not in GitHub yet, just on our local computer. Let's run the command that Git suggests:
+
+```bash
+git push --set-upstream origin <name-of-my-branch>
+```
+
+Now, let's check that our branch is pushed to GitHub. Open the repository in GitHub and click the branch selector which says "main" above the file tree view in the "Code" tab. [These](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/viewing-branches-in-your-repository) instructions have more details, if you have trouble. We should see our branch there. Click the branch and check that the changes are visible in GitHub.
+
+{: .important-title }
+
+> Exercise 22
+>
+> _Each team member_ should do the steps mentioned above to create their own branch named by their GitHub username and push it to GitHub.
+
+We can also pull remote branches from GitHub to our local computer. Check the list of branches in GitHub and pick _some other team member's branch_. Then, to pull the remote branches from GitHub using the `git pull` command. Finally, switch to the team member's branch:
+
+```bash
+git checkout <name-of-other-team-member-branch>
+```
+
+### Merging branches and pull requests
+
+Once we are happy with the changes we have made in the branch, we should _merge_ it into the main branch. This basically means applying all the commits we have made for the branch to the main branch. For this we could use the `git merge` command:
+
+```bash
+git checkout main
+git merge <name-of-my-branch>
+git push
+```
+
+But, GitHub supports a better way to merge branches using [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). Pull requests are "requests" to merge a branch to another branch (commonly the main branch). The benefit over using the `git merge` command is that pull requests provide a way to perform _quality assurance_, for example through _code reviews_. In a code review other team members inspect the chanhes introduced by the pull request and give constructive feedback. This feedback is used to improve the code quality and fix bugs and other implementation flaws.
+
+![Pull request](/assets/pull-request-cartoon.jpg){: width="500" }
+
+{: .important-title }
+
+> Exercise 23
+>
+> 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions. The pull request title should describe the changes, for example "Change the submit button color in the add quiz form". The description provides additional details
+> 2. Take a look at some other team member's pull request and conduct a code review by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) instructions. Pull the branch from GitHub to your local computer and take a look at the changes. If everything looks good, approve the changes with a short comment, such as "Looks good to me". Otherwise, request changes
+> 3. Once you have received an approving review from a team member for your pull request, merge it into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below
+> 4. Switch back to the main branch with the `git checkout main` command and pull the changes from GitHub with the `git pull` command. Make sure that you can see the changes made in your branch in the main branch as well
+
+{: .important-title }
+
+> Exercise 24
+>
+> Implement _at least two_ user stories in separate feature branches. Name the branch based on the feature, for example `add-question`. Remember to _switch to the main branch before creating a new branch_ by using the `git checkout main` command. Use the `git branch` command if you are unsure what the current branch is.
+>
+> Once the implementation is ready, open a pull request. At least one other team member should conduct a code review for the pull request and either approve it or request changes. Once the pull request has been approved, merge it to the main branch. Finally, switch back to the main branch and pull the changes from GitHub.
+>
+> Note that _task is not completed until it has been merged to the main branch_. Move the issues that are waiting for a review to the "In review" column in the Backlog project and ask a team member to review your pull request.
+
+### Resolving conflicts in branches
+
+If the pull request can't be automatically merged due to conflicts, we'll need to solve them manually. First, switch to the main branch and pull the latest changes:
+
+```bash
+git checkout main
+git pull
+```
+
+Then, switch to your branch and merge the main branch to it:
+
+```bash
+git checkout <name-of-my-branch>
+git merge main
+```
+
+Finally, resolve the conflicts and add, commit and push the changes to GitHub. Now, we should be able to merge the pull request in GitHub.
+
 ## Developer guide documentation
 
 Now that we have implemented some features for our application that the users can use it is time to describe _how_ to use the application. The _developer guide_ is perhaps one of the most important pieces of documentation for the application. It will describe our fellow developers how to technically use the application. This means for example, how to start the application, how to package the application, and how to run tests.
@@ -574,9 +733,9 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 25
 >
-> Write a developer guide on _how to start the backend application_ to the `README.md` file. Add it under a "Developer guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown. 
+> Write developer guide documentation on _how to start the backend application_ to the `README.md` file. Add it under a "Developer guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown. 
 >
 > You can assume that the reader of the `README.md` file is a software developer who knows how to use a command-line interface, the basic Git commands and install the required Java version. _Make sure that instructions on the developer guide work_ by cloning a new version of the repository and executing the steps on the developer guide one by one.
 >
@@ -600,7 +759,7 @@ The command will generate the JAR file under the `target` folder. Inside the fol
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 26
 >
 > Generate a JAR file for the application and run the application using the JAR file. Add instructions on how to generate and run the application using the JAR file to the "Developer guide" section in the `README.md` file.
 
@@ -685,7 +844,7 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 27
 >
 > Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the "Developer guide" section in the `README.md` file.
 
@@ -701,7 +860,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 28
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -713,7 +872,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 29
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >

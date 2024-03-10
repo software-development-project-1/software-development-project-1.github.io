@@ -63,9 +63,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > After signing in, the teacher should be able to add a quiz or a category. However, the teacher should only be able to edit and delete quizzes they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The quiz list should also display the username of the teacher who has added the quiz both in teacher and student dashboard.
 >
-> There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. There should be a link to the results page next to the quiz in the quiz list page.
->
-> Students have different skill levels so it would be useful if the student could filter the questions of quiz by the difficulty level in the quiz page. There could be dropdown menu at the top of the page from which the student can select the difficulty level for the questions."
+> The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should fill in all this information in order to submit the review. The review page should list the added reviews from newest to oldest order. Each review should display the information submitted by the student and the date when the review was written."
 >
 > -- The Product Owner
 
@@ -103,24 +101,6 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Implement _at least two_ user stories in separate feature branches. Once the implementation is ready, open a pull request. At least one other team member should conduct a code review for the pull request and either approve it or request changes. Once the pull request has been approved, merge it to the main branch.
 
-{: .important-title }
-
-> Exercise 7
->
-> Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-3-user-story-1-1.png)
->
-> ![](/assets/sprint-3-user-story-1-2.png)
->
-> Tips for the tasks:
->
-> - Implement an appropriate REST API endpoint for getting the answers of a quiz. Remember to return appropriate HTTP status code and error message in error cases
-
 {: .note }
 
 > The [Authentication](#authentication) section covers topics related to the authentication. Take a look at it before planning the authentication-related tasks.
@@ -129,17 +109,35 @@ After some discussion the Scrum Team planned the following user stories:
 
 > Exercise 8
 >
+> Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-3-user-story-1.png)
+
+{: .important-title }
+
+> Exercise 9
+>
 > Plan the tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-3-user-story-2.png)
+> ![](/assets/sprint-3-user-story-2-1.png)
+>
+> ![](/assets/sprint-3-user-story-2-2.png)
+>
+> Tips for implementing the tasks:
+>
+> - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 10
 >
 > Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -151,9 +149,9 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > ![](/assets/sprint-3-user-story-3-2.png)
 >
-> Tips for implementing the tasks:
+> Tips for the tasks:
 >
-> - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
+> - [Retrieve User Information in Spring Security](https://www.baeldung.com/get-user-in-spring-security)
 
 {: .important-title }
 
@@ -168,18 +166,12 @@ After some discussion the Scrum Team planned the following user stories:
 > ![](/assets/sprint-3-user-story-4-1.png)
 >
 > ![](/assets/sprint-3-user-story-4-2.png)
->
-> Tips for the tasks:
->
-> - [Retrieve User Information in Spring Security](https://www.baeldung.com/get-user-in-spring-security)
 
 {: .important-title }
 
 > Exercise 11
 >
-> Implementation requirement: the filtering should be performed _in the backend_. The REST API endpoint for getting the questions of a quiz should support an optional [request parameter](https://www.baeldung.com/spring-request-param) for filtering the questions by a difficulty level, such as `?difficulty=Easy`.
->
-> Plan the tasks for the fifth user story, "{{site.sprint_3_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
@@ -586,6 +578,8 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getQuestionsByQuizIdReturnsErrorWhenQuestionDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
 > - `getQuestionsByQuizIdReturnsErrorWhenQuizIsNotPublished`: save a _non-published quiz_ with a few questions to the database and send a request. Then, the response should have an appropriate HTTP status
 >
+> - An appropriate test method for testing that the difficulty level filtering works
+>
 > Create an issue for this task.
 
 {: .important-title }
@@ -652,9 +646,9 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((requests) -> requests
             .requestMatchers(
-                antMatcher("/"),
-                antMatcher("/register"),
+                // The REST API endpoints
                 antMatcher("/api/**"),
+                // The error page
                 antMatcher("/error"),
                 // Swagger documentation paths
                 antMatcher("/v3/api-docs/**"),
@@ -662,6 +656,8 @@ public class SecurityConfig {
                 antMatcher("/swagger-resources/**"),
                 antMatcher("/configuration/security"),
                 antMatcher("/swagger-ui/**"))
+                // Rest of the permitted paths
+                // ...
             .permitAll()
             .anyRequest()
             .authenticated());
@@ -678,19 +674,7 @@ public class SecurityConfig {
 
 The `passwordEncoder` method returns the password encoder object used to hash passwords. We'll use [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) which is the de facto hash algorithm for passwords.
 
-The `securityFilterChain` returns the configuration object for Spring Security. The first piece of configuration determines the access-control for our application. We will allow anyone (authenticated or not) access the following paths:
-
-- `/`, the quiz list page
-- `/register`, the registration form page and registration form submission (for the second user story)
-- `/error`, the error page
-- `/api/**`, the REST API endpoints
-- Swagger documentation related paths
-
-{: .highlight }
-
-> Change this configuration if your application's paths don't match the ones above.
-
-The `permitAll()` method call _will permit anyone to access these paths_. This is follow by `anyRequest().authenticated()` method call, which means that _request to any other path will require authentication_.
+The `securityFilterChain` returns the configuration object for Spring Security. The first piece of configuration determines the access-control for our application. The `permitAll()` method call _will permit anyone to access these paths_. This is follow by `anyRequest().authenticated()` method call, which means that _request to any other path will require authentication_.
 
 On top of the configuration class, we need to have class that implements the `UserDetailsService` interface. This class will determine how to fetch the user's information based on the username:
 
@@ -702,11 +686,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findOneByUsername(username)
-                        .orElseThrow(() -> new UsernameNotFoundException(username));
-
-        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPasswordHash(),
-                    AuthorityUtils.createAuthorityList(user.getRole()));
+        // ...
     }
 }
 ```

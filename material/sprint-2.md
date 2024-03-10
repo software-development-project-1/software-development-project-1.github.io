@@ -9,7 +9,7 @@ nav_order: 7
 
 # Sprint 2
 
-For the Sprint 2 we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to Retrospective, Git branches, REST APIs and communication between frontend and backend.
+For the Sprint 2 we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to Retrospective, REST APIs and communication between frontend and backend.
 
 ## Sprint assesment
 
@@ -66,113 +66,6 @@ Make sure that everyone follows the event structure and that each team member ge
 >
 > Choose a new Scrum Master among the team members for the second Sprint.
 
-## Git branches
-
-So far, we have only created commits for the _main branch_ of our repository. _Git branches_ allows us to _diverge from the main branch commit history_ by creating a new branch. We can add commits for our branch without effecting the main branch commit history and at some point we _merge_ the commits of a branch into the main branch.
-
-![Git branches](/assets/git-branch.svg){: width="500" }
-
-Branches are commonly used to isolate work-in-progress code from the main branch. This can be for example the development of certain user story. Commonly, the main branch should only contain _working code_ and _deployment ready features_. This means that the latest working version of our application can be found in the main branch at all times. We should be able to deploy this application for our users at any moment without issues. The Git workflow where feature development is isolated into a feature-specific branch is referred to as [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow). This workflow is a very common workflow in the industry.
-
-A new branch can be created with the `git branch <name-of-the-branch>` (replace the `<name-of-the-branch>` with name of the branch) command in Git Bash. Let's create a branch and _name it our GitHub username with lowercase letters_. First, pull the latest changes from GitHub using the `git pull` command. Then, create the branch:
-
-```bash
-git branch <name-of-my-branch>
-```
-
-{: .note }
-
-> Typically, the branch name describes the feature developed in the branch or some other purpose of the branch, for example `delete-quiz` or `add-question`.
-
-Now, let's check the repository's branches with the `git branch` command. We should see that our branch is added to the list. We can also see that there's an astrisk symbol (\*) before the main branch. This means that we are currently on the main branch. The current branch is also displayed in brackets in the Git Bash after the path to the current folder.
-
-We can switch branches using the `git checkout <name-of-the-branch>` command. Switch to the branch you just created:
-
-```bash
-git checkout <name-of-my-branch>
-```
-
-{: .highlight }
-
-> We usually want to create new branch of the main branch. This means that before creating a new branch with the `git branch <name-of-the-branch>` command, switch to the main branch by running the `git checkout main` command. If you are uncertain which is the current branch, check it with the `git branch` command.
-
-Next, make some small change for the project, for example by changing a button text or color in a Thymeleaf template or changing a variable name in a method. If there's some small code or user interface improvement you have in mind, this is the time to do it. Once you have made the change, check the status with `git status` command, add the changes with the `git add` command and create a commit with the `git commit` command. Feel free to do multiple commits if needed.
-
-Then let's switch back to the main branch with the `git checkout main` command. If we check for the changes we made in the other branch, we see that they are no longer present. That's because the commits we made _only exist in our other branch_.
-
-Let's switch back to our branch with the `git checkout` command. Then, push the changes to GitHub with the `git push` command. We get the following error message:
-
-```bash
-fatal: The current branch kaltsoon has no upstream branch.
-To push the current branch and set the remote as upstream, use
-
-    git push --set-upstream origin kaltsoon
-
-To have this happen automatically for branches without a tracking
-upstream, see 'push.autoSetupRemote' in 'git help config'.
-```
-
-The error means that the current branch is not in GitHub yet, just on our local computer. Let's run the command that Git suggests:
-
-```bash
-git push --set-upstream origin <name-of-my-branch>
-```
-
-Now, let's check that our branch is pushed to GitHub. Open the repository in GitHub and click the branch selector which says "main" above the file tree view in the "Code" tab. [These](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/viewing-branches-in-your-repository) instructions have more details, if you have trouble. We should see our branch there. Click the branch and check that the changes are visible in GitHub.
-
-{: .important-title }
-
-> Exercise 3
->
-> _Each team member_ should do the steps mentioned above to create their own branch named by their GitHub username and push it to GitHub.
-
-We can also pull remote branches from GitHub to our local computer. Check the list of branches in GitHub and pick _some other team member's branch_. Then, to pull the remote branches from GitHub using the `git pull` command. Finally, switch to the team member's branch:
-
-```bash
-git checkout <name-of-other-team-member-branch>
-```
-
-### Merging branches and pull requests
-
-Once we are happy with the changes we have made in the branch, we should _merge_ it into the main branch. This basically means applying all the commits we have made for the branch to the main branch. For this we could use the `git merge` command:
-
-```bash
-git checkout main
-git merge <name-of-my-branch>
-git push
-```
-
-But, GitHub supports a better way to merge branches using [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). Pull requests are "requests" to merge a branch to another branch (commonly the main branch). The benefit over using the `git merge` command is that pull requests provide a way to perform _quality assurance_, for example through _code reviews_. In a code review other team members inspect the chanhes introduced by the pull request and give constructive feedback. This feedback is used to improve the code quality and fix bugs and other implementation flaws.
-
-![Pull request](/assets/pull-request-cartoon.jpg){: width="500" }
-
-{: .important-title }
-
-> Exercise 4
->
-> 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions. The pull request title should describe the changes, for example "Change the submit button color in the add quiz form". The description provides additional details
-> 2. Take a look at some other team member's pull request and conduct a code review by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) instructions. Pull the branch from GitHub to your local computer and take a look at the changes. If everything looks good, approve the changes with a short comment, such as "Looks good to me". Otherwise, request changes
-> 3. Once you have received an approving review from a team member for your pull request, merge it into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below
-> 4. Switch back to the main branch with the `git checkout main` command and pull the changes from GitHub with the `git pull` command. Make sure that you can see the changes made in your branch in the main branch as well
-
-### Resolving conflicts in branches
-
-If the pull request can't be automatically merged due to conflicts, we'll need to solve them manually. First, switch to the main branch and pull the latest changes:
-
-```bash
-git checkout main
-git pull
-```
-
-Then, switch to your branch and merge the main branch to it:
-
-```bash
-git checkout <name-of-my-branch>
-git merge main
-```
-
-Finally, resolve the conflicts and add, commit and push the changes to GitHub. Now, we should be able to merge the pull request in GitHub.
-
 ## 🏃‍♂️ Sprint 2 planning
 
 {: .highlight}
@@ -185,7 +78,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "It's great that we now have the basic functionality for managing quizzes! What we now need is a way for the teacher to categorize quizzes and student to take the published quizzes.
 >
-> To quickly see which quizzes are published and which are not, there should be some way for the teacher to filter the quiz list based on the published status. There could be for example "All", "Published", and "Not published" tabs at the top of the list. Similarly, the teacher should also be able to filter the question list based on the difficulty level. Like with the quiz list, there could be for example "All", "Easy", "Normal" and "Hard" tabs at the top of the list.
+> To quickly see questions of different difficulty level, the teacher should be able to filter the question list based on the difficulty level. Like with the quiz list implemented during the previous Sprint, there could be for example "All", "Easy", "Normal" and "Hard" tabs at the top of the list.
 > 
 > To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". The name can't be blank and there can't be multiple categories with the same name. The description is optional. There should be a form for adding a category and a separate page for listing the added categories. The categories should be listed in an alphabetical order based on the name.
 >
@@ -197,7 +90,11 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > Each quiz name on the quiz list should be a link to a separate page where the quiz name, description and the questions are displayed. There should also be some kind of navigation menu from which the student can navigate to the quiz list page.
 >
-> In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to type in and submit their answer for each question. When the student submits their answer, there should be some kind of feedback which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, the correct answer is "Helsinki"". The casing or leading or trailing whitespace of the answer should not be considered when checking if the student's answer is correct or not. For example, "helsinki" answer is correct when the correct answer is "Helsinki"."
+> In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to type in and submit their answer for each question. When the student submits their answer, there should be some kind of feedback which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, the correct answer is "Helsinki"". The casing or leading or trailing whitespace of the answer should not be considered when checking if the student's answer is correct or not. For example, "helsinki" answer is correct when the correct answer is "Helsinki".
+>
+> There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. There should be a link to the results page next to the quiz in the quiz list page.
+>
+> Students have different skill levels so it would be useful if the student could filter the questions of quiz by the difficulty level in the quiz page. There could be dropdown menu at the top of the page from which the student can select the difficulty level for the questions."
 >
 > -- The Product Owner
 
@@ -212,16 +109,17 @@ After some discussion the Scrum Team planned the following user stories:
 7. {{site.sprint_2_user_story_7}}
 8. {{site.sprint_2_user_story_8}}
 9. {{site.sprint_2_user_story_9}}
+10. {{site.sprint_2_user_story_10}}
 
 {: .important-title }
 
-> Exercise 5
+> Exercise 3
 >
 > Create a new milestone for the second Sprint. Set the milestone title as "Sprint 2".
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 4
 >
 > Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
@@ -229,23 +127,19 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 5
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 2". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 6
 >
-> Implement _at least two_ user stories in separate feature branches. Name the branches based on the feature, for example `add-category`. Remember to _switch to the main branch before creating a new branch_ by using the `git checkout main` command. Use the `git branch` command if you are unsure what the current branch is.
->
-> Once the implementation is ready, open a pull request. At least one other team member should conduct a code review for the pull request and either approve it or request changes. Once the pull request has been approved, merge it to the main branch. Finally, switch back to the main branch and pull the changes from GitHub.
->
-> Note that _task is not completed until it has been merged to the main branch_. Move the issues that are waiting for a review to the "In review" column in the Backlog project and ask a team member to review your pull request.
+> Implement _at least two_ user stories in separate feature branches. Once the implementation is ready, open a pull request. At least one other team member should conduct a code review for the pull request and either approve it or request changes. Once the pull request has been approved, merge it to the main branch.
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 7
 >
 > Plan the tasks for the first user story, "{{site.sprint_2_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -253,39 +147,11 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-1-1.png)
->
-> ![](/assets/sprint-2-user-story-1-2.png)
->
-> ![](/assets/sprint-2-user-story-1-3.png)
->
-> Tips for the tasks:
->
-> - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). Request parameters can be accessed in a controller method with the `@RequestParam` annotation in the following way:
->
->   ```java
->   @GetMapping("/")
->   public String listQuizzes(@RequestParam(required = false) Boolean published, /* ... */) {
->       model.addAttribute("publishedFilter", published);
->       // ...  
->   }
->   ```
->
-> - In the Thymeleaf template the request parameter can be added to a link in the following way:
->
->   ```html
->   <a
->     href="/?published=true"
->     class="nav-link"
->     th:classappend="${publishedFilter == true}? active"
->   >
->     Published
->   </a>
->   ```
+> ![](/assets/sprint-2-user-story-1.png)
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 8
 >
 > Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -297,7 +163,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 9
 >
 > Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -309,7 +175,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 10
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -317,48 +183,19 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-4.png)
+> ![](/assets/sprint-2-user-story-4-1.png)
+>
+> ![](/assets/sprint-2-user-story-4-2.png)
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 11
 >
-> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-2-user-story-5-1.png)
->
-> ![](/assets/sprint-2-user-story-5-2.png)
-
-{: .important-title }
-
-> Exercise 14
->
-> Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities.
+> Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
 >
 > GitHub supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain diagrams. Take a look at Mermaid's [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) documentation for more information.
 >
-> Add the documentation to a `data-model.md` file in the `documentation` folder. Add a link to the file to the "Documentation" section in the `README.md` file. GitHub supports [relative links](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#relative-links) to files in a repository, so you don't need the full URL to the file in the link. 
->
 > _NB: Keep this documentation (like all other documentation) up-to-date when you add new entities for the application._
-
-{: .important-title }
-
-> Exercise 15
->
-> Write the first version of the project's _architecture documentation_. The documentation should contain the following things:
->
-> 1. At the moment the project's overall architecture consists of two components: the backend and the database. Mention these components and briefly explain the purpose of each component
-> 2. Implement a [flow chart](https://mermaid.js.org/syntax/flowchart.html) using the [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax which visualizes how the components communicate with each other. What's the direction of the communication (the arrow direction in the chart)? Does for example database send requests to the backend (the arrow would point to the backend) or the other way around?
-> 3. Which programming language, frameworks and major libraries are used in the _backend implementation_?
-> 4. Which _database platforms_ are used in different environments (development and production environment)?
->
-> Add the documentation to a `architecture.md` file in the `documentation` folder. Add a link to the file to the "Documentation" section in the `README.md` file.
->
-> _NB: We will soon add the frontend component to the architecture. Remember to keep this documentation up-to-date._
 
 ## Reducing boilerplate code with Lombok
 
@@ -604,7 +441,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 12
 >
 > To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation.
 
@@ -618,7 +455,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 13
 >
 > Implement a REST API endpoint for _getting all categories_ in alphabetical order by the name.
 >
@@ -626,7 +463,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 14
 >
 > Implement a REST API endpoint for _getting all (published) quizzes_ in newest to oldest order. The endpoint should support an optional [request parameter](https://www.baeldung.com/spring-request-param) for filtering the quizzes by a category, such as `?categoryId=1`.
 >
@@ -634,7 +471,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 15
 >
 > Implement a REST API endpoint for _getting a quiz by id_. Return an appropriate HTTP status code and error message in the following error cases:
 >
@@ -645,9 +482,9 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 16
 >
-> Implement a REST API endpoint for _getting the questions of a quiz_. Return an appropriate HTTP status code and error message in the following error cases:
+> Implement a REST API endpoint for _getting the questions of a quiz_. The endpoint should support an optional [request parameter](https://www.baeldung.com/spring-request-param) for filtering the quizzes by a category, such as `?difficulty=Easy`. Return an appropriate HTTP status code and error message in the following error cases:
 >
 > - Quiz with the provided id does not exist
 > - Quiz with the provided id is not published
@@ -656,7 +493,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 17
 >
 > Implement a REST API endpoint for _creating an answer_ for a quiz's question. Information about the answer's text, correctness (is the answer correct or not based on the question's correct answer) and the question reference should be stored in the database. Return an appropriate HTTP status code and error message in the following error cases:
 >
@@ -675,222 +512,20 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
+{: .important-title }
+
+> Exercise 18
+>
+> Implement a REST API endpoint for _getting the anwers of a quiz_. Return an appropriate HTTP status code and error message in the following error cases:
+>
+> - Quiz with the provided id does not exist
+> - Quiz with the provided id is not published
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+
 {: .note }
 
 > The GET method endpoint error responses will be displayed as a HTML error page in a web browser. To see what the JSON error response looks like, use Postman to send the request.
-
-## Communication between frontend and backend
-
-With REST APIs we can _separate_ the client application from the server application. In web applications these client applications are commonly called _frontend applications_.
-
-The example project has a simple React frontend application in the `frontend` folder, which uses the [Vite](https://vitejs.dev/) build tool. We will be using this application as an example and as the starting point for the student dashboard application.
-
-The communication between the frontend application and the backend application is performed using the JavaScript's [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The Fetch API provides the `fetch` function, which can be used to send a HTTP request to a specific URL:
-
-```js
-fetch("http://localhost:8080/api/messages")
-  .then((response) => response.json())
-  .then((messages) => {
-    console.log(messages);
-  });
-```
-
-The default request method is GET. We can use a different request method, such as POST, by providing addional options for the `fetch` call:
-
-```js
-fetch("http://localhost:8080/api/messages", {
-  method: "POST",
-  headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({ content: "Hello world!" }),
-})
-  .then((response) => response.json())
-  .then((newMessage) => {
-    console.log(newMessage);
-  });
-```
-
-{: .note }
-
-> The `fetch` calls require somewhat boilerplate code, especially while sending JSON formatted data to the server with a POST request. Different HTTP client libraries such as [Axios](https://axios-http.com/docs/intro) are used to reduce this boiplerate code and to provide useful additional features.
-
-In the example project, the logic of fetching and creating messages is extracted into `getAllMessages` and `createMessage` functions, which can be found in the `frontend/src/services/message.js` file:
-
-```js
-const BACKEND_URL = "http://localhost:8080";
-
-export function getAllMessages() {
-  return fetch(`${BACKEND_URL}/api/messages`).then((response) =>
-    response.json()
-  );
-}
-
-export function createMessage(message) {
-  return fetch(`${BACKEND_URL}/api/messages`, {
-    method: "post",
-    body: JSON.stringify(message),
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-  }).then((response) => {
-    if (!response.ok) {
-      throw new Error("Failed to create the message");
-    }
-
-    return response.json();
-  });
-}
-```
-
-These are simple _abstractions_ for fetching and creating messages, but they are quite handy. If for example the logic for fetching the messages (for example the API URL) changes, we only need to change the logic inside the `getAllMessages` function and nowhere else.
-
-The `MessageList` component in the `frontend/src/components/MessageList.jsx` calls the `getAllMessages` function to display the message list:
-
-{% raw %}
-
-```jsx
-import { useEffect, useState } from "react";
-
-import { getAllMessages, createMessage } from "../services/message";
-
-export default function MessageList() {
-  const [messages, setMessages] = useState([]);
-  const [content, setContent] = useState("");
-
-  function fetchMessages() {
-    getAllMessages().then((messages) => {
-      setMessages(messages);
-    });
-  }
-
-  function handleSubmitMessage(event) {
-    event.preventDefault();
-
-    createMessage({ content }).then(() => {
-      setContent("");
-      fetchMessages();
-    });
-  }
-
-  useEffect(() => {
-    fetchMessages();
-  }, []);
-
-  // ...
-}
-```
-
-{% endraw %}
-
-Explore the code in the `frontend` folder. Install the dependencies by running the `npm install` command in the `frontend` folder. Then, start the Vite development server by runing the `npm run dev` command. Once the development server has started, the application is accessible at <http://localhost:5713>.
-
-## Cross-Origin Resource Sharing (CORS)
-
-The Vite development server is serving the JavaScript files from an URL that starts with `http://localhost:5173`. Our backend is accessible in the URL `http://localhost:8080`. When we send a request with the `fetch` function from the frontend to our backend, we send a request to a _different origin_. These kind of requests are called _cross-orgin_ requests.
-
-Web browsers don't allow `fetch` functions to send cross-origin requests by default. This is called the _same-origin policy_. We can however allow certain (or every) cross-origin request by using [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (CORS).
-
-The idea of CORS is that the web browser "asks" the backend if cross-origin request from a certain origin is allowed by sending a special HTTP request. If the backend allows the requests, then the web browser will send it. In a Spring Boot application we can use the [@CrossOrigin](https://spring.io/guides/gs/rest-service-cors/) annotation in the class or method level to allow cross-origin requests to certain or all paths of controller. For example we can allow cross-origin requests from all origins for all `MessageRestController` method paths in the following way:
-
-```java
-@RestController
-@RequestMapping("/api/messages")
-@CrossOrigin(origins = "*")
-public class MessageRestController {
-    // ...
-}
-```
-
-{: .highlight}
-
-> The last three user stories are related to the student dashboard application and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend. Use the React application in the `frontend` folder as the starting point for your implementation.
->
-> Install the dependencies by running the `npm install` command in the `frontend` folder. Then, start the Vite development server by runing the `npm run dev` command. Once the development server has started, the application is accessible at <http://localhost:5713>.
-
-{: .highlight}
-
-> Use the `@CrossOrigin` annnotation on the REST controller classes to allow cross-origin requests from the frontend application.
-
-{: .important-title }
-
-> Exercise 22
->
-> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-2-user-story-6.png)
-
-{: .important-title }
-
-> Exercise 23
->
-> Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-2-user-story-7-1.png)
->
-> ![](/assets/sprint-2-user-story-7-2.png)
-
-{: .important-title }
-
-> Exercise 24
->
-> Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-2-user-story-8-1.png)
->
-> ![](/assets/sprint-2-user-story-8-2.png)
->
-> Tips for the tasks:
->
-> - The feedback notification can be implemented for example with the Material UI [Snackbar](https://mui.com/material-ui/react-snackbar/) component or with a library such as [notistack](https://notistack.com/)
-
-{: .important-title }
-
-> Exercise 25
->
-> Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_9}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-2-user-story-9.png)
-
-{: .important-title }
-
-> Exercise 26
->
-> Add instructions on _how to start the frontend application_ to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
->
-> For the sake of clarity, you can add separate subheadings for backend's and frontend's developer guide:
->
-> ```md
-> ## Developer guide
->
-> ### Backend
->
-> The backend developer guide goes here.
->
-> ### Frontend
->
-> The frontend developer guide goes here.
-> ```
->
-> You can test how good your user guide is by cloning a new copy of the repository and executing the steps precisely as they are in the developer guide without making any assumptions.
 
 ## REST API documentation with Swagger
 
@@ -973,13 +608,253 @@ public Message getMessageById(@PathVariable Long id) {
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 19
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response. 
 >
 > Test each REST API endpoint by opening the endpoint's documentation and cliking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an `id` path parameter value of a non-existing quiz.
 >
 > Add a link to the Swagger documentation in the production environment (in Render) to the "Documentation" section in the `README.md` file. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui/index.html>. Deploy the backend application to Render and make sure that the Swagger documentation is accessible.
+
+## Communication between frontend and backend
+
+With REST APIs we can _separate_ the client application from the server application. In web applications these client applications are commonly called _frontend applications_.
+
+The communication between the frontend application and the backend application is performed using the JavaScript's [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The Fetch API provides the `fetch` function, which can be used to send a HTTP request to a specific URL:
+
+```js
+fetch("http://localhost:8080/api/messages")
+  .then((response) => response.json())
+  .then((messages) => {
+    console.log(messages);
+  });
+```
+
+The default request method is GET. We can use a different request method, such as POST, by providing addional options for the `fetch` call:
+
+```js
+fetch("http://localhost:8080/api/messages", {
+  method: "POST",
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ content: "Hello world!" }),
+})
+  .then((response) => response.json())
+  .then((newMessage) => {
+    console.log(newMessage);
+  });
+```
+
+{: .note }
+
+> The `fetch` calls require somewhat boilerplate code, especially while sending JSON formatted data to the server with a POST request. Different HTTP client libraries such as [Axios](https://axios-http.com/docs/intro) are used to reduce this boiplerate code and to provide useful additional features.
+
+For example if we consider the example project, the logic of fetching and creating messages could be extracted into `getAllMessages` and `createMessage` functions:
+
+```js
+const BACKEND_URL = "http://localhost:8080";
+
+export function getAllMessages() {
+  return fetch(`${BACKEND_URL}/api/messages`).then((response) =>
+    response.json()
+  );
+}
+
+export function createMessage(message) {
+  return fetch(`${BACKEND_URL}/api/messages`, {
+    method: "post",
+    body: JSON.stringify(message),
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  }).then((response) => {
+    if (!response.ok) {
+      throw new Error("Failed to create the message");
+    }
+
+    return response.json();
+  });
+}
+```
+
+These are simple _abstractions_ for fetching and creating messages, but they are quite handy. If for example the logic for fetching the messages (for example the API URL) changes, we only need to change the logic inside the `getAllMessages` function and nowhere else.
+
+As an example, we could call the `getAllMessages` function to display the messages list in a `MessageList` component in the following way:
+
+{% raw %}
+
+```jsx
+import { useEffect, useState } from "react";
+import { getAllMessages, createMessage } from "../services/message";
+
+export default function MessageList() {
+  const [messages, setMessages] = useState([]);
+
+  function fetchMessages() {
+    getAllMessages().then((messages) => {
+      setMessages(messages);
+    });
+  }
+
+  useEffect(() => {
+    fetchMessages();
+  }, []);
+
+  // ...
+}
+```
+
+{% endraw %}
+
+{: .important-title }
+
+> Exercise 20
+>
+> Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You don't necessarily need a separate repository for the frontend application, you can initialize it in folder within the current repository.
+
+## Cross-Origin Resource Sharing (CORS)
+
+The Vite development server is serving the JavaScript files from an URL that starts with `http://localhost:5173`. Our backend is accessible in the URL `http://localhost:8080`. When we send a request with the `fetch` function from the frontend to our backend, we send a request to a _different origin_. These kind of requests are called _cross-orgin_ requests.
+
+Web browsers don't allow `fetch` functions to send cross-origin requests by default. This is called the _same-origin policy_. We can however allow certain (or every) cross-origin request by using [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (CORS).
+
+The idea of CORS is that the web browser "asks" the backend if cross-origin request from a certain origin is allowed by sending a special HTTP request. If the backend allows the requests, then the web browser will send it. In a Spring Boot application we can use the [@CrossOrigin](https://spring.io/guides/gs/rest-service-cors/) annotation in the class or method level to allow cross-origin requests to certain or all paths of controller. For example we can allow cross-origin requests from all origins for all `MessageRestController` method paths in the following way:
+
+```java
+@RestController
+@RequestMapping("/api/messages")
+@CrossOrigin(origins = "*")
+public class MessageRestController {
+    // ...
+}
+```
+
+{: .highlight}
+
+> The remaining user stories are related to the student dashboard application and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend.
+
+{: .highlight}
+
+> Use the `@CrossOrigin` annnotation on the REST controller classes to allow cross-origin requests from the frontend application.
+
+{: .important-title }
+
+> Exercise 21
+>
+> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-5.png)
+
+{: .important-title }
+
+> Exercise 22
+>
+> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-6-1.png)
+>
+> ![](/assets/sprint-2-user-story-6-2.png)
+
+{: .important-title }
+
+> Exercise 23
+>
+> Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-7-1.png)
+>
+> ![](/assets/sprint-2-user-story-7-2.png)
+>
+> Tips for the tasks:
+>
+> - The feedback notification can be implemented for example with the Material UI [Snackbar](https://mui.com/material-ui/react-snackbar/) component or with a library such as [notistack](https://notistack.com/)
+
+{: .important-title }
+
+> Exercise 24
+>
+> Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-8.png)
+
+{: .important-title }
+
+> Exercise 25
+>
+> Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_9}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-9-1.png)
+>
+> ![](/assets/sprint-2-user-story-9-2.png)
+
+{: .important-title }
+
+> Exercise 25
+>
+> Plan the tasks for the tenth user story, "{{site.sprint_2_user_story_10}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-10.png)
+
+{: .important-title }
+
+> Exercise 26
+>
+> Add instructions on _how to start the frontend application_ to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
+>
+> For the sake of clarity, you can add separate subheadings for backend's and frontend's developer guide:
+>
+> ```md
+> ## Developer guide
+>
+> ### Backend
+>
+> The backend developer guide goes here.
+>
+> ### Frontend
+>
+> The frontend developer guide goes here.
+> ```
+>
+> You can test how good your user guide is by cloning a new copy of the repository and executing the steps precisely as they are in the developer guide without making any assumptions.
+
+{: .important-title }
+
+> Exercise 27
+>
+> Write the first version of the project's _architecture documentation_. Add the documentation under a "Architecture" subheading in the `README.md` file. The documentation should contain the following things:
+>
+> 1. The project's overall architecture consists of three components: the backend, the database and the frontend. Mention these components and briefly explain the purpose of each component
+> 2. Implement a [flow chart](https://mermaid.js.org/syntax/flowchart.html) using the [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax which visualizes how the components communicate with each other. What's the direction of the communication (the arrow direction in the chart)? Does for example database send requests to the backend (the arrow would point to the backend) or the other way around?
+> 3. Which programming language, frameworks and major libraries are used in the _backend implementation_?
+> 4. Which _database platforms_ are used in different environments (development and production environment)?
+> 5. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
 
 ## The .gitignore file
 
@@ -989,14 +864,14 @@ In the root folder of our repository there is a [.gitignore](https://git-scm.com
 - The file or folder contains content _that can be generated by running a certain command_. An example of such folder is the `node_modules` folder, which contains the library dependencies for the frontend. This folder is usally quite big and we can always generate it by running `npm install`. Another such example is the `target` folder where Maven generates different files.
 - The file or folder contains IDE specific configuration that is only relevant for a certain developer. An example of such folder is the `.vscode` folder.
 
-In the `.gitignore` file (generated by [Vite](https://vitejs.dev/)) in the `frontend` folder we have for example the following lines:
+In the `.gitignore` file generated by [Vite](https://vitejs.dev/) has for example the following lines:
 
 ```
 node_modules
 dist
 ```
 
-These two lines will ignore both the `node_modules` and `dist` folders in the `frontend` folder. The `.gitignore` file makes sure that when we run the `git add` command, we don't accidently add files or folders that shouldn't end up in the repository.
+These two lines will ignore both the `node_modules` and `dist` folders. The `.gitignore` file makes sure that when we run the `git add` command, we don't accidently add files or folders that shouldn't end up in the repository.
 
 ## Deploying the frontend
 
@@ -1026,7 +901,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 1. On the Render dashboard, click the "New" button and choose "Static Site"
 1. From the repository list, find you project's repository and click the "Connect" button
-1. Come up with the name for the service. Set "Root Directory" as `frontend`, "Build Command" as `npm run build` and "Publish Directory" as `dist`
+1. Come up with the name for the service. If the frontend application is not initialized in the repository's root folder (this is the case if you don't have a separate repository for the frontend application), set "Root Directory" as the folder's name. Set "Build Command" as `npm run build` and "Publish Directory" as `dist`
 1. Click the "Advanced" button and set "Auto-Deploy" as "No"
 1. Click the "Create Static Site" button to create the service
 1. On the service's page, click "Redirects/Rewrites" from the navigation on the left. Set the "Source" as `/*`, "Destination" as `/index.html` and "Action" as "Rewrite". Finally, click the "Save Changes" button. This configuration will make the frontend routing work
@@ -1045,7 +920,7 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 > Exercise 29
 >
-> Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project. Also, remove the excessive frontend-related files from the `frontend` folder.
+> Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project.
 
 {: .important-title }
 

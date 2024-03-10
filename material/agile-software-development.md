@@ -146,11 +146,13 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 >
 > 1. Only the Product Owner plans the requirements for the upcoming Sprint during the Sprint Planning event
 > 2. The Sprint Backlog is a very important artifact for the Daily Scrum event
-> 3. Sprint duration of two weeks is better than two months
-> 4. The requirements for the project are carefully documented to the Product Backlog at the beginning of the project and remain unchanged throughout the project
-> 5. The Retrospective event supports adaptation
-> 6. A larger Scrum Team is more productive than a smaller one
-> 7. The Manifesto for Agile Software Development provides a detailed description of how to manage a software development process
+> 3. The Product Owner is at the top of the Scrum Team's hierarchy and they decide what every other team member should do
+> 4. Sprint duration of two weeks is better than two months
+> 5. The requirements for the project are carefully documented to the Product Backlog at the beginning of the project and remain unchanged throughout the project
+> 6. The Retrospective event supports adaptation
+> 7. A larger Scrum Team is more productive than a smaller one
+> 8. The Manifesto for Agile Software Development provides a detailed description of how to manage a software development process
+> 9. It is the Scrum Master's responsibility to help other members in following the Scrum process
 
 ## Agile requirement specification
 

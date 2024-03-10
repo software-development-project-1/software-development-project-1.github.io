@@ -17,11 +17,13 @@ The Product Owner has a great project idea and is in desperate need of a talente
 >
 > A teacher should be able to add a quiz using a form in the teacher dashboard. A quiz should have a name, for example, "The capital cities of Europe" and a description, for example, "Learn the capital cities of the European countries" and a published status indicating whether the students can take the quiz or not. The teacher should have a separate page where added quizzes are listed with all their information. The teacher should be able to filter the list based on the quiz's published status. For example, the teacher should be able to list only the published quizzes. It should also be possible for the teacher to edit the information of a quiz and delete it.
 >
-> Once a quiz is added, the teacher should be able to add questions for the quiz using a form. A question should have a question content, for example, "What is the capital of Finland?" and a correct answer, for example, "Helsinki". It should also be possible to delete questions from a quiz.
+> Once a quiz is added, the teacher should be able to add questions for the quiz using a form. A question should have a question content, for example, "What is the capital of Finland?" and a correct answer, for example, "Helsinki". It should also be possible to delete questions from a quiz. To categorize quizzes, the teacher should be able to add different categories, such as "Vocabulary" and "Geography" and choose the category of a quiz. 
 >
 > The teacher should be able to register and sign in to manage their personal quizzes. Only signed-in teachers should be able to add a quiz. Once signed in, the teacher should only be able to edit and delete their own quizzes.
 >
-> The student should be able to see a list of published quizzes and take the quizzes by answering the questions of a quiz in the student dashboard. After answering a question, the student should get feedback on whether their answer was correct or not. There should also be a page where the results of a quiz are displayed. The page should display the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question. The results page should be accessible for both students and teachers.
+> The student should be able to see a list of published quizzes and take the quizzes by answering the questions of a quiz in the student dashboard. After answering a question, the student should get feedback on whether their answer was correct or not. There should also be a page where the results of a quiz are displayed. The page should display the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question.
+>
+> So that the students can share their thoughts about a quiz, the student should be able to review a quiz. There should be a page where the student can write a review and see other student's reviews for a quiz.
 >
 > -- The Product Owner of Quizzer
 
