@@ -19,7 +19,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 2. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-29. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-30. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Sprint Planning
 
@@ -848,6 +848,20 @@ Open the created web service in the Render dashboard. The deployment of the appl
 >
 > Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the "Developer guide" section in the `README.md` file.
 
+## Separate branch for the production code
+
+A quite common practice is to separate the development and production code with separate branches. One such workflow is described in [this](https://nvie.com/posts/a-successful-git-branching-model/) article. We can do a bit simplified version of this workflow, by having the main branch for the development code an a production branch for the production code. Having a separate branch for the production code enables great features, such as quality assurance and automated deployments. We can deploy the application by simply merging the main branch to the production branch using a pull request.
+
+{: .important-title }
+
+> Exercise 28
+>
+> 1. Create a "production" branch of the main branch. Then, push the branch to GitHub using the `git push origin -u production` command
+> 2. Open the backend web service in the Render Dashboard and go to the "Settings" page. In the "Build & Deploy" section, set the "Branch" as "production" and "Auto-Deploy" as "Yes"
+> 3. Switch back to the main branch and make some small change in the code and push the changes to GitHub. Then, open a pull request. Set the _base_ branch as the production branch and the _compare_ branch as the main branch.
+> 4. Merge the pull request and check that the deployment works automatically
+> 5. Describe the purpose of the project's branches in the "Developer guide" section in the `README.md` file
+
 ## GitHub release
 
 Once the GitHub repository's main branch has a working version of the application with the desired features at the end of the Sprint, we should _release_ it for the users. [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is a way to "freeze" the source code of a project at certain point of the commit history and to provide users a working version of the application.
@@ -860,7 +874,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 28
+> Exercise 29
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -872,7 +886,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 29
+> Exercise 30
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >
