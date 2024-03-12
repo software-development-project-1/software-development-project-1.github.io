@@ -47,7 +47,7 @@ sprint_2_user_story_1: "As a teacher, I want to to able to filter quiz's questio
 sprint_2_user_story_2: "As a teacher, I want to add a category so that I can categorize quizzes"
 sprint_2_user_story_3: "As a teacher, I want to to see a list of added categories so that I know which categories are added"
 sprint_2_user_story_4: "As a teacher, I want to choose a category for a quiz so that I can categorize quizzes"
-sprint_2_user_story_5: "As a teacher, I want to to delete a category so that I can get rid of categories I don't need"
+sprint_2_user_story_5: "As a teacher, I want to delete a category so that I can get rid of categories I don't need"
 sprint_2_user_story_6: "As a student, I want to see a list of published quizzes so that I know which quizzes I can take"
 sprint_2_user_story_7: "As a student, I want to see the questions of a quiz so that I know the contents of the quiz"
 sprint_2_user_story_8: "As a student, I want to answer the questions of a quiz so that I can know if my answers are correct"
