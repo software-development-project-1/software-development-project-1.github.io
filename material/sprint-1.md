@@ -862,6 +862,10 @@ A quite common practice is to separate the development and production code with 
 > 4. Merge the pull request and check that the deployment works automatically
 > 5. Describe the purpose of the project's branches in the "Developer guide" section in the `README.md` file
 
+{: .note }
+
+> When you want to deploy the application to the production environment, open a pull request as described above. _Don't wait until the end of the Sprint for the deployment. Once you have a meaningful set of features implement, deploy the application.
+
 ## GitHub release
 
 Once the GitHub repository's main branch has a working version of the application with the desired features at the end of the Sprint, we should _release_ it for the users. [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is a way to "freeze" the source code of a project at certain point of the commit history and to provide users a working version of the application.
