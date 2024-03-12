@@ -551,6 +551,10 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-1-user-story-8.png)
+> 
+> Tips for the tasks:
+>
+> - [Hibernate CreationTimestamp annotation](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
 
 {: .important-title }
 
