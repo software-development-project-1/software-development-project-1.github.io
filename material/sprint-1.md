@@ -864,7 +864,7 @@ A quite common practice is to separate the development and production code with 
 
 {: .note }
 
-> When you want to deploy the application to the production environment, open a pull request as described above. _Don't wait until the end of the Sprint for the deployment. Once you have a meaningful set of features implement, deploy the application.
+> When you want to deploy the application to the production environment, open a pull request as described above. _Don't wait until the end of the Sprint for the deployment_. Once you have a meaningful set of features implement, deploy the application.
 
 ## GitHub release
 
