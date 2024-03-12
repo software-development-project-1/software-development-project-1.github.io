@@ -15,7 +15,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-31. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-33. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -80,9 +80,9 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > To quickly see questions of different difficulty level, the teacher should be able to filter the question list based on the difficulty level. Like with the quiz list implemented during the previous Sprint, there could be for example "All", "Easy", "Normal" and "Hard" tabs at the top of the list.
 > 
-> To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". The name can't be blank and there can't be multiple categories with the same name. The description is optional. There should be a form for adding a category and a separate page for listing the added categories. The categories should be listed in an alphabetical order based on the name.
+> To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". The name can't be blank and there can't be multiple categories with the same name. The description is optional. There should be a form for adding a category and a separate page for listing the added categories. The categories should be listed in an alphabetical order based on the name. The list should have a "Delete" button next to each category, which can be clicked to delete the category.
 >
-> The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu in both forms where categories are listed in an alphabetical order based on the name.
+> The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu in both forms where categories are listed in an alphabetical order based on the name. The teacher should also be able leave the quiz uncategorized by not choosing a category.
 >
 > Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description and the date when it was added. These quizzes should be listed from newest to oldest.
 >
@@ -110,6 +110,7 @@ After some discussion the Scrum Team planned the following user stories:
 8. {{site.sprint_2_user_story_8}}
 9. {{site.sprint_2_user_story_9}}
 10. {{site.sprint_2_user_story_10}}
+11. {{site.sprint_2_user_story_11}}
 
 {: .important-title }
 
@@ -190,6 +191,14 @@ After some discussion the Scrum Team planned the following user stories:
 {: .important-title }
 
 > Exercise 11
+>
+> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+
+{: .important-title }
+
+> Exercise 12
 >
 > Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
 >
@@ -441,7 +450,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation.
 
@@ -455,7 +464,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > Implement a REST API endpoint for _getting all categories_ in alphabetical order by the name.
 >
@@ -463,7 +472,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 15
 >
 > Implement a REST API endpoint for _getting all (published) quizzes_ in newest to oldest order. The endpoint should support an optional [request parameter](https://www.baeldung.com/spring-request-param) for filtering the quizzes by a category, such as `?categoryId=1`.
 >
@@ -471,7 +480,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 16
 >
 > Implement a REST API endpoint for _getting a quiz by id_. Return an appropriate HTTP status code and error message in the following error cases:
 >
@@ -482,7 +491,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 17
 >
 > Implement a REST API endpoint for _getting the questions of a quiz_. The endpoint should support an optional [request parameter](https://www.baeldung.com/spring-request-param) for filtering the quizzes by a category, such as `?difficulty=Easy`. Return an appropriate HTTP status code and error message in the following error cases:
 >
@@ -493,7 +502,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 18
 >
 > Implement a REST API endpoint for _creating an answer_ for a quiz's question. Information about the answer's text, correctness (is the answer correct or not based on the question's correct answer) and the question reference should be stored in the database. Return an appropriate HTTP status code and error message in the following error cases:
 >
@@ -514,7 +523,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 19
 >
 > Implement a REST API endpoint for _getting the anwers of a quiz_. Return an appropriate HTTP status code and error message in the following error cases:
 >
@@ -608,7 +617,7 @@ public Message getMessageById(@PathVariable Long id) {
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 20
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response. 
 >
@@ -711,7 +720,7 @@ export default function MessageList() {
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 21
 >
 > Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You don't necessarily need a separate repository for the frontend application, you can initialize it in folder within the current repository.
 
@@ -742,9 +751,9 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
-> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
@@ -754,9 +763,9 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 23
 >
-> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
@@ -768,9 +777,9 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 24
 >
-> Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
@@ -786,9 +795,9 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 25
 >
-> Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_9}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
@@ -798,9 +807,9 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 26
 >
-> Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_9}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the tenth user story, "{{site.sprint_2_user_story_10}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
@@ -812,9 +821,9 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 27
 >
-> Plan the tasks for the tenth user story, "{{site.sprint_2_user_story_10}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the eleventh user story, "{{site.sprint_2_user_story_11}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
@@ -824,7 +833,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 28
 >
 > Add instructions on _how to start the frontend application_ to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
@@ -846,7 +855,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 29
 >
 > Write the first version of the project's _architecture documentation_. Add the documentation under a "Architecture" subheading in the `README.md` file. The documentation should contain the following things:
 >
@@ -908,7 +917,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 {: .important-title }
 
-> Exercise 28
+> Exercise 30
 >
 > Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Developer guide" section in the `README.md` file.
 
@@ -918,19 +927,19 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 29
+> Exercise 31
 >
 > Once you have implemented the user stories of the Sprint, remove the excessive backend-related files, such as Java class files and Thymeleaf template files that were in the original example project and are not relevant to your project.
 
 {: .important-title }
 
-> Exercise 30
+> Exercise 32
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 31
+> Exercise 33
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the features in the production environment.
 >

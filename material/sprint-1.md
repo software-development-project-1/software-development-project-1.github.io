@@ -211,7 +211,7 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > The teacher should be able to add questions to a quiz. For example the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?", a correct answer, for example "Helsinki" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal". 
 >
-> There should be a page with a form for adding a question to a quiz. The teacher should not be able to add a question with a blank question text or correct answer, or without a difficulty level. Added questions of a quiz should be listed on a separate page. There should be a link to both these pages in the quiz edit page. Once a question has been added to a quiz, the teacher should be able to delete it. The question list should have a "Delete" button next to each question.
+> There should be a page with a form for adding a question to a quiz. The teacher should not be able to add a question with a blank question text or correct answer, or without a difficulty level. Added questions of a quiz should be listed on a separate page. There should be a link to both these pages in the quiz edit page. Once a question has been added to a quiz, the teacher should be able to edit and delete it. The question list should have a "Edit" link and a "Delete" button next to each question. The "Edit" link should take the teacher to an edit form where they can edit the question's information.
 >
 > To quickly see which quizzes are published and which are not, there should be some way for the teacher to filter the quiz list based on the published status. There could be for example "All", "Published", and "Not published" tabs at the top of the list.
 >
@@ -230,6 +230,7 @@ After some discussion the Scrum Team planned the following user stories:
 7. {{site.sprint_1_user_story_7}}
 8. {{site.sprint_1_user_story_8}}
 9. {{site.sprint_1_user_story_9}}
+10. {{site.sprint_1_user_story_10}}
 
 The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
 
@@ -302,10 +303,6 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-1-user-story-1.png)
-> 
-> Tips for the tasks:
-> 
-> - [Thymeleaf checkbox fields](https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html#checkbox-fields)
 
 {: .important-title }
 
@@ -507,8 +504,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 >
 > Tips for the tasks:
 >
-> - [Thymeleaf radio button fields](https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html#radio-button-fields)
-> - Make sure that you can delete a quiz that has questions. Before deleting a quiz, the quiz's questions need to be deleted. [Cascading](https://www.baeldung.com/jpa-cascade-types) can be used to achieve this automatically
+> - Make sure that you can delete a quiz that has questions
 
 {: .important-title }
 
@@ -540,25 +536,27 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 > Exercise 20
 >
-> Plan the tasks for the eighth user story, "{{site.sprint_1_user_story_8}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the eight user story, "{{site.sprint_1_user_story_8}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+
+{: .important-title }
+
+> Exercise 21
+>
+> Plan the tasks for the ninth user story, "{{site.sprint_1_user_story_9}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-1-user-story-8.png)
->
-> Tips for the tasks:
->
-> - [Hibernate CreationTimestamp annotation](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
-> - [Instant](https://www.baeldung.com/java-instant-vs-localdatetime) object can be formatted in a Thymeleaf template with the [#temporals.format](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html#temporals-java.time) utility
-> - [Sorting Query Results with Spring Data](https://www.baeldung.com/spring-data-sorting)
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
-> Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the tenth user story, "{{site.sprint_2_user_story_10}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
@@ -572,7 +570,6 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 >
 > Tips for the tasks:
 >
-> - [Derived Query Methods in Spring Data JPA Repositories](https://www.baeldung.com/spring-data-derived-queries)
 > - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). Request parameters can be accessed in a controller method with the `@RequestParam` annotation in the following way:
 >
 >   ```java
@@ -651,7 +648,7 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 23
 >
 > _Each team member_ should do the steps mentioned above to create their own branch named by their GitHub username and push it to GitHub.
 
@@ -677,7 +674,7 @@ But, GitHub supports a better way to merge branches using [pull requests](https:
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 24
 >
 > 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions. The pull request title should describe the changes, for example "Change the submit button color in the add quiz form". The description provides additional details
 > 2. Take a look at some other team member's pull request and conduct a code review by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) instructions. Pull the branch from GitHub to your local computer and take a look at the changes. If everything looks good, approve the changes with a short comment, such as "Looks good to me". Otherwise, request changes
@@ -686,7 +683,7 @@ But, GitHub supports a better way to merge branches using [pull requests](https:
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 25
 >
 > Implement _at least two_ user stories in separate feature branches. Name the branch based on the feature, for example `add-question`. Remember to _switch to the main branch before creating a new branch_ by using the `git checkout main` command. Use the `git branch` command if you are unsure what the current branch is.
 >
@@ -733,7 +730,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 26
 >
 > Write developer guide documentation on _how to start the backend application_ to the `README.md` file. Add it under a "Developer guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown. 
 >
@@ -759,7 +756,7 @@ The command will generate the JAR file under the `target` folder. Inside the fol
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 27
 >
 > Generate a JAR file for the application and run the application using the JAR file. Add instructions on how to generate and run the application using the JAR file to the "Developer guide" section in the `README.md` file.
 
@@ -844,7 +841,7 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 28
 >
 > Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the "Developer guide" section in the `README.md` file.
 
@@ -854,7 +851,7 @@ A quite common practice is to separate the development and production code with 
 
 {: .important-title }
 
-> Exercise 28
+> Exercise 29
 >
 > 1. Create a "production" branch of the main branch. Then, push the branch to GitHub using the `git push origin -u production` command
 > 2. Open the backend web service in the Render Dashboard and go to the "Settings" page. In the "Build & Deploy" section, set the "Branch" as "production" and "Auto-Deploy" as "Yes"
@@ -878,7 +875,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 29
+> Exercise 30
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -890,7 +887,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 30
+> Exercise 31
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >
