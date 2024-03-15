@@ -563,7 +563,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 > Exercise 22
 >
-> Plan the tasks for the tenth user story, "{{site.sprint_2_user_story_10}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the tenth user story, "{{site.sprint_1_user_story_10}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
