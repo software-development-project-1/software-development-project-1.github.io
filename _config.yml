@@ -58,7 +58,7 @@ sprint_2_user_story_11: "As a student, I want to filter the questions of quiz by
 sprint_3_user_story_1: "As a teacher, I want to register an account so that I can manage my personal quizzes"
 sprint_3_user_story_2: "As a teacher, I want to sign in so that I can manage my personal quizzes"
 sprint_3_user_story_3: "As a teacher, I want to associate the added quizzes and categories with my account so that I can manage my personal quizzes"
-sprint_2_user_story_4: "As a student, I want to review a quiz so that I can share my thoughts about the quiz with others"
-sprint_2_user_story_5: "As a student, I want to see the reviews of a quiz so that I can learn what others think about the quiz"
+sprint_3_user_story_4: "As a student, I want to review a quiz so that I can share my thoughts about the quiz with others"
+sprint_3_user_story_5: "As a student, I want to see the reviews of a quiz so that I can learn what others think about the quiz"
 sprint_3_user_story_6: "As a student, I want to see number of reviews and the rating average of a quiz so that I can see the review summary"
 
