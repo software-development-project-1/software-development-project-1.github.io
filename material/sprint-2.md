@@ -191,10 +191,6 @@ After some discussion the Scrum Team planned the following user stories:
 > Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-2-user-story-1.png)
 
 {: .important-title }
 
@@ -207,10 +203,6 @@ After some discussion the Scrum Team planned the following user stories:
 > _NB: Keep this documentation (like all other documentation) up-to-date when you add new entities for the application._
 
 ## Reducing boilerplate code with Lombok
-
-{: .note }
-
-> Lombok is a nice-to-have addition for the project, _but not required_.
 
 Java classes require a lot of _boilerplate code_ in the form of getters, setters and constructors. Each time we define an attribute for a class, we need to implement getter and setter methods for it and alter the constructor. [Lombok](https://projectlombok.org/) is library that automatically generates getters, setters and constructors from the attributes.
 
