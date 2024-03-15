@@ -789,10 +789,10 @@ Write the final report for the course, which covers the following questions:
 
 - In which areas did you succeed _as a team_? In which areas there was room for improvement?
 - In which areas did you succeed _personally_? In which areas there was room for improvement?
-- What is the main goal of the Scrum's _Sprint Planning_ event? How did you succeed in this goal as a team?
-- What is the main goal of the Scrum's _Daily Scrum_ event? How did you succeed in this goal as a team?
-- What is the main goal of the Scrum's _Sprint Review_ event? How did you succeed in this goal as a team?
-- What is the main goal of the Scrum's _Sprint Retrospective_ event? How did you succeed in this goal as a team?
+- What is the main goal of the Scrum's _Sprint Planning_ event? How well did you succeed in this goal as a team?
+- What is the main goal of the Scrum's _Daily Scrum_ event? How well did you succeed in this goal as a team?
+- What is the main goal of the Scrum's _Sprint Review_ event? How well did you succeed in this goal as a team?
+- What is the main goal of the Scrum's _Sprint Retrospective_ event? How well did you succeed in this goal as a team?
 - Based on your experiences during the course, what would be three important advice you would give to a new software development team? Justify why these advice are important
 - What did you learn during the course? What would you have wanted to learn more about?
 
