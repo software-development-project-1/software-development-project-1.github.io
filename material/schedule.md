@@ -13,11 +13,11 @@ On the third week the teams start working on the project. The project advances i
 
 | Week   | Topics                                                                       | Exercises                                                |
 | ------ | ---------------------------------------------------------------------------- | -------------------------------------------------------- |
-| 23.10. | [Agile software development and Scrum](/agile-software-development)          | Exercises 1 - 12, deadline on {{site.week_1_deadline}}   |
-| 30.10. | [Version control: Git and GitHub](/git)                                      | Exercises 1 - 15, deadline on {{site.week_2_deadline}}   |
-| 6.11.  | 🏃‍♂️ [Sprint 1](/sprint-1): Sprint Planning, Scrum backlogs, GitHub's workflow | Exercises 1 - 32, deadline on {{site.sprint_1_deadline}} |
-| 13.11. | Daily Scrum, Git branches, Sprint Review                                     |                                                          |
-| 20.11. | 🏃‍♂️ [Sprint 2](/sprint-2): Retrospective, REST APIs                           | Exercises 1 - 33, deadline on {{site.sprint_2_deadline}} |
-| 27.11. | Communication between frontend and backend                                   |                                                          |
-| 4.12.  | 🏃‍♂️ [Sprint 3](/sprint-3): Testing                                            | Exercises 1 - 27, deadline on {{site.sprint_3_deadline}} |
-| 11.12. | Finishing the project                                                        |                                                          |
+| 25.3. | [Agile software development and Scrum](/agile-software-development)          | Exercises 1 - 12, deadline on {{site.week_1_deadline}}   |
+| 1.4. | [Version control: Git and GitHub](/git)                                      | Exercises 1 - 15, deadline on {{site.week_2_deadline}}   |
+| 8.4.  | 🏃‍♂️ [Sprint 1](/sprint-1): Sprint Planning, Scrum backlogs, GitHub's workflow | Exercises 1 - 32, deadline on {{site.sprint_1_deadline}} |
+| 15.4. | Daily Scrum, Git branches, Sprint Review                                     |                                                          |
+| 22.4. | 🏃‍♂️ [Sprint 2](/sprint-2): Retrospective, REST APIs                           | Exercises 1 - 33, deadline on {{site.sprint_2_deadline}} |
+| 29.4. | Communication between frontend and backend                                   |                                                          |
+| 6.5.  | 🏃‍♂️ [Sprint 3](/sprint-3): Testing                                            | Exercises 1 - 27, deadline on {{site.sprint_3_deadline}} |
+| 13.5. | Finishing the project                                                        |                                                          |
