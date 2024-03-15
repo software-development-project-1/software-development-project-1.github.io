@@ -77,10 +77,10 @@ The Product Owner was delighted to see how the project has advancend during Spri
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 2 goals in the Sprint Planning event:
 
 > "It's great that we now have the basic functionality for managing quizzes! What we now need is a way for the teacher to categorize quizzes and student to take the published quizzes.
->
-> To quickly see questions of different difficulty level, the teacher should be able to filter the question list based on the difficulty level. Like with the quiz list implemented during the previous Sprint, there could be for example "All", "Easy", "Normal" and "Hard" tabs at the top of the list.
 > 
-> To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". The name can't be blank and there can't be multiple categories with the same name. The description is optional. There should be a form for adding a category and a separate page for listing the added categories. The categories should be listed in an alphabetical order based on the name. The list should have a "Delete" button next to each category, which can be clicked to delete the category.
+> To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". The name can't be blank and there can't be multiple categories with the same name. The description is optional. There should be a form for adding a category and a separate page for listing the added categories. The categories should be listed in an alphabetical order based on the name.
+>
+> The category list should have a "Delete" button next to each category, which can be clicked to delete the category. There should also be a "Edit" link which should take the teacher to an edit form, where they can edit all the information of the category.
 >
 > The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu in both forms where categories are listed in an alphabetical order based on the name. The teacher should also be able leave the quiz uncategorized by not choosing a category.
 >
@@ -148,7 +148,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-1.png)
+> ![](/assets/sprint-2-user-story-2.png)
 
 {: .important-title }
 
@@ -160,7 +160,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-2.png)
+> ![](/assets/sprint-2-user-story-3.png)
 
 {: .important-title }
 
@@ -172,7 +172,9 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-3.png)
+> ![](/assets/sprint-2-user-story-4-1.png)
+>
+> ![](/assets/sprint-2-user-story-4-2.png)
 
 {: .important-title }
 
@@ -181,12 +183,6 @@ After some discussion the Scrum Team planned the following user stories:
 > Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-2-user-story-4-1.png)
->
-> ![](/assets/sprint-2-user-story-4-2.png)
 
 {: .important-title }
 
@@ -195,6 +191,10 @@ After some discussion the Scrum Team planned the following user stories:
 > Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-2-user-story-1.png)
 
 {: .important-title }
 
