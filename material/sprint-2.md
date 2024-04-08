@@ -466,7 +466,9 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 > Exercise 15
 >
-> Implement a REST API endpoint for _getting all (published) quizzes_ in newest to oldest order. The endpoint should support an optional [request parameter](https://www.baeldung.com/spring-request-param) for filtering the quizzes by a category, such as `?categoryId=1`.
+> Implement a REST API endpoint for _getting all (published) quizzes_ in newest to oldest order. The endpoint should support an optional [request parameter](https://www.baeldung.com/spring-request-param) for filtering the quizzes by a category, such as `?categoryId=1`. Return an appropriate HTTP status code and error message in the following error cases:
+>
+> - Category with the provided id is not found (if the request parameter is provided)
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -489,6 +491,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 >
 > - Quiz with the provided id does not exist
 > - Quiz with the provided id is not published
+> - Difficulty level is invalid (if the request parameter is provided)
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
