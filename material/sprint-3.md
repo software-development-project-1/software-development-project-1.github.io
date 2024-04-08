@@ -577,7 +577,7 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > - `getAllQuizzesReturnsEmptyListWhenNoQuizzesExist`: send a request without saving a quiz to the database. Then, the response should have an empty list
 > - `getAllQuizzesReturnsListOfPublishedQuizzesWhenQuizzesExist`: save a few quizzes (both published and non-published) to the database and send a request. Then, the response should have a list of the saved _published quizzes_
-> - An appropriate test method for testing that the category filtering works
+> - An appropriate test methods for testing that the category filtering works. Implement separate test methods for success and error cases
 >
 > Create an issue for this task.
 
@@ -612,7 +612,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getQuestionsByQuizIdReturnsErrorWhenQuestionDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
 > - `getQuestionsByQuizIdReturnsErrorWhenQuizIsNotPublished`: save a _non-published quiz_ with a few questions to the database and send a request. Then, the response should have an appropriate HTTP status
 >
-> - An appropriate test method for testing that the difficulty level filtering works
+> - An appropriate test methods for testing that the difficulty level filtering works. Implement separate test methods for success and error cases
 >
 > Create an issue for this task.
 
