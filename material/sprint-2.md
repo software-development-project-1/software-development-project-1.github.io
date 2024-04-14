@@ -466,7 +466,9 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 > Exercise 15
 >
-> Implement a REST API endpoint for _getting all (published) quizzes_ in newest to oldest order. The endpoint should support an optional [request parameter](https://www.baeldung.com/spring-request-param) for filtering the quizzes by a category, such as `?categoryId=1`. Return an appropriate HTTP status code and error message in the following error cases:
+> Implement a REST API endpoint for _getting all (published) quizzes_ in newest to oldest order. The endpoint should support an optional [request parameter](https://www.baeldung.com/spring-request-param) for filtering the quizzes by a category, such as `?categoryId=1`. That is, if the request parameter is provided, published quizzes with the provided category should be returned in newest to oldest order.
+>
+> Return an appropriate HTTP status code and error message in the following error cases:
 >
 > - Category with the provided id is not found (if the request parameter is provided)
 >
@@ -487,7 +489,9 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 > Exercise 17
 >
-> Implement a REST API endpoint for _getting the questions of a quiz_. The endpoint should support an optional [request parameter](https://www.baeldung.com/spring-request-param) for filtering the quizzes by a category, such as `?difficulty=Easy`. Return an appropriate HTTP status code and error message in the following error cases:
+> Implement a REST API endpoint for _getting the questions of a quiz_. The endpoint should support an optional [request parameter](https://www.baeldung.com/spring-request-param) for filtering the quizzes by a category, such as `?difficulty=Easy`. That is, if the request parameter is provided, questions of the quiz with the provided difficulty level should be returned.
+>
+> Return an appropriate HTTP status code and error message in the following error cases:
 >
 > - Quiz with the provided id does not exist
 > - Quiz with the provided id is not published
