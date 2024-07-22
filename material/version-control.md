@@ -15,7 +15,7 @@ nav_order: 4
 
 ## Submitting this week's exercises
 
-All of this week's exercises (exercises 1-15) are submitted to [this Moodle submission]({{site.week_2_moodle_submission_link}}). The submission should only contain the link to your GitHub repository created in exercise 7 and the information mentioned in exercise 15. The submission deadline is on {{site.week_2_deadline}}.
+All of this week's exercises (exercises 1-15) are submitted to [this Moodle submission]({{site.week_2_moodle_submission_link}}). The submission should only contain the link to your GitHub repository created in exercise 7 and the information mentioned in exercise 15 and 16. The submission deadline is on {{site.week_2_deadline}}.
 
 ## Version control
 
@@ -682,6 +682,20 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 {: .important-title }
 
 > Exercise 15
+>
+> _This is a team exercise_. Do the following steps with your team:
+>
+> 1. Choose one of the team member's repository created previously. The owner of the repository should add other team members as [collaborators](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository). This way, other team members can make commits for the repository and work together on the same code base
+> 2. Other team members should clone the chosen repository. Once the repository is cloned, each team member should make a small change to some file and push the changes to GitHub to see that they can access the repository
+> 3. Add a `calculator.html` file to the repository with the following content: TODO
+> 4. The file contains the user interface for a simple calculator with five operations: addition, substraction, multiplication, division and [exponentiation](https://en.wikipedia.org/wiki/Exponentiation). The calculator has five buttons for each of the operations and two input fields for the numbers to operate on. Clicking the operation's button should perform the operation for the two input numbers and print the result below the input fields. Only numbers should be accepted as inputs. Each team member should implement _exactly one operation_ which is defined as the function's event handler (for example, the addition operation should be implemented by implementing a `add` function). If you have less than five team members, you can implement the remaining functions as you see fit
+> 5. Once each team member has implemented their operation, there should be a `calculator.html` file in the GitHub repository with an operating calculator. Each team member should make sure that the final version of the calculator works by pulling the code from the GitHub repository using the `git pull` command and testing the calculator on their computer
+>
+> _Add the link to the GitHub repository in which you implemented the calculator to the Moodle submission_.
+
+{: .important-title }
+
+> Exercise 16
 >
 > Explore an open source project repositories in GitHub. You can for example search for your favorite library (such as React) on the [GitHub's home page](https://github.com/) using the search field at the top of the page. Alternatively, you can use Google.
 >

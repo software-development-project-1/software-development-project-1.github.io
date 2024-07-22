@@ -44,9 +44,11 @@ In _agile software development_, the development process follows values and prin
 >
 > -- Manifesto for Agile Software Development
 
-One of the key value is the attitude towards _change_. For example, there is often need to change the software's requirements during the development process. Agile software development process should welcome any kind of change with open arms. This is because _change is inevitable and frequent_ in many business environments.
+These principles have been found successful and later on adopted in many other industries as well. Thus, these days many organizations want to integrate the agile values into their work process. However, there is a lot of variation in the concrete implementations and there is no on-size-fits-all solution.
 
-The Manifesto for Agile Software Development doesn't go into details on how to actually _implement_ these values in practice. Different Agile software development process frameworks, such as _Scrum_ and _SAFe_ describe a detailed process that follows these values.
+One of the key value is the attitude towards _change_. For example, there is often need to change the software's requirements during the development process. An agile software development process should welcome any kind of change with open arms. This is because _change is inevitable and frequent_ in many business environments.
+
+The Manifesto for Agile Software Development doesn't go into details on how to actually _implement_ these values in practice. That is, how to actually organize the development of a software so that everyone follows the same agile work process? Luckily, there are different agile software development process frameworks, such as _Scrum_ and _SAFe_ which describe a more or less detailed process that follows these values.
 
 ## Software development lifecycle
 
@@ -79,7 +81,9 @@ Instead of completing software development lifecycle's phases sequentially from 
 
 ## Scrum
 
-_Scrum_ is an iterative software development process framework that defines practical ways to carry out agile software development principles. The [Scrum Guide](https://scrumguides.org/scrum-guide.html) is the official guide to Scrum. During the course we will use Scrum to manage our software development process. This week we will learn about Scrum in theory and week three onwards we will apply the knowledge with our project.
+_Scrum_ is an iterative software development process framework that defines practical ways to carry out agile software development principles. Scrum has been by far the most widely used Agile method in the recent years based on the anual [State of Agile](https://www.scruminc.com/2022-state-agile-report-takeaways/) reports. For example based on the year 2022 report, 87% of respondents used Scrum at the team level.
+
+The [Scrum Guide](https://scrumguides.org/scrum-guide.html) is the official guide to Scrum. During the course we will use Scrum to manage our software development process. This week we will learn about Scrum in theory and week three onwards we will apply the knowledge with our project.
 
 Before starting working on the exercises, read at least the chapters "Scrum Definition", "Scrum Theory", "Scrum Values", "Scrum Team", "Scrum Events" and "Scrum Artifacts" from the [Scrum Guide](https://scrumguides.org/scrum-guide.html).
 
@@ -271,3 +275,9 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > On top of the importance of a user story, consider the dependencies between the different user stories. For example, certain user stories might be impossible to implement before some other user story has been implemented. Can we for example list quizzes before a teacher can add one?
 >
 > List the seven user stories in the priority order (top-priority user stories at the top of the list). Briefly justify, why you chose this specific prioritization.
+
+{: .important-title }
+
+> Exercise 13
+>
+> The project teams will be assembled at the beginning of next week. If you have a preference for who you want to be in a team with, put your names in the same team in [this Flinga board]({{site.teams_flinga_link}}) (click the team's card and edit its content). The maximum size of a team is 5 members.

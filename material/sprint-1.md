@@ -19,7 +19,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 2. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-32. The team can earn up to 10 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-32. The team can earn up to 15 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Sprint Planning
 
@@ -132,44 +132,30 @@ Once the organization is created, a team member can be invited by clicking the "
 >
 > _One of the team members_ should create a GitHub organization for the project. Once the organization is created, invite other team members to the organization. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team.
 
-## Forking a GitHub repository
-
-Instead of starting a repository from scratch, we can create a copy an existing repository and use that as a starting point for our project. In GitHub terminology this is called _forking a repository_ and the copied repository is called a _fork_.
-
-To get started faster, start your project by forking the [example project repository]({{site.example_project_link}}). The repository has a simple Java Spring Boot application initialized with [Spring Initializr](https://start.spring.io/). It has some code samples of Thymeleaf templates, controllers, JPA entities and JPA repositories.
-
-A repository can be forked by cliking the "Fork" button on right side of the repository's name.
-
-![GitHub fork repository](/assets/fork-repository.png)
-
 {: .important-title }
 
 > Exercise 2
 >
-> _One of the team members_ should fork the [example project repository]({{site.example_project_link}}). Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description. The forked repository will become your project's repository where you start working on the project.
+> One of the team members should create a GitHub repository for the project. Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description. This repository will become your project's repository where you start working on the project.
 
 {: .important-title }
 
 > Exercise 3
 >
-> Each team member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. Remember to clone the repository you created in the previous exercise, _not_ the example project repository. _Remember to use the HTTPS address_ of the GitHub repository with the command. See the [Git instructions](/git#githubs-workflow) if you have trouble.
->
-> Once you have cloned the repository, open the code in an editor such as Eclipse or Visual Studio Code. In Eclipse you can open the project folder from "File > Open Project from Filesystem". The project requires _Java version 17_.
->
-> Explore the code and start the Spring Boot application. Once started, the application should be open at <http://localhost:8080>.
+> Each team member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. See the [Git instructions](/git#githubs-workflow) if you have trouble.
 
 {: .important-title }
 
 > Exercise 4
 >
-> Once each team member has the repository on their local computer, do the following:
+> Once every team member has the repository on their local computer, add a `README.md` file with some text in it to the repository folder and push it to GitHub. Then, _each team member_ should do the following:
 >
-> 1. _Each team member_ opens the cloned repository folder with an editor.
-> 2. _Each team member_ opens the cloned repository folder in Git Bash. Right-click the repository folder in the File Explorer and choose "Git Bash Here".
-> 3. _One of the team members_ locally edits the contents of the `README.md` file in the repository folder. If you aren't able to edit the file with Eclipse, use for example Visual Studio Code instead. Push changes to the remote GitHub repository using `git add`, `git commit` and `git push` commands. See the [Git instructions](/git#starting-a-git-project) if you have trouble.
-> 4. _Each team member_ checks that the changes are visible in GitHub.
-> 5. Once changes have been pushed to GitHub, _each team member_ pulls the changes from GitHub using the `git pull` command. If you see `CONFLICT` in the command output, see the [Git instructions](/git#merge-conflicts) to figure out how to solve conflicts.
-> 6. Once everybody sees the changes on their local `README.md` file, repeat the the steps from step 3. for each team member until everyone has pushed some changes to the GitHub repository.
+> 1. Open the cloned repository folder with an editor such as Visual Studio Code and in Git Bash. Right-click the repository folder in the File Explorer and choose "Git Bash Here"
+> 2. Use the `git pull` command to pull the latest changes from GitHub
+> 3. Make some change to the `README.md` file and push the changes to GitHub using the `git add`, `git commit` and `git push` commands. See the [Git instructions](/git#starting-a-git-project) if you have trouble. If you aren't able to edit the file with Eclipse, use for example Visual Studio Code instead
+> 4. Open the repository in GitHub and check in the `README.md` file that your changes has been successfully pushed to the remote GitHub repository
+>
+> If you see `CONFLICT` in the command output, see the [Git instructions](/git#merge-conflicts) to figure out how to solve conflicts.
 
 ## GitHub Projects
 
@@ -199,25 +185,21 @@ The project will be empty for now, but we will add some user stories and tasks f
 
 Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Planning event:
 
-> "To get started with the project, we need to implement a basic set of features for the teacher dashboard application so that the teachers can manage quizzes and their questions.
+> "To get started with the project, we need to implement a basic set of features for the teacher dashboard application so that the teachers can manage quizzes and their questions and answer options.
 >
-> When the teacher opens the application on a web browser, there should be page where the added quizzes are listed. There should also be a link that says "Add a quiz" which takes the teacher to another page, where they can add a quiz using a form.
+> The teacher should be able to add a quiz using a form. A quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries" and a published status. A quiz is either published or not. Each of these values should have a field in the form. The teacher should not be able to add a quiz with a blank name or description. The quiz should not be published by default.
 >
-> A quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries" and a published status. A quiz is either published or not. Each of these values should have field in the form. The published status could be for example a checkbox. The user should not be able to add a quiz with a blank name or description. The quiz should not be published by default.
+> The front page of the application should have a list of added quizzes. The list should display the information provided by the teacher while adding the quiz and the date when the quiz was added. The quizzes should be listed from newest to oldest, so that the latest quizzes are at the top of the list. The page should also have a link that takes the teacher to the page where they can add a quiz.
 >
-> The teacher should be able to edit the information of a quiz if, for example they want to publish the quiz or change its name or description. The quiz list should have an "Edit" link next to each quiz. The link should take the teacher to an edit form, where they can edit all the information of the quiz.
+> The teacher should be able to edit the information of a quiz if, for example they want to publish the quiz or change its name or description. The quiz list should have a link next to each quiz which takes the teacher to an edit form, where they can edit all the information of the quiz. The teacher should also be able to get rid of quizzes they don't need. There should be a delete button next to each quiz in the quiz list. When the user clicks the button, the quiz should be deleted.
 >
-> The teacher should also be able to get rid of quizzes they don't need. Next to the "Edit" link, there should be a "Delete" button in the quiz list. When the user clicks the button, the quiz should be deleted.
+> The teacher should be able to add questions to a quiz. For example, the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal". The teacher should not be able to add a question with a blank question text or without a difficulty level.
 >
-> The teacher should be able to add questions to a quiz. For example the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?", a correct answer, for example "Helsinki" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal". 
+> The questions of a quiz should be listed on a separate page. Once a question has been added to a quiz, the teacher should be able to edit and delete it.
 >
-> There should be a page with a form for adding a question to a quiz. The teacher should not be able to add a question with a blank question text or correct answer, or without a difficulty level. Added questions of a quiz should be listed on a separate page. There should be a link to both these pages in the quiz edit page. Once a question has been added to a quiz, the teacher should be able to edit and delete it. The question list should have a "Edit" link and a "Delete" button next to each question. The "Edit" link should take the teacher to an edit form where they can edit the question's information.
+> The teacher should be able to add answer options to a question. For example, the "What is the capital of Finland?" question could have answer options "Turku", "Helsinki" and "Tampere". An answer option has an answer option text, for example "Turku", and a correctness status. Answer is either correct or not. For example, the "Turku" answer option would not be correct. The teacher should not be able to add an answer option with a blank answer option text. The answer option should not be correct by default.
 >
-> To quickly see questions of different difficulty level, the teacher should be able to filter the question list based on the difficulty level. Tthere could be for example "All", "Easy", "Normal" and "Hard" tabs at the top of the list.
->
-> There should also be some way for the teacher to filter the quiz list based on the published status. Similarly as with the question difficulty level filtering, there could be for example "All", "Published", and "Not published" tabs at the top of the list.
->
-> The quiz list should display the date when the quiz was added. This way, the teacher would know how old the quiz is. Also, the quizzes should be listed from newest to oldest. This way, the teacher can find the latest quizzes quickly at the top of the list."
+> The answer options of a question should be listed on a separate page. Once an answer option has been added to a question, the teacher should be able to delete it."
 >
 > -- The Product Owner
 
@@ -291,7 +273,15 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 11
+>
+> Initialize a Spring Boot backend application for the teacher dashboard for example using the [Spring Initializr](https://start.spring.io/). Push the Spring Boot application to GitHub.
+>
+> This your project's first task. Create an issue for the task. Set the milestone as "Sprint 1". Add the issue to the Backlog project's "Sprint Backlog" column.
+
+{: .important-title }
+
+> Exercise 11
 >
 > Read through the [User stories and tasks](#user-stories-and-tasks) section. Then, plan the tasks for the first user story, "{{site.sprint_1_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -318,10 +308,6 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-1-user-story-2.png)
->
-> Tips for the tasks:
->
-> - This page should be visible on the root path (the `/` path) of the application. Change the `@GetMapping` of the `listMessages` method in the `MessageController` class, for example to `@GetMapping("/messages")`
 
 {: .important-title }
 
@@ -385,60 +371,6 @@ Here's a few tips before you start implementing the tasks:
 - _Push_ code to the GitHub repository often. Once you have some _working_ code, use `git add`, `git commit`, `git push` commands to push the code to GitHub
 - _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer
 - While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts)
-- Take a look at the [example project]({{site.example_project_link}}) for examples
-
-## Thymeleaf page layouts
-
-If we start the example project application and visit the [message list page](http://localhost:8080) at and the [add message page](http://localhost:8080/messages/add), we see that the pages share a common structure. They both have the "Messages application" heading and the "Messages" link the top of the page. If we dig deeper into the HTML structure, there's also other common HTML elements. We could simply copy-paste the common HTML content to both pages, but once we implement more pages and want to update the common structure, things start to get out of hand. Instead, we can have a common _layout_ for the application that each page can share. This can be achieved using the [Thymeleaf Layout Dialect](https://ultraq.github.io/thymeleaf-layout-dialect/) which has been configured for the project in the [ThymeleafConfig](https://github.com/software-development-project-1/example-project/blob/main/src/main/java/fi/haagahelia/quizzer/config/ThymeleafConfig.java) class.
-
-If we take a look at the example project's `layout.html` file in the `src/main/resources/templates` folder we'll see that the file has a common structure for each page:
-
-```html
-<!DOCTYPE html>
-<html
-  lang="en"
-  xmlns:th="http://www.thymeleaf.org"
-  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
->
-  <head>
-    <meta charset="utf-8" />
-    <title>Messages</title>
-  </head>
-  <body>
-    <h1>Messages application</h1>
-    <a href="/">Messages</a>
-    <div layout:fragment="content"></div>
-  </body>
-</html>
-```
-
-{: .note }
-
-Consider adding for example your [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/download/) `link` and `script` tags inside the `head` tag of the `layout.html` file.
-
-The `<div layout:fragment="content"></div>` element is a _layout fragment_ called "content". It will contain the page-specific content. The layout can have multiple fragments, which could come in handy if we have for example a footer that has page-specific content.
-
-Let's have a look at the `messagelist.html` file that is using this layout:
-
-```html
-<!DOCTYPE html>
-<html
-  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-  layout:decorate="~{layout.html}"
->
-  <body>
-    <div layout:fragment="content">
-      <h1>Messages</h1>
-      <ul>
-        <li th:each="message: ${messages}" th:text="${message.content}"></li>
-      </ul>
-      <a href="/messages/add">Add a message</a>
-    </div>
-  </body>
-</html>
-```
-
-The `layout:decorate="~{layout.html}"` on the `html` element specifies that this template is using the `layout.html` file as the layout file. The `div` element that has the `layout:fragment="content"` attribute has the content that will be displayed on the corresponding layout fragment on the `layout.html` file.
 
 ## The README file
 
@@ -463,7 +395,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 > 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
 > 3. Below the description, add a subheading "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name.
 > 4. Each team member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
-> 5. Below the "Team members" section, add a subheading "Documentation" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) that has at the moment just one "Backlog" link. The link should point to the Backlog project (open the backlog's project in GitHub and copy the URL from the web browser's address bar)
+> 5. Below the "Team members" section, add a subheading "Backlog" and below that add a link to the Backlog project created previously (open the Backlog project in GitHub and copy the URL from the web browser's address bar).
 >
 > Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 
@@ -504,10 +436,6 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 > ![](/assets/sprint-1-user-story-5-1.png)
 >
 > ![](/assets/sprint-1-user-story-5-2.png)
->
-> Tips for the tasks:
->
-> - Make sure that you can delete a quiz that has questions
 
 {: .important-title }
 
@@ -554,10 +482,6 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-1-user-story-8.png)
-> 
-> Tips for the tasks:
->
-> - [Hibernate CreationTimestamp annotation](https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp)
 
 {: .important-title }
 
@@ -574,30 +498,6 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 > ![](/assets/sprint-1-user-story-9-2.png)
 >
 > ![](/assets/sprint-1-user-story-9-3.png)
->
-> Tips for the tasks:
->
-> - Filters are a good use-case for [request parameters](https://www.baeldung.com/spring-request-param). Request parameters can be accessed in a controller method with the `@RequestParam` annotation in the following way:
->
->   ```java
->   @GetMapping("/")
->   public String listQuizzes(@RequestParam(required = false) Boolean published, /* ... */) {
->       model.addAttribute("publishedFilter", published);
->       // ...  
->   }
->   ```
->
-> - In the Thymeleaf template the request parameter can be added to a link in the following way:
->
->   ```html
->   <a
->     href="/?published=true"
->     class="nav-link"
->     th:classappend="${publishedFilter == true}? active"
->   >
->     Published
->   </a>
->   ```
 
 {: .important-title }
 
@@ -702,14 +602,6 @@ But, GitHub supports a better way to merge branches using [pull requests](https:
 
 {: .important-title }
 
-> Exercise 26
->
-> Implement _at least two_ user stories in separate feature branches. Name the branch based on the feature, for example `add-question`. Remember to _switch to the main branch before creating a new branch_ by using the `git checkout main` command. Use the `git branch` command if you are unsure what the current branch is.
->
-> Once the implementation is ready, open a pull request. At least one other team member should conduct a code review for the pull request and either approve it or request changes. Once the pull request has been approved, merge it to the main branch. Finally, switch back to the main branch and pull the changes from GitHub.
->
-> Note that _task is not completed until it has been merged to the main branch_. Move the issues that are waiting for a review to the "In review" column in the Backlog project and ask a team member to review your pull request.
-
 ### Resolving conflicts in branches
 
 If the pull request can't be automatically merged due to conflicts, we'll need to solve them manually. First, switch to the main branch and pull the latest changes:
@@ -732,11 +624,11 @@ Finally, resolve the conflicts and add, commit and push the changes to GitHub. N
 
 Now that we have implemented some features for our application that the users can use it is time to describe _how_ to use the application. The _developer guide_ is perhaps one of the most important pieces of documentation for the application. It will describe our fellow developers how to technically use the application. This means for example, how to start the application, how to package the application, and how to run tests.
 
-The developer guide shouldn't make too many assumptions, for example, that the reader of the documentation happens to know that the `application.properties` file needs alterations before the application can be started. If something needs to be done, even a simple thing, _mention it_. It is helpful not only for others but also for yourself. We should also describe the _system requirements_ for the application. For example, the required Java version. The example project uses Spring Boot version 3, which requires Java version 17 or higher.
+The developer guide shouldn't make too many assumptions, for example, that the reader of the documentation happens to know that the `application.properties` file needs alterations before the application can be started. If something needs to be done, even a simple thing, _mention it_. It is helpful not only for others but also for yourself. We should also describe the _system requirements_ for the application. For example, the required Java version. You can find it in the `pom.xml` file in the `java.version` property.
 
 Because developers use different IDEs, it is easier to describe how the application can be used using a command-line interface (such as Git Bash). On the command-line, we can use the Maven command `mvn` or the alias `./mvnw` to run different Maven commands. Using `./mvnw` (the [Maven wrapper](https://www.baeldung.com/maven-wrapper)) is a bit more convenient because it doesn't require Maven to be installed.
 
-Here's a simple developer guide on how to start the example project's backend application:
+Here's an example of step by step instructions on how to start a Spring Boot application on the command-line:
 
 1. Start the application by running the `./mvnw spring-boot:run` command on the command-line in the repository folder
 2. Once the application has started, visit <http://localhost:8080> in a web browser to use the application
@@ -751,15 +643,22 @@ The description should be so clear that your fellow student who knows nothing ab
 
 > Exercise 27
 >
-> Write developer guide documentation on _how to start the backend application_ to the `README.md` file. Add it under a "Developer guide" subheading. Also, mention the required Java version for the project. For the sake of readability code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown. 
+> Write a developer guide documentation on _how to start the backend application_ on the command-line to the `README.md` file. Also, mention the required Java version for the project. Add it under a "Developer guide" subheading.
+>
+> For the sake of readability, code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
 >
 > You can assume that the reader of the `README.md` file is a software developer who knows how to use a command-line interface, the basic Git commands and install the required Java version. _Make sure that instructions on the developer guide work_ by cloning a new version of the repository and executing the steps on the developer guide one by one.
->
-> Create an issue for the task. The "documentation" label is suitable for documentation-related issues.
 
 ## JAR
 
 A JAR (Java Archive) is a package file format typically used to aggregate many Java class files and associated metadata and resources (such as CSS files, JavaScript files and other assets) into one file to distribute application software or libraries on the Java platform. If a user wants to use our application, instead of providing them with the entire source code, we can just provide a JAR file containing everything needed to run our application.
+
+The name of the JAR file is specified by the `artifactId` and the `version` properties in the `pom.xml` file. Set these properties as following:
+
+```xml
+<artifactId>quizzer</artifactId>
+<version>0.0.1-SNAPSHOT</version>
+```
 
 We can generate a JAR file for the application with the following command:
 
@@ -767,17 +666,21 @@ We can generate a JAR file for the application with the following command:
 ./mvnw package
 ```
 
+The command output will display the path to the generated JAR file.
+
 {: .highlight }
 
 > If you have trouble generating the JAR file with the `./mvnw package` command, see if [this](problems-and-solutions#warning-java_home-environment-variable-is-not-set) solves the problem.
 
-The command will generate the JAR file under the `target` folder. Inside the folder there should be a file `quizzer-0.0.1-SNAPSHOT.jar`. If the application is currently running, for example in Eclipse, stop it. Then, run `java -jar target/quizzer-0.0.1-SNAPSHOT.jar` to run the application with the JAR file. Open the application in <http://localhost:8080> and see that it is working.
+If the application is currently running, for example in Eclipse, stop it. Then, run `java -jar target/quizzer-0.0.1-SNAPSHOT.jar` to run the application with the JAR file. Open the application in <http://localhost:8080> and see that it is working.
 
 {: .important-title }
 
 > Exercise 28
 >
 > Generate a JAR file for the application and run the application using the JAR file. Add instructions on how to generate and run the application using the JAR file to the "Developer guide" section in the `README.md` file.
+>
+> NB: The `target` folder (including the JAR file) _should not be pushed to GitHub_. The whole `target` folder is commonly ignored by Git using a `.gitignore` file. We'll get to the purpose of this file later. 
 
 {: .note }
 
@@ -816,6 +719,7 @@ spring.datasource.url=${POSTGRES_URL}
 spring.datasource.username=${POSTGRES_USERNAME}
 spring.datasource.password=${POSTGRES_PASSWORD}
 spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.hibernate.ddl-auto=update
 ```
 
 The values inside `${...}` are [environment variables](https://en.wikipedia.org/wiki/Environment_variable). We will define them in Render soon.
@@ -830,7 +734,22 @@ The PostgreSQL database requires a suitable driver for the application. Let's ad
 </dependency>
 ```
 
-Push these changes to GitHub.
+If you use a `CommandLineRunner` to initialize the database with test data each time the application starts, you will need to disable it in the production environment. This is because the application will restart multiple times, adding the same data to the database over and over again. 
+
+The easy way to solve this problem is to remove the `CommandLineRunner` method and use an embedded H2 database instead of an in-memory database in the development environment. Embedded database is stored to a file so the data won't vanish once the application is shut down. To use an embedded database, set the following properties in the `application.properties` file:
+
+```
+spring.datasource.url=jdbc:h2:file:~/quizzer;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
+spring.datasource.username=admin
+spring.datasource.password=password
+spring.datasource.driver-class-name=org.h2.Driver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+```
+
+This will save the database to a `~/quizzer.mv.db` file. If you want to reset the database and remove all the data, simply delete the file by running the `rm ~/quizzer.mv.db` command on the command-line.
+
+Now that we have the database-related changes in order, push these changes to GitHub before heading further.
 
 Finally, for the application itself, we need to create a web service. Complete the following steps to create a web service in the Render dashboard:
 
@@ -876,7 +795,6 @@ A quite common practice is to separate the development and production code with 
 > 2. Open the backend web service in the Render Dashboard and go to the "Settings" page. In the "Build & Deploy" section, set the "Branch" as "production" and "Auto-Deploy" as "Yes"
 > 3. Switch back to the main branch and make some small change in the code and push the changes to GitHub. Then, open a pull request. Set the _base_ branch as the production branch and the _compare_ branch as the main branch.
 > 4. Merge the pull request and check that the deployment works automatically
-> 5. Describe the purpose of the project's branches in the "Developer guide" section in the `README.md` file
 
 {: .note }
 

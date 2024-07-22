@@ -21,7 +21,7 @@ During this Sprint, each team member will write a [peer review](#peer-review) in
 
 {: .highlight }
 
-> At the end of this Sprint, each team member has to submit the [final report](#final-report) and the [peer review](#peer-review). Both of them are _required to pass the course_. Submitting either of them after the Sprint deadline will decrease the total points by 4 points.
+> At the end of this Sprint, each team member has to submit the [final report](#final-report) and the [peer review](#peer-review). Both of them are _required to pass the course_. Submitting either of them after the Sprint deadline will decrease the personal points.
 
 ## Retrospective
 
@@ -35,7 +35,7 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 >
 > Did similar issues arise as in Sprint 1 retrospective? If so, try to come up with different actions as before or ask the teacher for tips on how to solve these issues.
 >
-> Once you have completed the Retrospective write down the issues and actions to the repository's `documentation/retrospectives/sprint-2.md` file and push the changes to GitHub.
+> Once you have completed the Retrospective, add a link to the Retrospective's Flinga board and write down the successes, issues and actions you came up during the Retrospective to the repository's `retrospectives/sprint2.md` file and push the changes to GitHub.
 
 {: .important-title }
 
@@ -63,9 +63,9 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > After signing in, the teacher should be able to add a quiz or a category. However, the teacher should only be able to edit and delete quizzes and categories they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The same logic should be applied to the categories and quiz's questions. The quiz list should also display the username of the teacher who has added the quiz both in teacher and student dashboard.
 >
-> The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should not be able to add a review with a nickname less than three characters long, a blank review text or without a rating between 1 and 5.
+> The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should not be able to add a review with a nickname less than three characters long, a blank review text or without a rating between 1 and 5. Also, the student should not be able to review a non-published quiz.
 >
-> The review page should list the added reviews from newest to oldest order. Each review should display the information submitted by the student and the date when the review was written. The review page should also display the review summary at the top of the page. The review summary should include the number of reviews the quiz has and the rating average."
+> The review page should list the added reviews from newest to oldest order. Each review should display the information submitted by the student and the date when the review was written. The review page should also display the review summary at the top of the page. The review summary should include the number of reviews the quiz has and the rating average. It should also be possible for the student to edit and delete reviews in the review page."
 >
 > -- The Product Owner
 
@@ -77,6 +77,7 @@ After some discussion the Scrum Team planned the following user stories:
 4. {{site.sprint_3_user_story_4}}
 5. {{site.sprint_3_user_story_5}}
 6. {{site.sprint_3_user_story_6}}
+7. {{site.sprint_3_user_story_7}}
 
 {: .important-title }
 
@@ -98,19 +99,13 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project and move them to the "Sprint Backlog" column
 
-{: .important-title }
-
-> Exercise 6
->
-> Implement _at least two_ user stories in separate feature branches. Once the implementation is ready, open a pull request. At least one other team member should conduct a code review for the pull request and either approve it or request changes. Once the pull request has been approved, merge it to the main branch.
-
 {: .note }
 
 > The [Authentication](#authentication) section covers topics related to the authentication. Take a look at it before planning the authentication-related tasks.
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 6
 >
 > Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -122,7 +117,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 7
 >
 > Plan the tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -140,7 +135,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 8
 >
 > Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -158,7 +153,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 9
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -167,14 +162,10 @@ After some discussion the Scrum Team planned the following user stories:
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-3-user-story-add-review.png)
->
-> Tips for the tasks:
->
-> - First, consider what kind of data requirements the user story has. Then, implement a REST API endpoint for creating a review for a quiz
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 10
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_3_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -188,18 +179,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 12
->
-> _Implementation requirement:_ the REST API endpoint for returning a quiz by id should return the review summary information. The response body could be for example of the following format:
->
-> ```js
-> {
->   "name": "The capital cities of Europe",
->    // rest of the quiz attributes...
->   "reviewCount": 1,
->   "ratingAverage": 4,  
-> }
-> ```
+> Exercise 11
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_3_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -208,10 +188,18 @@ After some discussion the Scrum Team planned the following user stories:
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-3-user-story-review-summary.png)
+
+{: .important-title }
+
+> Exercise 12
 >
-> Tips for the tasks:
+> Plan the tasks for the seventh user story, "{{site.sprint_3_user_story_7}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> - Instead of returning an entity class object from the REST API endpoint method, implement a suitable DTO class for the response body
+> Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-3-user-story-review-summary.png)
 
 ## Testing
 
@@ -542,7 +530,17 @@ public void createMessageDoesNotSaveInvalidMessage() throws Exception {
 }
 ```
 
-The spring-boot-starter-test library provides other test functionalities except the `jsonPath` method used in the expectations. Before we start testing our REST API endpoints, let's add the json-path dependency to the `<dependencies>` list in the `pom.xml` file:
+The basic test functionalitis are provided by the spring-boot-starter-test library. Let's add it to the `<dependencies>` list in the `pom.xml` file
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+</dependency>
+```
+
+The `jsonPath` method used to access the JSON payload in the test expectations is provided by the json-path libary. Before we start testing our REST API endpoints, let's add the json-path dependency to the `<dependencies>` list in the `pom.xml` file:
 
 ```xml
 <dependency>
@@ -577,7 +575,6 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > - `getAllQuizzesReturnsEmptyListWhenNoQuizzesExist`: send a request without saving a quiz to the database. Then, the response should have an empty list
 > - `getAllQuizzesReturnsListOfPublishedQuizzesWhenQuizzesExist`: save a few quizzes (both published and non-published) to the database and send a request. Then, the response should have a list of the saved _published quizzes_
-> - An appropriate test methods for testing that the category filtering works. Implement separate test methods for success and error cases
 >
 > Create an issue for this task.
 
@@ -595,9 +592,8 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Implement the following test methods for the endpoint for _getting a quiz by id_:
 >
-> - `getQuizByIdReturnsPublishedQuizWhenQuizExists`: save a _published quiz_ to the database and send a request. Then, the response should have the saved quiz
+> - `getQuizByIdReturnsPublishedQuizWhenQuizExists`: save a quiz to the database and send a request. Then, the response should have the saved quiz
 > - `getQuizByIdReturnsErrorWhenQuizDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
-> - `getQuizByIdReturnsErrorWhenQuizIsNotPublished`: save a _non-published quiz_ to the database and send a request. Then, the response should have an appropriate HTTP status
 >
 > Create an issue for this task.
 
@@ -607,11 +603,10 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Implement the following test methods for the endpoint for _getting the questions of a quiz_:
 >
-> - `getQuestionsByQuizIdReturnsEmptyListWhenQuizDoesNotHaveQuestions`: save a _published quiz_ without questions to the database and send a request. Then, the response should have an empty list
-> - `getQuestionsByQuizIdReturnsListOfQuestionsWhenQuizHasQuestions`: save a _published quiz_ with a few questions to the database and send a request. Then, the response should have a list of the quiz's questions
-> - `getQuestionsByQuizIdReturnsErrorWhenQuestionDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
-> - `getQuestionsByQuizIdReturnsErrorWhenQuizIsNotPublished`: save a _non-published quiz_ with a few questions to the database and send a request. Then, the response should have an appropriate HTTP status
->
+> - `getQuestionsByQuizIdReturnsEmptyListWhenQuizDoesNotHaveQuestions`: save a quiz without questions to the database and send a request. Then, the response should have an empty list
+> - `getQuestionsByQuizIdReturnsListOfQuestionsWhenQuizHasQuestions`: save a quiz with a few questions to the database and send a request. Then, the response should have a list of the quiz's questions
+> - `getQuestionsByQuizIdReturnsAnswerOptionsOfQuestions`: save a quiz with a few questions and answer options to the database and send a request. Then, the response should include the list of answer options of the question
+> - `getQuestionsByQuizIdReturnsErrorWhenQuizDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
 > - An appropriate test methods for testing that the difficulty level filtering works. Implement separate test methods for success and error cases
 >
 > Create an issue for this task.
@@ -623,9 +618,9 @@ While testing your application's REST API endpoints, refer to the examples above
 > Implement a test class with the following test methods for the endpoint for _creating an answer_:
 >
 > - `createAnswerSavesValidAnswer`: save a _published quiz_ with a question to the database and send a request with a _valid request body_ (attributes should pass the validation). Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
-> - `createAnswerDoesNotSaveInvalidAnswer`: save a _published quiz_ with a question to the database and send a request with a _invalid request body_ (attributes should not pass the validation). Then, the response should status have an appropriate HTTP status and the database should not have any answers
-> - `createAnswerDoesNotSaveAnswerForNonExistingQuestion`: send a request with a non-existing question id in the request body. Then, the response should status have an appropriate HTTP status and the database should not have any answers
-> - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a request with a valid request body. Then, the response should status have an appropriate HTTP status and the database should not have any answers
+> - `createAnswerDoesNotSaveAnswerForNonExistingQuestion`: send a request with a non-existing question id in the request body. Then, the response should have an appropriate HTTP status and the database should not have any answers
+> - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a request with a valid request body. Then, the response should have an appropriate HTTP status and the database should not have any answers
+> - `createAnswerDoesNotSaveInvalidAnswer`: send a request without an answer option id in the request body (for example set as `null`). Then, the response should have an appropriate HTTP status and the database should not have any answers
 >
 > Create an issue for this task.
 
@@ -642,6 +637,53 @@ While testing your application's REST API endpoints, refer to the examples above
 > Exercise 21
 >
 > Add instructions on _how to run the tests_ to the "Developer guide" section in the `README.md` file. You can instruct the reader to use the `./mvnw test` command to run the tests.
+
+## ⭐ Bonus: Test coverage
+
+We have analyzed the code that we are testing and we are quite sure that our test scenarios cover everything. The good news is, that we don't need to trust only on our gut. There are so called _test coverage_ tools that analyze which lines of code our test scenarios cover and which they don't.
+
+[JaCoCo](https://www.eclemma.org/jacoco/) is one of the most widely used code coverage tools for Java. Let's add the jacoco-maven-plugin to the `<plugins>` list in the `pom.xml` file:
+
+```xml
+<plugin>
+    <groupId>org.jacoco</groupId>
+    <artifactId>jacoco-maven-plugin</artifactId>
+    <executions>
+        <execution>
+            <goals>
+                <goal>prepare-agent</goal>
+            </goals>
+        </execution>
+        <execution>
+            <id>report</id>
+            <phase>test</phase>
+            <goals>
+                <goal>report</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+```
+
+If we run the `./mvnw test` command in Git Bash, our tests are executed and JaCoCo will generate a _code coverage report_. Once the command has finished successfully, the code coverage report can be found as an `index.html` file in the `target/site/jacoco` folder. Open the `index.html` file in a web browser.
+
+The report displayes the coverage of each package. The "Cov" column determines the _percentage of lines covered by the tests_. Bigger the number, better the coverage. If we click a package name, we see the classes in the package. By clicking a class name, we see the methods of the class. By clicking a method we see the method's implementation as code.
+
+Green highlight indicates that the line _is fully covered_. Yellow highlight indicates that the line is _partially covered_. For example a certain condition of an `if` statement is not covered by a test. Red highlight indicates that line is _not covered_.
+
+{: .note }
+
+> Software development teams commonly decide the minimum test coverage percentage for the code. The test coverage is automatically checked each time new code is pushed to the repository. If the new code doesn't fullfill the minimum requirement, the code won't be integrated to the main branch of the repository. This is one of the practices of [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration).
+
+{: .note }
+
+> When we change the code (in the tests or in the application), we need to re-run `./mvnw test` to generate the coverage report for the latest tests.
+
+{: .important-title }
+
+> ⭐ Bonus exercise
+>
+> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the tested methods. Are all the lines of the methods fully covered by the tests? If not, implement appropriate test cases to cover the not convered or partly covered lines of the code.
 
 ## Authentication
 
@@ -787,12 +829,10 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 Write the final report for the course, which covers the following questions:
 
+- Scrum defines four events which take place during the Sprint. What are these events and what is the purpose of each event? How well did you succeed as a team to fulfil the purpose of each event?
+- Product backlog and Sprint backlog are perhaps the most important Scrum artifacts. What is their purpose? How well did your backlogs succeed to fulfil their purpose?
 - In which areas did you succeed _as a team_? In which areas there was room for improvement?
 - In which areas did you succeed _personally_? In which areas there was room for improvement?
-- What is the main goal of the Scrum's _Sprint Planning_ event? How well did you succeed in this goal as a team?
-- What is the main goal of the Scrum's _Daily Scrum_ event? How well did you succeed in this goal as a team?
-- What is the main goal of the Scrum's _Sprint Review_ event? How well did you succeed in this goal as a team?
-- What is the main goal of the Scrum's _Sprint Retrospective_ event? How well did you succeed in this goal as a team?
 - Based on your experiences during the course, what would be three important advice you would give to a new software development team? Justify why these advice are important
 - What did you learn during the course? What would you have wanted to learn more about?
 
