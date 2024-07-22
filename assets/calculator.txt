@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <p>
+      <label for="first">First number:</label>
+      <input type="text" id="first" />
+    </p>
+    <p>
+      <label for="second">Second number:</label>
+      <input type="text" id="second" />
+    </p>
+
+    <p>
+      <button onclick="addition()">Addition</button>
+      <button onclick="substration()">Substraction</button>
+      <button onclick="multiplication()">Multiplication</button>
+      <button onclick="division()">Division</button>
+      <button onclick="exponentation()">Exponentiation</button>
+    </p>
+
+    <p id="result">
+      Input your numbers and click on an operation to see the result
+    </p>
+
+    <script>
+      // ...
+    </script>
+  </body>
+</html>
