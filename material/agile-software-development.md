@@ -168,9 +168,9 @@ In the _requirements phase_ of the software development lifecycle, the stakehold
 
 For example, two separate user stories for a blog application could be the following:
 
-> As a content creator I want to create a new blog so that I can start writing blog posts for my readers.
+> As a content creator, I want to create a new blog so that I can start writing blog posts for my readers.
 
-> As a blog reader I want to browse list of blog posts of a blog so that I can find interesting posts to read.
+> As a blog reader, I want to browse list of blog posts of a blog so that I can find interesting posts to read.
 
 A user story is written from the user's perspective and commonly follows the following format:
 
@@ -240,6 +240,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > 1. "As a content creator, I want to submit a form that sends an HTTP POST request to the /api/blog-posts REST API endpoint on the server, which inserts a new row to the blog_posts database table so that I can publish a new blog post for my blog"
 > 2. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
 > 3. "As a content creator, I want my blog's layout to have a modern look so that I can write visually pleasing blog posts"
+> 4. "Write comments for blog posts"
 >
 > Justify your answer based on the INVEST criteria and general guideliness of a good user story.
 
@@ -250,7 +251,8 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > The Scrum Team came up with the following user stories during the Sprint Planning:
 >
 > 1. "As a blog reader, I want to submit a form that sends an HTTP POST request to the /api/comments REST API endpoint on the server, which inserts a new row to the comments database table so that I can share my ideas about the blog post"
-> 2. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
+> 2. "Add blog posts to favorites list"
+> 3. "As a user I, want to be able to sign in using username and password, Google, Facebook and GitHub"
 >
 > How would improve these user stories? Come up with a _well-written_ version of each user story.
 

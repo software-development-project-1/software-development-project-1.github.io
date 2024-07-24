@@ -195,6 +195,8 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > The teacher should be able to add questions to a quiz. For example, the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal". The teacher should not be able to add a question with a blank question text or without a difficulty level.
 >
+> The quiz also has a difficulty level which should be based on the average difficulty level of its questions. For example if a quiz has a "Easy" and a "Hard" difficulty level question, the quiz difficulty should be "Normal". The quiz difficulty level should be displayed along with other quiz-related information in the quiz list.
+>
 > The questions of a quiz should be listed on a separate page. Once a question has been added to a quiz, the teacher should be able to edit and delete it.
 >
 > The teacher should be able to add answer options to a question. For example, the "What is the capital of Finland?" question could have answer options "Turku", "Helsinki" and "Tampere". An answer option has an answer option text, for example "Turku", and a correctness status. Answer is either correct or not. For example, the "Turku" answer option would not be correct. The teacher should not be able to add an answer option with a blank answer option text. The answer option should not be correct by default.
