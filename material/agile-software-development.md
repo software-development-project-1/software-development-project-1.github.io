@@ -11,7 +11,7 @@ nav_order: 3
 
 ## Submitting this week's exercises
 
-All of this week's exercises (exercises 1-12) are submitted to [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a _single PDF file_. The submission deadline is on {{site.week_1_deadline}}.
+All of this week's exercises (exercises 1-14) are submitted to [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a _single PDF file_. The submission deadline is on {{site.week_1_deadline}}.
 
 {: .highlight }
 
@@ -85,7 +85,7 @@ _Scrum_ is an iterative software development process framework that defines prac
 
 The [Scrum Guide](https://scrumguides.org/scrum-guide.html) is the official guide to Scrum. During the course we will use Scrum to manage our software development process. This week we will learn about Scrum in theory and week three onwards we will apply the knowledge with our project.
 
-Before starting working on the exercises, read at least the chapters "Scrum Definition", "Scrum Theory", "Scrum Values", "Scrum Team", "Scrum Events" and "Scrum Artifacts" from the [Scrum Guide](https://scrumguides.org/scrum-guide.html).
+Before starting working on the exercises, read at least the "Scrum Definition", "Scrum Theory", "Scrum Values", "Scrum Team", "Scrum Events" and "Scrum Artifacts" chapters from the [Scrum Guide](https://scrumguides.org/scrum-guide.html).
 
 ![Scrum process](/assets/scrum.png)
 
@@ -158,13 +158,34 @@ Before starting working on the exercises, read at least the chapters "Scrum Defi
 > 8. The Manifesto for Agile Software Development provides a detailed description of how to manage a software development process
 > 9. It is the Scrum Master's responsibility to help other members in following the Scrum process
 
+{: .important-title }
+
+> Exercise 9
+>
+> What is the difference between the development process of Scrum and the [Waterfall model](https://en.wikipedia.org/wiki/Waterfall_model)? What are the benefits of Scrum's approach?
+
+
 ## Agile requirement specification
 
-In the _requirements phase_ of the software development lifecycle, the stakeholders' requirements for the software are defined and documented. In agile software development, requirements are commonly written as _user stories_. A user story is a short, simple description of a feature told from the perspective of the person who desires the new feature in the software. During each Sprint, the Developers of the Scrum Team implement features for the software based on the user stories.
+In the _requirements phase_ of the software development lifecycle, the stakeholders' requirements for the software are defined and documented. The software requirements specification document lists sufficient and necessary requirements for the project development. To derive the requirements, the developer needs to have a clear and thorough understanding of the products under development. This is achieved through detailed and continuous communications with the project team and customer throughout the software development process.
 
 {: .note }
 
-> The term "stakeholder" refers to the people or groups affected by a software development project. Stakeholders are for example the end users who use the software and the customer funding the project.
+> The term "stakeholders" refers to the people or groups affected by a software development project. Stakeholders are for example the end users who use the software and the customer funding the project.
+
+Software's requirements are commonly categorized as _functional_ and _non-functional requirements_. Functional requirements are the requirements stated by the user which one can see directly in the final product, unlike the non-functional requirements. For example the following requirements are functional requirements:
+
+> User should be able to register with a username and password
+
+> User should be able to see a list of latest blog posts of their favorite blogs
+
+Non-functional requirements on the other are quality constraints that the system must satisfy. These requirements can't be seen by the user but rather cover for example security and performance aspects of the system. For example the following requirements are functional requirements:
+
+> User's password should be stored in the database as a Bcrypt password hash upon registration
+
+> List of latest blog posts of user's favorite blogs should be loaded on average in a less than one second
+
+In agile software development, functional requirements are commonly written as _user stories_. A user story is a short, simple description of a feature told from the perspective of the person who desires the new feature in the software. During each Sprint, the Developers of the Scrum Team implement features for the software based on the user stories.
 
 For example, two separate user stories for a blog application could be the following:
 
@@ -233,7 +254,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 10
 >
 > What's wrong with the following user stories?
 >
@@ -246,19 +267,19 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 11
 >
 > The Scrum Team came up with the following user stories during the Sprint Planning:
 >
 > 1. "As a blog reader, I want to submit a form that sends an HTTP POST request to the /api/comments REST API endpoint on the server, which inserts a new row to the comments database table so that I can share my ideas about the blog post"
 > 2. "Add blog posts to favorites list"
-> 3. "As a user I, want to be able to sign in using username and password, Google, Facebook and GitHub"
+> 3. "As a user I, want to be able to sign in using username and password, Google, Facebook and GitHub so that I can authenticate"
 >
 > How would improve these user stories? Come up with a _well-written_ version of each user story.
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 12
 >
 > During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).
 >
@@ -268,7 +289,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > Imagine that you are the Product Owner of the project described in the [project description](/project-description).
 >
@@ -280,6 +301,6 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > The project teams will be assembled at the beginning of next week. If you have a preference for who you want to be in a team with, put your names in the same team in [this Flinga board]({{site.teams_flinga_link}}) (click the team's card and edit its content). The maximum size of a team is 5 members.

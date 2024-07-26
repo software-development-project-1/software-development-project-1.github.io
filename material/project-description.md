@@ -38,4 +38,4 @@ Although the high level requirements are the same, the team will decide on the t
 - Backend must be implemented with Java using the Spring Boot framework
 - Frontend must be implemented with React
 
-We will start by implementing backend features for the teachers during [Sprint 1](/sprint-1). Starting from [Sprint 2](/sprint-2) we will be implementing frontend features for the students. The [example project]({{site.example_project_link}}) will be used as the project starting point. It demonstrates the basic concepts and will get you started more quickly.
+To fulfill the Product Owner's requirements, two applications are implemented during the project. We will start by implementing backend features for the teachers during [Sprint 1](/sprint-1). Starting from [Sprint 2](/sprint-2) we will be implementing frontend features for the students.

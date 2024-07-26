@@ -15,7 +15,7 @@ nav_order: 4
 
 ## Submitting this week's exercises
 
-All of this week's exercises (exercises 1-15) are submitted to [this Moodle submission]({{site.week_2_moodle_submission_link}}). The submission should only contain the link to your GitHub repository created in exercise 7 and the information mentioned in exercise 15 and 16. The submission deadline is on {{site.week_2_deadline}}.
+All of this week's exercises (exercises 1-17) are submitted to [this Moodle submission]({{site.week_2_moodle_submission_link}}). The submission deadline is on {{site.week_2_deadline}}.
 
 ## Version control
 
@@ -677,25 +677,11 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 >
 > 1. Clone the git-practice repository to your local computer as instructed above and open the repository folder in Git Bash and in an editor such as Visual Studio Code.
 > 2. Change the contents of some file (for example the `git_practice.txt`) file and push the changes to GitHub. Open the repository in GitHub and see that it has the commit you created.
-> 3. Find out using Google, how you can find out the names and addresses of the remote repositories of a project. The answer is a command you should run inside the Git project, when a remote has been set.
+> 3. Find out using Google, how you can find out the names and addresses of the remote repositories of a project. The answer is a command you should run inside the Git project, when a remote has been set. _Add the command you used and the command ouput to the Moodle submission_.
 
 {: .important-title }
 
 > Exercise 15
->
-> _This is a team exercise_. Do the following steps with your team:
->
-> 1. Choose one of the team member's repository created previously. The owner of the repository should add other team members as [collaborators](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository). This way, other team members can make commits for the repository and work together on the same code base
-> 2. Other team members should clone the chosen repository. Once the repository is cloned, each team member should make a small change to some file and push the changes to GitHub to see that they can access the repository
-> 3. Add a `calculator.html` file to the repository with the [following content](/assets/calculator.txt)
-> 4. The file contains the user interface for a simple calculator with five operations: addition, substraction, multiplication, division and [exponentiation](https://en.wikipedia.org/wiki/Exponentiation). The calculator has five buttons for each of the operations and two input fields for the numbers to operate on. Clicking the operation's button should perform the operation for the two input numbers and print the result below the input fields. Only numbers should be accepted as inputs. Each team member should implement _exactly one operation_ which is defined as the function's event handler (for example, the addition operation should be implemented by implementing a `addition` function). If you have less than five team members, you can implement the remaining functions as you see fit
-> 5. Once each team member has implemented their operation, there should be a `calculator.html` file in the GitHub repository with an operating calculator. Each team member should make sure that the final version of the calculator works by pulling the code from the GitHub repository using the `git pull` command and testing the calculator on their computer
->
-> _Add the link to the GitHub repository in which you and your team implemented the calculator to the Moodle submission_.
-
-{: .important-title }
-
-> Exercise 16
 >
 > Explore an open source project repositories in GitHub. You can for example search for your favorite library (such as React) on the [GitHub's home page](https://github.com/) using the search field at the top of the page. Alternatively, you can use Google.
 >
@@ -707,6 +693,44 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > 4. GitHub username of the user who has the most commits in the repository (hint: check the repository's contributors)
 > 5. Link to the latest commit in the repository and the GitHub username of the commit's author
 
+{: .important-title }
+
+> Exercise 16
+>
+> _This is a team exercise_. The team start to work on the project the next week. If you are uncertain who your team members are, check their names on [Moodle]({{site.moodle_link}}). Get to know each other by introducing yourself to other team members. You can e.g. share the following things about yourself:
+>
+>  - Which parts of software development you are most interested in? (e.g. backend development, frontend development, databases...)
+>  - Which parts are you the most comfortable with?
+>  - Which are you less comfortable with?
+>  - From which parts you would want to learn more about?
+>  - What are your goals and expectations towards the course? For example, what do you want to learn during the course?
+>
+> Then, summarize your discussion by writing down the following things:
+>
+> - The names and GitHub usernames of your team members
+> - The name of your team
+> - What are your team's trengths and weaknesses?
+>
+> _Add these to the Moodle submission_.
+
+{: .important-title }
+
+> Exercise 17
+>
+> _This is a team exercise_. Do the following steps with your team:
+>
+> 1. Choose one of the team member's repository created previously. The owner of the repository should add other team members as [collaborators](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository). This way, other team members can make commits for the repository and work together on the same code base
+> 2. Other team members should clone the chosen repository. Once the repository is cloned, each team member should make a small change to some file and push the changes to GitHub to see that they can access the repository
+> 3. Add a `calculator.html` file to the repository with the [following content](/assets/calculator.txt)
+> 4. The file contains the user interface for a simple calculator with five operations: addition, substraction, multiplication, division and [exponentiation](https://en.wikipedia.org/wiki/Exponentiation). The calculator has five buttons for each of the operations and two input fields for the numbers to operate on. Clicking the operation's button should perform the operation for the two input numbers and print the result below the input fields. Only numbers should be accepted as inputs. Each team member should implement _exactly one operation_ which is defined as the function's event handler (for example, the addition operation should be implemented by implementing a `addition` function). If you have less than five team members, you can implement the remaining functions as you see fit
+> 5. Once each team member has implemented their operation, there should be a `calculator.html` file in the GitHub repository with an operating calculator. Each team member should make sure that the final version of the calculator works by pulling the code from the GitHub repository using the `git pull` command and testing the calculator on their computer
+>
+> _Add the link to the GitHub repository in which you and your team implemented the calculator to the Moodle submission_.
+
+{: .highlight }
+
+>  Make sure that the Moodle submission contains the link to your GitHub repository created in exercise 7 and the information mentioned in exercise 14, 15, 16 and 17.
+
 ## The End
 
 As a novice programmer it is easy to lose and even break code with version control. However, learning how to use one is definitely one of the most vital skills required in the working life. Though the system in use may not be Git, the same principles often apply.
@@ -715,6 +739,8 @@ If you run into a strange error message, don't be afraid to ask for help. Avoid 
 
 Hungry for more? You can read about Git from the following sources:
 
+- [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+  - The Conventional Commits specification describes how to write clean commit messages using structural conventions in the commit messages
 - [Git branch](https://www.atlassian.com/git/tutorials/using-branches) and [Git feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
   - Git branches are commonly used to isolate work-in-progress code from the main branch. The first article covers the basics of Git branches.
   - The second article describes a common software development workflow which utilizes Git branches.

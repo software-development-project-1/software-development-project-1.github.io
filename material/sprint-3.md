@@ -63,7 +63,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > After signing in, the teacher should be able to add a quiz or a category. However, the teacher should only be able to edit and delete quizzes and categories they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The same logic should be applied to the categories and quiz's questions. The quiz list should also display the username of the teacher who has added the quiz both in teacher and student dashboard.
 >
-> The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should not be able to add a review with a nickname less than three characters long, a blank review text or without a rating between 1 and 5. Also, the student should not be able to review a non-published quiz.
+> The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should not be able to add a review with a nickname less than three characters long, a blank review text or without a rating between 1 and 5. The student should not be able to review a non-published quiz.
 >
 > The review page should list the added reviews from newest to oldest order. Each review should display the information submitted by the student and the date when the review was written. The review page should also display the review summary at the top of the page. The review summary should include the number of reviews the quiz has and the rating average. It should also be possible for the student to edit and delete reviews in the review page."
 >
@@ -91,7 +91,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Make sure that all task related issues that have been completed during the Sprint 2 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
-> If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 3".
+> If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 3". If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks. 
 
 {: .important-title }
 
@@ -128,10 +128,6 @@ After some discussion the Scrum Team planned the following user stories:
 > ![](/assets/sprint-3-user-story-2-1.png)
 >
 > ![](/assets/sprint-3-user-story-2-2.png)
->
-> Tips for implementing the tasks:
->
-> - [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
 
 {: .important-title }
 
@@ -146,10 +142,6 @@ After some discussion the Scrum Team planned the following user stories:
 > ![](/assets/sprint-3-user-story-3-1.png)
 >
 > ![](/assets/sprint-3-user-story-3-2.png)
->
-> Tips for the tasks:
->
-> - [Retrieve User Information in Spring Security](https://www.baeldung.com/get-user-in-spring-security)
 
 {: .important-title }
 
@@ -683,7 +675,9 @@ Green highlight indicates that the line _is fully covered_. Yellow highlight ind
 
 > ⭐ Bonus exercise
 >
-> Use the jacoco-maven-plugin in the project as instructed above. Generate a coverage report and check the coverage of the tested methods. Are all the lines of the methods fully covered by the tests? If not, implement appropriate test cases to cover the not convered or partly covered lines of the code.
+> 1. Use the jacoco-maven-plugin in the project as instructed above
+> 2. Generate a coverage report and check the coverage of the tested methods. Are all the lines of the methods fully covered by the tests? If not, implement appropriate test cases to cover the not convered or partly covered lines of the code
+> 3. Implement more tests to increase the test coverage of the project
 
 ## Authentication
 
@@ -795,7 +789,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 > Exercise 24
 >
-> Make sure that all project-related documentation, such as project description, data model documentation, architecture documentation and Swagger documentation is up-to-date.
+> Make sure that all project-related documentation, such as project description, data model documentation, architecture documentation and Swagger documentation is up-to-date. Also, add a few [screenshots](https://www.take-a-screenshot.org/) of the most important features of the application to the `README.md` file's project description to demonstrate what the application looks like. [Here](https://cloudinary.com/guides/web-performance/4-ways-to-add-images-to-github-readme-1-bonus-method) is a guide on how to use images in Markdown.
 
 {: .important-title }
 

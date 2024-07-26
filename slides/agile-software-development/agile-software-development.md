@@ -301,13 +301,4 @@ Welcome to the Software Development Project 1 course!
 
 - If the description of the feature contains words like "and" or "or", it could be that the user story can be split into smaller user stories
 
----
 
-# Meet your team
-
-- Let's form teams of 4-5 students for the project starting on week three
-- Each team member should introduce themselves to others. You can e.g. share the following things about yourself:
-  - Which parts of software development you are most interested in? (e.g. backend development, frontend development, databases...)
-  - Which parts are you most comfortable with?
-  - From which parts you would want to learn more about?
-  - What are your expectations towards the course?

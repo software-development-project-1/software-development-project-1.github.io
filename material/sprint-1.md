@@ -175,6 +175,10 @@ Finally, let's make sure that our project is public. Click the project's name an
 
 The project will be empty for now, but we will add some user stories and tasks for the project after the Sprint Planning event.
 
+{: .note }
+
+> There are as many different backlog implementations as there are software development teams. The presented backlog implementation isn't the industry standard or the only correct one but perhaps a fairly good starting point. Scrum emphasizes constant process improvement and the backlog implementation should be constantly improved to better suit your team's needs.
+
 {: .important-title }
 
 > Exercise 5
@@ -287,11 +291,11 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > Read through the [User stories and tasks](#user-stories-and-tasks) section. Then, plan the tasks for the first user story, "{{site.sprint_1_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Consider the following things in the tasks:
+> Consider for example the following things in the tasks:
 > 
-> - What kind of data requirements does the user story have? What kind JPA entity and repository class needs to be implemented?
-> - What kind of user interface requirements does the user story have? What kind of Thymeleaf template needs to be implemented?
-> - What kind of controller requirements does the user story have? What kind of controller class needs to be implemented?
+> - What kind of data requirements does the user story have?
+> - What kind of user interface requirements does the user story have?
+> - What kind of controller requirements does the user story have?
 > 
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
@@ -370,6 +374,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 Here's a few tips before you start implementing the tasks:
 
 - Use the full potential of your team and _work together_. Plan the tasks together, implement the tasks together and support each other
+- Maintain active communication regarding the Sprint progress. Keeping the Sprint Backlog up-to-date is important but also share your progress and problems actively with your team members face-to-face or via Teams or other communication platform
 - _Push_ code to the GitHub repository often. Once you have some _working_ code, use `git add`, `git commit`, `git push` commands to push the code to GitHub
 - _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer
 - While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts)
@@ -543,7 +548,7 @@ git checkout <name-of-my-branch>
 
 > We usually want to create new branch of the main branch. This means that before creating a new branch with the `git branch <name-of-the-branch>` command, switch to the main branch by running the `git checkout main` command. If you are uncertain which is the current branch, check it with the `git branch` command.
 
-Next, make some small change for the project, for example by changing a button text or color in a Thymeleaf template or changing a variable name in a method. If there's some small code or user interface improvement you have in mind, this is the time to do it. Once you have made the change, check the status with `git status` command, add the changes with the `git add` command and create a commit with the `git commit` command. Feel free to do multiple commits if needed.
+Next, make some small change for the project, for example by changing a button text or color in the user interface or changing a variable name in a method. If there's some small code or user interface improvement you have in mind, this is the time to do it. You can also consider implementing one of the remaining user stories or tasks in a feature branch. Once you have made the change, check the status with `git status` command, add the changes with the `git add` command and create a commit with the `git commit` command. Feel free to do multiple commits if needed.
 
 Then let's switch back to the main branch with the `git checkout main` command. If we check for the changes we made in the other branch, we see that they are no longer present. That's because the commits we made _only exist in our other branch_.
 
@@ -738,7 +743,7 @@ The PostgreSQL database requires a suitable driver for the application. Let's ad
 
 If you use a `CommandLineRunner` to initialize the database with test data each time the application starts, you will need to disable it in the production environment. This is because the application will restart multiple times, adding the same data to the database over and over again. 
 
-The easy way to solve this problem is to remove the `CommandLineRunner` method and use an embedded H2 database instead of an in-memory database in the development environment. Embedded database is stored to a file so the data won't vanish once the application is shut down. To use an embedded database, set the following properties in the `application.properties` file:
+The easy way to solve this problem is to remove the `CommandLineRunner` method and use an embedded [H2 database](https://www.baeldung.com/spring-boot-h2-database) instead of an in-memory database in the development environment. Embedded database is stored to a file so the data won't vanish once the application is shut down. To use an embedded database, set the following properties in the `application.properties` file:
 
 ```
 spring.datasource.url=jdbc:h2:file:~/quizzer;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
@@ -793,14 +798,15 @@ A quite common practice is to separate the development and production code with 
 
 > Exercise 30
 >
-> 1. Create a "production" branch of the main branch. Then, push the branch to GitHub using the `git push origin -u production` command
+> 1. Create a `production` branch of the main branch. Then, push the branch to GitHub using the `git push origin -u production` command
 > 2. Open the backend web service in the Render Dashboard and go to the "Settings" page. In the "Build & Deploy" section, set the "Branch" as "production" and "Auto-Deploy" as "Yes"
 > 3. Switch back to the main branch and make some small change in the code and push the changes to GitHub. Then, open a pull request. Set the _base_ branch as the production branch and the _compare_ branch as the main branch.
 > 4. Merge the pull request and check that the deployment works automatically
+> 5. Explain the purpose of the `main` and the `production` branch in the `README.md` file. How are these two separate branches used in your project's Git workflow?
 
 {: .note }
 
-> When you want to deploy the application to the production environment, open a pull request as described above. _Don't wait until the end of the Sprint for the deployment_. Once you have a meaningful set of features implement, deploy the application.
+> When you want to deploy the application to the production environment, open a pull request as described above. _Don't wait until the end of the Sprint for the deployment_. Once you have a meaningful set of features implement, deploy the application and _test that the new features work in the production environment_.
 
 ## GitHub release
 

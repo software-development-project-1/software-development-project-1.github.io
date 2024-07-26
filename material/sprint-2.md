@@ -15,7 +15,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-33. The team can earn up to 15 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-35. The team can earn up to 15 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -110,7 +110,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again".
 >
-> There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. There should be a link to the results page next to the quiz in the quiz list page.
+> There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. Also the total number of answers for the quiz should be displayed. There should be a link to the results page next to the quiz in the quiz list page.
 >
 > Students have different skill levels so it would be useful if the student could filter the questions of quiz by the difficulty level in the quiz page. There could be dropdown menu at the top of the page from which the student can select the difficulty level for the questions."
 >
@@ -143,13 +143,29 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
-> If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 2".
+> If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 2". If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks. 
 
 {: .important-title }
 
 > Exercise 5
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 2". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
+
+{: .important-title }
+
+> ⭐ Bonus exercise
+>
+> To practice the [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow), implement some user stories or tasks in separate feature branches. Name the branch based on the feature, for example `add-category` or `list-quizzes-rest-api`. Create a separate branch for each feature (don't reuse the branch you created during the previous Sprint). For example:
+>
+> ```bash
+> # first, make sure that we are on the main branch
+> git checkout main
+> git branch add-category
+> git checkout add-category
+> # time to start coding
+> ```
+>
+> Once the implementation in the branch is ready, open a pull request and let some other team member review it. Once the reviewer accepts the changes, merge the pull request to the main branch.
 
 {: .important-title }
 
@@ -505,7 +521,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 > Exercise 15
 >
-> Implement a REST API endpoint for _getting the questions of a quiz_. In this case, instead of using the `@JsonIgnore` annotation, use [@JsonManagedReference and @JsonBackReference](https://www.baeldung.com/jackson-bidirectional-relationships-and-infinite-recursion) annotations to include the question's answer options in to the JSON response.
+> Implement a REST API endpoint for _getting the questions of a quiz_. In this case, instead of using the `@JsonIgnore` annotation, you can use [@JsonManagedReference and @JsonBackReference](https://www.baeldung.com/jackson-bidirectional-relationships-and-infinite-recursion) annotations to include the question's answer options in to the JSON response.
 >
 > Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -519,7 +535,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 > Exercise 16
 >
-> Implement a REST API endpoint for _creating an answer_ for a quiz's question. Before implementing the endpoint itself, consider what kind of entity class needs to be implemented to store an answer related to a question's answer option. Return an appropriate HTTP status code and error message in the following error case:
+> Implement a REST API endpoint for _creating an answer_ for a quiz's question. Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. Return an appropriate HTTP status code and error message in the following error case:
 >
 > - Answer option with the provided id does not exist
 > - Quiz is not published
@@ -563,9 +579,21 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
+{: .important-title }
+
 > Exercise 19
 >
-> Implement a REST API endpoint for _getting the quizzes of a category_. Only _published quizzes of the category_ should be returned by the endpoint. Return an appropriate HTTP status code and error message in the following error case:
+> Implement a REST API endpoint for _getting a category by id_. Return an appropriate HTTP status code and error message in the following error case:
+>
+> - Category with the provided id does not exist
+>
+> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+
+{: .important-title }
+
+> Exercise 20
+>
+> Implement a REST API endpoint for _getting the quizzes of a category_ in newest to oldest order. Only _published quizzes of the category_ should be returned by the endpoint. Return an appropriate HTTP status code and error message in the following error case:
 >
 > - Category with the provided id does not exist
 >
@@ -654,13 +682,13 @@ public Message getMessageById(@PathVariable Long id) {
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 21
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response. 
 >
 > Test each REST API endpoint by opening the endpoint's documentation and cliking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an `id` path parameter value of a non-existing quiz.
 >
-> Add a link to the Swagger documentation in the production environment (in Render) under a "REST API" subheading in the `README.md` file. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui/index.html>. Deploy the backend application to Render and make sure that the Swagger documentation is accessible. Also make sure that error message is visible in the JSON response.
+> Add a link to the Swagger documentation in the production environment (in Render) under a "REST API" subheading in the `README.md` file. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui/index.html>. Deploy the backend application to Render and make sure that the Swagger documentation is accessible. Also make sure that the error messages are visible in the JSON response by testing some REST API endpoint with an invalid request.
 
 ## Communication between frontend and backend
 
@@ -757,7 +785,7 @@ export default function MessageList() {
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
 > Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You don't necessarily need a separate repository for the frontend application, you can initialize it in folder within the current repository.
 
@@ -788,7 +816,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 23
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -800,7 +828,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 24
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -814,7 +842,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 25
 >
 > Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -825,14 +853,10 @@ public class MessageRestController {
 > ![](/assets/sprint-2-user-story-7-1.png)
 >
 > ![](/assets/sprint-2-user-story-7-2.png)
->
-> Tips for the tasks:
->
-> - The feedback notification can be implemented for example with the Material UI [Snackbar](https://mui.com/material-ui/react-snackbar/) component or with a library such as [notistack](https://notistack.com/)
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 26
 >
 > Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_9}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -844,7 +868,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 27
 >
 > Plan the tasks for the tenth user story, "{{site.sprint_2_user_story_10}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -858,7 +882,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 28
 >
 > Plan the tasks for the eleventh user story, "{{site.sprint_2_user_story_11}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -870,7 +894,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 28
+> Exercise 29
 >
 > Plan the tasks for the twelfth user story, "{{site.sprint_2_user_story_12}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -882,7 +906,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 29
+> Exercise 30
 >
 > Add instructions on _how to start the frontend application_ to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
@@ -904,7 +928,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 30
+> Exercise 31
 >
 > Write the first version of the project's _architecture documentation_. Add the documentation under a "Architecture" subheading in the `README.md` file. The documentation should contain the following things:
 >
@@ -933,7 +957,7 @@ The ignored files (or in this case, the ignored folders) are specified by each l
 
 {: .important-title }
 
-> Exercise 31
+> Exercise 32
 >
 > Make sure that your project has a `.gitignore` file which at least ignores the frontend's `node_modules` folder, the frontend's build folder (this is `dist` folder in case of a Vite project) and the backend's `target` folder. It is ok for the repository to have multiple `.gitignore` files in different folders (for example having a different `.gitignore` file for the frontend's folder).
 >
@@ -945,7 +969,7 @@ The ignored files (or in this case, the ignored folders) are specified by each l
 
 We managed to deploy the backend during the previous Sprint, but we still haven't deployed the frontend. We can deploy the frontend to Render with the following steps:
 
-1. In the `frontend` folder, add a `.env` [environment variable](https://vitejs.dev/guide/env-and-mode) file for the _development environment_. The `.env` file should contain a `VITE_BACKEND_URL` environment variable for the backend's _development environment URL_:
+1. In the frontend folder, add a `.env` [environment variable](https://vitejs.dev/guide/env-and-mode) file for the _development environment_. The `.env` file should contain a `VITE_BACKEND_URL` environment variable for the backend's _development environment URL_:
 
    ```
    VITE_BACKEND_URL=http://localhost:8080
@@ -969,14 +993,14 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 1. On the Render dashboard, click the "New" button and choose "Static Site"
 1. From the repository list, find you project's repository and click the "Connect" button
-1. Come up with the name for the service. If the frontend application is not initialized in the repository's root folder (this is the case if you don't have a separate repository for the frontend application), set "Root Directory" as the folder's name. Set "Build Command" as `npm run build` and "Publish Directory" as `dist`
+1. Come up with the name for the service. If the frontend application is not initialized in the repository's root folder (this is the case if you don't have a separate repository for the frontend application), set "Root Directory" as the frontend folder's name. Set "Build Command" as `npm run build` and "Publish Directory" as `dist`
 1. Click the "Advanced" button and set "Auto-Deploy" as "Yes" and "Branch" as "production"
 1. Click the "Create Static Site" button to create the service
 1. On the service's page, click "Redirects/Rewrites" from the navigation on the left. Set the "Source" as `/*`, "Destination" as `/index.html` and "Action" as "Rewrite". Finally, click the "Save Changes" button. This configuration will make the frontend routing work
 
 {: .important-title }
 
-> Exercise 32
+> Exercise 33
 >
 > Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Developer guide" section in the `README.md` file.
 
@@ -986,13 +1010,13 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 33
+> Exercise 34
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 34
+> Exercise 35
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the features in the production environment.
 >
