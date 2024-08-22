@@ -301,7 +301,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-user-story-1.png)
+> ![](/assets/sprint-1-us-1-add-quiz.png)
 
 {: .important-title }
 
@@ -313,7 +313,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-user-story-2.png)
+> ![](/assets/sprint-1-us-2-list-quizzes.png)
 
 {: .important-title }
 
@@ -325,9 +325,9 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-user-story-3-1.png)
+> ![](/assets/sprint-1-us-3-1-edit-quiz.png)
 >
-> ![](/assets/sprint-1-user-story-3-2.png)
+> ![](/assets/sprint-1-us-3-2-edit-quiz.png)
 
 {: .important-title }
 
@@ -339,7 +339,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-user-story-4.png)
+> ![](/assets/sprint-1-us-4-delete-quiz.png)
 
 {: .important-title }
 
@@ -440,9 +440,9 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-user-story-5-1.png)
+> ![](/assets/sprint-1-us-5-1-add-question.png)
 >
-> ![](/assets/sprint-1-user-story-5-2.png)
+> ![](/assets/sprint-1-us-5-2-add-question.png)
 
 {: .important-title }
 
@@ -454,19 +454,17 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-user-story-6-1.png)
+> ![](/assets/sprint-1-us-6-1-list-questions.png)
 >
-> ![](/assets/sprint-1-user-story-6-2.png)
+> ![](/assets/sprint-1-us-6-2-list-questions.png)
+>
+> ![](/assets/sprint-1-us-6-3-list-questions.png)
 
 {: .important-title }
 
 > Exercise 19
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_1_user_story_7}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-1-user-story-7.png)
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
@@ -488,7 +486,9 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-user-story-8.png)
+> ![](/assets/sprint-1-us-9-1-add-answer-option.png)
+>
+> ![](/assets/sprint-1-us-9-2-add-answer-option.png)
 
 {: .important-title }
 
@@ -500,11 +500,9 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-user-story-9-1.png)
+> ![](/assets/sprint-1-us-10-1-list-answer-options.png)
 >
-> ![](/assets/sprint-1-user-story-9-2.png)
->
-> ![](/assets/sprint-1-user-story-9-3.png)
+> ![](/assets/sprint-1-us-10-2-list-answer-options.png)
 
 {: .important-title }
 
@@ -515,8 +513,6 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-2-user-story-1.png)
 
 ## Git branches
 
@@ -800,7 +796,7 @@ A quite common practice is to separate the development and production code with 
 >
 > 1. Create a `production` branch of the main branch. Then, push the branch to GitHub using the `git push origin -u production` command
 > 2. Open the backend web service in the Render Dashboard and go to the "Settings" page. In the "Build & Deploy" section, set the "Branch" as "production" and "Auto-Deploy" as "Yes"
-> 3. Switch back to the main branch and make some small change in the code and push the changes to GitHub. Then, open a pull request. Set the _base_ branch as the production branch and the _compare_ branch as the main branch.
+> 3. Switch back to the main branch and make some small change in the code and push the changes to GitHub. Then, open a pull request. Set the _base_ branch as the `production` branch and the _compare_ branch as the `main` branch.
 > 4. Merge the pull request and check that the deployment works automatically
 > 5. Explain the purpose of the `main` and the `production` branch in the `README.md` file. How are these two separate branches used in your project's Git workflow?
 

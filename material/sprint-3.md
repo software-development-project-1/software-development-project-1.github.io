@@ -55,7 +55,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "We now have the basic features for managing and taking quizzes. What we still need is a way for the teachers to manage their personal quizzes.
 >
-> The teacher should be able to register with a username and password in the teacher dashboard. The teacher should not be able to register with a username less than three characters long or a password less than eight characters long. The username should not be already taken by another registered user. The user should also be required to retype the password to make sure that they didn't accidently mistype the password.
+> The teacher should be able to register with a username, email, bio and password in the teacher dashboard. The teacher should not be able to register with a username less than three characters long or a password less than eight characters long. The username should not be already taken by another registered user. The teacher can use the bio to describe themselves. The bio is optional but shouldn't be more than 160 characters long. The user should also be required to retype the password to make sure that they didn't accidently mistype the password.
 >
 > Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
 >
@@ -113,7 +113,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-3-user-story-1.png)
+> ![](/assets/sprint-3-us-1-register.png)
 
 {: .important-title }
 
@@ -125,9 +125,9 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-3-user-story-2-1.png)
+> ![](/assets/sprint-3-us-2-1-sign-in.png)
 >
-> ![](/assets/sprint-3-user-story-2-2.png)
+> ![](/assets/sprint-3-us-2-2-sign-in.png)
 
 {: .important-title }
 
@@ -139,9 +139,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-3-user-story-3-1.png)
->
-> ![](/assets/sprint-3-user-story-3-2.png)
+> ![](/assets/sprint-3-us-3-personal-quizzes.png)
 
 {: .important-title }
 
@@ -153,7 +151,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-3-user-story-add-review.png)
+> ![](/assets/sprint-3-us-4-add-review.png)
 
 {: .important-title }
 
@@ -165,9 +163,9 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-3-user-story-4-1.png)
+> ![](/assets/sprint-3-us-5-1-list-reviews.png)
 >
-> ![](/assets/sprint-3-user-story-list-reviews.png)
+> ![](/assets/sprint-3-us-5-2-list-reviews.png)
 
 {: .important-title }
 
@@ -176,10 +174,6 @@ After some discussion the Scrum Team planned the following user stories:
 > Plan the tasks for the sixth user story, "{{site.sprint_3_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-3-user-story-review-summary.png)
 
 {: .important-title }
 
@@ -188,10 +182,6 @@ After some discussion the Scrum Team planned the following user stories:
 > Plan the tasks for the seventh user story, "{{site.sprint_3_user_story_7}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-3-user-story-review-summary.png)
 
 ## Testing
 

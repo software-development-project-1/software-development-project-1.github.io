@@ -177,7 +177,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-2.png)
+> ![](/assets/sprint-2-us-1-add-category.png)
 
 {: .important-title }
 
@@ -189,7 +189,9 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-3.png)
+> ![](/assets/sprint-2-us-2-1-list-categories.png)
+>
+> ![](/assets/sprint-2-us-2-2-list-categories.png)
 
 {: .important-title }
 
@@ -201,9 +203,9 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-4-1.png)
+> ![](/assets/sprint-2-us-3-1-select-quiz-category.png)
 >
-> ![](/assets/sprint-2-user-story-4-2.png)
+> ![](/assets/sprint-2-us-3-2-select-quiz-category.png)
 
 {: .important-title }
 
@@ -521,9 +523,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 > Exercise 15
 >
-> Implement a REST API endpoint for _getting the questions of a quiz_. In this case, instead of using the `@JsonIgnore` annotation, you can use [@JsonManagedReference and @JsonBackReference](https://www.baeldung.com/jackson-bidirectional-relationships-and-infinite-recursion) annotations to include the question's answer options in to the JSON response.
->
-> Return an appropriate HTTP status code and error message in the following error case:
+> Implement a REST API endpoint for _getting the questions of a quiz_. In this case, instead of using the `@JsonIgnore` annotation, you can use [@JsonManagedReference and @JsonBackReference](https://www.baeldung.com/jackson-bidirectional-relationships-and-infinite-recursion) annotations to include the question's answer options in to the JSON response. Return an appropriate HTTP status code and error message in the following error case:
 >
 > - Quiz with the provided id does not exist
 >
@@ -576,8 +576,6 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 > Implement a REST API endpoint for _getting all categories_ in alphabetical order by the name.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
-
-{: .important-title }
 
 {: .important-title }
 
@@ -824,7 +822,7 @@ public class MessageRestController {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-5.png)
+> ![](/assets/sprint-2-us-6-list-quizzes.png)
 
 {: .important-title }
 
@@ -836,9 +834,9 @@ public class MessageRestController {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-6-1.png)
+> ![](/assets/sprint-2-us-7-1-quiz-questions.png)
 >
-> ![](/assets/sprint-2-user-story-6-2.png)
+> ![](/assets/sprint-2-us-7-2-quiz-questions.png)
 
 {: .important-title }
 
@@ -850,9 +848,9 @@ public class MessageRestController {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-7-1.png)
+> ![](/assets/sprint-2-us-8-1-answer-quiz.png)
 >
-> ![](/assets/sprint-2-user-story-7-2.png)
+> ![](/assets/sprint-2-us-8-2-answer-quiz.png)
 
 {: .important-title }
 
@@ -864,7 +862,9 @@ public class MessageRestController {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-8.png)
+> ![](/assets/sprint-2-us-9-1-quiz-results.png)
+>
+> ![](/assets/sprint-2-us-9-2-quiz-results.png)
 
 {: .important-title }
 
@@ -876,9 +876,7 @@ public class MessageRestController {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-9-1.png)
->
-> ![](/assets/sprint-2-user-story-9-2.png)
+> ![](/assets/sprint-2-us-10-list-categories.png)
 
 {: .important-title }
 
@@ -890,7 +888,9 @@ public class MessageRestController {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-10.png)
+> ![](/assets/sprint-2-us-11-1-category-quizzes.png)
+>
+> ![](/assets/sprint-2-us-11-2-category-quizzes.png)
 
 {: .important-title }
 
@@ -902,7 +902,7 @@ public class MessageRestController {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-user-story-10.png)
+> ![](/assets/sprint-2-us-12-difficulty-picker.png)
 
 {: .important-title }
 
