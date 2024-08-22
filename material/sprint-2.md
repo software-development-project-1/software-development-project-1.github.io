@@ -469,12 +469,12 @@ server.error.include-message=always
 
 ### Omitting attributes from the JSON response body
 
-By default _all the attributes_ are present in the JSON response body. We can omit attributes from the JSON response body by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on an attribute. We usually want to omit attributes that hold private information, for example user's password hash, or attributes that can potentially contain lots of data, for example, the `@OneToMany` annotated attributes. We can, for example omit the `questions` attribute of the `Quiz` entity class in the following way:
+By default _all the attributes_ are present in the JSON response body. We can omit attributes from the JSON response body by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on an attribute. We usually want to omit attributes that hold private information, for example user's password hash, or attributes that can potentially contain lots of data, for example, the `@OneToMany` annotated attributes. We can, for example omit the `messages` attribute of a `User` entity class in the following way:
 
 ```java
 @JsonIgnore
-@OneToMany(mappedBy = "quiz")
-private List<Question> questions;
+@OneToMany(mappedBy = "user")
+private List<Message> messages;
 ```
 
 To have more control over the attributes in the JSON response, [DTO](https://www.baeldung.com/java-dto-pattern) classes can be used instead of returning the entity classes directly from the controller methods.
@@ -527,7 +527,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 >
 > - Quiz with the provided id does not exist
 >
-> [Request parameters](https://www.baeldung.com/spring-request-param) are used to provide additional properties with the request. A common use-case for request parameter is filtering a collection based on some property, for example `/messages?content=Hello`. The endpoint should support an optional request parameter for filtering the quizzes by a category, such as `?difficulty=Easy`. That is, if the request parameter is provided, only questions of the quiz with the provided difficulty level should be returned.
+> [Request parameters](https://www.baeldung.com/spring-request-param) are used to provide additional properties with the request. A common use-case for a request parameter is filtering a collection based on some property, for example `/messages?content=Hello`. The endpoint should support an optional request parameter for filtering the quizzes by a category, such as `?difficulty=Easy`. That is, if the request parameter is provided, only questions of the quiz with the provided difficulty level should be returned.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
