@@ -41,7 +41,7 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 
 > Exercise 2
 >
-> Choose a new Scrum Master among the team members for the third Sprint.
+> Choose a new (not the same team member as during the previous Sprint) Scrum Master among the team members for the third Sprint.
  
 ## 🏃‍♂️ Sprint 3 planning
 
@@ -55,7 +55,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "We now have the basic features for managing and taking quizzes. What we still need is a way for the teachers to manage their personal quizzes.
 >
-> The teacher should be able to register with a username, email, bio and password in the teacher dashboard. The teacher should not be able to register with a username less than three characters long or a password less than eight characters long. The username should not be already taken by another registered user. The teacher can use the bio to describe themselves. The bio is optional but shouldn't be more than 160 characters long. The user should also be required to retype the password to make sure that they didn't accidently mistype the password.
+> The teacher should be able to register with a username, email, bio and password in the teacher dashboard. The teacher should not be able to register with a username less than three characters long or a password less than eight characters long. The email should resemble a valid email address. The username or email should not be already taken by another registered user. The teacher can use the bio to describe themselves. The bio is optional but shouldn't be more than 160 characters long. The user should also be required to retype the password to make sure that they didn't accidently mistype the password.
 >
 > Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
 >
@@ -139,7 +139,9 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-3-us-3-personal-quizzes.png)
+> ![](/assets/sprint-3-us-3-1-personal-quizzes.png)
+>
+> ![](/assets/sprint-3-us-3-2-personal-quizzes.png)
 
 {: .important-title }
 

@@ -292,12 +292,16 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > Read through the [User stories and tasks](#user-stories-and-tasks) section. Then, plan the tasks for the first user story, "{{site.sprint_1_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Consider for example the following things in the tasks:
-> 
+>
 > - What kind of data requirements does the user story have?
 > - What kind of user interface requirements does the user story have?
 > - What kind of controller requirements does the user story have?
-> 
+>
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+>
+> Tips for the tasks:
+>
+> - Implement appropriate validation for the user input. [This](https://www.baeldung.com/spring-thymeleaf-error-messages) guide covers the basics of the topic
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -511,8 +515,6 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 > Plan the tasks for the eleventh user story, "{{site.sprint_1_user_story_11}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 
 ## Git branches
 
@@ -683,7 +685,7 @@ If the application is currently running, for example in Eclipse, stop it. Then, 
 >
 > Generate a JAR file for the application and run the application using the JAR file. Add instructions on how to generate and run the application using the JAR file to the "Developer guide" section in the `README.md` file.
 >
-> NB: The `target` folder (including the JAR file) _should not be pushed to GitHub_. The whole `target` folder is commonly ignored by Git using a `.gitignore` file. We'll get to the purpose of this file later. 
+> NB: The `target` folder (including the JAR file) _should not be pushed to GitHub_. The whole `target` folder is commonly ignored by Git using a `.gitignore` file. We'll get to the purpose of this file later.
 
 {: .note }
 
@@ -737,7 +739,7 @@ The PostgreSQL database requires a suitable driver for the application. Let's ad
 </dependency>
 ```
 
-If you use a `CommandLineRunner` to initialize the database with test data each time the application starts, you will need to disable it in the production environment. This is because the application will restart multiple times, adding the same data to the database over and over again. 
+If you use a `CommandLineRunner` to initialize the database with test data each time the application starts, you will need to disable it in the production environment. This is because the application will restart multiple times, adding the same data to the database over and over again.
 
 The easy way to solve this problem is to remove the `CommandLineRunner` method and use an embedded [H2 database](https://www.baeldung.com/spring-boot-h2-database) instead of an in-memory database in the development environment. Embedded database is stored to a file so the data won't vanish once the application is shut down. To use an embedded database, set the following properties in the `application.properties` file:
 
