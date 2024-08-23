@@ -231,7 +231,7 @@ These are the user stories, that you will be working on as a team during this Sp
 
 > Exercise 6
 >
-> Choose the [Scrum Master](https://scrumguides.org/scrum-guide.html#scrum-master) among the team members for the first Sprint. The Scrum Master should facilitate the team's meetings and make sure that the backlogs are up-to-date.
+> Choose the [Scrum Master](https://scrumguides.org/scrum-guide.html#scrum-master) among the team members for the first Sprint. The Scrum Master should help other team members with following the Scrum process, for example by facilitating the team's meetings and making sure that the backlogs are kept up-to-date.
 
 ## GitHub issues
 

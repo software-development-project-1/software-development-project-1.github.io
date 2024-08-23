@@ -537,7 +537,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .note }
 
-> You can run the tests for the project either in Eclipse or by running the `./mvnw test` command in Git Bash.
+> You can run the tests for the project either in Eclipse or by running the `./mvnw test` command on the command-line.
 
 {: .important-title }
 
@@ -618,7 +618,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 21
 >
-> Add instructions on _how to run the tests_ to the "Developer guide" section in the `README.md` file. You can instruct the reader to use the `./mvnw test` command to run the tests.
+> Add instructions on _how to run the tests_ on the command-line to the "Developer guide" section in the `README.md` file.
 
 ## ⭐ Bonus: Test coverage
 
