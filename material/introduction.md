@@ -19,7 +19,21 @@ All of this week's exercises (exercises 1-14) are submitted to [this Moodle subm
 
 ## What makes a software development project?
 
-TODO
+When there's a need for a software and appropriate funding a software development team is gathered and a software development project starts. Depending of the budget and scope of the project, the timespan of a software development can be anything from a few months to many years.
+
+A software development project affects many people. For example, the software's end users get to use features they desire and the customer gets financial value for the project they are funding. These people or groups of people affected by a software development project are referred to as the software development project's _stakeholders_.
+
+![Stakeholders](/assets/stakeholders.webp)
+
+On top of technical skills, the future of software developer's work will mostly likely consist more and more on understanding the needs of the stakeholders and applying technical solutions to meet those needs.
+
+> "If you go forward 24 months from now, or some amount of time -- I can't exactly predict where it is -- it's possible that most developers are not coding. It just means that each of us has to get more in tune with what our customers need and what the actual end thing is that we're going to try to go build because that's going to be more and more of what the work is as opposed to sitting down and actually writing code"
+>
+> -- Matt Garman, CEO of Amazon Web Services (AWS) in 2024. Source: [Amazon Cloud CEO Predicts a Future Where Most Software Engineers Don't Code -- and AI Does It Instead](https://www.entrepreneur.com/business-news/amazon-web-services-ceo-ai-will-code-for-software-engineers/478800)
+
+A software development team is responsible for the outcome of the project. It is a diverse and self-organized group of people consisting of not only technical people. The team can consist for example a representive of the end users (commonly referred to as a product owner), user-experience (UI) and user-interface (UX) designers, project managers, quality assurance (QA) engineers and sofware developers. The size of team varies, but they commonly consist of fewer than 10 people.
+
+So that a software development team can work together efficiently they need to follow a _common process_ in their day-to-day work referred to as a software development process. Many of the modern software development processes follow so called agile principles which we will cover next.
 
 ## Agile software development
 
@@ -173,10 +187,6 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 ## Agile requirement specification
 
 In the _requirements phase_ of the software development lifecycle, the stakeholders' requirements for the software are defined and documented. The software requirements specification document lists sufficient and necessary requirements for the project development. To derive the requirements, the developer needs to have a clear and thorough understanding of the products under development. This is achieved through detailed and continuous communications with the project team and customer throughout the software development process.
-
-{: .note }
-
-> The term "stakeholders" refers to the people or groups affected by a software development project. Stakeholders are for example the end users who use the software and the customer funding the project.
 
 Software's requirements are commonly categorized as _functional_ and _non-functional requirements_. Functional requirements are the requirements stated by the user which one can see directly in the final product, unlike the non-functional requirements. For example the following requirements are functional requirements:
 

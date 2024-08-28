@@ -13,7 +13,7 @@ On the third week the teams start working on the project. The project advances i
 
 | Week   | Topics                                                                       | Exercises                                                |
 | ------ | ---------------------------------------------------------------------------- | -------------------------------------------------------- |
-| 25.3. | [Intorudction to software development projects](/agile-software-development)          | Exercises 1 - 14, deadline on {{site.week_1_deadline}}   |
+| 25.3. | [Introduction to software development projects](/agile-software-development)          | Exercises 1 - 14, deadline on {{site.week_1_deadline}}   |
 | 1.4. | [Version control: Git and GitHub](/git)                                      | Exercises 1 - 17, deadline on {{site.week_2_deadline}}   |
 | 8.4.  | 🏃‍♂️ [Sprint 1](/sprint-1): Sprint Planning, Scrum backlogs, GitHub's workflow | Exercises 1 - 32, deadline on {{site.sprint_1_deadline}} |
 | 15.4. | Daily Scrum, Git branches, Sprint Review                                     |                                                          |
