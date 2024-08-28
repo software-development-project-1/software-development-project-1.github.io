@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Agile software development and Scrum
-permalink: /agile-software-development
+title: Introduction to software development projects
+permalink: /introduction
 nav_order: 3
 ---
 
 {% include toc.html %}
 
-# Agile software development and Scrum
+# Introduction to software development projects
 
 ## Submitting this week's exercises
 
@@ -16,6 +16,10 @@ All of this week's exercises (exercises 1-14) are submitted to [this Moodle subm
 {: .highlight }
 
 > This week's exercises need to be submitted before the deadline on {{site.week_1_deadline}} to confirm the course participation.
+
+## What makes a software development project?
+
+TODO
 
 ## Agile software development
 
@@ -117,6 +121,7 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 > 1. What is the Product Backlog?
 > 2. What is the Sprint Backlog?
 > 3. What is the difference between the Product Backlog and the Sprint Backlog?
+> 4. What is the Definition of Done? What is its relationship with the Product Backlog?
 
 {: .important-title }
 

@@ -27,7 +27,7 @@ The course has a Teams team for all course related discussions. When you have tr
 
 {: .highlight }
 
-> The first week's exercises in [Agile software development and Scrum](/agile-software-development) need to be submitted before the deadline to confirm course participation.
+> The first week's exercises in [Introduction to software development projects](/introduction) need to be submitted before the deadline to confirm course participation.
 
 The assessment is based on the team's project and the personal contributions of a team member.
 
