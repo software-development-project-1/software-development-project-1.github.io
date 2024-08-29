@@ -547,7 +547,9 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 >
 > - Quiz with the provided id does not exist
 >
-> [Request parameters](https://www.baeldung.com/spring-request-param) are used to provide additional properties with the request. A common use-case for a request parameter is filtering a collection based on some property, for example `/messages?content=Hello`. The endpoint should support an optional request parameter for filtering the quizzes by a category, such as `?difficulty=Easy`. That is, if the request parameter is provided, only questions of the quiz with the provided difficulty level should be returned.
+> [Request parameters](https://www.baeldung.com/spring-request-param) are used to provide additional properties with the request. A common use-case for a request parameter is filtering a collection based on some property, for example `/messages?content=Hello`.
+>
+> The endpoint should support an optional request parameter for filtering the questions of a quiz by a difficulty level. That is, if the request parameter is provided, only the questions with the provided difficulty level should be returned.
 >
 > Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
 
