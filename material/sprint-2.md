@@ -94,7 +94,7 @@ A common question among the team member's which is asked frequently for example 
 
 > Exercise 3
 >
-> Read the following [article](https://www.scrum.org/resources/what-definition-done) on the Definition of Done. Then, define your project's Definition of Done together and write it down in the `README.md` file under the "Defition of Done" heading. You can consider for example the following quality measures in your Definition of Done:
+> Read the following [article](https://www.scrum.org/resources/what-definition-done) on the Definition of Done. Then, define your project's Definition of Done together and write it down in the `README.md` file under the "Definition of Done" heading. You can consider for example the following quality measures in your Definition of Done:
 >
 > - Should the task be deployed to the production environment? 
 > - Should the task be manually tested both in development and in production environment?
