@@ -7,7 +7,7 @@ Welcome to the Software Development Project 1 course!
 # Agile software development and Scrum
 
 - The learning objectives for this week are:
-  - Knowing about the course contents, assesment and schedule
+  - Knowing about the course contents, assessment and schedule
   - Knowing what is agile software development
   - Knowing what is the software development lifecycle
   - Knowing what is Scrum
@@ -29,41 +29,42 @@ Welcome to the Software Development Project 1 course!
 
 - Each team will be developing a project described on the course page
 - The project is a web application implemented with _Java_ programming language using the _Spring Boot framework_
-- _JavaScript_ and _React_ is used as a frontend technology
+- _JavaScript_ and _React_ are used as a frontend technologies
+- The final application will be a _full stack_ application in which a frontend communicates with a backend 
 - The development of the project is split into _three_ two-week iterations called _Sprints_
 - Each Sprint has high-level requirements, but teams should make most of the technical decisions themselves
 - The project starts on week three
 
 ---
 
-# Course assesment
+# Assessment
 
-- The assessment is based on the _team’s project_ and the _personal contributions_ of a team member
+- The assessment is based on the _team's project_ and the _personal contributions_ of a team member
 - The project assessment is based on the following aspects:
   - Technical implementation
   - Project management
   - Documentation
   - Following the schedule
 - Each of the three Sprints is assessed based on the Sprint requirements
-- The team can earn up to 10 points from each Sprint which adds up to the maximum number of 30 points from the project
+- The team can earn up to 40 points from the project (15 + 15 + 10 points)
 
 ---
 
-# Course assesment
+# Assessment
 
-- Each team member’s personal assessment is based on the following aspects:
+- Each team member's personal assessment is based on the following aspects:
   - Activity in team work
   - Technical contributions
   - Project management and documentation contributions
   - Exercise submissions
-- The personal assessment is done based on the teacher’s observations and peer reviews from the team members
-- Each team member can earn up to 10 points based on their personal efforts towards the project
+- The personal assessment is done based on the teacher's observations and peer reviews from the team members
+- Each team member can earn up to 20 points based on their personal efforts towards the project
 
 ---
 
-# Course assesment
+# Assessment
 
-- The final grade (1-5) is composed of the project points (maximum of 30 points) and the personal points (maximum of 10 points)
+- The final grade (1-5) is composed of the project points (maximum of 40 points) and the personal points (maximum of 20 points)
 - The following are necessary to pass the course:
   - At least 80% of the first two week's exercises have to be completed before their deadlines to pass the course
   - Written peer review for each team member
@@ -72,7 +73,7 @@ Welcome to the Software Development Project 1 course!
 
 ---
 
-# Course schedule
+# Schedule
 
 - There's weekly sessions during which we will cover different topics
 - Attendance on weekly sessions is _mandatory_
@@ -81,6 +82,62 @@ Welcome to the Software Development Project 1 course!
 - During the team work we will learn about new topics, but most importantly we will learn how to apply our new knowledge in practice
 - Both individual exercises and project exercises have _deadlines_
 - The detailed schedule can be found on the course page
+
+---
+
+# What makes a software development project?
+
+- So far during the studies we have implemented software mostly alone with more or less detailed instructions on what to do
+- In real world software is developed in _software development projects_ by a diverse group of people referred to as the _software development team_
+- Depending of the budget and scope of the project, the timespan of a software development can be anything from a few months to many years
+
+---
+
+# Stakeholders
+
+- A software development project affects many people in different ways
+- For example, the software's end users get to use features they desire and the customer gets financial value for the project they are funding
+- The people or groups of people affected by a software development project are referred to as the software development project's _stakeholders_
+
+![width:800px](./stakeholders.webp)
+
+---
+
+# Stakeholders
+
+> "If you go forward 24 months from now, or some amount of time -- I can't exactly predict where it is -- it's possible that most developers are not coding. It just means that each of us has to get more in tune with what our customers need and what the actual end thing is that we're going to try to go build because that's going to be more and more of what the work is as opposed to sitting down and actually writing code"
+>
+> -- Matt Garman, CEO of Amazon Web Services (AWS) in 2024
+
+- On top of technical skills, the future of software developer's work will mostly likely consist more and more on understanding the needs of the stakeholders and applying technical solutions to meet those needs
+
+---
+
+# Software development team
+
+- A software development team is responsible for the outcome of the project
+- It is a diverse and self-organized group of people consisting of not only technical people
+- The team can consist for example a representive of the end users (commonly referred to as a product owner), user-experience (UI) and user-interface (UX) designers and sofware developers
+- The size of team varies, but they commonly consist of fewer than 10 people
+- So that a software development team can work together efficiently they need to follow a _common process_ in their day-to-day work
+- This process is referred to as a _software development process_
+
+---
+
+# Problems with software development projects
+
+- What kind of problems does software development projects commonly have?
+- Are the problems technical such as programming errors or something else?
+
+---
+
+# Problems with software development projects
+
+- Based on a [study conducted in 2022](https://idego-group.com/blog/2022/02/17/problems-in-software-development-developers-survey-results-blog/), _70% of software development problems are non-technical_. The three most common problems raised were:
+  - Bad management
+  - Bad communication
+  - Customer-related issues
+- These are among the problems that the software development process should tackle
 
 ---
 
@@ -162,8 +219,7 @@ Welcome to the Software Development Project 1 course!
 
 - In the _test phase_, the development team combines automation and manual testing to check that the software works as intended
 - In practice, the test phase isn't usually separated from the implementation phase
-- This means that software developers usually implement a small coding task, write automated test cases for the task and moves on to the next task.
-- Testing the software is usually considered to be the responsibility of the software developer who wrote the code, because _they are most familiar with the implementation_
+- This means that software developers usually implement a small coding task, write automated test cases for the task and moves on to the next task
 
 ---
 
@@ -176,7 +232,7 @@ Welcome to the Software Development Project 1 course!
 
 ---
 
-# Software development licefycle in agile software development
+# Agile software development lifecycle
 
 ![bg fit right:30%](./agile-lifecycle.png)
 
@@ -247,9 +303,9 @@ Welcome to the Software Development Project 1 course!
 # User story
 
 - For example, two separate user stories for a blog application could be the following:
-  - "As a content creator, I want to create a new blog so that I can start writing blog posts."
-  - "As a blog reader, I want to browse list of blog posts of a blog so that I can find interesting posts to read."
-- A user story is written from the user’s perspective and commonly follows the following format:
+  - "As a content creator, I want to create a new blog so that I can start writing blog posts"
+  - "As a blog reader, I want to browse list of blog posts of a blog so that I can find interesting posts to read"
+- A user story is written from the user's perspective and commonly follows the following format:
 
   > As [a user persona], I want [to perform this action] so that [I can accomplish this goal].
 
@@ -261,23 +317,23 @@ Welcome to the Software Development Project 1 course!
 - This means, that the description should be written so that the _customer can understand it_
 - For example the following user story is too technical:
 
-  > ❌ As a blog reader, I want to send an HTTP GET request to the /api/blogs/{id}/blog-posts REST API endpoint on the server to get the list of blog posts of a blog in JSON format so that I can find interesting blog posts to read.
+  > ❌ As a blog reader, I want to send an HTTP GET request to the /api/blogs/{id}/blog-posts REST API endpoint to get the list of blog's blog posts in JSON format so that I can find interesting blog posts to read
 
-- A better user story would express the feature from the user’s point of view:
+- A better user story would express the feature from the user's point of view:
 
-  > ✅ As a blog reader, I want to browse the list of blog posts of a blog so that I can find interesting posts to read.
+  > ✅ As a blog reader, I want to browse the list of blog posts of a blog so that I can find interesting posts to read
 
 ---
 
 # The INVEST criteria
 
-- There are also other common guidelines for a good user story. One popular guideline is the _INVEST criteria_
-- _Independent_: written so they can be developed and tested independently of other stories.
-- _Negotiable_: written to allow for negotiation between the development team and the customer.
+- The _INVEST criteria_ is one popular guideline for a good user story
+- _Independent_: written so they can be developed and tested independently of other stories
+- _Negotiable_: written to allow for negotiation between the development team and the customer
 - _Valuable_: should provide value to the end user.
-- _Estimable_: written in a way that allows the development team to estimate the amount of effort required to complete them.
-- _Small_: small enough to be completed within a single iteration of the development process.
-- _Testable_: written to allow testing to be performed at the end of the development process.
+- _Estimable_: written in a way that allows the development team to estimate the amount of effort required to complete them
+- _Small_: small enough to be completed within a single iteration of the development process
+- _Testable_: written to allow testing to be performed at the end of the development process
 
 ---
 
@@ -285,7 +341,7 @@ Welcome to the Software Development Project 1 course!
 
 - Which INVEST criteria does the following user story violate?
 
-  > ❌ As a content creator, I want to register with a username and password, a profile picture, and a profile description so that I can start writing blog posts.
+  > ❌ As a content creator, I want to register with a username and password, a profile picture, and a profile description so that I can start writing blog posts
 
 ---
 
@@ -293,11 +349,11 @@ Welcome to the Software Development Project 1 course!
 
 - It is better to split these kinds of big user stories into multiple smaller user stories:
 
-  > ✅ As a content creator, I want to register with a username and password so that I can start writing blog posts.
+  > ✅ As a content creator, I want to register with a username and password so that I can start writing blog posts
 
-  > ✅ As a content creator, I want to register with a profile picture so that my readers know what I look like.
+  > ✅ As a content creator, I want to register with a profile picture so that my readers know what I look like
 
-  > ✅ As a content creator, I want to register with a profile description so that my readers know about me.
+  > ✅ As a content creator, I want to register with a profile description so that my readers know about me
 
 - If the description of the feature contains words like "and" or "or", it could be that the user story can be split into smaller user stories
 
