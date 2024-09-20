@@ -105,11 +105,11 @@ Welcome to the Software Development Project 1 course!
 
 # Stakeholders
 
-> "If you go forward 24 months from now, or some amount of time -- I can't exactly predict where it is -- it's possible that most developers are not coding. It just means that each of us has to get more in tune with what our customers need and what the actual end thing is that we're going to try to go build because that's going to be more and more of what the work is as opposed to sitting down and actually writing code"
->
-> -- Matt Garman, CEO of Amazon Web Services (AWS) in 2024
-
 - On top of technical skills, the future of software developer's work will mostly likely consist more and more on understanding the needs of the stakeholders and applying technical solutions to meet those needs
+
+  > "If you go forward 24 months from now, or some amount of time -- I can't exactly predict where it is -- it's possible that most developers are not coding. It just means that each of us has to get more in tune with what our customers need and what the actual end thing is that we're going to try to go build because that's going to be more and more of what the work is as opposed to sitting down and actually writing code"
+  >
+  > -- Matt Garman, CEO of Amazon Web Services (AWS) in 2024
 
 ---
 
@@ -126,8 +126,9 @@ Welcome to the Software Development Project 1 course!
 
 # Problems with software development projects
 
-- What kind of problems does software development projects commonly have?
-- Are the problems technical such as programming errors or something else?
+- Developing a software based on the stakeholders needs in a software development team isn't simple and many things can (and often does) go wrong
+- Which problems do you think software development projects commonly have? Are the problems technical such as programming errors or something else?
+- First discuss, then share your thoughts on the three of the biggest problems at TODO
 
 ---
 
