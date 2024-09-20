@@ -128,7 +128,7 @@ Welcome to the Software Development Project 1 course!
 
 - Developing a software based on the stakeholders needs in a software development team isn't simple and many things can (and often does) go wrong
 - Which problems do you think software development projects commonly have? Are the problems technical such as programming errors or something else?
-- First discuss, then share your thoughts on the three of the biggest problems at TODO
+- First discuss, then share your thoughts on the three of the most common problems
 
 ---
 

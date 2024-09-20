@@ -165,6 +165,12 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 
 > Exercise 8
 >
+> What is the difference between the development process of Scrum and the [Waterfall model](https://en.wikipedia.org/wiki/Waterfall_model)? What are the benefits of Scrum's approach?
+
+{: .important-title }
+
+> Exercise 9
+>
 > Are the following statements true or false? Justify your answer.
 >
 > 1. Only the Product Owner plans the requirements for the upcoming Sprint during the Sprint Planning event
@@ -176,13 +182,6 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 > 7. A larger Scrum Team is more productive than a smaller one
 > 8. The Manifesto for Agile Software Development provides a detailed description of how to manage a software development process
 > 9. It is the Scrum Master's responsibility to help other members in following the Scrum process
-
-{: .important-title }
-
-> Exercise 9
->
-> What is the difference between the development process of Scrum and the [Waterfall model](https://en.wikipedia.org/wiki/Waterfall_model)? What are the benefits of Scrum's approach?
-
 
 ## Agile requirement specification
 
