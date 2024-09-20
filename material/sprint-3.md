@@ -42,7 +42,7 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 > Exercise 2
 >
 > Choose a new (not the same team member as during the previous Sprint) Scrum Master among the team members for the third Sprint.
- 
+
 ## 🏃‍♂️ Sprint 3 planning
 
 {: .highlight}
@@ -91,7 +91,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Make sure that all task related issues that have been completed during the Sprint 2 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
-> If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 3". If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks. 
+> If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 3". If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks.
 
 {: .important-title }
 

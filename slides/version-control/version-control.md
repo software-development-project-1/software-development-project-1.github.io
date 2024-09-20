@@ -6,6 +6,7 @@
   - Knowing how to create a git project
   - Knowing how to use the most common git commands
   - Knowing how to publish a git project in GitHub
+  - Knowing how to collaborate in a git project
 
 ---
 
