@@ -153,23 +153,17 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 3
->
-> Create a new milestone for the second Sprint. Set the milestone title as "Sprint 2".
-
-{: .important-title }
-
 > Exercise 4
 >
 > Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
-> If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 2". If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks. 
+> Create a new milestone for the second Sprint. If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 2". If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks. 
 
 {: .important-title }
 
 > Exercise 5
 >
-> Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 2". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
+> Create an issue for each _user story_. Add the "user story" label for each issue. Set the Sprint milestone and add the issues to the backlog.
 
 {: .important-title }
 
@@ -193,7 +187,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Plan the tasks for the first user story, "{{site.sprint_2_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -205,7 +199,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -219,7 +213,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -233,7 +227,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
 {: .important-title }
 
@@ -241,7 +235,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
 {: .important-title }
 
@@ -527,7 +521,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 >
 > Implement a REST API endpoint for _getting all quizzes_ in newest to oldest order. Only _published quizzes_ should be returned by the endpoint.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
 {: .important-title }
 
@@ -537,7 +531,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 >
 > - Quiz with the provided id does not exist
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
 {: .important-title }
 
@@ -551,7 +545,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 >
 > The endpoint should support an optional request parameter for filtering the questions of a quiz by a difficulty level. That is, if the request parameter is provided, only the questions with the provided difficulty level should be returned.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
 {: .important-title }
 
@@ -579,7 +573,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 > }
 > ```
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
 {: .important-title }
 
@@ -589,7 +583,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 >
 > - Quiz with the provided id does not exist
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
 {: .important-title }
 
@@ -597,7 +591,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 >
 > Implement a REST API endpoint for _getting all categories_ in alphabetical order by the name.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
 {: .important-title }
 
@@ -607,7 +601,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 >
 > - Category with the provided id does not exist
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
 {: .important-title }
 
@@ -617,7 +611,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 >
 > - Category with the provided id does not exist
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
 {: .note }
 
@@ -840,7 +834,7 @@ public class MessageRestController {
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -852,7 +846,7 @@ public class MessageRestController {
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -866,7 +860,7 @@ public class MessageRestController {
 >
 > Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
 > Tips for the tasks:
 >
@@ -884,7 +878,7 @@ public class MessageRestController {
 >
 > Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_9}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -898,7 +892,7 @@ public class MessageRestController {
 >
 > Plan the tasks for the tenth user story, "{{site.sprint_2_user_story_10}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -910,7 +904,7 @@ public class MessageRestController {
 >
 > Plan the tasks for the eleventh user story, "{{site.sprint_2_user_story_11}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -924,7 +918,7 @@ public class MessageRestController {
 >
 > Plan the tasks for the twelfth user story, "{{site.sprint_2_user_story_12}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 2". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >

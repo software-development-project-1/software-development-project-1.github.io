@@ -15,7 +15,7 @@ For the final Sprint of the course, the Sprint 3, we have a new set of requireme
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
 
-The Sprint assesment is done based on the exercises 1-27. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
+The Sprint assesment is done based on the exercises 1-26. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 30.
 
 During this Sprint, each team member will write a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 10 personal points.
 
@@ -83,21 +83,15 @@ After some discussion the Scrum Team planned the following user stories:
 
 > Exercise 3
 >
-> Create a new milestone for the third Sprint. Set the milestone title as "Sprint 3".
+> Make sure that all task related issues that have been completed during the Sprint 2 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
+>
+> Create a new milestone for the third Sprint. If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 3". If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks.
 
 {: .important-title }
 
 > Exercise 4
 >
-> Make sure that all task related issues that have been completed during the Sprint 2 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
->
-> If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 3". If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks.
-
-{: .important-title }
-
-> Exercise 5
->
-> Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 3". Add the issues to the Backlog project and move them to the "Sprint Backlog" column
+> Create an issue for each _user story_. Add the "user story" label for each issue. Set the Sprint milestone and add the issues to the backlog.
 
 {: .note }
 
@@ -105,11 +99,11 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 5
 >
 > Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -117,11 +111,11 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 6
 >
 > Plan the tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -131,11 +125,11 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 7
 >
 > Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -145,11 +139,11 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 8
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -157,11 +151,11 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 9
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_3_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -171,19 +165,19 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 10
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_3_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 11
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_3_user_story_7}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 3". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
 ## Testing
 
@@ -309,7 +303,7 @@ The configuration in the `src/test/resources/application.properties` file will b
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 12
 >
 > Add a test-specific configuration file and configure a separate database for the tests. Make sure that running the tests doesn't alter (for example delete any data) the development environment database.
 
@@ -543,7 +537,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 13
 >
 > To classify test-related issues, create a new "test" [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels). Add the "test" label for issues that are related to testing (automated or manual) some part of the application.
 
@@ -553,7 +547,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 14
 >
 > Create a new package `fi.haagahelia.quizzer.controller` to the `src/test/java` folder for the project's controller class tests. Implement a test class within the package with the following test methods for the endpoint for _getting all (published) quizzes_:
 >
@@ -564,7 +558,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 15
 >
 > Implement appropriate test methods for the endpoint for _getting all categories_.
 >
@@ -572,7 +566,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 16
 >
 > Implement the following test methods for the endpoint for _getting a quiz by id_:
 >
@@ -583,7 +577,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 17
 >
 > Implement the following test methods for the endpoint for _getting the questions of a quiz_:
 >
@@ -597,7 +591,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 18
 >
 > Implement a test class with the following test methods for the endpoint for _creating an answer_:
 >
@@ -610,7 +604,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 19
 >
 > Implement appropriate test methods for the endpoint for _getting the answers of a quiz_.
 >
@@ -618,7 +612,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 20
 >
 > Add instructions on _how to run the tests_ on the command-line to the "Developer guide" section in the `README.md` file.
 
@@ -765,7 +759,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title}
 
-> Exercise 22
+> Exercise 21
 >
 > Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
@@ -773,19 +767,19 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 22
 >
 > Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 23
 >
 > Make sure that all project-related documentation, such as project description, data model documentation, architecture documentation and Swagger documentation is up-to-date. Also, add a few [screenshots](https://www.take-a-screenshot.org/) of the most important features of the application to the `README.md` file's project description to demonstrate what the application looks like. [Here](https://cloudinary.com/guides/web-performance/4-ways-to-add-images-to-github-readme-1-bonus-method) is a guide on how to use images in Markdown.
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 24
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -807,7 +801,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 25
 >
 > Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 
@@ -826,7 +820,7 @@ Submit the final report as _a single PDF file_ to [this Moodle submission]({{sit
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 26
 >
 > Write the final report as instructed above.
 
