@@ -111,7 +111,7 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 
 > Exercise 1
 >
-> Read the "Scrum Team" chapter of the Scrum Guide and answer the following questions in your own words:
+> Read the "Scrum Team" chapter of the Scrum Guide and [this](https://www.atlassian.com/agile/scrum/roles) article. Then, answer the following questions in your own words:
 >
 > 1. What are the different roles in a Scrum Team?
 > 2. What are the responsibilities of each role?
