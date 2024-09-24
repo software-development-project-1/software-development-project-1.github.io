@@ -220,9 +220,11 @@ The "a user persona" part describes the user role who wants to use the feature d
 
 In Scrum, the whole Scrum Team participates in writing the user stories. This is done during the Sprint Planning event at the beginning of the Sprint. The Product Owner's responsibility is to decide which user stories get done first (perhaps during the next Sprint) and which can wait for later. This _priorization_ of the Developers' work is among the most important responsibilities of the Product Owner.
 
+{: .important-title }
+
 > Exercise 10
 >
-> Come up with _at least two_ user stories from an application you have used, e.g. Moodle. Use the format described earlier. The user stories should have a different user role (the "a user persona" part in the user story format).
+> Come up with _at least three_ user stories from an application you have used, e.g. Moodle. Use the format described earlier. The user stories should have _at lest two_ different user roles (the "a user persona" part in the user story format).
 
 ## Writing good user stories
 
