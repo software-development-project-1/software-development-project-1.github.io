@@ -404,11 +404,13 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 >
 > 1. At the beginning of the file add the project name "Quizzer" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
 > 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
-> 3. Below the description, add a subheading "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name.
+> 3. Below the description, add a subheading "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name and their GitHub username.
 > 4. Each team member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
 > 5. Below the "Team members" section, add a subheading "Backlog" and below that add a link to the Backlog project created previously (open the Backlog project in GitHub and copy the URL from the web browser's address bar).
 >
 > Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
+
+The [Awesome README](https://github.com/matiassingers/awesome-readme?tab=readme-ov-file) repository contains a curated list of repositories with awesome READMEs for inspiration.
 
 ## Daily Scrum
 
@@ -627,7 +629,7 @@ Finally, resolve the conflicts and add, commit and push the changes to GitHub. N
 
 ## Developer guide documentation
 
-Now that we have implemented some features for our application that the users can use it is time to describe _how_ to use the application. The _developer guide_ is perhaps one of the most important pieces of documentation for the application. It will describe our fellow developers how to technically use the application. This means for example, how to start the application, how to package the application, and how to run tests.
+Now that we have implemented some features for our application that the users can use it is time to describe _how_ to use the application. The _developer guide_ is perhaps one of the most important pieces of documentation for the application. It will describe our fellow developers how to technically use the application. This means for example, how to start the application, how to package the application, and how to run the tests.
 
 The developer guide shouldn't make too many assumptions, for example, that the reader of the documentation happens to know that the `application.properties` file needs alterations before the application can be started. If something needs to be done, even a simple thing, _mention it_. It is helpful not only for others but also for yourself. We should also describe the _system requirements_ for the application. For example, the required Java version. You can find it in the `pom.xml` file in the `java.version` property.
 
