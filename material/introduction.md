@@ -220,6 +220,10 @@ The "a user persona" part describes the user role who wants to use the feature d
 
 In Scrum, the whole Scrum Team participates in writing the user stories. This is done during the Sprint Planning event at the beginning of the Sprint. The Product Owner's responsibility is to decide which user stories get done first (perhaps during the next Sprint) and which can wait for later. This _priorization_ of the Developers' work is among the most important responsibilities of the Product Owner.
 
+> Exercise 10
+>
+> Come up with _at least two_ user stories from an application you have used, e.g. Moodle. Use the format described earlier. The user stories should have a different user role (the "a user persona" part in the user story format).
+
 ## Writing good user stories
 
 The user stories described previously sound like fairly good descriptions of software features. But what makes a good user story? A good user story describes a _feature that provides value for the end user of the software_. This means, that the description should be written so that the _customer can understand it_.
@@ -269,7 +273,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 11
 >
 > What's wrong with the following user stories?
 >
@@ -282,7 +286,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 12
 >
 > The Scrum Team came up with the following user stories during the Sprint Planning:
 >
@@ -294,7 +298,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).
 >
@@ -304,7 +308,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > Imagine that you are the Product Owner of the project described in the [project description](/project-description).
 >
@@ -316,6 +320,6 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 14
+> ⭐ Bonus exercise
 >
 > The project teams will be assembled at the beginning of next week. If you have a preference for who you want to be in a team with, put your names in the same team in [this Flinga board]({{site.teams_flinga_link}}) (click the team's card and edit its content). The maximum size of a team is 5 members.
