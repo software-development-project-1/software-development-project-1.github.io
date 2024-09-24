@@ -349,7 +349,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 > Exercise 14
 >
-> Discuss how you will divide the the tasks of the _first four user stories_ among the team members. For example, each team member could be responsible for the tasks of a single user story. Then, add an _assignee_ for each issue. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same issue together.
+> Now that there's some work to be done, discuss how you will divide the tasks among the team members. Then, add an _assignee_ for each issue. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same issue together.
 
 {: .highlight }
 
