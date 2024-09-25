@@ -224,7 +224,7 @@ In Scrum, the whole Scrum Team participates in writing the user stories. This is
 
 > Exercise 10
 >
-> Come up with _at least four_ user stories from an application you have used, e.g. Moodle. Use the format described earlier. The user stories should have _at lest two_ different user roles (the "a user persona" part in the user story format).
+> Come up with _at least three_ user stories from an application which you have used, e.g. Moodle. Use the format described earlier. The user stories should have _at least two_ different user roles (the "a user persona" part in the user story format).
 
 ## Writing good user stories
 
