@@ -28,9 +28,7 @@ Welcome to the Software Development Project 1 course!
 # About the course
 
 - Each team will be developing a project described on the course page
-- The project is a web application implemented with _Java_ programming language using the _Spring Boot framework_
-- _JavaScript_ and _React_ are used as a frontend technologies
-- The final application will be a _full stack_ application in which a frontend communicates with a backend 
+- The final application will be a _full stack_ web application in which a frontend communicates with a backend 
 - The development of the project is split into _three_ two-week iterations called _Sprints_
 - Each Sprint has high-level requirements, but teams should make most of the technical decisions themselves
 - The project starts on week three
@@ -66,7 +64,7 @@ Welcome to the Software Development Project 1 course!
 
 - The final grade (1-5) is composed of the project points (maximum of 40 points) and the personal points (maximum of 20 points)
 - The following are necessary to pass the course:
-  - At least 80% of the first two week's exercises have to be completed before their deadlines to pass the course
+  - At least 20 of the first two week's exercises have to be completed to pass the course
   - Written peer review for each team member
   - Passing grade from the peer reviews
   - Written final report
@@ -75,11 +73,10 @@ Welcome to the Software Development Project 1 course!
 
 # Schedule
 
-- There's weekly sessions during which we will cover different topics
+- There are weekly sessions during which we will cover different topics
 - Attendance on weekly sessions is _mandatory_
 - During the first two weeks, we will cover topics that are important to grasp before starting to work on the project
-- The team work with the project starts on week three
-- During the team work we will learn about new topics, but most importantly we will learn how to apply our new knowledge in practice
+- During the team work we will learn about new topics, but most importantly we will learn how to apply our knowledge in practice
 - Both individual exercises and project exercises have _deadlines_
 - The detailed schedule can be found on the course page
 
@@ -170,7 +167,6 @@ Welcome to the Software Development Project 1 course!
 - One of the key value is the attitude towards _change_
 - For example, there is often need to change the software's requirements during the development process
 - Agile software development process should welcome any kind of change with open arms
-- That is, because _change is inevitable and frequent_ in many business environments
 - The Manifesto for Agile Software Development doesn't go into details on how to actually _implement_ these values in practice
 - Different Agile software development process frameworks, such as _Scrum_ and _SAFe_ describe a detailed process that follows these values
 
@@ -192,10 +188,9 @@ Welcome to the Software Development Project 1 course!
 
 # Requirements phase
 
-- In the _requirements phase_, the development team collects requirements from several stakeholders such as customers, internal and external experts, and managers
+- In the _requirements phase_, the development team collects requirements from several stakeholders such as customers and end users
 - The requirements cover use cases that describe user interactions that the software must provide
 - For example, "As a blog reader I want to browse list of blog posts of a blog so that I can find interesting posts to read" could be a requirement for a blog application
-- These requirements are written down as the _software requirement specification document_
 
 ---
 
@@ -211,7 +206,7 @@ Welcome to the Software Development Project 1 course!
 
 - In the _implementation phase_, the development team codes the product
 - They analyze the requirements to identify smaller coding tasks they can do daily to achieve the final result
-- The organization of the collaboration during the implementation phase isn't simple and it requires the development team to carefully follow mutually agreed _process_
+- The organization of the collaboration during the implementation phase requires the development team to carefully follow mutually agreed _process_
 - The development team needs to use different kind of tools to ease the collaboration, such as _version control tools_, which we will cover later
 
 ---
