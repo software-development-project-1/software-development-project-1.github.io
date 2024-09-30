@@ -1,8 +1,9 @@
 ---
 layout: page
 title: Sprint 1
-permalink: /sprint-1
+permalink: /sprint-1-todo
 nav_order: 6
+nav_exclude: true
 ---
 
 {% include toc.html %}
@@ -45,7 +46,7 @@ During Sprint Planning Developers discuss the technical steps required to implem
 >
 > -- John, one of the Developers
 
-> "That's right, John. To render the page we'll need a controller class for the backend. The controller class should have a method that renders a Thymeleaf template of the page. Maybe the class name could be for example BlogController. What do you guys think?"
+> "That's right, John. To render the page we'll need a controller class for the backend. The controller class should have a method that renders the template of the page. Maybe the class name could be for example BlogController. What do you guys think?"
 >
 > -- Mary, one of the Developers
 
@@ -57,7 +58,7 @@ While discussing the technical details, the Developers document a todo-list of t
 
 > Add a Blog JPA entity class and a BlogRepository JPA repository class
 
-> Add a Thymeleaf template for the blog creation form containing fields for name and description
+> Add a template for the blog creation form containing fields for name and description
 
 > Add a BlogController controller class and methods for rendering and handling the submission of the blog creation form
 
@@ -199,8 +200,6 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > The teacher should be able to add questions to a quiz. For example, the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal". The teacher should not be able to add a question with a blank question text or without a difficulty level.
 >
-> The quiz also has a difficulty level which should be based on the average difficulty level of its questions. For example if a quiz has a "Easy" and a "Hard" difficulty level question, the quiz difficulty should be "Normal". The quiz difficulty level should be displayed along with other quiz-related information in the quiz list.
->
 > The questions of a quiz should be listed on a separate page. Once a question has been added to a quiz, the teacher should be able to edit and delete it.
 >
 > The teacher should be able to add answer options to a question. For example, the "What is the capital of Finland?" question could have answer options "Turku", "Helsinki" and "Tampere". An answer option has an answer option text, for example "Turku", and a correctness status. Answer is either correct or not. For example, the "Turku" answer option would not be correct. The teacher should not be able to add an answer option with a blank answer option text. The answer option should not be correct by default.
@@ -281,7 +280,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 > Exercise 11
 >
-> Initialize a Spring Boot backend application for the teacher dashboard for example using the [Spring Initializr](https://start.spring.io/). Push the Spring Boot application to GitHub.
+> Initialize a Spring Boot backend application for the teacher dashboard for example using the [Spring Initializr](https://start.spring.io/). Push the Spring Boot application to GitHub. Note that this material contains instructions for _Maven_ projects (the "Maven" option in the "Project" section). Using a Maven project is highly recommended.
 >
 > This your project's first task. Create an issue for the task. Set the milestone as "Sprint 1". Add the issue to the Backlog project's "Sprint Backlog" column.
 
@@ -404,13 +403,11 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 >
 > 1. At the beginning of the file add the project name "Quizzer" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
 > 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
-> 3. Below the description, add a subheading "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name and their GitHub username.
+> 3. Below the description, add a subheading "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name.
 > 4. Each team member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
 > 5. Below the "Team members" section, add a subheading "Backlog" and below that add a link to the Backlog project created previously (open the Backlog project in GitHub and copy the URL from the web browser's address bar).
 >
 > Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
-
-The [Awesome README](https://github.com/matiassingers/awesome-readme?tab=readme-ov-file) repository contains a curated list of repositories with awesome READMEs for inspiration.
 
 ## Daily Scrum
 
@@ -422,7 +419,7 @@ The Daily Scrum is a 15-minute event, commonly held on daily basis. The purpose 
 
 For example this could be a one team member's statement during the Daily Scrum:
 
-> "Yesterday I started implementing the task for the blog listing Thymeleaf template. I'll continue working on that today. I had some trouble while trying to iterate a List in the Thymeleaf template. I don't remember the syntax. Could anyone have a look at it with me after the Daily Scrum?"
+> "Yesterday I started implementing the task for the blog listing template. I'll continue working on that today. I had some trouble while trying to iterate a list in the template. I don't remember the syntax. Could anyone have a look at it with me after the Daily Scrum?"
 >
 > -- Jane, one of the Developers
 
@@ -802,7 +799,6 @@ A quite common practice is to separate the development and production code with 
 > 2. Open the backend web service in the Render Dashboard and go to the "Settings" page. In the "Build & Deploy" section, set the "Branch" as "production" and "Auto-Deploy" as "Yes"
 > 3. Switch back to the main branch and make some small change in the code and push the changes to GitHub. Then, open a pull request. Set the _base_ branch as the `production` branch and the _compare_ branch as the `main` branch.
 > 4. Merge the pull request and check that the deployment works automatically
-> 5. Explain the purpose of the `main` and the `production` branch in the `README.md` file. How are these two separate branches used in your project's Git workflow?
 
 {: .note }
 

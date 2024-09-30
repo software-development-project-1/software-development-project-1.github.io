@@ -1,8 +1,9 @@
 ---
 layout: page
 title: Sprint 2
-permalink: /sprint-2
+permalink: /sprint-2-todo
 nav_order: 7
+nav_exclude: true
 ---
 
 {% include toc.html %}
@@ -84,29 +85,6 @@ Make sure that everyone follows the event structure and that each team member ge
 >
 > Choose a new (not the same team member as during the previous Sprint) Scrum Master among the team members for the second Sprint.
 
-<!--
-## Is it done? -- The Definition of Done
-
-> "Is this task done"?
-
-A common question among the team member's which is asked frequently for example during the Daily Scrum event. The answer depends on the team member's opinion on what "done" means. The Definition of Done is a formal description of when a backlog item is considered done. It is a checklist of quality measures, which the Scrum Team writes down together. Every team member should commit to the Definition of Done and make sure that their work fulfills the common quality measures.
-
-
-{: .important-title }
-
-> Exercise 3
->
-> Read the following [article](https://www.scrum.org/resources/what-definition-done) on the Definition of Done. Then, define your project's Definition of Done together and write it down in the `README.md` file under the "Definition of Done" heading. You can consider for example the following quality measures in your Definition of Done:
->
-> - Should the task be deployed to the production environment? 
-> - Should the task be manually tested both in development and in production environment?
-> - Should the relevant documentation be updated?
-> - Should other team member review the task-related code and implementation?
-> - Should the user story implementation be accepted by the Product Owner?
->
-> The quality measures of the Definition Done doesn't have to be too ambigious at start. Discuss as a team what are the most important quality measures for you. You can modify the Definition of Done as you go, just remember to communicate the changes with the whole team.
--->
-
 ## 🏃‍♂️ Sprint 2 planning
 
 {: .highlight}
@@ -160,29 +138,13 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
-> Create a new milestone for the second Sprint. If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 2". If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks. 
+> Create a new milestone for the second Sprint. If you didn't manage to implement all user stories during the previous Sprint, set the second Sprint's milestone for the unfinished user story and task issues. If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks. 
 
 {: .important-title }
 
 > Exercise 4
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the Sprint milestone and add the issues to the backlog.
-
-{: .important-title }
-
-> ⭐ Bonus exercise
->
-> To practice the [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow), implement some user stories or tasks in separate feature branches. Name the branch based on the feature, for example `add-category` or `list-quizzes-rest-api`. Create a separate branch for each feature (don't reuse the branch you created during the previous Sprint). For example:
->
-> ```bash
-> # first, make sure that we are on the main branch
-> git checkout main
-> git branch add-category
-> git checkout add-category
-> # time to start coding
-> ```
->
-> Once the implementation in the branch is ready, open a pull request and let some other team member review it. Once the reviewer accepts the changes, merge the pull request to the main branch.
 
 {: .important-title }
 
@@ -327,7 +289,7 @@ public class MessageRestController {
 }
 ```
 
-The `@RestController` annotation on the `MessageRestController` class specifies that each method of the controller class produces a JSON response body. Instead of returning the name of the Thymeleaf template, we can directly return Java objects. For example the `getAllMessages` method returns a list of `Message` objects. If we open the page <http://localhost:8080/api/messages> in a web browser we should see this list.
+The `@RestController` annotation on the `MessageRestController` class specifies that each method of the controller class produces a JSON response body. Instead of returning the name of the template, we can directly return Java objects. For example the `getAllMessages` method returns a list of `Message` objects. If we open the page <http://localhost:8080/api/messages> in a web browser we should see this list.
 
 By using JSON as the data representation format we can separate the _client_ (the user interface application) from the server. This allows as to implement many different kinds of client applications with different programming languages. This separation of server and client is one of the corner stones of the _the REST architectural style_.
 
@@ -431,7 +393,7 @@ This corresponds to the following JSON format for the request body:
 
 ### HTTP status codes and REST API error handling
 
-Previously we have handled errors in requests by sending a redirect or rendering a Thymeleaf template with some error messages. With REST API endpoints we communicate errors with [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) and JSON formatted error objects containing details about the error. HTTP status codes are numeric codes that describe whether the request was successful or not.
+Previously we have handled errors in requests by sending a redirect or rendering a template with some error messages. With REST API endpoints we communicate errors with [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) and JSON formatted error objects containing details about the error. HTTP status codes are numeric codes that describe whether the request was successful or not.
 
 Successful status codes are in range 200 - 299. Most common successful status code is [200 OK](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200), which is a generic way to inform the client that the request succeeded. Client error status codes are in range 400 - 499. These status codes indicate that there's something wrong with the client's request. Most common client error status codes are:
 
@@ -558,21 +520,12 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 >
 > - Answer option with the provided id does not exist
 > - Quiz is not published
-> - The request body is invalid, for example, the answer option is not provided
 >
 > Define the request body format with a [DTO](https://www.baeldung.com/java-dto-pattern) class. The frontend can send a JSON request body for example in the following format:
 >
 > ```json
 > {
 >   "answerOptionId": 1
-> }
-> ```
->
-> In this case, the following request body should be considered invalid and lead to a reponse with appropriate HTTP status code and error message:
->
-> ```json
-> {
->   "answerOptionId": null
 > }
 > ```
 >

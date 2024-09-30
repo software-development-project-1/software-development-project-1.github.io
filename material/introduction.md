@@ -11,7 +11,7 @@ nav_order: 3
 
 ## Submitting this week's exercises
 
-All of this week's exercises (exercises 1-14) are submitted to [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a _single PDF file_. The submission deadline is on {{site.week_1_deadline}}.
+All of this week's exercises (exercises 1-13) are submitted to [this Moodle submission]({{site.week_1_moodle_submission_link}}). Submit all exercises as a _single PDF file_. The submission deadline is on {{site.week_1_deadline}}.
 
 {: .highlight }
 
@@ -220,12 +220,6 @@ The "a user persona" part describes the user role who wants to use the feature d
 
 In Scrum, the whole Scrum Team participates in writing the user stories. This is done during the Sprint Planning event at the beginning of the Sprint. The Product Owner's responsibility is to decide which user stories get done first (perhaps during the next Sprint) and which can wait for later. This _priorization_ of the Developers' work is among the most important responsibilities of the Product Owner.
 
-{: .important-title }
-
-> Exercise 10
->
-> Come up with _at least three_ user stories from an application which you have used, e.g. Moodle. Use the format described earlier. The user stories should have _at least two_ different user roles (the "a user persona" part in the user story format).
-
 ## Writing good user stories
 
 The user stories described previously sound like fairly good descriptions of software features. But what makes a good user story? A good user story describes a _feature that provides value for the end user of the software_. This means, that the description should be written so that the _customer can understand it_.
@@ -275,7 +269,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 10
 >
 > What's wrong with the following user stories?
 >
@@ -288,7 +282,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 11
 >
 > The Scrum Team came up with the following user stories during the Sprint Planning:
 >
@@ -300,25 +294,21 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 12
 >
-> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).
->
-> Come up with at least seven _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Review the quality of your user stories based on the INVEST criteria and general guideliness of a good user story.
+> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).Come up with at least six _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Review the quality of your user stories based on the INVEST criteria and general guideliness of a good user story.
 >
 > Hint: pay attention to the size of the user story. Split big user stories into smaller ones.
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 13
 >
-> Imagine that you are the Product Owner of the project described in the [project description](/project-description).
->
-> How would you _prioritize_ the seven user stories that you came up with in the previous exercise? That is, in which order these user stories should be implemented to maximize the stakeholder's value for the application?
+> Imagine that you are the Product Owner of the project described in the [project description](/project-description). How would you _prioritize_ the six user stories that you came up with in the previous exercise? That is, in which order these user stories should be implemented to maximize the stakeholder's value for the application?
 >
 > On top of the importance of a user story, consider the dependencies between the different user stories. For example, certain user stories might be impossible to implement before some other user story has been implemented. Can we for example list quizzes before a teacher can add one?
 >
-> List the seven user stories in the priority order (top-priority user stories at the top of the list). Briefly justify, why you chose this specific prioritization.
+> List the six user stories in the priority order (top-priority user stories at the top of the list). Briefly justify, why you chose this specific prioritization.
 
 {: .important-title }
 

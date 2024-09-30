@@ -13,11 +13,11 @@ On the third week the teams start working on the project. The project advances i
 
 | Week   | Topics                                                                       | Exercises                                                |
 | ------ | ---------------------------------------------------------------------------- | -------------------------------------------------------- |
-| 25.3. | [Introduction to software development projects](/introduction)          | Exercises 1 - 14, deadline on {{site.week_1_deadline}}   |
+| 25.3. | [Introduction to software development projects](/introduction)          | Exercises 1 - 13, deadline on {{site.week_1_deadline}}   |
 | 1.4. | [Version control: Git and GitHub](/git)                                      | Exercises 1 - 17, deadline on {{site.week_2_deadline}}   |
 | 8.4.  | 🏃‍♂️ [Sprint 1](/sprint-1): Sprint Planning, Scrum backlogs, GitHub's workflow | Exercises 1 - 32, deadline on {{site.sprint_1_deadline}} |
 | 15.4. | Daily Scrum, Git branches, Sprint Review                                     |                                                          |
 | 22.4. | 🏃‍♂️ [Sprint 2](/sprint-2): Retrospective, REST APIs                           | Exercises 1 - 34, deadline on {{site.sprint_2_deadline}} |
 | 29.4. | Communication between frontend and backend                                   |                                                          |
-| 6.5.  | 🏃‍♂️ [Sprint 3](/sprint-3): Testing                                            | Exercises 1 - 26, deadline on {{site.sprint_3_deadline}} |
+| 6.5.  | 🏃‍♂️ [Sprint 3](/sprint-3): Testing                                            | Exercises 1 - 24, deadline on {{site.sprint_3_deadline}} |
 | 13.5. | Finishing the project                                                        |                                                          |

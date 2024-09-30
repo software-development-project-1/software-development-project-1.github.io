@@ -1,8 +1,9 @@
 ---
 layout: page
 title: Sprint 3
-permalink: /sprint-3
+permalink: /sprint-3-todo
 nav_order: 8
+nav_exclude: true
 ---
 
 {% include toc.html %}
@@ -15,7 +16,7 @@ For the final Sprint of the course, the Sprint 3, we have a new set of requireme
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_3_deadline}}. We will be working on the exercises for a bit over a week.
 
-The Sprint assesment is done based on the exercises 1-26. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 40.
+The Sprint assesment is done based on the exercises 1-24. The team can earn up to 10 points from this Sprint. This is the final Sprint of the course and the team's project points will be composed of the points from this Sprint and the two previous Sprints. That is, the maximum number of project points is 40.
 
 During this Sprint, each team member will write a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 20 personal points.
 
@@ -55,7 +56,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "We now have the basic features for managing and taking quizzes. What we still need is a way for the teachers to manage their personal quizzes.
 >
-> The teacher should be able to register with a username, email, bio and password in the teacher dashboard. The teacher should not be able to register with a username less than three characters long or a password less than eight characters long. The email should resemble a valid email address. The username or email should not be already taken by another registered user. The teacher can use the bio to describe themselves. The bio is optional but shouldn't be more than 160 characters long. The user should also be required to retype the password to make sure that they didn't accidently mistype the password.
+> The teacher should be able to register with a username, email, bio and password in the teacher dashboard. The teacher should not be able to register with a username less than three characters long or a password less than eight characters long. The email should resemble a valid email address. The username or email should not be already taken by another registered user. The teacher can use the bio to describe themselves. The bio is optional. The user should also be required to retype the password to make sure that they didn't accidently mistype the password.
 >
 > Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
 >
@@ -85,7 +86,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Make sure that all task related issues that have been completed during the Sprint 2 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
-> Create a new milestone for the third Sprint. If you didn't manage to implement all user stories during the previous Sprint, set the milestone of the unfinished user story and task issues as "Sprint 3". If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks.
+> Create a new milestone for the third Sprint. If you didn't manage to implement all user stories during the previous Sprint, set the third Sprint's milestone for the unfinished user story and task issues. If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks.
 
 {: .important-title }
 
@@ -535,19 +536,13 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > You can run the tests for the project either in your editor or by running the `./mvnw test` command on the command-line.
 
-{: .important-title }
-
-> Exercise 13
->
-> To classify test-related issues, create a new "test" [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels). Add the "test" label for issues that are related to testing (automated or manual) some part of the application.
-
 {: .highlight }
 
 > If the implementation of the endpoint doesn't work as described in the test scenarios, fix the implementation.
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 13
 >
 > Create a new `controller` package to the `src/test/java` folder for the project's controller class tests. Implement a test class within the package with the following test methods for the endpoint for _getting all (published) quizzes_:
 >
@@ -562,15 +557,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 15
->
-> Implement appropriate test methods for the endpoint for _getting all categories_.
->
-> Create an issue for this task.
-
-{: .important-title }
-
-> Exercise 16
+> Exercise 14
 >
 > Implement the following test methods for the endpoint for _getting a quiz by id_:
 >
@@ -581,7 +568,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 15
 >
 > Implement the following test methods for the endpoint for _getting the questions of a quiz_:
 >
@@ -589,85 +576,33 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getQuestionsByQuizIdReturnsListOfQuestionsWhenQuizHasQuestions`: save a quiz with a few questions to the database and send a request. Then, the response should have a list of the quiz's questions
 > - `getQuestionsByQuizIdReturnsAnswerOptionsOfQuestions`: save a quiz with a few questions and answer options to the database and send a request. Then, the response should include the list of answer options of the question
 > - `getQuestionsByQuizIdReturnsErrorWhenQuizDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
-> - An appropriate test methods for testing that the difficulty level filtering works. Implement separate test methods for success and error cases
+> - An appropriate test methods for testing that the difficulty level filtering works
 >
 > Create an issue for this task.
+
+{: .important-title }
+
+> Exercise 16
+>
+> Implement a test class with the following test methods for the endpoint for _creating an answer_:
+>
+> - `createAnswerSavesAnswer`: save a _published quiz_ with a question to the database and send a question id in the request body. Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
+> - `createAnswerDoesNotSaveAnswerForNonExistingQuestion`: send a request with a non-existing question id in the request body. Then, the response should have an appropriate HTTP status and the database should not have any answers
+> - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a question id in the request body. Then, the response should have an appropriate HTTP status and the database should not have any answers
+>
+> Create an issue for this task.
+
+{: .important-title }
+
+> Exercise 17
+>
+> Implement appropriate test methods for at least two more endpoints of your choice. Analyze the behavior of the endpoints based on different requests and dabatase states and implement test scenarios to cover these cases.
 
 {: .important-title }
 
 > Exercise 18
 >
-> Implement a test class with the following test methods for the endpoint for _creating an answer_:
->
-> - `createAnswerSavesValidAnswer`: save a _published quiz_ with a question to the database and send a request with a _valid request body_ (attributes should pass the validation). Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
-> - `createAnswerDoesNotSaveAnswerForNonExistingQuestion`: send a request with a non-existing question id in the request body. Then, the response should have an appropriate HTTP status and the database should not have any answers
-> - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a request with a valid request body. Then, the response should have an appropriate HTTP status and the database should not have any answers
-> - `createAnswerDoesNotSaveInvalidAnswer`: send a request without an answer option id in the request body (for example set as `null`). Then, the response should have an appropriate HTTP status and the database should not have any answers
->
-> Create an issue for this task.
-
-{: .important-title }
-
-> Exercise 19
->
-> Implement appropriate test methods for the endpoint for _getting the answers of a quiz_.
->
-> Create an issue for this task.
-
-{: .important-title }
-
-> Exercise 20
->
 > Add instructions on _how to run the tests_ on the command-line to the "Developer guide" section in the `README.md` file.
-
-## ⭐ Bonus: Test coverage
-
-We have analyzed the code that we are testing and we are quite sure that our test scenarios cover everything. The good news is, that we don't need to trust only on our gut. There are so called _test coverage_ tools that analyze which lines of code our test scenarios cover and which they don't.
-
-[JaCoCo](https://www.eclemma.org/jacoco/) is one of the most widely used code coverage tools for Java. Let's add the jacoco-maven-plugin to the `<plugins>` list in the `pom.xml` file:
-
-```xml
-<plugin>
-    <groupId>org.jacoco</groupId>
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <executions>
-        <execution>
-            <goals>
-                <goal>prepare-agent</goal>
-            </goals>
-        </execution>
-        <execution>
-            <id>report</id>
-            <phase>test</phase>
-            <goals>
-                <goal>report</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
-```
-
-If we run the `./mvnw test` command in Git Bash, our tests are executed and JaCoCo will generate a _code coverage report_. Once the command has finished successfully, the code coverage report can be found as an `index.html` file in the `target/site/jacoco` folder. Open the `index.html` file in a web browser.
-
-The report displayes the coverage of each package. The "Cov" column determines the _percentage of lines covered by the tests_. Bigger the number, better the coverage. If we click a package name, we see the classes in the package. By clicking a class name, we see the methods of the class. By clicking a method we see the method's implementation as code.
-
-Green highlight indicates that the line _is fully covered_. Yellow highlight indicates that the line is _partially covered_. For example a certain condition of an `if` statement is not covered by a test. Red highlight indicates that line is _not covered_.
-
-{: .note }
-
-> Software development teams commonly decide the minimum test coverage percentage for the code. The test coverage is automatically checked each time new code is pushed to the repository. If the new code doesn't fullfill the minimum requirement, the code won't be integrated to the main branch of the repository. This is one of the practices of [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration).
-
-{: .note }
-
-> When we change the code (in the tests or in the application), we need to re-run `./mvnw test` to generate the coverage report for the latest tests.
-
-{: .important-title }
-
-> ⭐ Bonus exercise
->
-> 1. Use the jacoco-maven-plugin in the project as instructed above
-> 2. Generate a coverage report and check the coverage of the tested methods. Are all the lines of the methods fully covered by the tests? If not, implement appropriate test cases to cover the not convered or partly covered lines of the code
-> 3. Implement more tests to increase the test coverage of the project
 
 ## Authentication
 
@@ -690,7 +625,7 @@ In web applications the common authentication flow goes like this:
 </dependency>
 ```
 
-To use authentication related information in Thymeleaf templates, we can use the [Thymeleaf Spring Security dialect](https://github.com/thymeleaf/thymeleaf-extras-springsecurity). Let's also add that dependency to the `<dependencies>` list in the `pom.xml` file:
+To use authentication related information in templates, we can use the [Thymeleaf Spring Security dialect](https://github.com/thymeleaf/thymeleaf-extras-springsecurity). Let's also add that dependency to the `<dependencies>` list in the `pom.xml` file:
 
 ```xml
 <dependency>
@@ -763,7 +698,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title}
 
-> Exercise 21
+> Exercise 19
 >
 > Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
@@ -771,19 +706,19 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 20
 >
 > Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 21
 >
-> Make sure that all project-related documentation, such as project description, data model documentation, architecture documentation and Swagger documentation is up-to-date. Also, add a few [screenshots](https://www.take-a-screenshot.org/) of the most important features of the application to the `README.md` file's project description to demonstrate what the application looks like. [Here](https://cloudinary.com/guides/web-performance/4-ways-to-add-images-to-github-readme-1-bonus-method) is a guide on how to use images in Markdown.
+> Make sure that all project-related documentation, such as project description, data model documentation, architecture documentation and Swagger documentation is up-to-date.
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 22
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -805,7 +740,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 23
 >
 > Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 
@@ -823,7 +758,7 @@ Submit the final report as _a single PDF file_ to [this Moodle submission]({{sit
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 24
 >
 > Write the final report as instructed above.
 
