@@ -232,11 +232,11 @@ The user stories described previously sound like fairly good descriptions of sof
 
 Because the Product Owner in the Scrum Team is commonly a non-technical person, user stories should not contain technical details of the implementation. For example, the following user story is too technical:
 
-> ❌ As a blog reader, I want to send an HTTP GET request to the /api/blogs/{id}/blog-posts REST API endpoint on the server to get the list of blog posts of a blog in JSON format so that I can find interesting blog posts to read.
+> ❌ As a developer, I want to optimize the database by adding a new index to the blog posts table so that the list of blog posts of a blog loads fast.
 
 A better user story would express the feature from the user's point of view:
 
-> ✅ As a blog reader, I want to browse the list of blog posts of a blog so that I can find interesting blog posts to read.
+> ✅ As a blog reader, I want the list of blog posts of a blog load fast so that I can find interesting blog posts to read quickly.
 
 There are also other common guidelines for a good user story. One popular guideline is the _INVEST criteria_:
 
@@ -279,7 +279,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > What's wrong with the following user stories?
 >
-> 1. "As a content creator, I want to submit a form that sends an HTTP POST request to the /api/blog-posts REST API endpoint on the server, which inserts a new row to the blog_posts database table so that I can publish a new blog post for my blog"
+> 1. "As a developer, I want to implement the blog editor with a new library, so that it is easier to implement new editor features"
 > 2. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
 > 3. "As a content creator, I want my blog's layout to have a modern look so that I can write visually pleasing blog posts"
 > 4. "Write comments for blog posts"
@@ -292,7 +292,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > The Scrum Team came up with the following user stories during the Sprint Planning:
 >
-> 1. "As a blog reader, I want to submit a form that sends an HTTP POST request to the /api/comments REST API endpoint on the server, which inserts a new row to the comments database table so that I can share my ideas about the blog post"
+> 1. "As a developer, I want to store the user's phone number in the user database table, so that I can implement two-factor authentication"
 > 2. "Add blog posts to favorites list"
 > 3. "As a user I, want to be able to sign in using username and password, Google, Facebook and GitHub so that I can authenticate"
 >

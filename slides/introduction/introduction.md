@@ -219,6 +219,7 @@ Welcome to the Software Development Project 1 course!
 - In the _test phase_, the development team combines automation and manual testing to check that the software works as intended
 - In practice, the test phase isn't usually separated from the implementation phase
 - This means that software developers usually implement a small coding task, write automated test cases for the task and moves on to the next task
+- This practice is even taken so far that the tests are written _before_ the implementation which is referred to as test-driven development (TDD)
 
 ---
 
@@ -227,7 +228,7 @@ Welcome to the Software Development Project 1 course!
 - In the _deployment phase_, the implemented software is distributed to the users
 - For example, a web application is published online so that users can access it with their browsers
 - Once the software is distributed, it needs to be constantly _maintained_
-- In the _maintenance phase_, among other tasks, the development team fixes bugs, resolves customer issues, and manages software changes
+- In the _maintenance phase_, among other tasks, the development team fixes bugs, resolves user issues, and manages software changes
 
 ---
 
@@ -245,19 +246,20 @@ Welcome to the Software Development Project 1 course!
 
 # Benefits of the iterative approach
 
-- The benefits of the iterative approach is the ability to _respond to change quickly_ and the _feedback loop_ it provides
+- The benefits of the iterative approach is the ability to respond to change quickly and the feedback loop it provides
 - After each iteration the requirements can change which makes it easy to respond to new user and business needs
 - After each iteration the users of the software can get their hands on new features which they can give feedback on
 - The feedback can be used to define requirements for the next iterations
-- This forms the _feedback loop_ which is the heartbeat of the agile software development process
+- This forms the feedback loop which is the heartbeat of the agile software development process
 
 ---
 
 # Scrum
 
-- _Scrum_ is an iterative software development process framework that defines practical ways to carry out agile software development principles
-- The offical guide to Scrum process is the _Scrum Guide_ which describes each aspect of the process in detail
+- _Scrum_ is an widely adopted iterative software development process framework that defines practical ways to carry out agile software development principles
+- Based on the State of Agile report of year 2022, 87% of respondents used Scrum at the team level
 - In the Scrum process, the _Scrum Team_ developes software in fixed length iterations called _Sprints_
+- Sprints should be kept short, preferably at most four weeks long
 - In each Sprint, there are fixed _events_, which help the Scrum Team to organize their work and keep track on the progress of the Sprint
 - During the course we will use Scrum to manage our software development process while working on the project
 
@@ -267,6 +269,7 @@ Welcome to the Software Development Project 1 course!
 
 - The _Scrum Team_ is responsible for the outcome of each Sprint
 - It consists of one _Scrum Master_, one _Product Owner_, and _Developers_
+- To avoid coordination difficulties, the size of the Scrum Team should be fairly small, preferably at most 10 people
 - _Developers_ are responsible for the technical implementation of the software
 - _Product Owner_ is responsible for maximizing the value of the product resulting from the work of the Scrum Team
 - _Scrum Master_ is responsible that the software development process follows the Scrum practices
@@ -295,7 +298,7 @@ Welcome to the Software Development Project 1 course!
 - In agile software development, requirements are commonly written as _user stories_
 - A user story is a short, simple description of a feature told from the perspective of the person who desires the new feature in the software
 - During each Sprint, the Developers of the Scrum Team implement features for the software based on user stories
-- User stories are sort of todo items, like "take out the trash". They are there so that the Scrum Team remembers what kind of features need to be implemented for the software
+- User stories are sort of todo items, which help the Scrum Team to understand and remember what kind of features need to be implemented for the software
 
 ---
 
@@ -312,15 +315,15 @@ Welcome to the Software Development Project 1 course!
 
 # Writing good user stories
 
--  A good user story describes a _feature that provides value for the end user of the software_
+- A good user story describes a _feature that provides value for the end user of the software_
 - This means, that the description should be written so that the _customer can understand it_
 - For example the following user story is too technical:
 
-  > ❌ As a blog reader, I want to send an HTTP GET request to the /api/blogs/{id}/blog-posts REST API endpoint to get the list of blog's blog posts in JSON format so that I can find interesting blog posts to read
+  > ❌ As a developer, I want to optimize the database by adding a new index to the blog posts table so that the list of blog posts of a blog loads fast.
 
 - A better user story would express the feature from the user's point of view:
 
-  > ✅ As a blog reader, I want to browse the list of blog posts of a blog so that I can find interesting posts to read
+  > ✅ As a blog reader, I want the list of blog posts of a blog load fast so that I can find interesting blog posts to read quickly.
 
 ---
 
@@ -355,5 +358,3 @@ Welcome to the Software Development Project 1 course!
   > ✅ As a content creator, I want to register with a profile description so that my readers know about me
 
 - If the description of the feature contains words like "and" or "or", it could be that the user story can be split into smaller user stories
-
-
