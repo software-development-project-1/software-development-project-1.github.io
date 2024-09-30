@@ -17,21 +17,20 @@ Welcome to the Software Development Project 1 course!
 
 # About the course
 
-- So far during the studies we have mostly worked on fairly small applications _by ourselfs_
-- Different kind of problems arise while we work on more complicated applications _in a software development team_
-- These problems aren't _only technical_, the _management_ of the software development process can be quite tricky
-- During this course, we will learn how to _manage the software development process_ and how to _work as a member of a software development team_
-- We will learn these skills in practice by developing a _software development project_ in a software development team consisting of 4-5 students
+- So far during the studies we have mostly worked on fairly small applications by ourselfs
+- Different kind of problems arise while we work on more complicated applications in a software development team
+- These problems aren't only technical, the management of the software development process can be quite tricky
+- During this course, we will learn how to manage the software development process and how to work as a member of a software development team
+- We will learn these skills in practice by developing a software development project in a software development team consisting of 4-5 students
 
 ---
 
 # About the course
 
-- Each team will be developing a project described on the course page
-- The project is a web application implemented with _Java_ programming language using the _Spring Boot framework_
-- _JavaScript_ and _React_ are used as a frontend technologies
-- The final application will be a _full stack_ application in which a frontend communicates with a backend 
-- The development of the project is split into _three_ two-week iterations called _Sprints_
+- Each team will be developing a quiz management application described in more in detail on the course page
+- The final application will be a full stack web application application in which a frontend communicates with a backend
+- The implementation technologies of the application are Spring Boot and React
+- The development of the project is split into three two-week iterations called Sprints
 - Each Sprint has high-level requirements, but teams should make most of the technical decisions themselves
 - The project starts on week three
 
@@ -66,7 +65,7 @@ Welcome to the Software Development Project 1 course!
 
 - The final grade (1-5) is composed of the project points (maximum of 40 points) and the personal points (maximum of 20 points)
 - The following are necessary to pass the course:
-  - At least 80% of the first two week's exercises have to be completed before their deadlines to pass the course
+  - At least 20 of the first two week's exercises have to be completed to pass the course
   - Written peer review for each team member
   - Passing grade from the peer reviews
   - Written final report
@@ -128,7 +127,7 @@ Welcome to the Software Development Project 1 course!
 
 - Developing a software based on the stakeholders needs in a software development team isn't simple and many things can (and often does) go wrong
 - Which problems do you think software development projects commonly have? Are the problems technical such as programming errors or something else?
-- First discuss, then share your thoughts on the three of the most common problems
+- First discuss, then share your thoughts on the _three of the most common problems_
 
 ---
 
@@ -170,8 +169,8 @@ Welcome to the Software Development Project 1 course!
 - One of the key value is the attitude towards _change_
 - For example, there is often need to change the software's requirements during the development process
 - Agile software development process should welcome any kind of change with open arms
-- That is, because _change is inevitable and frequent_ in many business environments
-- The Manifesto for Agile Software Development doesn't go into details on how to actually _implement_ these values in practice
+- That is, because change is inevitable and frequent in many business environments
+- The Manifesto for Agile Software Development doesn't go into details on how to actually implement these values in practice
 - Different Agile software development process frameworks, such as _Scrum_ and _SAFe_ describe a detailed process that follows these values
 
 ---
@@ -192,10 +191,10 @@ Welcome to the Software Development Project 1 course!
 
 # Requirements phase
 
-- In the _requirements phase_, the development team collects requirements from several stakeholders such as customers, internal and external experts, and managers
+- In the _requirements phase_, the development team collects requirements from several stakeholders such as customers and end users
 - The requirements cover use cases that describe user interactions that the software must provide
 - For example, "As a blog reader I want to browse list of blog posts of a blog so that I can find interesting posts to read" could be a requirement for a blog application
-- These requirements are written down as the _software requirement specification document_
+- These requirements are commonly documented and managed in so called "backlogs" which act as a prioritized list of work for the development team
 
 ---
 

@@ -814,7 +814,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 Write the final report for the course, which covers the following questions:
 
 - Scrum defines four events which take place during the Sprint. What are these events and what is the purpose of each event? How well did you succeed as a team to fulfil the purpose of each event?
-- Product backlog and Sprint backlog are perhaps the most important Scrum artifacts. What is their purpose? How well did your backlogs succeed to fulfil their purpose?
+- Sprint backlog is an important Scrum artifact. What is its purpose? How well did your Sprint backlog succeed to fulfil its purpose?
 - In which areas did you succeed _as a team_? In which areas there was room for improvement?
 - In which areas did you succeed _personally_? In which areas there was room for improvement?
 - Based on your experiences during the course, what would be three important advice you would give to a new software development team? Justify why these advice are important
