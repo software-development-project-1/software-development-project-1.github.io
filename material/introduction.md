@@ -111,7 +111,7 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 
 > Exercise 1
 >
-> Read the "Scrum Team" chapter of the Scrum Guide and answer the following questions in your own words:
+> Read the "Scrum Team" chapter of the Scrum Guide and [this](https://www.atlassian.com/agile/scrum/roles) article. Then, answer the following questions in your own words:
 >
 > 1. What are the different roles in a Scrum Team?
 > 2. What are the responsibilities of each role?
@@ -178,10 +178,11 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 > 3. The Product Owner is at the top of the Scrum Team's hierarchy and they decide what every other team member should do
 > 4. Sprint duration of two weeks is better than two months
 > 5. The requirements for the project are carefully documented to the Product Backlog at the beginning of the project and remain unchanged throughout the project
-> 6. The Retrospective event supports adaptation
-> 7. A larger Scrum Team is more productive than a smaller one
-> 8. The Manifesto for Agile Software Development provides a detailed description of how to manage a software development process
-> 9. It is the Scrum Master's responsibility to help other members in following the Scrum process
+> 6. The Developer's only responsibility in a Scrum Team is to write code
+> 7. The Retrospective event supports adaptation
+> 8. A larger Scrum Team is more productive than a smaller one
+> 9. The Manifesto for Agile Software Development provides a detailed description of how to manage a software development process
+> 10. It is the Scrum Master's responsibility to help other members in following the Scrum process
 
 ## Agile requirement specification
 
@@ -218,6 +219,12 @@ The "a user persona" part describes the user role who wants to use the feature d
 > User stories are sort of todo items, like "go to the store", "take out the trash" and "pick up kids from school". They are there so that the Scrum Team remembers what kind of features need to be implemented for the software.
 
 In Scrum, the whole Scrum Team participates in writing the user stories. This is done during the Sprint Planning event at the beginning of the Sprint. The Product Owner's responsibility is to decide which user stories get done first (perhaps during the next Sprint) and which can wait for later. This _priorization_ of the Developers' work is among the most important responsibilities of the Product Owner.
+
+{: .important-title }
+
+> Exercise 10
+>
+> Come up with _at least three_ user stories from an application which you have used, e.g. Moodle. Use the format described earlier. The user stories should have _at least two_ different user roles (the "a user persona" part in the user story format).
 
 ## Writing good user stories
 
@@ -268,7 +275,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 11
 >
 > What's wrong with the following user stories?
 >
@@ -281,7 +288,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 12
 >
 > The Scrum Team came up with the following user stories during the Sprint Planning:
 >
@@ -293,17 +300,17 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 13
 >
 > During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).
 >
-> Come up with at least seven _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories.
+> Come up with at least seven _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Review the quality of your user stories based on the INVEST criteria and general guideliness of a good user story.
 >
 > Hint: pay attention to the size of the user story. Split big user stories into smaller ones.
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 14
 >
 > Imagine that you are the Product Owner of the project described in the [project description](/project-description).
 >
@@ -315,6 +322,6 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 {: .important-title }
 
-> Exercise 14
+> ⭐ Bonus exercise
 >
 > The project teams will be assembled at the beginning of next week. If you have a preference for who you want to be in a team with, put your names in the same team in [this Flinga board]({{site.teams_flinga_link}}) (click the team's card and edit its content). The maximum size of a team is 5 members.

@@ -74,11 +74,10 @@ Welcome to the Software Development Project 1 course!
 
 # Schedule
 
-- There's weekly sessions during which we will cover different topics
+- There are weekly sessions during which we will cover different topics
 - Attendance on weekly sessions is _mandatory_
 - During the first two weeks, we will cover topics that are important to grasp before starting to work on the project
-- The team work with the project starts on week three
-- During the team work we will learn about new topics, but most importantly we will learn how to apply our new knowledge in practice
+- During the team work we will learn about new topics, but most importantly we will learn how to apply our knowledge in practice
 - Both individual exercises and project exercises have _deadlines_
 - The detailed schedule can be found on the course page
 
@@ -210,7 +209,7 @@ Welcome to the Software Development Project 1 course!
 
 - In the _implementation phase_, the development team codes the product
 - They analyze the requirements to identify smaller coding tasks they can do daily to achieve the final result
-- The organization of the collaboration during the implementation phase isn't simple and it requires the development team to carefully follow mutually agreed _process_
+- The organization of the collaboration during the implementation phase requires the development team to carefully follow mutually agreed _process_
 - The development team needs to use different kind of tools to ease the collaboration, such as _version control tools_, which we will cover later
 
 ---

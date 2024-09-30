@@ -865,10 +865,6 @@ public class MessageRestController {
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
-> Tips for the tasks:
->
-> - Material UI's [Snackbar](https://mui.com/material-ui/react-snackbar/) component or the [Notistack](https://notistack.com/) libary are ways to implement notifacations
->
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-2-us-8-1-answer-quiz.png)
