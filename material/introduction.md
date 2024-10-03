@@ -186,7 +186,7 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 
 ## Agile requirement specification
 
-In the _requirements phase_ of the software development lifecycle, the stakeholders' requirements for the software are defined and documented. The software requirements specification document lists sufficient and necessary requirements for the project development. To derive the requirements, the developer needs to have a clear and thorough understanding of the products under development. This is achieved through detailed and continuous communications with the project team and customer throughout the software development process.
+In the _requirements phase_ of the software development lifecycle, the stakeholders' requirements for the software are defined and documented. The software requirements specification document lists sufficient and necessary requirements for the project development. To derive the requirements, the development team needs to have a clear and thorough understanding of the products under development. This is achieved through detailed and continuous communications with the project team and customer throughout the software development process.
 
 Software's requirements are commonly categorized as _functional_ and _non-functional requirements_. Functional requirements are the requirements stated by the user which one can see directly in the final product, unlike the non-functional requirements. For example the following requirements are functional requirements:
 
@@ -273,7 +273,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > What's wrong with the following user stories?
 >
-> 1. "As a developer, I want to implement the blog editor with a new library, so that it is easier to implement new editor features"
+> 1. "As a developer, I want to implement the blog editor component using a editor library, so that it is easier to implement new editor features"
 > 2. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
 > 3. "As a content creator, I want my blog's layout to have a modern look so that I can write visually pleasing blog posts"
 > 4. "Write comments for blog posts"
@@ -296,7 +296,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 > Exercise 12
 >
-> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).Come up with at least six _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Review the quality of your user stories based on the INVEST criteria and general guideliness of a good user story.
+> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).Come up with at least seven _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Review the quality of your user stories based on the INVEST criteria and general guideliness of a good user story.
 >
 > Hint: pay attention to the size of the user story. Split big user stories into smaller ones.
 
@@ -304,11 +304,11 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 > Exercise 13
 >
-> Imagine that you are the Product Owner of the project described in the [project description](/project-description). How would you _prioritize_ the six user stories that you came up with in the previous exercise? That is, in which order these user stories should be implemented to maximize the stakeholder's value for the application?
+> Imagine that you are the Product Owner of the project described in the [project description](/project-description). How would you _prioritize_ the seven user stories that you came up with in the previous exercise? That is, in which order these user stories should be implemented to maximize the stakeholder's value for the application?
 >
 > On top of the importance of a user story, consider the dependencies between the different user stories. For example, certain user stories might be impossible to implement before some other user story has been implemented. Can we for example list quizzes before a teacher can add one?
 >
-> List the six user stories in the priority order (top-priority user stories at the top of the list). Briefly justify, why you chose this specific prioritization.
+> List the seven user stories in the priority order (top-priority user stories at the top of the list). Briefly justify, why you chose this specific prioritization.
 
 {: .important-title }
 
