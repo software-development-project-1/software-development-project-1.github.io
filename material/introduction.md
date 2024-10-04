@@ -289,6 +289,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > 1. "As a developer, I want to store the user's phone number in the user database table, so that I can implement two-factor authentication"
 > 2. "Add blog posts to favorites list"
 > 3. "As a user I, want to be able to sign in using username and password, Google, Facebook and GitHub so that I can authenticate"
+> 4. "As a user, I want to be able to customize my profile, so that I can share information about myself"
 >
 > How would improve these user stories? Come up with a _well-written_ version of each user story.
 
@@ -296,7 +297,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 > Exercise 12
 >
-> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description).Come up with at least seven _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Review the quality of your user stories based on the INVEST criteria and general guideliness of a good user story.
+> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description). Come up with at least seven _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Review the quality of your user stories based on the INVEST criteria and general guideliness of a good user story.
 >
 > Hint: pay attention to the size of the user story. Split big user stories into smaller ones.
 
