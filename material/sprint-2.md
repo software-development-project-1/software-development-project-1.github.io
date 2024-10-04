@@ -536,22 +536,12 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 >
 > - Answer option with the provided id does not exist
 > - Quiz is not published
-> - The request body is invalid, for example, the answer option is not provided (see example below)
 >
 > Define the request body format with a [DTO](https://www.baeldung.com/java-dto-pattern) class. The frontend can send a JSON request body for example in the following format:
 >
 > ```json
 > {
 >   "answerOptionId": 1
-> }
-> ```
->
->
-> In this case, the following request body should be considered invalid and lead to a reponse with appropriate HTTP status code and error message:
->
-> ```json
-> {
->   "answerOptionId": null
 > }
 > ```
 >
