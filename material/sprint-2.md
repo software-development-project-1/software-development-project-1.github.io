@@ -148,6 +148,22 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
+> ⭐ Bonus exercise
+>
+> To practice the [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow), implement some user stories or tasks in separate feature branches. Name the branch based on the feature, for example `add-category` or `list-quizzes-rest-api`. Create a separate branch for each feature (don't reuse the branch you created during the previous Sprint). For example:
+>
+> ```bash
+> # first, make sure that we are on the main branch
+> git checkout main
+> git branch add-category
+> git checkout add-category
+> # time to start coding
+> ```
+>
+> Once the implementation in the branch is ready, open a pull request and let some other team member review it. Once the reviewer accepts the changes, merge the pull request to the main branch.
+
+{: .important-title }
+
 > Exercise 5
 >
 > Plan the tasks for the first user story, "{{site.sprint_2_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
@@ -520,12 +536,22 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 >
 > - Answer option with the provided id does not exist
 > - Quiz is not published
+> - The request body is invalid, for example, the answer option is not provided (see example below)
 >
 > Define the request body format with a [DTO](https://www.baeldung.com/java-dto-pattern) class. The frontend can send a JSON request body for example in the following format:
 >
 > ```json
 > {
 >   "answerOptionId": 1
+> }
+> ```
+>
+>
+> In this case, the following request body should be considered invalid and lead to a reponse with appropriate HTTP status code and error message:
+>
+> ```json
+> {
+>   "answerOptionId": null
 > }
 > ```
 >
