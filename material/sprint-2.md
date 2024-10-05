@@ -145,7 +145,7 @@ After some discussion the Scrum Team planned the following user stories:
 > Exercise 4
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the Sprint milestone and add the issues to the backlog.
-
+<!--
 {: .important-title }
 
 > ⭐ Bonus exercise
@@ -161,7 +161,7 @@ After some discussion the Scrum Team planned the following user stories:
 > ```
 >
 > Once the implementation in the branch is ready, open a pull request and let some other team member review it. Once the reviewer accepts the changes, merge the pull request to the main branch.
-
+-->
 {: .important-title }
 
 > Exercise 5
