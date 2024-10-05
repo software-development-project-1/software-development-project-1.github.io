@@ -563,8 +563,6 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > - `getQuizByIdReturnsPublishedQuizWhenQuizExists`: save a quiz to the database and send a request. Then, the response should have the saved quiz
 > - `getQuizByIdReturnsErrorWhenQuizDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
->
-> Create an issue for this task.
 
 {: .important-title }
 
@@ -577,8 +575,6 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getQuestionsByQuizIdReturnsAnswerOptionsOfQuestions`: save a quiz with a few questions and answer options to the database and send a request. Then, the response should include the list of answer options of the question
 > - `getQuestionsByQuizIdReturnsErrorWhenQuizDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
 > - An appropriate test methods for testing that the difficulty level filtering works
->
-> Create an issue for this task.
 
 {: .important-title }
 
@@ -589,8 +585,6 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `createAnswerSavesAnswer`: save a _published quiz_ with a question to the database and send a question id in the request body. Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
 > - `createAnswerDoesNotSaveAnswerForNonExistingQuestion`: send a request with a non-existing question id in the request body. Then, the response should have an appropriate HTTP status and the database should not have any answers
 > - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a question id in the request body. Then, the response should have an appropriate HTTP status and the database should not have any answers
->
-> Create an issue for this task.
 
 {: .important-title }
 
@@ -603,7 +597,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > Exercise 18
 >
 > Add instructions on _how to run the tests_ on the command-line to the "Developer guide" section in the `README.md` file.
-
+<!--
 ## ⭐ Bonus: Test coverage
 
 We have analyzed the code that we are testing and we are quite sure that our test scenarios cover everything. The good news is, that we don't need to trust only on our gut. There are so called _test coverage_ tools that analyze which lines of code our test scenarios cover and which they don't.
@@ -652,7 +646,7 @@ Green highlight indicates that the line _is fully covered_. Yellow highlight ind
 > 1. Use the jacoco-maven-plugin in the project as instructed above
 > 2. Generate a coverage report and check the coverage of the tested methods. Are all the lines of the methods fully covered by the tests? If not, implement appropriate test cases to cover the not convered or partly covered lines of the code
 > 3. Implement more tests to increase the test coverage of the project
-
+-->
 ## Authentication
 
 Most of the application have features that need to verify the user's identity before they are allowed to perform certain actions. This process is referred to as _authentication_. User's identity can be verified in different ways, but a quite common process is to associate a password with a certain username or some other unique identifier such as email. The user who knows the password of a username will be identified as that user.
@@ -763,7 +757,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 > Exercise 21
 >
-> Make sure that all project-related documentation, such as project description, data model documentation, architecture documentation and Swagger documentation is up-to-date. Also, add a few [screenshots](https://www.take-a-screenshot.org/) of the most important features of the application to the `README.md` file's project description to demonstrate what the application looks like. [Here](https://cloudinary.com/guides/web-performance/4-ways-to-add-images-to-github-readme-1-bonus-method) is a guide on how to use images in Markdown.
+> Make sure that all project-related documentation, such as project description, data model documentation, architecture documentation and Swagger documentation is up-to-date.
 
 {: .important-title }
 
