@@ -293,19 +293,10 @@ Welcome to the Software Development Project 1 course!
 
 ---
 
-# Requirements
-
-- In the requirements phase of the software development lifecycle, the stakeholders' requirements for the software are defined and documented
-- To derive the requirements, the development team needs to have a clear and thorough understanding of the products under development
-- This requires detailed and continuous communications with the stakeholders throughout the software development process
-- Requirements are commonly categorized as _functional_ and _non-functional_ requirements
-- Functional requirements are the requirements stated by the user which one can see directly in the final product
-- Non-functional requirements are quality constraints that the system must satisfy and cover for example security and performance aspects
-
----
-
 # Agile requirement specification
 
+- During the requirements phase, the stakeholders' requirements for the software are defined and documented
+- To derive the requirements, the development team needs to have a clear and thorough understanding of the software under development and continuously communicate with the stakeholders
 - In agile software development, requirements are commonly written as _user stories_
 - A user story is a short, simple description of a feature told from the perspective of the person who desires the new feature in the software
 - During each Sprint, the Developers of the Scrum Team implement features for the software based on user stories
