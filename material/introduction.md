@@ -272,7 +272,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > What's wrong with the following user stories?
 >
-> 1. "As a developer, I want to implement the blog editor component using a editor library, so that it is easier to implement new editor features"
+> 1. "As a developer, I want to implement the blog editor component using an editor library, so that it is easier to implement new editor features"
 > 2. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
 > 3. "As a content creator, I want my blog's layout to have a modern look so that I can write visually pleasing blog posts"
 > 4. "Write comments for blog posts"
@@ -288,7 +288,6 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > 1. "As a developer, I want to store the user's phone number in the user database table, so that I can implement two-factor authentication"
 > 2. "Add blog posts to favorites list"
 > 3. "As a user I, want to be able to sign in using username and password, Google, Facebook and GitHub so that I can authenticate"
-> 4. "As a user, I want to be able to customize my profile, so that I can share information about myself"
 >
 > How would improve these user stories? Come up with a _well-written_ version of each user story.
 
