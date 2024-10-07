@@ -56,7 +56,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "We now have the basic features for managing and taking quizzes. What we still need is a way for the teachers to manage their personal quizzes.
 >
-> The teacher should be able to register with a username, email, bio and password in the teacher dashboard. The teacher should not be able to register with a username less than three characters long or a password less than eight characters long. The email should resemble a valid email address. The username or email should not be already taken by another registered user. The teacher can use the bio to describe themselves. The bio is optional. The user should also be required to retype the password to make sure that they didn't accidently mistype the password.
+> The teacher should be able to register with a username, email, bio and password in the teacher dashboard. The teacher should not be able to register without an email, with a username less than three characters long or a password less than eight characters long. The username or email should not be already taken by another registered user. The teacher can provide a bio to describe themselves. The bio is optional. The user should also be required to retype the password to make sure that they didn't accidently mistype the password.
 >
 > Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
 >
@@ -66,7 +66,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should not be able to add a review with a nickname less than three characters long, a blank review text or without a rating between 1 and 5. The student should not be able to review a non-published quiz.
 >
-> The review page should list the added reviews from newest to oldest order. Each review should display the information submitted by the student and the date when the review was written. The review page should also display the review summary at the top of the page. The review summary should include the number of reviews the quiz has and the rating average. It should also be possible for the student to edit and delete reviews in the review page."
+> The review page should list the added reviews from newest to oldest order. Each review should display the information submitted by the student and the date when the review was written. The review page should also display the number of reviews the quiz has. It should also be possible for the student to edit and delete reviews in the review page."
 >
 > -- The Product Owner
 
@@ -572,7 +572,6 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > - `getQuestionsByQuizIdReturnsEmptyListWhenQuizDoesNotHaveQuestions`: save a quiz without questions to the database and send a request. Then, the response should have an empty list
 > - `getQuestionsByQuizIdReturnsListOfQuestionsWhenQuizHasQuestions`: save a quiz with a few questions to the database and send a request. Then, the response should have a list of the quiz's questions
-> - `getQuestionsByQuizIdReturnsAnswerOptionsOfQuestions`: save a quiz with a few questions and answer options to the database and send a request. Then, the response should include the list of answer options of the question
 > - `getQuestionsByQuizIdReturnsErrorWhenQuizDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
 > - An appropriate test methods for testing that the difficulty level filtering works
 
