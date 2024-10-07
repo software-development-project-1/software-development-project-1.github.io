@@ -145,23 +145,7 @@ After some discussion the Scrum Team planned the following user stories:
 > Exercise 4
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the Sprint milestone and add the issues to the backlog.
-<!--
-{: .important-title }
 
-> ⭐ Bonus exercise
->
-> To practice the [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow), implement some user stories or tasks in separate feature branches. Name the branch based on the feature, for example `add-category` or `list-quizzes-rest-api`. Create a separate branch for each feature (don't reuse the branch you created during the previous Sprint). For example:
->
-> ```bash
-> # first, make sure that we are on the main branch
-> git checkout main
-> git branch add-category
-> git checkout add-category
-> # time to start coding
-> ```
->
-> Once the implementation in the branch is ready, open a pull request and let some other team member review it. Once the reviewer accepts the changes, merge the pull request to the main branch.
--->
 {: .important-title }
 
 > Exercise 5
@@ -488,9 +472,9 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 > Omit the `@OneToMany` attributes from the JSON response in every entity by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the attributes.
 
-{: .highlight}
+{: .note}
 
-> To keep the code organized, create _a separate REST controller class for each REST API collection_, such as "quizzes" or "categories". The collection-specfic path prefix can be added to all methods using the `@RequestMapping` annotation on the class.
+> To keep the code organized, it is a good idea to create a separate REST controller class for each REST API collection, such as "quizzes" or "categories". The collection-specfic path prefix can be added to all methods using the `@RequestMapping` annotation on the class.
 
 {: .note }
 
