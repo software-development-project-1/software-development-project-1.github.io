@@ -299,7 +299,8 @@ Welcome to the Software Development Project 1 course!
 - To derive the requirements, the development team needs to have a clear and thorough understanding of the products under development
 - This requires detailed and continuous communications with the stakeholders throughout the software development process
 - Requirements are commonly categorized as _functional_ and _non-functional_ requirements
-- Functional requirements are the requirements stated by the user which one can see directly in the final product, unlike the non-functional requirements
+- Functional requirements are the requirements stated by the user which one can see directly in the final product
+- Non-functional requirements are quality constraints that the system must satisfy and cover for example security and performance aspects
 
 ---
 
