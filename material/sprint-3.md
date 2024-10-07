@@ -56,7 +56,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "We now have the basic features for managing and taking quizzes. What we still need is a way for the teachers to manage their personal quizzes.
 >
-> The teacher should be able to register with a username, email, bio and password in the teacher dashboard. The teacher should not be able to register without an email, with a username less than three characters long or a password less than eight characters long. The username or email should not be already taken by another registered user. The teacher can provide a bio to describe themselves. The bio is optional. The user should also be required to retype the password to make sure that they didn't accidently mistype the password.
+> The teacher should be able to register with a username, email, bio and password in the teacher dashboard. The teacher can provide a bio to describe themselves. It would be nice if the user would be required to retype the password to make sure that they didn't accidently mistype the password.
 >
 > Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
 >
@@ -64,9 +64,9 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > After signing in, the teacher should be able to add a quiz or a category. However, the teacher should only be able to edit and delete quizzes and categories they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The same logic should be applied to the categories and quiz's questions. The quiz list should also display the username of the teacher who has added the quiz both in teacher and student dashboard.
 >
-> The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should not be able to add a review with a nickname less than three characters long, a blank review text or without a rating between 1 and 5. The student should not be able to review a non-published quiz.
+> The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should not be able to review a non-published quiz.
 >
-> The review page should list the added reviews from newest to oldest order. Each review should display the information submitted by the student and the date when the review was written. The review page should also display the number of reviews the quiz has. It should also be possible for the student to edit and delete reviews in the review page."
+> The review page should list the added reviews. Each review should display the information submitted by the student and the date when the review was written. The review page should also display the number of reviews the quiz has. It should also be possible for the student to edit and delete reviews in the review page."
 >
 > -- The Product Owner
 
@@ -589,12 +589,6 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 17
 >
-> Implement appropriate test methods for at least one more endpoint of your choice. Analyze the behavior of the endpoint based on different requests and dabatase states and implement test scenarios to cover these cases.
-
-{: .important-title }
-
-> Exercise 18
->
 > Add instructions on _how to run the tests_ on the command-line to the "Developer guide" section in the `README.md` file.
 
 ## Authentication
@@ -691,7 +685,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title}
 
-> Exercise 19
+> Exercise 18
 >
 > Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
@@ -699,19 +693,19 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 19
 >
 > Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 20
 >
 > Make sure that all project-related documentation, such as project description, data model documentation, architecture documentation and Swagger documentation is up-to-date.
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 21
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -733,7 +727,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 22
 >
 > Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 

@@ -192,17 +192,17 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 
 > "To get started with the project, we need to implement a basic set of features for the teacher dashboard application so that the teachers can manage quizzes and their questions and answer options.
 >
-> The teacher should be able to add a quiz using a form. A quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries" and a published status. A quiz is either published or not. Each of these values should have a field in the form. The teacher should not be able to add a quiz with a blank name or description. The quiz should not be published by default.
+> The teacher should be able to add a quiz using a form. A quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries" and a published status. A quiz is either published or not. Each of these values should have a field in the form.
 >
-> The front page of the application should have a list of added quizzes. The list should display the information provided by the teacher while adding the quiz and the date when the quiz was added. The quizzes should be listed from newest to oldest, so that the latest quizzes are at the top of the list. The page should also have a link that takes the teacher to the page where they can add a quiz.
+> The front page of the application should have a list of added quizzes. The list should display the information provided by the teacher while adding the quiz and the date when the quiz was added. The page should also have a link that takes the teacher to the page where they can add a quiz.
 >
 > The teacher should be able to edit the information of a quiz if, for example they want to publish the quiz or change its name or description. The quiz list should have a link next to each quiz which takes the teacher to an edit form, where they can edit all the information of the quiz. The teacher should also be able to get rid of quizzes they don't need. There should be a delete button next to each quiz in the quiz list. When the user clicks the button, the quiz should be deleted.
 >
-> The teacher should be able to add questions to a quiz. For example, the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal". The teacher should not be able to add a question with a blank question text or without a difficulty level.
+> The teacher should be able to add questions to a quiz. For example, the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal".
 >
 > The questions of a quiz should be listed on a separate page. Once a question has been added to a quiz, the teacher should be able to edit and delete it.
 >
-> The teacher should be able to add answer options to a question. For example, the "What is the capital of Finland?" question could have answer options "Turku", "Helsinki" and "Tampere". An answer option has an answer option text, for example "Turku", and a correctness status. Answer is either correct or not. For example, the "Turku" answer option would not be correct. The teacher should not be able to add an answer option with a blank answer option text. The answer option should not be correct by default.
+> The teacher should be able to add answer options to a question. For example, the "What is the capital of Finland?" question could have answer options "Turku", "Helsinki" and "Tampere". An answer option has an answer option text, for example "Turku", and a correctness status. Answer is either correct or not. For example, the "Turku" answer option would not be correct.
 >
 > The answer options of a question should be listed on a separate page. Once an answer option has been added to a question, the teacher should be able to delete it."
 >
@@ -297,10 +297,6 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 > - What kind of controller requirements does the user story have?
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
->
-> Tips for the tasks:
->
-> - Implement appropriate validation for the user input. [This](https://www.baeldung.com/spring-thymeleaf-error-messages) guide covers the basics of the topic
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >

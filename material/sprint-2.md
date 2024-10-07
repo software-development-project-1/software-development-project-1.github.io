@@ -97,11 +97,11 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "It's great that we now have the basic functionality for managing quizzes! What we now need is a way for the teacher to categorize quizzes and student to take the published quizzes.
 > 
-> To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". The name or description shouldn't be blank and there shouldn't be multiple categories with the same name. There should be a form for adding a category and a separate page for listing the added categories. The categories should be listed in an alphabetical order based on the name.
+> To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". There should be a form for adding a category and a separate page for listing the added categories. The categories should be listed in an alphabetical order based on the name.
 >
 > The category list should have a delete button next to each category, which can be clicked to delete the category. There should also be a link which should take the teacher to an edit form, where they can edit all the information of the category.
 >
-> The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu in both forms where categories are listed in an alphabetical order based on the name. The teacher should also be able leave the quiz uncategorized by not choosing a category.
+> The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu in both forms where categories are listed in an alphabetical order based on the name.
 >
 > Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description and the date when it was added. These quizzes should be listed from newest to oldest.
 >
@@ -378,7 +378,6 @@ For example, in the `createMessage` method the request body format is defined by
 
 ```java
 public class CreateMessageDto {
-    @NotBlank(message = "Content is required")
     private String content;
 
     // constructors, getters and setters
@@ -484,7 +483,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 > Exercise 12
 >
-> Implement a REST API endpoint for _getting all quizzes_ in newest to oldest order. Only _published quizzes_ should be returned by the endpoint.
+> Implement a REST API endpoint for _getting all quizzes_. Only _published quizzes_ should be returned by the endpoint.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
@@ -563,7 +562,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 > Exercise 19
 >
-> Implement a REST API endpoint for _getting the quizzes of a category_ in newest to oldest order. Only _published quizzes of the category_ should be returned by the endpoint. Return an appropriate HTTP status code and error message in the following error case:
+> Implement a REST API endpoint for _getting the quizzes of a category_. Only _published quizzes of the category_ should be returned by the endpoint. Return an appropriate HTTP status code and error message in the following error case:
 >
 > - Category with the provided id does not exist
 >
