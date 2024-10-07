@@ -589,6 +589,12 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 17
 >
+> Implement appropriate test methods for at least one more endpoint of your choice. Analyze the behavior of the endpoint based on different requests and dabatase states and implement test scenarios to cover these cases.
+
+{: .important-title }
+
+> Exercise 18
+>
 > Add instructions on _how to run the tests_ on the command-line to the "Developer guide" section in the `README.md` file.
 
 ## Authentication
@@ -685,7 +691,7 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title}
 
-> Exercise 18
+> Exercise 19
 >
 > Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
@@ -693,19 +699,19 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 20
 >
 > Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 21
 >
 > Make sure that all project-related documentation, such as project description, data model documentation, architecture documentation and Swagger documentation is up-to-date.
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -727,7 +733,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 23
 >
 > Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 
@@ -745,7 +751,7 @@ Submit the final report as _a single PDF file_ to [this Moodle submission]({{sit
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 24
 >
 > Write the final report as instructed above.
 
