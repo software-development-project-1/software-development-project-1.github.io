@@ -19,5 +19,5 @@ On the third week the teams start working on the project. The project advances i
 | 11.11. | Daily Scrum, Git branches, Sprint Review                                     |                                                          |
 | 18.11. | 🏃‍♂️ [Sprint 2](/sprint-2): Retrospective, REST APIs                           | Exercises 1 - 34, deadline on {{site.sprint_2_deadline}} |
 | 25.11. | Communication between frontend and backend                                   |                                                          |
-| 2.12.  | 🏃‍♂️ [Sprint 3](/sprint-3): Testing                                            | Exercises 1 - 24, deadline on {{site.sprint_3_deadline}} |
+| 2.12.  | 🏃‍♂️ [Sprint 3](/sprint-3): Testing                                            | Exercises 1 - 23, deadline on {{site.sprint_3_deadline}} |
 | 9.12. | Finishing the project                                                        |                                                          |
