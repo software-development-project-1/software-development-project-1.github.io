@@ -705,11 +705,10 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 >  - From which parts you would want to learn more about?
 >  - What are your goals and expectations towards the course? For example, what do you want to learn during the course?
 >
-> Then, summarize your discussion by writing down the following things:
+> Then, write down the following things:
 >
 > - The names and GitHub usernames of your team members
 > - The name of your team
-> - What are your team's trengths and weaknesses?
 >
 > _Add these to the Moodle submission_.
 
