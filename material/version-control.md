@@ -689,8 +689,8 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 >
 > 1. Link to the GitHub repository
 > 2. Link to the latest commit in the repository and the GitHub username of the commit's author
-> 3. Link to the latest issue in the repository
-> 4. Link to the latest pull request in the repository
+> 3. Link to the latest issue in the repository (hint: check the repository's navigation bar)
+> 4. Link to the latest pull request in the repository (hint: check the repository's navigation bar)
 > 5. GitHub username of the user who has the most commits in the repository (hint: check the repository's contributors)
 
 {: .important-title }
