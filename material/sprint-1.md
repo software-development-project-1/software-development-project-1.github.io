@@ -347,14 +347,10 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .highlight }
 
-> When you complete a task, you should _close_ the task related issue. This can be done by clicking the issue title in the Backlog project and clicking the "Close issue" button. Also, move the issue to the "Done" column in the Backlog project.
-
-{: .highlight }
-
 > While working on the tasks, keep the Sprint Backlog up-to-date:
 >
 > - When you start working on a task, assign it to you and move it to the "In progress" column in the project
-> - When you complete a task, move it to the "Done" column in the project. Also remember to _close_ the task related issue
+> - When you complete a task, move it to the "Done" column in the project. Also remember to _close_ the task related issue. This can be done by clicking the issue title in the Backlog project and clicking the "Close issue" button
 > - When all user story related tasks are completed, move the user story issue to the "Done" column
 >
 > Use the Sprint Backlog to track the Sprint progress. Always start a team meeting by looking at the Sprint Backlog.
@@ -451,8 +447,6 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 > ![](/assets/sprint-1-us-6-1-list-questions.png)
 >
 > ![](/assets/sprint-1-us-6-2-list-questions.png)
->
-> ![](/assets/sprint-1-us-6-3-list-questions.png)
 
 {: .important-title }
 
