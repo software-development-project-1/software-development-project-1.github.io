@@ -686,12 +686,12 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > Explore an open source project repositories in GitHub. You can for example search for your favorite library (such as React) on the [GitHub's home page](https://github.com/) using the search field at the top of the page. Alternatively, you can use Google.
 >
 > Find the issues and the pull requests, the people who have contributed to the project, and the statistics associated with them. _Include the following information about the repository to the Moodle submission_:
-> 
+>
 > 1. Link to the GitHub repository
-> 2. Link to the latest issue in the repository
-> 3. Link to the latest pull request in the repository
-> 4. GitHub username of the user who has the most commits in the repository (hint: check the repository's contributors)
-> 5. Link to the latest commit in the repository and the GitHub username of the commit's author
+> 2. Link to the latest commit in the repository and the GitHub username of the commit's author
+> 3. Link to the latest issue in the repository
+> 4. Link to the latest pull request in the repository
+> 5. GitHub username of the user who has the most commits in the repository (hint: check the repository's contributors)
 
 {: .important-title }
 
@@ -699,11 +699,11 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 >
 > _This is a team exercise_. The team start to work on the project the next week. If you are uncertain who your team members are, check their names on [Moodle]({{site.moodle_link}}). Get to know each other by introducing yourself to other team members. You can e.g. share the following things about yourself:
 >
->  - Which parts of software development you are most interested in? (e.g. backend development, frontend development, databases...)
->  - Which parts are you the most comfortable with?
->  - Which are you less comfortable with?
->  - From which parts you would want to learn more about?
->  - What are your goals and expectations towards the course? For example, what do you want to learn during the course?
+> - Which parts of software development you are most interested in? (e.g. backend development, frontend development, databases...)
+> - Which parts are you the most comfortable with?
+> - Which are you less comfortable with?
+> - From which parts you would want to learn more about?
+> - What are your goals and expectations towards the course? For example, what do you want to learn during the course?
 >
 > Then, write down the following things:
 >
@@ -728,7 +728,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 
 {: .highlight }
 
->  Make sure that the Moodle submission contains the link to your GitHub repository created in exercise 7 and the information mentioned in exercise 14, 15, 16 and 17.
+> Make sure that the Moodle submission contains the link to your GitHub repository created in exercise 7 and the information mentioned in exercise 14, 15, 16 and 17.
 
 ## The End
 
