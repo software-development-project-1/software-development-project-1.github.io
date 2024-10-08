@@ -109,7 +109,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again".
 >
-> There should be a page in the student dashboard where the results of a quiz are displayed. At the top of the page, the total number of answers for the quiz should be displayed. The page should display the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. For each question, the number of answers for each answer option of the question should be displayed. There should be a link to the results page next to the quiz in the quiz list page.
+> There should be a page in the student dashboard where the results of a quiz are displayed. At the top of the page, the total number of answers for the quiz should be displayed. The page should display the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. There should be a link to the results page next to the quiz in the quiz list page.
 >
 > Different students are interested in different quiz categories. To find interesting quizzes quickly, there should be page that lists all the categories. Clicking the category's name on the list should take the student to a page that lists the quizzes in the category. The category list page should be accessible from the navigation menu."
 >
@@ -760,6 +760,10 @@ public class MessageRestController {
 > Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
+>
+> Tips for the tasks:
+>
+> - The nofitication can be implemented for example using the Material UI's [Snackbar](https://mui.com/material-ui/react-snackbar/) component or simply with the [alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) function
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >

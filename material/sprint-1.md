@@ -137,7 +137,7 @@ Once the organization is created, a team member can be invited by clicking the "
 
 > Exercise 2
 >
-> One of the team members should create a GitHub repository for the project. To get started more quickly, you can use the [project-template](https://github.com/software-development-project-1/project-template) repository as the repository template. The repository contains a template for a Spring Boot application with Spring Web, Spring Data JPA, H2 Database and Thymeleaf dependencies.
+> One of the team members should create a GitHub repository for the project. To get started more quickly, you can use the [project-template](https://github.com/software-development-project-1/project-template) repository as the repository template. The repository contains a template for a Spring Boot application generated with [Spring Initializr](https://start.spring.io/). It contains Spring Web, Spring Data JPA, H2 Database and Thymeleaf dependencies. There's also configuration for the H2 database in the `application.properties` file.
 >
 > Open the repository in GitHub, click the "Use this template" button and choose "Create a new repository". Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description. This repository will become your project's repository where you start working on the project.
 
@@ -718,18 +718,7 @@ The PostgreSQL database requires a suitable driver for the application. Let's ad
 
 If you use a `CommandLineRunner` to initialize the database with test data each time the application starts, you will need to disable it in the production environment. This is because the application will restart multiple times, adding the same data to the database over and over again.
 
-The easy way to solve this problem is to remove the `CommandLineRunner` method and use an embedded [H2 database](https://www.baeldung.com/spring-boot-h2-database) instead of an in-memory database in the development environment. Embedded database is stored to a file so the data won't vanish once the application is shut down. To use an embedded database, set the following properties in the `application.properties` file:
-
-```
-spring.datasource.url=jdbc:h2:file:~/quizzer;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
-spring.datasource.username=admin
-spring.datasource.password=password
-spring.datasource.driver-class-name=org.h2.Driver
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
-spring.jpa.hibernate.ddl-auto=update
-```
-
-This will save the database to a `~/quizzer.mv.db` file. If you want to reset the database and remove all the data, simply delete the file by running the `rm ~/quizzer.mv.db` command on the command-line.
+The easy way to solve this problem is to remove the `CommandLineRunner` method and use an embedded [H2 database](https://www.baeldung.com/spring-boot-h2-database) instead of an in-memory database in the development environment. Embedded database is stored to a file so the data won't vanish once the application is shut down. To use an embedded database, set [the following properties](https://github.com/software-development-project-1/project-template/blob/main/src/main/resources/application.properties) in the `application.properties` file. This will save the database to a `~/quizzer.mv.db` file. If you want to reset the database and remove all the data, simply delete the file by running the `rm ~/quizzer.mv.db` command on the command-line.
 
 Now that we have the database-related changes in order, push these changes to GitHub before heading further.
 

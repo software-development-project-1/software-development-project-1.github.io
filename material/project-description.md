@@ -25,7 +25,7 @@ The Product Owner has a great project idea and is in desperate need of a talente
 >
 > The student should be able to see a list of published quizzes and take the quizzes by answering the questions of a quiz in the student dashboard. After answering a question, the student should get feedback on whether their answer was correct or not.
 >
-> There should also be a page where the results of a quiz are displayed. The page should display the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question. Also, the number of answers for each answer option of each question should be displayed.
+> There should also be a page where the results of a quiz are displayed. The page should display the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question.
 >
 > So that the students can share their thoughts about a quiz, the student should be able to review a quiz. There should be a page where the student can write a review and see other student's reviews for a quiz. It should also be possible for the student to edit and delete reviews.
 >
