@@ -10,7 +10,7 @@ nav_exclude: true
 
 # Sprint 3
 
-For the final Sprint of the course, the Sprint 3, we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to testing and authentication.
+For the final Sprint of the course, the Sprint 3, we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to testing.
 
 ## Sprint assesment
 
@@ -54,19 +54,13 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 3 goals in the Sprint Planning event:
 
-> "We now have the basic features for managing and taking quizzes. What we still need is a way for the teachers to manage their personal quizzes.
->
-> The teacher should be able to register with a username, email, bio and password in the teacher dashboard. The teacher can provide a bio to describe themselves. It would be nice if the user would be required to retype the password to make sure that they didn't accidently mistype the password.
->
-> Once registered, the teacher should be able to sign in with their username and password. If the user is not signed in the navigation bar should have "Register" and "Sign in" links, which will take the user to the register or sign in page.
->
-> An anonymous user, that is an user who is not signed in, should be able to see the quiz and category list. However, they should not be able to add a quiz or a category. That is, the links for adding a quiz and category should not be visible if the user is not signed in.
->
-> After signing in, the teacher should be able to add a quiz or a category. However, the teacher should only be able to edit and delete quizzes and categories they have added themselves. That is, the "Edit" link and the "Delete" button in the quiz list should only be visible if the teacher has added the quiz. The same logic should be applied to the categories and quiz's questions. The quiz list should also display the username of the teacher who has added the quiz both in teacher and student dashboard.
+> "We now have the basic features for managing and taking quizzes. What we still need is a way for the students to share their thoughts about quizzes by writing reviews in the student dashboard.
 >
 > The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should not be able to review a non-published quiz.
 >
-> The review page should list the added reviews. Each review should display the information submitted by the student and the date when the review was written. The review page should also display the number of reviews the quiz has. It should also be possible for the student to edit and delete reviews in the review page."
+> The review page should list the added reviews. Each review should display the information submitted by the student and the date when the review was written. The review page should also display the number of reviews the quiz has and the rating average. It should also be possible for the student to edit and delete reviews in the review page.
+>
+> Students have different skill levels so it would be useful if the student could filter the questions of quiz by the difficulty level in the quiz page. There could be dropdown menu at the top of the page from which the student can select the difficulty level for the questions."
 >
 > -- The Product Owner
 
@@ -77,8 +71,6 @@ After some discussion the Scrum Team planned the following user stories:
 3. {{site.sprint_3_user_story_3}}
 4. {{site.sprint_3_user_story_4}}
 5. {{site.sprint_3_user_story_5}}
-6. {{site.sprint_3_user_story_6}}
-7. {{site.sprint_3_user_story_7}}
 
 {: .important-title }
 
@@ -94,10 +86,6 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the Sprint milestone and add the issues to the backlog.
 
-{: .note }
-
-> The [Authentication](#authentication) section covers topics related to the authentication. Take a look at it before planning the authentication-related tasks.
-
 {: .important-title }
 
 > Exercise 5
@@ -108,7 +96,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-3-us-1-register.png)
+> ![](/assets/sprint-3-us-1-add-review.png)
 
 {: .important-title }
 
@@ -120,9 +108,9 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-3-us-2-1-sign-in.png)
+> ![](/assets/sprint-3-us-2-1-list-reviews.png)
 >
-> ![](/assets/sprint-3-us-2-2-sign-in.png)
+> ![](/assets/sprint-3-us-2-2-list-reviews.png)
 
 {: .important-title }
 
@@ -131,12 +119,6 @@ After some discussion the Scrum Team planned the following user stories:
 > Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-3-us-3-1-personal-quizzes.png)
->
-> ![](/assets/sprint-3-us-3-2-personal-quizzes.png)
 
 {: .important-title }
 
@@ -145,10 +127,6 @@ After some discussion the Scrum Team planned the following user stories:
 > Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-3-us-4-add-review.png)
 
 {: .important-title }
 
@@ -160,25 +138,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-3-us-5-1-list-reviews.png)
->
-> ![](/assets/sprint-3-us-5-2-list-reviews.png)
-
-{: .important-title }
-
-> Exercise 10
->
-> Plan the tasks for the sixth user story, "{{site.sprint_3_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
-
-{: .important-title }
-
-> Exercise 11
->
-> Plan the tasks for the seventh user story, "{{site.sprint_3_user_story_7}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
+> ![](/assets/sprint-3-us-5-difficulty-picker.png)
 
 ## Testing
 
@@ -304,7 +264,7 @@ The configuration in the `src/test/resources/application.properties` file will b
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 10
 >
 > Add a test-specific configuration file and configure a separate database for the tests. Make sure that running the tests doesn't alter (for example delete any data) the development environment database.
 
@@ -542,12 +502,12 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 11
 >
 > Implement a test class within the `src/test/java` package with the following test methods for the endpoint for _getting all (published) quizzes_:
 >
 > - `getAllQuizzesReturnsEmptyListWhenNoQuizzesExist`: send a request without saving a quiz to the database. Then, the response should have an empty list
-> - `getAllQuizzesReturnsListOfPublishedQuizzesWhenQuizzesExist`: save a few quizzes (both published and non-published) to the database and send a request. Then, the response should have a list of the saved _published quizzes_
+> - `getAllQuizzesReturnsListOfPublishedQuizzesWhenQuizzesExist`: save a few quizzes (both published and non-published) to the database and send a request. Then, the response should have a list of the _published quizzes_
 >
 > Create an issue for this task.
 
@@ -557,7 +517,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 12
 >
 > Implement the following test methods for the endpoint for _getting a quiz by id_:
 >
@@ -566,7 +526,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 13
 >
 > Implement the following test methods for the endpoint for _getting the questions of a quiz_:
 >
@@ -577,7 +537,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 14
 >
 > Implement a test class with the following test methods for the endpoint for _creating an answer_:
 >
@@ -587,105 +547,19 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 15
+>
+> Implement appropriate test methods for at least one more endpoint of your choice. Analyze the behavior of the endpoint based on different requests and dabatase states and implement test scenarios to cover these cases.
+
+{: .important-title }
+
+> Exercise 16
 >
 > Add instructions on _how to run the tests_ on the command-line to the "Developer guide" section in the `README.md` file.
 
-## Authentication
-
-Most of the application have features that need to verify the user's identity before they are allowed to perform certain actions. This process is referred to as _authentication_. User's identity can be verified in different ways, but a quite common process is to associate a password with a certain username or some other unique identifier such as email. The user who knows the password of a username will be identified as that user.
-
-The user's password is not stored to the database as a plain text, instead a [hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) presentation of the password is stored. Hash is like a secret we put behind a door, lock it with a key and throw the key away. There's no way of getting the original text from a hash. But we can _comprare_ two hashes and see if their value is the same. If the data in the database gets into wrong hands, the password hashes can't be used to authenticate.
-
-In web applications the common authentication flow goes like this:
-
-1. The user sends a request with a username and password to the server
-2. The server fetches the password hash with the given username from the database, hashes the provided password and compares it with the password hash in the database
-3. If the hashes match, the server provides the user with a _token_ that they can use to authenticate the future requests. The server commonly puts the token to a [cookie](https://en.wikipedia.org/wiki/HTTP_cookie) and it is sent to server in each request by the web browser
-
-[Spring Security](https://spring.io/projects/spring-security) is a popular authentication and access-control framework for Spring applications. Let's start using Spring Security in our application by adding the dependency to the `<dependencies>` list in the `pom.xml` file:
-
-```xml
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-security</artifactId>
-</dependency>
-```
-
-To use authentication related information in templates, we can use the [Thymeleaf Spring Security dialect](https://github.com/thymeleaf/thymeleaf-extras-springsecurity). Let's also add that dependency to the `<dependencies>` list in the `pom.xml` file:
-
-```xml
-<dependency>
-    <groupId>org.thymeleaf.extras</groupId>
-    <artifactId>thymeleaf-extras-springsecurity6</artifactId>
-</dependency>
-```
-
-Next, we need to configure the Spring Security a bit. Let's add the following `SecurityConfig` configuration class for our project:
-
-```java
-@Configuration
-@EnableWebSecurity
-public class SecurityConfig {
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests((requests) -> requests
-            .requestMatchers(
-                // The REST API endpoints
-                antMatcher("/api/**"),
-                // The error page
-                antMatcher("/error"),
-                // Swagger documentation paths
-                antMatcher("/v3/api-docs/**"),
-                antMatcher("/configuration/ui"),
-                antMatcher("/swagger-resources/**"),
-                antMatcher("/configuration/security"),
-                antMatcher("/swagger-ui/**"))
-                // Rest of the permitted paths
-                // ...
-            .permitAll()
-            .anyRequest()
-            .authenticated());
-
-        http.formLogin((form) -> form.permitAll());
-        http.logout((logout) -> logout.permitAll());
-        http.cors(Customizer.withDefaults());
-        http.csrf((csrf) -> csrf.ignoringRequestMatchers(antMatcher("/api/**")));
-
-        return http.build();
-    }
-}
-```
-
-The `passwordEncoder` method returns the password encoder object used to hash passwords. We'll use [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) which is the de facto hash algorithm for passwords.
-
-The `securityFilterChain` returns the configuration object for Spring Security. The first piece of configuration determines the access-control for our application. The `permitAll()` method call _will permit anyone to access these paths_. This is follow by `anyRequest().authenticated()` method call, which means that _request to any other path will require authentication_.
-
-On top of the configuration class, we need to have class that implements the `UserDetailsService` interface. This class will determine how to fetch the user's information based on the username:
-
-```java
-@Service
-public class UserDetailsServiceImpl implements UserDetailsService {
-    @Autowired
-    private UserRepository userRepository;
-
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        // ...
-    }
-}
-```
-
-The `loadUserByUsername` method will need to return a `UserDetails` object based on the username provided by the paramater or throw an `UsernameNotFoundException` exception if no user is found.
-
 {: .important-title}
 
-> Exercise 18
+> Exercise 17
 >
 > Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
@@ -693,19 +567,19 @@ The `loadUserByUsername` method will need to return a `UserDetails` object based
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 18
 >
 > Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 19
 >
 > Make sure that all project-related documentation, such as project description, data model documentation, architecture documentation and Swagger documentation is up-to-date.
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 20
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -727,7 +601,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 21
 >
 > Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
 
@@ -745,7 +619,7 @@ Submit the final report as _a single PDF file_ to [this Moodle submission]({{sit
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 22
 >
 > Write the final report as instructed above.
 

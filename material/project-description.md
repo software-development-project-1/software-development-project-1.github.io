@@ -13,7 +13,7 @@ At week three, the Scrum Team will start working on a project in Sprint 1. Stude
 
 The Product Owner has a great project idea and is in desperate need of a talented developer team. Here's how the Product Owner describes the project that he has named "Quizzer":
 
-> My teacher colleagues at Haaga Helia need an application where they can add different kinds of quizzes for their students. Quizzes have multiple choice questions related to the topic of the quiz. By answering the questions of a quiz the students can learn about course-related topics. The teachers need a teacher dashboard application where they can manage quizzes. The students need a separate student dashboard application where they can take different quizzes. Both students and teachers use the web browser a lot, so it would make sense that both applications are web applications.
+> My teacher colleagues at Haaga Helia need an application where they can add different kinds of quizzes for their students. Quizzes have multiple choice questions related to the topic of the quiz. By answering the questions of a quiz the students can learn about course-related topics. The teachers need a teacher dashboard application where they can manage quizzes. The students need a separate student dashboard application where they can take quizzes added by the teachers. Both students and teachers use the web browser a lot, so it would make sense that both applications are web applications.
 >
 > A teacher should be able to add a quiz in the teacher dashboard. A quiz has a name, for example, "The capital cities of Europe" and a description, for example, "Learn the capital cities of the European countries" and a published status indicating whether the students can take the quiz or not. The teacher should be able to see a list of added quizzes and be able to edit the information of a quiz and delete it.
 >
@@ -22,8 +22,6 @@ The Product Owner has a great project idea and is in desperate need of a talente
 > Questions have multiple answer options, for example, "Helsinki", "Turku" and "Tampere". An answer option has an answer option content, for example "Helsinki" and a correctness status indicating whether the answer option is correct or not. The teacher should be able to add an answer option for a question, see a list of answer options of a question and be able to delete an answer option.
 >
 > To categorize quizzes, the teacher should be able to add different categories, such as "Vocabulary" and "Geography". A category has a name, for example, "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". The teacher should be able to see a list of added categories and be able to edit the information of a category and delete it.
->
-> The teacher should be able to register and sign in to manage their personal quizzes. Only signed-in teachers should be able to add a quiz or category. Once signed in, the teacher should only be able to edit and delete their own quizzes and categories.
 >
 > The student should be able to see a list of published quizzes and take the quizzes by answering the questions of a quiz in the student dashboard. After answering a question, the student should get feedback on whether their answer was correct or not.
 >

@@ -169,7 +169,6 @@ We now have a project with the default columns: "Todo", "In progress" and "Done"
 - "Product Backlog". This column is for the _Product Backlog_ items. That is, items that are requirements for the project but aren't currently worked on. The items should be listed in the _priority_ order (the "P" of DEEP Product Backlog) defined by the Product Owner.
 - "Sprint Backlog". This column is for the _Sprint Backlog_ items. That is, user stories and tasks that are chosen for the current Sprint. Top-priority items are chosen from the "Product Backlog" column and moved to this column during the Sprint Planning event.
 - "In progress". This column is for the items that some team member is currently working on.
-- "In review". This column is for items that require other Developer's or Product Owner's acceptance before they can be moved to the "Done" column.
 - "Done". This column is for the items that have been completed.
 
 Finally, let's make sure that our project is public. Click the project's name and the project's settings should open. Scroll down to "Danger zone" section and choose "Visibility" as "Public" from the dropdown menu.
@@ -352,15 +351,11 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .highlight }
 
-> Don't close the _user story related issues_ before the Sprint Review event. The Product Owner needs to accept the user stories before they are completed. Once all user story related tasks are completed, move the user story related issue to the "In review" column.
-
-{: .highlight }
-
 > While working on the tasks, keep the Sprint Backlog up-to-date:
 >
 > - When you start working on a task, assign it to you and move it to the "In progress" column in the project
 > - When you complete a task, move it to the "Done" column in the project. Also remember to _close_ the task related issue
-> - When all user story related tasks are completed, move the user story related issue to the "In review" column to wait for the Product Owner's review in the Sprint Review event
+> - When all user story related tasks are completed, move the user story issue to the "Done" column
 >
 > Use the Sprint Backlog to track the Sprint progress. Always start a team meeting by looking at the Sprint Backlog.
 
@@ -596,9 +591,8 @@ But, GitHub supports a better way to merge branches using [pull requests](https:
 > Exercise 25
 >
 > 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions. The pull request title should describe the changes, for example "Change the submit button color in the add quiz form". The description provides additional details
-> 2. Take a look at some other team member's pull request and conduct a code review by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) instructions. Pull the branch from GitHub to your local computer and take a look at the changes. If everything looks good, approve the changes with a short comment, such as "Looks good to me". Otherwise, request changes
-> 3. Once you have received an approving review from a team member for your pull request, merge it into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below
-> 4. Switch back to the main branch with the `git checkout main` command and pull the changes from GitHub with the `git pull` command. Make sure that you can see the changes made in your branch in the main branch as well
+> 2. Merge your branch into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below
+> 3. Switch back to the main branch with the `git checkout main` command and pull the changes from GitHub with the `git pull` command. Make sure that you can see the changes made in your branch in the main branch as well
 
 {: .important-title }
 

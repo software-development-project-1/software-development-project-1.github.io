@@ -66,8 +66,8 @@ Make sure that everyone follows the event structure and that each team member ge
 >
 > [Retrospective board](link-to-the-flinga-board)
 >
-> ## Successes 
-> 
+> ## Successes
+>
 > - Something that we succeeded in.
 >
 > ## Issues
@@ -96,16 +96,14 @@ The Product Owner was delighted to see how the project has advancend during Spri
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 2 goals in the Sprint Planning event:
 
 > "It's great that we now have the basic functionality for managing quizzes! What we now need is a way for the teacher to categorize quizzes and student to take the published quizzes.
-> 
-> To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". There should be a form for adding a category and a separate page for listing the added categories. The categories should be listed in an alphabetical order based on the name.
+>
+> To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". There should be a form for adding a category and a separate page for listing the added categories.
 >
 > The category list should have a delete button next to each category, which can be clicked to delete the category. There should also be a link which should take the teacher to an edit form, where they can edit all the information of the category.
 >
-> The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu in both forms where categories are listed in an alphabetical order based on the name.
+> The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu in both forms where categories are listed.
 >
-> Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description and the date when it was added. These quizzes should be listed from newest to oldest.
->
-> Different students are interested in different quiz categories. To find interesting quizzes quickly, the student should be able to filter the quiz list based on the category. There could be dropdown menu at the top of the page for filtering the quizzes by a specific category.
+> Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description, category and the date when it was added.
 >
 > Each quiz name on the quiz list should be a link to a separate page where the quiz name, description and the questions are displayed. There should also be some kind of navigation menu from which the student can navigate to the quiz list page.
 >
@@ -113,7 +111,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > There should be a page in the student dashboard where the results of a quiz are displayed. At the top of the page, the total number of answers for the quiz should be displayed. The page should display the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. For each question, the number of answers for each answer option of the question should be displayed. There should be a link to the results page next to the quiz in the quiz list page.
 >
-> Students have different skill levels so it would be useful if the student could filter the questions of quiz by the difficulty level in the quiz page. There could be dropdown menu at the top of the page from which the student can select the difficulty level for the questions."
+> Different students are interested in different quiz categories. To find interesting quizzes quickly, there should be page that lists all the categories. Clicking the category's name on the list should take the student to a page that lists the quizzes in the category. The category list page should be accessible from the navigation menu."
 >
 > -- The Product Owner
 
@@ -130,7 +128,6 @@ After some discussion the Scrum Team planned the following user stories:
 9. {{site.sprint_2_user_story_9}}
 10. {{site.sprint_2_user_story_10}}
 11. {{site.sprint_2_user_story_11}}
-12. {{site.sprint_2_user_story_12}}
 
 {: .important-title }
 
@@ -138,7 +135,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
-> Create a new milestone for the second Sprint. If you didn't manage to implement all user stories during the previous Sprint, set the second Sprint's milestone for the unfinished user story and task issues. If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks. 
+> Create a new milestone for the second Sprint. If you didn't manage to implement all user stories during the previous Sprint, set the second Sprint's milestone for the unfinished user story and task issues. If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks.
 
 {: .important-title }
 
@@ -212,55 +209,6 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > _NB: Keep this documentation (like all other documentation) up-to-date when you add new entities for the application._
 
-## ⭐ Bonus: Reducing boilerplate code with Lombok
-
-Java classes require a lot of _boilerplate code_ in the form of getters, setters and constructors. Each time we define an attribute for a class, we need to implement getter and setter methods for it and alter the constructor. [Lombok](https://projectlombok.org/) is library that automatically generates getters, setters and constructors from the attributes.
-
-Before we can start using Lombok, we need to add it as dependency for our Maven project. Let's add the dependency to the `<dependencies>` list in the `pom.xml` file:
-
-```xml
-<dependency>
-    <groupId>org.projectlombok</groupId>
-    <artifactId>lombok</artifactId>
-    <version>1.18.30</version>
-    <scope>provided</scope>
-</dependency>
-```
-
-Lombok also needs the IDE support. We can setup Lombok for Eclipse by following these [instructions](https://projectlombok.org/setup/eclipse#via-eclipse-plugin-installer).
-
-Once we have successfully setup the Lombok library, we can start using it in our classes. Lombok generates boilerplate code for classes using a set of [annotations](https://projectlombok.org/features/). For example, the [@Getter](https://projectlombok.org/features/GetterSetter) annotation generates getters and the [@Setter](https://projectlombok.org/features/GetterSetter) annotation setters for the class. We also need an empty constructor for Entity classes. We can use the [@NoArgsConstructor](https://projectlombok.org/features/constructor) annotation for this.
-
-Here's an example of using these annotations on a `Message` class:
-
-```java
-@Entity
-@NoArgsConstructor
-@Getter
-@Setter
-public class Message {
-    @Id
-    @GeneratedValue
-    private Long id;
-
-    @Column(nullable = false)
-    private String content;
-
-    public Message(String content) {
-        this.content = content;
-    }
-}
-```
-
-Wow, that eliminates a lot of boilerplate code! Lombok has many other useful annotations as well, such as the [@Builder](https://projectlombok.org/features/Builder) annotation. Check the [documentation](https://projectlombok.org/features/) for more.
-
-{: .important-title }
-
-> ⭐ Bonus exercise
->
-> Use Lombok annotations on classes to reduce boilerplate code in your project.
-
-
 ## REST APIs
 
 So far the user has interacted with our web application in the following manner:
@@ -301,12 +249,12 @@ The request should also contain the _HTTP method_, that determines the operation
 
 The resource path has certain naming conventions. The path starts with the resource _collection_ name in plural, for examples "users". The collection name is followed by resource specifiers, for example the id of the resource. Here's example of RESTful API paths for the "users" collection:
 
-| HTTP method | Path          | Request mapping | Description                          |
-| ----------- | ----------- | ------------- | ------------------------------------ |
-| `GET`       | `/users`      | `@GetMapping("/users")` | List all users                       |
-| `GET`       | `/users/{id}` | `@GetMapping("/users/{id}")` | Get the user with the provided id    |
-| `POST`      | `/users`      | `@PostMapping("/users")` | Create a user                        |
-| `PUT`       | `/users/{id}` | `@PutMapping("/users/{id}")` | Update the user with the provided id |
+| HTTP method | Path          | Request mapping                 | Description                          |
+| ----------- | ------------- | ------------------------------- | ------------------------------------ |
+| `GET`       | `/users`      | `@GetMapping("/users")`         | List all users                       |
+| `GET`       | `/users/{id}` | `@GetMapping("/users/{id}")`    | Get the user with the provided id    |
+| `POST`      | `/users`      | `@PostMapping("/users")`        | Create a user                        |
+| `PUT`       | `/users/{id}` | `@PutMapping("/users/{id}")`    | Update the user with the provided id |
 | `DELETE`    | `/users/{id}` | `@DeleteMapping("/users/{id}")` | Delete the user with the provided id |
 
 {: .note }
@@ -367,7 +315,7 @@ fetch("http://localhost:8080/api/messages", {
   },
   // This is the data in the request body
   body: JSON.stringify({ content: "Hello world!" }),
-})
+});
 ```
 
 ### Controlling the request and response body format with DTO classes
@@ -505,10 +453,6 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 >
 > - Quiz with the provided id does not exist
 >
-> [Request parameters](https://www.baeldung.com/spring-request-param) are used to provide additional properties with the request. A common use-case for a request parameter is filtering a collection based on some property, for example `/messages?content=Hello`.
->
-> The endpoint should support an optional request parameter for filtering the questions of a quiz by a difficulty level. That is, if the request parameter is provided, only the questions with the provided difficulty level should be returned.
->
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
 {: .important-title }
@@ -520,7 +464,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 > - Answer option with the provided id does not exist
 > - Quiz is not published
 >
-> Define the request body format with a [DTO](https://www.baeldung.com/java-dto-pattern) class. The frontend can send a JSON request body for example in the following format:
+> You can define the request body format with a [DTO](https://www.baeldung.com/java-dto-pattern) class. The frontend can send a JSON request body for example in the following format:
 >
 > ```json
 > {
@@ -544,7 +488,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 > Exercise 17
 >
-> Implement a REST API endpoint for _getting all categories_ in alphabetical order by the name.
+> Implement a REST API endpoint for _getting all categories_.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
@@ -653,7 +597,7 @@ public Message getMessageById(@PathVariable Long id) {
 
 > Exercise 20
 >
-> Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response. 
+> Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response.
 >
 > Test each REST API endpoint by opening the endpoint's documentation and cliking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an `id` path parameter value of a non-existing quiz.
 >
@@ -867,18 +811,6 @@ public class MessageRestController {
 
 > Exercise 28
 >
-> Plan the tasks for the twelfth user story, "{{site.sprint_2_user_story_12}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-2-us-12-difficulty-picker.png)
-
-{: .important-title }
-
-> Exercise 29
->
 > Add instructions on _how to start the frontend application_ to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
 > For the sake of clarity, you can add separate subheadings for backend's and frontend's developer guide:
@@ -899,7 +831,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 30
+> Exercise 29
 >
 > Write the first version of the project's _architecture documentation_. Add the documentation under a "Architecture" subheading in the `README.md` file. The documentation should contain the following things:
 >
@@ -928,7 +860,7 @@ The ignored files (or in this case, the ignored folders) are specified by each l
 
 {: .important-title }
 
-> Exercise 31
+> Exercise 30
 >
 > Make sure that your project has a `.gitignore` file which at least ignores the frontend's `node_modules` folder, the frontend's build folder (this is `dist` folder in case of a Vite project) and the backend's `target` folder. It is ok for the repository to have multiple `.gitignore` files in different folders (for example having a different `.gitignore` file for the frontend's folder).
 >
@@ -949,9 +881,11 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
    Make sure that every `fetch` function call has the environment variable as the URL prefix. For example:
 
    ```js
-   fetch(`${import.meta.env.VITE_BACKEND_URL}/api/messages`).then((response) => {
-     // ...
-   });
+   fetch(`${import.meta.env.VITE_BACKEND_URL}/api/messages`).then(
+     (response) => {
+       // ...
+     }
+   );
    ```
 
 1. Add a `.env.production` environment variable file for the _production environment_. The `.env.production` file should contain a `VITE_BACKEND_URL` environment variable for the backend's _production environment URL_. For example:
@@ -971,7 +905,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 {: .important-title }
 
-> Exercise 32
+> Exercise 31
 >
 > Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Developer guide" section in the `README.md` file.
 
@@ -981,13 +915,13 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 33
+> Exercise 32
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 34
+> Exercise 33
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the features in the production environment.
 >
