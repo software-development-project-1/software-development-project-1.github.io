@@ -20,7 +20,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 2. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-32. The team can earn up to 15 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-31. The team can earn up to 15 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Sprint Planning
 
@@ -137,13 +137,15 @@ Once the organization is created, a team member can be invited by clicking the "
 
 > Exercise 2
 >
-> One of the team members should create a GitHub repository for the project. Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description. This repository will become your project's repository where you start working on the project.
+> One of the team members should create a GitHub repository for the project. To get started more quickly, you can use the [project-template](https://github.com/software-development-project-1/project-template) repository as the repository template. The repository contains a template for a Spring Boot application with Spring Web, Spring Data JPA, H2 Database and Thymeleaf dependencies.
+>
+> Open the repository in GitHub, click the "Use this template" button and choose "Create a new repository". Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description. This repository will become your project's repository where you start working on the project.
 
 {: .important-title }
 
 > Exercise 3
 >
-> Each team member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. See the [Git instructions](/git#githubs-workflow) if you have trouble.
+> Each team member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. See the [Git instructions](/git#githubs-workflow) if you have trouble. Start the Spring Boot application and make sure that there are no errors.
 
 {: .important-title }
 
@@ -277,15 +279,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 11
->
-> Initialize a Spring Boot backend application for the teacher dashboard for example using the [Spring Initializr](https://start.spring.io/). Push the Spring Boot application to GitHub. Note that this material contains instructions for _Maven_ projects (the "Maven" option in the "Project" section). Using a Maven project is highly recommended.
->
-> This your project's first task. Create an issue for the task. Set the milestone as "Sprint 1". Add the issue to the Backlog project's "Sprint Backlog" column.
-
-{: .important-title }
-
-> Exercise 11
+> Exercise 10
 >
 > Read through the [User stories and tasks](#user-stories-and-tasks) section. Then, plan the tasks for the first user story, "{{site.sprint_1_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -629,7 +623,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 26
 >
 > Write a developer guide documentation on _how to start the backend application_ on the command-line to the `README.md` file. Also, mention the required Java version for the project. Add it under a "Developer guide" subheading.
 >
@@ -664,7 +658,7 @@ If the application is currently running, for example in Eclipse, stop it. Then, 
 
 {: .important-title }
 
-> Exercise 28
+> Exercise 27
 >
 > Generate a JAR file for the application and run the application using the JAR file. Add instructions on how to generate and run the application using the JAR file to the "Developer guide" section in the `README.md` file.
 >
@@ -767,7 +761,7 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 {: .important-title }
 
-> Exercise 29
+> Exercise 28
 >
 > Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the "Developer guide" section in the `README.md` file.
 
@@ -777,7 +771,7 @@ A quite common practice is to separate the development and production code with 
 
 {: .important-title }
 
-> Exercise 30
+> Exercise 29
 >
 > 1. Create a `production` branch of the main branch. Then, push the branch to GitHub using the `git push origin -u production` command
 > 2. Open the backend web service in the Render Dashboard and go to the "Settings" page. In the "Build & Deploy" section, set the "Branch" as "production" and "Auto-Deploy" as "Yes"
@@ -800,7 +794,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 31
+> Exercise 30
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -812,7 +806,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 32
+> Exercise 31
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >
