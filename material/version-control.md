@@ -702,7 +702,6 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > - Which parts of software development you are most interested in? (e.g. backend development, frontend development, databases...)
 > - Which parts are you the most comfortable with?
 > - Which are you less comfortable with?
-> - From which parts you would want to learn more about?
 > - What are your goals and expectations towards the course? For example, what do you want to learn during the course?
 >
 > Then, write down the following things:
@@ -720,8 +719,8 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 >
 > 1. Choose one of the team member's repository created previously. The owner of the repository should add other team members as [collaborators](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository). This way, other team members can make commits for the repository and work together on the same code base
 > 2. Other team members should clone the chosen repository. Once the repository is cloned, each team member should make a small change to some file and push the changes to GitHub to see that they can access the repository
-> 3. Add a `calculator.html` file to the repository with the [following content](/assets/calculator.txt)
-> 4. The file contains the user interface for a simple calculator with five operations: addition, substraction, multiplication, division and [exponentiation](https://en.wikipedia.org/wiki/Exponentiation). The calculator has five buttons for each of the operations and two input fields for the numbers to operate on. Clicking the operation's button should perform the operation for the two input numbers and print the result below the input fields. Each team member should implement _exactly one operation_ which is defined as the function's event handler (for example, the addition operation should be implemented by implementing a `addition` function). If you have less than five team members, you can implement the remaining functions as you see fit
+> 3. One of the team members should add a `calculator.html` file to the repository with the [following content](/assets/calculator.txt)
+> 4. The file contains the user interface for a simple calculator with five operations: addition, substraction, multiplication, division and [exponentiation](https://en.wikipedia.org/wiki/Exponentiation). The calculator has five buttons for each of the operations and two input fields for the numbers to operate on. Clicking the operation's button should perform the operation for the two input numbers and print the result below the input fields. Each team member should implement _exactly one operation_ which is defined as the function's event handler (for example, the addition operation should be implemented by implementing a `addition` function). If you have less than five team members, you can implement the remaining functions as you see fit or leave them unimplement
 > 5. Once each team member has implemented their operation, there should be a `calculator.html` file in the GitHub repository with an operating calculator. Each team member should make sure that the final version of the calculator works by pulling the code from the GitHub repository using the `git pull` command and testing the calculator on their computer
 >
 > _Add the link to the GitHub repository in which you and your team implemented the calculator to the Moodle submission_.

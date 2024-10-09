@@ -16,7 +16,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-33. The team can earn up to 15 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-32. The team can earn up to 15 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -862,6 +862,7 @@ dist
 
 The ignored files (or in this case, the ignored folders) are specified by each line in the `.gitignore` file. These two lines will ignore both the `node_modules` and `dist` folders.
 
+<!--
 {: .important-title }
 
 > Exercise 30
@@ -869,6 +870,7 @@ The ignored files (or in this case, the ignored folders) are specified by each l
 > Make sure that your project has a `.gitignore` file which at least ignores the frontend's `node_modules` folder, the frontend's build folder (this is `dist` folder in case of a Vite project) and the backend's `target` folder. It is ok for the repository to have multiple `.gitignore` files in different folders (for example having a different `.gitignore` file for the frontend's folder).
 >
 > Also check that the remote GitHub repository doesn't contain any execcessive files or folders (for example the mentioned `node_modules` and `target` folders). Remove any execcessive files and folders and make necessary changes for the `.gitignore` file if needed.
+-->
 
 ![.gitignore](/assets/gitignore-meme.webp)
 
@@ -909,7 +911,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 {: .important-title }
 
-> Exercise 31
+> Exercise 30
 >
 > Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Developer guide" section in the `README.md` file.
 
@@ -919,13 +921,13 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 32
+> Exercise 31
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 33
+> Exercise 32
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the features in the production environment.
 >

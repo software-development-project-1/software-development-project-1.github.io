@@ -635,7 +635,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 A JAR (Java Archive) is a package file format typically used to aggregate many Java class files and associated metadata and resources (such as CSS files, JavaScript files and other assets) into one file to distribute application software or libraries on the Java platform. If a user wants to use our application, instead of providing them with the entire source code, we can just provide a JAR file containing everything needed to run our application.
 
-The name of the JAR file is specified by the `artifactId` and the `version` properties in the `pom.xml` file. Set these properties as following:
+The name of the JAR file is specified by the `artifactId` and the `version` properties in the `pom.xml` file. They should be the following:
 
 ```xml
 <artifactId>quizzer</artifactId>
