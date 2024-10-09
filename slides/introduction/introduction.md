@@ -65,7 +65,7 @@ Welcome to the Software Development Project 1 course!
 
 - The final grade (1-5) is composed of the project points (maximum of 40 points) and the personal points (maximum of 20 points)
 - The following are necessary to pass the course:
-  - At least 20 of the first two week's exercises have to be completed to pass the course
+  - At least 18 of the first two week's exercises have to be completed to pass the course
   - Written peer review for each team member
   - Passing grade from the peer reviews
   - Written final report
@@ -96,18 +96,7 @@ Welcome to the Software Development Project 1 course!
 - A software development project affects many people in different ways
 - For example, the software's end users get to use features they desire and the customer gets financial value for the project they are funding
 - The people or groups of people affected by a software development project are referred to as the software development project's _stakeholders_
-
-![width:800px](./stakeholders.webp)
-
----
-
-# Stakeholders
-
 - On top of technical skills, the future of software developer's work will mostly likely consist more and more on understanding the needs of the stakeholders and applying technical solutions to meet those needs
-
-  > "If you go forward 24 months from now, or some amount of time -- I can't exactly predict where it is -- it's possible that most developers are not coding. It just means that each of us has to get more in tune with what our customers need and what the actual end thing is that we're going to try to go build because that's going to be more and more of what the work is as opposed to sitting down and actually writing code"
-  >
-  > -- Matt Garman, CEO of Amazon Web Services (AWS) in 2024
 
 ---
 
@@ -126,7 +115,6 @@ Welcome to the Software Development Project 1 course!
 
 - Developing a software based on the stakeholders needs in a software development team isn't simple and many things can (and often does) go wrong
 - Which problems do you think software development projects commonly have? Are the problems technical such as programming errors or something else?
-- First discuss, then share your thoughts on the _three of the most common problems_
 
 ---
 
@@ -318,7 +306,7 @@ Welcome to the Software Development Project 1 course!
 # Writing good user stories
 
 - A good user story describes a _feature that provides value for the end user of the software_
-- This means, that the description should be written so that the _customer can understand it_
+- This means, that the description should be written from the user's perspective and so that the customer can understand it
 - For example the following user story is too technical:
 
   > ❌ As a developer, I want to optimize the database by adding a new index to the blog posts table so that the list of blog posts of a blog loads fast.
@@ -345,7 +333,7 @@ Welcome to the Software Development Project 1 course!
 
 - Which INVEST criteria does the following user story violate?
 
-  > ❌ As a content creator, I want to register with a username and password, a profile picture, and a profile description so that I can start writing blog posts
+  > ❌ As a blog reader, I want to be able to search blog posts by name, category and author so that I can find relevant blog posts to read
 
 ---
 
@@ -353,10 +341,10 @@ Welcome to the Software Development Project 1 course!
 
 - It is better to split these kinds of big user stories into multiple smaller user stories:
 
-  > ✅ As a content creator, I want to register with a username and password so that I can start writing blog posts
+  > ✅ As a blog reader, I want to be able to search blog posts by name so that I can find relevant blog posts to read
 
-  > ✅ As a content creator, I want to register with a profile picture so that my readers know what I look like
+  > ✅ As a blog reader, I want to be able to search blog posts by category so that I can find relevant blog posts to read
 
-  > ✅ As a content creator, I want to register with a profile description so that my readers know about me
+  > ✅ As a blog reader, I want to be able to search blog posts by author so that I can find relevant blog posts to read
 
 - If the description of the feature contains words like "and" or "or", it could be that the user story can be split into smaller user stories

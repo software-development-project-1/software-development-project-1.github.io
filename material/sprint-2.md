@@ -49,7 +49,7 @@ First, create a session board that has the _mad_, _sad_ and _glad_ categories li
 
 1. Based on their experiences during the Sprint, each team member should write cards for each of the three categories. Choose the card color based on the category. Try to come up with cards for each category. _Don't discuss about the cards at this point_ because the cards should represent your personal opinions
 2. Once everyone is done writing the cards, go through the cards from each category. The writer of the card should shortly describe what their card means.
-3. Together, pick at least three successes during the Sprint from the _glad_ category and three most urgent issues from the _mad_ and _sad_ categories. Come up with _concrete_ actions to solve each of these issues during the upcoming Sprint. For example a concrete action for the issue "I always have conflicts when I try to pull code from the GitHub" could be "Pull code from GitHub more often" and "Create smaller commits and push code to GitHub more often".
+3. Together, pick at least two successes during the Sprint from the _glad_ category and two most urgent issues from the _mad_ and _sad_ categories. Come up with _concrete_ actions to solve each of these issues during the upcoming Sprint. For example a concrete action for the issue "I always have conflicts when I try to pull code from the GitHub" could be "Pull code from GitHub more often" and "Create smaller commits and push code to GitHub more often".
 
 Make sure that everyone follows the event structure and that each team member gets their voice heard.
 
@@ -763,7 +763,7 @@ public class MessageRestController {
 >
 > Tips for the tasks:
 >
-> - The nofitication can be implemented for example using the Material UI's [Snackbar](https://mui.com/material-ui/react-snackbar/) component
+> - The nofitication can be implemented for example using the Material UI's [Snackbar](https://mui.com/material-ui/react-snackbar/) component or simply with the [alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) function
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -863,6 +863,7 @@ dist
 The ignored files (or in this case, the ignored folders) are specified by each line in the `.gitignore` file. These two lines will ignore both the `node_modules` and `dist` folders.
 
 <!--
+
 {: .important-title }
 
 > Exercise 30

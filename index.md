@@ -45,7 +45,7 @@ Each team member's personal assessment is based on the following aspects:
 - _Activity in team work_: Attendance and active presence during team meetings and communication with team members outside the meetings
 - _Technical contributions_: amount of working code written _or_ active participation in the writing process of the code (for example [pair-programming](https://en.wikipedia.org/wiki/Pair_programming))
 - _Project management and documentation contributions_: Backlog management, efforts to improve the process (for example in Retrospectives), writing project related documentation
-- _Exercise submissions_: at least 20 of the _first two week's exercises_ have to be completed to pass the course
+- _Exercise submissions_: at least 18 of the _first two week's exercises_ have to be completed to pass the course
 - The final report written at the end of the course
 
 The personal assessment is done based on the teacher's observations and peer reviews from the team members. Each team member can earn up to 20 points based on their personal efforts towards the project and their exercise submissions from the first two weeks.
@@ -56,7 +56,7 @@ The final grade (1-5) is composed of the project points (maximum of 40 points) a
 
 > The following are necessary to pass the course:
 >
-> - At least 20 of the first two week's exercises have to be completed
+> - At least 18 of the first two week's exercises have to be completed
 > - Written peer review for each team member
 > - Passing grade from the peer reviews
 > - Written final report
