@@ -763,7 +763,7 @@ public class MessageRestController {
 >
 > Tips for the tasks:
 >
-> - The nofitication can be implemented for example using the Material UI's [Snackbar](https://mui.com/material-ui/react-snackbar/) component or simply with the [alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) function
+> - The nofitication can be implemented for example using the Material UI's [Snackbar](https://mui.com/material-ui/react-snackbar/) component
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
