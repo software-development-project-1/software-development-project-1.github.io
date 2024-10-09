@@ -554,12 +554,6 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 >
 > _Each team member_ should do the steps mentioned above to create their own branch named by their GitHub username and push it to GitHub.
 
-We can also pull remote branches from GitHub to our local computer. Check the list of branches in GitHub and pick _some other team member's branch_. Then, to pull the remote branches from GitHub using the `git pull` command. Finally, switch to the team member's branch:
-
-```bash
-git checkout <name-of-other-team-member-branch>
-```
-
 ### Merging branches and pull requests
 
 Once we are happy with the changes we have made in the branch, we should _merge_ it into the main branch. This basically means applying all the commits we have made for the branch to the main branch. For this we could use the `git merge` command:
