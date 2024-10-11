@@ -678,17 +678,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > 1. Clone the git-practice repository to your local computer as instructed above and open the repository folder in Git Bash and in an editor such as Visual Studio Code.
 > 2. Change the contents of some file (for example the `git_practice.txt`) file and push the changes to GitHub. Open the repository in GitHub and see that it has the commit you created.
 > 3. Find out using Google, how you can find out the names and addresses of the remote repositories of a project. The answer is a command you should run inside the Git project, when a remote has been set. _Add the command you used and the command ouput to the Moodle submission_.
-<!--
-{: .important-title }
 
-> Exercise 15
->
-> Explore the [react](https://github.com/facebook/react) repository in GitHub. Find the commits, issues and pull requests. _Include the following information about the repository to the Moodle submission_:
->
-> 1. Link to the latest commit in the repository and the GitHub username of the commit's author
-> 2. Link to the latest issue in the repository (hint: check the repository's navigation bar)
-> 3. Link to the latest pull request in the repository (hint: check the repository's navigation bar)
--->
 {: .important-title }
 
 > Exercise 15
@@ -711,7 +701,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 
 > Exercise 16
 >
-> _This is a team exercise_. Next, let's setup the GitHub repository for your team's project:
+> _This is a team exercise_. Next, let's setup the GitHub repository for your team's project. Do the following:
 >
 > 1. GitHub organizations are a way to apply fine-grained access permissions to repositories. Create a GitHub organization for your team by following [these](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) instructions. You can name the organization for example based on your team's name you came up with previously
 > 2. Invite other team members to the organization by following [these](https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization) instructions. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team
