@@ -565,19 +565,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 14
 >
-> Implement a test class with the following test methods for the endpoint for _creating an answer_:
->
-> - `createAnswerSavesAnswer`: save a _published quiz_ with a question and an answer option to the database and send the answer option id in the request body. Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
-> - `createAnswerDoesNotSaveAnswerForNonExistingAnswerOption`: send a request with a non-existing answer option id in the request body. Then, the response should have an appropriate HTTP status and the database should not have any answers
-> - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question and an answer option to the database and send the answer option id in the request body. Then, the response should have an appropriate HTTP status and the database should not have any answers
-
-<!--
-{: .important-title }
-
-> Exercise 15
->
 > Implement appropriate test methods for at least one more endpoint of your choice. Analyze the behavior of the endpoint based on different requests and dabatase states and implement test scenarios to cover these cases.
--->
 
 {: .important-title }
 
