@@ -565,7 +565,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 14
 >
-> Implement appropriate test methods for at least one more endpoint of your choice. Analyze the behavior of the endpoint based on different requests and dabatase states and implement test scenarios to cover these cases.
+> Implement appropriate test methods for at least two more endpoints of your choice. Analyze the behavior of the endpoints based on different requests and dabatase states and implement test scenarios to cover these cases.
 
 {: .important-title }
 
