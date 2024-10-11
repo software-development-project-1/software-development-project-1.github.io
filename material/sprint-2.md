@@ -763,7 +763,7 @@ public class MessageRestController {
 >
 > Tips for the tasks:
 >
-> - The nofitication can be implemented for example using the Material UI's [Snackbar](https://mui.com/material-ui/react-snackbar/) component or simply with the [alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) function
+> - The nofitication can be implemented for example using the Material UI's [Snackbar](https://mui.com/material-ui/react-snackbar/) component
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -875,62 +875,21 @@ The ignored files (or in this case, the ignored folders) are specified by each l
 
 ![.gitignore](/assets/gitignore-meme.webp)
 
-## Deploying the frontend
-
-We managed to deploy the backend during the previous Sprint, but we still haven't deployed the frontend. We can deploy the frontend to Render with the following steps:
-
-1. In the frontend folder, add a `.env` [environment variable](https://vitejs.dev/guide/env-and-mode) file for the _development environment_. The `.env` file should contain a `VITE_BACKEND_URL` environment variable for the backend's _development environment URL_:
-
-   ```
-   VITE_BACKEND_URL=http://localhost:8080
-   ```
-
-   Make sure that every `fetch` function call has the environment variable as the URL prefix. For example:
-
-   ```js
-   fetch(`${import.meta.env.VITE_BACKEND_URL}/api/messages`).then(
-     (response) => {
-       // ...
-     }
-   );
-   ```
-
-1. Add a `.env.production` environment variable file for the _production environment_. The `.env.production` file should contain a `VITE_BACKEND_URL` environment variable for the backend's _production environment URL_. For example:
-
-   ```
-   VITE_BACKEND_URL=https://name-of-the-backend-service.onrender.com
-   ```
-
-   Finally, _push the changes to GitHub_
-
-1. On the Render dashboard, click the "New" button and choose "Static Site"
-1. From the repository list, find you project's repository and click the "Connect" button
-1. Come up with the name for the service. If the frontend application is not initialized in the repository's root folder (this is the case if you don't have a separate repository for the frontend application), set "Root Directory" as the frontend folder's name. Set "Build Command" as `npm run build` and "Publish Directory" as `dist`
-1. Click the "Advanced" button and set "Auto-Deploy" as "Yes" and "Branch" as "production"
-1. Click the "Create Static Site" button to create the service
-1. On the service's page, click "Redirects/Rewrites" from the navigation on the left. Set the "Source" as `/*`, "Destination" as `/index.html` and "Action" as "Rewrite". Finally, click the "Save Changes" button. This configuration will make the frontend routing work
-
-{: .important-title }
-
-> Exercise 30
->
-> Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Developer guide" section in the `README.md` file.
-
 ## Sprint Review
 
 We have all kinds of cool stuff to show for the Product Owner at the end of this Sprint. Prepare for the upcoming [Sprint Review](/sprint-1#print-review) event, similarly as in the previous Sprint.
 
 {: .important-title }
 
-> Exercise 31
+> Exercise 30
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 32
+> Exercise 31
 >
-> The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the features in the production environment.
+> The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the teacher dashboard and the student dashboard applications on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the teacher dashboard application's features in the production environment.
 >
 > As in the previous Sprint Review, prepare some _sensible_ test data for the Sprint Review.
 
