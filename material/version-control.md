@@ -711,7 +711,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 
 > Exercise 17
 >
-> _This is a team exercise_. Next, let's do some setup for the project:
+> _This is a team exercise_. Next, let's setup the GitHub repository for your team's project:
 >
 > 1. GitHub organizations are a way to apply fine-grained access permissions to repositories. Create a GitHub organization for your team by following [these](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) instructions. You can name the organization for example based on your team's name you came up with previously
 > 2. Invite other team members to the organization by following [these](https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization) instructions. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team
