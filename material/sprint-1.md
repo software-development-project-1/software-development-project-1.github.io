@@ -18,9 +18,9 @@ This week we'll start working on the project described by the Product Owner in t
 
 ## Sprint assesment
 
-All of this Sprint's exercises are submitted to [this Moodle submission]({{site.sprint_1_moodle_submission_link}}). The submission should only contain the link to your team's GitHub repository created in exercise 2. _Each team member_ has to submit the GitHub repository link. The submission deadline is on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
+This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-30. The team can earn up to 15 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-26. The team can earn up to 15 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Sprint Planning
 
@@ -106,52 +106,7 @@ Sprint Backlog is commonly organized as taskboard that has columns for different
 
 ![Sprint Backlog](/assets/sprint-backlog-example.png){: width="600" }
 
-Taskboards are either physical taskboards, for example whiteboards in an office, or virtual taskboards. These days, it is quite common that a virtual taskboard are used as Product Backlogs and Sprint Backlogs. [Jira](https://www.atlassian.com/software/jira) and [GitHub projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) are perhaps the most widely used taskboard platforms in the industry. During this course we will be using _GitHub projects_ because it integrates very well with our GitHub workflow. But, before we can start using GitHub projects, we need to create a repository for our project.
-
-## GitHub organizations
-
-When a software development teams is working on project together, the project can have multiple repositories and different team members might only have access to certain repositories. To have more control over the repository access, the repositories aren't personal repositories created by certain team member. Instead the repositories belong to certain _organization_ and team members can be invited to join that organization.
-
-Similarly as a repository, an organization can be added on GitHub by cliking the plus icon on the top-right corner of the page.
-
-![GitHub organization](/assets/github-organization.png)
-
-Once the organization is created, a team member can be invited by clicking the "People" tab on the navigation bar and then clicking the green "Invite member" button.
-
-![GitHub organization invite](/assets/organization-invite.png)
-
-{: .important-title }
-
-> Exercise 1
->
-> _One of the team members_ should create a GitHub organization for the project. Once the organization is created, invite other team members to the organization. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team.
-
-{: .important-title }
-
-> Exercise 2
->
-> One of the team members should create a GitHub repository for the project. To get started more quickly, you can use the [project-template](https://github.com/software-development-project-1/project-template) repository as the repository template. The repository contains a template for a Spring Boot application generated with [Spring Initializr](https://start.spring.io/). It contains Spring Web, Spring Data JPA, H2 Database and Thymeleaf dependencies. There's also configuration for the H2 database in the `application.properties` file.
->
-> Open the repository in GitHub, click the "Use this template" button and choose "Create a new repository". Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description. This repository will become your project's repository where you start working on the project.
-
-{: .important-title }
-
-> Exercise 3
->
-> Each team member should _clone_ the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. See the [Git instructions](/git#githubs-workflow) if you have trouble. Start the Spring Boot application and make sure that there are no errors.
-
-{: .important-title }
-
-> Exercise 4
->
-> Once every team member has the repository on their local computer, add a `README.md` file with some text in it to the repository folder and push it to GitHub. Then, _each team member_ should do the following:
->
-> 1. Open the cloned repository folder with an editor such as Visual Studio Code and in Git Bash. Right-click the repository folder in the File Explorer and choose "Git Bash Here"
-> 2. Use the `git pull` command to pull the latest changes from GitHub
-> 3. Make some change to the `README.md` file and push the changes to GitHub using the `git add`, `git commit` and `git push` commands. See the [Git instructions](/git#starting-a-git-project) if you have trouble. If you aren't able to edit the file with Eclipse, use for example Visual Studio Code instead
-> 4. Open the repository in GitHub and check in the `README.md` file that your changes has been successfully pushed to the remote GitHub repository
->
-> If you see `CONFLICT` in the command output, see the [Git instructions](/git#merge-conflicts) to figure out how to solve conflicts.
+Taskboards are either physical taskboards, for example whiteboards in an office, or virtual taskboards. These days, it is quite common that a virtual taskboard are used as Product Backlogs and Sprint Backlogs. [Jira](https://www.atlassian.com/software/jira) and [GitHub projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) are perhaps the most widely used taskboard platforms in the industry. During this course we will be using _GitHub projects_ because it integrates very well with our GitHub workflow.
 
 ## GitHub Projects
 
@@ -176,9 +131,30 @@ The project will be empty for now, but we will add some user stories and tasks f
 
 {: .important-title }
 
-> Exercise 5
+> Exercise 1
 >
 > Create the "Backlog" project as instructed above. Make sure that the project is public.
+
+## Database setup
+
+The [H2 database](https://www.h2database.com/html/main.html) is a good choice for the development environment database. Add the [required dependencies](https://www.baeldung.com/spring-boot-h2-database) for the H2 database. You can use the following configuration in the `application.properties` file:
+
+```
+spring.datasource.url=jdbc:h2:file:~/quizzer;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
+spring.datasource.username=admin
+spring.datasource.password=password
+spring.datasource.driver-class-name=org.h2.Driver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+```
+
+This configuration is for an embedded database. Embedded database is stored to a file defined in the `spring.datasource.url` property, so the data won't vanish once the application is shut down. This configuration will save the database to a `~/quizzer.mv.db` file. If you want to reset the database and remove all the data, simply delete the file by running the `rm ~/quizzer.mv.db` command on the command-line.
+
+{: .important-title }
+
+> Exercise 2
+>
+> Setup the H2 database for the project.
 
 ## 🏃‍♂️ Sprint 1 planning
 
@@ -221,7 +197,7 @@ These are the user stories, that you will be working on as a team during this Sp
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 3
 >
 > Choose the [Scrum Master](https://scrumguides.org/scrum-guide.html#scrum-master) among the team members for the first Sprint. The Scrum Master should help other team members with following the Scrum process, for example by facilitating the team's meetings and making sure that the backlogs are kept up-to-date.
 
@@ -237,7 +213,7 @@ Before we start creating issues, let's add some [labels](https://docs.github.com
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 4
 >
 > Create the "user story" label to classify user story related issues.
 
@@ -245,7 +221,7 @@ Next, we need to specify the Sprint the issue is worked on. We can use Sprint-sp
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 5
 >
 > Create the "Sprint 1" milestone to group the issues of the first Sprint.
 
@@ -257,7 +233,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 6
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 1". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
 
@@ -271,7 +247,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 7
 >
 > Read through the [User stories and tasks](#user-stories-and-tasks) section. Then, plan the tasks for the first user story, "{{site.sprint_1_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -289,7 +265,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 8
 >
 > Plan the tasks for the second user story, "{{site.sprint_1_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -301,7 +277,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 9
 >
 > Plan the tasks for the third user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -315,7 +291,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 10
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -327,7 +303,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 11
 >
 > Now that there's some work to be done, discuss how you will divide the tasks among the team members. Then, add an _assignee_ for each issue. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same issue together.
 
@@ -370,7 +346,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 12
 >
 > Open the `README.md` file for editing for example in GitHub or in Visual Studio Code. You might not be able to edit the file in Eclipse. Replace the current contents of the repository's `README.md` file with the following information using Markdown:
 >
@@ -402,13 +378,13 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 13
 >
 > Organize a Daily Scrum event at least once a week during each Sprint.
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 14
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -420,7 +396,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 15
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_1_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -434,7 +410,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 16
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_1_user_story_7}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -442,7 +418,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 17
 >
 > Plan the tasks for the eight user story, "{{site.sprint_1_user_story_8}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -454,7 +430,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 18
 >
 > Plan the tasks for the ninth user story, "{{site.sprint_1_user_story_9}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -468,7 +444,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 19
 >
 > Plan the tasks for the tenth user story, "{{site.sprint_1_user_story_10}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -530,7 +506,7 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 20
 >
 > _Each team member_ should do the steps mentioned above to create their own branch named by their GitHub username and push it to GitHub.
 
@@ -550,7 +526,7 @@ But, GitHub supports a better way to merge branches using [pull requests](https:
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 21
 >
 > 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions. The pull request title should describe the changes, for example "Change the submit button color in the add quiz form". The description provides additional details
 > 2. Merge your branch into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below
@@ -597,7 +573,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 22
 >
 > Write a developer guide documentation on _how to start the backend application_ on the command-line to the `README.md` file. Also, mention the required Java version for the project. Add it under a "Developer guide" subheading.
 >
@@ -653,10 +629,6 @@ The PostgreSQL database requires a suitable driver for the application. Let's ad
 </dependency>
 ```
 
-If you use a `CommandLineRunner` to initialize the database with test data each time the application starts, you will need to disable it in the production environment. This is because the application will restart multiple times, adding the same data to the database over and over again.
-
-The easy way to solve this problem is to remove the `CommandLineRunner` method and use an embedded [H2 database](https://www.baeldung.com/spring-boot-h2-database) instead of an in-memory database in the development environment. Embedded database is stored to a file so the data won't vanish once the application is shut down. To use an embedded database, set [the following properties](https://github.com/software-development-project-1/project-template/blob/main/src/main/resources/application.properties) in the `application.properties` file. This will save the database to a `~/quizzer.mv.db` file. If you want to reset the database and remove all the data, simply delete the file by running the `rm ~/quizzer.mv.db` command on the command-line.
-
 Now that we have the database-related changes in order, push these changes to GitHub before heading further.
 
 Finally, for the application itself, we need to create a web service. Complete the following steps to create a web service in the Render dashboard:
@@ -687,7 +659,7 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 23
 >
 > Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the "Developer guide" section in the `README.md` file.
 
@@ -697,7 +669,7 @@ A quite common practice is to separate the development and production code with 
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 24
 >
 > 1. Create a `production` branch of the main branch. Then, push the branch to GitHub using the `git push origin -u production` command
 > 2. Open the backend web service in the Render Dashboard and go to the "Settings" page. In the "Build & Deploy" section, set the "Branch" as "production" and "Auto-Deploy" as "Yes"
@@ -720,7 +692,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 28
+> Exercise 25
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -732,7 +704,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 29
+> Exercise 26
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >

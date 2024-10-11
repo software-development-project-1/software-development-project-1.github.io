@@ -715,15 +715,15 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 
 > Exercise 17
 >
-> _This is a team exercise_. Do the following steps with your team:
+> _This is a team exercise_. Next, let's do some setup for the project:
 >
-> 1. Choose one of the team member's repository created previously. The owner of the repository should add other team members as [collaborators](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository). This way, other team members can make commits for the repository and work together on the same code base
-> 2. Other team members should clone the chosen repository. Once the repository is cloned, each team member should make a small change to some file and push the changes to GitHub to see that they can access the repository
-> 3. One of the team members should add a `calculator.html` file to the repository with the [following content](/assets/calculator.txt)
-> 4. The file contains the user interface for a simple calculator with five operations: addition, substraction, multiplication, division and [exponentiation](https://en.wikipedia.org/wiki/Exponentiation). The calculator has five buttons for each of the operations and two input fields for the numbers to operate on. Clicking the operation's button should perform the operation for the two input numbers and print the result below the input fields. Each team member should implement _exactly one operation_ which is defined as the function's event handler (for example, the addition operation should be implemented by implementing a `addition` function). If you have less than five team members, you can implement the remaining functions as you see fit
-> 5. Once each team member has implemented their operation, there should be a `calculator.html` file in the GitHub repository with an operating calculator. Each team member should make sure that the final version of the calculator works by pulling the code from the GitHub repository using the `git pull` command and testing the calculator on their computer
+> 1. GitHub organizations are a way to apply fine-grained access permissions to repositories. Create a GitHub organization for your team by following [these](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) instructions. You can name the organization for example based on your team's name you came up with previously
+> 2. Invite other team members to the organization by following [these](https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization) instructions. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team
+> 3. Create a GitHub repository for the project. To get started more quickly, use the [project-template](https://github.com/software-development-project-1/project-template) repository as the repository template. Open the repository in GitHub, click the "Use this template" button and choose "Create a new repository". Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description. The repository contains a template for a Spring Boot application generated with [Spring Initializr](https://start.spring.io/). It contains Spring Web and Thymeleaf dependencies
+> 4. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command
+> 5. Add an empty `README.md` file to the repository. To make sure that the repository is accessible, each team member should make a small change to the file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work
 >
-> _Add the link to the GitHub repository in which you and your team implemented the calculator to the Moodle submission_.
+> _Add the link to the GitHub repository to the Moodle submission_.
 
 {: .highlight }
 
