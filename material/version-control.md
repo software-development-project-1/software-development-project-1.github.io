@@ -15,7 +15,7 @@ nav_order: 4
 
 ## Submitting this week's exercises
 
-All of this week's exercises (exercises 1-17) are submitted to [this Moodle submission]({{site.week_2_moodle_submission_link}}). The submission deadline is on {{site.week_2_deadline}}.
+All of this week's exercises (exercises 1-16) are submitted to [this Moodle submission]({{site.week_2_moodle_submission_link}}). The submission deadline is on {{site.week_2_deadline}}.
 
 ## Version control
 
@@ -678,7 +678,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > 1. Clone the git-practice repository to your local computer as instructed above and open the repository folder in Git Bash and in an editor such as Visual Studio Code.
 > 2. Change the contents of some file (for example the `git_practice.txt`) file and push the changes to GitHub. Open the repository in GitHub and see that it has the commit you created.
 > 3. Find out using Google, how you can find out the names and addresses of the remote repositories of a project. The answer is a command you should run inside the Git project, when a remote has been set. _Add the command you used and the command ouput to the Moodle submission_.
-
+<!--
 {: .important-title }
 
 > Exercise 15
@@ -688,10 +688,10 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > 1. Link to the latest commit in the repository and the GitHub username of the commit's author
 > 2. Link to the latest issue in the repository (hint: check the repository's navigation bar)
 > 3. Link to the latest pull request in the repository (hint: check the repository's navigation bar)
-
+-->
 {: .important-title }
 
-> Exercise 16
+> Exercise 15
 >
 > _This is a team exercise_. The team start to work on the project the next week. If you are uncertain who your team members are, check their names on [Moodle]({{site.moodle_link}}). Get to know each other by introducing yourself to other team members. You can e.g. share the following things about yourself:
 >
@@ -709,7 +709,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 16
 >
 > _This is a team exercise_. Next, let's setup the GitHub repository for your team's project:
 >
@@ -723,7 +723,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 
 {: .highlight }
 
-> Make sure that the Moodle submission contains the link to your GitHub repository created in exercise 7 and the information mentioned in exercise 14, 15, 16 and 17.
+> Make sure that the Moodle submission contains the link to your GitHub repository created in exercise 7 and the information mentioned in exercise 14, 15, 16.
 
 ## The End
 
