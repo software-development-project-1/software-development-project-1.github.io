@@ -58,9 +58,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should not be able to review a non-published quiz.
 >
-> The review page should list the added reviews. Each review should display the information submitted by the student and the date when the review was written. The review page should also display the number of reviews the quiz has and the rating average. It should also be possible for the student to edit and delete reviews in the review page.
->
-> Students have different skill levels so it would be useful if the student could filter the questions of quiz by the difficulty level in the quiz page. There could be dropdown menu at the top of the page from which the student can select the difficulty level for the questions."
+> The review page should list the added reviews. Each review should display the information submitted by the student and the date when the review was written. The review page should also display the number of reviews the quiz has and the rating average. It should also be possible for the student to edit and delete reviews in the review page."
 >
 > -- The Product Owner
 

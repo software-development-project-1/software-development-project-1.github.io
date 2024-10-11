@@ -307,7 +307,7 @@ Welcome to the Software Development Project 1 course!
 
 - A good user story describes a _feature that provides value for the end user of the software_
 - This means, that the description should be written from the user's perspective and so that the customer can understand it
-- For example the following user story is too technical:
+- For example the following user story is described from the developer's point of view:
 
   > ❌ As a developer, I want to optimize the database by adding a new index to the blog posts table so that the list of blog posts of a blog loads fast.
 
@@ -331,7 +331,7 @@ Welcome to the Software Development Project 1 course!
 
 # The INVEST criteria
 
-- Which INVEST criteria does the following user story violate?
+- Which INVEST criteria (independent, negotiable, valuable, small, testable) does the following user story violate?
 
   > ❌ As a blog reader, I want to be able to search blog posts by name, category and author so that I can find relevant blog posts to read
 

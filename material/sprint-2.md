@@ -16,7 +16,7 @@ For the Sprint 2 we have a new set of requirements from the Product Owner. On to
 
 This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
 
-The Sprint assesment is done based on the exercises 1-32. The team can earn up to 15 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+The Sprint assesment is done based on the exercises 1-30. The team can earn up to 15 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
 
 ## Retrospective
 
@@ -127,7 +127,6 @@ After some discussion the Scrum Team planned the following user stories:
 8. {{site.sprint_2_user_story_8}}
 9. {{site.sprint_2_user_story_9}}
 10. {{site.sprint_2_user_story_10}}
-11. {{site.sprint_2_user_story_11}}
 
 {: .important-title }
 
@@ -194,14 +193,6 @@ After some discussion the Scrum Team planned the following user stories:
 {: .important-title }
 
 > Exercise 9
->
-> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
-
-{: .important-title }
-
-> Exercise 10
 >
 > Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
 >
@@ -407,11 +398,11 @@ To have more control over the attributes in the JSON response, [DTO](https://www
 
 ## Designing the REST API endpoints for the user stories
 
-Next, let's consider what kind of REST API endpoints we need for the last four user stories. Implement the following endpoints _by following the REST API naming conventions for the endpoint path names_.
+Next, let's consider what kind of REST API endpoints we need for the remaining user stories. Implement the following endpoints _by following the REST API naming conventions for the endpoint path names_.
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 10
 >
 > To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation.
 
@@ -429,7 +420,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 11
 >
 > Implement a REST API endpoint for _getting all quizzes_. Only _published quizzes_ should be returned by the endpoint.
 >
@@ -437,7 +428,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 12
 >
 > Implement a REST API endpoint for _getting a quiz by id_. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -447,7 +438,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 13
 >
 > Implement a REST API endpoint for _getting the questions of a quiz_. In this case, instead of using the `@JsonIgnore` annotation, you can use [@JsonManagedReference and @JsonBackReference](https://www.baeldung.com/jackson-bidirectional-relationships-and-infinite-recursion) annotations to include the question's answer options in to the JSON response. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -457,7 +448,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 14
 >
 > Implement a REST API endpoint for _creating an answer_ for a quiz's question. Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -476,7 +467,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 15
 >
 > Implement a REST API endpoint for _getting the anwers of a quiz_. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -486,7 +477,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 16
 >
 > Implement a REST API endpoint for _getting all categories_.
 >
@@ -494,7 +485,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 17
 >
 > Implement a REST API endpoint for _getting a category by id_. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -504,7 +495,7 @@ Next, let's consider what kind of REST API endpoints we need for the last four u
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 18
 >
 > Implement a REST API endpoint for _getting the quizzes of a category_. Only _published quizzes of the category_ should be returned by the endpoint. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -595,7 +586,7 @@ public Message getMessageById(@PathVariable Long id) {
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 19
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response.
 >
@@ -698,7 +689,7 @@ export default function MessageList() {
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 20
 >
 > Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You don't necessarily need a separate repository for the frontend application, you can initialize it in folder within the current repository.
 
@@ -729,9 +720,9 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 21
 >
-> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
@@ -741,9 +732,9 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 22
 >
-> Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
@@ -755,9 +746,9 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 23
 >
-> Plan the tasks for the eighth user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
@@ -773,9 +764,9 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 24
 >
-> Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_9}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the eight user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
@@ -787,9 +778,9 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 25
 >
-> Plan the tasks for the tenth user story, "{{site.sprint_2_user_story_10}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_9}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
@@ -799,9 +790,9 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 26
 >
-> Plan the tasks for the eleventh user story, "{{site.sprint_2_user_story_11}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the tenth user story, "{{site.sprint_2_user_story_10}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
@@ -813,7 +804,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 28
+> Exercise 27
 >
 > Add instructions on _how to start the frontend application_ to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
@@ -835,45 +826,14 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 29
+> Exercise 28
 >
 > Write the first version of the project's _architecture documentation_. Add the documentation under a "Architecture" subheading in the `README.md` file. The documentation should contain the following things:
 >
 > 1. The project's overall architecture consists of three components: the backend, the database and the frontend. Mention these components and briefly explain the purpose of each component
-> 2. Implement a [flow chart](https://mermaid.js.org/syntax/flowchart.html) using the [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax which visualizes how the components communicate with each other. What's the direction of the communication (the arrow direction in the chart)? Does for example database send requests to the backend (the arrow would point to the backend) or the other way around?
-> 3. Which programming language, frameworks and major libraries are used in the _backend implementation_?
-> 4. Which _database platforms_ are used in different environments (development and production environment)?
-> 5. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
-
-## The .gitignore file
-
-The [.gitignore](https://git-scm.com/docs/gitignore) file specificies _which files Git should ignore_ in a repository. This means that adding or changing ignored files won't add the changes to the next commit while using the `git add` command. There are a few reason why we want specific files or entire folders being ignored by Git and thus not end up in the remote repository:
-
-- The file contains _sensitive information_, such as database usernames and passwords. We don't want these to end up in our repository for everyone to see.
-- The file or folder contains content _that can be generated by running a certain command_. An example of such folder is the `node_modules` folder, which contains the library dependencies for the frontend. This folder is usally quite big and we can always generate it by running `npm install`. Another such example is the `target` folder where Maven generates different files.
-- The file or folder contains _IDE specific configuration_ that is only relevant for a certain developer. An example of such folder is the `.vscode` folder.
-
-As an example, the `.gitignore` file generated by [Vite](https://vitejs.dev/) has for example the following lines:
-
-```
-node_modules
-dist
-```
-
-The ignored files (or in this case, the ignored folders) are specified by each line in the `.gitignore` file. These two lines will ignore both the `node_modules` and `dist` folders.
-
-<!--
-
-{: .important-title }
-
-> Exercise 30
->
-> Make sure that your project has a `.gitignore` file which at least ignores the frontend's `node_modules` folder, the frontend's build folder (this is `dist` folder in case of a Vite project) and the backend's `target` folder. It is ok for the repository to have multiple `.gitignore` files in different folders (for example having a different `.gitignore` file for the frontend's folder).
->
-> Also check that the remote GitHub repository doesn't contain any execcessive files or folders (for example the mentioned `node_modules` and `target` folders). Remove any execcessive files and folders and make necessary changes for the `.gitignore` file if needed.
--->
-
-![.gitignore](/assets/gitignore-meme.webp)
+> 2. Which programming language, frameworks and major libraries are used in the _backend implementation_?
+> 3. Which _database platforms_ are used in different environments (development and production environment)?
+> 4. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
 
 ## Sprint Review
 
@@ -881,13 +841,13 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 30
+> Exercise 29
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 31
+> Exercise 30
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the teacher dashboard and the student dashboard applications on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the teacher dashboard application's features in the production environment.
 >
