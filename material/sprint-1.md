@@ -74,7 +74,6 @@ The _Product Backlog_ is a _prioritized_ list of requirements for the developed 
 
 The Product Owner's responsibility is to prioritize the user stories in the Product Backlog, but the whole Scrum Team participates in the definition of the user stories. The Product Owner should also make sure that the user stories implemented during a Sprint match the stakeholder's requirements. Once a user story is implemented during a Sprint and the implementation is accepted by the Product Owner, the user story can be removed from the Product Backlog.
 
-
 A good Product Backlog has the [DEEP](https://www.romanpichler.com/blog/make-the-product-backlog-deep/) characteristics:
 
 - _Detailed appropriately_: the high-priority user stories (at the top of the Product Backlog) are described in a more detail than the low-priority user stories. This is because the high-priority user stories are the ones that will be implemented soon, maybe during the upcoming Sprint. That is why it is important that these user stories fulfill the INVEST criteria and are ready for the implementation.
@@ -162,7 +161,7 @@ This configuration is for an embedded database. Embedded database is stored to a
 
 > Exercise 2
 >
-> Setup the H2 database for the project.
+> Setup the H2 database for the project. Start the Sprint planning by discussing the database schema. What kind of entities and attributes should be added? Remember to keep it simple. If some attribute can be implemented for example as a string, there's no need to add a new entity.
 
 ## 🏃‍♂️ Sprint 1 planning
 
