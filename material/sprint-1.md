@@ -161,7 +161,7 @@ This configuration is for an embedded database. Embedded database is stored to a
 
 > Exercise 2
 >
-> Setup the H2 database for the project. Start the Sprint planning by discussing the database schema. What kind of entities and attributes should be added? Remember to keep it simple. If some attribute can be implemented for example as a string, there's no need to add a new entity.
+> Setup the H2 database for the project. Start the Sprint planning by discussing the database schema. What kind of entities and attributes should be added and what are their relationships?
 
 ## 🏃‍♂️ Sprint 1 planning
 
