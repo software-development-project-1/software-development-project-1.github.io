@@ -59,7 +59,7 @@ Make sure that everyone follows the event structure and that each team member ge
 >
 > The Scrum Master should create a new session in Flinga as instructed above. Name the session "Retrospective 1". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event as instructed above.
 >
-> Once you have completed the Retrospective, add `retrospectives` folder to the repository and in it a `sprint1.md` file. In that file, add a link to the Retrospective's Flinga board and write down the issues and actions you came up with during the Retrospective and push the changes to GitHub. You can use this template in the file:
+> Once you have completed the Retrospective, add `retrospectives` folder to the repository and in it a `sprint1.md` file. In that file, add a link to the Retrospective's Flinga board and write down the successes, issues and actions you came up with during the Retrospective and push the changes to GitHub. You can use this template in the file:
 >
 > ```md
 > # Sprint 1 Retrospective
@@ -562,15 +562,33 @@ public class MessageRestController {
 }
 ```
 
+The `@ApiResponses` and `@ApiResponse` annotations can be used to document different kind of success and error responses and their corresponding HTTP status codes:
+
+```java
+@Operation(
+    summary = "Get a message by id",
+    description = "Returns the message with the provided id"
+)
+@ApiResponses(value = {
+    // The responseCode property defines the HTTP status code of the response
+    @ApiResponse(responseCode = "200", description = "Successful operation"),
+    @ApiResponse(responseCode = "404", description = "Message with the provided id does not exist")
+})
+@GetMapping("/{id}")
+public Message getMessageById(@PathVariable Long id) {
+    // ...
+}
+```
+
+{: .highlight }
+
+> We cannot define more than one `@ApiResponse` annotation with the same `responseCode` property (HTTP status code) inside a `@ApiResonses` annotation.
+
 {: .important-title }
 
 > Exercise 19
 >
-> Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation.
->
-> Test each REST API endpoint by opening the endpoint's documentation and cliking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an `id` path parameter value of a non-existing quiz.
->
-> Add a link to the Swagger documentation in the production environment (in Render) under a "REST API" subheading in the `README.md` file. The link format is <http://name-of-the-web-service.onrender.com/swagger-ui/index.html>. Deploy the backend application to Render and make sure that the Swagger documentation is accessible. Also make sure that the error messages are visible in the JSON response by testing some REST API endpoint with an invalid request.
+> Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response.
 
 ## Communication between frontend and backend
 
