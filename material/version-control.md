@@ -690,7 +690,9 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > - Which are you less comfortable with?
 > - What are your goals and expectations towards the course? For example, what do you want to learn during the course?
 >
-> Then, write down the following things:
+> Also, discuss which platform (e.g. Teams, Slack or Discord) you'll be using for communicating outside the weekly session. Then, setup the communication platform of your choice.
+>
+> Finally, write down the following things:
 >
 > - The names and GitHub usernames of your team members
 > - The name of your team
