@@ -611,7 +611,12 @@ EXPOSE 8080
 ENTRYPOINT ["java","-jar","quizzer.jar"]
 ```
 
-In the `Dockerfile` we generate a [JAR file](https://en.wikipedia.org/wiki/JAR_(file_format)) for the project and start the application using the JAR file.
+In the `Dockerfile` we generate a [JAR file](https://en.wikipedia.org/wiki/JAR_(file_format)) for the project and start the application using the JAR file. The name of the JAR file is specified by the `artifactId` and the `version` properties in the `pom.xml` file. They should be the following:
+
+```xml
+<artifactId>quizzer</artifactId>
+<version>0.0.1-SNAPSHOT</version>
+```
 
 Because we use PostgreSQL as the production database, we will need to specific production environment configuration. Add a file `application-production.properties` to the `src/main/resources` folder (same folder that has the `application.properties` file) with the following content:
 
