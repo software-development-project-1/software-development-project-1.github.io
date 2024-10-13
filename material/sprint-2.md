@@ -12,12 +12,6 @@ nav_exclude: true
 
 For the Sprint 2 we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to Retrospective, REST APIs and communication between frontend and backend.
 
-## Sprint assesment
-
-This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_2_deadline}}. We will be working on the exercises for the next two weeks.
-
-The Sprint assesment is done based on the exercises 1-30. The team can earn up to 15 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
-
 ## Retrospective
 
 The Scrum Guide only describes high-level guideliness for the software development process. It is not a one-size-fits-all framework suitable for every kind of project. Instead, the Scrum Team should _adapt_ the process to match the project needs. To discuss about the issues with the process and to come up with solutions, the Scrum has a dedicated event called _Retrospective_.
@@ -849,6 +843,6 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 >
 > As in the previous Sprint Review, prepare some _sensible_ test data for the Sprint Review.
 
-{: .warning }
+{: .highlight }
 
-> Make sure that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint 2 deadline on {{site.sprint_2_deadline}}.
+> Make sure that you have pushed your work to the project's GitHub repository before the Sprint 2 deadline on {{site.sprint_2_deadline}}.
