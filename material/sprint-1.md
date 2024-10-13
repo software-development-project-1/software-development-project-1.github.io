@@ -14,13 +14,9 @@ This week we'll start working on the project described by the Product Owner in t
 
 {: .highlight }
 
-> Starting from this week, you will be working with your team. That means that, you will be working on the exercises together. You also need to work on the exercises outside the weekly sessions. If you don't know your team members, you can find their names on [Moodle]({{site.moodle_link}}).
+> Starting from this week, you will be working with your team. That means that, you will be working on all the Sprint requirements together. Be prepared to work on the requirements outside the weekly sessions as well. If you don't know your team members, you can find their names on [Moodle]({{site.moodle_link}}).
 
-## Sprint assesment
-
-This Sprint doesn't have a Moodle submission. It is enough that everything mentioned in the exercises is pushed to the project's GitHub repository before the Sprint deadline on {{site.sprint_1_deadline}}, so we will be working on the exercises for the next two weeks.
-
-The Sprint assesment is done based on the exercises 1-26. The team can earn up to 15 points from this Sprint. The assesment is done at the end of the Sprint during the Sprint Review event.
+This Sprint doesn't have a Moodle submission. It is enough that you have pushed your work to the project's GitHub repository before the Sprint deadline on {{site.sprint_1_deadline}}, so we will be working on the Sprint requirements for the next two weeks. The Sprint ends with the Sprint Review event in which the team will share their progress with the Product Owner.
 
 ## Sprint Planning
 
