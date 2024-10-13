@@ -598,7 +598,7 @@ Let's have a look, how we can deploy our application to Render so that the users
 
 Once the PostgreSQL instance has been created, open its information in the Render dashboard. In the PostgreSQL instance's page, scroll to "Connections" section. Copy the values for "Username", "Password" and "Internal Database URL" and paste the values temporary to an editor. We will need these values soon.
 
-Next, let's add "instructions" for Render on how to start our application to our project. Render supports deploying [Docker](https://www.docker.com/) containers which are isolated environments for running all kinds of applications. A Docker image is a set of instructions used to run containers. These instructions are defined with a [Dockerfile](https://docs.docker.com/engine/reference/builder/). Add the following `Dockerfile` file (the file name is just `Dockerfile` without a file extension) to the root folder of the project (same folder that has the `pom.xml` file):
+Render supports deploying [Docker](https://www.docker.com/) containers which are isolated environments for running all kinds of applications. A Docker image is a set of instructions used to run containers. These instructions are defined with a [Dockerfile](https://docs.docker.com/engine/reference/builder/). Add the following `Dockerfile` file (the file name is just `Dockerfile` without a file extension) to the root folder of the project (same folder that has the `pom.xml` file):
 
 ```dockerfile
 FROM maven:3.8.7-openjdk-18-slim AS build
