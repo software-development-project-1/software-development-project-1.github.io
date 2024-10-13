@@ -225,7 +225,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 ## Database setup
 
-The [H2 database](https://www.h2database.com/html/main.html) is a good choice for the development environment database. Add the [required dependencies](https://www.baeldung.com/spring-boot-h2-database) for the H2 database. You can use the following configuration in the `application.properties` file:
+The [H2 database](https://www.h2database.com/html/main.html) is a good choice for the development environment database. Add the [required dependencies](https://www.baeldung.com/spring-boot-h2-database) for the H2 database. You can use the following database configuration:
 
 ```
 spring.datasource.url=jdbc:h2:file:~/quizzer;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
@@ -243,6 +243,16 @@ This configuration is for an embedded database. Embedded database is stored to a
 > Exercise 6
 >
 > Setup the H2 database for the project. Start the Sprint planning by discussing the database schema. What kind of entities and attributes should be added and what are their relationships?
+
+## Tips for the teamwork
+
+Here's a few tips before you start implementing the tasks:
+
+- Use the full potential of your team and _work together_. Plan the tasks together, implement the tasks together and support each other
+- Maintain active communication regarding the Sprint progress. Keeping the Sprint Backlog up-to-date is important but also share your progress and problems actively with your team members face-to-face or via Teams or other communication platform
+- _Push_ code to the GitHub repository often. Once you have some _working_ code, use `git add`, `git commit`, `git push` commands to push the code to GitHub
+- _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer
+- While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts)
 
 {: .highlight }
 
@@ -327,16 +337,6 @@ This configuration is for an embedded database. Embedded database is stored to a
 {: .note }
 
 > You can easily find the issues assigned to you by opening the "Issues" tab and choosing your GitHub account from the "Assignee" dropdown menu.
-
-## Tips for the teamwork
-
-Here's a few tips before you start implementing the tasks:
-
-- Use the full potential of your team and _work together_. Plan the tasks together, implement the tasks together and support each other
-- Maintain active communication regarding the Sprint progress. Keeping the Sprint Backlog up-to-date is important but also share your progress and problems actively with your team members face-to-face or via Teams or other communication platform
-- _Push_ code to the GitHub repository often. Once you have some _working_ code, use `git add`, `git commit`, `git push` commands to push the code to GitHub
-- _Pull_ the code from the GitHub repository often. Run the `git pull` command to get the latest changes to your local computer
-- While pulling the code from the GitHub repository, you'll probably face _merge conflicts_. You can spot a merge conflict from the `git pull` command ouput: `CONFLICT (content): Merge conflict in ...`. If you have trouble solving the merge conficts, see the [Git instructions](/git#merge-conflicts)
 
 ## The README file
 
