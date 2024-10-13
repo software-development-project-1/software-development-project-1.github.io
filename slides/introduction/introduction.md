@@ -281,10 +281,18 @@ Welcome to the Software Development Project 1 course!
 
 ---
 
-# Agile requirement specification
+# Requirements 
 
 - During the requirements phase, the stakeholders' requirements for the software are defined and documented
 - To derive the requirements, the development team needs to have a clear and thorough understanding of the software under development and continuously communicate with the stakeholders
+- Software’s requirements are commonly categorized as _functional_ and _non-functional requirements_
+- Functional requirements are the requirements stated by the user which one can see directly in the final product
+- Non-functional requirements on the other are quality constraints that the system must satisfy
+
+---
+
+# Agile requirement specification
+
 - In agile software development, requirements are commonly written as _user stories_
 - A user story is a short, simple description of a feature told from the perspective of the person who desires the new feature in the software
 - During each Sprint, the Developers of the Scrum Team implement features for the software based on user stories
