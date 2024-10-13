@@ -152,7 +152,7 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 
 > Exercise 6
 >
-> Inspection enables _adaptation_. What does it mean and how is adaptation performed in different Scrum events?
+> Inspection enables _adaptation_. What does it mean and how is adaptation performed with different artifacts and in different Scrum events?
 
 {: .important-title }
 
