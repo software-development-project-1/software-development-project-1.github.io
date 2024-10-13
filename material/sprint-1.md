@@ -142,27 +142,6 @@ The project will be empty for now, but we will add some user stories and tasks f
 >
 > Create the "Backlog" project as instructed above. Make sure that the project is public.
 
-## Database setup
-
-The [H2 database](https://www.h2database.com/html/main.html) is a good choice for the development environment database. Add the [required dependencies](https://www.baeldung.com/spring-boot-h2-database) for the H2 database. You can use the following configuration in the `application.properties` file:
-
-```
-spring.datasource.url=jdbc:h2:file:~/quizzer;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
-spring.datasource.username=admin
-spring.datasource.password=password
-spring.datasource.driver-class-name=org.h2.Driver
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
-spring.jpa.hibernate.ddl-auto=update
-```
-
-This configuration is for an embedded database. Embedded database is stored to a file defined in the `spring.datasource.url` property, so the data won't vanish once the application is shut down. This configuration will save the database to a `~/quizzer.mv.db` file. If you want to reset the database and remove all the data, simply delete the file by running the `rm ~/quizzer.mv.db` command on the command-line.
-
-{: .important-title }
-
-> Exercise 2
->
-> Setup the H2 database for the project. Start the Sprint planning by discussing the database schema. What kind of entities and attributes should be added and what are their relationships?
-
 ## 🏃‍♂️ Sprint 1 planning
 
 Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Planning event:
@@ -204,7 +183,7 @@ These are the user stories, that you will be working on as a team during this Sp
 
 {: .important-title }
 
-> Exercise 3
+> Exercise 2
 >
 > Choose the [Scrum Master](https://scrumguides.org/scrum-guide.html#scrum-master) among the team members for the first Sprint. The Scrum Master should help other team members with following the Scrum process, for example by facilitating the team's meetings and making sure that the backlogs are kept up-to-date.
 
@@ -220,7 +199,7 @@ Before we start creating issues, let's add some [labels](https://docs.github.com
 
 {: .important-title }
 
-> Exercise 4
+> Exercise 3
 >
 > Create the "user story" label to classify user story related issues.
 
@@ -228,7 +207,7 @@ Next, we need to specify the Sprint the issue is worked on. We can use Sprint-sp
 
 {: .important-title }
 
-> Exercise 5
+> Exercise 4
 >
 > Create the "Sprint 1" milestone to group the issues of the first Sprint.
 
@@ -240,9 +219,30 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 5
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 1". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
+
+## Database setup
+
+The [H2 database](https://www.h2database.com/html/main.html) is a good choice for the development environment database. Add the [required dependencies](https://www.baeldung.com/spring-boot-h2-database) for the H2 database. You can use the following configuration in the `application.properties` file:
+
+```
+spring.datasource.url=jdbc:h2:file:~/quizzer;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
+spring.datasource.username=admin
+spring.datasource.password=password
+spring.datasource.driver-class-name=org.h2.Driver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+```
+
+This configuration is for an embedded database. Embedded database is stored to a file defined in the `spring.datasource.url` property, so the data won't vanish once the application is shut down. This configuration will save the database to a `~/quizzer.mv.db` file. If you want to reset the database and remove all the data, simply delete the file by running the `rm ~/quizzer.mv.db` command on the command-line.
+
+{: .important-title }
+
+> Exercise 6
+>
+> Setup the H2 database for the project. Start the Sprint planning by discussing the database schema. What kind of entities and attributes should be added and what are their relationships?
 
 {: .highlight }
 
