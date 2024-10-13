@@ -36,9 +36,9 @@ The project assessment is based on the following aspects:
 - _Technical implementation_: required features should be implemented and they should work as intended without major bugs
 - _Project management_: project management-related documents (e.g. backlogs) should be well organized and kept up-to-date throughout the project
 - _Documentation_: required technical documents should be written and they should correctly describe the technical implementation
-- _Following the schedule_: requirements of each Sprint should be implemented before the deadline
+- _Following the schedule_: each Sprint has requirements and the project should advance during each Sprint
 
-Each of the three Sprints is assessed based on the Sprint requirements. The team can earn up to 40 from the project (15 + 15 + 10 points).
+The team can earn up to 40 from the project.
 
 Each team member's personal assessment is based on the following aspects:
 
