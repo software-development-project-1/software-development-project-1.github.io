@@ -721,3 +721,10 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 {: .highlight }
 
 > Make sure that you have pushed your work to the project's GitHub repository before the Sprint 1 deadline on {{site.sprint_1_deadline}}.
+
+## ⭐ Bonus: improving the project
+
+Here's some additional resources you can use to improve your project if you have time:
+
+- [Validating Form Input](https://spring.io/guides/gs/validating-form-input)
+- [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
