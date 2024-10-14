@@ -846,3 +846,10 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 {: .highlight }
 
 > Make sure that you have pushed your work to the project's GitHub repository before the Sprint 2 deadline on {{site.sprint_2_deadline}}.
+
+## ⭐ Bonus: improving the project
+
+Here's some additional resources you can use to improve your project if you have time:
+
+- [Introduction to Project Lombok](https://www.baeldung.com/intro-to-project-lombok)
+- [Git ignore](https://www.atlassian.com/git/tutorials/saving-changes/gitignore)
