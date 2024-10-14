@@ -607,7 +607,7 @@ EXPOSE 8080
 ENTRYPOINT ["java","-jar","quizzer.jar"]
 ```
 
-In the `Dockerfile` we generate a [JAR file](https://en.wikipedia.org/wiki/JAR_(file_format)) for the project and start the application using the JAR file. The name of the JAR file is specified by the `artifactId` and the `version` properties in the `pom.xml` file. They should be the following:
+In the `Dockerfile` we generate a [JAR file](https://en.wikipedia.org/wiki/JAR_(file_format)) for the project and start the application using the JAR file. The name of the JAR file is specified by the `artifactId` and the `version` properties in the `pom.xml` file. Set the values of these properties as the following so that the JAR file's name matches the one in the `Dockerfile`:
 
 ```xml
 <artifactId>quizzer</artifactId>
