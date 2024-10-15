@@ -221,7 +221,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 ## Database setup
 
-The [H2 database](https://www.h2database.com/html/main.html) is a good choice for the development environment database. Add the [required dependencies](https://www.baeldung.com/spring-boot-h2-database) for the H2 database. You can use the following database configuration:
+The [H2 database](https://www.h2database.com/html/main.html) is a good choice for the development environment database. We will setup a more suitable production environment database later. Make sure that your project has the [required dependencies](https://www.baeldung.com/spring-boot-h2-database) for the H2 database. You can use the following database configuration:
 
 ```
 spring.datasource.url=jdbc:h2:file:~/quizzer;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
