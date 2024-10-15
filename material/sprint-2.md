@@ -812,18 +812,11 @@ public class MessageRestController {
 > The frontend developer guide goes here.
 > ```
 >
-> You can test how good your user guide is by cloning a new copy of the repository and executing the steps precisely as they are in the developer guide without making any assumptions.
-
-{: .important-title }
-
-> Exercise 28
+> Also, include the following information about the implementation technologies:
 >
-> Write the first version of the project's _architecture documentation_. Add the documentation under a "Architecture" subheading in the `README.md` file. The documentation should contain the following things:
->
-> 1. The project's overall architecture consists of three components: the backend, the database and the frontend. Mention these components and briefly explain the purpose of each component
-> 2. Which programming language, frameworks and major libraries are used in the _backend implementation_?
-> 3. Which _database platforms_ are used in different environments (development and production environment)?
-> 4. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
+> 1. Which programming language, frameworks and major libraries are used in the _backend implementation_?
+> 2. Which _database platforms_ are used in different environments (development and production environment)?
+> 3. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
 
 ## Sprint Review
 
@@ -831,13 +824,13 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 29
+> Exercise 28
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 30
+> Exercise 29
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the teacher dashboard and the student dashboard applications on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the teacher dashboard application's features in the production environment.
 >
