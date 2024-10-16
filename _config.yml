@@ -22,11 +22,7 @@ callouts:
     color: purple
 teacher_text: "Kalle Ilves (kalle.ilves@haaga-helia.fi)"
 teaching_sessions_text: "on Mondays at 11:00 - 13:00 and Thursdays at 14:00 - 16:00 in classroom 5006 for the implementation SOF005AS3A-3014 and on Mondays at 8:00 - 10:00 and Wednesdays at 8:45 - 10:45 in classroom 4009 for the implementation SOF005AS3AE-3003"
-moodle_link: "https://hhmoodle.haaga-helia.fi/course/view.php?id=40343"
-week_1_moodle_submission_link: "https://hhmoodle.haaga-helia.fi/mod/assign/view.php?id=2834073"
-week_2_moodle_submission_link: "https://hhmoodle.haaga-helia.fi/mod/assign/view.php?id=2834074"
-sprint_1_moodle_submission_link: "https://hhmoodle.haaga-helia.fi/mod/assign/view.php?id=2834075"
-final_report_moodle_submission_link: "https://hhmoodle.haaga-helia.fi/mod/assign/view.php?id=2834076"
+moodle_link: "https://hhmoodle.haaga-helia.fi/course/view.php?id=42164"
 teams_flinga_link: "https://edu.flinga.fi/s/E4M68AC"
 week_1_deadline: "28.10. at 8:00"
 week_2_deadline: "4.11. at 8:00"

@@ -15,7 +15,7 @@ nav_order: 4
 
 ## Submitting this week's exercises
 
-All of this week's exercises (exercises 1-16) are submitted to [this Moodle submission]({{site.week_2_moodle_submission_link}}). The submission deadline is on {{site.week_2_deadline}}.
+Submit this week's exercises to [Moodle]({{site.week_2_moodle_submission_link}}) (you'll find the submission in the "Exercise submissions" tab). The submission should contain the information mentioned in exercises 7, 15 and 16. The submission deadline is on {{site.week_2_deadline}}.
 
 ## Version control
 
