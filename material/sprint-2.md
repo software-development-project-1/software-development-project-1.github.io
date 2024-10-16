@@ -390,7 +390,7 @@ private List<Message> messages;
 
 To have more control over the attributes in the JSON response, [DTO](https://www.baeldung.com/java-dto-pattern) classes can be used instead of returning the entity classes directly from the controller methods.
 
-## Designing the REST API endpoints for the user stories
+## REST API endpoints for the user stories
 
 Next, let's consider what kind of REST API endpoints we need for the remaining user stories. Implement the following endpoints _by following the REST API naming conventions for the endpoint path names_.
 
@@ -501,6 +501,12 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 > The GET method endpoint error responses will be displayed as a HTML error page in a web browser. To see what the JSON error response looks like, use Postman to send the request.
 
+{: .important-title }
+
+> Exercise 19
+>
+> Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You don't necessarily need a separate repository for the frontend application, you can initialize it in folder within the current repository.
+
 ## REST API documentation with Swagger
 
 Now that we have implemented REST API endpoints for our application, we should describe to our fellow developers what these endpoints are and what kind of data they provide. We could write this documentation by hand, but there's a high risk that the documentation will become stale in the future. For example, if we make some alteration to the structure of the provided data and forget to update the documentation. That is why API documentation is commonly generated automatically by tools such as [Spring Doc](https://springdoc.org/).
@@ -580,7 +586,7 @@ public Message getMessageById(@PathVariable Long id) {
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 20
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response.
 
@@ -676,12 +682,6 @@ export default function MessageList() {
 ```
 
 {% endraw %}
-
-{: .important-title }
-
-> Exercise 20
->
-> Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You don't necessarily need a separate repository for the frontend application, you can initialize it in folder within the current repository.
 
 ## Cross-Origin Resource Sharing (CORS)
 
