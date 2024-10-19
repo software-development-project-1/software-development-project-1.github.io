@@ -289,13 +289,13 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > 3. "As a user, I want to be able to sign in using username and password, Google, Facebook and GitHub so that I can authenticate"
 > 4. "As a user, I want to customize my profile so that I can share information about myself"
 >
-> How would improve these user stories? Come up with a _well-written_ version of each user story.
+> How would improve these user stories? Come up with a better version of each user story.
 
 {: .important-title }
 
 > Exercise 12
 >
-> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description). Come up with at least six _well-written_ user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories.
+> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description). Come up with at least six well-written user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories.
 >
 > Hint: pay attention to the size of the user story. Split big user stories into smaller ones.
 
