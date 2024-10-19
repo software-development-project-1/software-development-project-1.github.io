@@ -44,7 +44,6 @@ Welcome to the Software Development Project 1 course!
   - Project management
   - Documentation
   - Following the schedule
-- Each of the three Sprints is assessed based on the Sprint requirements
 - The team can earn up to 40 points from the project
 
 ---
