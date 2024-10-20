@@ -287,7 +287,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > 1. "As a developer, I want to store the user's phone number in the user database table's phone_number column, so that I can implement two-factor authentication"
 > 2. "Add blog posts to favorites list"
 > 3. "As a user, I want to be able to sign in using username and password, Google, Facebook and GitHub so that I can authenticate"
-> 4. "As a user, I want to customize my profile so that I can share information about myself"
+> 4. "As a user, I want to customize my profile in different ways so that I can share information about myself"
 >
 > How would improve these user stories? Come up with a better version of each user story.
 
