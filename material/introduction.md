@@ -176,10 +176,9 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 > 2. The Sprint Backlog is a very important artifact for the Daily Scrum event
 > 3. The Product Owner is at the top of the Scrum Team's hierarchy and they decide what every other team member should do
 > 4. Sprint duration of two weeks is better than two months
-> 5. The requirements for the project are carefully documented to the Product Backlog at the beginning of the project and remain unchanged throughout the project
-> 6. The Developer's only responsibility in a Scrum Team is to write code
-> 7. The Retrospective event supports adaptation
-> 8. It is the Scrum Master's responsibility to help other members in following the Scrum process
+> 5. The Developer's only responsibility in a Scrum Team is to write code
+> 6. The Retrospective event supports adaptation
+> 7. It is the Scrum Master's responsibility to help other members in following the Scrum process
 
 ## Agile requirement specification
 
