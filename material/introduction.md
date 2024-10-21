@@ -179,7 +179,8 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 > 5. The requirements for the project are carefully documented to the Product Backlog at the beginning of the project and remain unchanged throughout the project
 > 6. The Developer's only responsibility in a Scrum Team is to write code
 > 7. The Retrospective event supports adaptation
-> 8. It is the Scrum Master's responsibility to help other members in following the Scrum process
+> 8. The Manifesto for Agile Software Development provides a detailed description of how to manage a software development process
+> 9. It is the Scrum Master's responsibility to help other members in following the Scrum process
 
 ## Agile requirement specification
 
