@@ -101,7 +101,7 @@ Instead of completing software development lifecycle's phases sequentially from 
 
 _Scrum_ is an iterative software development process framework that defines practical ways to carry out agile software development principles. Scrum has been by far the most widely used Agile method in the recent years based on the anual [State of Agile](https://www.scruminc.com/2022-state-agile-report-takeaways/) reports. For example based on the year 2022 report, 87% of respondents used Scrum at the team level.
 
-The [Scrum Guide](https://scrumguides.org/scrum-guide.html) is the official guide to Scrum. During the course we will use Scrum to manage our software development process. This week we will learn about Scrum in theory and week three onwards we will apply the knowledge with our project.
+The [Scrum Guide](https://scrumguides.org/scrum-guide.html) (the Finnish version is [here](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-Finnish.pdf)) is the official guide to Scrum. During the course we will use Scrum to manage our software development process. This week we will learn about Scrum in theory and week three onwards we will apply the knowledge with our project.
 
 Before starting working on the exercises, read at least the "Scrum Definition", "Scrum Theory", "Scrum Values", "Scrum Team", "Scrum Events" and "Scrum Artifacts" chapters from the [Scrum Guide](https://scrumguides.org/scrum-guide.html).
 
