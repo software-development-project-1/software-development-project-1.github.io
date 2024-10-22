@@ -271,7 +271,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > 1. "As a developer, I want to implement the blog editor component using an editor library, so that it is easier to implement new editor features"
 > 2. "As a content creator, I want to be able to write a blog post with text, images, videos, and interactive code samples so that I can create rich content for my readers"
 > 3. "As a content creator, I want my blog's layout to have a modern look so that I can write visually pleasing blog posts"
-> 4. "Write comments for blog posts"
+> 4. "Write comment for blog post"
 >
 > Justify your answer based on the INVEST criteria and general guideliness of a good user story.
 
@@ -282,8 +282,9 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > The Scrum Team came up with the following user stories during the Sprint Planning:
 >
 > 1. "As a developer, I want to store the user's email in the user database table's email column, so that I can send notifications about new blog posts"
-> 2. "As a user, I want to be able to sign in using username and password, Google, Facebook and GitHub so that I can authenticate"
-> 3. "As a user, I want to customize my profile in different ways so that I can share information about myself"
+> 2. "Add blog post to favorites list"
+> 3. "As a user, I want to be able to sign in using username and password, Google, Facebook and GitHub so that I can authenticate"
+> 4. "As a user, I want to customize my profile in different ways so that I can share information about myself"
 >
 > How would improve these user stories? Come up with a better version of each user story.
 
@@ -291,7 +292,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 > Exercise 12
 >
-> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description). Come up with at least five user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Start by identifying the user personas, then consider what kind of actions they want to perform and what is the goal of the actions.
+> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description). Come up with at least six user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Start by identifying the user personas, then consider what kind of actions they want to perform and what are the goals of the actions.
 >
 > Hint: pay attention to the size of the user story. Split big user stories into smaller ones.
 

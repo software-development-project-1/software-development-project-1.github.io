@@ -21,7 +21,7 @@ The Product Owner has a great project idea and is in desperate need of a talente
 >
 > Questions have multiple answer options, for example, "Helsinki", "Turku" and "Tampere". An answer option has an answer option content, for example "Helsinki" and a correctness status indicating whether the answer option is correct or not. The teacher should be able to add an answer option for a question, see a list of answer options of a question and be able to delete an answer option.
 >
-> To categorize quizzes, the teacher should be able to add different categories, such as "Vocabulary" and "Geography". A category has a name, for example, "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". The teacher should be able to see a list of added categories and be able to delete it.
+> To categorize quizzes, the teacher should be able to add different categories, such as "Vocabulary" and "Geography" and choose the category of a quiz. A category has a name, for example, "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". The teacher should be able to see a list of added categories and be able to delete it.
 >
 > The student should be able to see a list of published quizzes and take the quizzes by answering the questions of a quiz in the student dashboard. After answering a question, the student should get feedback on whether their answer was correct or not.
 >
