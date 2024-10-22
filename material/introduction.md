@@ -184,13 +184,17 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 
 In the _requirements phase_ of the software development lifecycle, the stakeholders' requirements for the software are defined and documented. The software requirements specification document lists sufficient and necessary requirements for the project development. To derive the requirements, the development team needs to have a clear and thorough understanding of the products under development. This is achieved through detailed and continuous communications with the project team and customer throughout the software development process.
 
-Software's requirements are commonly categorized as _functional_ and _non-functional requirements_. Functional requirements are the requirements stated by the user which one can see directly in the final product, unlike the non-functional requirements. For example the following requirement is a functional requirement:
+Software's requirements are commonly categorized as _functional_ and _non-functional requirements_. Functional requirements are the requirements stated by the user which one can see directly in the final product, unlike the non-functional requirements. For example the following requirements are functional requirements:
 
 > User should be able to register with a username and password
 
-Non-functional requirements on the other are quality constraints that the system must satisfy. These requirements can't be seen by the user but rather cover for example security and performance aspects of the system. For example the following requirement is a non-functional requirement:
+> User should be able to see a list of latest blog posts of their favorite blogs
+
+Non-functional requirements on the other are quality constraints that the system must satisfy. These requirements can't be seen by the user but rather cover for example security and performance aspects of the system. For example the following requirements are non-functional requirements:
 
 > User's password should be stored in the database as a Bcrypt password hash upon registration
+
+> List of latest blog posts of user's favorite blogs should be loaded on average in a less than one second
 
 In agile software development, functional requirements are commonly written as _user stories_. A user story is a short, simple description of a feature told from the perspective of the person who desires the new feature in the software. During each Sprint, the Developers of the Scrum Team implement features for the software based on the user stories.
 
@@ -204,7 +208,7 @@ A user story is written from the user's perspective and commonly follows the fol
 
 > As [a user persona], I want [to perform this action] so that [I can accomplish this goal].
 
-The "a user persona" part describes the user role who wants to use the feature described in the "to perform this action" part. If we can't come up with a specific role we can just call the user persona a "user". The last part of the user story format is the "I can accomplish this goal" part. This justifies, why this user story is important enough to be implemented.
+The "a user persona" part describes the user role (for example "content creator", "blog reader" or "admin user") who wants to use the feature described in the "to perform this action" part. If we can't come up with a specific role we can just call the user persona a "user". The last part of the user story format is the "I can accomplish this goal" part. This justifies, why this user story is important enough to be implemented.
 
 {: .note }
 
