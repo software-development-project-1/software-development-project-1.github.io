@@ -291,7 +291,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 > Exercise 12
 >
-> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description). Come up with at least five user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Keep in mind the INVEST criteria and general guideliness of a good user story.
+> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description). Come up with at least five user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Start by identifying the user personas, then consider what kind of actions they want to perform and what is the goal of the actions.
 >
 > Hint: pay attention to the size of the user story. Split big user stories into smaller ones.
 
