@@ -290,6 +290,17 @@ Welcome to the Software Development Project 1 course!
 
 ---
 
+# Functional and non-functional requirements
+
+- For example the following requirements are functional requirements:
+  - "User should be able to register with a username and password"
+  - "User should be able to see a list of latest blog posts of their favorite blogs"
+- And the following requirements are non-functional requirements:
+  - "User’s password should be stored in the database as a Bcrypt password hash upon registration"
+  - "List of latest blog posts of user’s favorite blogs should be loaded on average in a less than one second"
+
+--- 
+
 # Agile requirement specification
 
 - In agile software development, requirements are commonly written as _user stories_
