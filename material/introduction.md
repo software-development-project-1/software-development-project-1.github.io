@@ -173,7 +173,7 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 > Are the following statements true or false? Justify your answer.
 >
 > 1. Only the Product Owner plans the requirements for the upcoming Sprint during the Sprint Planning event
-> 2. The Sprint Backlog is a very important artifact for the Daily Scrum event
+> 2. The Sprint Backlog is an important artifact for the Daily Scrum event
 > 3. The Product Owner is at the top of the Scrum Team's hierarchy and they decide what every other team member should do
 > 4. Sprint duration of two weeks is better than two months
 > 5. The Developer's only responsibility in a Scrum Team is to write code
@@ -184,17 +184,13 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 
 In the _requirements phase_ of the software development lifecycle, the stakeholders' requirements for the software are defined and documented. The software requirements specification document lists sufficient and necessary requirements for the project development. To derive the requirements, the development team needs to have a clear and thorough understanding of the products under development. This is achieved through detailed and continuous communications with the project team and customer throughout the software development process.
 
-Software's requirements are commonly categorized as _functional_ and _non-functional requirements_. Functional requirements are the requirements stated by the user which one can see directly in the final product, unlike the non-functional requirements. For example the following requirements are functional requirements:
+Software's requirements are commonly categorized as _functional_ and _non-functional requirements_. Functional requirements are the requirements stated by the user which one can see directly in the final product, unlike the non-functional requirements. For example the following requirement is a functional requirement:
 
 > User should be able to register with a username and password
 
-> User should be able to see a list of latest blog posts of their favorite blogs
-
-Non-functional requirements on the other are quality constraints that the system must satisfy. These requirements can't be seen by the user but rather cover for example security and performance aspects of the system. For example the following requirements are functional requirements:
+Non-functional requirements on the other are quality constraints that the system must satisfy. These requirements can't be seen by the user but rather cover for example security and performance aspects of the system. For example the following requirement is a non-functional requirement:
 
 > User's password should be stored in the database as a Bcrypt password hash upon registration
-
-> List of latest blog posts of user's favorite blogs should be loaded on average in a less than one second
 
 In agile software development, functional requirements are commonly written as _user stories_. A user story is a short, simple description of a feature told from the perspective of the person who desires the new feature in the software. During each Sprint, the Developers of the Scrum Team implement features for the software based on the user stories.
 
@@ -218,9 +214,7 @@ In Scrum, the whole Scrum Team participates in writing the user stories. This is
 
 ## Writing good user stories
 
-The user stories described previously sound like fairly good descriptions of software features. But what makes a good user story? A good user story describes a _feature that provides value for the end user of the software_. This means, that the description should be written so that the _customer can understand it_.
-
-Because the Product Owner in the Scrum Team is commonly a non-technical person, user stories should not contain technical details of the implementation. For example, the following user story is too technical:
+The user stories described previously sound like fairly good descriptions of software features. But what makes a good user story? A good user story describes a _feature that provides value for the end user of the software_. This means, that the user story should be written from the user's point of view and not contain technical details. For example, the following user story is written from the developer's perspective and contains technical implementation details:
 
 > ❌ As a developer, I want to optimize the database by adding a new index to the blog posts table so that the list of blog posts of a blog loads fast.
 
@@ -285,7 +279,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > 1. "As a developer, I want to store the user's email in the user database table's email column, so that I can send notifications about new blog posts"
 > 2. "Add blog post to favorites list"
 > 3. "As a user, I want to be able to sign in using username and password, Google, Facebook and GitHub so that I can authenticate"
-> 4. "As a user, I want to customize my profile in different ways so that I can share information about myself"
+> 4. "As a user, I want to customize my profile in different ways so that I can share information about myself". Hint: try to shape the action of the user story into something more concrete
 >
 > How would improve these user stories? Come up with a better version of each user story.
 

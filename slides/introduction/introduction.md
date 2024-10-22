@@ -313,7 +313,7 @@ Welcome to the Software Development Project 1 course!
 # Writing good user stories
 
 - A good user story describes a _feature that provides value for the end user of the software_
-- This means, that the description should be written from the user's perspective and so that the customer can understand it
+- This means, that the description should be written from the user's perspective and not contain technical details
 - For example the following user story is described from the developer's point of view:
 
   > ❌ As a developer, I want to optimize the database by adding a new index to the blog posts table so that the list of blog posts of a blog loads fast.
