@@ -694,8 +694,9 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 >
 > Finally, write down the following things:
 >
-> - The names and GitHub usernames of your team members
-> - The name of your team
+> - What are the names and GitHub usernames of your team members?
+> - What is the name of your team?
+> - What your strengths and weaknesses as a team?
 >
 > _Add these to the Moodle submission_.
 
