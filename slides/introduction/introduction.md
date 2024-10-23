@@ -321,6 +321,14 @@ Welcome to the Software Development Project 1 course!
 
 ---
 
+# Let's write some user stories
+
+- Come up with two user stories in an application you have used, for example Netflix or Moodle
+- Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format
+- Share your user stories with others
+
+---
+
 # Writing good user stories
 
 - A good user story describes a _feature that provides value for the end user of the software_
