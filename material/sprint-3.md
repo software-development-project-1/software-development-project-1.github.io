@@ -158,7 +158,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 > Exercise 9
 >
-> Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the web service URL in the Render dashboard) to the "Developer guide" section in the `README.md` file.
+> Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the static site URL in the Render dashboard) to the project description section in the `README.md` file.
 
 ## Testing
 

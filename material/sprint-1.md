@@ -476,11 +476,15 @@ The description should be so clear that your fellow student who knows nothing ab
 
 > Exercise 20
 >
-> Write a developer guide documentation on _how to start the backend application_ on the command-line to the `README.md` file. Also, mention the required Java version for the project. Add it under a "Developer guide" subheading.
->
-> For the sake of readability, code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
+> Write a developer guide documentation on _how to start the backend application_ on the command-line to the `README.md` file. Also, mention the required Java version for the project. Add it under a "Developer guide" subheading. For the sake of readability, code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
 >
 > You can assume that the reader of the `README.md` file is a software developer who knows how to use a command-line interface, the basic Git commands and install the required Java version. _Make sure that instructions on the developer guide work_ by cloning a new version of the repository and executing the steps on the developer guide one by one.
+
+{: .important-title }
+
+> Exercise 21
+>
+> We'll start working on the student dashboard frontend application in the next Sprint. Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You don't need a separate repository for the frontend application, you can initialize it in folder within the current repository.
 
 ## Deployment
 
@@ -565,9 +569,39 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
-> Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the "Developer guide" section in the `README.md` file.
+> Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the project description section in the `README.md` file.
+
+## GitHub release
+
+Once the GitHub repository's main branch has a working version of the application with the desired features at the end of the Sprint, we should _release_ it for the users. [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is a way to "freeze" the source code of a project at certain point of the commit history and to provide users a working version of the application.
+
+Usually a new version of an application is released at the end of each Sprint. When we create a new release at the end of each Sprint, we will create a _release history_ for the project. Users can easily browse and download the source code of different versions of the application by going through the release history.
+
+Each release should at least include the name for the release and a short description describing the changes introduced in the release. For libraries the release name is commonly the version number of the release, for example "18.2.0". We create a release for each Sprint, so we can name our releases based on the Sprint number, for example "Sprint 1".
+
+As an example, [here](https://github.com/facebook/react/releases) are the releases for the React library.
+
+{: .important-title }
+
+> Exercise 23
+>
+> Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
+
+## Sprint Review
+
+At the end of each Sprint, there's the [Sprint Review](https://scrumguides.org/scrum-guide.html#sprint-review) event. During the Sprint Review, the Developers demonstrate the outcome of the Sprint for the Product Owner. This means that the Developers should demonstrate how the implemented user stories work _in the user's perspective_. So, instead of showing the code, Developers should show how the user can use the new features of the application.
+
+Sprint Review has a huge impact on the transparency of the process. Seeing how the application actually works also brings forth many new ideas for the upcoming Sprint Planning event.
+
+{: .important-title }
+
+> Exercise 24
+>
+> The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
+>
+> Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/), "asd", or "foobar") for the Sprint Review. This means that you should add at lest one quiz with questions and answer options using the application so that you can easily demonstrate the user stories.
 
 ## Git branches
 
@@ -625,7 +659,7 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 25
 >
 > Perform the steps above to create your own branch named by your GitHub username and push it to GitHub.
 
@@ -645,7 +679,7 @@ But, GitHub supports a better way to merge branches using [pull requests](https:
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 26
 >
 > 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions. The pull request title should describe the changes, for example "Change the submit button color in the add quiz form". The description provides additional details
 > 2. Merge your branch into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below
@@ -677,7 +711,7 @@ A quite common practice is to separate the development and production code with 
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 27
 >
 > 1. Create a `production` branch of the main branch. Then, push the branch to GitHub using the `git push origin -u production` command
 > 2. Open the backend web service in the Render Dashboard and go to the "Settings" page. In the "Build & Deploy" section, set the "Branch" as "production" and "Auto-Deploy" as "Yes"
@@ -687,36 +721,6 @@ A quite common practice is to separate the development and production code with 
 {: .note }
 
 > When you want to deploy the application to the production environment, open a pull request as described above. _Don't wait until the end of the Sprint for the deployment_. Once you have a meaningful set of features implement, deploy the application and _test that the new features work in the production environment_.
-
-## GitHub release
-
-Once the GitHub repository's main branch has a working version of the application with the desired features at the end of the Sprint, we should _release_ it for the users. [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is a way to "freeze" the source code of a project at certain point of the commit history and to provide users a working version of the application.
-
-Usually a new version of an application is released at the end of each Sprint. When we create a new release at the end of each Sprint, we will create a _release history_ for the project. Users can easily browse and download the source code of different versions of the application by going through the release history.
-
-Each release should at least include the name for the release and a short description describing the changes introduced in the release. For libraries the release name is commonly the version number of the release, for example "18.2.0". We create a release for each Sprint, so we can name our releases based on the Sprint number, for example "Sprint 1".
-
-As an example, [here](https://github.com/facebook/react/releases) are the releases for the React library.
-
-{: .important-title }
-
-> Exercise 25
->
-> Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
-
-## Sprint Review
-
-At the end of each Sprint, there's the [Sprint Review](https://scrumguides.org/scrum-guide.html#sprint-review) event. During the Sprint Review, the Developers demonstrate the outcome of the Sprint for the Product Owner. This means that the Developers should demonstrate how the implemented user stories work _in the user's perspective_. So, instead of showing the code, Developers should show how the user can use the new features of the application.
-
-Sprint Review has a huge impact on the transparency of the process. Seeing how the application actually works also brings forth many new ideas for the upcoming Sprint Planning event.
-
-{: .important-title }
-
-> Exercise 26
->
-> The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
->
-> Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/), "asd", or "foobar") for the Sprint Review. This means that you should add at lest one quiz with questions and answer options using the application so that you can easily demonstrate the user stories.
 
 {: .highlight }
 

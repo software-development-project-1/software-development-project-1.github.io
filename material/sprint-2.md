@@ -188,12 +188,6 @@ After some discussion the Scrum Team planned the following user stories:
 
 > Exercise 9
 >
-> Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You don't need a separate repository for the frontend application, you can initialize it in folder within the current repository.
-
-{: .important-title }
-
-> Exercise 10
->
 > Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
 >
 > GitHub supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain diagrams. Take a look at Mermaid's [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) documentation for more information.
@@ -586,7 +580,7 @@ public Message getMessageById(@PathVariable Long id) {
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 19
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response.
 
@@ -710,7 +704,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 20
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -722,7 +716,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 21
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -736,7 +730,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 22
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -754,7 +748,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 23
 >
 > Plan the tasks for the eight user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -768,7 +762,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 24
 >
 > Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_9}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -780,7 +774,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 25
 >
 > Plan the tasks for the tenth user story, "{{site.sprint_2_user_story_10}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -794,7 +788,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 26
 >
 > Add instructions on _how to start the frontend application_ to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
@@ -812,11 +806,12 @@ public class MessageRestController {
 > The frontend developer guide goes here.
 > ```
 >
-> Also, include the following information about the implementation technologies:
+> Also, include the following information about the project structure and the implementation technologies:
 >
-> 1. Which programming language, frameworks and major libraries are used in the _backend implementation_?
-> 2. Which _database platforms_ are used in different environments (development and production environment)?
-> 3. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
+> 1. The project consists of three components: _database_, _backend_ and _frontend_. Mention these components and describe the purpose of each of them
+> 2. Which programming language, frameworks and major libraries are used in the _backend implementation_?
+> 3. Which _database platforms_ are used in different environments (development and production environment)?
+> 4. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
 
 ## Sprint Review
 
@@ -824,13 +819,13 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 28
+> Exercise 27
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 29
+> Exercise 28
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the teacher dashboard and the student dashboard applications on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the teacher dashboard application's features in the production environment.
 >
