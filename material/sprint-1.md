@@ -14,7 +14,7 @@ This week we'll start working on the project described by the Product Owner in t
 
 {: .highlight }
 
-> Starting from this week, you will be working with your team. That means that, you will be working on all the Sprint requirements together. Be prepared to work on the requirements outside the weekly sessions as well. If you don't know your team members, you can find their names on [Moodle]({{site.moodle_link}}).
+> Starting from this week, you will be working with your team. That means that, you will be working on all the Sprint requirements together. Be prepared to work on the requirements outside the weekly sessions as well. If you don't know your team members, you can find their names on [Moodle]({{site.moodle_link}}) (check the "Project teams" tab).
 
 This Sprint doesn't have a Moodle submission. It is enough that you have pushed your work to the project's GitHub repository before the Sprint deadline on {{site.sprint_1_deadline}}, so we will be working on the Sprint requirements for the next two weeks. The Sprint ends with the Sprint Review event in which the team will share their progress with the Product Owner.
 
@@ -724,7 +724,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 ## ⭐ Bonus: improving the project
 
-Here's some additional resources you can use to improve your project if you have time:
+Here are some additional resources you can use to improve your project and learn about new topics if you have time:
 
 - [Validating Form Input](https://spring.io/guides/gs/validating-form-input)
 - [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)

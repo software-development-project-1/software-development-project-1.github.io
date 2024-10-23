@@ -842,7 +842,7 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 ## ⭐ Bonus: improving the project
 
-Here's some additional resources you can use to improve your project if you have time:
+Here are some additional resources you can use to improve your project and learn about new topics if you have time:
 
 - [Introduction to Project Lombok](https://www.baeldung.com/intro-to-project-lombok)
 - [Git ignore](https://www.atlassian.com/git/tutorials/saving-changes/gitignore)
