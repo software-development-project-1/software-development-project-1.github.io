@@ -383,7 +383,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 > Exercise 13
 >
-> Organize a Daily Scrum event at least once a week during each Sprint.
+> Organize a Daily Scrum event at least once a week during each Sprint. Scheduling a Daily Scrum meeting at least two days before the end of the Sprint is probably a good idea.
 
 {: .important-title }
 
@@ -633,7 +633,7 @@ git checkout <name-of-my-branch>
 
 > We usually want to create new branch of the main branch. This means that before creating a new branch with the `git branch <name-of-the-branch>` command, switch to the main branch by running the `git checkout main` command. If you are uncertain which is the current branch, check it with the `git branch` command.
 
-Next, make some small change for the project, for example by changing a button text or color in the user interface or changing a variable name in a method. If there's some small code or user interface improvement you have in mind, this is the time to do it. Once you have made the change, check the status with `git status` command, add the changes with the `git add` command and create a commit with the `git commit` command. Feel free to do multiple commits if needed.
+Next, make some small change for the project, for example by changing a button text or color in the user interface or changing a variable name in a method. Once you have made the change, check the status with `git status` command, add the changes with the `git add` command and create a commit with the `git commit` command. Feel free to do multiple commits if needed.
 
 Then let's switch back to the main branch with the `git checkout main` command. If we check for the changes we made in the other branch, we see that they are no longer present. That's because the commits we made _only exist in our other branch_.
 
@@ -665,15 +665,9 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 
 ### Merging branches and pull requests
 
-Once we are happy with the changes we have made in the branch, we should _merge_ it into the main branch. This basically means applying all the commits we have made for the branch to the main branch. For this we could use the `git merge` command:
+Once we are happy with the changes we have made in the branch, we can _merge_ it into the main branch. This basically means applying all the commits we have made for the branch to the main branch. For this we could use the [git merge](https://www.atlassian.com/git/tutorials/using-branches/git-merge) command. However, GitHub supports a better way to merge branches using [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 
-```bash
-git checkout main
-git merge <name-of-my-branch>
-git push
-```
-
-But, GitHub supports a better way to merge branches using [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). Pull requests are "requests" to merge a branch to another branch (commonly the main branch). The benefit over using the `git merge` command is that pull requests provide a way to perform _quality assurance_, for example through _code reviews_. In a code review other team members inspect the chanhes introduced by the pull request and give constructive feedback. This feedback is used to improve the code quality and fix bugs and other implementation flaws.
+Pull requests are "requests" to merge a branch to another branch (commonly the main branch). The benefit over using the `git merge` command is that pull requests provide a way to perform _quality assurance_, for example through _code reviews_. In a code review other team members inspect the chanhes introduced by the pull request and give constructive feedback. This feedback is used to improve the code quality and fix bugs and other implementation flaws.
 
 ![Pull request](/assets/pull-request-cartoon.jpg){: width="500" }
 
@@ -707,7 +701,7 @@ Finally, resolve the conflicts and add, commit and push the changes to GitHub. N
 
 ### Separate branch for the production code
 
-A quite common practice is to separate the development and production code with separate branches. One such workflow is described in [this](https://nvie.com/posts/a-successful-git-branching-model/) article. We can do a bit simplified version of this workflow, by having the main branch for the development code an a production branch for the production code. Having a separate branch for the production code enables great features, such as quality assurance and automated deployments. We can deploy the application by simply merging the main branch to the production branch using a pull request.
+A quite common practice is to separate the development and production code with separate branches. Having a separate branch for the production code enables great features, such as quality assurance and automated deployments. We can deploy the application by simply merging the main branch to the production branch using a pull request.
 
 {: .important-title }
 
@@ -715,7 +709,7 @@ A quite common practice is to separate the development and production code with 
 >
 > 1. Create a `production` branch of the main branch. Then, push the branch to GitHub using the `git push origin -u production` command
 > 2. Open the backend web service in the Render Dashboard and go to the "Settings" page. In the "Build & Deploy" section, set the "Branch" as "production" and "Auto-Deploy" as "Yes"
-> 3. Switch back to the main branch and make some small change in the code and push the changes to GitHub. Then, open a pull request. Set the _base_ branch as the `production` branch and the _compare_ branch as the `main` branch.
+> 3. Switch back to the main branch and make some small change in the code and push the changes to GitHub. Then, open a pull request. Set the _base_ branch as the `production` branch and the _compare_ branch as the `main` branch
 > 4. Merge the pull request and check that the deployment works automatically
 
 {: .note }
