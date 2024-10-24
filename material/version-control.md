@@ -677,7 +677,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 >
 > 1. Clone the git-practice repository to your local computer as instructed above and open the repository folder in Git Bash and in an editor such as Visual Studio Code.
 > 2. Change the contents of some file (for example the `git_practice.txt`) file and push the changes to GitHub. Open the repository in GitHub and see that it has the commit you created.
-> 3. Find out using Google, how you can find out the names and addresses of the remote repositories of a project. The answer is a command you should run inside the Git project, when a remote has been set. Run the command and see that the remote repository address matches your GitHub repository. Add the command and the command output to a `remote.txt` file and push it to GitHub.
+> 3. Find out using Google, how you can find out the names and addresses of the remote repositories of a Git project. The answer is a command you should run inside the Git project, when a remote has been set. Run the command and see that the remote repository address matches your GitHub repository. Add the command and the command output to a `remote.txt` file and push it to GitHub.
 
 {: .important-title }
 
@@ -709,12 +709,12 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 >
 > 1. GitHub organizations are a way to apply fine-grained access permissions to repositories. Create a GitHub organization for your team by following [these](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) instructions. You can name the organization for example based on your team's name you came up with previously
 > 2. Invite other team members to the organization by following [these](https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization) instructions. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team
-> 3. Create a GitHub repository for the project. Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description.
+> 3. Create a _public_ GitHub repository for the project. Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description
 > 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the following dependencies by clicking the "Dependencies" button will get you started: Spring Web, Spring Boot DevTools, Thymeleaf, Spring Data JPA, H2. Push the generated project to the GitHub repository 
 > 6. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. Start the Spring Boot application in the repository and make sure that there are no errors
 > 7. Add an empty `README.md` file to the repository. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work
 >
-> _Every team member should addd the link to the GitHub repository to their Moodle submission_.
+> _Every team member should add the link to the GitHub repository to their Moodle submission_.
 
 {: .highlight }
 
