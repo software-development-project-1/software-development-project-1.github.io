@@ -699,7 +699,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > - What your strengths and weaknesses as a team?
 > - Which communication platform you will be using?
 >
-> _Add these to the Moodle submission_.
+> _Every team member should these to their Moodle submission_. One team member can write down the information and share it with others.
 
 {: .important-title }
 
@@ -714,7 +714,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > 6. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. Start the Spring Boot application in the repository and make sure that there are no errors
 > 7. Add an empty `README.md` file to the repository. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work
 >
-> _Add the link to the GitHub repository to the Moodle submission_.
+> _Every team member should addd the link to the GitHub repository to their Moodle submission_.
 
 {: .highlight }
 

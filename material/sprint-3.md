@@ -150,7 +150,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 1. On the Render dashboard, click the "New" button and choose "Static Site"
 1. From the repository list, find you project's repository and click the "Connect" button
 1. Come up with the name for the service. If the frontend application is not initialized in the repository's root folder (this is the case if you don't have a separate repository for the frontend application), set "Root Directory" as the frontend folder's name. Set "Build Command" as `npm run build` and "Publish Directory" as `dist`
-1. Click the "Advanced" button and set "Auto-Deploy" as "Yes" and "Branch" as "production"
+1. If you have a separate branch for the production code, click the "Advanced" button and set "Auto-Deploy" as "Yes" and "Branch" as "production". Otherwise set is as "No"
 1. Click the "Create Static Site" button to create the service
 1. On the service's page, click "Redirects/Rewrites" from the navigation on the left. Set the "Source" as `/*`, "Destination" as `/index.html` and "Action" as "Rewrite". Finally, click the "Save Changes" button. This configuration will make the frontend routing work
 
