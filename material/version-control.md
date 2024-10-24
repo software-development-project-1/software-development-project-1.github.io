@@ -679,6 +679,20 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > 2. Change the contents of some file (for example the `git_practice.txt`) file and push the changes to GitHub. Open the repository in GitHub and see that it has the commit you created.
 > 3. Find out using Google, how you can find out the names and addresses of the remote repositories of a Git project. The answer is a command you should run inside the Git project, when a remote has been set. Run the command and see that the remote repository address matches your GitHub repository. Add the command and the command output to a `remote.txt` file and push it to GitHub.
 
+<!--
+{: .important-title }
+
+> Exercise 15
+>
+> Explore the [React](https://github.com/facebook/react) repository in GitHub and find the following information in the repository:
+>
+> 1. Link to the latest commit in the repository (open the commit in GitHub and copy the URL in the browser's address bar) and the GitHub username of the commit's author
+> 2. Link to the latest issue in the repository
+> 3. Link to the latest pull request in the repository
+>
+> Add this information to a `react.txt` file in any format and push the file to GitHub.
+-->
+
 {: .important-title }
 
 > Exercise 15
@@ -687,7 +701,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 >
 > - Which parts of software development you are most interested in? (e.g. backend development, frontend development, databases...)
 > - Which parts are you the most comfortable with?
-> - Which are you less comfortable with?
+> - Which parts are you less comfortable with?
 > - What are your goals and expectations towards the course? For example, what do you want to learn during the course?
 >
 > Also, discuss which platform (e.g. Teams, Slack or Discord) you'll be using for communicating outside the weekly session. Then, setup the communication platform of your choice.
@@ -699,7 +713,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > - What your strengths and weaknesses as a team?
 > - Which communication platform you will be using?
 >
-> _Every team member should these to their Moodle submission_. One team member can write down the information and share it with others.
+> _Every team member should add these to their Moodle submission_. One team member can write down the information and share it with others.
 
 {: .important-title }
 
