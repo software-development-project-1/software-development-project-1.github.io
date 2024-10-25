@@ -136,7 +136,7 @@ The project will be empty for now, but we will add some user stories and tasks f
 
 > Exercise 1
 >
-> Create the "Backlog" project as instructed above. Make sure that the project is public.
+> Create the "Backlog" project as instructed above. Make sure that the project is public. Add a link to the Backlog project to the `README.md` under a "Backlog" subheading (open the Backlog project in GitHub and copy the URL from the web browser's address bar).
 
 ## 🏃‍♂️ Sprint 1 planning
 
@@ -333,33 +333,6 @@ Here's a few tips before you start implementing the tasks:
 {: .note }
 
 > You can easily find the issues assigned to you by opening the "Issues" tab and choosing your GitHub account from the "Assignee" dropdown menu.
-
-## The README file
-
-The `README.md` file we worked with previously has a special meaning in software development projects. When a software developer starts exploring a project, the first thing they should do is to look for the README file. This file should have all the relevant information about the project, for example:
-
-- What's the project about?
-- How to use the project?
-- How to develop the project?
-- Who are the project contributors?
-
-In GitHub, the README files commonly have the `.md` extension. These are [Markdown](https://www.markdownguide.org/) files. Markdown is markup language similar to HTML and you can use it to add formatting elements to plaintext text documents. Compared to HTML, Markdown syntax is much simpler and that's why it is an excellent choise for formatting text documents.
-
-[This guide](https://www.markdownguide.org/basic-syntax) demonstrates the Markdown syntax compared to HTML. As an example, [here's](https://github.com/facebook/react/blob/main/README.md) what the React project's `README.md` file looks like and [here's](https://github.com/facebook/react/blob/main/README.md?plain=1) what the Markdown markup looks like. You can use the [Markdown Live Preview](https://markdownlivepreview.com/) to try out different kind of Markdown markup.
-
-{: .important-title }
-
-> Exercise 12
->
-> Open the `README.md` file for editing for example in GitHub or in Visual Studio Code. You might not be able to edit the file in Eclipse. Replace the current contents of the repository's `README.md` file with the following information using Markdown:
->
-> 1. At the beginning of the file add the project name "Quizzer" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
-> 2. Below the heading add a short (a few sentences) description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
-> 3. Below the description, add a subheading "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name.
-> 4. Each team member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
-> 5. Below the "Team members" section, add a subheading "Backlog" and below that add a link to the Backlog project created previously (open the Backlog project in GitHub and copy the URL from the web browser's address bar).
->
-> Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 
 ## Daily Scrum
 

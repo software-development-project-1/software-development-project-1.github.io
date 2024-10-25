@@ -5,6 +5,10 @@ permalink: /git
 nav_order: 4
 ---
 
+<!--
+TODO: tehtävät 1 ja 2 edelliselle viikolle
+ -->
+
 {% include toc.html %}
 
 # Version control: Git and GitHub
@@ -679,25 +683,11 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > 2. Change the contents of some file (for example the `git_practice.txt`) file and push the changes to GitHub. Open the repository in GitHub and see that it has the commit you created.
 > 3. Find out using Google, how you can find out the names and addresses of the remote repositories of a Git project. The answer is a command you should run inside the Git project, when a remote has been set. Run the command and see that the remote repository address matches your GitHub repository. Add the command and the command output to a `remote.txt` file and push it to GitHub.
 
-<!--
 {: .important-title }
 
 > Exercise 15
 >
-> Explore the [React](https://github.com/facebook/react) repository in GitHub and find the following information in the repository:
->
-> 1. Link to the latest commit in the repository (open the commit in GitHub and copy the URL in the browser's address bar) and the GitHub username of the commit's author
-> 2. Link to the latest issue in the repository
-> 3. Link to the latest pull request in the repository
->
-> Add this information to a `react.txt` file in any format and push the file to GitHub.
--->
-
-{: .important-title }
-
-> Exercise 15
->
-> _This is a team exercise_. The team start to work on the project the next week. If you are uncertain who your team members are, check their names on [Moodle]({{site.moodle_link}}). Get to know each other by introducing yourself to other team members. You can e.g. share the following things about yourself:
+> _This is a team exercise_. Next, we'll start working on the project by doing some setup work. If you are uncertain who your team members are, check their names on [Moodle]({{site.moodle_link}}). Get to know each other by introducing yourself to other team members. You can e.g. share the following things about yourself:
 >
 > - Which parts of software development you are most interested in? (e.g. backend development, frontend development, databases...)
 > - Which parts are you the most comfortable with?
@@ -729,6 +719,32 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > 7. Add an empty `README.md` file to the repository. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work
 >
 > _Every team member should add the link to the GitHub repository to their Moodle submission_.
+
+## The README file
+
+The `README.md` file we worked with previously has a special meaning in software development projects. When a software developer starts exploring a project, the first thing they should do is to look for the README file. This file should have all the relevant information about the project, for example:
+
+- What's the project about?
+- How to use the project?
+- How to develop the project?
+- Who are the project contributors?
+
+In GitHub, the README files commonly have the `.md` extension. These are [Markdown](https://www.markdownguide.org/) files. Markdown is markup language similar to HTML and you can use it to add formatting elements to plaintext text documents. Compared to HTML, Markdown syntax is much simpler and that's why it is an excellent choise for formatting text documents.
+
+[This guide](https://www.markdownguide.org/basic-syntax) demonstrates the Markdown syntax compared to HTML. As an example, [here's](https://github.com/facebook/react/blob/main/README.md) what the React project's `README.md` file looks like and [here's](https://github.com/facebook/react/blob/main/README.md?plain=1) what the Markdown markup looks like. You can use the [Markdown Live Preview](https://markdownlivepreview.com/) to try out different kind of Markdown markup.
+
+{: .important-title }
+
+> Exercise 17
+>
+> _This is a team exercise_. Open the `README.md` file of your project for editing for example in GitHub or in Visual Studio Code. You might not be able to edit the file in Eclipse. Replace the current contents of the repository's `README.md` file with the following information using Markdown:
+>
+> 1. At the beginning of the file add the project name "Quizzer" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
+> 2. Below the heading add a short description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
+> 3. Below the description, add a subheading "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name.
+> 4. Each team member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
+>
+> Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 
 {: .highlight }
 
