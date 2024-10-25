@@ -700,6 +700,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 >
 > - What are the names and GitHub usernames of your team members?
 > - What is the name of your team?
+> - What are the strenghts and weaknesses (e.g. skill-related) of your team? 
 > - Which communication platform you will be using?
 >
 > _Every team member should add these to their Moodle submission_. One team member can write down the information and share it with others.
@@ -739,7 +740,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 > _This is a team exercise_. Open the `README.md` file of your project for editing for example in GitHub or in Visual Studio Code. You might not be able to edit the file in Eclipse. Replace the current contents of the repository's `README.md` file with the following information using Markdown:
 >
 > 1. At the beginning of the file add the project name "Quizzer" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
-> 2. Below the heading add a short description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
+> 2. Below the heading add a description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
 > 3. Below the description, add a subheading "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name.
 > 4. Each team member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
 >

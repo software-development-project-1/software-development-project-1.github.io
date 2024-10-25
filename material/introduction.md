@@ -6,7 +6,7 @@ nav_order: 3
 ---
 
 <!---
-TODO: 8 parts for exercise 9, at least 7 user stories for exercise 12, git and github setup exercise
+TODO: 9 parts for exercise 9, at least 7 user stories for exercise 12, git and github setup exercise
 -->
 
 {% include toc.html %}
@@ -308,6 +308,20 @@ There's still a bit uncertainty of about the implementation. For example, how in
 > On top of the importance of a user story, consider the dependencies between the different user stories. For example, certain user stories might be impossible to implement before some other user story has been implemented. Can we for example list quizzes before a teacher can add one?
 >
 > List the user stories in the priority order (top-priority user stories at the top of the list). Briefly justify, why you chose this specific prioritization.
+
+## First steps in version control
+
+Next week we learn about version control and the relevant tools and platforms for collaborating on the software development project's source code. Before that, let's install the Git version control tool for our computer and create a GitHub account.
+
+{: .important-title }
+
+> Exercise 14
+>
+> 1. Create a GitHub account at <https://github.com/>. Programmers often use GitHub as a sort of code protfolio, so make sure to choose a username which you don't mind adding to your CV
+> 2. Install Git. On _Windows_, install [Git for Windows](https://gitforwindows.org/). On _macOS_ and _Linux_, read the [Git installation instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+> 3. On _Windows_, Git is used through the Git Bash application. On _macOS_, Git is used through the [Terminal](https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) application. Open the application and run the `git --version` command to see that the installation is successful
+>
+> Add your GitHub username and the output of the `git --version` command to the Moodle submission.
 
 {: .important-title }
 
