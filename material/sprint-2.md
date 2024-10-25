@@ -91,7 +91,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > "It's great that we now have the basic functionality for managing quizzes! What we now need is a way for the teacher to categorize quizzes and student to take the published quizzes.
 >
-> To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". There should be a form for adding a category and a separate page for listing the added categories.
+> To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". There should be a form for adding a category and a separate page for listing the added categories. The categories should be listed in alphabetical order by the category name.
 >
 > The category list should have a delete button next to each category, which can be clicked to delete the category. There should also be a link which should take the teacher to an edit form, where they can edit all the information of the category.
 >
@@ -808,7 +808,7 @@ public class MessageRestController {
 >
 > Also, include the following information about the project structure and the implementation technologies:
 >
-> 1. The project consists of three components: _database_, _backend_ and _frontend_. Mention these components and describe the purpose of each of them
+> 1. The project consists of three components: _database_, _backend_ and _frontend_. Mention these components and describe the purpose of each of them. If you have the time, you can also implement a [flow chart](https://mermaid.js.org/syntax/flowchart.html), which visualizes how the components communicate with each other
 > 2. Which programming language, frameworks and major libraries are used in the _backend implementation_?
 > 3. Which _database platforms_ are used in different environments (development and production environment)?
 > 4. Which programming language, frameworks and major libraries are used in the _frontend implementation_?

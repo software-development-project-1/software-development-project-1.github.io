@@ -146,7 +146,7 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > The teacher should be able to add a quiz using a form. A quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries" and a published status. A quiz is either published or not. Each of these values should have a field in the form.
 >
-> The front page of the application should have a list of added quizzes. The list should display the information provided by the teacher while adding the quiz and the date when the quiz was added. The page should also have a link that takes the teacher to the page where they can add a quiz.
+> The front page of the application should have a list of added quizzes. The list should display the information provided by the teacher while adding the quiz and the date when the quiz was added. The quizzes should be listed from newest to oldest, so that the latest quiz is at the top of the list. The page should also have a link that takes the teacher to the page where they can add a quiz.
 >
 > The teacher should be able to edit the information of a quiz if, for example they want to publish the quiz or change its name or description. The quiz list should have a link next to each quiz which takes the teacher to an edit form, where they can edit all the information of the quiz. The teacher should also be able to get rid of quizzes they don't need. There should be a delete button next to each quiz in the quiz list. When the user clicks the button, the quiz should be deleted.
 >
