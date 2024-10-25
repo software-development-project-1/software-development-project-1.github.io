@@ -716,7 +716,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > 3. Create a _public_ GitHub repository for the project. Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description
 > 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the following dependencies by clicking the "Dependencies" button will get you started: Spring Web, Spring Boot DevTools, Thymeleaf, Spring Data JPA, H2. Push the generated project to the GitHub repository 
 > 6. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. Start the Spring Boot application in the repository and make sure that there are no errors
-> 7. Add an empty `README.md` file to the repository. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work
+> 7. Add a `README.md` file with some content in it to the repository and push it to GitHub. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work
 >
 > _Every team member should add the link to the GitHub repository to their Moodle submission_.
 
@@ -728,6 +728,8 @@ The `README.md` file we worked with previously has a special meaning in software
 - How to use the project?
 - How to develop the project?
 - Who are the project contributors?
+
+In practice, every repository should have a `README.md` file with at least some basic information about the repository.
 
 In GitHub, the README files commonly have the `.md` extension. These are [Markdown](https://www.markdownguide.org/) files. Markdown is markup language similar to HTML and you can use it to add formatting elements to plaintext text documents. Compared to HTML, Markdown syntax is much simpler and that's why it is an excellent choise for formatting text documents.
 

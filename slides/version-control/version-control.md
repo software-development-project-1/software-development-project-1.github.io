@@ -18,6 +18,7 @@
   - It allows us to _store backups_ of both the current and older versions of the software
   - It allows us to _share software related code_ with other developers, which makes collaboration easy
 - In practice, _every_ software development project uses version control to manage the collaborative development of the project's code
+- This makes it on top of programming the most important skill of software developer
 
 ---
 
@@ -48,4 +49,4 @@
 - The basic idea for these services is the same: they allow us to store and publish project related code into a single centralized _code base_ which all team members contribute to
 - During this course we will using the _GitHub_ service to store and publish our project's code
 - The software developer's GitHub account is commonly their _personal portfolio_: all their projects are there for others to see
-- When applying for a job, having a GitHub account with projects is very beneficial
+- When applying for a job, having a GitHub account with projects is very beneficial because it is the easier way to showcase your work
