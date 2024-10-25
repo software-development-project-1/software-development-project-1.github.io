@@ -309,6 +309,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 >
 > List the user stories in the priority order (top-priority user stories at the top of the list). Briefly justify, why you chose this specific prioritization.
 
+<!--
 ## First steps in version control
 
 Next week we learn about version control and the relevant tools and platforms for collaborating on the software development project's source code. Before that, let's install the Git version control tool for our computer and create a GitHub account.
@@ -322,6 +323,7 @@ Next week we learn about version control and the relevant tools and platforms fo
 > 3. On _Windows_, Git is used through the Git Bash application. On _macOS_, Git is used through the [Terminal](https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) application. Open the application and run the `git --version` command to see that the installation is successful
 >
 > Add your GitHub username and the output of the `git --version` command to the Moodle submission.
+-->
 
 {: .important-title }
 
