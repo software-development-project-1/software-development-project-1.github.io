@@ -722,14 +722,14 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 
 ## The README file
 
-The `README.md` file we worked with previously has a special meaning in software development projects. When a software developer starts exploring a project, the first thing they should do is to look for the README file. This file should have all the relevant information about the project, for example:
+The README file mentioned previously has a special meaning in software development projects. When a software developer starts exploring a project, the first thing they should do is to look for the README file. This file should have all the relevant information about the project, for example:
 
 - What's the project about?
 - How to use the project?
 - How to develop the project?
 - Who are the project contributors?
 
-In practice, every repository should have a `README.md` file with at least some basic information about the repository.
+In practice, every repository should have a README file with at least some basic information about the repository.
 
 In GitHub, the README files commonly have the `.md` extension. These are [Markdown](https://www.markdownguide.org/) files. Markdown is markup language similar to HTML and you can use it to add formatting elements to plaintext text documents. Compared to HTML, Markdown syntax is much simpler and that's why it is an excellent choise for formatting text documents.
 
