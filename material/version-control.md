@@ -735,16 +735,20 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 [This guide](https://www.markdownguide.org/basic-syntax) demonstrates the Markdown syntax compared to HTML. As an example, [here's](https://github.com/facebook/react/blob/main/README.md) what the React project's `README.md` file looks like and [here's](https://github.com/facebook/react/blob/main/README.md?plain=1) what the Markdown markup looks like. You can use the [Markdown Live Preview](https://markdownlivepreview.com/) to try out different kind of Markdown markup.
 
+{: .highlight }
+
+> If you can't edit a Markdown file in Eclipse, try in Visual Studio Code.
+
 {: .important-title }
 
 > Exercise 17
 >
-> _This is a team exercise_. Open the `README.md` file of your project for editing for example in GitHub or in Visual Studio Code. You might not be able to edit the file in Eclipse. Replace the current contents of the repository's `README.md` file with the following information using Markdown:
+> _This is a team exercise_. Open the `README.md` file of your project for editing for example in GitHub or in Visual Studio Code. Replace the current contents of the repository's `README.md` file with the following information using Markdown:
 >
-> 1. At the beginning of the file add the project name "Quizzer" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
-> 2. Below the heading add a description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
-> 3. Below the description, add a subheading "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name.
-> 4. Each team member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
+> 1. At the beginning of the file add the project name "Quizzer" as a heading.
+> 2. Below the heading add a description of the project as paragraphs. Check [the project description](/project-description) for some inspiration.
+> 3. Below the description, add a subheading "Team members" and below that add a list of each team member's name.
+> 4. Each team member's name on the list should be a link to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
 >
 > Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 
