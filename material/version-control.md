@@ -6,7 +6,7 @@ nav_order: 4
 ---
 
 <!--
-TODO: tehtävät 1 ja 2 edelliselle viikolle
+TODO: tehtävät 1 ja 2 edelliselle viikolle. Git practice README. GitHub projects?
  -->
 
 {% include toc.html %}
