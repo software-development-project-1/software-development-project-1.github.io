@@ -714,7 +714,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > 1. GitHub organizations are a way to apply fine-grained access permissions to repositories. Create a GitHub organization for your team by following [these](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) instructions. You can name the organization for example based on your team's name you came up with previously
 > 2. Invite other team members to the organization by following [these](https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization) instructions. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team
 > 3. Create a _public_ GitHub repository for the project. Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description
-> 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web and Spring Boot DevTools dependencies by clicking the "Dependencies" button will get you started. Push the generated project to the GitHub repository 
+> 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web, Spring Boot DevTools, Thymeleaf, Spring Data JPA and H2 dependencies by clicking the "Dependencies" button will get you started. Push the generated project to the GitHub repository 
 > 6. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. Start the Spring Boot application in the repository and make sure that there are no errors
 > 7. Add a `README.md` file with some content in it to the repository and push it to GitHub. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work
 >
@@ -722,29 +722,33 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 
 ## The README file
 
-The `README.md` file we worked with previously has a special meaning in software development projects. When a software developer starts exploring a project, the first thing they should do is to look for the README file. This file should have all the relevant information about the project, for example:
+The README file mentioned previously has a special meaning in software development projects. When a software developer starts exploring a project, the first thing they should do is to look for the README file. This file should have all the relevant information about the project, for example:
 
 - What's the project about?
 - How to use the project?
 - How to develop the project?
 - Who are the project contributors?
 
-In practice, every repository should have a `README.md` file with at least some basic information about the repository.
+In practice, every repository should have a README file with at least some basic information about the repository.
 
 In GitHub, the README files commonly have the `.md` extension. These are [Markdown](https://www.markdownguide.org/) files. Markdown is markup language similar to HTML and you can use it to add formatting elements to plaintext text documents. Compared to HTML, Markdown syntax is much simpler and that's why it is an excellent choise for formatting text documents.
 
 [This guide](https://www.markdownguide.org/basic-syntax) demonstrates the Markdown syntax compared to HTML. As an example, [here's](https://github.com/facebook/react/blob/main/README.md) what the React project's `README.md` file looks like and [here's](https://github.com/facebook/react/blob/main/README.md?plain=1) what the Markdown markup looks like. You can use the [Markdown Live Preview](https://markdownlivepreview.com/) to try out different kind of Markdown markup.
 
+{: .highlight }
+
+> If you can't edit a Markdown file in Eclipse, try in Visual Studio Code.
+
 {: .important-title }
 
 > Exercise 17
 >
-> _This is a team exercise_. Open the `README.md` file of your project for editing for example in GitHub or in Visual Studio Code. You might not be able to edit the file in Eclipse. Replace the current contents of the repository's `README.md` file with the following information using Markdown:
+> _This is a team exercise_. Open the `README.md` file of your project for editing for example in GitHub or in Visual Studio Code. Replace the current contents of the repository's `README.md` file with the following information using Markdown:
 >
-> 1. At the beginning of the file add the project name "Quizzer" as a [heading](https://www.markdownguide.org/basic-syntax#headings).
-> 2. Below the heading add a description of the project as [paragraphs](https://www.markdownguide.org/basic-syntax#paragraphs-1). Check [the project description](/project-description) for some inspiration.
-> 3. Below the description, add a subheading "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name.
-> 4. Each team member's name should be a [link](https://www.markdownguide.org/basic-syntax#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
+> 1. At the beginning of the file add the project name "Quizzer" as a heading.
+> 2. Below the heading add a description of the project as paragraphs. Check [the project description](/project-description) for some inspiration.
+> 3. Below the description, add a subheading "Team members" and below that add a list of each team member's name.
+> 4. Each team member's name on the list should be a link to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
 >
 > Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 
