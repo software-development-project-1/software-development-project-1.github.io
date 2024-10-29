@@ -172,7 +172,6 @@ After some discussion the Scrum Team planned the following user stories:
 8. {{site.sprint_1_user_story_8}}
 9. {{site.sprint_1_user_story_9}}
 10. {{site.sprint_1_user_story_10}}
-11. {{site.sprint_1_user_story_11}}
 
 The order of the user stories represent the priotity provided by the Product Owner. That is, this should be the order of the user stories in the Product Backlog. The Developers should also implement the user stories in this order.
 
@@ -427,19 +426,52 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 >
 > Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
 
+## First steps for the frontend
+
 {: .important-title }
 
 > Exercise 19
 >
-> Plan the tasks for the eleventh user story, "{{site.sprint_1_user_story_11}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You don't need a separate repository for the frontend application, you can initialize it in folder within the current repository.
 
 {: .important-title }
 
 > Exercise 20
 >
-> We'll start working on the student dashboard frontend application in the next Sprint. Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You don't need a separate repository for the frontend application, you can initialize it in folder within the current repository.
+> Implement a [REST API endpoint](https://spring.io/guides/tutorials/rest) for _getting all quizzes_. Only _published quizzes_ should be returned by the endpoint.
+
+### Cross-Origin Resource Sharing (CORS)
+
+The Vite development server is serving the JavaScript files from an URL that starts with `http://localhost:5173`. Our backend is accessible in the URL `http://localhost:8080`. When we send a request with the `fetch` function from the frontend to our backend, we send a request to a _different origin_. These kind of requests are called _cross-orgin_ requests.
+
+Web browsers don't allow `fetch` functions to send cross-origin requests by default. This is called the _same-origin policy_. We can however allow certain (or every) cross-origin request by using [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (CORS).
+
+The idea of CORS is that the web browser "asks" the backend if cross-origin request from a certain origin is allowed by sending a special HTTP request. If the backend allows the requests, then the web browser will send it. In a Spring Boot application we can use the [@CrossOrigin](https://spring.io/guides/gs/rest-service-cors/) annotation in the class or method level to allow cross-origin requests to certain or all paths of controller. For example we can allow cross-origin requests from all origins for all `MessageRestController` method paths in the following way:
+
+```java
+@RestController
+@RequestMapping("/api/messages")
+@CrossOrigin(origins = "*")
+public class MessageRestController {
+    // ...
+}
+```
+
+{: .highlight}
+
+> Omit the `@OneToMany` attributes from the JSON response in every entity to avoid cyclic JSON structures by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the attributes. For example:
+>
+> ```java
+> @JsonIgnore
+> @OneToMany(mappedBy = "user")
+> private List<Message> messages;
+> ```
+
+{: .important-title }
+
+> Exercise 21
+>
+> Implement a simple (no need for a fancy user interface at this point) listing of the published quizzes for the student dashboard application.
 
 ## Developer guide documentation
 
@@ -462,7 +494,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 22
 >
 > Write a developer guide documentation on _how to start the backend application_ on the command-line to the `README.md` file. Also, mention the required Java version for the project. Add it under a "Developer guide" subheading. For the sake of readability, code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
 >
@@ -551,7 +583,7 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 23
 >
 > Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the project description section in the `README.md` file.
 
@@ -567,7 +599,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 24
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -579,7 +611,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 25
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >
@@ -641,7 +673,7 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 26
 >
 > Perform the steps above to create your own branch named by your GitHub username and push it to GitHub.
 
@@ -655,7 +687,7 @@ Pull requests are "requests" to merge a branch to another branch (commonly the m
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 27
 >
 > 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions. The pull request title should describe the changes, for example "Change the submit button color in the add quiz form". The description provides additional details
 > 2. Merge your branch into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below
@@ -687,7 +719,7 @@ A quite common practice is to separate the development and production code with 
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 28
 >
 > 1. Create a `production` branch of the main branch. Then, push the branch to GitHub using the `git push origin -u production` command
 > 2. Open the backend web service in the Render Dashboard and go to the "Settings" page. In the "Build & Deploy" section, set the "Branch" as "production" and "Auto-Deploy" as "Yes"
@@ -708,3 +740,4 @@ Here are some additional resources you can use to improve your project and learn
 
 - [Validating Form Input](https://spring.io/guides/gs/validating-form-input)
 - [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
