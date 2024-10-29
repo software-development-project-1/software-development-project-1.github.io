@@ -459,6 +459,10 @@ public class MessageRestController {
 
 {: .highlight}
 
+> Use the `@CrossOrigin` annnotation on the REST controller class to allow cross-origin requests from the frontend application.
+
+{: .highlight}
+
 > Omit the `@OneToMany` attributes from the JSON response in every entity to avoid cyclic JSON structures by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the attributes. For example:
 >
 > ```java
@@ -734,10 +738,12 @@ A quite common practice is to separate the development and production code with 
 
 > Make sure that you have pushed your work to the project's GitHub repository before the Sprint 1 deadline on {{site.sprint_1_deadline}}.
 
+<!--
 ## ⭐ Bonus: improving the project
 
 Here are some additional resources you can use to improve your project and learn about new topics if you have time:
 
 - [Validating Form Input](https://spring.io/guides/gs/validating-form-input)
 - [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+-->
 

@@ -806,12 +806,11 @@ public class MessageRestController {
 > The frontend developer guide goes here.
 > ```
 >
-> Also, include the following information about the project structure and the implementation technologies:
+> Also, include the following information about the project's implementation technologies:
 >
-> 1. The project consists of three components: _database_, _backend_ and _frontend_. Mention these components and describe the purpose of each of them. If you have the time, you can also implement a [flow chart](https://mermaid.js.org/syntax/flowchart.html), which visualizes how the components communicate with each other
-> 2. Which programming language, frameworks and major libraries are used in the _backend implementation_?
-> 3. Which _database platforms_ are used in different environments (development and production environment)?
-> 4. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
+> 1. Which programming language, frameworks and major libraries are used in the _backend implementation_?
+> 2. Which _database platforms_ are used in different environments (development and production environment)?
+> 3. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
 
 ## Sprint Review
 
@@ -835,9 +834,11 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 > Make sure that you have pushed your work to the project's GitHub repository before the Sprint 2 deadline on {{site.sprint_2_deadline}}.
 
+<!--
 ## ⭐ Bonus: improving the project
 
 Here are some additional resources you can use to improve your project and learn about new topics if you have time:
 
 - [Introduction to Project Lombok](https://www.baeldung.com/intro-to-project-lombok)
 - [Git ignore](https://www.atlassian.com/git/tutorials/saving-changes/gitignore)
+-->

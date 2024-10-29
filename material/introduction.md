@@ -6,7 +6,7 @@ nav_order: 3
 ---
 
 <!---
-TODO: 9 parts for exercise 9, at least 7 user stories for exercise 12, git and github setup exercise
+TODO: 9 parts for exercise 8, git and github setup exercise
 -->
 
 {% include toc.html %}
