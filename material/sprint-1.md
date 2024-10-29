@@ -65,13 +65,6 @@ The _Product Backlog_ is a _prioritized_ list of requirements for the developed 
 
 The Product Owner's responsibility is to prioritize the user stories in the Product Backlog, but the whole Scrum Team participates in the definition of the user stories. The Product Owner should also make sure that the user stories implemented during a Sprint match the stakeholder's requirements. Once a user story is implemented during a Sprint and the implementation is accepted by the Product Owner, the user story can be removed from the Product Backlog.
 
-A good Product Backlog has the [DEEP](https://www.romanpichler.com/blog/make-the-product-backlog-deep/) characteristics:
-
-- _Detailed appropriately_: the high-priority user stories (at the top of the Product Backlog) are described in a more detail than the low-priority user stories. This is because the high-priority user stories are the ones that will be implemented soon, maybe during the upcoming Sprint. That is why it is important that these user stories fulfill the INVEST criteria and are ready for the implementation.
-- _Estimated_: the user stories in the Product Backlog should be estimated. That is, the Developers have considered the efforts required to implement each user story and they have communicated it with the Product Owner. Having a rough estimate for the user stories helps the Product Owner in the priorization.
-- _Emergent_: the Product Backlog evolves constantly: old user stories are completed, new user stories emerge and priorization changes
-- _Prioritized_: all user stories are in a prioritized order in the Product Backlog. The user stories at the top of the Product Backlog are the ones that Product Owner considers to produce most value for the stakeholders.
-
 {: .note }
 
 > Product Backlog can be thought as the todo-list of user stories for the project. Like in a todo-list, the user stories are in the order that they should be completed. That is, most important user stories are on the top of the list.
