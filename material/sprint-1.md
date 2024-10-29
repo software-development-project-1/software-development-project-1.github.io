@@ -11,10 +11,6 @@ nav_order: 6
 
 This week we'll start working on the project described by the Product Owner in the [project description](/project-description). As we have learned, in Scrum the project advances in short iterations called _Sprints_. Each of our three Sprints last two weeks. This week is the start of the Sprint 1.
 
-{: .highlight }
-
-> Starting from this week, you will be working with your team. That means that, you will be working on all the Sprint requirements together. Be prepared to work on the requirements outside the weekly sessions as well. If you don't know your team members, you can find their names on [Moodle]({{site.moodle_link}}) (check the "Project teams" tab).
-
 This Sprint doesn't have a Moodle submission. It is enough that you have pushed your work to the project's GitHub repository before the Sprint deadline on {{site.sprint_1_deadline}}, so we will be working on the Sprint requirements for the next two weeks. The Sprint ends with the Sprint Review event in which the team will share their progress with the Product Owner.
 
 ## Sprint Planning
