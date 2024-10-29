@@ -482,7 +482,7 @@ public class MessageRestController {
 
 > Exercise 21
 >
-> Implement a simple (no need for a fancy user interface at this point) listing of the published quizzes for the student dashboard application.
+> Implement a simple (no need for a fancy user interface at this point) listing of the published quizzes for the student dashboard frontend application.
 
 ## Developer guide documentation
 
