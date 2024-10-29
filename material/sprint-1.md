@@ -75,10 +75,6 @@ During Sprint Planning event, the Developers decide the amount of user stories t
 
 ![Sprint Backlog](/assets/product-backlog-sprint-backlog.png){: width="400" }
 
-{: .note }
-
-> Deciding the amount of user stories for the Sprint can be quite tricky at first. It is hard to _estimate_ the amount of effort it takes to implement a certain user story. But, the estimation gets easier in time.
-
 The Sprint Backlog should represent the work needed to be done during the Sprint and the progress of that work. That is, the following points should be seen from the Sprint Backlog:
 
 - Which user story is each task related to?
