@@ -422,9 +422,9 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 > Exercise 20
 >
-> Implement a [@RestController class](https://spring.io/guides/tutorials/rest) and a REST API method for _getting all quizzes_. Only _published quizzes_ should be returned by the endpoint.
+> Implement a [REST controller class](https://spring.io/guides/tutorials/rest) and a REST API method for _getting all quizzes_. Only _published quizzes_ should be returned by the endpoint.
 >
-> Here's an example of a `@RestController` class and a REST API method for getting all messages:
+> Here's an example of a REST controller class and a REST API method for getting all messages:
 >
 > ```java 
 > @RestController
