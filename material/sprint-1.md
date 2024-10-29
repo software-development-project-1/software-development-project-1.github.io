@@ -1,9 +1,8 @@
 ---
 layout: page
 title: Sprint 1
-permalink: /sprint-1-todo
+permalink: /sprint-1
 nav_order: 6
-nav_exclude: true
 ---
 
 {% include toc.html %}
