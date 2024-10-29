@@ -422,7 +422,30 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 > Exercise 20
 >
-> Implement a [REST API endpoint](https://spring.io/guides/tutorials/rest) for _getting all quizzes_. Only _published quizzes_ should be returned by the endpoint.
+> Implement a [@RestController class](https://spring.io/guides/tutorials/rest) and a REST API method for _getting all quizzes_. Only _published quizzes_ should be returned by the endpoint.
+>
+> Here's an example of a `@RestController` class and a REST API method for getting all messages:
+>
+> ```java 
+> @RestController
+> @RequestMapping("/api")
+> public class MessageRestController {
+>    @Autowired
+>    private MessageRepository messageRepository;
+>
+>    @GetMapping("/messages")
+>    public List<Message> getAllMessages() {
+>        return messageRepository.findAll();
+>    }
+> }
+> ```
+>
+> In this example, the frontend would be able fetch all the messages in the following way:
+>
+> ```javascript
+> fetch("http://localhost:8080/api/messages")
+>   .then((messages) => console.log(messages))
+> ```
 
 ### Cross-Origin Resource Sharing (CORS)
 
@@ -434,7 +457,7 @@ The idea of CORS is that the web browser "asks" the backend if cross-origin requ
 
 ```java
 @RestController
-@RequestMapping("/api/messages")
+@RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class MessageRestController {
     // ...
