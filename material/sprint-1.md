@@ -107,7 +107,7 @@ Taskboards in GitHub Projects are called _projects_. Let's create a project for 
 
 We now have a project with the default columns: "Todo", "In progress" and "Done". The column will determine the status of the backlog items. We can edit the column names by clicking the three dots at the top-right corner of the column. We can add a new column by pressing the "+" button on the right side of the last column. Let's change the columns so that they are the following from left to right:
 
-- "Product Backlog". This column is for the _Product Backlog_ items. That is, items that are requirements for the project but aren't currently worked on. The items should be listed in the _priority_ order (the "P" of DEEP Product Backlog) defined by the Product Owner.
+- "Product Backlog". This column is for the _Product Backlog_ items. That is, items that are requirements for the project but aren't currently worked on. The items should be listed in the priority order  defined by the Product Owner.
 - "Sprint Backlog". This column is for the _Sprint Backlog_ items. That is, user stories and tasks that are chosen for the current Sprint. Top-priority items are chosen from the "Product Backlog" column and moved to this column during the Sprint Planning event.
 - "In progress". This column is for the items that some team member is currently working on.
 - "Done". This column is for the items that have been completed.
