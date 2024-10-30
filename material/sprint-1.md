@@ -701,7 +701,7 @@ Pull requests are "requests" to merge a branch to another branch (commonly the m
 
 > Exercise 27
 >
-> 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions. The pull request title should describe the changes, for example "Change the submit button color in the add quiz form". The description provides additional details
+> 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions. The pull request title should describe the changes introduced by the branch, for example "Change the submit button color in the add quiz form". The description provides additional details. Once you have created the pull request, take a look at changes in the "Files changed" tab
 > 2. Merge your branch into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below
 > 3. Switch back to the main branch with the `git checkout main` command and pull the changes from GitHub with the `git pull` command. Make sure that you can see the changes made in your branch in the main branch as well
 
