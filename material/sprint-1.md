@@ -574,7 +574,8 @@ Finally, for the application itself, we need to create a web service. Complete t
 4. Back in the create web service page, choose your project repository in the "Connect a repository" section by clicking the "Connect" button next to the repository's name
 5. Come up with a name for the web service that isn't already in use. The name will be visible in the application's URL so try to come up with a sensible name
 6. Choose "Docker" as the runtime in the dropdown menu
-7. Click the "Advanced" button at the bottom of the page. In the advanced options section, click the "Add environment variable" button to add three environment variables (key, value):
+7. _If your Maven project is inside a sub folder in the repository_, set the "Root Directory" as the name of that folder
+8. Click the "Advanced" button at the bottom of the page. In the advanced options section, click the "Add environment variable" button to add three environment variables (key, value):
 
    - `POSTGRES_URL`: the _internal URL in correct format_ of the PostgreSQL instance. The URL format is `jdbc:postgresql://<url>`. Basically, you can take everything _after_ the "@" symbol in the internal URL you copied previously and the environment variable value is `jdbc:postgresql://<everything-after-the-@-symbol>`
    - `POSTGRES_USERNAME`: the _username_ of the PostgreSQL instance
