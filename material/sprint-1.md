@@ -140,7 +140,9 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > The teacher should be able to add answer options to a question. For example, the "What is the capital of Finland?" question could have answer options "Turku", "Helsinki" and "Tampere". An answer option has an answer option text, for example "Turku", and a correctness status. Answer is either correct or not. For example, the "Turku" answer option would not be correct where as "Helsinki" answer option would be correct.
 >
-> The answer options of a question should be listed on a separate page. Once an answer option has been added to a question, the teacher should be able to edit and delete it."
+> The answer options of a question should be listed on a separate page. Once an answer option has been added to a question, the teacher should be able to edit and delete it.
+>
+> If would be great if we would be able to get started with the student dashboard application as well. A page with a simple list of published quizzes would be enough at this point."
 >
 > -- The Product Owner
 
