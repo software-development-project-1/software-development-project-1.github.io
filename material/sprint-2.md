@@ -134,11 +134,17 @@ After some discussion the Scrum Team planned the following user stories:
 
 > Exercise 4
 >
-> Create an issue for each _user story_. Add the "user story" label for each issue. Set the Sprint milestone and add the issues to the backlog.
+> To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation. You can also consider if you also need other kind labels to classify issues.
 
 {: .important-title }
 
 > Exercise 5
+>
+> Create an issue for each _user story_. Add the "user story" label for each issue. Set the Sprint milestone and add the issues to the backlog.
+
+{: .important-title }
+
+> Exercise 6
 >
 > Plan the tasks for the first user story, "{{site.sprint_2_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -150,7 +156,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 7
 >
 > Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -164,7 +170,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 8
 >
 > Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -178,7 +184,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 9
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -186,7 +192,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 10
 >
 > Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
 >
@@ -260,18 +266,18 @@ We can create a separate controller class for each collection. The `@RequestMapp
 
 ```java
 @RestController
-@RequestMapping("/api/messages")
+@RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class MessageRestController {
     // ...
 
-    @GetMapping("/{id}")
+    @GetMapping("/messages/{id}")
     public Message getMessageById(@PathVariable Long id) {
         return messageRepository.findById(id).orElseThrow(
             () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + " does not exist"));
     }
 
-    @PostMapping("")
+    @PostMapping("/messages")
     public Message createMessage(@Valid @RequestBody CreateMessageDto message, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
@@ -394,19 +400,9 @@ To have more control over the attributes in the JSON response, [DTO](https://www
 
 Next, let's consider what kind of REST API endpoints we need for the remaining user stories. Implement the following endpoints _by following the REST API naming conventions for the endpoint path names_.
 
-{: .important-title }
-
-> Exercise 10
->
-> To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation.
-
-{: .highlight}
-
-> Omit the `@OneToMany` attributes from the JSON response in every entity by using the [@JsonIgnore](https://www.baeldung.com/jackson-ignore-properties-on-serialization) annotation on the attributes.
-
 {: .note}
 
-> To keep the code organized, it is a good idea to create a separate REST controller class for each REST API collection, such as "quizzes" or "categories". The collection-specfic path prefix can be added to all methods using the `@RequestMapping` annotation on the class.
+> To keep the code organized, it is a good idea to create a separate REST controller class for each REST API collection, such as "quizzes" or "categories".
 
 {: .note }
 
@@ -416,14 +412,6 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 > Exercise 11
 >
-> Implement a REST API endpoint for _getting all quizzes_. Only _published quizzes_ should be returned by the endpoint.
->
-> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
-
-{: .important-title }
-
-> Exercise 12
->
 > Implement a REST API endpoint for _getting a quiz by id_. Return an appropriate HTTP status code and error message in the following error case:
 >
 > - Quiz with the provided id does not exist
@@ -432,7 +420,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 12
 >
 > Implement a REST API endpoint for _getting the questions of a quiz_. In this case, instead of using the `@JsonIgnore` annotation, you can use [@JsonManagedReference and @JsonBackReference](https://www.baeldung.com/jackson-bidirectional-relationships-and-infinite-recursion) annotations to include the question's answer options in to the JSON response. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -442,7 +430,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 13
 >
 > Implement a REST API endpoint for _creating an answer_ for a quiz's question. Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -461,7 +449,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 14
 >
 > Implement a REST API endpoint for _getting the anwers of a quiz_. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -471,7 +459,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 15
 >
 > Implement a REST API endpoint for _getting all categories_.
 >
@@ -479,7 +467,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 16
 >
 > Implement a REST API endpoint for _getting a category by id_. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -489,7 +477,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 17
 >
 > Implement a REST API endpoint for _getting the quizzes of a category_. Only _published quizzes of the category_ should be returned by the endpoint. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -527,7 +515,7 @@ We can provide more details about the endpoints by using specific annotations fo
 
 ```java
 @RestController
-@RequestMapping("/api/messages")
+@RequestMapping("/api")
 @CrossOrigin(origins = "*")
 @Tag(name = "Message", description = "Operations for accessing and managing messages")
 public class MessageRestController {
@@ -539,7 +527,7 @@ We can also provide more information about a specific endpoint using the `@Opera
 
 ```java
 @RestController
-@RequestMapping("/api/messages")
+@RequestMapping("/api")
 @CrossOrigin(origins = "*")
 @Tag(name = "Message", description = "Operations for accessing and managing messages")
 public class MessageRestController {
@@ -549,7 +537,7 @@ public class MessageRestController {
         summary = "Get a message by id",
         description = "Returns the message with the provided id"
     )
-    @GetMapping("/{id}")
+    @GetMapping("/messages/{id}")
     public Message getMessageById(@PathVariable Long id) {
         // ...
     }
@@ -568,7 +556,7 @@ The `@ApiResponses` and `@ApiResponse` annotations can be used to document diffe
     @ApiResponse(responseCode = "200", description = "Successful operation"),
     @ApiResponse(responseCode = "404", description = "Message with the provided id does not exist")
 })
-@GetMapping("/{id}")
+@GetMapping("/messages/{id}")
 public Message getMessageById(@PathVariable Long id) {
     // ...
 }
@@ -580,9 +568,13 @@ public Message getMessageById(@PathVariable Long id) {
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 18
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response.
+>
+> Test each REST API endpoint by opening the endpoint's documentation and cliking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an id path parameter value of a non-existing quiz.
+>
+> Add a link to the Swagger documentation in the production environment (in Render) under a "REST API" subheading in the README.md file. The link format is http://name-of-the-web-service.onrender.com/swagger-ui/index.html. Deploy the backend application to Render and make sure that the Swagger documentation is accessible.
 
 ## Communication between frontend and backend
 
@@ -677,34 +669,13 @@ export default function MessageList() {
 
 {% endraw %}
 
-## Cross-Origin Resource Sharing (CORS)
-
-The Vite development server is serving the JavaScript files from an URL that starts with `http://localhost:5173`. Our backend is accessible in the URL `http://localhost:8080`. When we send a request with the `fetch` function from the frontend to our backend, we send a request to a _different origin_. These kind of requests are called _cross-orgin_ requests.
-
-Web browsers don't allow `fetch` functions to send cross-origin requests by default. This is called the _same-origin policy_. We can however allow certain (or every) cross-origin request by using [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (CORS).
-
-The idea of CORS is that the web browser "asks" the backend if cross-origin request from a certain origin is allowed by sending a special HTTP request. If the backend allows the requests, then the web browser will send it. In a Spring Boot application we can use the [@CrossOrigin](https://spring.io/guides/gs/rest-service-cors/) annotation in the class or method level to allow cross-origin requests to certain or all paths of controller. For example we can allow cross-origin requests from all origins for all `MessageRestController` method paths in the following way:
-
-```java
-@RestController
-@RequestMapping("/api/messages")
-@CrossOrigin(origins = "*")
-public class MessageRestController {
-    // ...
-}
-```
-
 {: .highlight}
 
 > The remaining user stories are related to the student dashboard application and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend.
 
-{: .highlight}
-
-> Use the `@CrossOrigin` annnotation on the REST controller classes to allow cross-origin requests from the frontend application.
-
 {: .important-title }
 
-> Exercise 20
+> Exercise 19
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -716,7 +687,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 20
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -730,7 +701,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 21
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -748,7 +719,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 22
 >
 > Plan the tasks for the eight user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -762,7 +733,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 23
 >
 > Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_9}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -774,7 +745,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 24
 >
 > Plan the tasks for the tenth user story, "{{site.sprint_2_user_story_10}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -788,7 +759,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 25
 >
 > Add instructions on _how to start the frontend application_ to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
@@ -818,13 +789,13 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 26
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 28
+> Exercise 27
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the teacher dashboard and the student dashboard applications on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the teacher dashboard application's features in the production environment.
 >
