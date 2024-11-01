@@ -52,7 +52,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should not be able to review a non-published quiz.
 >
-> The review page should list the added reviews. Each review should display the information submitted by the student and the date when the review was written. The review page should also display the number of reviews the quiz has and the rating average. It should also be possible for the student to edit and delete reviews in the review page."
+> The review page should list the added reviews. Each review should display the information submitted by the student and the date when the review was written. It should also be possible for the student to edit and delete reviews in the review page."
 >
 > -- The Product Owner
 
@@ -541,7 +541,7 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Implement the following test methods for the endpoint for _getting a quiz by id_:
 >
-> - `getQuizByIdReturnsPublishedQuizWhenQuizExists`: save a quiz to the database and send a request. Then, the response should have the saved quiz
+> - `getQuizByIdReturnsQuizWhenQuizExists`: save a quiz to the database and send a request. Then, the response should have the saved quiz
 > - `getQuizByIdReturnsErrorWhenQuizDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
 
 {: .important-title }
@@ -571,7 +571,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 16
 >
-> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `pom.xml` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
+> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `README.md` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
 > Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specified in the React project's [README.md](https://github.com/facebook/react/blob/main/README.md) file.
 
@@ -585,7 +585,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 18
 >
-> Make sure that all project-related documentation, such as project description, data model documentation, architecture documentation and Swagger documentation is up-to-date.
+> Make sure that all project-related documentation, such as project description, data model documentation and Swagger documentation is up-to-date.
 
 {: .important-title }
 

@@ -58,8 +58,6 @@ Make sure that everyone follows the event structure and that each team member ge
 > ```md
 > # Sprint 1 Retrospective
 >
-> [Retrospective board](link-to-the-flinga-board)
->
 > ## Successes
 >
 > - Something that we succeeded in.
@@ -134,7 +132,7 @@ After some discussion the Scrum Team planned the following user stories:
 
 > Exercise 4
 >
-> To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation. You can also consider if you also need other kind labels to classify issues.
+> To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation.
 
 {: .important-title }
 
@@ -399,10 +397,6 @@ To have more control over the attributes in the JSON response, [DTO](https://www
 ## REST API endpoints for the user stories
 
 Next, let's consider what kind of REST API endpoints we need for the remaining user stories. Implement the following endpoints _by following the REST API naming conventions for the endpoint path names_.
-
-{: .note}
-
-> To keep the code organized, it is a good idea to create a separate REST controller class for each REST API collection, such as "quizzes" or "categories".
 
 {: .note }
 
@@ -804,12 +798,3 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 {: .highlight }
 
 > Make sure that you have pushed your work to the project's GitHub repository before the Sprint 2 deadline on {{site.sprint_2_deadline}}.
-
-<!--
-## ⭐ Bonus: improving the project
-
-Here are some additional resources you can use to improve your project and learn about new topics if you have time:
-
-- [Introduction to Project Lombok](https://www.baeldung.com/intro-to-project-lombok)
-- [Git ignore](https://www.atlassian.com/git/tutorials/saving-changes/gitignore)
--->

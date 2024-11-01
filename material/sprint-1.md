@@ -431,6 +431,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 > ```java 
 > @RestController
 > @RequestMapping("/api")
+> @CrossOrigin(origins = "*")
 > public class MessageRestController {
 >    @Autowired
 >    private MessageRepository messageRepository;

@@ -6,7 +6,7 @@ nav_order: 3
 ---
 
 <!---
-TODO: 9 parts for exercise 8, git and github setup exercise
+TODO: move git and github setup exercise here
 -->
 
 {% include toc.html %}
