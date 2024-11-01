@@ -194,7 +194,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
 >
-> You can save the diagram as an image and edit the `README.md` file in GitHub. You should be able to [drag the image file to the editor](https://cloudinary.com/guides/web-performance/4-ways-to-add-images-to-github-readme-1-bonus-method#1-adding-images-with-drag-and-drop) and place it where ever you want in the Markdown content. When you want to update the diagram, remove the old image from the Markdown content and drag the new image in its place.
+> You can save the diagram as an image and edit the `README.md` file in GitHub. You should be able to [drag the image file to the editor](https://cloudinary.com/guides/web-performance/4-ways-to-add-images-to-github-readme-1-bonus-method#1-adding-images-with-drag-and-drop) and place it where ever you want in the Markdown content. When you want to update the diagram, remove the old image from the Markdown content (the `![...](...)` part) and drag the new image in its place.
 >
 > _NB: Keep this documentation (like all other documentation) up-to-date when you add new entities for the application._
 
