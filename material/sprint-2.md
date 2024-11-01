@@ -101,7 +101,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again".
 >
-> There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. There should be a link to the results page next to the quiz in the quiz list page.
+> There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the difficulty level, the total number of answers and the number of correct and wrong answers for each question of the quiz. There should be a link to the results page next to the quiz in the quiz list page.
 >
 > Different students are interested in different quiz categories. To find interesting quizzes quickly, there should be page that lists all the categories. Clicking the category's name on the list should take the student to a page that lists the quizzes in the category. The category list page should be accessible from the navigation menu."
 >
@@ -194,7 +194,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
 >
-> GitHub supports [Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) syntax for diagrams in Markdown files. Using Mermaid syntax makes it easier to maintain diagrams. Take a look at Mermaid's [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) documentation for more information.
+> You can save the diagram as an image and edit the `README.md` file in GitHub. You should be able to [drag the image file to the editor](https://cloudinary.com/guides/web-performance/4-ways-to-add-images-to-github-readme-1-bonus-method#1-adding-images-with-drag-and-drop) and place it where ever you want in the Markdown content. When you want to update the diagram, remove the old image from the Markdown content and drag the new image in its place.
 >
 > _NB: Keep this documentation (like all other documentation) up-to-date when you add new entities for the application._
 

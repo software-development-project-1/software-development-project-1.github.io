@@ -632,7 +632,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 >
 > Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/), "asd", or "foobar") for the Sprint Review. This means that you should add at lest one quiz with questions and answer options using the application so that you can easily demonstrate the user stories.
 
-## Git branches
+## ⭐ Bonus: Git branches
 
 So far, we have only created commits for the _main branch_ of our repository. _Git branches_ allows us to _diverge from the main branch commit history_ by creating a new branch. We can add commits for our branch without effecting the main branch commit history and at some point we _merge_ the commits of a branch into the main branch.
 
