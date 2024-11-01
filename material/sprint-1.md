@@ -242,7 +242,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .highlight }
 
-> Use all the knowledge in your team and _plan the tasks together_.
+> The user stories related to the teacher dashboard should be _implemented as a backend application_ and there's no need to include any frontend features (meaning using Thymeleaf templates instead of React for the user interface). The student dashboard application we get to later will be implemented as a frontend application.
 
 {: .important-title }
 
