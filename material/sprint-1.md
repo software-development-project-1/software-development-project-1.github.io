@@ -632,7 +632,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 >
 > Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/), "asd", or "foobar") for the Sprint Review. This means that you should add at lest one quiz with questions and answer options using the application so that you can easily demonstrate the user stories.
 
-## Git branches
+## ⭐ Bonus: Git branches
 
 So far, we have only created commits for the _main branch_ of our repository. _Git branches_ allows us to _diverge from the main branch commit history_ by creating a new branch. We can add commits for our branch without effecting the main branch commit history and at some point we _merge_ the commits of a branch into the main branch.
 
@@ -688,7 +688,7 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 
 {: .important-title }
 
-> Exercise 26
+> ⭐ Bonus exercise
 >
 > Perform the steps above to create your own branch named by your GitHub username and push it to GitHub.
 
@@ -702,7 +702,7 @@ Pull requests are "requests" to merge a branch to another branch (commonly the m
 
 {: .important-title }
 
-> Exercise 27
+> ⭐ Bonus exercise
 >
 > 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions. The pull request title should describe the changes introduced by the branch, for example "Change the submit button color in the add quiz form". The description provides additional details. Once you have created the pull request, take a look at changes in the "Files changed" tab
 > 2. Merge your branch into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below. In practice, before the pull request is merged a [code review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews) is commonly conducted by another team member to enforce quality control. We can skip this phase
@@ -734,7 +734,7 @@ A quite common practice is to separate the development and production code with 
 
 {: .important-title }
 
-> Exercise 28
+> ⭐ Bonus exercise
 >
 > 1. Create a `production` branch of the main branch. Then, push the branch to GitHub using the `git push origin -u production` command
 > 2. Open the backend web service in the Render Dashboard and go to the "Settings" page. In the "Build & Deploy" section, set the "Branch" as "production" and "Auto-Deploy" as "Yes"
