@@ -414,6 +414,8 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 ## First steps for the frontend
 
+The Product Owner wants us to get started with the student dashboard application as well. The student dashboard will be a separate frontend application in which the students can among other things take published quizzes created by the teachers.
+
 {: .important-title }
 
 > Exercise 19
