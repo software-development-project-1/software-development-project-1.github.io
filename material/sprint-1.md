@@ -632,7 +632,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >
-> Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/), "asd", or "foobar") for the Sprint Review. This means that you should add at lest one quiz with questions and answer options using the application so that you can easily demonstrate the user stories.
+> Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/), "asd", or "foobar") for the Sprint Review. This means that you should add at least one quiz with questions and answer options using the application so that you can easily demonstrate the user stories.
 
 ## ⭐ Bonus: Git branches
 
