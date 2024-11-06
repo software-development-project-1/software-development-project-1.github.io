@@ -589,8 +589,8 @@ Finally, for the application itself, we need to create a web service. Complete t
 
    ![Render environment variables](/assets/render-environment-variables.png)
 
-8. Set "Auto-Deploy" as "No" from the dropdown menu
-9. Click the "Create Web service" button at the bottom of the page
+9. Set "Auto-Deploy" as "No" from the dropdown menu
+10. Click the "Create Web service" button at the bottom of the page
 
 Open the created web service in the Render dashboard. The deployment of the application should have started and it will take some time to finish. You can always deploy the application by clicking the "Manual Deploy" button and choosing "Deploy latest commit". Once the deployment is complete the application will be accessible to everyone in the URL that is displayed under the web service's name.
 
