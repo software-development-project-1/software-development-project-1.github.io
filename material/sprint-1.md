@@ -736,7 +736,7 @@ A quite common practice is to separate the development and production code with 
 
 {: .important-title }
 
-> ⭐ Bonus exercise
+> Exercise 28
 >
 > 1. Create a `production` branch of the main branch. Then, push the branch to GitHub using the `git push origin -u production` command
 > 2. Open the backend web service in the Render Dashboard and go to the "Settings" page. In the "Build & Deploy" section, set the "Branch" as "production" and "Auto-Deploy" as "Yes"
