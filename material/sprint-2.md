@@ -196,6 +196,8 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > You can save the diagram as an image and edit the `README.md` file in GitHub. You should be able to [drag the image file to the editor](https://cloudinary.com/guides/web-performance/4-ways-to-add-images-to-github-readme-1-bonus-method#1-adding-images-with-drag-and-drop) and place it where ever you want in the Markdown content. When you want to update the diagram, remove the old image from the Markdown content (the `![...](...)` part) and drag the new image in its place.
 >
+> GitHub also supports including diagrams to Markdown files with [Mermaid](https://github.blog/developer-skills/github/include-diagrams-markdown-files-mermaid/) syntax. Using Mermaid makes it easier to update diagrams. Mermaid's entity relationship diagram documentation can be found [here](https://mermaid.js.org/syntax/entityRelationshipDiagram.html).
+>
 > _NB: Keep this documentation (like all other documentation) up-to-date when you add new entities for the application._
 
 ## REST APIs
@@ -566,7 +568,7 @@ public Message getMessageById(@PathVariable Long id) {
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response.
 >
-> Test some REST API endpoints by opening the endpoint's documentation and cliking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an id path parameter value of a non-existing quiz.
+> Test the REST API endpoints you have implemented by opening the endpoint's documentation and clicking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an id path parameter value of a non-existing quiz.
 >
 > Add a link to the Swagger documentation (at <http://localhost:8080/swagger-ui/index.html>) under a "REST API" subheading in the `README.md` file.
 
