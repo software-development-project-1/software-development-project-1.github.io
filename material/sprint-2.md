@@ -58,6 +58,8 @@ Make sure that everyone follows the event structure and that each team member ge
 > ```md
 > # Sprint 1 Retrospective
 >
+> [Retrospective board](link-to-the-flinga-board)
+>
 > ## Successes
 >
 > - Something that we succeeded in.
