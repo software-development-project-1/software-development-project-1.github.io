@@ -519,7 +519,7 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Add instructions on _how to run the tests_ on the command-line to the "Developer guide" section in the `README.md` file.
 
-{: .important-title}
+{: .important-title }
 
 > Exercise 15
 >

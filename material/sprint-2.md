@@ -282,6 +282,7 @@ public class MessageRestController {
 
     @PostMapping("/messages")
     public Message createMessage(@Valid @RequestBody CreateMessageDto message, BindingResult bindingResult) {
+        // Check if message violates validations defined by the CreateMessageDTO class
         if (bindingResult.hasErrors()) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
         }
@@ -320,6 +321,7 @@ For example, in the `createMessage` method the request body format is defined by
 
 ```java
 public class CreateMessageDto {
+    @NotBlank(message = "Message content may not be blank")
     private String content;
 
     // constructors, getters and setters
@@ -431,8 +433,9 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 > Exercise 13
 >
-> Implement a REST API endpoint for _creating an answer_ for a quiz's question. Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. Return an appropriate HTTP status code and error message in the following error case:
+> Implement a REST API endpoint for _creating an answer_ for a question. Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. Return an appropriate HTTP status code and error message in the following error case:
 >
+> - Answer option id is not provided (e.g. it is `null`)
 > - Answer option with the provided id does not exist
 > - Quiz is not published
 >
@@ -441,6 +444,14 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 > ```json
 > {
 >   "answerOptionId": 1
+> }
+> ```
+>
+> Sending the following request body should return an appropriate HTTP status code and an error message:
+>
+> ```json
+> {
+>   "answerOptionId": null 
 > }
 > ```
 >
