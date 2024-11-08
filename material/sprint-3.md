@@ -30,7 +30,7 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 >
 > Did similar issues arise as in Sprint 1 retrospective? If so, try to come up with different actions as before or ask the teacher for tips on how to solve these issues.
 >
-> Once you have completed the Retrospective, add a link to the Retrospective's Flinga board and write down the successes, issues and actions you came up during the Retrospective to the repository's `retrospectives/sprint2.md` file and push the changes to GitHub.
+> Once you have completed the Retrospective, add a link to the Retrospective's Flinga board and write down the successes, issues and actions you came up during the Retrospective to the repository's `retrospectives/sprint2.md` file and push the changes to GitHub. You can use the same template for the Retrospective notes as during the previous Sprint.
 
 {: .important-title }
 
@@ -52,11 +52,11 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should not be able to review a non-published quiz.
 >
-> The review page should list the added reviews. Each review should display the information submitted by the student and the date when the review was written. It should also be possible for the student to edit and delete reviews in the review page."
+> The review page should list the added reviews and display the number of reviews and the rating average of the quiz. Each review should display the information submitted by the student and the date when the review was written. It should also be possible for the student to edit and delete reviews in the review page."
 >
 > -- The Product Owner
 
-After some discussion the Scrum Team planned the following user stories:
+After some discussion the Scrum Team planned the following user stories for the _student dashboard_ application:
 
 1. {{site.sprint_3_user_story_1}}
 2. {{site.sprint_3_user_story_2}}
@@ -118,47 +118,6 @@ After some discussion the Scrum Team planned the following user stories:
 > Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
-
-## Deploying the frontend
-
-We managed to deploy the backend during the previous Sprint, but we still haven't deployed the frontend. We can deploy the frontend to Render with the following steps:
-
-1. In the frontend folder, add a `.env` [environment variable](https://vitejs.dev/guide/env-and-mode) file for the _development environment_. The `.env` file should contain a `VITE_BACKEND_URL` environment variable for the backend's _development environment URL_:
-
-   ```
-   VITE_BACKEND_URL=http://localhost:8080
-   ```
-
-   Make sure that every `fetch` function call has the environment variable as the URL prefix. For example:
-
-   ```js
-   fetch(`${import.meta.env.VITE_BACKEND_URL}/api/messages`).then(
-     (response) => {
-       // ...
-     }
-   );
-   ```
-
-1. Add a `.env.production` environment variable file for the _production environment_. The `.env.production` file should contain a `VITE_BACKEND_URL` environment variable for the backend's _production environment URL_. For example:
-
-   ```
-   VITE_BACKEND_URL=https://name-of-the-backend-service.onrender.com
-   ```
-
-   Finally, _push the changes to GitHub_
-
-1. On the Render dashboard, click the "New" button and choose "Static Site"
-1. From the repository list, find you project's repository and click the "Connect" button
-1. Come up with the name for the service. If the frontend application is not initialized in the repository's root folder (this is the case if you don't have a separate repository for the frontend application), set "Root Directory" as the frontend folder's name. Set "Build Command" as `npm run build` and "Publish Directory" as `dist`
-1. If you have a separate branch for the production code, click the "Advanced" button and set "Auto-Deploy" as "Yes" and "Branch" as "production". Otherwise set is as "No"
-1. Click the "Create Static Site" button to create the service
-1. On the service's page, click "Redirects/Rewrites" from the navigation on the left. Set the "Source" as `/*`, "Destination" as `/index.html` and "Action" as "Rewrite". Finally, click the "Save Changes" button. This configuration will make the frontend routing work
-
-{: .important-title }
-
-> Exercise 9
->
-> Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the static site URL in the Render dashboard) to the project description section in the `README.md` file.
 
 ## Testing
 
@@ -266,25 +225,17 @@ UI tests have these pros and cons:
 
 ## Configuration for tests
 
-Because our tests will alter the database we should consider _using a different database for tests_. This is a common practice because we don't want the tests to alter (for example delete) any data we are using during the development.
-
-The database related configuration is in the `src/main/resources/application.properties` configuration file:
-
-```
-spring.datasource.url=jdbc:h2:file:~/quizzer;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
-```
-
-The _database is stored in a file_ located in `~/quizzer`. We can use a different, _in-memory database_ for the tests. To achieve this, we can add a test-specific `src/test/resources/application.properties` configuration file (note the `test` folder in the path):
+Because our tests will alter the database we should consider _using a different database for tests_. This is a common practice because we don't want the tests to alter (for example delete) any data we are using during the development. We can use a separate, _in-memory database_ for the tests. To achieve this, we can add a test-specific `src/test/resources/application.properties` configuration file (note the `test` folder in the path):
 
 ```
 spring.datasource.url=jdbc:h2:mem:quizzer-test;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
 ```
 
-The configuration in the `src/test/resources/application.properties` file will be used while we are running the tests, which makes it suitable for test-specific configuration.
+The configuration in the `src/test/resources/application.properties` file will be used while we are running the tests, which makes it suitable for all test-specific configuration.
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 9
 >
 > Add a test-specific configuration file and configure a separate database for the tests. Make sure that running the tests doesn't alter (for example delete any data) the development environment database.
 
@@ -522,7 +473,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 10
 >
 > Implement a test class within the `src/test/java` package with the following test methods for the endpoint for _getting all (published) quizzes_:
 >
@@ -537,16 +488,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 12
->
-> Implement the following test methods for the endpoint for _getting a quiz by id_:
->
-> - `getQuizByIdReturnsQuizWhenQuizExists`: save a quiz to the database and send a request. Then, the response should have the saved quiz
-> - `getQuizByIdReturnsErrorWhenQuizDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
-
-{: .important-title }
-
-> Exercise 13
+> Exercise 11
 >
 > Implement the following test methods for the endpoint for _getting the questions of a quiz_:
 >
@@ -557,15 +499,33 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 12
 >
-> Implement appropriate test methods for at least one more endpoint of your choice. Analyze the behavior of the endpoint based on different requests and dabatase states and implement test scenarios to cover these cases.
+> Implement a test class with the following test methods for the endpoint for _creating an answer_:
+>
+> - `createAnswerSavesAnswerForPublishedQuiz`: save a _published quiz_ with a question and an answer option to the database and send a request with the answer option id in the request body. Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
+> - `createAnswerDoesNotSaveAnswerForNonExistingAnswerOption`: send a request with a non-existing answer option id in the request body. Then, the response should have an appropriate HTTP status and the database should not have any answers
+> - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a request with a valid request body. Then, the response should have an appropriate HTTP status and the database should not have any answers
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 13
+>
+> Implement appropriate test methods for at least two more endpoints of your choice. Analyze the behavior of the endpoints based on different requests and dabatase states and implement test scenarios to cover these cases.
+
+{: .important-title }
+
+> Exercise 14
 >
 > Add instructions on _how to run the tests_ on the command-line to the "Developer guide" section in the `README.md` file.
+
+{: .important-title}
+
+> Exercise 15
+>
+> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `README.md` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
+>
+> Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specified in the React project's [README.md](https://github.com/facebook/react/blob/main/README.md) file.
 
 {: .important-title }
 
@@ -624,14 +584,6 @@ Submit the final report as _a single PDF file_ to [Moodle]({{site.final_report_m
 > Exercise 20
 >
 > Write the final report as instructed above.
-
-{: .important-title}
-
-> ⭐ Bonus exercise
->
-> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `README.md` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
->
-> Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specified in the React project's [README.md](https://github.com/facebook/react/blob/main/README.md) file.
 
 {: .highlight }
 

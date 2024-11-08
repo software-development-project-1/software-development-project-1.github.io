@@ -101,20 +101,23 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > Each quiz name on the quiz list should be a link to a separate page where the quiz name, description and the questions are displayed. There should also be some kind of navigation menu from which the student can navigate to the quiz list page.
 >
-> In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again".
+> In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback dialog which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again".
 >
-> There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the difficulty level, the total number of answers and the number of correct and wrong answers for each question of the quiz. There should be a link to the results page next to the quiz in the quiz list page.
+> There should be a page in the student dashboard where the results of a quiz are displayed. The page should display the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. Also the total number of answer and questions of a quiz should be displayed. There should be a link to the results page next to the quiz in the quiz list page.
 >
 > Different students are interested in different quiz categories. To find interesting quizzes quickly, there should be page that lists all the categories. Clicking the category's name on the list should take the student to a page that lists the quizzes in the category. The category list page should be accessible from the navigation menu."
 >
 > -- The Product Owner
 
-After some discussion the Scrum Team planned the following user stories:
+After some discussion the Scrum Team planned the following user stories for the _teacher dashboard_ application:
 
 1. {{site.sprint_2_user_story_1}}
 2. {{site.sprint_2_user_story_2}}
 3. {{site.sprint_2_user_story_3}}
 4. {{site.sprint_2_user_story_4}}
+
+And the following user stories for the _student dashboard_ application:
+
 5. {{site.sprint_2_user_story_5}}
 6. {{site.sprint_2_user_story_6}}
 7. {{site.sprint_2_user_story_7}}
@@ -196,9 +199,7 @@ After some discussion the Scrum Team planned the following user stories:
 >
 > Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
 >
-> You can save the diagram as an image and edit the `README.md` file in GitHub. You should be able to [drag the image file to the editor](https://cloudinary.com/guides/web-performance/4-ways-to-add-images-to-github-readme-1-bonus-method#1-adding-images-with-drag-and-drop) and place it where ever you want in the Markdown content. When you want to update the diagram, remove the old image from the Markdown content (the `![...](...)` part) and drag the new image in its place.
->
-> GitHub also supports including diagrams to Markdown files with [Mermaid](https://github.blog/developer-skills/github/include-diagrams-markdown-files-mermaid/) syntax. Using Mermaid makes it easier to update diagrams. Mermaid's entity relationship diagram documentation can be found [here](https://mermaid.js.org/syntax/entityRelationshipDiagram.html).
+> GitHub supports including diagrams to Markdown files with [Mermaid](https://github.blog/developer-skills/github/include-diagrams-markdown-files-mermaid/) syntax. Using Mermaid makes it easier to update diagrams. Mermaid's entity relationship diagram documentation can be found [here](https://mermaid.js.org/syntax/entityRelationshipDiagram.html).
 >
 > _NB: Keep this documentation (like all other documentation) up-to-date when you add new entities for the application._
 
@@ -570,9 +571,7 @@ public Message getMessageById(@PathVariable Long id) {
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response.
 >
-> Test the REST API endpoints you have implemented by opening the endpoint's documentation and clicking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an id path parameter value of a non-existing quiz.
->
-> Add a link to the Swagger documentation (at <http://localhost:8080/swagger-ui/index.html>) under a "REST API" subheading in the `README.md` file.
+> Test the REST API endpoints you have implemented by opening the endpoint's documentation and clicking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an id path parameter value of a non-existing quiz. Add a link to the Swagger documentation (at <http://localhost:8080/swagger-ui/index.html>) under a "REST API" subheading in the `README.md` file.
 
 ## Communication between frontend and backend
 
@@ -755,9 +754,50 @@ export default function MessageList() {
 >
 > ![](/assets/sprint-2-us-11-2-category-quizzes.png)
 
+## Deploying the frontend
+
+We managed to deploy the backend during the previous Sprint, but we still haven't deployed the frontend. We can deploy the frontend to Render with the following steps:
+
+1. In the frontend folder, add a `.env` [environment variable](https://vitejs.dev/guide/env-and-mode) file for the _development environment_. The `.env` file should contain a `VITE_BACKEND_URL` environment variable for the backend's _development environment URL_:
+
+   ```
+   VITE_BACKEND_URL=http://localhost:8080
+   ```
+
+   Make sure that every `fetch` function call has the environment variable as the URL prefix. For example:
+
+   ```js
+   fetch(`${import.meta.env.VITE_BACKEND_URL}/api/messages`).then(
+     (response) => {
+       // ...
+     }
+   );
+   ```
+
+1. Add a `.env.production` environment variable file for the _production environment_. The `.env.production` file should contain a `VITE_BACKEND_URL` environment variable for the backend's _production environment URL_. For example:
+
+   ```
+   VITE_BACKEND_URL=https://name-of-the-backend-service.onrender.com
+   ```
+
+   Finally, _push the changes to GitHub_
+
+1. On the Render dashboard, click the "New" button and choose "Static Site"
+1. From the repository list, find you project's repository and click the "Connect" button
+1. Come up with the name for the service. If the frontend application is not initialized in the repository's root folder (this is the case if you don't have a separate repository for the frontend application), set "Root Directory" as the frontend folder's name. Set "Build Command" as `npm run build` and "Publish Directory" as `dist`
+1. If you have a separate branch for the production code, click the "Advanced" button and set "Auto-Deploy" as "Yes" and "Branch" as "production". Otherwise set is as "No"
+1. Click the "Create Static Site" button to create the service
+1. On the service's page, click "Redirects/Rewrites" from the navigation on the left. Set the "Source" as `/*`, "Destination" as `/index.html` and "Action" as "Rewrite". Finally, click the "Save Changes" button. This configuration will make the frontend routing work
+
 {: .important-title }
 
 > Exercise 25
+>
+> Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the static site URL in the Render dashboard) to the project description section in the `README.md` file.
+
+{: .important-title }
+
+> Exercise 26
 >
 > Add instructions on _how to start the frontend application_ to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
@@ -787,15 +827,15 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 27
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 28
 >
-> The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the teacher dashboard and the student dashboard applications on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate the teacher dashboard application's features in the production environment.
+> The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the teacher dashboard and the student dashboard applications on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate both application's features in the production environment.
 >
 > As in the previous Sprint Review, prepare some _sensible_ test data for the Sprint Review.
 
