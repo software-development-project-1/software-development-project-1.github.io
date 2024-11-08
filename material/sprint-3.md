@@ -471,6 +471,10 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > If the implementation of the endpoint doesn't work as described in the test scenarios, fix the implementation.
 
+{: .note }
+
+> To keep the tests organized, it is good idea to implement a separate test class for each REST collection (e.g. "quizzes" and "categories").
+
 {: .important-title }
 
 > Exercise 10
@@ -481,10 +485,6 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getAllQuizzesReturnsListOfPublishedQuizzesWhenQuizzesExist`: save a few quizzes (both published and non-published) to the database and send a request. Then, the response should have a list of the _published quizzes_
 >
 > Create an issue for this task.
-
-{: .note }
-
-> To keep the tests organized, it is good idea to implement a separate test class for each controller class.
 
 {: .important-title }
 

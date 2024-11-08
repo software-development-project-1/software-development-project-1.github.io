@@ -199,9 +199,9 @@ And the following user stories for the _student dashboard_ application:
 >
 > Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
 >
-> GitHub supports including diagrams to Markdown files with [Mermaid](https://github.blog/developer-skills/github/include-diagrams-markdown-files-mermaid/) syntax. Using Mermaid makes it easier to update diagrams. Mermaid's entity relationship diagram documentation can be found [here](https://mermaid.js.org/syntax/entityRelationshipDiagram.html).
+> GitHub supports including different kind of diagrams to Markdown files using the [Mermaid](https://github.blog/developer-skills/github/include-diagrams-markdown-files-mermaid/) syntax. Mermaid makes it easier to update diagrams, when for example new entities or attributes need to be added to an entity relationship diagram. Mermaid's entity relationship diagram documentation can be found [here](https://mermaid.js.org/syntax/entityRelationshipDiagram.html).
 >
-> _NB: Keep this documentation (like all other documentation) up-to-date when you add new entities for the application._
+> _NB: Keep this documentation (like all other documentation) up-to-date when you add new entities or attributes for the application's data model._
 
 ## REST APIs
 
@@ -637,7 +637,7 @@ export function createMessage(message) {
 }
 ```
 
-These are simple _abstractions_ for fetching and creating messages, but they are quite handy. If for example the logic for fetching the messages (for example the API URL) changes, we only need to change the logic inside the `getAllMessages` function and nowhere else.
+These are simple _abstractions_ for fetching and creating messages, but they are quite handy. If for example the logic for fetching the messages (for example the API URL) changes, we only need to change the logic inside the `getAllMessages` function and nowhere else. This will become relevant for example, when we deploy the frontend.
 
 As an example, we could call the `getAllMessages` function to display the messages list in a `MessageList` component in the following way:
 
@@ -674,7 +674,7 @@ export default function MessageList() {
 
 > Exercise 19
 >
-> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
@@ -686,7 +686,7 @@ export default function MessageList() {
 
 > Exercise 20
 >
-> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
@@ -700,13 +700,9 @@ export default function MessageList() {
 
 > Exercise 21
 >
-> Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
->
-> Tips for the tasks:
->
-> - The nofitication can be implemented for example using the Material UI's [Snackbar](https://mui.com/material-ui/react-snackbar/) component
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
@@ -718,7 +714,7 @@ export default function MessageList() {
 
 > Exercise 22
 >
-> Plan the tasks for the eight user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the eight user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
@@ -732,7 +728,7 @@ export default function MessageList() {
 
 > Exercise 23
 >
-> Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_9}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_9}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
@@ -744,7 +740,7 @@ export default function MessageList() {
 
 > Exercise 24
 >
-> Plan the tasks for the tenth user story, "{{site.sprint_2_user_story_10}}". Read the Product Owner’s Sprint Planning description regarding the user story again and split it into small coding tasks.
+> Plan the tasks for the tenth user story, "{{site.sprint_2_user_story_10}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 >
