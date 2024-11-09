@@ -22,5 +22,5 @@ User stories for the _student dashboard_:
 - As a student, I want to sort quizzes by the name or creation date so that I can find relevant quizzes quickly
 - As a student, I want to see the number of my correct and wrong answer after answering the quiz so that I know how well I did
 - As a teacher, I want to share a quiz via QR code so that the students can access the quiz easily
-- As a student, I want to see other quizzes in the same category after answering the quiz so that I can find interesting quizzes quickly
+- As a student, I want to see other quizzes in the same category after answering a quiz so that I can find interesting quizzes quickly
 
