@@ -435,7 +435,6 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 >
 > Implement a REST API endpoint for _creating an answer_ for a question. Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. Return an appropriate HTTP status code and error message in the following error case:
 >
-> - Answer option id is not provided (e.g. it is `null`)
 > - Answer option with the provided id does not exist
 > - Quiz is not published
 >
@@ -444,14 +443,6 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 > ```json
 > {
 >   "answerOptionId": 1
-> }
-> ```
->
-> Sending the following request body should return an appropriate HTTP status code and an error message:
->
-> ```json
-> {
->   "answerOptionId": null 
 > }
 > ```
 >
