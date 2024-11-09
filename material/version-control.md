@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 🧑‍💻 Version control: Git and GitHub
+title: "🧑‍💻 Version control: Git and GitHub"
 permalink: /git
 nav_order: 4
 ---
