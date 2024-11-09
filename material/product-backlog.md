@@ -19,3 +19,6 @@ User stories for the _teacher dashboard_:
 User stories for the _student dashboard_:
 
 - As a student, I want to be able to search quizzes by name or description so that I can find relevant quizzes quickly
+- As a student, I want to be able to sort quizzes by the name or creation date so that I can find relevant quizzes quickly
+- As a student, I want to see the number of my correct and wrong answer after answering the quiz so that I know how well I did 
+
