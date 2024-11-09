@@ -1,6 +1,6 @@
 ---
 layout: home
-title: About the course
+title: ❓ About the course
 permalink: /
 nav_order: 1
 ---
