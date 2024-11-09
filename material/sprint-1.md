@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sprint 1
+title: 🏃‍♂️ Sprint 1
 permalink: /sprint-1
 nav_order: 6
 ---
