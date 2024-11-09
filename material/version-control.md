@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Version control: Git and GitHub"
+title: 🧑‍💻 Version control: Git and GitHub
 permalink: /git
 nav_order: 4
 ---
@@ -720,7 +720,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 >
 > _Every team member should add the link to the GitHub repository to their Moodle submission_.
 
-## The README file
+## Markdown and the README file
 
 The README file mentioned previously has a special meaning in software development projects. When a software developer starts exploring a project, the first thing they should do is to look for the README file. This file should have all the relevant information about the project, for example:
 
