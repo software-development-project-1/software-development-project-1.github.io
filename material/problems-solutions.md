@@ -2,7 +2,7 @@
 layout: page
 title: Problems and solutions
 permalink: /problems-and-solutions
-nav_order: 9
+nav_order: 10
 ---
 
 # Problems and solutions
