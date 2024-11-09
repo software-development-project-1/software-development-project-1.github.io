@@ -15,3 +15,7 @@ User stories for the _teacher dashboard_:
 - As a teacher, I want to filter questions by the difficulty level so that I cand find questions with different difficulty level quickly
 - As a teacher, I should not be able to publish a quiz without questions or questions lacking answer options so that I don't publish an unfinished quiz
 - As a teacher, I want to be able to sort quizzes by the name or creation date so that I can find relevant quizzes quickly
+
+User stories for the _student dashboard_:
+
+- As a student, I want to be able to search quizzes by name or description so that I can find relevant quizzes quickly
