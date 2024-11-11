@@ -18,6 +18,8 @@ User stories for the _student dashboard_:
 - As a student, I want to see other quizzes in the same category after answering a quiz so that I can find interesting quizzes quickly
 - As a student, I want to see a list of registered users so that I can browse quizzes of different teachers
 - As a student, I want to see a list of quizzes of a user so that I can browse quizzes of a teacher
+- As a student, I want to save a quiz to favorites list so that I can return to it later
+- As a student, I want to see a list of my favorite quizzes so that I can easily find my favorite quizzes
 
 User stories for the _teacher dashboard_:
 
