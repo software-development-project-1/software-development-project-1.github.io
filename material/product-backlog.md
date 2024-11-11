@@ -28,3 +28,4 @@ User stories for the _teacher dashboard_:
 - As a teacher, I want to sort quizzes by the name or creation date so that I can find relevant quizzes quickly
 - As a teacher, I want ro register so that I can manage my personal quizzes
 - As a teacher, I want to sign in so that I can manage my personal quizzes
+- As a teacher, I want to see a list of quizzes I have added so that I can manage my personal quizzes
