@@ -582,7 +582,7 @@ Finally, for the application itself, we need to create a web service. Complete t
 7. _If your Maven project is inside a sub folder in the repository_, set the "Root Directory" as the name of that folder
 8. Click the "Advanced" button at the bottom of the page. In the advanced options section, click the "Add environment variable" button to add three environment variables (key, value):
 
-   - `POSTGRES_URL`: the _internal URL in correct format_ of the PostgreSQL instance. Basically, you can take everything _after_ the `postgresql://` part in the internal URL you copied previously and the environment variable value is `jdbc:postgresql://<everything-after-the-@-symbol>`. For example with URL `postgresql://quizzer_user:super_secret_password_1234@dpg-abce1234/quizzer_database`, the URL would be `jdbc:postgresql://dpg-abce1234/quizzer_database`
+   - `POSTGRES_URL`: the _internal URL in correct format_ of the PostgreSQL instance. Basically, you can take everything _after_ the `postgresql://` part in the internal URL you copied previously and the environment variable value is `jdbc:postgresql://<everything-after-the-@-symbol>`. For example with URL `postgresql://quizzer_user:super_secret_password_1234@dpg-abcd1234/quizzer_database`, the URL would be `jdbc:postgresql://dpg-abcd1234/quizzer_database`
    - `POSTGRES_USERNAME`: the _username_ of the PostgreSQL instance
    - `POSTGRES_PASSWORD`: the _password_ of the PostgreSQL instance
    - `SPRING_PROFILES_ACTIVE`: set as `production`
