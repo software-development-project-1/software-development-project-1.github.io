@@ -56,7 +56,7 @@ The final grade (1-5) is composed of the project points (maximum of 40 points) a
 
 > The following are necessary to pass the course:
 >
-> - At least 18 of the first two week's exercises have to be completed
+> - At least 16 of the first two week's exercises have to be completed
 > - Written peer review for each team member
 > - Passing grade from the peer reviews
 > - Written final report
