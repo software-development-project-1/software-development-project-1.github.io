@@ -43,7 +43,7 @@ First, create a session board that has the _mad_, _sad_ and _glad_ categories li
 
 1. Based on their experiences during the Sprint, each team member should write cards for each of the three categories. Choose the card color based on the category. Try to come up with cards for each category. _Don't discuss about the cards at this point_ because the cards should represent your personal opinions
 2. Once everyone is done writing the cards, go through the cards from each category. The writer of the card should shortly describe what their card means.
-3. Together, pick at least two successes during the Sprint from the _glad_ category and two most urgent issues from the _mad_ and _sad_ categories. Come up with _concrete_ actions to solve each of these issues during the upcoming Sprint. For example a concrete action for the issue "I always have conflicts when I try to pull code from the GitHub" could be "Pull code from GitHub more often" and "Create smaller commits and push code to GitHub more often".
+3. Together, pick at least one success area during the Sprint from the _glad_ category and one most urgent issue from the _mad_ and _sad_ categories. Come up with at least one _concrete_ action to solve the issue during the upcoming Sprint. For example a concrete action for the issue "I always have conflicts when I try to pull code from the GitHub" could be "Pull code from GitHub more often" and "Create smaller commits and push code to GitHub more often".
 
 Make sure that everyone follows the event structure and that each team member gets their voice heard.
 
@@ -58,17 +58,15 @@ Make sure that everyone follows the event structure and that each team member ge
 > ```md
 > # Sprint 1 Retrospective
 >
-> [Retrospective board](link-to-the-flinga-board)
->
-> ## Successes
+> Successes:
 >
 > - Something that we succeeded in.
 >
-> ## Issues
+> Issues:
 >
 > - Some issue we had.
 >
-> ## Actions
+> Actions:
 >
 > - Some action to fix an issue.
 > ```
@@ -815,10 +813,9 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 >
 > Also, include the following information about the project's architecture and implementation technologies:
 >
-> 1. The project's architecture consists of three components: the database, the backend and the frontend. Mention these components and explain the purpose of each component. Also, visualize how the components communicate with each other using a [Mermaid flow diagram](https://mermaid.js.org/syntax/flowchart.html)
-> 2. Which programming language, frameworks and major libraries are used in the _backend implementation_?
-> 3. Which _database platforms_ are used in different environments (development and production environment)?
-> 4. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
+> 1. Which programming language, frameworks and major libraries are used in the _backend implementation_?
+> 2. Which _database platforms_ are used in different environments (development and production environment)?
+> 3. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
 
 ## Sprint Review
 
