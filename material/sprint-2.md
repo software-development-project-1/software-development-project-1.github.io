@@ -53,22 +53,24 @@ Make sure that everyone follows the event structure and that each team member ge
 >
 > The Scrum Master should create a new session in Flinga as instructed above. Name the session "Retrospective 1". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event as instructed above.
 >
-> Once you have completed the Retrospective, add `retrospectives` folder to the repository and in it a `sprint1.md` file. In that file, add a link to the Retrospective's Flinga board and write down the successes, issues and actions you came up with during the Retrospective and push the changes to GitHub. You can use this template in the file:
+> Once you have completed the Retrospective, add `retrospectives` folder to the repository and in it a `sprint1.md` file. In that file, add a link to the Retrospective's Flinga board and write down the successes, issues and actions you came up with during the Retrospective and push the changes to GitHub. Use this template in the file:
 >
 > ```md
 > # Sprint 1 Retrospective
 >
+> [Retrospective board](https://edu.flinga.fi/s/<BOARD_ID>)
+>
 > Successes:
 >
-> - Something that we succeeded in.
+> - Something that we succeeded in
 >
 > Issues:
 >
-> - Some issue we had.
+> - Some issue we had
 >
 > Actions:
 >
-> - Some action to fix an issue.
+> - Some action to fix an issue
 > ```
 
 {: .important-title }
@@ -116,12 +118,12 @@ After some discussion the Scrum Team planned the following user stories for the 
 
 And the following user stories for the _student dashboard_ application:
 
-5. {{site.sprint_2_user_story_5}}
-6. {{site.sprint_2_user_story_6}}
-7. {{site.sprint_2_user_story_7}}
-8. {{site.sprint_2_user_story_8}}
-9. {{site.sprint_2_user_story_9}}
-10. {{site.sprint_2_user_story_10}}
+1. {{site.sprint_2_user_story_5}}
+2. {{site.sprint_2_user_story_6}}
+3. {{site.sprint_2_user_story_7}}
+4. {{site.sprint_2_user_story_8}}
+5. {{site.sprint_2_user_story_9}}
+6. {{site.sprint_2_user_story_10}}
 
 {: .important-title }
 
@@ -319,6 +321,7 @@ For example, in the `createMessage` method the request body format is defined by
 
 ```java
 public class CreateMessageDto {
+    // Validation annotation for the content attribute
     @NotBlank(message = "Message content may not be blank")
     private String content;
 
@@ -813,9 +816,10 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 >
 > Also, include the following information about the project's architecture and implementation technologies:
 >
-> 1. Which programming language, frameworks and major libraries are used in the _backend implementation_?
-> 2. Which _database platforms_ are used in different environments (development and production environment)?
-> 3. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
+> 1. The project's architecture consists of three components: the database, the backend and the frontend. Mention these components and explain the purpose of each component. Also, visualize how the components communicate with each other using a [Mermaid flow diagram](https://mermaid.js.org/syntax/flowchart.html)
+> 2. Which programming language, frameworks and major libraries are used in the _backend implementation_?
+> 3. Which _database platforms_ are used in different environments (development and production environment)?
+> 4. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
 
 ## Sprint Review
 
