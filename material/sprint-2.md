@@ -42,8 +42,8 @@ Once logged in a new session can be created by clicking the "Create a session" b
 First, create a session board that has the _mad_, _sad_ and _glad_ categories like in [this board](https://edu.flinga.fi/s/E2L5YL9). Then, organize the Retrospective in the following manner:
 
 1. Based on their experiences during the Sprint, each team member should write cards for each of the three categories. Choose the card color based on the category. Try to come up with cards for each category. _Don't discuss about the cards at this point_ because the cards should represent your personal opinions
-2. Once everyone is done writing the cards, go through the cards from each category. The writer of the card should shortly describe what their card means.
-3. Together, pick at least one success area during the Sprint from the _glad_ category and one most urgent issue from the _mad_ and _sad_ categories. Come up with at least one _concrete_ action to solve the issue during the upcoming Sprint. For example a concrete action for the issue "I always have conflicts when I try to pull code from the GitHub" could be "Pull code from GitHub more often" and "Create smaller commits and push code to GitHub more often".
+2. Once everyone is done writing the cards, go through the cards from each category. If necessary, the writer of the card can shortly describe what their card means
+3. Together, pick at least one success area during the Sprint from the _glad_ category and one most urgent issue from the _mad_ and _sad_ categories. Come up with at least one _concrete_ action to solve the issue during the upcoming Sprint. For example a concrete action for the issue "I always have conflicts when I try to pull code from the GitHub" could be "Pull code from GitHub more often" and "Create smaller commits and push code to GitHub more often"
 
 Make sure that everyone follows the event structure and that each team member gets their voice heard.
 
@@ -57,8 +57,6 @@ Make sure that everyone follows the event structure and that each team member ge
 >
 > ```md
 > # Sprint 1 Retrospective
->
-> [Retrospective board](https://edu.flinga.fi/s/<BOARD_ID>)
 >
 > Successes:
 >
