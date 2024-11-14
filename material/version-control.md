@@ -417,6 +417,10 @@ Fast-forward
 
 Now you can find the new line of text in the file you changed via GitHub.
 
+{: .note }
+
+> Using the `git fetch` command is rarely necessary. You can just use the `git pull` command to fetch the latest changes from the remote repository.
+
 {: .important-title }
 
 > Exercise 9
@@ -487,7 +491,7 @@ Notice how Git is kind enough to notify us of the two parallel, differing states
 
 {: .note }
 
-> Remember that if <code>git status</code> doesn't display the newest state of the remote, you shoud run <code>git fetch</code> first.
+> Remember that if `git status` command doesn't display the newest state of the remote, you shoud run `git pull` command first.
 
 Pushing the new commits will not work, as the command `git push` will output the following:
 
@@ -700,7 +704,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 >
 > - What are the names and GitHub usernames of your team members?
 > - What is the name of your team?
-> - What are the strenghts and weaknesses (e.g. skill-related) of your team? 
+> - What are the strenghts and weaknesses (e.g. skill-related) of your team?
 > - Which communication platform you will be using?
 >
 > _Every team member should add these to their Moodle submission_. One team member can write down the information and share it with others.
@@ -714,9 +718,9 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > 1. GitHub organizations are a way to apply fine-grained access permissions to repositories. Create a GitHub organization for your team by following [these](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) instructions. You can name the organization for example based on your team's name you came up with previously
 > 2. Invite other team members to the organization by following [these](https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization) instructions. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team
 > 3. Create a _public_ GitHub repository for the project. Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description
-> 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web, Spring Boot DevTools, Thymeleaf, Spring Data JPA and H2 dependencies by clicking the "Dependencies" button will get you started. Push the generated project to the GitHub repository 
-> 6. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. Start the Spring Boot application in the repository and make sure that there are no errors
-> 7. Add a `README.md` file with some content in it to the repository and push it to GitHub. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work
+> 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web, Spring Boot DevTools, Thymeleaf, Spring Data JPA and H2 dependencies by clicking the "Dependencies" button will get you started. Push the generated project to the GitHub repository
+> 5. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. Start the Spring Boot application in the repository and make sure that there are no errors
+> 6. Add a `README.md` file with some content in it to the repository and push it to GitHub. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work
 >
 > _Every team member should add the link to the GitHub repository to their Moodle submission_.
 
