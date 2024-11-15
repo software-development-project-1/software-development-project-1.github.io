@@ -537,7 +537,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 17
 >
-> Make sure that all project-related documentation, such as project description, data model documentation, developer guide and Swagger documentation is up-to-date.
+> Make sure that all project-related documentation, such as project description, data model documentation, developer guide documentation and Swagger documentation is up-to-date.
 
 {: .important-title }
 
