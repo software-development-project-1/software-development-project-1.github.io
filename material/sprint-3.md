@@ -28,9 +28,9 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 >
 > The Scrum Master should create a new session in Flinga as instructed above. Name the session "Retrospective 2". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event.
 >
-> Did similar issues arise as in Sprint 1 retrospective? If so, try to come up with different actions as before or ask the teacher for tips on how to solve these issues.
+> Once you have completed the Retrospective, check the notes from your previous Retrospective. Did similar issues arise as in Sprint 1 retrospective? If so, try to come up with different actions as before or ask the teacher for tips on how to solve these issues.
 >
-> Once you have completed the Retrospective, add a link to the Retrospective's Flinga board and write down the successes, issues and actions you came up during the Retrospective to the repository's `retrospectives/sprint2.md` file and push the changes to GitHub. You can use the same template for the Retrospective notes as during the previous Sprint.
+> Finally, add a link to the Retrospective's Flinga board and write down the successes, issues and actions you came up during the Retrospective to the repository's `retrospectives/sprint2.md` file and push the changes to GitHub. Use the same template for the Retrospective notes as during the previous Sprint.
 
 {: .important-title }
 
@@ -531,13 +531,13 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 16
 >
-> Deploy the final versions of the backend and frontend applications to the production environment. Make sure that the applications work properly in the production environment.
+> Deploy the final versions of the backend and frontend applications to the production environment. Make sure that both applications work properly in the production environment.
 
 {: .important-title }
 
 > Exercise 17
 >
-> Make sure that all project-related documentation, such as project description, data model documentation and Swagger documentation is up-to-date.
+> Make sure that all project-related documentation, such as project description, data model documentation, developer guide and Swagger documentation is up-to-date.
 
 {: .important-title }
 
