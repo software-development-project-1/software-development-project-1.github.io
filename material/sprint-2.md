@@ -18,7 +18,7 @@ The Scrum Guide only describes high-level guideliness for the software developme
 
 After the Sprint Review, the Retrospective is the final event that ends the current Sprint. During the Retrospective, the Scrum Team openly discuss the issues with the process. Every member of the Scrum Team must be heard. Even more important than raising issues, is to find solutions together. These solutions are concrete actions that the Scrum Team can perform during the upcoming Sprint to improve the process. In the ideal case, after performing the necessary actions during the upcoming Sprint, the same issues aren't raised during the next Retrospective.
 
-There are different Retrospective techniques to arrange the event. A quite common Retrospective technique is the [Mad, Sad, Glad](https://www.teamretro.com/retrospectives/mad-sad-glad-retrospective) Retrospective. In the Mad, Sad, Glad Retrospective, each member of Scrum Team writes down things during the Sprint that made them feel either mad, sad or glad.
+Scrum doesn't go into details how to actually arrange the event, but rather describe its purpose and goals. Luckily, there are many popular Retrospective techniques to arrange the event, such as [Mad, Sad, Glad](https://www.teamretro.com/retrospectives/mad-sad-glad-retrospective) and [Start, Stop, Continue](https://www.betterup.com/blog/start-stop-continue). Next, we will have a look how to arrange a _Mad, Sad, Glad_ style Retrospective. In this Retrospective, each member of Scrum Team writes down things during the Sprint that made them feel either mad, sad or glad.
 
 The things in the _mad_ category are the ones that are very frustrating and are stopping you from performing at your best. For example:
 
