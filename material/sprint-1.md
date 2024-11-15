@@ -602,7 +602,7 @@ Open the created web service in the Render dashboard. The deployment of the appl
 
 > Exercise 23
 >
-> Deploy the backend application to a production environment. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the project description section in the `README.md` file.
+> Deploy the backend application to a production environment. _Test that the application works in the production envinronment_ by adding a quiz with some questions and answer options. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the project description section in the `README.md` file.
 
 ## GitHub release
 

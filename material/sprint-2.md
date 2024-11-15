@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sprint 2
+title: 🏃‍♂️ Sprint 2
 permalink: /sprint-2-todo
 nav_order: 7
 nav_exclude: true
@@ -53,10 +53,12 @@ Make sure that everyone follows the event structure and that each team member ge
 >
 > The Scrum Master should create a new session in Flinga as instructed above. Name the session "Retrospective 1". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event as instructed above.
 >
-> Once you have completed the Retrospective, add `retrospectives` folder to the repository and in it a `sprint1.md` file. In that file, write down the successes, issues and actions you came up with during the Retrospective and push the changes to GitHub. Use this template in the file:
+> Once you have completed the Retrospective, add `retrospectives` folder to the repository and in it a `sprint1.md` file. In that file, add a link to the Retrospective's Flinga board and write down the successes, issues and actions you came up with during the Retrospective and push the changes to GitHub. Use this template in the file:
 >
 > ```md
 > # Sprint 1 Retrospective
+>
+> [Retrospective board](https://edu.flinga.fi/s/<BOARD_ID>)
 >
 > Successes:
 >
@@ -572,11 +574,11 @@ public Message getMessageById(@PathVariable Long id) {
 >
 > Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response.
 >
-> Test the REST API endpoints you have implemented by opening the endpoint's documentation and clicking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an id path parameter value of a non-existing quiz. Add a link to the Swagger documentation (at <http://localhost:8080/swagger-ui/index.html>) under a "REST API" subheading in the `README.md` file.
+> Test all the REST API endpoints you have implemented by opening the endpoint's documentation and clicking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an id path parameter value of a non-existing quiz. Add a link to the Swagger documentation (at <http://localhost:8080/swagger-ui/index.html>) under a "REST API" subheading in the `README.md` file.
 
 ## Communication between frontend and backend
 
-With REST APIs we can _separate_ the client application from the server application. In web applications these client applications are commonly called _frontend applications_.
+With REST APIs we can _separate_ the client application from the server application. In web applications these client applications are commonly called _frontend applications_. Together these components construct a _full stack application_.
 
 The communication between the frontend application and the backend application is performed using the JavaScript's [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The Fetch API provides the `fetch` function, which can be used to send a HTTP request to a specific URL:
 
@@ -790,7 +792,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 > Exercise 25
 >
-> Deploy the frontend application to a production environment. Add the production environment URL of the frontend application (the static site URL in the Render dashboard) to the project description section in the `README.md` file.
+> Deploy the frontend application to a production environment. _Test that the application works in the production envinronment_ by e.g. answering a few quizzes and taking a look at their results. Add the production environment URL of the frontend application (the static site URL in the Render dashboard) to the project description section in the `README.md` file.
 
 {: .important-title }
 
@@ -802,6 +804,8 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 >
 > ```md
 > ## Developer guide
+>
+> The architecture description and other common technical details go here.
 >
 > ### Backend
 >
