@@ -837,9 +837,7 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 > Exercise 28
 >
-> The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the teacher dashboard and the student dashboard applications on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate both application's features in the production environment.
->
-> As in the previous Sprint Review, prepare some _sensible_ test data for the Sprint Review.
+> The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the teacher dashboard and the student dashboard applications on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate both application's features in the production environment. As in the previous Sprint Review, prepare some _sensible_ test data for the Sprint Review.
 
 {: .highlight }
 
