@@ -1,9 +1,8 @@
 ---
 layout: page
 title: 🏃‍♂️ Sprint 2
-permalink: /sprint-2-todo
+permalink: /sprint-2
 nav_order: 7
-nav_exclude: true
 ---
 
 {% include toc.html %}
