@@ -52,7 +52,7 @@ The Scrum Master should make sure that everyone follows the event structure and 
 >
 > The Scrum Master should create a new session in Flinga as instructed above. Name the session "Retrospective 1". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event as instructed above.
 >
-> Once you have completed the Retrospective, add `retrospectives` folder to the repository and in it a `sprint1.md` file. In that file, add a link to the Retrospective's Flinga board and write down the successes, issues and actions you came up with during the Retrospective and push the changes to GitHub. Use this template in the file:
+> Once you have completed the Retrospective, add `retrospectives` folder to the repository and in it a `sprint1.md` file. In that file, add a link to the Retrospective's Flinga board and write down the successes, issues and actions you came up with during the Retrospective and push the changes to GitHub. Use this template in the file (_remember to use your board's Flinga board link_):
 >
 > ```md
 > # Sprint 1 Retrospective
