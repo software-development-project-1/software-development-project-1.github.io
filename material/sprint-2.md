@@ -818,7 +818,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 >
 > Also, include the following information about the project's architecture and implementation technologies:
 >
-> 1. The project's architecture consists of three components: the database, the backend and the frontend. Mention these components and explain the purpose of each component. Also, visualize how the components communicate with each other using a [Mermaid flow diagram](https://mermaid.js.org/syntax/flowchart.html)
+> 1. The project's architecture consists of three components: the database, the backend and the frontend. Mention these components and explain the purpose of each component. Also, visualize how the components communicate with each other by implementing an [architecture diagram](https://aws.amazon.com/what-is/architecture-diagramming/). You can implement the diagram as a [Mermaid flow diagram](https://mermaid.js.org/syntax/flowchart.html)
 > 2. Which programming language, frameworks and major libraries are used in the _backend implementation_?
 > 3. Which _database platforms_ are used in different environments (development and production environment)?
 > 4. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
