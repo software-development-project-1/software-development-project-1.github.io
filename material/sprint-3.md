@@ -493,7 +493,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > Implement the following test methods for the endpoint for _getting the questions of a quiz_:
 >
 > - `getQuestionsByQuizIdReturnsEmptyListWhenQuizDoesNotHaveQuestions`: save a quiz without questions to the database and send a request. Then, the response should have an empty list
-> - `getQuestionsByQuizIdReturnsListOfQuestionsWhenQuizHasQuestions`: save a quiz with a few questions to the database and send a request. Then, the response should have a list of the quiz's questions
+> - `getQuestionsByQuizIdReturnsListOfQuestionsWhenQuizHasQuestions`: save a quiz with a few questions and answer options to the database and send a request. Then, the response should have a list of the quiz's questions. Remember to also check, that the _response contains the answer options of each question_
 > - `getQuestionsByQuizIdReturnsErrorWhenQuizDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
 > - An appropriate test methods for testing that the difficulty level filtering works
 
@@ -504,6 +504,7 @@ While testing your application's REST API endpoints, refer to the examples above
 > Implement a test class with the following test methods for the endpoint for _creating an answer_:
 >
 > - `createAnswerSavesAnswerForPublishedQuiz`: save a _published quiz_ with a question and an answer option to the database and send a request with the answer option id in the request body. Then, the response should have the saved answer and the database should have one answer with the attributes matching the request body
+> - `createAnswerDoesNotSaveAnswerWithoutAnswerOption`: send a request without an answer option id in the request body (e.g. `{ "answerOptionId": null }`). Then, the response should have an appropriate HTTP status and the database should not have any answers
 > - `createAnswerDoesNotSaveAnswerForNonExistingAnswerOption`: send a request with a non-existing answer option id in the request body. Then, the response should have an appropriate HTTP status and the database should not have any answers
 > - `createAnswerDoesNotSaveAnswerForNonPublishedQuiz`: save a _non-published quiz_ with a question to the database and send a request with a valid request body. Then, the response should have an appropriate HTTP status and the database should not have any answers
 
@@ -511,7 +512,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 13
 >
-> Implement appropriate test methods for at least two more endpoints of your choice. Analyze the behavior of the endpoints based on different requests and dabatase states and implement test scenarios to cover these cases.
+> Implement appropriate test methods for _at least two more endpoints_ of your choice. Analyze the behavior of the endpoints based on different requests (e.g. different kind of invalid requests like in the test cases covered in the previous exercises) and dabatase states and implement test scenarios to cover these cases.
 
 {: .important-title }
 
