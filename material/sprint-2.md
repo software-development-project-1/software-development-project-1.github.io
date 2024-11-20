@@ -437,6 +437,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 >
 > Return an appropriate HTTP status code and error message in the following error case:
 >
+> - Answer option id is not provided (for example the `{ "answerOptionId": null }` request body)
 > - Answer option with the provided id does not exist
 > - Quiz is not published
 >
