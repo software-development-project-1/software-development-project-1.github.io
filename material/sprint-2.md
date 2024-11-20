@@ -433,7 +433,9 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 > Exercise 13
 >
-> Implement a REST API endpoint for _creating an answer_ for a question. Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. Return an appropriate HTTP status code and error message in the following error case:
+> Implement a REST API endpoint for _creating an answer_ for a question (or more specifically, for an answer option of a question). Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. The student should be able to choose an answer option (e.g. "Helsinki") for a question (e.g. "What is the capital of Finland?") and submit their answer. The information, which answer option the student submitted, should be stored to the database.
+>
+> Return an appropriate HTTP status code and error message in the following error case:
 >
 > - Answer option id is not provided (for example the `{ "answerOptionId": null }` request body)
 > - Answer option with the provided id does not exist
