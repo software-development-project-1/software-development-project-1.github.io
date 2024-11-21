@@ -419,7 +419,7 @@ Now you can find the new line of text in the file you changed via GitHub.
 
 {: .note }
 
-> Using the `git fetch` command is rarely necessary. You can just use the `git pull` command to fetch the latest changes from the remote repository.
+> Using the `git fetch` command is rarely necessary. You can just use the `git pull` command to both fetch the latest changes from the remote repository and apply them to your local repository. [This](https://about.gitlab.com/blog/2024/09/24/git-pull-vs-git-fetch-whats-the-difference/) article covers the differences in more detail.
 
 {: .important-title }
 
@@ -720,7 +720,10 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > 3. Create a _public_ GitHub repository for the project. Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description
 > 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web, Spring Boot DevTools, Thymeleaf, Spring Data JPA and H2 dependencies by clicking the "Dependencies" button will get you started. Push the generated project to the GitHub repository
 > 5. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. Start the Spring Boot application in the repository and make sure that there are no errors
-> 6. Add a `README.md` file with some content in it to the repository and push it to GitHub. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work
+> 6. Add a `README.md` file with some content in it to the repository and push it to GitHub
+> 7. _Important step:_ to make sure that the repository is accessible to the whole team, _each team member_ should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work. Check the commit history in GitHub and _make sure that the commit's author is your GitHub account_. If the commit's author's avatar is a grey GitHub logo (see below) and the username doesn't match your GitHub ussername, check exercise 3
+>
+> ![](https://github.githubassets.com/images/gravatars/gravatar-user-420.png?size=32){: width="100" }
 >
 > _Every team member should add the link to the GitHub repository to their Moodle submission_.
 
