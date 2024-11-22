@@ -422,7 +422,17 @@ In the `createMessage` method will send a `400 Bad Request` status code with the
 }
 ```
 
-If we don't throw a `ResponseStatusException` exception, the `200 OK` status code will be sent with the response, which indicates the that request succeeded. To get more control over the response, we can use the [ResponseEntity](https://www.baeldung.com/spring-response-entity) class:
+If we don't throw a `ResponseStatusException` exception, the `200 OK` status code will be sent with the response, which indicates the that request succeeded:
+
+```java
+@GetMapping("/messages")
+public List<Message> getAllMessages() {
+    // Status 200 OK will be used by default
+    return messageRepository.findAll();
+}
+```
+
+To get more control over the response, we can use the [ResponseEntity](https://www.baeldung.com/spring-response-entity) class:
 
 ```java
 @PostMapping("")
