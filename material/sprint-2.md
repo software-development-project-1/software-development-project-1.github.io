@@ -316,7 +316,7 @@ fetch("http://localhost:8080/api/messages", {
 
 To have full control over the format of the request and response body we can use [DTO](https://www.baeldung.com/java-dto-pattern) classes. Especially with the request body annotated by the `@RequestBody` annotation, we should in general use a DTO class object instead of an entity class object. This is because using an entity class object might accidently allow users to update undesired attributes of an entity as described [here](https://rules.sonarsource.com/java/tag/spring/RSPEC-4684/).
 
-For example, let's assume that we have a `User` entity with `username`, `password` and `isAdmin` (determines if user is an admin user or not) attributes. We want the user to be able to register with an username and password, but _they aren't suppose to be able to define their admin status_. To define the available attributes for the request body, we can create a `CreateUser` DTO class:
+For example, let's assume that we have a `User` entity with `username`, `password` and `isAdmin` (determines if user is an admin user or not) attributes. We want the user to be able to register with an username and password, but _they aren't suppose to be able to define their admin status_. To define the available attributes for the request body, we can create a `CreateUserDto` DTO class:
 
 ```java
 public class CreateUserDto {
