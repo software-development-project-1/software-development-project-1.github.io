@@ -354,7 +354,7 @@ This corresponds to the following JSON format for the request body:
 { "username": "kalle", "password": "supersecret9000" }
 ```
 
-Similarly, we can use DTOs to control the attributes in the response body. For example, we don't want to send the user's password hash in the response. We can control the attributes using a `PublicUserDto` class:
+Similarly, we can use DTOs to control the attributes in the response body (as in the previous example). For example, we don't want to send the user's password hash in the response. We can control the attributes using a `PublicUserDto` class:
 
 ```java
 public class PublicUserDto {
@@ -377,6 +377,14 @@ public List<PublicUserDto> getAllUsers() {
         .map(user -> new PublicUserDto(user.getId(), user.getUsername(), user.getIsAdmin()))
         .collect(Collectors.toList());
 }
+```
+
+This corresponds to the following JSON format for the response body:
+
+```json
+[
+  { "id": 1, "username": "kalle", "isAdmin": false }
+]
 ```
 
 {: .note }
