@@ -363,6 +363,8 @@ public class PublicUserDto {
 }
 ```
 
+In the controller method, we transform the `User` objects into `PublicUserDto` objects:
+
 ```java
 @GetMapping("/users")
 public List<PublicUserDto> getAllUsers() {
@@ -372,6 +374,10 @@ public List<PublicUserDto> getAllUsers() {
         .collect(Collectors.toList());
 }
 ```
+
+{: .note }
+
+> In the example above we could also use the `@JsonIgnore` annotation. With a DTO class we can get more fine grained control over the request and response body, if needed. However, this doesn't mean that every single request requires the use of a DTO class.
 
 ### HTTP status codes and REST API error handling
 
