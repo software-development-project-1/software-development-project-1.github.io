@@ -316,22 +316,61 @@ fetch("http://localhost:8080/api/messages", {
 
 To have full control over the format of the request and response body we can use [DTO](https://www.baeldung.com/java-dto-pattern) classes. Especially with the request body annotated by the `@RequestBody` annotation, we should _always_ use a DTO class object instead of an entity class object. This is because using an entity class object might accidently allow users to update undesired attributes of an entity as described [here](https://rules.sonarsource.com/java/tag/spring/RSPEC-4684/).
 
-For example, in the `createMessage` method the request body format is defined by the `CreateMessageDto` class:
+For example, let's assume that we have a `User` entity with `username`, `password` and `isAdmin` (determines if user is an admin user or not) attributes. We want the user to be able to register with an username and password, but _they aren't suppose to be able to define their admin status_. To define the available attributes for the request body, we can create a `CreateUser` DTO class:
 
 ```java
-public class CreateMessageDto {
+public class CreateUserDto {
     // Validation annotation for the content attribute
-    @NotBlank(message = "Message content may not be blank")
-    private String content;
+    @NotBlank(message = "Username may not be blank")
+    private String username;
+
+    @NotBlank(message = "Password may not be blank")
+    private String password;
 
     // constructors, getters and setters
+}
+```
+
+In the controller method, the request body is mapped to a `CreateUserDto` object:
+
+```java
+@PostMapping("/users")
+public User createUser(@Valid @RequestBody CreateUserDto user, BindingResult bindingResult) {
+    if (bindingResult.hasErrors()) {
+        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
+    }
+
+    User newUser = new User(user.getUsername(), authenticationService.createPasswordHash(user.getPassword()));
+    return userRepository.save(newUser);
 }
 ```
 
 This corresponds to the following JSON format for the request body:
 
 ```json
-{ "content": "Hello world!" }
+{ "username": "kalle", "password": "supersecret9000" }
+```
+
+Similarly, we can use DTOs to control the attributes in the response body. For example, we don't want to send the user's password hash in the response. We can control the attributes using a `PublicUserDto` class:
+
+```java
+public class PublicUserDto {
+    // Username and admin status are public information
+    private String username;
+    private Boolean isAdmin;
+
+    // constructors, getters and setters
+}
+```
+
+```java
+@GetMapping("/users")
+public List<PublicUserDto> getAllUsers() {
+    return userRepository.findAll()
+        .stream()
+        .map(user -> new PublicUserDto(user.getUsername(), user.getIsAdmin()))
+        .collect(Collectors.toList());
+}
 ```
 
 ### HTTP status codes and REST API error handling
