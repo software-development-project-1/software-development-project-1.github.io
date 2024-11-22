@@ -427,7 +427,7 @@ If we don't throw a `ResponseStatusException` exception, the `200 OK` status cod
 ```java
 @GetMapping("/messages")
 public List<Message> getAllMessages() {
-    // Status 200 OK will be used by default
+    // HTTP status 200 OK will be used in the response by default
     return messageRepository.findAll();
 }
 ```
@@ -447,6 +447,7 @@ public ResponseEntity<?> createMessage(@Valid @RequestBody CreateMessageDto mess
     Message newMessage = new Message(message.getContent());
     messageRepository.save(newMessage);
 
+    // HTTP status 201 Created will be used in this response 
     return ResponseEntity.status(HttpStatus.CREATED).body(newMessage);
 }
 ```
