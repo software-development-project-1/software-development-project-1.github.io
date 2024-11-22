@@ -341,7 +341,10 @@ public User createUser(@Valid @RequestBody CreateUserDto user, BindingResult bin
     }
 
     User newUser = new User(user.getUsername(), authenticationService.createPasswordHash(user.getPassword()));
-    return userRepository.save(newUser);
+    userRepository.save(newUser);
+
+    // The PublicUserDto class is covered in the next example
+    return new PublicUserDto(newUser.getId(), newUser.getUsername(), newUser.getIsAdmin())
 }
 ```
 
@@ -355,7 +358,8 @@ Similarly, we can use DTOs to control the attributes in the response body. For e
 
 ```java
 public class PublicUserDto {
-    // Username and admin status are public information
+    // The id, username and admin status are public information
+    private Long id;
     private String username;
     private Boolean isAdmin;
 
@@ -370,7 +374,7 @@ In the controller method, we transform the `User` objects into `PublicUserDto` o
 public List<PublicUserDto> getAllUsers() {
     return userRepository.findAll()
         .stream()
-        .map(user -> new PublicUserDto(user.getUsername(), user.getIsAdmin()))
+        .map(user -> new PublicUserDto(user.getId(), user.getUsername(), user.getIsAdmin()))
         .collect(Collectors.toList());
 }
 ```
