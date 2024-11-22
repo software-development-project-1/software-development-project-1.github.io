@@ -54,6 +54,8 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > The review page should list the added reviews and display the number of reviews and the rating average of the quiz. Each review should display the information submitted by the student and the date when the review was written. It should also be possible for the student to edit and delete reviews in the review page."
 >
+> Students have different skill levels so it would be useful if the student could filter the questions of quiz by the difficulty level in the quiz page. There could be dropdown menu at the top of the page from which the student can select the difficulty level for the questions.
+>
 > -- The Product Owner
 
 After some discussion the Scrum Team planned the following user stories for the _student dashboard_ application:
@@ -62,6 +64,7 @@ After some discussion the Scrum Team planned the following user stories for the 
 2. {{site.sprint_3_user_story_2}}
 3. {{site.sprint_3_user_story_3}}
 4. {{site.sprint_3_user_story_4}}
+5. {{site.sprint_3_user_story_5}}
 
 {: .important-title }
 
@@ -512,7 +515,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 13
 >
-> Implement appropriate test methods for _at least two more endpoints_ of your choice. Analyze the behavior of the endpoints based on different requests (e.g. different kind of invalid requests like in the test cases covered in the previous exercises) and dabatase states and implement test scenarios to cover these cases.
+> Implement appropriate test methods for _at least two more endpoints_ of your choice. Analyze the behavior of the endpoints based on different requests (e.g. different kind of invalid requests like in the test cases covered in the previous exercises) and dabatase states and implement test scenarios to cover these cases. Use descriptive names for the test methods so that they properly describe the test case.
 
 {: .important-title }
 
