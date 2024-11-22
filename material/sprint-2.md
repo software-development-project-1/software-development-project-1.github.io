@@ -335,6 +335,7 @@ In the controller method, the request body is mapped to a `CreateUserDto` object
 
 ```java
 @PostMapping("/users")
+// The CreateUserDto class defines the request body
 public User createUser(@Valid @RequestBody CreateUserDto user, BindingResult bindingResult) {
     if (bindingResult.hasErrors()) {
         throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
@@ -343,7 +344,7 @@ public User createUser(@Valid @RequestBody CreateUserDto user, BindingResult bin
     User newUser = new User(user.getUsername(), authenticationService.createPasswordHash(user.getPassword()));
     userRepository.save(newUser);
 
-    // The PublicUserDto class is covered in the next example
+    // The PublicUserDto class (covered in the next example) defines the response body
     return new PublicUserDto(newUser.getId(), newUser.getUsername(), newUser.getIsAdmin())
 }
 ```
