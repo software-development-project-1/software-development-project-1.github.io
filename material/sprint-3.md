@@ -497,7 +497,8 @@ While testing your application's REST API endpoints, refer to the examples above
 > Implement a test class within the `src/test/java` package with the following test methods for the endpoint for _getting all (published) quizzes_:
 >
 > - `getAllQuizzesReturnsEmptyListWhenNoQuizzesExist`: send a request without saving a quiz to the database. Then, the response should have an empty list
-> - `getAllQuizzesReturnsListOfPublishedQuizzesWhenQuizzesExist`: save a few quizzes (both published and non-published) to the database and send a request. Then, the response should have a list of the _published quizzes_
+> - `getAllQuizzesReturnsListOfQuizzesWhenPublishedQuizzesExist`: save a few _published_ quizzes to the database and send a request. Then, the response should have a list of the published quizzes
+> - `getAllQuizzesDoesNotReturnUnpublishedQuizzes`: save a few _published and unpublished_ quizzes to the database and send a request. Then, the response should only have a list of the _published_ quizzes
 >
 > Create an issue for this task.
 
