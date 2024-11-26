@@ -520,7 +520,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 > Exercise 14
 >
-> Implement a REST API endpoint for _getting the anwers of a quiz_. Return an appropriate HTTP status code and error message in the following error case:
+> Implement a REST API endpoint for _getting all the anwers (submitted by the students) of a quiz_. Return an appropriate HTTP status code and error message in the following error case:
 >
 > - Quiz with the provided id does not exist
 >
