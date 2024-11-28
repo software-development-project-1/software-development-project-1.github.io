@@ -54,8 +54,6 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > The review page should list the added reviews and display the number of reviews and the rating average of the quiz. Each review should display the information submitted by the student and the date when the review was written. It should also be possible for the student to edit and delete reviews in the review page."
 >
-> Students have different skill levels so it would be useful if the student could filter the questions of quiz by the difficulty level in the quiz page. There could be dropdown menu at the top of the page from which the student can select the difficulty level for the questions.
->
 > -- The Product Owner
 
 After some discussion the Scrum Team planned the following user stories for the _student dashboard_ application:
@@ -64,7 +62,6 @@ After some discussion the Scrum Team planned the following user stories for the 
 2. {{site.sprint_3_user_story_2}}
 3. {{site.sprint_3_user_story_3}}
 4. {{site.sprint_3_user_story_4}}
-5. {{site.sprint_3_user_story_5}}
 
 {: .important-title }
 
@@ -121,18 +118,6 @@ After some discussion the Scrum Team planned the following user stories for the 
 > Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
-
-{: .important-title }
-
-> Exercise 9
->
-> Plan the tasks for the fifth user story, "{{site.sprint_3_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
->
-> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
->
-> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
->
-> ![](/assets/sprint-3-us-5-difficulty-picker.png)
 
 ## Testing
 

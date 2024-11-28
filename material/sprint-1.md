@@ -516,17 +516,33 @@ The description should be so clear that your fellow student who knows nothing ab
 >
 > You can assume that the reader of the `README.md` file is a software developer who knows how to use a command-line interface, the basic Git commands and install the required Java version. _Make sure that instructions on the developer guide work_ by cloning a new version of the repository and executing the steps on the developer guide one by one.
 
-## Deployment
+## Production deployment
 
 So far we have been using and developing our application in an isolated environment on our own computer. This environment used during the development of the application is referred to as the _development environment_. In the software development lifecycle the _deployment phase_ is the phase in which the implemented software is distributed to the users. For example, a web application is published online so that users can access it with their web browsers. This environment is referred to as the _production environment_.
 
-The deployment phase is crucial because unless users can use the application, it has no real value for the stakeholders. That is why in the agile software development process, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint. There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). During the course, we will learn how to deploy our application to Render.
+The deployment phase is crucial because unless users can use the application, it has no real value for the stakeholders. That is why in the agile software development process, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint.
 
-Let's have a look, how we can deploy our application to Render so that the users can start using it. First, [sign in](https://dashboard.render.com/) to Render using your GitHub account. Then, we will need to set up a _production database_ for our application. The H2 database is convenient in the development environment but not suitable for the production environment. We can create a [PostgreSQL](https://www.postgresql.org/) database instance in Render dashboard by clicking the "New" button on the navigation bar and choosing "PostgreSQL". Name the PostgreSQL instance "quizzer-database" and the database "quizzer". Then, scroll to the bottom and click the "Create database" button.
+There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). Our production environment will consist of two components: a _production database_ and a _production web server_ (for the Spring Boot backend application). These components are deployed separately: the database to the [Aiven](https://aiven.io/) platform and the web server to the [Render](https://render.com/) platform. 
 
-Once the PostgreSQL instance has been created, open its information in the Render dashboard. In the PostgreSQL instance's page, scroll to "Connections" section. Copy the values for "Username", "Password" and "Internal Database URL" and paste the values temporary to an editor. We will need these values soon.
+```mermaid
+flowchart LR
+    server(Backend application)-->db[(Database)]
+```
 
-Render supports deploying [Docker](https://www.docker.com/) containers which are isolated environments for running all kinds of applications. A Docker image is a set of instructions used to run containers. These instructions are defined with a [Dockerfile](https://docs.docker.com/engine/reference/builder/). Add the following `Dockerfile` file (the file name is just `Dockerfile` without a file extension) to the root folder of the Maven project (same folder that has the `pom.xml` file):
+### Production database
+
+To get started with the deployment, we will need to set up a _production database_ for our application. The H2 database is convenient in the development environment but not suitable for the production environment. Instead, we will be using a [PostgreSQL](https://www.postgresql.org/) database hosted in the [Aiven](https://aiven.io/) platform. Complete the following steps to create a PostgreSQL database in the Aiven dashboard:
+
+1. [Sign up](https://console.aiven.io/signup) to Aiven using your GitHub account and go through the sign up process. The information you provide in the sign up process doesn't matter
+2. Once you have completed the sign up and you are in the Aiven dashboard, choose "PostgreSQL" in the "Create new service" section
+3. Choose "Free plan" and click the "Create free service" button. Go through the setup steps (you don't need to change any information in the steps) 
+4. After finishing the setup, click the "Quick connect" button and choose "Java" from the "Connect with" dropdown menu. Copy the JDBC URI (starting with `jdbc:postgresql//...`) by clicking the "Copy to clipboard" button next to the URI. _Save the JDBC URI somewhere_ (e.g. in an editor), we'll need it soon.
+
+### Production web server
+
+Once we have the PostgreSQL database setup, we will need to setup a _production web server_ for our application. Render supports deploying [Docker](https://www.docker.com/) containers which are isolated environments for running all kinds of applications. 
+
+A Docker image is a set of instructions used to run containers. These instructions are defined with a [Dockerfile](https://docs.docker.com/engine/reference/builder/). Add the following `Dockerfile` file (the file name is just `Dockerfile` without a file extension) to the root folder of the Maven project (same folder that has the `pom.xml` file):
 
 ```dockerfile
 FROM maven:3.8.7-openjdk-18-slim AS build
@@ -551,8 +567,6 @@ Because we use PostgreSQL as the production database, we will need to specific p
 ```
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 spring.datasource.url=${POSTGRES_URL}
-spring.datasource.username=${POSTGRES_USERNAME}
-spring.datasource.password=${POSTGRES_PASSWORD}
 spring.datasource.driver-class-name=org.postgresql.Driver
 spring.jpa.hibernate.ddl-auto=update
 ```
@@ -573,24 +587,19 @@ Now that we have the database-related changes in order, push these changes to Gi
 
 Finally, for the application itself, we need to create a web service. Complete the following steps to create a web service in the Render dashboard:
 
-1. Click the "New" button on the navigation bar and choose "Web Service"
-2. Choose "Build and deploy from a Git repository" and click the "Next" button
-3. In the create web service page, click "Configure accounts" in the "Github" section on the right. Choose your GitHub organization from the list, choose "All repositories" and click the "Install" button
-4. Back in the create web service page, choose your project repository in the "Connect a repository" section by clicking the "Connect" button next to the repository's name
-5. Come up with a name for the web service that isn't already in use. The name will be visible in the application's URL so try to come up with a sensible name
-6. Choose "Docker" as the runtime in the dropdown menu
-7. _If your Maven project is inside a sub folder in the repository_, set the "Root Directory" as the name of that folder
-8. Click the "Advanced" button at the bottom of the page. In the advanced options section, click the "Add environment variable" button to add three environment variables (key, value):
+1. [Sign up](https://dashboard.render.com/) to Render using your GitHub account and go through the sign up process. The information you provide in the sign up process doesn't matter
+2. Once you have completed the sign up and you are in the Render dashboard, click the "New" button on the navigation bar and choose "Web Service"
+3. Choose "Public Git Repository", put the URL of your GitHub repository to the field and click the "Connect" button
+4. Choose "Docker" from the "Language" dropdown menu
+5. _If your Maven project is inside a sub folder in the repository_, set the "Root Directory" as the name of that folder
+6. In the "Instance Type" section, choose "Free"
+7. In the "Environment Variables" section, add these two environment variables (key, value):
 
-   - `POSTGRES_URL`: the _internal URL in correct format_ of the PostgreSQL instance. Basically, you can take everything _after_ the `postgresql://` part in the internal URL you copied previously and the environment variable value is `jdbc:postgresql://<everything-after-the-@-symbol>`. For example with URL `postgresql://quizzer_user:super_secret_password_1234@dpg-abcd1234/quizzer_database`, the correctly formatted URL would be `jdbc:postgresql://dpg-abcd1234/quizzer_database`
-   - `POSTGRES_USERNAME`: the _username_ of the PostgreSQL instance
-   - `POSTGRES_PASSWORD`: the _password_ of the PostgreSQL instance
+   - `POSTGRES_URL`: the JDBC URI (starting with `jdbc:postgresql//...`) you copied previously from the Aiven dashboard while setting up the PostgreSQL database
    - `SPRING_PROFILES_ACTIVE`: set as `production`
 
-   ![Render environment variables](/assets/render-environment-variables.png)
-
-9. Set "Auto-Deploy" as "No" from the dropdown menu
-10. Click the "Create Web service" button at the bottom of the page
+8. In the "Advanced" section, set "Auto-Deploy" as "No" from the dropdown menu
+9. Click the "Deploy Web service" button at the bottom of the page
 
 Open the created web service in the Render dashboard. The deployment of the application should have started and it will take some time to finish. You can always deploy the application by clicking the "Manual Deploy" button and choosing "Deploy latest commit". Once the deployment is complete the application will be accessible to everyone in the URL that is displayed under the web service's name.
 
@@ -603,6 +612,10 @@ Open the created web service in the Render dashboard. The deployment of the appl
 > Exercise 23
 >
 > Deploy the backend application to a production environment. _Test that the application works in the production envinronment_ by adding a quiz with some questions and answer options. Add the production environment URL of the backend application (the web service URL in the Render dashboard) to the project description section in the `README.md` file.
+
+{: .note }
+
+> You don't have wait until the end of the Sprint for the deployment. Once you have a meaningful set of features implemented, deploy the application and test that the new features work in the production environment. In real software development projects deployments commonly occur daily or even [a hundred times a day](https://www.infoq.com/news/2013/06/netflix/).
 
 ## GitHub release
 
@@ -742,10 +755,6 @@ A quite common practice is to separate the development and production code with 
 > 2. Open the backend web service in the Render Dashboard and go to the "Settings" page. In the "Build & Deploy" section, set the "Branch" as "production" and "Auto-Deploy" as "Yes"
 > 3. Switch back to the main branch and make some small change in the code and push the changes to GitHub. Then, open a pull request. Set the _base_ branch as the `production` branch and the _compare_ branch as the `main` branch
 > 4. Merge the pull request and check that the deployment works automatically
-
-{: .note }
-
-> When you want to deploy the application to the production environment, open a pull request as described above. _Don't wait until the end of the Sprint for the deployment_. Once you have a meaningful set of features implement, deploy the application and _test that the new features work in the production environment_.
 
 {: .highlight }
 

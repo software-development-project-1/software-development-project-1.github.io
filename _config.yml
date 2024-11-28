@@ -7,6 +7,8 @@ url: ""
 theme: just-the-docs
 plugins:
   - jekyll-feed
+mermaid:
+  version: "11.4.1"
 callouts:
   important:
     title: Important
