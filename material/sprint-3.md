@@ -496,7 +496,6 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getQuestionsByQuizIdReturnsEmptyListWhenQuizDoesNotHaveQuestions`: save a quiz without questions to the database and send a request. Then, the response should have an empty list
 > - `getQuestionsByQuizIdReturnsListOfQuestionsWhenQuizHasQuestions`: save a quiz with a few questions and answer options to the database and send a request. Then, the response should have a list of the quiz's questions. Remember to also check, that the _response contains the answer options of each question_
 > - `getQuestionsByQuizIdReturnsErrorWhenQuizDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
-> - An appropriate test methods for testing that the difficulty level filtering works
 
 {: .important-title }
 
