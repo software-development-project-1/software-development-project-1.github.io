@@ -5,10 +5,6 @@ permalink: /git
 nav_order: 4
 ---
 
-<!--
-TODO: tehtävät 1 ja 2 edelliselle viikolle. Git practice README. GitHub projects?
- -->
-
 {% include toc.html %}
 
 # Version control: Git and GitHub
@@ -386,20 +382,9 @@ We'll start by making changes to the project via GitHub. You can edit files via 
 
 ![Pen icon at GitHub](/assets/edit.png)
 
-Next we'll add a new line of text to `git_practice.txt`, and create a commit of the change by clicking the green "Commit changes..." on top right corner and then inside the dialog click the green "Commit changes" button.
+Next we'll add a new line of text to `git_practice.txt`, and create a commit of the change by clicking the green "Commit changes..." on top right corner and then inside the dialog click the green "Commit changes" button. Now, if you take a look at the repository's files on your local computer, you can't see these changes locally. This is because our local version and the remote version of the repository aren't in sync.
 
-Now, if you take a look at the repository's files on your local computer, you can't see these changes locally. We'll run the following commands:
-
-```bash
-git fetch
-git status
-```
-
-The command `git fetch` fetches the newest state of the project from GitHub, but doesn't change the local version. _If you find that `git status` doesn't show up-to-date information about the state of the remote, you should run `git fetch` first_.
-
-We still can't see the new line of text locally. However, if you pushed with the flag `-u`, Git will notice that the remote repository contains some changes it doesn't see locally: `Your branch is behind 'origin/main'`is printed at the top of the status output.
-
-You can get the new changes to the local version by running `git pull`. If you used the flag `-u` with `push` earlier, there is no need to specify a remote or a branch. We'll run `git pull`, which results in an output along the lines of the following:
+We can get the new changes to our local version by running `git pull`. If you used the flag `-u` with `push` earlier, there is no need to specify a remote or a branch. We'll run `git pull`, which results in an output along the lines of the following:
 
 ```bash
 remote: Counting objects: 3, done.
@@ -416,10 +401,6 @@ Fast-forward
 ```
 
 Now you can find the new line of text in the file you changed via GitHub.
-
-{: .note }
-
-> Using the `git fetch` command is rarely necessary. You can just use the `git pull` command to both fetch the latest changes from the remote repository and apply them to your local repository. [This](https://about.gitlab.com/blog/2024/09/24/git-pull-vs-git-fetch-whats-the-difference/) article covers the differences in more detail.
 
 {: .important-title }
 
