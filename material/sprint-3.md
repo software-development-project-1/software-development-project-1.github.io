@@ -56,6 +56,10 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > -- The Product Owner
 
+<!--
+Students have different skill levels so it would be useful if the student could filter the questions of quiz by the difficulty level in the quiz page. There could be dropdown menu at the top of the page from which the student can select the difficulty level for the questions.
+-->
+
 After some discussion the Scrum Team planned the following user stories for the _student dashboard_ application:
 
 1. {{site.sprint_3_user_story_1}}
