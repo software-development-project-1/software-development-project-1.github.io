@@ -123,6 +123,20 @@ After some discussion the Scrum Team planned the following user stories for the 
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
+<!--
+{: .important-title }
+
+> Exercise 9
+>
+> Plan the tasks for the fifth user story, "{{site.sprint_3_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-3-us-5-difficulty-picker.png)
+-->
+
 ## Testing
 
 When we implement a new feature for the application we need to make sure that it works as intended. That is, we _test_ the implementation of a feature against the requirements. During the development of a feature we are constantly performing _manual testing_ for the implementation, meaning that we use the application ourselfs and see that we can perform certain actions successfully.
