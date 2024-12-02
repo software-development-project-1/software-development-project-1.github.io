@@ -92,7 +92,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". The teacher should not be able to add more than one category with the same name. There should be a form for adding a category and a separate page for listing the added categories. The category list should have a delete button next to each category, which can be clicked to delete the category.
 >
-> The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu in both forms where categories are listed. It should also be possible to leave a quiz uncategorized by not choosing a category for the quiz.
+> The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu in both forms where categories are listed. It should also be possible to leave a quiz uncategorized by not choosing a category for the quiz. Deleting a category should leave the related quizzes uncategorized.
 >
 > Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description, category and the date when it was added.
 >
