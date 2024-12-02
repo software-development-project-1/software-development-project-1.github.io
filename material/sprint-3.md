@@ -56,6 +56,10 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > -- The Product Owner
 
+<!--
+Students have different skill levels so it would be useful if the student could filter the questions of quiz by the difficulty level in the quiz page. There could be dropdown menu at the top of the page from which the student can select the difficulty level for the questions.
+-->
+
 After some discussion the Scrum Team planned the following user stories for the _student dashboard_ application:
 
 1. {{site.sprint_3_user_story_1}}
@@ -118,6 +122,20 @@ After some discussion the Scrum Team planned the following user stories for the 
 > Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
+
+<!--
+{: .important-title }
+
+> Exercise 9
+>
+> Plan the tasks for the fifth user story, "{{site.sprint_3_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
+>
+> Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
+>
+> The Scrum Team's UI Designer's vision is that the implementation could look something like this:
+>
+> ![](/assets/sprint-3-us-5-difficulty-picker.png)
+-->
 
 ## Testing
 
@@ -496,7 +514,6 @@ While testing your application's REST API endpoints, refer to the examples above
 > - `getQuestionsByQuizIdReturnsEmptyListWhenQuizDoesNotHaveQuestions`: save a quiz without questions to the database and send a request. Then, the response should have an empty list
 > - `getQuestionsByQuizIdReturnsListOfQuestionsWhenQuizHasQuestions`: save a quiz with a few questions and answer options to the database and send a request. Then, the response should have a list of the quiz's questions. Remember to also check, that the _response contains the answer options of each question_
 > - `getQuestionsByQuizIdReturnsErrorWhenQuizDoesNotExist`: send a request without saving a quiz to the database. Then, the response should have an appropriate HTTP status
-> - An appropriate test methods for testing that the difficulty level filtering works
 
 {: .important-title }
 
