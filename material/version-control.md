@@ -672,7 +672,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 
 > Exercise 15
 >
-> _This is a team exercise_. Next, we'll start working on the project by doing some setup work. If you are uncertain who your team members are, check their names on [Moodle]({{site.moodle_link}}). Get to know each other by introducing yourself to other team members. You can e.g. share the following things about yourself:
+> _This is a team exercise_. Next, we'll start working on the project by doing some setup work. If you are uncertain who your team members are, check their names in Moodle. Get to know each other by introducing yourself to other team members. You can e.g. share the following things about yourself:
 >
 > - Which parts of software development you are most interested in? (e.g. backend development, frontend development, databases...)
 > - Which parts are you the most comfortable with?

@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Sprint 3
-permalink: /sprint-3-todo
+title: 🏃‍♂️ Sprint 3
+permalink: /sprint
 nav_order: 8
-nav_exclude: true
 ---
 
 {% include toc.html %}
@@ -570,7 +569,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Writing a peer review for each team member and receiving a passing grade from the peer reviews is required to pass the course.
 
-The peer review is used to assess each team member. The 10 personal points are based on the peer reviews and the teacher's observations. _Every team member must write a peer review_.
+The peer review is used to assess each team member. The 20 personal points are based on the peer reviews and the teacher's observations. _Every team member must write a peer review_.
 
 The peer review is conducted with a form. You will receive the link to the form via email from the teacher at the beginning of the Sprint. In the form you will need to assess every team member's (including yourself) efforts in the team work in the following aspects:
 
@@ -596,7 +595,7 @@ Write the final report for the course, which covers the following questions:
 - Based on your experiences during the course, what would be three important advice you would give to a new software development team? Justify why these advice are important
 - What did you learn during the course? What would you have wanted to learn more about?
 
-Submit the final report as _a single PDF file_ to [Moodle]({{site.final_report_moodle_submission_link}}) (you'll find the submission in the "Exercise submissions" tab).
+Submit the final report as _a single PDF file_ to Moodle (you'll find the submission in the "Exercise submissions" tab).
 
 {: .important-title }
 

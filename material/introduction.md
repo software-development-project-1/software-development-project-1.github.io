@@ -15,7 +15,7 @@ TODO: move git and github setup exercise here
 
 ## Submitting this week's exercises
 
-Submit this week's exercises to [Moodle]({{site.week_1_moodle_link}}) (you'll find the submission in the "Exercise submissions" tab) as a _single PDF file_. The submission deadline is on {{site.week_1_deadline}}.
+Submit this week's exercises to Moodle (you'll find the submission in the "Exercise submissions" tab) as a _single PDF file_. The submission deadline is on {{site.week_1_deadline}}.
 
 {: .highlight }
 
