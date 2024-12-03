@@ -146,7 +146,7 @@ Manual testing is important, but we can't perform it _at scale_. When our applic
 
 Fowler categorizes different tests in three categories: _unit_, _service_ and _UI_ (user interface) tests. The test pyramid represents the _amount_ of these different kind of tests we should have for our application. There are pros and cons for the different kind of tests. While we go up in the pyramid we get better reliability that our application works as inteaded as a whole, but the tests becomes _laborious to maintain_, _difficult to implement_, and _time consuming to run_. This is why our test portfolio should be balanced.
 
-Automated tests are implemented with programming language specific _testing frameworks_, such as Java's [JUnit](https://junit.org/junit5/) and JavaScript's [Vitest](https://vitest.dev/). During this Sprint we will implement some integration tests for our backend's REST API endpoints using JUnit and the [MockMVC](https://docs.spring.io/spring-framework/reference/testing/spring-mvc-test-framework.html) framework.
+Automated tests are implemented with programming language specific _testing frameworks_, such as Java's [JUnit](https://junit.org/junit5/) and JavaScript's [Vitest](https://vitest.dev/). During this Sprint we will implement some integration tests for our backend's REST API endpoints using JUnit and the [MockMVC](https://spring.io/guides/gs/testing-web) framework.
 
 ### Unit tests
 
