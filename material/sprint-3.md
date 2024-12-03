@@ -595,7 +595,7 @@ Write the final report for the course, which covers the following questions:
 - Based on your experiences during the course, what would be three important advice you would give to a new software development team? Justify why these advice are important
 - What did you learn during the course? What would you have wanted to learn more about?
 
-Submit the final report as _a single PDF file_ to Moodle (you'll find the submission in the "Exercise submissions" tab).
+Submit the final report as _a single PDF file_ to Moodle (you'll find the submission in the "Exercise submissions" tab). Your final points will be visible in the submission's feedback once the assesment is done. Contact the teacher, if you have questions related to your assesment.
 
 {: .important-title }
 
