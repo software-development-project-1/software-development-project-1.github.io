@@ -279,7 +279,7 @@ public class MessageRestController {
 
     @PostMapping("/messages")
     public Message createMessage(@Valid @RequestBody CreateMessageDto message, BindingResult bindingResult) {
-        // Check if message violates validations defined by the CreateMessageDTO class
+        // Check if message object violates any validations defined by the CreateMessageDTO class
         if (bindingResult.hasErrors()) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
         }
@@ -331,6 +331,7 @@ In the controller method, the request body is mapped to a `CreateUserDto` object
 @PostMapping("/users")
 // The CreateUserDto class defines the request body
 public User createUser(@Valid @RequestBody CreateUserDto user, BindingResult bindingResult) {
+    // Check if user object violates any validations defined by the CreateUserDto class
     if (bindingResult.hasErrors()) {
         throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
     }
@@ -343,13 +344,14 @@ public User createUser(@Valid @RequestBody CreateUserDto user, BindingResult bin
 }
 ```
 
-This corresponds to the following JSON format for the request body:
+This corresponds to the following JSON format for the _request body_:
 
 ```json
 { "username": "kalle", "password": "supersecret9000" }
 ```
 
-Similarly, we can use DTOs to control the attributes in the response body (as in the previous example). For example, _we don't want to send the user's password hash in the response_. We can control the attributes using a `PublicUserDto` class:
+
+Similarly, we can use DTOs to control the attributes in the response body (as in the previous example). For example, _we don't want to send the user's password hash in the response_. We can control the desired attributes using a `PublicUserDto` class:
 
 ```java
 public class PublicUserDto {
