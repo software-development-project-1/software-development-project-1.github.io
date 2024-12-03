@@ -682,6 +682,10 @@ public class UserRestController {
 }
 ```
 
+{: .note }
+
+> Having separate REST controller class for each collection also improves the code quality by making it easier to find relevant endpoints.
+
 {: .important-title }
 
 > Exercise 18
