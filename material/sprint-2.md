@@ -582,25 +582,12 @@ Then, let's start our application and open <http://localhost:8080/v3/api-docs> i
 
 We can find documentation for each REST API endpoint under the section named by the REST controller class. We see all relevant information about the endpoint: the path, path parameters, and an example of the response. We can send a test request by clicking the "Try it out" button on the right. This is handy while we are exploring an API that we aren't familiar with.
 
-We can provide more details about the endpoints by using specific annotations for the controller classes and methods. As an example, we could provide a better name and a description for the message API using the `@Tag` annotation:
+We can provide more details about the endpoints by using specific annotations for the controller classes and methods. We can also provide more information about a specific endpoint using the `@Operation` annotation:
 
 ```java
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
-@Tag(name = "Message", description = "Operations for accessing and managing messages")
-public class MessageRestController {
-    // ...
-}
-```
-
-We can also provide more information about a specific endpoint using the `@Operation` annotation:
-
-```java
-@RestController
-@RequestMapping("/api")
-@CrossOrigin(origins = "*")
-@Tag(name = "Message", description = "Operations for accessing and managing messages")
 public class MessageRestController {
     // ...
 
@@ -637,11 +624,69 @@ public Message getMessageById(@PathVariable Long id) {
 
 > We cannot define more than one `@ApiResponse` annotation with the same `responseCode` property (HTTP status code) inside a `@ApiResonses` annotation.
 
+The `@Tag` annotation can be used to group endpoints, usually based on the REST API collection name, such as "messages" or "users":
+
+```java
+@Tag("Messages")
+@Operation(/* ... */)
+@ApiResponses(/* .. */)
+@GetMapping("/messages")
+public Message getAllMessages(@PathVariable Long id) {
+    // ...
+}
+
+@Tag("Messages")
+@Operation(/* ... */)
+@ApiResponses(/* .. */)
+@GetMapping("/messages/{id}")
+public Message getMessageById(@PathVariable Long id) {
+    // ...
+}
+
+@Tag("Users")
+@Operation(/* ... */)
+@ApiResponses(/* .. */)
+@GetMapping("/users")
+public Message getAllUsers(@PathVariable Long id) {
+    // ...
+}
+
+@Tag("Users")
+@Operation(/* ... */)
+@ApiResponses(/* .. */)
+@GetMapping("/users/{id}")
+public Message getUserById(@PathVariable Long id) {
+    // ...
+}
+```
+
+In this example, the Swagger documentation would have two separate sections, "Messages" and "Users", which would contain the endpoints in the specific group. Grouping the endpoints using the `@Tag` operation makes it easier to find relevant endpoints in the Swagger documentation more easily.
+
+It is also possible to have separate REST API controller classes for each collection and apply the `@Tag` annotation to the class instead of individual methods:
+
+```java
+@RestController
+@RequestMapping("/api/messages")
+@CrossOrigin(origins = "*")
+@Tag("Messages")
+public class MessageRestController {
+    // ...
+}
+
+@RestController
+@RequestMapping("/api/users")
+@CrossOrigin(origins = "*")
+@Tag("Users")
+public class UserRestController {
+    // ...
+}
+```
+
 {: .important-title }
 
 > Exercise 18
 >
-> Generate a Swagger documentation for the project as described above. Add proper name and description for all REST controller classes using the `@Tag` annotation. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response.
+> Generate a Swagger documentation for the project as described above. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response. Group the endpoints based on the endpoint's collection name using the `@Tag` annotation.
 >
 > Test all the REST API endpoints you have implemented by opening the endpoint's documentation and clicking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an id path parameter value of a non-existing quiz. Add a link to the Swagger documentation (at <http://localhost:8080/swagger-ui/index.html>) under a "REST API" subheading in the `README.md` file.
 
