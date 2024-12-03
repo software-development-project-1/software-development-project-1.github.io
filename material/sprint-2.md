@@ -318,7 +318,10 @@ For example, let's assume that we have a `User` entity with `id`, `username`, `p
 
 ```java
 public class CreateUserDto {
+    // @NotBlank and @Size annotations are used for validation
+    @NotBlank(message = "Username is required")
     private String username;
+    @Size(min = 8, message = "Password should be at least 8 characters long")
     private String password;
 
     // constructors, getters and setters
@@ -349,7 +352,6 @@ This corresponds to the following JSON format for the _request body_:
 ```json
 { "username": "kalle", "password": "supersecret9000" }
 ```
-
 
 Similarly, we can use DTOs to control the attributes in the response body (as in the previous example). For example, _we don't want to send the user's password hash in the response_. We can control the desired attributes using a `PublicUserDto` class:
 
