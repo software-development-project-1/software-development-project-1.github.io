@@ -47,11 +47,11 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 3 goals in the Sprint Planning event:
 
-> "We now have the basic features for managing and taking quizzes. What we still need is a way for the students to share their thoughts about quizzes by writing reviews in the student dashboard.
+> _"We now have the basic features for managing and taking quizzes. What we still need is a way for the students to share their thoughts about quizzes by writing reviews in the student dashboard._
 >
-> The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should not be able to review a non-published quiz.
+> _The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should not be able to review a non-published quiz._
 >
-> The review page should list the added reviews and display the number of reviews and the rating average of the quiz. Each review should display the information submitted by the student and the date when the review was written. It should also be possible for the student to edit and delete reviews in the review page."
+> _The review page should list the added reviews and display the number of reviews and the rating average of the quiz. Each review should display the information submitted by the student and the date when the review was written. It should also be possible for the student to edit and delete reviews in the review page."_
 >
 > -- The Product Owner
 
@@ -258,7 +258,7 @@ The configuration in the `src/test/resources/application.properties` file will b
 
 ## Testing REST API endpoints
 
-> "Write tests. Not too many. Mostly integration."
+> _"Write tests. Not too many. Mostly integration."_
 >
 > -- Kent C. Dodds
 
@@ -484,13 +484,13 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > You can run the tests for the project either in your editor or by running the `./mvnw test` command on the command-line.
 
-{: .highlight }
-
-> If the implementation of the endpoint doesn't work as described in the test scenarios, fix the implementation.
-
 {: .note }
 
 > To keep the tests organized, it is good idea to implement a separate test class for each REST collection (e.g. "quizzes" and "categories").
+
+{: .highlight }
+
+> If the implementation of the endpoint doesn't work as described in the test scenarios, fix the implementation.
 
 {: .important-title }
 

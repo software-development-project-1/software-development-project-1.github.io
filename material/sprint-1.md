@@ -33,15 +33,15 @@ For example, let's consider the following user story:
 
 During Sprint Planning Developers discuss the technical steps required to implement the described feature:
 
-> "We'll need a page with a form that has text fields for the blog's name and description. Also, there needs to be a button to submit the form."
+> _"We'll need a page with a form that has text fields for the blog's name and description. Also, there needs to be a button to submit the form."_
 >
 > -- John, one of the Developers
 
-> "That's right, John. To render the page we'll need a controller class for the backend. The controller class should have a method that renders the template of the page. Maybe the class name could be for example BlogController. What do you guys think?"
+> _"That's right, John. To render the page we'll need a controller class for the backend. The controller class should have a method that renders the template of the page. Maybe the class name could be for example BlogController. What do you guys think?"_
 >
 > -- Mary, one of the Developers
 
-> "Sounds good to me, Mary. What about the form submission? I think we need a controller method for that as well. We should add a new blog entry to the database based on the submitted name and description. For this we could use the H2 database and Hibernate. We need a JPA entity and JPA repository class class for the blog.
+> _"Sounds good to me, Mary. What about the form submission? I think we need a controller method for that as well. We should add a new blog entry to the database based on the submitted name and description. For this we could use the H2 database and Hibernate. We need a JPA entity and JPA repository class class for the blog."_
 >
 > -- Jane, one of the Developers
 
@@ -103,7 +103,7 @@ Taskboards in GitHub Projects are called _projects_. Let's create a project for 
 
 We now have a project with the default columns: "Todo", "In progress" and "Done". The column will determine the status of the backlog items. We can edit the column names by clicking the three dots at the top-right corner of the column. We can add a new column by pressing the "+" button on the right side of the last column. Let's change the columns so that they are the following from left to right:
 
-- "Product Backlog". This column is for the _Product Backlog_ items. That is, items that are requirements for the project but aren't currently worked on. The items should be listed in the priority order  defined by the Product Owner.
+- "Product Backlog". This column is for the _Product Backlog_ items. That is, items that are requirements for the project but aren't currently worked on. The items should be listed in the priority order defined by the Product Owner.
 - "Sprint Backlog". This column is for the _Sprint Backlog_ items. That is, user stories and tasks that are chosen for the current Sprint.
 - "In progress". This column is for the items that some team member is currently working on.
 - "Done". This column is for the items that have been completed.
@@ -126,23 +126,23 @@ The project will be empty for now, but we will add some user stories and tasks f
 
 Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Planning event:
 
-> "To get started with the project, we need to implement a basic set of features for the teacher dashboard application so that the teachers can manage quizzes and their questions and answer options.
+> _"To get started with the project, we need to implement a basic set of features for the teacher dashboard application so that the teachers can manage quizzes and their questions and answer options._
 >
-> The teacher should be able to add a quiz using a form. A quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries" and a published status. A quiz is either published or not. Students can only see and take published quizzes. Each of these values should have a field in the form.
+> _The teacher should be able to add a quiz using a form. A quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries" and a published status. A quiz is either published or not. Students can only see and take published quizzes. Each of these values should have a field in the form._
 >
-> The front page of the application should have a list of added quizzes. The list should display the information provided by the teacher while adding the quiz and the date when the quiz was added. The page should also have a link that takes the teacher to the page where they can add a quiz.
+> _The front page of the application should have a list of added quizzes. The list should display the information provided by the teacher while adding the quiz and the date when the quiz was added. The page should also have a link that takes the teacher to the page where they can add a quiz._
 >
-> The teacher should be able to edit the information of a quiz if, for example they want to publish the quiz or change its name or description. The quiz list should have a link next to each quiz which takes the teacher to an edit form, where they can edit all the information of the quiz. The teacher should also be able to get rid of quizzes they don't need. There should be a delete button next to each quiz in the quiz list. When the user clicks the button, the quiz should be deleted.
+> _The teacher should be able to edit the information of a quiz if, for example they want to publish the quiz or change its name or description. The quiz list should have a link next to each quiz which takes the teacher to an edit form, where they can edit all the information of the quiz. The teacher should also be able to get rid of quizzes they don't need. There should be a delete button next to each quiz in the quiz list. When the user clicks the button, the quiz should be deleted._
 >
-> The teacher should be able to add questions to a quiz. For example, the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal".
+> _The teacher should be able to add questions to a quiz. For example, the "The capital cities of Europe" quiz could have a question "What is the capital of Finland?". A question has a question text, for example "What is the capital of Finland?" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal"._
 >
-> The questions of a quiz should be listed on a separate page. Once a question has been added to a quiz, the teacher should be able to delete it.
+> _The questions of a quiz should be listed on a separate page. Once a question has been added to a quiz, the teacher should be able to delete it._
 >
-> The teacher should be able to add answer options to a question. For example, the "What is the capital of Finland?" question could have answer options "Turku", "Helsinki" and "Tampere". An answer option has an answer option text, for example "Turku", and a correctness status. Answer is either correct or not. For example, the "Turku" answer option would not be correct where as "Helsinki" answer option would be correct.
+> _The teacher should be able to add answer options to a question. For example, the "What is the capital of Finland?" question could have answer options "Turku", "Helsinki" and "Tampere". An answer option has an answer option text, for example "Turku", and a correctness status. Answer is either correct or not. For example, the "Turku" answer option would not be correct where as "Helsinki" answer option would be correct._
 >
-> The answer options of a question should be listed on a separate page. Once an answer option has been added to a question, the teacher should be able to edit and delete it.
+> _The answer options of a question should be listed on a separate page. Once an answer option has been added to a question, the teacher should be able to edit and delete it._
 >
-> If would be great if we would be able to get started with the student dashboard application as well. A page with a simple list of published quizzes would be enough at this point."
+> _If would be great if we would be able to get started with the student dashboard application as well. A page with a simple list of published quizzes would be enough at this point."_
 >
 > -- The Product Owner
 
@@ -330,7 +330,7 @@ The Daily Scrum is a 15-minute event, commonly held on daily basis. The purpose 
 
 For example this could be a one team member's statement during the Daily Scrum:
 
-> "Yesterday I started implementing the task for the blog listing template. I'll continue working on that today. I had some trouble while trying to iterate a list in the template. I don't remember the syntax. Could anyone have a look at it with me after the Daily Scrum?"
+> _"Yesterday I started implementing the task for the blog listing template. I'll continue working on that today. I had some trouble while trying to iterate a list in the template. I don't remember the syntax. Could anyone have a look at it with me after the Daily Scrum?"_
 >
 > -- Jane, one of the Developers
 
@@ -430,7 +430,7 @@ The Product Owner wants us to get started with the student dashboard application
 >
 > Here's an example of a REST controller class and a REST API method for getting all messages:
 >
-> ```java 
+> ```java
 > @RestController
 > @RequestMapping("/api")
 > @CrossOrigin(origins = "*")
@@ -448,8 +448,9 @@ The Product Owner wants us to get started with the student dashboard application
 > In this example, the frontend would be able fetch all the messages in the following way:
 >
 > ```javascript
-> fetch("http://localhost:8080/api/messages")
->   .then((messages) => console.log(messages))
+> fetch("http://localhost:8080/api/messages").then((messages) =>
+>   console.log(messages)
+> );
 > ```
 
 ### Cross-Origin Resource Sharing (CORS)
@@ -522,7 +523,7 @@ So far we have been using and developing our application in an isolated environm
 
 The deployment phase is crucial because unless users can use the application, it has no real value for the stakeholders. That is why in the agile software development process, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint.
 
-There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). Our production environment will consist of two components: a _production database_ and a _production web server_ (for the Spring Boot backend application). These components are deployed separately: the database to the [Aiven](https://aiven.io/) platform and the web server to the [Render](https://render.com/) platform. 
+There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). Our production environment will consist of two components: a _production database_ and a _production web server_ (for the Spring Boot backend application). These components are deployed separately: the database to the [Aiven](https://aiven.io/) platform and the web server to the [Render](https://render.com/) platform.
 
 ```mermaid
 flowchart LR
@@ -535,12 +536,12 @@ To get started with the deployment, we will need to set up a _production databas
 
 1. [Sign up](https://console.aiven.io/signup) to Aiven using your GitHub account and go through the sign up process. The information you provide in the sign up process doesn't matter
 2. Once you have completed the sign up and you are in the Aiven dashboard, choose "PostgreSQL" in the "Create new service" section
-3. Choose "Free plan" and click the "Create free service" button. Go through the setup steps (you don't need to change any information in the steps) 
+3. Choose "Free plan" and click the "Create free service" button. Go through the setup steps (you don't need to change any information in the steps)
 4. After finishing the setup, click the "Quick connect" button and choose "Java" from the "Connect with" dropdown menu. Copy the JDBC URI (starting with `jdbc:postgresql//...`) by clicking the "Copy to clipboard" button next to the URI. _Save the JDBC URI somewhere_ (e.g. in an editor), we'll need it soon.
 
 ### Production web server
 
-Once we have the PostgreSQL database setup, we will need to setup a _production web server_ for our application. Render supports deploying [Docker](https://www.docker.com/) containers which are isolated environments for running all kinds of applications. 
+Once we have the PostgreSQL database setup, we will need to setup a _production web server_ for our application. Render supports deploying [Docker](https://www.docker.com/) containers which are isolated environments for running all kinds of applications.
 
 A Docker image is a set of instructions used to run containers. These instructions are defined with a [Dockerfile](https://docs.docker.com/engine/reference/builder/). Add the following `Dockerfile` file (the file name is just `Dockerfile` without a file extension) to the root folder of the Maven project (same folder that has the `pom.xml` file):
 
@@ -759,4 +760,3 @@ A quite common practice is to separate the development and production code with 
 {: .highlight }
 
 > Make sure that you have pushed your work to the project's GitHub repository before the Sprint 1 deadline on {{site.sprint_1_deadline}}.
-
