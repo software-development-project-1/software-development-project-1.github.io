@@ -31,7 +31,7 @@ A software development project affects many people. For example, the software's 
 
 On top of technical skills, the future of software developer's work will mostly likely consist more and more on understanding the needs of the stakeholders and applying technical solutions to meet those needs.
 
-> "If you go forward 24 months from now, or some amount of time -- I can't exactly predict where it is -- it's possible that most developers are not coding. It just means that each of us has to get more in tune with what our customers need and what the actual end thing is that we're going to try to go build because that's going to be more and more of what the work is as opposed to sitting down and actually writing code"
+> _"If you go forward 24 months from now, or some amount of time -- I can't exactly predict where it is -- it's possible that most developers are not coding. It just means that each of us has to get more in tune with what our customers need and what the actual end thing is that we're going to try to go build because that's going to be more and more of what the work is as opposed to sitting down and actually writing code"_
 >
 > -- Matt Garman, CEO of Amazon Web Services (AWS) in 2024. Source: [Amazon Cloud CEO Predicts a Future Where Most Software Engineers Don't Code -- and AI Does It Instead](https://www.entrepreneur.com/business-news/amazon-web-services-ceo-ai-will-code-for-software-engineers/478800)
 
