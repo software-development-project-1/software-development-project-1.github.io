@@ -102,7 +102,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > _There should be a page in the student dashboard where the results of a quiz are summarized. The results summarize all the answers submitted by different students to provide the teacher with an overview of how well the students know the quiz's topic. The page should display the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. Also the total number of answer and questions of a quiz should be displayed. There should be a link to the results page next to the quiz in the quiz list page._
 >
-> _Different students are interested in different quiz categories. To find interesting quizzes quickly, there should be page that lists all the categories. Clicking the category's name on the list should take the student to a page that lists the quizzes in the category. The category list page should be accessible from the navigation menu._"
+> _Different students are interested in different quiz categories. To find interesting quizzes quickly, there should be page that lists all the categories. The category list page should be accessible from the navigation menu. Clicking the category's name on the list should take the student to a page that lists the quizzes in the category. Also, the quiz's category in the quiz list should be a link to the category page."_
 >
 > -- The Product Owner
 
@@ -868,6 +868,8 @@ export default function MessageList() {
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-2-us-11-1-category-quizzes.png)
+>
+> ![](/assets/sprint-2-us-11-3-category-quizzes.png)
 >
 > ![](/assets/sprint-2-us-11-2-category-quizzes.png)
 

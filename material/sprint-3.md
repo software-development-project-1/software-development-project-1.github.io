@@ -56,6 +56,8 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 > -- The Product Owner
 
 <!--
+The review page should list the added reviews and display the number of reviews and the rating average of the quiz. There should also be a summary of how many of the five different ratings the quiz has. Each review should display the information submitted by the student and the date when the review was written. It should also be possible for the student to edit and delete reviews in the review page.
+
 Students have different skill levels so it would be useful if the student could filter the questions of quiz by the difficulty level in the quiz page. There could be dropdown menu at the top of the page from which the student can select the difficulty level for the questions.
 -->
 
