@@ -1,12 +1,21 @@
 const readline = require("readline-sync");
 
+const MIN_PASS_TOTAL_POINTS = 36;
+const MAX_TOTAL_POINTS = 60;
+const MAX_PERSONAL_POINTS = 20;
+
 function calculateGrade(points) {
-  if (points < 36) {
+  if (points < MIN_PASS_TOTAL_POINTS) {
     return 0;
-  } else if (points >= 60) {
+  } else if (points >= MAX_TOTAL_POINTS) {
     return 5;
   } else {
-    return ((points - 36) / (60 - 36)) * 5 + 1;
+    return (
+      ((points - MIN_PASS_TOTAL_POINTS) /
+        (MAX_TOTAL_POINTS - MIN_PASS_TOTAL_POINTS)) *
+        5 +
+      1
+    );
   }
 }
 
@@ -14,7 +23,7 @@ function calculatePersonalPoints(peerReviewAverage) {
   if (peerReviewAverage <= 1) {
     return 0;
   } else {
-    return ((peerReviewAverage - 1) / (5 - 1)) * 20;
+    return ((peerReviewAverage - 1) / (5 - 1)) * MAX_PERSONAL_POINTS;
   }
 }
 
