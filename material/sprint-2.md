@@ -90,7 +90,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > _"It's great that we now have the basic functionality for managing quizzes! What we now need is a way for the teacher to categorize quizzes and student to take the published quizzes._
 >
-> _To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". The teacher should not be able to add more than one category with the same name. There should be a form for adding a category and a separate page for listing the added categories. The category list should have a delete button next to each category, which can be clicked to delete the category._
+> _To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". There should be a form for adding a category and a separate page for listing the added categories. The category list should have a delete button next to each category, which can be clicked to delete the category._
 >
 > _The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu in both forms where categories are listed. It should also be possible to leave a quiz uncategorized by not choosing a category for the quiz. Deleting a category should leave the related quizzes uncategorized._
 >
