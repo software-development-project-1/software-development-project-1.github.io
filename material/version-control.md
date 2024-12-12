@@ -742,7 +742,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 {: .highlight }
 
-> Make sure that the Moodle submission contains the link to your GitHub repository created in exercise 7 and the information mentioned in exercises 15 and 16.
+> The Moodle submission should only contain the link to your GitHub repository created in exercise 7 and the information mentioned in exercises 15 and 16.
 
 ## The End
 

@@ -572,7 +572,7 @@ spring.datasource.driver-class-name=org.postgresql.Driver
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-The values inside `${...}` are [environment variables](https://en.wikipedia.org/wiki/Environment_variable). We will define them in Render soon.
+The `POSTGRES_URL` property value in the file is an [environment variable](https://en.wikipedia.org/wiki/Environment_variable). We use an environment variable because we don't want our production database connection string to end up in wrong hands in our public GitHub repository. We will define a value for the `POSTGRES_URL` environment variable in Render soon.
 
 The PostgreSQL database requires a suitable driver for the application. Let's add the PostgreSQL driver dependency to the `<dependencies>` list in the `pom.xml` file:
 
