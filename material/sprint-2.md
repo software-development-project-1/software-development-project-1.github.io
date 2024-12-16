@@ -1,8 +1,9 @@
 ---
 layout: page
 title: 🏃‍♂️ Sprint 2
-permalink: /sprint-2
+permalink: /sprint-2-todo
 nav_order: 7
+nav_exclude: true
 ---
 
 {% include toc.html %}
@@ -90,9 +91,9 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > _"It's great that we now have the basic functionality for managing quizzes! What we now need is a way for the teacher to categorize quizzes and student to take the published quizzes._
 >
-> _To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". There should be a form for adding a category and a separate page for listing the added categories. The category list should have a delete button next to each category, which can be clicked to delete the category._
+> _To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". There should not be more than one category with the same name. There should be a form for adding a category and a separate page for listing the added categories. The category list should have a delete button next to each category, which can be clicked to delete the category._
 >
-> _The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu in both forms where categories are listed. It should also be possible to leave a quiz uncategorized by not choosing a category for the quiz. Deleting a category should leave the related quizzes uncategorized._
+> _The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu listing all the categories in both forms, from which the teacher can choose the quiz's category._
 >
 > _Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description, category and the date when it was added._
 >
@@ -100,7 +101,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > _In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback dialog which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again"._
 >
-> _There should be a page in the student dashboard where the results of a quiz are summarized. The results summarize all the answers submitted by different students to provide the teacher with an overview of how well the students know the quiz's topic. The page should display the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. Also the total number of answer and questions of a quiz should be displayed. There should be a link to the results page next to the quiz in the quiz list page._
+> _There should be a page in the student dashboard where the results of a quiz are summarized. The results summarize all the answers submitted by different students to provide the teacher with an overview of how well the students know the quiz's topic. The page should display the question text, the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. Also the total number of answer and questions of a quiz should be displayed. There should be a link to the results page next to the quiz in the quiz list page._
 >
 > _Different students are interested in different quiz categories. To find interesting quizzes quickly, there should be page that lists all the categories. The category list page should be accessible from the navigation menu. Clicking the category's name on the list should take the student to a page that lists the quizzes in the category."_
 >
@@ -374,16 +375,14 @@ public List<PublicUserDto> getAllUsers() {
     return userRepository.findAll()
         .stream()
         .map(user -> new PublicUserDto(user.getId(), user.getUsername(), user.getIsAdmin()))
-        .collect(Collectors.toList());
+        .toList()
 }
 ```
 
 This corresponds to the following JSON format for the response body:
 
 ```json
-[
-  { "id": 1, "username": "kalle", "isAdmin": false }
-]
+[{ "id": 1, "username": "kalle", "isAdmin": false }]
 ```
 
 {: .note }
@@ -437,7 +436,7 @@ To get more control over the response, we can use the [ResponseEntity](https://w
 public ResponseEntity<?> createMessage(@Valid @RequestBody CreateMessageDto message, BindingResult bindingResult) {
     if (bindingResult.hasErrors()) {
         List<String> errorMessages = bindingResult.getAllErrors().stream().map((error) -> error.getDefaultMessage())
-                .collect(Collectors.toList());
+                .toList();
 
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorMessages);
     }
@@ -445,7 +444,7 @@ public ResponseEntity<?> createMessage(@Valid @RequestBody CreateMessageDto mess
     Message newMessage = new Message(message.getContent());
     messageRepository.save(newMessage);
 
-    // HTTP status 201 Created will be used in this response 
+    // HTTP status 201 Created will be used in this response
     return ResponseEntity.status(HttpStatus.CREATED).body(newMessage);
 }
 ```
@@ -522,9 +521,26 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 > Exercise 14
 >
-> Implement a REST API endpoint for _getting all the anwers (submitted by the students) of a quiz_. Return an appropriate HTTP status code and error message in the following error case:
+> Implement a REST API endpoint for _getting the results of a quiz_. Return an appropriate HTTP status code and error message in the following error case:
 >
 > - Quiz with the provided id does not exist
+>
+> The endpoint should return the total number of answers, the number of correct answers and the number of wrong answers for each question of the quiz based on the submitted answers of the students. You can for example consider the following structure for the response body:
+>
+> ```json
+> [
+>   {
+>     "questionId": 1,
+>     "questionText": "What is the capital of Finland?",
+>     "questionDifficulty": "Easy",
+>     "totalAnswers": 10,
+>     "correctAnswers": 9,
+>     "wrongAnswers": 1
+>   }
+> ]
+> ```
+>
+> You can implement an appropriate [DTO](https://www.baeldung.com/java-dto-pattern) class for the question results object and use it to construct the response body.
 >
 > Create an issue for each task. Set the Sprint milestone and add the issues to the backlog.
 
@@ -611,7 +627,7 @@ The `@ApiResponses` and `@ApiResponse` annotations can be used to document diffe
 )
 @ApiResponses(value = {
     // The responseCode property defines the HTTP status code of the response
-    @ApiResponse(responseCode = "200", description = "Successful operation"),
+    @ApiResponse(responseCode = "200", description = "Message with the provided id retrieved successfully"),
     @ApiResponse(responseCode = "404", description = "Message with the provided id does not exist")
 })
 @GetMapping("/messages/{id}")
@@ -627,7 +643,7 @@ public Message getMessageById(@PathVariable Long id) {
 The `@Tag` annotation can be used to group endpoints, usually based on the REST API collection name, such as "messages" or "users":
 
 ```java
-@Tag("Messages")
+@Tag(name = "Messages")
 @Operation(/* ... */)
 @ApiResponses(/* .. */)
 @GetMapping("/messages")
@@ -635,7 +651,7 @@ public Message getAllMessages(@PathVariable Long id) {
     // ...
 }
 
-@Tag("Messages")
+@Tag(name = "Messages")
 @Operation(/* ... */)
 @ApiResponses(/* .. */)
 @GetMapping("/messages/{id}")
@@ -643,7 +659,7 @@ public Message getMessageById(@PathVariable Long id) {
     // ...
 }
 
-@Tag("Users")
+@Tag(name = "Users")
 @Operation(/* ... */)
 @ApiResponses(/* .. */)
 @GetMapping("/users")
@@ -651,7 +667,7 @@ public Message getAllUsers(@PathVariable Long id) {
     // ...
 }
 
-@Tag("Users")
+@Tag(name = "Users")
 @Operation(/* ... */)
 @ApiResponses(/* .. */)
 @GetMapping("/users/{id}")
@@ -668,7 +684,7 @@ It is also possible to have separate REST API controller classes for each collec
 @RestController
 @RequestMapping("/api/messages")
 @CrossOrigin(origins = "*")
-@Tag("Messages")
+@Tag(name = "Messages", description = "Operations for retrieving and manipulating messages")
 public class MessageRestController {
     // ...
 }
@@ -676,7 +692,7 @@ public class MessageRestController {
 @RestController
 @RequestMapping("/api/users")
 @CrossOrigin(origins = "*")
-@Tag("Users")
+@Tag(name = "Users", description = "Operations for retrieving and manipulating users")
 public class UserRestController {
     // ...
 }
@@ -869,7 +885,7 @@ export default function MessageList() {
 >
 > ![](/assets/sprint-2-us-11-1-category-quizzes.png)
 >
-> ![](/assets/sprint-2-us-11-3-category-quizzes.png)
+> ![](/assets/sprint-2-us-11-2-category-quizzes.png)
 
 ## Deploying the frontend
 

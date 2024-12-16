@@ -27,7 +27,7 @@ The Product Owner has a great project idea and is in desperate need of a talente
 >
 > _There should also be a page where the results of a quiz are displayed. The page should display the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question._
 >
-> _So that the students can share their thoughts about a quiz, the student should be able to review a quiz. There should be a page where the student can write a review and see other students' reviews for a quiz. It should also be possible for the student to edit and delete reviews._"
+> _So that the students can share their thoughts about a quiz, the student should be able to review a quiz. There should be a page where the student can write a review and see other students' reviews for a quiz. It should also be possible for the student to edit and delete reviews."_
 >
 > -- The Product Owner of Quizzer
 

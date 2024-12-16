@@ -4,7 +4,8 @@
   "description": "<https://software-development-project-1.github.io/>",
   "main": "index.js",
   "scripts": {
-    "slides:build": "marp slides/**/*.md --pdf --allow-local-files --html"
+    "slides:build": "marp slides/**/*.md --pdf --allow-local-files --html",
+    "grade": "node ./teacher/calculateGrade.js"
   },
   "author": "",
   "license": "ISC",

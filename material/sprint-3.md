@@ -1,8 +1,9 @@
 ---
 layout: page
 title: 🏃‍♂️ Sprint 3
-permalink: /sprint-3
+permalink: /sprint-3-todo
 nav_order: 8
+nav_exclude: true
 ---
 
 {% include toc.html %}
@@ -49,11 +50,15 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > _"We now have the basic features for managing and taking quizzes. What we still need is a way for the students to share their thoughts about quizzes by writing reviews in the student dashboard._
 >
-> _The student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a rating between 1 and 5 and a review text. The student should not be able to review a non-published quiz._
+> _To provide valuable feedback for the teacher and recommendations for their fellow students, the student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a numeric rating between 1 and 5, a review text and a recommendation choice. The recommendation choice indicates wheather the student would recommend other students taking the quiz or not. The student should not be able to review a non-published quiz._
 >
-> _The review page should list the added reviews and display the number of reviews and the rating average of the quiz. Each review should display the information submitted by the student and the date when the review was written. It should also be possible for the student to edit and delete reviews in the review page."_
+> _The review page should list the added reviews and display the number of reviews, the rating average and the recommendation percentage of the quiz. Each review should display the information submitted by the student and the date when the review was written. It should also be possible for the student to edit and delete reviews in the review page."_
 >
 > -- The Product Owner
+
+<!--
+Students have different skill levels so it would be useful if the student could filter the questions of quiz by the difficulty level in the quiz page. There could be dropdown menu at the top of the page from which the student can select the difficulty level for the questions.
+-->
 
 After some discussion the Scrum Team planned the following user stories for the _student dashboard_ application:
 
@@ -244,11 +249,13 @@ The configuration in the `src/test/resources/application.properties` file will b
 
 > _"Write tests. Not too many. Mostly integration."_
 >
-> -- Kent C. Dodds
+> -- Guillermo Rauch, CEO of Vercel
 
 Integration tests are a great balance of reliability and performance. Kent C. Dodds covers the importance of integration tests in his article [Write tests. Not too many. Mostly integration.](https://kentcdodds.com/blog/write-tests) As the name of the article implies, Dodds suggests that most of the tests for the application should be integration tests. He makes some fair points to justify this claim:
 
-> One thing that it doesn't show though is that as you move up the pyramid, the confidence quotient of each form of testing increases. You get more bang for your buck. So while E2E tests may be slower and more expensive than unit tests, they bring you much more confidence that your application is working as intended.
+> _"One thing that it doesn't show though is that as you move up the pyramid, the confidence quotient of each form of testing increases. You get more bang for your buck. So while E2E tests may be slower and more expensive than unit tests, they bring you much more confidence that your application is working as intended."_
+>
+> -- Kent C. Dodds, creator of React Testing Library
 
 To get some confidence that our application is working as inteded, let's implement some integration tests for our REST API endpoints.
 
@@ -260,24 +267,24 @@ As an example, let's consider testing the following methods of a `MessageRestCon
 
 ```java
 @RestController
-@RequestMapping("/api/messages")
+@RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class MessageRestController {
     @Autowired
     private MessageRepository messageRepository;
 
-    @GetMapping("")
+    @GetMapping("/messages")
     public List<Message> getAllMessages() {
         return messageRepository.findAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/messages/{id}")
     public Message getMessageById(@PathVariable Long id) {
         return messageRepository.findById(id).orElseThrow(
             () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + " does not exist"));
     }
 
-    @PostMapping("")
+    @PostMapping("/")
     public Message createMessage(@Valid @RequestBody CreateMessageDto message, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST,

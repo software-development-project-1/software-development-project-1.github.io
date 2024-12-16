@@ -28,12 +28,12 @@ function calculatePersonalPoints(peerReviewAverage) {
 }
 
 while (true) {
-  const projectPoints = parseInt(readline.question("Project points (0-40):"));
-  const peerReviewAverage = parseInt(
+  const projectPoints = parseFloat(readline.question("Project points (0-40):"));
+  const peerReviewAverage = parseFloat(
     readline.question("Peer review average (0-5):")
   );
   const personalModifier = parseInt(
-    readline.question("Personal points modifier:")
+    readline.question("Personal points modifier:") || 0
   );
 
   const personalPoints = Math.min(
@@ -44,9 +44,18 @@ while (true) {
   const totalPoints = projectPoints + personalPoints;
   const grade = calculateGrade(totalPoints);
 
-  console.log(`Project points: ${projectPoints}/40`);
-  console.log(`Personal points: ${personalPoints}/20`);
-  console.log(`Total points: ${totalPoints}/60`);
-  console.log(`Grade: ${grade}/5`);
+  console.log(`
+    <p>Here is your assesment:</p>
+    <ul>
+      <li>Project points: ${projectPoints.toFixed(1)}/40</li>
+      <li>Personal points: ${personalPoints.toFixed(1)}/20</li>
+      <li>Total points: ${totalPoints.toFixed(1)}/60</li>
+      <li>Grade: ${grade.toFixed(1)}/5</li>
+    </ul>
+    <p>
+      Let me know if you have any questions about the assesment.
+    </p>
+  `);
+
   console.log("---");
 }
