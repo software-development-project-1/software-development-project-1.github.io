@@ -131,7 +131,7 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > _The teacher should be able to add a quiz using a form. A quiz has a name, for example "The capital cities of Europe", a description, for example "Learn the capital cities of the European countries" and a published status. A quiz is either published or not. Students can only see and take published quizzes. Each of these values should have a field in the form._
 >
-> _The front page of the application should have a list of added quizzes. The list should display the information provided by the teacher while adding the quiz and the date when the quiz was added. The page should also have a link that takes the teacher to the page where they can add a quiz._
+> _The front page of the application should have a list of added quizzes. The list should display the information provided by the teacher while adding the quiz and the date when the quiz was added. The quizzes should be listed in newest to oldest order so that the latest quiz is at the top of the list. The page should also have a link that takes the teacher to the page where they can add a quiz._
 >
 > _The teacher should be able to edit the information of a quiz if, for example they want to publish the quiz or change its name or description. The quiz list should have a link next to each quiz which takes the teacher to an edit form, where they can edit all the information of the quiz. The teacher should also be able to get rid of quizzes they don't need. There should be a delete button next to each quiz in the quiz list. When the user clicks the button, the quiz should be deleted._
 >
@@ -647,7 +647,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >
-> Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/), "asd", or "foobar") for the Sprint Review. This means that you should add at least one quiz with questions and answer options using the application so that you can easily demonstrate the user stories.
+> Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/), "asd", or "foobar") for the Sprint Review. This means that you should add a few quizzes with questions and answer options using the application so that you can easily demonstrate the user stories.
 
 ## Git branches
 

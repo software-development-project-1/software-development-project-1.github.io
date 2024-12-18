@@ -91,7 +91,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 
 > _"It's great that we now have the basic functionality for managing quizzes! What we now need is a way for the teacher to categorize quizzes and student to take the published quizzes._
 >
-> _To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". There should not be more than one category with the same name. There should be a form for adding a category and a separate page for listing the added categories. The category list should have a delete button next to each category, which can be clicked to delete the category._
+> _To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". There should not be more than one category with the same name. There should be a form for adding a category and a separate page for listing the added categories. The categories should be listed in alphabetical order. The category list should have a delete button next to each category, which can be clicked to delete the category._
 >
 > _The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu listing all the categories in both forms, from which the teacher can choose the quiz's category. It should also be possible to leave the quiz uncategorized by not choosing a category. Deleting a category should leave the related quizzes uncategorized._
 >
@@ -971,7 +971,7 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 > Exercise 28
 >
-> The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the teacher dashboard and the student dashboard applications on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate both application's features in the production environment. As in the previous Sprint Review, prepare some _sensible_ test data for the Sprint Review.
+> The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the teacher dashboard and the student dashboard applications on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate both teacher and student dashboard's features in the production environment. As in the previous Sprint Review, prepare some _sensible_ test data for the Sprint Review.
 
 {: .highlight }
 

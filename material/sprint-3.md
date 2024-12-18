@@ -52,7 +52,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > _To provide valuable feedback for the teacher and recommendations for their fellow students, the student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a numeric rating between 1 and 5, a review text and a recommendation choice. The recommendation choice indicates wheather the student would recommend other students taking the quiz or not. The student should not be able to review a non-published quiz._
 >
-> _The review page should list the added reviews and summarize them by displaying the number of reviews, the rating average and the recommendation percentage of the quiz. Each review should display the information submitted by the student and the date when the review was written. It should also be possible for the student to edit and delete reviews in the review page."_
+> _The review page should list the added reviews and summarize them by displaying the number of reviews, the rating average and the recommendation percentage of the quiz. Each review should display the information submitted by the student and the date when the review was written. The reviews should be listed in newest to oldest order so that the latest review is at the top of the list. It should also be possible for the student to edit and delete reviews in the review page."_
 >
 > -- The Product Owner
 
