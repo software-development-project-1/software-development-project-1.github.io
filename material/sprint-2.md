@@ -85,9 +85,7 @@ The Scrum Master should make sure that everyone follows the event structure and 
 
 > If you weren't able to implement all the user stories during the previous Sprint, start by finishing those before starting to implement the user stories for this Sprint.
 
-The Product Owner was delighted to see how the project has advancend during Sprint 1.
-
-The Sprint Review gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 2 goals in the Sprint Planning event:
+The Product Owner was delighted to see how the project has advancend during Sprint 1. The Sprint Review event gave the Product Owner many new ideas on how to improve the application. Here's how the Product Owner is describing the Sprint 2 goals in the Sprint Planning event:
 
 > _"It's great that we now have the basic functionality for managing quizzes! What we now need is a way for the teacher to categorize quizzes and student to take the published quizzes._
 >
