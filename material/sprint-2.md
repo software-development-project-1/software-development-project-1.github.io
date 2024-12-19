@@ -99,7 +99,7 @@ The Sprint Review gave the Product Owner many new ideas on how to improve the ap
 >
 > _Each quiz name on the quiz list should be a link to a separate page where the quiz name, description and the questions are displayed. There should also be some kind of navigation menu from which the student can navigate to the quiz list page._
 >
-> _In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback dialog which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again"._
+> _In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback dialog which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again". The information which answer option the student submitted and the date of the submission should be stored for submission analysis._
 >
 > _There should be a page in the student dashboard where the results of a quiz are summarized. The results summarize all the answers submitted by different students to provide the teacher with an overview of how well the students know the quiz's topic. The page should display the question text, the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. Also the total number of answer and questions of a quiz should be displayed. There should be a link to the results page next to the quiz in the quiz list page._
 >
@@ -499,7 +499,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 > Exercise 13
 >
-> Implement a REST API endpoint for _creating an answer_ for a question (or more specifically, for an answer option of a question). Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. The student should be able to choose an answer option (e.g. "Helsinki") for a question (e.g. "What is the capital of Finland?") and submit their answer. The information, which answer option the student submitted, should be stored to the database.
+> Implement a REST API endpoint for _creating an answer_ for a question (or more specifically, for an answer option of a question). Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. The student should be able to choose an answer option (e.g. "Helsinki") for a question (e.g. "What is the capital of Finland?") and submit their answer. The information, which answer option the student submitted and the date of the submission, should be stored to the database.
 >
 > Return an appropriate HTTP status code and error message in the following error case:
 >
