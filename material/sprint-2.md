@@ -193,7 +193,7 @@ And the following user stories for the _student dashboard_ application:
 
 > Exercise 10
 >
-> Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
+> Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes (including primary and foreign keys), their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
 >
 > GitHub supports including different kind of diagrams to Markdown files using the [Mermaid](https://github.blog/developer-skills/github/include-diagrams-markdown-files-mermaid/) syntax. Mermaid makes it easier to update diagrams, when for example new entities or attributes need to be added to an entity relationship diagram. Mermaid's entity relationship diagram documentation can be found [here](https://mermaid.js.org/syntax/entityRelationshipDiagram.html).
 >
