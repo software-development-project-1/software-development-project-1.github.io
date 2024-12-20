@@ -93,7 +93,7 @@ The Product Owner was delighted to see how the project has advancend during Spri
 >
 > _The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu listing all the categories in both forms, from which the teacher can choose the quiz's category. It should also be possible to leave the quiz uncategorized by not choosing a category. Deleting a category should leave the related quizzes uncategorized._
 >
-> _Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description, course code, category and the date when it was added._
+> _Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description, course code, category and the date when it was added. The course code could be a link to the Haaga-Helia study guide page which is in format https://opinto-opas.haaga-helia.fi/course_unit/COURSECODE.  _
 >
 > _Each quiz name on the quiz list should be a link to a separate page where the quiz name, description and the questions are displayed. There should also be some kind of navigation menu from which the student can navigate to the quiz list page._
 >
