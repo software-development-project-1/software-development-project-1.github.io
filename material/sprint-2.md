@@ -89,15 +89,15 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 > _"It's great that we now have the basic functionality for managing quizzes! What we now need is a way for the teacher to categorize quizzes and student to take the published quizzes._
 >
-> _To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Vocabulary" and a description, for example "Questions related to the vocabulary of a language". There should not be more than one category with the same name. There should be a form for adding a category and a separate page for listing the added categories. The categories should be listed in alphabetical order. The category list should have a delete button next to each category, which can be clicked to delete the category._
+> _To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Agile" and a description, for example "Quizzes related to the Agile principles and project management frameworks". There should be a form for adding a category and a separate page for listing the added categories. The category list should have a delete button next to each category, which can be clicked to delete the category._
 >
 > _The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu listing all the categories in both forms, from which the teacher can choose the quiz's category. It should also be possible to leave the quiz uncategorized by not choosing a category. Deleting a category should leave the related quizzes uncategorized._
 >
-> _Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description, category and the date when it was added._
+> _Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description, course code, category and the date when it was added._
 >
 > _Each quiz name on the quiz list should be a link to a separate page where the quiz name, description and the questions are displayed. There should also be some kind of navigation menu from which the student can navigate to the quiz list page._
 >
-> _In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback dialog which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again". The information which answer option the student submitted and the date of the submission should be stored for submission analysis._
+> _In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback dialog which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again". The information which answer option the student submitted should be stored for submission analysis._
 >
 > _There should be a page in the student dashboard where the results of a quiz are summarized. The results summarize all the answers submitted by different students to provide the teacher with an overview of how well the students know the quiz's topic. The page should display the question text, the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. Also the total number of answer and questions of a quiz should be displayed. There should be a link to the results page next to the quiz in the quiz list page._
 >
@@ -497,7 +497,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 > Exercise 13
 >
-> Implement a REST API endpoint for _creating an answer_ for a question (or more specifically, for an answer option of a question). Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. The student should be able to choose an answer option (e.g. "Helsinki") for a question (e.g. "What is the capital of Finland?") and submit their answer. The information, which answer option the student submitted and the date of the submission, should be stored to the database.
+> Implement a REST API endpoint for _creating an answer_ for a question (or more specifically, for an answer option of a question). Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. The student should be able to choose an answer option (e.g. "Helsinki") for a question (e.g. "What is the capital of Finland?") and submit their answer. The information, which answer option the student submitted should be stored to the database.
 >
 > Return an appropriate HTTP status code and error message in the following error case:
 >
