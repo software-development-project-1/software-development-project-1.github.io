@@ -129,7 +129,7 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 
 > _"To get started with the project, we need to implement a basic set of features for the teacher dashboard application so that the teachers can manage quizzes and their questions and answer options._
 >
-> _The teacher should be able to add a quiz using a form. A quiz has a name, for example "The Scrum framework", a description, for example "Learn about the roles, events and artifacts of the Scrum framework", a Haaga-Helia course code, for example "SOF005AS3AE" and a published status. A quiz is either published or not. Students can only see and take published quizzes. Each of these values should have a field in the form._
+> _The teacher should be able to add a quiz related to a topic of a course using a form. A quiz has a name, for example "The Scrum framework", a description, for example "Learn about the roles, events and artifacts of the Scrum framework", a Haaga-Helia course code, for example "SOF005AS3AE" and a published status. A quiz is either published or not. Students can only see and take published quizzes. Each of these values should have a field in the form._
 >
 > _The front page of the application should have a list of added quizzes. The list should display the information provided by the teacher while adding the quiz and the date when the quiz was added. The page should also have a link that takes the teacher to the page where they can add a quiz._
 >
