@@ -137,7 +137,7 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > _The teacher should be able to add questions to a quiz. For example, the "The Scrum framework" quiz could have a question "What is the purpose of the Retrospective event". A question has a question text, for example "What is the purpose of the Retrospective event?" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal"._
 >
-> _The questions of a quiz should be listed on a separate page. Once a question has been added to a quiz, the teacher should be able to delete it._
+> _The questions of a quiz should be listed on a separate page along with other quiz-related information. Once a question has been added to a quiz, the teacher should be able to delete it._
 >
 > _The teacher should be able to add answer options to a question. For example, the "What is the purpose of the Retrospective event?" question could have answer options "Planning the requirements for the upcoming Sprint", "Finding ways to improve the process" and "Tracking the progress of the Sprint". An answer option has an answer option text, for example "Planning the requirements for the upcoming Sprint", and a correctness status. Answer is either correct or not. For example, the "Planning the requirements for the upcoming Sprint" answer option would not be correct where as "Finding ways to improve the process" answer option would be correct._
 >
