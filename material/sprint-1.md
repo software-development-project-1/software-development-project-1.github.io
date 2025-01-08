@@ -208,24 +208,15 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 ## Database setup
 
-The [H2 database](https://www.h2database.com/html/main.html) is a good choice for the development environment database. We will setup a more suitable production environment database later. Make sure that your project has the [required dependencies](https://www.baeldung.com/spring-boot-h2-database) for the H2 database. You can use the following database configuration:
+Data is the backbone of almost every application. That is why it is a good idea to start planning user stories by considering the data requirements. It is also necessary to decide and setup an appropriate database to suit the application's needs.
 
-```
-spring.datasource.url=jdbc:h2:file:~/quizzer;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
-spring.datasource.username=admin
-spring.datasource.password=password
-spring.datasource.driver-class-name=org.h2.Driver
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
-spring.jpa.hibernate.ddl-auto=update
-```
-
-This configuration is for an embedded database. Embedded database is stored to a file defined in the `spring.datasource.url` property, so the data won't vanish once the application is shut down. This configuration will save the database to a `~/quizzer.mv.db` file. If you want to reset the database and remove all the data, simply delete the file by running the `rm ~/quizzer.mv.db` command on the command-line.
+The [H2 database](https://www.h2database.com/html/main.html) is a good choice for the development environment database. We will learn how to setup a more suitable production environment database later. First, make sure that your project has the required dependencies for the H2 database. Then, add the database configuration to the `application.properties` configuration file. [This article](https://www.baeldung.com/spring-boot-h2-database) covers the details of the H2 database setup.
 
 {: .important-title }
 
 > Exercise 6
 >
-> Setup the H2 database for the project. Start the Sprint planning by discussing the database schema. What kind of entities and attributes should be added and what are their relationships?
+> Setup the database for the project. Start the Sprint planning by discussing the database schema based on the requirements. What kind of entities and attributes should be added and what are their relationships?
 
 ## Tips for the teamwork
 
