@@ -115,6 +115,10 @@ The project will be empty for now, but we will add some user stories and tasks f
 
 {: .note }
 
+> The [Issues and Projects in GitHub](https://www.youtube.com/watch?v=fFrq28RY1SQ) video covers thoroughly the usage and purpose of GitHub Projects and Issues (covered soon in the material).
+
+{: .note }
+
 > There are as many different backlog implementations as there are software development teams. The presented backlog implementation isn't the industry standard or the only correct one but perhaps a fairly good starting point. Scrum emphasizes constant process improvement and the backlog implementation should be constantly improved to better suit your team's needs.
 
 {: .important-title }
@@ -253,6 +257,10 @@ Here's a few tips before you start implementing the tasks:
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
 > ![](/assets/sprint-1-us-1-add-quiz.png)
+
+{: .note }
+
+> [GitHub's sub-issues](https://www.youtube.com/watch?v=F42FN6cZmA4) can be used to clarify the user story and task hierarchy.
 
 {: .important-title }
 
