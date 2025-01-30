@@ -202,6 +202,10 @@ Non-functional requirements on the other are quality constraints that the system
 
 In agile software development, functional requirements are commonly written as _user stories_. A user story is a short, simple description of a feature told from the perspective of the person who desires the new feature in the software. During each Sprint, the Developers of the Scrum Team implement features for the software based on the user stories.
 
+{: .note }
+
+> [Use cases](https://en.wikipedia.org/wiki/Use_case) are another way of defining requirements, focusing more on _how the system will work_ and not _what the user needs_. However, user stories are commonly considered a more modern and Agile-friendly way of defining requirements.
+
 For example, two separate user stories for a blog application could be the following:
 
 > As a content creator, I want to create a new blog so that I can start writing blog posts for my readers.

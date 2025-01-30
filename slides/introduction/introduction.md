@@ -307,6 +307,7 @@ Welcome to the Software Development Project 1 course!
 - A user story is a short, simple description of a feature told from the perspective of the person who desires the new feature in the software
 - During each Sprint, the Developers of the Scrum Team implement features for the software based on user stories
 - User stories are sort of todo items, which help the Scrum Team to understand and remember what kind of features need to be implemented for the software
+- _User cases_ are another, a less Agile-friendly, of defining requirements. They focus more on _how the system will work_, not _what the user needs_
 
 ---
 
