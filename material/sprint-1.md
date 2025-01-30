@@ -210,13 +210,13 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 Data is the backbone of almost every application. That is why it is a good idea to start planning user stories by considering the data requirements. It is also necessary to decide and setup an appropriate database to suit the application's needs.
 
-The [H2 database](https://www.h2database.com/html/main.html) is a good choice for the development environment database. We will learn how to setup a more suitable production environment database later. First, make sure that your project has the required dependencies for the H2 database. Then, add the database configuration to the `application.properties` configuration file. [This article](https://www.baeldung.com/spring-boot-h2-database) covers the details of the H2 database setup.
+For example, the [H2 database](https://www.h2database.com/html/main.html) is a good choice for the development environment database (the one that the developers use during the development). We will learn how to setup a more suitable production environment database (the one that the actual user's of the application use) later. First, make sure that your project has the required dependencies for the H2 database (or some other database of your team's choice). Then, add the database configuration to the `application.properties` configuration file. [This article](https://www.baeldung.com/spring-boot-h2-database) covers the details of the H2 database setup.
 
 {: .important-title }
 
 > Exercise 6
 >
-> Setup the database for the project. Start the Sprint planning by discussing the database schema based on the requirements. What kind of entities and attributes should be added and what are their relationships?
+> Setup the database (for example, H2) for the project. Start the Sprint planning by discussing the database schema based on the requirements. What kind of entities and attributes should be added and what are their relationships?
 
 ## Tips for the teamwork
 
