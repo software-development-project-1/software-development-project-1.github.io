@@ -300,7 +300,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .highlight }
 
-> While working on the tasks, keep the Sprint Backlog up-to-date:
+> The Sprint Backlog helps your team to track the process of the Sprint. So, while working on the tasks, _keep the Sprint Backlog up-to-date_:
 >
 > - When you start working on a task, assign it to you and move it to the "In progress" column in the project
 > - When you complete a task, move it to the "Done" column in the project. Also remember to _close_ the task related issue. This can be done by clicking the issue title in the Backlog project and clicking the "Close issue" button
@@ -314,7 +314,7 @@ Here's a few tips before you start implementing the tasks:
 
 ## Daily Scrum
 
-The Daily Scrum is a 15-minute event, commonly held on daily basis. The purpose of the Daily Scrum is for the Scrum Team to inspect and adapt its progress. During the event each team member typically answers the following three questions:
+The Daily Scrum is a 15-minute event, commonly held on daily basis. The purpose of the Daily Scrum is for the Scrum Team to inspect and adapt its progress. The Scrum Master is typically in charge of facilitating the meeting. During the event each team member typically answers the following three questions:
 
 1. What did you do previously?
 2. What will you do next?
@@ -326,7 +326,7 @@ For example this could be a one team member's statement during the Daily Scrum:
 >
 > -- Jane, one of the Developers
 
-The Sprint Backlog should be open during the event so that the whole Scrum Team is up-to-date with Sprint Backlog updates and the Sprint progress.
+The Sprint Backlog should be open during the event so that the whole Scrum Team is up-to-date with the Sprint Backlog updates and the Sprint progress.
 
 A funny fact: it is common that during the Daily Scrum the whole Scrum Team is standing. This is why the Daily Scrum is often called the "daily stand-up". The reason is very practical: the event tends to be shorter because standing for a long period of time can become tedious.
 
@@ -334,7 +334,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 > Exercise 12
 >
-> Organize a Daily Scrum event at least once a week during each Sprint. Scheduling a Daily Scrum meeting at least two days before the end of the Sprint is probably a good idea.
+> Organize a Daily Scrum event at least once a week during each Sprint. Scheduling a Daily Scrum meeting at least two days before the end of the Sprint is probably a good idea. The Scrum Master should be in charge of facilitating the event. Remember to use the Sprint Backlog to track your progress during the event.
 
 {: .important-title }
 
