@@ -260,7 +260,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .note }
 
-> [GitHub's sub-issues](https://www.youtube.com/watch?v=F42FN6cZmA4) can be used to clarify the user story and task hierarchy. In the GitHub Project's [view settings](https://docs.github.com/en/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/customizing-the-board-layout) you can set "Group by" as "Parent issue" to group tasks by the user story.
+> [This video](https://www.youtube.com/watch?v=F42FN6cZmA4) covers GitHub's sub-issues, which can be used for example to clarify the user story and task hierarchy. In the GitHub Project's [view settings](https://docs.github.com/en/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/customizing-the-board-layout) you can set "Group by" as "Parent issue" to group tasks by the user story.
 
 {: .important-title }
 
