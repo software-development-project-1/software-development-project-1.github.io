@@ -20,7 +20,13 @@ At the beginning of each Sprint, the _Sprint Planning_ event is organized. Durin
 
 The idea of Sprint Planning is not to make long term plans, for example what project should look like after three months. Because _requirements tend to change_, we should only do planning for the near future, usually just for the upcoming Sprint. That's why Sprint Planning event commonly only takes at most a few hours.
 
-The Product Owner's responsibility during the event is to _prioritize_ the user stories on the Product Backlog so that the Developers know what to focus on during the upcoming Sprint. Developers discuss which of the highest priority user stories they are able to implemented during the upcoming Sprint. The chosen user stories for the Sprint are divided into more technical _tasks_. These tasks are added to a _Sprint Backlog_, which sort of an Developers' todo-list for the Sprint.
+The Product Owner's responsibility during the event is to _prioritize_ the user stories on the Product Backlog so that the Developers know what to focus on during the upcoming Sprint. Developers help the Product Owner in prioritization by proving _insights on the technical feasibility_ of the user stories and _estimates_ on how much work each user story requires.
+
+Developers discuss themselves which of the highest priority user stories they are able to implemented during the upcoming Sprint. The chosen user stories for the Sprint are commonly divided into more technical _tasks_, which focus on the technical requirements of the user story. Chosen user stories and their related tasks are then added to a _Sprint Backlog_, which sort of an Developers' todo-list for the Sprint.
+
+{: .note }
+
+> Choosing the number of user stories for the upcoming Sprint is up to the Developers and can be difficult especially for the first Sprints. This is because it is hard for a new development team to estimate how much work they can do during each Sprint. Writing small and estimable (the INVEST principles) user stories will help in this problem.
 
 ## User stories and tasks
 
@@ -72,7 +78,7 @@ The Product Owner's responsibility is to prioritize the user stories in the Prod
 
 ### Sprint backlog
 
-During Sprint Planning event, the Developers decide the amount of user stories they manage to implemented during the upcoming Sprint. The selected user stories are chosen from the top (highest priority) of the Product Backlog. The chosen user stories are split into technical _tasks_. These tasks are added to a _Sprint Backlog_.
+During Sprint Planning event, the Developers decide the amount of user stories they manage to implemented during the upcoming Sprint. The selected user stories are chosen from the top (highest priority) of the Product Backlog. The chosen user stories are split into technical _tasks_, which are both added to a _Sprint Backlog_.
 
 ![Sprint Backlog](/assets/product-backlog-sprint-backlog.png){: width="400" }
 
@@ -141,7 +147,7 @@ Here's how the Product Owner is describing the Sprint 1 goals in the Sprint Plan
 >
 > _The teacher should be able to add questions to a quiz. For example, the "The Scrum framework" quiz could have a question "What is the purpose of the Retrospective event". A question has a question text, for example "What is the purpose of the Retrospective event?" and a difficulty level. The difficulty level is either "Easy", "Normal" or "Hard". The default difficulty level is "Normal"._
 >
-> _The questions of a quiz should be listed on a separate page along with other quiz-related information. Once a question has been added to a quiz, the teacher should be able to delete it._
+> _The questions of a quiz should be listed on a separate page. Once a question has been added to a quiz, the teacher should be able to delete it._
 >
 > _The teacher should be able to add answer options to a question. For example, the "What is the purpose of the Retrospective event?" question could have answer options "Planning the requirements for the upcoming Sprint", "Finding ways to improve the process" and "Tracking the progress of the Sprint". An answer option has an answer option text, for example "Planning the requirements for the upcoming Sprint", and a correctness status. Answer is either correct or not. For example, the "Planning the requirements for the upcoming Sprint" answer option would not be correct where as "Finding ways to improve the process" answer option would be correct._
 >
@@ -546,7 +552,7 @@ Once we have the PostgreSQL database setup, we will need to setup a _production 
 A Docker image is a set of instructions used to run containers. These instructions are defined with a [Dockerfile](https://docs.docker.com/engine/reference/builder/). Add the following `Dockerfile` file (the file name is just `Dockerfile` without a file extension) to the root folder of the Maven project (same folder that has the `pom.xml` file):
 
 ```dockerfile
-FROM maven:3.8.7-openjdk-18-slim AS build
+FROM maven:3.9.8-eclipse-temurin-21 AS build
 COPY . .
 RUN mvn clean package -DskipTests
 
@@ -556,7 +562,7 @@ EXPOSE 8080
 ENTRYPOINT ["java","-jar","quizzer.jar"]
 ```
 
-In the `Dockerfile` we generate a [JAR file](<https://en.wikipedia.org/wiki/JAR_(file_format)>) for the project and start the application using the JAR file. The name of the JAR file is specified by the `artifactId` and the `version` properties in the `pom.xml` file. Set the values of these properties as the following so that the JAR file's name matches the one in the `Dockerfile`:
+In the `Dockerfile` we generate a [JAR file](https://en.wikipedia.org/wiki/JAR_(file_format)) for the project and start the application using the JAR file. The name of the JAR file is specified by the `artifactId` and the `version` properties in the `pom.xml` file. Set the values of these properties as the following so that the JAR file's name matches the one in the `Dockerfile`:
 
 ```xml
 <artifactId>quizzer</artifactId>
@@ -664,7 +670,7 @@ git branch <name-of-my-branch>
 
 {: .note }
 
-> Typically, the branch name describes the feature developed in the branch or some other purpose of the branch, for example `delete-quiz` or `add-question`.
+> Typically, the branch name describes the feature developed in the branch or some other purpose of the branch, for example `add-message` or `list-messages`.
 
 Now, let's check the repository's branches with the `git branch` command. We should see that our branch is added to the list. We can also see that there's an astrisk symbol (\*) before the main branch. This means that we are currently on the main branch. The current branch is also displayed in brackets in the Git Bash after the path to the current folder.
 
