@@ -7,7 +7,7 @@ nav_order: 11
 
 # Problems and solutions
 
-Here you can find common problems and possible solutions.
+Here you can find some common problems and possible solutions.
 
 ## Error: Could not find or load main class
 

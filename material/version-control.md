@@ -731,14 +731,28 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 > Exercise 17
 >
-> _This is a team exercise_. Open the `README.md` file of your project for editing for example in GitHub or in Visual Studio Code. Replace the current contents of the repository's `README.md` file with the following information using Markdown:
+> _This is a team exercise_. Open the `README.md` file of your project for editing for example in GitHub or in Visual Studio Code. Replace the current contents of the repository's `README.md` file with the following information using Markdown syntax:
 >
-> 1. At the beginning of the file add the project name "Quizzer" as a heading.
-> 2. Below the heading add a description of the project as paragraphs. Check [the project description](/project-description) for some inspiration.
-> 3. Below the description, add a subheading "Team members" and below that add a list of each team member's name.
-> 4. Each team member's name on the list should be a link to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
+> 1. At the beginning of the file add the project name "Quizzer" as a _heading_.
+> 2. Below the heading add a description of the project as _paragraphs_. Check [the project description](/project-description) for some inspiration.
+> 3. Below the description, add a _subheading_ "Team members" and below that add a _list_ of each team member's name.
+> 4. Each team member's name on the list should be a _link_ to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
 >
-> Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
+> Read the [Basic Syntax](https://markdownguide.offshoot.io/basic-syntax/) guide to learn about the Markdown syntax. You can also include other information about the project, which you find useful. Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
+
+{: .note }
+
+> The [Awesome README](https://github.com/matiassingers/awesome-readme) repository contains a curated list of great README files. You can use it as an inspiration for your projects README file.
+
+{: .important-title }
+
+> ⭐ Bonus exercise
+> 
+> As mentioned before, the GitHub profile is the main portfolio of a software developer. That is why, having a professional GitHub profile is very important while applying for a software developer job. Improve your GitHub profile by applying improvements mentioned in the [Using your GitHub profile to enhance your resume](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/using-your-github-profile-to-enhance-your-resume) guide. The [Awesome GitHub profile README](https://github.com/abhisheknaiidu/awesome-github-profile-readme?tab=readme-ov-file) has a curated list of great profile `README` files for inspiration. Perhaps the most important parts of the profile are:
+>
+> - Profile picture
+> - Professional bio
+> - Profile `README` file
 
 {: .highlight }
 

@@ -120,7 +120,7 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 
 > Exercise 1
 >
-> Read the "Scrum Team" chapter of the Scrum Guide and [this](https://www.atlassian.com/agile/scrum/roles) article. Then, answer the following questions in your own words:
+> Read the "Scrum Team" chapter of the Scrum Guide and the [Agile scrum roles and responsibilities](https://www.atlassian.com/agile/scrum/roles) article. Then, answer the following questions in your own words:
 >
 > 1. What are the different roles in a Scrum Team?
 > 2. What are the responsibilities of each role?
@@ -149,7 +149,7 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 
 > Exercise 4
 >
-> Scrum emphasizes the importance of _transparency_ of the process and it is one of the [Three Pillars of Scrum](https://www.atlassian.com/agile/project-management/3-pillars-scrum). What does it mean and how do different Scrum events and artifacts improve the process transparency?
+> Read the article [Three Pillars of Scrum](https://www.atlassian.com/agile/project-management/3-pillars-scrum), which covers the three main principles of Scrum and how the process supports them in practice. Among the other two principles, Scrum emphasizes the importance of _transparency_. What does it mean and how do different Scrum events and artifacts improve the process transparency?
 
 {: .important-title }
 

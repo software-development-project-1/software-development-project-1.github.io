@@ -76,6 +76,7 @@ Welcome to the Software Development Project 1 course!
 - There are weekly sessions during which we will cover different topics
 - Attendance on weekly sessions is _mandatory_
 - During the first two weeks, we will cover topics that are important to grasp before starting to work on the project
+- The teams will start working on the project during the second week
 - During the team work we will learn about new topics, but most importantly we will learn how to apply our knowledge in practice
 - Both individual exercises and project exercises have _deadlines_
 - The detailed schedule can be found on the course page
