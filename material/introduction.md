@@ -25,9 +25,9 @@ A software development project affects many people. For example, the software's 
 
 ![Stakeholders](/assets/stakeholders.webp)
 
-On top of technical skills, the future of software developer's work will mostly likely consist more and more on understanding the needs of the stakeholders and applying technical solutions to meet those needs.
+On top of technical skills, the future of software developer's work will mostly likely consist more and more on understanding the needs of the stakeholders and applying technical solutions to meet those needs. This statement is supported by the fact that based on [recent studies](https://idego-group.com/blog/2022/02/17/problems-in-software-development-developers-survey-results-blog/) most of the problems in software development projects are non-technical.
 
-> _"If you go forward 24 months from now, or some amount of time -- I can't exactly predict where it is -- it's possible that most developers are not coding. It just means that each of us has to get more in tune with what our customers need and what the actual end thing is that we're going to try to go build because that's going to be more and more of what the work is as opposed to sitting down and actually writing code"_
+> _"If you go forward 24 months from now, or some amount of time -- I can't exactly predict where it is -- it's possible that most developers are not coding. It just means that each of us has to get more in tune with what our customers need and what the actual end thing is that we're going to try to go build because that's going to be more and more of what the work is as opposed to sitting down and actually writing code."_
 >
 > -- Matt Garman, CEO of Amazon Web Services (AWS) in 2024. Source: [Amazon Cloud CEO Predicts a Future Where Most Software Engineers Don't Code -- and AI Does It Instead](https://www.entrepreneur.com/business-news/amazon-web-services-ceo-ai-will-code-for-software-engineers/478800)
 
@@ -35,30 +35,30 @@ A software development team is responsible for the outcome of the project. It is
 
 So that a software development team can work together efficiently they need to follow a _common process_ in their day-to-day work referred to as a software development process. Many of the modern software development processes follow so called agile principles which we will cover next.
 
-## Agile software development
+## Agile principles in software development
 
-> _able to move quickly and easily_
+> _"able to move quickly and easily."_
 >
-> -- Dictionary definition for the word _agile_
+> -- Dictionary definition for the word _"agile"_
 
 The word _agile_ is often used in many industries to describe the way of working in organizations. The word is commonly used in a positive manner, for example, "we are an _agile_ organization", or "we work in a _agile_ manner". But what does this buzzword mean and what does "we work in a _agile_ manner" mean in the context of software development?
 
 In _agile software development_, the development process follows values and principles that have been found to lead to successful software development projects. These values and principles have been constituted and written down as the [Manifesto for Agile Software Development](https://agilemanifesto.org/) by famous software development pioneers:
 
-> We are uncovering better ways of developing
+> _"We are uncovering better ways of developing
 > software by doing it and helping others do it.
-> Through this work we have come to value:
+> Through this work we have come to value:_
 >
-> Individuals and interactions over processes and tools,
+> _Individuals and interactions over processes and tools,_
 >
-> Working software over comprehensive documentation,
+> _Working software over comprehensive documentation,_
 >
-> Customer collaboration over contract negotiation,
+> _Customer collaboration over contract negotiation,_
 >
-> Responding to change over following a plan.
+> _Responding to change over following a plan._
 >
-> That is, while there is value in the items on
-> the right, we value the items on the left more.
+> _That is, while there is value in the items on
+> the right, we value the items on the left more."_
 >
 > -- Manifesto for Agile Software Development
 
@@ -67,6 +67,9 @@ These principles have been found successful and later on adopted in many other i
 One of the key value is the attitude towards _change_. For example, there is often need to change the software's requirements during the development process. An agile software development process should welcome any kind of change with open arms. This is because _change is inevitable and frequent_ in many business environments.
 
 The Manifesto for Agile Software Development doesn't go into details on how to actually _implement_ these values in practice. That is, how to actually organize the development of a software so that everyone follows the same agile work process? Luckily, there are different agile software development process frameworks, such as _Scrum_ and _SAFe_ which describe a more or less detailed process that follows these values.
+
+{: .note }
+> The ["Awesome Agile"](https://github.com/lorabv/awesome-agile/blob/master/README.md) material is a well curated list of useful resources related to Agile software development.
 
 ## Software development lifecycle
 
@@ -89,7 +92,13 @@ The software requirement specification document written in the requirements phas
 
 The problem with this so-called [Big design up front](https://en.wikipedia.org/wiki/Big_design_up_front) approach is that _requirements tend to change_ during the implementation phase. If the development of the software takes even a few years, that's forever in the current, constantly changing business environment. Also, it is _practically impossible to come up with all the possible requirements_ for the software before actual users can try out some kind of a prototype and give feedback.
 
-Agile software development takes a different, _iterative approach_. In this approach, the software is developed in short, typically one or two-week-long iterations. Before each iteration, it is only necessary to specify requirements that the software should fulfill after the iteration is complete.
+## Agile software development process
+
+Agile software development process follows a fundamentally different, _iterative approach_. Instead of defining all requirements upfront, development occurs in short iterations — typically one or two weeks. Before each iteration, only the necessary requirements for that iteration are specified, allowing for flexibility and continuous improvement.
+
+> _"When to use iterative development? You should use iterative development only on projects that you want to succeed."_
+>
+> -- Martin Fowler
 
 During the iteration, the software development team turns these customer's requirements into technical development tasks and implements these tasks in a self-organized manner. The outcome of each iteration is working software that users can actually use and give feedback. This feedback can be used to constitute requirements for the next iteration. This feedback loop is the heartbeat of the agile software development process.
 

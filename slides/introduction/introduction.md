@@ -127,13 +127,13 @@ Welcome to the Software Development Project 1 course!
 
 ---
 
-# Agile software development
+# Agile principles in software development
 
-> _"able to move quickly and easily"_
+> _"able to move quickly and easily."_
 >
 > ⎯ Dictionary definition for the word _"agile"_
 
-- The word _agile_ is often used in many industries to describe the way of working in organizations
+- The word _"agile"_ is often used in many industries to describe the way of working in organizations
 - The word is commonly used in a positive manner, for example, "we are an _agile_ organization", or "we work in a _agile_ manner"
 - In _agile software development_, the development process follows values and principles that have been found to lead to successful software development projects
 - These values and principles have been constituted and written down as the _Manifesto for Agile Software Development_ by famous software development pioneers
@@ -150,7 +150,7 @@ Welcome to the Software Development Project 1 course!
 
 ---
 
-# Agile software development
+# Agile principles in software development
 
 - One of the key value is the attitude towards _change_
 - For example, there is often need to change the software's requirements during the development process
@@ -232,6 +232,10 @@ Welcome to the Software Development Project 1 course!
 ---
 
 # Benefits of the iterative approach
+
+> _"When to use iterative development? You should use iterative development only on projects that you want to succeed."_
+>
+> ⎯ Martin Fowler
 
 - The benefits of the iterative approach is the ability to respond to change quickly and the feedback loop it provides
 - After each iteration the requirements can change which makes it easy to respond to new user and business needs
