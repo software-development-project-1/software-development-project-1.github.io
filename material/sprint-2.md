@@ -91,7 +91,7 @@ The Product Owner was delighted to see how the project has advancend during Spri
 >
 > _To be able to categorize quizzes, the teacher should be able to add a category. A category has a name, for example "Agile" and a description, for example "Quizzes related to the Agile principles and project management frameworks". There should be a form for adding a category and a separate page for listing the added categories. The category list should have a delete button next to each category, which can be clicked to delete the category._
 >
-> _The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu listing all the categories in both forms, from which the teacher can choose the quiz's category. It should also be possible to leave the quiz uncategorized by not choosing a category. Deleting a category should leave the related quizzes uncategorized._
+> _The teacher should be able to choose the quiz's category while adding or editing a quiz. There could be a dropdown menu listing all the categories in both forms, from which the teacher can choose the quiz's category._
 >
 > _Once we have this basic set of features for the teachers, we can start working on the student dashboard application. The student dashboard should have a page that lists the published quizzes with the quiz name, description, course code, category and the date when it was added. The course code should be a link to the course's study guide page, for example https://opinto-opas.haaga-helia.fi/course_unit/SOF005AS3AE._
 >
@@ -193,7 +193,7 @@ And the following user stories for the _student dashboard_ application:
 
 > Exercise 10
 >
-> Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes (including primary and foreign keys), their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
+> Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
 >
 > GitHub supports including different kind of diagrams to Markdown files using the [Mermaid](https://github.blog/developer-skills/github/include-diagrams-markdown-files-mermaid/) syntax. Mermaid makes it easier to update diagrams, when for example new entities or attributes need to be added to an entity relationship diagram. Mermaid's entity relationship diagram documentation can be found [here](https://mermaid.js.org/syntax/entityRelationshipDiagram.html).
 >
@@ -497,7 +497,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 > Exercise 13
 >
-> Implement a REST API endpoint for _submitting an answer_ for a question (or more specifically, for an answer option of a question). Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. The student should be able to choose an answer option (e.g. "Helsinki") for a question (e.g. "What is the capital of Finland?") and submit their answer. The information, which answer option the student submitted and the submission date should be stored to the database.
+> Implement a REST API endpoint for _creating an answer for a question_ (or more specifically, for an answer option of a question). Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. The student should be able to choose an answer option (e.g. "Helsinki") for a question (e.g. "What is the capital of Finland?") and submit their answer. The information, which answer option the student submitted and the submission date should be stored to the database.
 >
 > Return an appropriate HTTP status code and error message in the following error case:
 >

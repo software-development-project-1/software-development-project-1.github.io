@@ -61,6 +61,8 @@ Now, depending on your operating system do one of the following:
 - On _Windows_ Git is used through the Git Bash application. Open the Git Bash application.
 - On _macOS_ Git is used through the [Terminal](https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) application. Open the Terminal application.
 
+Visual Studio Code also provides an [integrated terminal](https://code.visualstudio.com/docs/terminal/basics), which makes the usage of Git more fluent while writing code.
+
 In front of you is a so called _command line interface_ (CLI). A command line interface is a simple user interface: it accepts a textual command as input and prints the command output below. Type in the following command and press the enter key to execute it:
 
 ```
@@ -670,9 +672,11 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 
 {: .important-title }
 
-## Project setup with the team
+## Meet your team and setting up the project
 
 Next, you will get to know your team start working on the project by doing some setup work together.
+
+{: .important-title }
 
 > Exercise 15
 >
@@ -694,25 +698,9 @@ Next, you will get to know your team start working on the project by doing some 
 >
 > _Every team member should add these to their Moodle submission_. One team member can write down the information and share it with others.
 
-{: .important-title }
+### Project setup
 
-> Exercise 16
->
-> _This is a team exercise_. Next, let's setup the GitHub repository for your team's project. Do the following:
->
-> 1. GitHub organizations are a way to apply fine-grained access permissions to repositories. Create a GitHub organization for your team by following [these](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) instructions. You can name the organization for example based on your team's name you came up with previously
-> 2. Invite other team members to the organization by following [these](https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization) instructions. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team
-> 3. Create a _public_ GitHub repository for the project. Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description
-> 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web, Spring Boot DevTools, Thymeleaf, Spring Data JPA and H2 dependencies by clicking the "Dependencies" button will get you started. _Read about the suggested project structure below this exercise description_ and make sure that your project's structure is correct. Push the generated project to the GitHub repository
-> 5. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. Start the Spring Boot application in the repository and make sure that there are no errors
-> 6. Add a `README.md` file with some content in it to the repository and push it to GitHub
-> 7. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work. Check the commit history in GitHub and _make sure that the commit's author is your GitHub account_. If your commit's author's avatar is a grey GitHub logo (see below) and the username doesn't match your GitHub ussername, revisit exercise 3
->
-> ![](https://github.githubassets.com/images/gravatars/gravatar-user-420.png?size=32){: width="100" }
->
-> _Every team member should add the link to the GitHub repository to their Moodle submission_.
-
-To avoid future issues, make sure that your Spring Boot project is _in the repository's root folder, like this_ ✅:
+Next, let's create the project repository and setup the Spring Boot project. To avoid future issues, make sure that your Spring Boot project is _in the repository's root folder, like this_ ✅:
 
 ```
 src/
@@ -728,6 +716,24 @@ somesubfolder/
     pom.xml
     ...
 ```
+
+{: .important-title }
+
+> Exercise 16
+>
+> _This is a team exercise_. Next, let's setup the GitHub repository for your team's project. Do the following:
+>
+> 1. GitHub organizations are a way to apply fine-grained access permissions to repositories. Create a GitHub organization for your team by following [these](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) instructions. You can name the organization for example based on your team's name you came up with previously
+> 2. Invite other team members to the organization by following [these](https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization) instructions. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team
+> 3. Create a _public_ GitHub repository for the project. Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description
+> 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web, Spring Boot DevTools, Thymeleaf, Spring Data JPA and H2 dependencies by clicking the "Dependencies" button will get you started. Push the generated project to the GitHub repository
+> 5. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. Start the Spring Boot application in the repository and make sure that there are no errors
+> 6. Add a `README.md` file with some content in it to the repository and push it to GitHub
+> 7. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work. Check the commit history in GitHub and _make sure that the commit's author is your GitHub account_. If your commit's author's avatar is a grey GitHub logo (see below) and the username doesn't match your GitHub ussername, revisit exercise 3
+>
+> ![](https://github.githubassets.com/images/gravatars/gravatar-user-420.png?size=32){: width="100" }
+>
+> _Every team member should add the link to the GitHub repository to their Moodle submission_.
 
 ## Markdown and the README file
 
@@ -754,17 +760,18 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 >
 > _This is a team exercise_. Open the `README.md` file of your project for editing for example in GitHub or in Visual Studio Code. Replace the current contents of the repository's `README.md` file with the following information using Markdown syntax:
 >
-> 1. At the beginning of the file add the project name "Quizzer" as a _heading_.
-> 2. Below the heading add a description of the project as _paragraphs_. Check [the project description](/project-description) for some inspiration.
-> 3. Below the description, add a _subheading_ "Team members" and below that add a _list_ of each team member's name.
-> 4. Each team member's name on the list should be a _link_ to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
+> 1. At the beginning of the file add the project name "Quizzer" as a [heading](https://markdownguide.offshoot.io/basic-syntax/#headings).
+> 2. Below the heading add a description of the project as [paragraphs](https://markdownguide.offshoot.io/basic-syntax/#paragraphs-1). Check [the project description](/project-description) for some inspiration.
+> 3. Below the description, add a _subheading_ "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name.
+> 4. Each team member's name on the list should be a [link](https://markdownguide.offshoot.io/basic-syntax/#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
 >
-> Read the [Basic Syntax](https://markdownguide.offshoot.io/basic-syntax/) guide to learn about the Markdown syntax. You can also include other information about the project, which you find useful. Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
+> You can also include other information about the project, which you find useful. Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 
 {: .note }
 
 > The [Awesome README](https://github.com/matiassingers/awesome-readme) repository contains a curated list of great README files. You can use it as an inspiration for your projects README file.
 
+<!--
 {: .important-title }
 
 > ⭐ Bonus exercise
@@ -774,6 +781,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 > - Profile picture
 > - Professional bio
 > - Profile `README` file
+-->
 
 {: .highlight }
 

@@ -188,7 +188,7 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 > 5. The Developer's only responsibility in a Scrum Team is to write code
 > 6. The Retrospective event supports adaptation
 > 7. It is the Scrum Master's responsibility to help other members in following the Scrum process
-> 8. In Scrum all the project's requirements are carefully documented to the Product Backlog at the beginning of the project and they shouldn't change during the project 
+> 8. In Scrum all the project's requirements are carefully documented to the Product Backlog at the beginning of the project and they shouldn't change during the project
 
 ## Agile requirement specification
 
@@ -305,7 +305,7 @@ There's still a bit uncertainty of about the implementation. For example, how in
 
 > Exercise 12
 >
-> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description). Come up with at least six user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Start by identifying the user personas, then consider what kind of actions they want to perform and what are the goals of the actions. Keep in mind the guideliness of a good user story.
+> During the course, each team will develop a project described by the Product Owner in the [project description](/project-description). Come up six user stories based on the project description. Use the "As [a user persona], I want [to perform this action] so that [I can accomplish this goal]" format for the user stories. Start by identifying the user personas, then consider what kind of actions they want to perform and what are the goals of the actions.
 >
 > Hint: pay attention to the size of the user story. Split big user stories into smaller ones.
 
