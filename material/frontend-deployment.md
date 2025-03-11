@@ -7,7 +7,7 @@ nav_order: 12
 
 # Frontend deployment
 
-This guide covers Vite frontend dapplication deployment using the Render platform. Follow the instructions carefully and perform the steps one by one.
+This guide covers Vite frontend application deployment using the Render platform. Follow the instructions carefully and perform the steps one by one.
 
 ## Environment configuration
 
@@ -27,7 +27,7 @@ fetch(`${import.meta.env.VITE_BACKEND_URL}/api/messages`).then(
 );
 ```
 
-Add a `.env.production` environment variable file for the _production environment_. The `.env.production` file should contain a `VITE_BACKEND_URL` environment variable for your backend's Rahti _production environment URL_ (ends with "rahtiapp.fi"). For example:
+Add a `.env.production` environment variable file for the _production environment_. The `.env.production` file should contain a `VITE_BACKEND_URL` environment variable for your backend's Rahti application URL (ends with "rahtiapp.fi"). For example:
 
 ```
 VITE_BACKEND_URL=https://nameofyourrahtiapp.2.rahtiapp.fi/
@@ -39,8 +39,12 @@ Finally, _push the changes to GitHub_.
 
 [Sign in](https://dashboard.render.com/login) to Render _using your GitHub account_ and go through the sign up process. The information you provide in the sign up process doesn't matter.
 
-Once signed in, on the Render dashboard, click the "Add New" button and choose "Static Site".Then, choose "Public Git Repository" tab, type in the URL of your GitHub repository and click the "Connect" button.
+Once signed in, on the Render dashboard, click the "New" button and choose "Static Site".Then, choose "Public Git Repository" tab, type in the URL of your GitHub repository and click the "Connect" button.
 
 Come up with the name for the service. If the frontend application is not initialized in the repository's root folder (this is the case if you don't have a separate repository for the frontend application), set "Root Directory" as the frontend folder's name. Set "Build Command" as `npm run build` and "Publish Directory" as `dist` Click the "Deploy Static Site" button to create the service.
 
 On the service's page, click "Redirects/Rewrites" from the navigation on the left. Set the "Source" as `/*`, "Destination" as `/index.html` and "Action" as "Rewrite". Finally, click the "Save Changes" button. This configuration will make the frontend routing work.
+
+## Triggering deployment
+
+Deployment is triggered automatically after a commit on the repository's main branch. If you want to trigger deployments manually, set "Auto-Deploy" as "No" in the service's settings.
