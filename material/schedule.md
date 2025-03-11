@@ -7,7 +7,7 @@ nav_order: 2
 
 # Schedule
 
-The course has weekly sessions on {{site.teaching_sessions_text}}. Attendance on weekly sessions is _mandatory_.
+{% include teaching_sessions.html %}
 
 On the third week the teams start working on the project. The project advances in two week iterations called sprints. There are requirements for each sprint. During the sprint teams work with the Sprint requirements with the guidance of the teacher during the weekly sessions and independently outside the sessions.
 
