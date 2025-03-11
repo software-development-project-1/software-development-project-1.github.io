@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Product Backlog
+title: 📝 Product Backlog
 permalink: /product-backlog
 nav_order: 10
 nav_exclude: true

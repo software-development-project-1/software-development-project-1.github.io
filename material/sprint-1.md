@@ -578,7 +578,11 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 > Make sure that you have pushed your work to the project's GitHub repository before the Sprint 1 deadline on {{site.sprint_1_deadline}}.
 
-## Git branches
+{: .highlight }
+
+> Make sure that you have pushed your work to the project's GitHub repository before the Sprint 1 deadline on {{site.sprint_1_deadline}}.
+
+## ⭐ Bonus: Git branches
 
 So far, we have only created commits for the _main branch_ of our repository. _Git branches_ allows us to _diverge from the main branch commit history_ by creating a new branch. We can add commits for our branch without effecting the main branch commit history and at some point we _merge_ the commits of a branch into the main branch.
 
@@ -653,7 +657,7 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 
 {: .important-title }
 
-> Exercise 26
+> ⭐ Bonus exercise
 >
 > Perform the steps above to create your own branch named by your GitHub username. Implement some small change for the project in the branch by making one or more commits. Once you are done, push your branch and changes to GitHub.
 
@@ -667,7 +671,7 @@ Pull requests are "requests" to merge a branch to another branch (commonly the m
 
 {: .important-title }
 
-> Exercise 27
+> ⭐ Bonus exercise
 >
 > 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions. The pull request title should describe the changes introduced by the branch, for example "Change the submit button color in the add message form". The description provides additional details. Once you have created the pull request, take a look at changes in the "Files changed" tab. If you want, you can also explore other team members' pull requests in the "Pull requests" tab
 > 2. Merge your branch into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below. In practice, before the pull request is merged a [code review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews) is commonly conducted by another team member to enforce quality control. We can skip this phase
@@ -693,7 +697,7 @@ git merge main
 
 Finally, resolve the conflicts and add, commit and push the changes to GitHub. Now, we should be able to merge the pull request in GitHub.
 
-### ⭐ Bonus: Separate branch for the development code
+### Separate branch for the development code
 
  A quite common Git workflow is to have a separate branch for work-in-progress development code. All commits are made to the development branch. Whenever the development branch has some new ready features, it can be merged to the main branch using a pull request. Having a separate branch for the development code makes sure that the main branch always has a stable working version of the application which can be deployed at any moment.
 
