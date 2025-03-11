@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ℹ️ Project description
+title: Project description
 permalink: /project-description
 nav_order: 9
 ---

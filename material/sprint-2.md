@@ -887,44 +887,11 @@ export default function MessageList() {
 
 ## Deploying the frontend
 
-We managed to deploy the backend during the previous Sprint, but we still haven't deployed the frontend. We can deploy the frontend to Render with the following steps:
-
-1. In the frontend folder, add a `.env` [environment variable](https://vitejs.dev/guide/env-and-mode) file for the _development environment_. The `.env` file should contain a `VITE_BACKEND_URL` environment variable for the backend's _development environment URL_:
-
-   ```
-   VITE_BACKEND_URL=http://localhost:8080
-   ```
-
-   Make sure that every `fetch` function call has the environment variable as the URL prefix. For example:
-
-   ```js
-   fetch(`${import.meta.env.VITE_BACKEND_URL}/api/messages`).then(
-     (response) => {
-       // ...
-     }
-   );
-   ```
-
-1. Add a `.env.production` environment variable file for the _production environment_. The `.env.production` file should contain a `VITE_BACKEND_URL` environment variable for the backend's _production environment URL_. For example:
-
-   ```
-   VITE_BACKEND_URL=https://name-of-the-backend-service.onrender.com
-   ```
-
-   Finally, _push the changes to GitHub_
-
-1. On the Render dashboard, click the "New" button and choose "Static Site"
-1. From the repository list, find you project's repository and click the "Connect" button
-1. Come up with the name for the service. If the frontend application is not initialized in the repository's root folder (this is the case if you don't have a separate repository for the frontend application), set "Root Directory" as the frontend folder's name. Set "Build Command" as `npm run build` and "Publish Directory" as `dist`
-1. If you have a separate branch for the production code, click the "Advanced" button and set "Auto-Deploy" as "Yes" and "Branch" as "production". Otherwise set is as "No"
-1. Click the "Create Static Site" button to create the service
-1. On the service's page, click "Redirects/Rewrites" from the navigation on the left. Set the "Source" as `/*`, "Destination" as `/index.html` and "Action" as "Rewrite". Finally, click the "Save Changes" button. This configuration will make the frontend routing work
-
-{: .important-title }
+We managed to deploy the backend during the previous Sprint, but we still haven't deployed the frontend. We can deploy the frontend to the [Render](https://render.com/) platform, which provides simple deployment for static sites for free.
 
 > Exercise 25
 >
-> Deploy the frontend application to a production environment. _Test that the application works in the production envinronment_ by e.g. answering a few quizzes and taking a look at their results. Add the production environment URL of the frontend application (the static site URL in the Render dashboard) to the project description section in the `README.md` file.
+> Deploy the frontend application to a production environment by following [these instructions](/frontend-deployment). _Test that the application works in the production envinronment_ by e.g. answering a few quizzes and taking a look at their results. Add the production environment URL of the frontend application (the static site URL in the Render dashboard) to the project description section in the `README.md` file.
 
 {: .important-title }
 

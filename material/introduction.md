@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 🔄 Introduction to software development projects
+title: Introduction to software development projects
 permalink: /introduction
 nav_order: 3
 ---

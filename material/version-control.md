@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "🧑‍💻 Version control: Git and GitHub"
+title: "Version control: Git and GitHub"
 permalink: /git
 nav_order: 4
 ---
@@ -670,9 +670,13 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 
 {: .important-title }
 
+## Project setup with the team
+
+Next, you will get to know your team start working on the project by doing some setup work together.
+
 > Exercise 15
 >
-> _This is a team exercise_. Next, we'll start working on the project by doing some setup work. If you are uncertain who your team members are, check their names in Moodle. Get to know each other by introducing yourself to other team members. You can e.g. share the following things about yourself:
+> _This is a team exercise_. Let's start by getting to know your team. If you are uncertain who your team members are, check their names in Moodle. Get to know each other by introducing yourself to other team members. You can e.g. share the following things about yourself:
 >
 > - Which parts of software development you are most interested in? (e.g. backend development, frontend development, databases...)
 > - Which parts are you the most comfortable with?
@@ -699,7 +703,7 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > 1. GitHub organizations are a way to apply fine-grained access permissions to repositories. Create a GitHub organization for your team by following [these](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) instructions. You can name the organization for example based on your team's name you came up with previously
 > 2. Invite other team members to the organization by following [these](https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization) instructions. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team
 > 3. Create a _public_ GitHub repository for the project. Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description
-> 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web, Spring Boot DevTools, Thymeleaf, Spring Data JPA and H2 dependencies by clicking the "Dependencies" button will get you started. Push the generated project to the GitHub repository
+> 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web, Spring Boot DevTools, Thymeleaf, Spring Data JPA and H2 dependencies by clicking the "Dependencies" button will get you started. _Read about the suggested project structure below this exercise description_ and make sure that your project's structure is correct. Push the generated project to the GitHub repository
 > 5. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. Start the Spring Boot application in the repository and make sure that there are no errors
 > 6. Add a `README.md` file with some content in it to the repository and push it to GitHub
 > 7. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work. Check the commit history in GitHub and _make sure that the commit's author is your GitHub account_. If your commit's author's avatar is a grey GitHub logo (see below) and the username doesn't match your GitHub ussername, revisit exercise 3
@@ -707,6 +711,23 @@ We should now have a `git-practice-clone` folder in the folder we ran the comman
 > ![](https://github.githubassets.com/images/gravatars/gravatar-user-420.png?size=32){: width="100" }
 >
 > _Every team member should add the link to the GitHub repository to their Moodle submission_.
+
+To avoid future issues, make sure that your Spring Boot project is _in the repository's root folder, like this_ ✅:
+
+```
+src/
+pom.xml
+...
+```
+
+That is, _it is not inside a sub folder, like this_ ❌:
+
+```
+somesubfolder/
+    src/
+    pom.xml
+    ...
+```
 
 ## Markdown and the README file
 

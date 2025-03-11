@@ -1,8 +1,8 @@
 ---
 layout: page
-title: 💥 Problems and solutions
+title: Problems and solutions
 permalink: /problems-and-solutions
-nav_order: 11
+nav_order: 13
 ---
 
 # Problems and solutions
