@@ -24,10 +24,6 @@ The Product Owner's responsibility during the event is to _prioritize_ the user 
 
 Developers discuss themselves which of the highest priority user stories they are able to implemented during the upcoming Sprint. The chosen user stories for the Sprint are commonly divided into more technical _tasks_, which focus on the technical requirements of the user story. Chosen user stories and their related tasks are then added to a _Sprint Backlog_, which sort of an Developers' todo-list for the Sprint.
 
-{: .note }
-
-> Choosing the number of user stories for the upcoming Sprint is up to the Developers and can be difficult especially for the first Sprints. This is because it is hard for a new development team to estimate how much work they can do during each Sprint. Writing small and estimable (the INVEST principles) user stories will help in this problem.
-
 ## User stories and tasks
 
 User story should be described from the perspective of the user and should not contain technical details about the implementation. This way, the non-technical Product Owner and the Developers speak the same language.
@@ -69,6 +65,10 @@ The "Scrum Artifacts" section of the [Scrum Guide](https://scrumguides.org/scrum
 ### Product backlog
 
 The _Product Backlog_ is a _prioritized_ list of requirements for the developed software. Commonly these requirements are documented as user stories. On top of new features, Product Backlog items can also be for example bug fixes or other technical tasks. The Product Backlog is altered constantly during the Sprints, mostly during the Sprint Planning event. For example, new user stories are added, old ones are edited or their priority is changed.
+
+{: .note }
+
+> A good Product Backlog has the [DEEP properties](https://www.mountaingoatsoftware.com/blog/make-the-product-backlog-deep): detailed appropriately, estimated, emergent and prioritized.
 
 The Product Owner's responsibility is to prioritize the user stories in the Product Backlog, but the whole Scrum Team participates in the definition of the user stories. The Product Owner should also make sure that the user stories implemented during a Sprint match the stakeholder's requirements. Once a user story is implemented during a Sprint and the implementation is accepted by the Product Owner, the user story can be removed from the Product Backlog.
 
@@ -266,7 +266,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .note }
 
-> [This video](https://www.youtube.com/watch?v=F42FN6cZmA4) covers GitHub's sub-issues, which can be used for example to clarify the user story and task hierarchy. In the GitHub Project's [view settings](https://docs.github.com/en/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/customizing-the-board-layout) you can set "Group by" as "Parent issue" to group tasks by the user story.
+> [This video](https://www.youtube.com/watch?v=F42FN6cZmA4) covers GitHub's sub-issues, which can be used for example to clarify the user story and task hierarchy.
 
 {: .important-title }
 
@@ -527,26 +527,22 @@ The description should be so clear that your fellow student who knows nothing ab
 
 So far we have been using and developing our application in an isolated environment on our own computer. This environment used during the development of the application is referred to as the _development environment_. In the software development lifecycle the _deployment phase_ is the phase in which the implemented software is distributed to the users. For example, a web application is published online so that users can access it with their web browsers. This environment is referred to as the _production environment_.
 
-The deployment phase is crucial because unless users can use the application, it has no real value for the stakeholders. That is why in the agile software development process, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint.
+The deployment phase is crucial because unless users can use the application, it has no real value for the stakeholders. That is why, in the agile software development we shouldn't wait at the end of the project or event at the end of an iteration to deploy the application. Instead, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint. In real software development projects deployments commonly occur daily or even [a hundred times a day](https://www.infoq.com/news/2013/06/netflix/).
 
-There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). We will be using the [Rahti](https://rahti.csc.fi/) platform during this course. Our production environment will consist of two components: a _production database_ and a _production web server_ (for the Spring Boot backend application).
+There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). We will be using the [Rahti](https://rahti.csc.fi/) platform for backend deployment during this course. Our production environment will consist of two components: a _production database_ and a _production web server_ for the Spring Boot backend application. As the production database, we will be using the [PostgreSQL](https://www.postgresql.org/) database, which is among the most widely used databases.
 
 ```mermaid
 flowchart LR
     server(Spring Boot backend)-->db[(PostgreSQL database)]
 ```
 
-Both of these components will be deployed to Rahti.
+Next, we will learn how to deploy both of these components to the Rahti platform.
 
 {: .important-title }
 
 > Exercise 23
 >
 > Deploy the backend application to a production environment by following [these instructions](/backend-deployment). _Test that the application works in the production envinronment_ by adding a quiz with some questions and answer options. Add the production environment URL of the backend application (the application URL in the Rahti dashboard) to the project description section in the `README.md` file.
-
-{: .note }
-
-> We should not wait until the end of the Sprint for the deployment, but do it continuously by deploying the application once we have any meaningful set of features implemented. In real software development projects deployments commonly occur daily or even [a hundred times a day](https://www.infoq.com/news/2013/06/netflix/). Rahti will automatically deploy our application after each commit in the main branch.
 
 ## GitHub release
 
@@ -574,17 +570,40 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 > Exercise 25
 >
-> The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Render (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
+> The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Rahti (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >
 > Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/), "asd", or "foobar") for the Sprint Review. This means that you should add a few quizzes with questions and answer options using the application so that you can easily demonstrate the user stories.
+
+{: .highlight }
+
+> Make sure that you have pushed your work to the project's GitHub repository before the Sprint 1 deadline on {{site.sprint_1_deadline}}.
 
 ## Git branches
 
 So far, we have only created commits for the _main branch_ of our repository. _Git branches_ allows us to _diverge from the main branch commit history_ by creating a new branch. We can add commits for our branch without effecting the main branch commit history and at some point we _merge_ the commits of a branch into the main branch.
 
-![Git branches](/assets/git-branch.svg){: width="500" }
-
 Branches are commonly used to isolate work-in-progress code from the main branch. This can be for example the development of certain user story or task. The Git workflow where feature development is isolated into a feature-specific branch is referred to as [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow).
+
+```mermaid
+gitGraph
+   commit
+   commit
+   branch user-registration
+   checkout user-registration
+   commit
+   commit
+   checkout main
+   commit
+   branch message-list-search
+   checkout message-list-search
+   commit
+   commit
+   checkout main
+   merge message-list-search
+   commit
+   merge user-registration
+   commit
+```
 
 A new branch can be created with the `git branch <name-of-the-branch>` (replace the `<name-of-the-branch>` with name of the branch) command in Git Bash. Let's create a branch and _name it our GitHub username with lowercase letters_. First, pull the latest changes from GitHub using the `git pull` command. Then, create the branch:
 
@@ -636,7 +655,7 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 
 > Exercise 26
 >
-> Perform the steps above to create your own branch named by your GitHub username and push it to GitHub.
+> Perform the steps above to create your own branch named by your GitHub username. Implement some small change for the project in the branch by making one or more commits. Once you are done, push your branch and changes to GitHub.
 
 ### Merging branches and pull requests
 
@@ -650,7 +669,7 @@ Pull requests are "requests" to merge a branch to another branch (commonly the m
 
 > Exercise 27
 >
-> 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions. The pull request title should describe the changes introduced by the branch, for example "Change the submit button color in the add quiz form". The description provides additional details. Once you have created the pull request, take a look at changes in the "Files changed" tab
+> 1. Create a pull request for your branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) instructions. The pull request title should describe the changes introduced by the branch, for example "Change the submit button color in the add message form". The description provides additional details. Once you have created the pull request, take a look at changes in the "Files changed" tab. If you want, you can also explore other team members' pull requests in the "Pull requests" tab
 > 2. Merge your branch into the main branch by following [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) instructions. If the branch has conflicts with the main branch, check the section below. In practice, before the pull request is merged a [code review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews) is commonly conducted by another team member to enforce quality control. We can skip this phase
 > 3. Switch back to the main branch with the `git checkout main` command and pull the changes from GitHub with the `git pull` command. Make sure that you can see the changes made in your branch in the main branch as well
 
@@ -674,25 +693,32 @@ git merge main
 
 Finally, resolve the conflicts and add, commit and push the changes to GitHub. Now, we should be able to merge the pull request in GitHub.
 
-### Separate branch for the development code
+### ⭐ Bonus: Separate branch for the development code
 
-A quite common practice is to have a separate branch for the development code. Once the development branch has a working version of the application we can merge it to the main branch using a pull request. Having a separate branch for the development code makes sure that the main branch has always a working, "stable" version of the application which can be deployed at any moment.
+ A quite common Git workflow is to have a separate branch for work-in-progress development code. All commits are made to the development branch. Whenever the development branch has some new ready features, it can be merged to the main branch using a pull request. Having a separate branch for the development code makes sure that the main branch always has a stable working version of the application which can be deployed at any moment.
+
+```mermaid
+gitGraph
+   commit
+   commit
+   branch develop
+   checkout develop
+   commit
+   commit
+   checkout main
+   merge develop
+   checkout develop
+   commit
+   commit
+   commit
+   checkout main
+   merge develop
+```
 
 {: .important-title }
 
-> Exercise 28
+> ⭐ Bonus exercise
 >
-> 1. Every team member should create a `development` branch of the main branch and switch to it:
-> 
->   ```bash
->   git checkout main
->   git branch development
->   git checkout development
->   ```
->
-> 2. From now on all the commits should be made to the development branch, meaning there shouldn't be a reason to switch back to the main branch
-> 3. Once the development branch contains some new, working features, merge it to the main branch by opening a pull request. Set the _base_ branch as the `main` branch and the _compare_ branch as the `development` branch. Finally, merge the pull request. Now, the main branch should be up-to-date with the development branch
-
-{: .highlight }
-
-> Make sure that you have pushed your work to the project's GitHub repository before the Sprint 1 deadline on {{site.sprint_1_deadline}}.
+> 1. Each team member creates a development branch with the same name (e.g. `develop`) of the main branch and switch to it. Make sure you are on the main branch `git checkout main`, followed by creation of the branch with `git branch develop` and finally switching to the branch with `git checkout develop`
+> 2. From now on all the commits should be made to the development branch, meaning there shouldn't be a reason to switch back to the main branch. You can use the `add`, `commit`, `push` and `pull` commands just like before
+> 3. Once the development branch contains some new, working features, merge it to the main branch by opening a pull request. Set the _base_ branch as the `main` branch and the _compare_ branch as the development branch. Finally, merge the pull request. Now, the main branch should be up-to-date with the development branch
