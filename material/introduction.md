@@ -68,9 +68,6 @@ One of the key value is the attitude towards _change_. For example, there is oft
 
 The Manifesto for Agile Software Development doesn't go into details on how to actually _implement_ these values in practice. That is, how to actually organize the development of a software so that everyone follows the same agile work process? Luckily, there are different agile software development process frameworks, such as _Scrum_ and _SAFe_ which describe a more or less detailed process that follows these values.
 
-{: .note }
-> The ["Awesome Agile"](https://github.com/lorabv/awesome-agile/blob/master/README.md) material is a well curated list of useful resources related to Agile software development.
-
 ## Software development lifecycle
 
 It requires different phases to be completed so that an idea of what we can do with a software becomes an actual working software which provides the desired features. The software development process is divided into different phases:

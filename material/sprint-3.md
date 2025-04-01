@@ -26,11 +26,9 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 
 > Exercise 1
 >
-> The Scrum Master should create a new session in Flinga as instructed above. Name the session "Retrospective 2". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event.
+> Organize a similar Mad-Sad-Glad Retrspective as during the previous Sprint. _Remember to come up with concreate actions for fixing possible problems in your process_. Once you have completed the Retrospective, check the board from your previous Retrospective. Did similar issues arise as in Sprint 1 retrospective? If so, try to come up with different actions as before or ask the teacher for tips on how to solve these issues.
 >
-> Once you have completed the Retrospective, check the notes from your previous Retrospective. Did similar issues arise as in Sprint 1 retrospective? If so, try to come up with different actions as before or ask the teacher for tips on how to solve these issues.
->
-> Finally, add a link to the Retrospective's Flinga board and write down the successes, issues and actions you came up during the Retrospective to the repository's `retrospectives/sprint2.md` file and push the changes to GitHub. Use the same template for the Retrospective notes as during the previous Sprint.
+> Finally, add a link to the Sprint 2 Retrospective Flinga board under the "Retrospectives" subheading in the `README.md` file.
 
 {: .important-title }
 

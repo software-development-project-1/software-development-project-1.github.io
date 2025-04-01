@@ -43,7 +43,7 @@ First, create a session board that has the _mad_, _sad_ and _glad_ categories li
 
 1. Based on their experiences during the Sprint, each team member should write cards for each of the three categories. Choose the card color based on the category. Try to come up with cards for each category. _Don't discuss about the cards at this point_ because the cards should represent your personal opinions
 2. Once everyone is done writing the cards, go through the cards from each category. If necessary, the writer of the card can shortly describe what their card means
-3. Together, pick at least one success area during the Sprint from the _glad_ category and one most urgent issue from the _mad_ and _sad_ categories. Come up with at least one _concrete_ action to solve the issue during the upcoming Sprint. For example a concrete action for the issues "I always have conflicts when I try to pull code from the GitHub" could be "Pull code from GitHub more often" and "Create smaller commits and push code to GitHub more often"
+3. Together, pick at least one most urgent issue from the _mad_ and _sad_ categories. Come up with at least one _concrete_ action to solve the issue during the upcoming Sprint. For example a concrete action for the issues "I always have conflicts when I try to pull code from the GitHub" could be "Pull code from GitHub more often" and "Create smaller commits and push code to GitHub more often". _Add these actions e.g. as cards to the retrospective board_.
 
 The Scrum Master should make sure that everyone follows the event structure and that each team member gets their voice heard.
 
@@ -51,27 +51,9 @@ The Scrum Master should make sure that everyone follows the event structure and 
 
 > Exercise 1
 >
-> The Scrum Master should create a new session in Flinga as instructed above. Name the session "Retrospective 1". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event as instructed above.
+> The Scrum Master should create a new session in Flinga as instructed above. Name the session "Retrospective 1". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event as instructed above. _Remember to come up with concreate actions for fixing possible problems in your process_.
 >
-> Once you have completed the Retrospective, add `retrospectives` folder to the repository and in it a `sprint1.md` file. In that file, add a link to the Retrospective's Flinga board and write down the successes, issues and actions you came up with during the Retrospective and push the changes to GitHub. Use this template in the file (_remember to use your board's Flinga board link_):
->
-> ```md
-> # Sprint 1 Retrospective
->
-> [Retrospective board](https://edu.flinga.fi/s/<BOARD_ID>)
->
-> Successes:
->
-> - Something that we succeeded in
->
-> Issues:
->
-> - Some issue we had
->
-> Actions:
->
-> - Some action to fix an issue
-> ```
+> Once you have completed the Retrospective, add "Retrospectives" subheading to the `README.md` file and below it a link to the Sprint 1 Retrospective Flinga board (link format is `https://edu.flinga.fi/s/<BOARD_ID>`).
 
 {: .important-title }
 
@@ -97,7 +79,7 @@ The Product Owner was delighted to see how the project has advancend during Spri
 >
 > _Each quiz name on the quiz list should be a link to a separate page where the quiz name, description and the questions are displayed. There should also be some kind of navigation menu from which the student can navigate to the quiz list page._
 >
-> _In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback dialog which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again". The information which answer option the student submitted and the submission date should be stored for submission analysis._
+> _In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback dialog which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again"._
 >
 > _There should be a page in the student dashboard where the results of a quiz are summarized. The results summarize all the answers submitted by different students to provide the teacher with an overview of how well the students know the quiz's topic. The page should display the question text, the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. Also the total number of answer and questions of a quiz should be displayed. There should be a link to the results page next to the quiz in the quiz list page._
 >
@@ -497,7 +479,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 > Exercise 13
 >
-> Implement a REST API endpoint for _creating an answer for a question_ (or more specifically, for an answer option of a question). Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. The student should be able to choose an answer option (e.g. "Helsinki") for a question (e.g. "What is the capital of Finland?") and submit their answer. The information, which answer option the student submitted and the submission date should be stored to the database.
+> Implement a REST API endpoint for _creating an answer for a question_ (or more specifically, for an answer option of a question). Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. The student should be able to choose an answer option (e.g. "Helsinki") for a question (e.g. "What is the capital of Finland?") and submit their answer. The information, which answer option the student submitted for the question should be stored to the database.
 >
 > Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -888,6 +870,8 @@ export default function MessageList() {
 ## Deploying the frontend
 
 We managed to deploy the backend during the previous Sprint, but we still haven't deployed the frontend. We can deploy the frontend to the [Render](https://render.com/) platform, which provides simple deployment for static sites for free.
+
+{: .important-title }
 
 > Exercise 25
 >

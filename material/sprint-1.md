@@ -1,9 +1,9 @@
 ---
 layout: page
 title: 🏃‍♂️ Sprint 1
-permalink: /sprint-1-todo
+permalink: /sprint-1
 nav_order: 6
-nav_exclude: true
+nav_exclude: false
 ---
 
 {% include toc.html %}
@@ -65,10 +65,6 @@ The "Scrum Artifacts" section of the [Scrum Guide](https://scrumguides.org/scrum
 ### Product backlog
 
 The _Product Backlog_ is a _prioritized_ list of requirements for the developed software. Commonly these requirements are documented as user stories. On top of new features, Product Backlog items can also be for example bug fixes or other technical tasks. The Product Backlog is altered constantly during the Sprints, mostly during the Sprint Planning event. For example, new user stories are added, old ones are edited or their priority is changed.
-
-{: .note }
-
-> A good Product Backlog has the [DEEP properties](https://www.mountaingoatsoftware.com/blog/make-the-product-backlog-deep): detailed appropriately, estimated, emergent and prioritized.
 
 The Product Owner's responsibility is to prioritize the user stories in the Product Backlog, but the whole Scrum Team participates in the definition of the user stories. The Product Owner should also make sure that the user stories implemented during a Sprint match the stakeholder's requirements. Once a user story is implemented during a Sprint and the implementation is accepted by the Product Owner, the user story can be removed from the Product Backlog.
 
@@ -573,10 +569,6 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Rahti (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >
 > Prepare some _sensible_ test data (no [lorem ipsum](https://www.lipsum.com/), "asd", or "foobar") for the Sprint Review. This means that you should add a few quizzes with questions and answer options using the application so that you can easily demonstrate the user stories.
-
-{: .highlight }
-
-> Make sure that you have pushed your work to the project's GitHub repository before the Sprint 1 deadline on {{site.sprint_1_deadline}}.
 
 {: .highlight }
 

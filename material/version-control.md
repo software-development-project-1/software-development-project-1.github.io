@@ -15,7 +15,7 @@ nav_order: 4
 
 ## Submitting this week's exercises
 
-Submit this week's exercises to [Moodle]({{site.week_2_moodle_submission_link}}) (you'll find the submission in the "Exercise submissions" tab). The submission should contain the information mentioned in exercises 7, 15 and 16. The submission deadline is on {{site.week_2_deadline}}.
+Submit this week's exercises to [Moodle]({{site.week_2_moodle_submission_link}}) (you'll find the submission in the "Exercise submissions" tab). The submission should contain the information mentioned in exercises 7, 15 and 16. Other exercises must be done as well, but they don't contain anything that should be added to the Moodle submission. The submission deadline is on {{site.week_2_deadline}}.
 
 ## Version control
 
@@ -356,6 +356,8 @@ A new repository called "origin" is added using an HTTPS connection by running t
 > Create a remote repository in GitHub for the project you created locally as instructed above. _Don't let GitHub create a README, license or a .gitignore file when creating the repository_. Doing so will cause problems later. Also, make sure that _the repository is public_ (the "Public" option is selected).
 >
 > Add the repository as a remote to your local project using the `git remote add` command as instructed above. _Remember to use the HTTPS address when you copy the repository address in GitHub_. Note that the paste keyboard shortcut does not work on Git Bash. You need to right click the Git Bash window and choose "Paste".
+>
+> _Add the link to this GitHub repository to the Moodle submission._
 
 ### Publishing
 
@@ -785,7 +787,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 {: .highlight }
 
-> The Moodle submission should only contain the link to your GitHub repository created in exercise 7 and the information mentioned in exercises 15 and 16.
+> The Moodle submission should only contain the link to your GitHub repository created in exercise 7 and the information mentioned in exercises 15 and 16. Other exercises must be done as well, but they don't contain anything that should be added to the Moodle submission.
 
 ## The End
 
