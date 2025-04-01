@@ -356,6 +356,8 @@ A new repository called "origin" is added using an HTTPS connection by running t
 > Create a remote repository in GitHub for the project you created locally as instructed above. _Don't let GitHub create a README, license or a .gitignore file when creating the repository_. Doing so will cause problems later. Also, make sure that _the repository is public_ (the "Public" option is selected).
 >
 > Add the repository as a remote to your local project using the `git remote add` command as instructed above. _Remember to use the HTTPS address when you copy the repository address in GitHub_. Note that the paste keyboard shortcut does not work on Git Bash. You need to right click the Git Bash window and choose "Paste".
+>
+> _Add the link to this GitHub repository to the Moodle submission._
 
 ### Publishing
 

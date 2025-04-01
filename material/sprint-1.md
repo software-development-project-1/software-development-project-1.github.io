@@ -3,7 +3,7 @@ layout: page
 title: 🏃‍♂️ Sprint 1
 permalink: /sprint-1-todo
 nav_order: 6
-nav_exclude: true
+nav_exclude: false
 ---
 
 {% include toc.html %}
@@ -65,10 +65,6 @@ The "Scrum Artifacts" section of the [Scrum Guide](https://scrumguides.org/scrum
 ### Product backlog
 
 The _Product Backlog_ is a _prioritized_ list of requirements for the developed software. Commonly these requirements are documented as user stories. On top of new features, Product Backlog items can also be for example bug fixes or other technical tasks. The Product Backlog is altered constantly during the Sprints, mostly during the Sprint Planning event. For example, new user stories are added, old ones are edited or their priority is changed.
-
-{: .note }
-
-> A good Product Backlog has the [DEEP properties](https://www.mountaingoatsoftware.com/blog/make-the-product-backlog-deep): detailed appropriately, estimated, emergent and prioritized.
 
 The Product Owner's responsibility is to prioritize the user stories in the Product Backlog, but the whole Scrum Team participates in the definition of the user stories. The Product Owner should also make sure that the user stories implemented during a Sprint match the stakeholder's requirements. Once a user story is implemented during a Sprint and the implementation is accepted by the Product Owner, the user story can be removed from the Product Backlog.
 
