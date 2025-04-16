@@ -542,9 +542,22 @@ Next, we will learn how to deploy both of these components to the Rahti platform
 
 ## GitHub release
 
-Once the GitHub repository's main branch has a working version of the application with the desired features at the end of the Sprint, we should _release_ it for the users. [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is a way to "freeze" the source code of a project at certain point of the commit history and to provide users a working version of the application.
+Once the GitHub repository's main branch has a working version of the application with the desired features at the end of the Sprint, we should _release_ its source code for the users. [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is a way to "freeze" the source code of a project at certain point of the commit history and to provide users a working version of the application.
 
-Usually a new version of an application is released at the end of each Sprint. When we create a new release at the end of each Sprint, we will create a _release history_ for the project. Users can easily browse and download the source code of different versions of the application by going through the release history.
+Usually a new version of an application is released at the end of each Sprint. When we create a new release at the end of each Sprint, we will create a _release history_ for the project. Users can easily browse and download the source code of different versions of the application by going through the release history. Release also creates a [tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) for the current point in the commit history, which makes it easy to browse commits in different Sprints.
+
+```mermaid
+gitGraph
+   checkout main
+   commit
+   commit
+   commit
+   commit tag: "sprint-1"
+   commit
+   commit
+   commit
+   commit tag: "sprint-2"
+```
 
 Each release should at least include the name for the release and a short description describing the changes introduced in the release. For libraries the release name is commonly the version number of the release, for example "18.2.0". We create a release for each Sprint, so we can name our releases based on the Sprint number, for example "Sprint 1".
 
