@@ -45,7 +45,7 @@ Add PostgreSQL driver as dependency in your project's `pom.xml` file. Copy and p
 Create a file named `Dockerfile` (no file extension) in your repository's root folder (same folder that has the `pom.xml` file). Content of the `Dockerfile` for a Spring Boot application should be the following:
 
 ```docker
-FROM eclipse-temurin:17-jdk-focal as builder
+FROM eclipse-temurin:21-jdk AS builder
 WORKDIR /opt/app
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
@@ -54,11 +54,15 @@ RUN ./mvnw dependency:go-offline
 COPY ./src ./src
 RUN ./mvnw clean install -DskipTests
 RUN find ./target -type f -name '*.jar' -exec cp {} /opt/app/app.jar \; -quit
-FROM eclipse-temurin:17-jre-alpine
+FROM eclipse-temurin:21-jre-alpine
 COPY --from=builder /opt/app/*.jar /opt/app/
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/opt/app/app.jar" ]
 ```
+
+{: .highlight }
+
+> This `Dockerfile` will only work for Spring Boot projects with Java version 21 or lower.
 
 Create a new deployment profile for your application. You need to create a new file in the
 `src/main/resources/` folder. Name the new file `application-rahti.properties`. Content of the `application-rahti.properties` should be the following:
@@ -72,6 +76,17 @@ spring.jpa.generate-ddl=true
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 spring.datasource.driver-class-name=org.postgresql.Driver
+```
+
+If you have a `CommandLineRunner` method inserting test data each time the server starts, add a condition checking if the database is empty before the insert. This avoids inserting duplicate data each time the project is deployed:
+
+```java
+@Bean
+public CommandLineRunner generateTestData(MessageRepository messageRepository) {
+    if (messageRepository.count() == 0) {
+        messageRepository.save(new Message("Hello world!"));
+    }
+}
 ```
 
 Commit the above changes and push them to your GitHub repository.

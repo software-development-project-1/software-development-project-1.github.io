@@ -719,6 +719,8 @@ somesubfolder/
     ...
 ```
 
+Also, make sure that the Spring Boot project _doesn't require higher Java version than 21_. That is, both versions 17 and 21 are fine.
+
 {: .important-title }
 
 > Exercise 16

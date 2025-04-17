@@ -39,12 +39,17 @@ Finally, _push the changes to GitHub_.
 
 [Sign in](https://dashboard.render.com/login) to Render _using your GitHub account_ and go through the sign up process. The information you provide in the sign up process doesn't matter.
 
-Once signed in, on the Render dashboard, click the "New" button and choose "Static Site".Then, choose "Public Git Repository" tab, type in the URL of your GitHub repository and click the "Connect" button.
+Once signed in, on the Render dashboard, click the "New" button and choose "Static Site". Then, choose "Public Git Repository" tab, type in the URL of your GitHub repository and click the "Connect" button. Come up with the name for the static site. Set the following settings for the static site:
 
-Come up with the name for the service. If the frontend application is not initialized in the repository's root folder (this is the case if you don't have a separate repository for the frontend application), set "Root Directory" as the frontend folder's name. Set "Build Command" as `npm run build` and "Publish Directory" as `dist` Click the "Deploy Static Site" button to create the service.
+- If the frontend application is not initialized in the repository's root folder (this is the case if you don't have a separate repository for the frontend application), set "Root Directory" as the frontend folder's name
+- Set "Build Command" as `npm run build`
+- Set "Publish Directory" as `dist`
+- Open the "Advanced" section and set "Auto-Deploy" as "No"
 
-On the service's page, click "Redirects/Rewrites" from the navigation on the left. Set the "Source" as `/*`, "Destination" as `/index.html` and "Action" as "Rewrite". Finally, click the "Save Changes" button. This configuration will make the frontend routing work.
+Click the "Deploy Static Site" button to create the static site.
+
+On the static site's page, click "Redirects/Rewrites" from the navigation on the left. Set the "Source" as `/*`, "Destination" as `/index.html` and "Action" as "Rewrite". Finally, click the "Save Changes" button. This configuration will make the frontend routing work.
 
 ## Triggering deployment
 
-Deployment is triggered automatically after a commit on the repository's main branch. If you want to trigger deployments manually, set "Auto-Deploy" as "No" in the service's settings.
+Deployment can be triggered from the static site's page in the Render dashboard by clicking the "Manual Deploy" button and choosing "Deploy latest commit".

@@ -552,11 +552,11 @@ gitGraph
    commit
    commit
    commit
-   commit tag: "sprint-1"
+   commit tag: "sprint1"
    commit
    commit
    commit
-   commit tag: "sprint-2"
+   commit tag: "sprint2"
 ```
 
 Each release should at least include the name for the release and a short description describing the changes introduced in the release. For libraries the release name is commonly the version number of the release, for example "18.2.0". We create a release for each Sprint, so we can name our releases based on the Sprint number, for example "Sprint 1".

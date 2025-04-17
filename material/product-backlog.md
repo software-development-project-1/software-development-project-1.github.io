@@ -7,7 +7,7 @@ nav_order: 9
 
 # Product Backlog
 
-Here you can find additional (bonus) Product Backlog items requested by the Product Owner. You can implement any of them during any Sprint _once you have completed other Sprint requirements_.
+Here you can find optional (bonus) Product Backlog items requested by the Product Owner. You can implement any of them during any Sprint _once you have completed other Sprint requirements_.
 
 User stories for the _student dashboard_:
 
