@@ -880,7 +880,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 > Exercise 26
 >
-> Add instructions on _how to start the frontend application_ to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
+> Add instructions on _how to start the frontend application_ on the command-line to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
 > For the sake of clarity, you can add separate subheadings for backend's and frontend's developer guide:
 >

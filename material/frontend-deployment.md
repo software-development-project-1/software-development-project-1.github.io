@@ -30,7 +30,7 @@ fetch(`${import.meta.env.VITE_BACKEND_URL}/api/messages`).then(
 Add a `.env.production` environment variable file for the _production environment_. The `.env.production` file should contain a `VITE_BACKEND_URL` environment variable for your backend's Rahti application URL (ends with "rahtiapp.fi"). For example:
 
 ```
-VITE_BACKEND_URL=https://nameofyourrahtiapp.2.rahtiapp.fi/
+VITE_BACKEND_URL=https://nameofyourrahtiapp.2.rahtiapp.fi
 ```
 
 Finally, _push the changes to GitHub_.
