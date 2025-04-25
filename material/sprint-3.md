@@ -1,9 +1,8 @@
 ---
 layout: page
 title: 🏃‍♂️ Sprint 3
-permalink: /sprint-3-todo
+permalink: /sprint-3
 nav_order: 8
-nav_exclude: true
 ---
 
 {% include toc.html %}
@@ -46,7 +45,7 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 > _"We now have the basic features for managing and taking quizzes. What we still need is a way for the students to share their thoughts about quizzes by writing reviews in the student dashboard._
 >
-> _To provide valuable feedback for the teacher and recommendations for their fellow students, the student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a numeric rating between 1 and 5 and a review text and a recommendation choice. The student should not be able to review a non-published quiz._
+> _To provide valuable feedback for the teacher and recommendations for their fellow students, the student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a numeric rating between 1 and 5 and a review text. The student should not be able to review a non-published quiz._
 >
 > _The review page should list the added reviews and summarize them by displaying the number of reviews and the rating average. Each review should display the information submitted by the student and the date when the review was written. It should also be possible for the student to edit and delete reviews in the review page."_
 >
@@ -512,7 +511,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 13
 >
-> Implement appropriate test methods for _at least two more endpoints_ of your choice. Analyze the behavior of the endpoints based on different requests (e.g. different kind of invalid requests like in the test cases covered in the previous exercises) and dabatase states and implement test scenarios to cover these cases. Use descriptive names for the test methods so that they properly describe the test case.
+> Implement appropriate test methods for _at least one more endpoint_ of your choice. Analyze the behavior of the endpoint based on different requests (e.g. different kind of invalid requests like in the test cases covered in the previous exercises) and dabatase states and implement test scenarios to cover these cases. Use descriptive names for the test methods so that they properly describe the test case.
 
 {: .important-title }
 

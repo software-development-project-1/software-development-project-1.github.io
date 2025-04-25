@@ -17,6 +17,10 @@ In the frontend folder, add a `.env` [environment variable](https://vitejs.dev/g
 VITE_BACKEND_URL=http://localhost:8080
 ```
 
+{: .highlight }
+
+> The `VITE_` prefix in the environment variable name is important, but otherwise you could also name the variable differently.
+
 Make sure that every `fetch` function call has the environment variable as the URL prefix. For example:
 
 ```js
