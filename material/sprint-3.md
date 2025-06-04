@@ -11,11 +11,11 @@ nav_order: 8
 
 For the final Sprint of the course, the Sprint 3, we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to testing.
 
-During this Sprint, each team member will write a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 20 personal points.
+During this Sprint, each team member will write a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal grade of a team member. The final grade will be based on the project and personal grade.
 
 {: .highlight }
 
-> At the end of this Sprint, each team member has to submit the [final report](#final-report) and the [peer review](#peer-review). Both of them are _required to pass the course_. Submitting either of them after the Sprint deadline will decrease the personal points.
+> At the end of this Sprint, each team member has to submit the [final report](#final-report) and the [peer review](#peer-review). Both of them are _required to pass the course_. Submitting either of them after the Sprint deadline will decrease the personal grade.
 
 ## Retrospective
 
@@ -511,7 +511,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 13
 >
-> Implement appropriate test methods for _at least one more endpoint_ of your choice. Analyze the behavior of the endpoint based on different requests (e.g. different kind of invalid requests like in the test cases covered in the previous exercises) and dabatase states and implement test scenarios to cover these cases. Use descriptive names for the test methods so that they properly describe the test case.
+> Implement appropriate test methods for _at least two more endpoints_ of your choice. Analyze the behavior of the endpoints based on different requests (e.g. different kind of invalid requests like in the test cases covered in the previous exercises) and database states and implement test scenarios to cover these cases. Use descriptive names for the test methods so that they properly describe the test case.
 
 {: .important-title }
 
@@ -551,7 +551,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Writing a peer review for each team member and receiving a passing grade from the peer reviews is required to pass the course.
 
-The peer review is used to assess each team member. The 20 personal points are based on the peer reviews and the teacher's observations. _Every team member must write a peer review_.
+The peer review is used to assess each team member. The personal grade is based on the peer reviews and the teacher's observations. _Every team member must write a peer review_.
 
 The peer review is conducted with a form. You will receive the link to the form via email from the teacher at the beginning of the Sprint. In the form you will need to assess every team member's (including yourself) efforts in the team work in the following aspects:
 

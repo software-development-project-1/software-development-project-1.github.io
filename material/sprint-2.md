@@ -687,7 +687,7 @@ public class UserRestController {
 >
 > Generate a Swagger documentation for the project as described above. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response. Group the endpoints based on the endpoint's collection name using the `@Tag` annotation.
 >
-> Test all the REST API endpoints you have implemented by opening the endpoint's documentation and clicking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an id path parameter value of a non-existing quiz. Add a link to the Swagger documentation (at <http://localhost:8080/swagger-ui/index.html>) under a "REST API" subheading in the `README.md` file.
+> Test all the REST API endpoints you have implemented by opening the endpoint's documentation and clicking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an id path parameter value of a non-existing quiz. Add a link to the Swagger documentation deployed to the production environment in Rahti (link format is <https://nameofyourrahtiapp.2.rahtiapp.fi/swagger-ui/index.html>) under a "REST API" subheading in the `README.md` file.
 
 ## Communication between frontend and backend
 
@@ -882,7 +882,7 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 >
 > Add instructions on _how to start the frontend application_ on the command-line to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
-> For the sake of clarity, you can add separate subheadings for backend's and frontend's developer guide:
+> To improve the documentation structure, you can consider separate subheadings for backend's and frontend's developer guide:
 >
 > ```md
 > ## Developer guide
@@ -897,6 +897,8 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 >
 > The frontend developer guide goes here.
 > ```
+>
+> For the sake of readability, code and command-line command text is commonly highlighted in Markdown files. [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown syntax.
 >
 > Also, include the following information about the project's implementation technologies:
 >
