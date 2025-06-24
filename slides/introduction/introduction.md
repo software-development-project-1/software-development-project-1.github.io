@@ -44,7 +44,7 @@ Welcome to the Software Development Project 1 course!
   - Project management
   - Documentation
   - Following the schedule
-- The team can earn up to 40 points from the project
+- Based on this assessment criteria, the team receives a _project grade_ (0-5)
 
 ---
 
@@ -56,17 +56,17 @@ Welcome to the Software Development Project 1 course!
   - Project management and documentation contributions
   - Exercise submissions
 - The personal assessment is done based on the teacher's observations and peer reviews from the team members
-- Each team member can earn up to 20 points based on their personal efforts towards the project
+- Each team member receives a _personal grade_ (0-5) based on their personal efforts towards the project and individual exercises
 
 ---
 
 # Assessment
 
-- The final grade (1-5) is composed of the project points (maximum of 40 points) and the personal points (maximum of 20 points)
+- The final grade (0-5) is composed of the project grade and the personal grade
 - The following are necessary to pass the course:
   - At least 16 of the first two week's exercises have to be completed to pass the course
   - Written peer review for each team member
-  - Passing grade from the peer reviews
+  - Passing personal grade
   - Written final report
 
 ---

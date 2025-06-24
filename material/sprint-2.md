@@ -687,7 +687,7 @@ public class UserRestController {
 >
 > Generate a Swagger documentation for the project as described above. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response. Group the endpoints based on the endpoint's collection name using the `@Tag` annotation.
 >
-> Test all the REST API endpoints you have implemented by opening the endpoint's documentation and clicking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an id path parameter value of a non-existing quiz. Add a link to the Swagger documentation (at <http://localhost:8080/swagger-ui/index.html>) under a "REST API" subheading in the `README.md` file.
+> Test all the REST API endpoints you have implemented by opening the endpoint's documentation and clicking the "Try it out" button. Remember to also test that the error responses work properly. For example send a request to the endpoint wich returns the questions of a quiz with an id path parameter value of a non-existing quiz. Add a link to the Swagger documentation deployed to the production environment in Rahti (link format is <https://nameofyourrahtiapp.2.rahtiapp.fi/swagger-ui/index.html>) under a "REST API" subheading in the `README.md` file.
 
 ## Communication between frontend and backend
 
@@ -880,14 +880,14 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 > Exercise 26
 >
-> Add instructions on _how to start the frontend application_ to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
+> Add instructions on _how to start the frontend application_ on the command-line to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
-> For the sake of clarity, you can add separate subheadings for backend's and frontend's developer guide:
+> To improve the documentation structure, you can consider separate subheadings for backend's and frontend's developer guide:
 >
 > ```md
 > ## Developer guide
 >
-> The architecture description and other common technical details go here.
+> The implementation technologies and other common technical details go here.
 >
 > ### Backend
 >
@@ -898,16 +898,13 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 > The frontend developer guide goes here.
 > ```
 >
-> Also, include the following information about the project's architecture and implementation technologies:
+> For the sake of readability, code and command-line command text is commonly highlighted in Markdown files. [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown syntax.
 >
-> 1. The project's architecture consists of three components: the database, the backend and the frontend. Mention these components and explain the purpose of each component
-> 2. Which programming language, frameworks and major libraries are used in the _backend implementation_?
-> 3. Which _database platforms_ are used in different environments (development and production environment)?
-> 4. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
-
-<!--
-_Optionally_, you can also visualize how the components communicate with each other by implementing an [architecture diagram](https://aws.amazon.com/what-is/architecture-diagramming/). You can implement the diagram as a [Mermaid flow diagram](https://mermaid.js.org/syntax/flowchart.html)
--->
+> Also, include the following information about the project's implementation technologies:
+>
+> 1. Which programming language, frameworks and major libraries are used in the _backend implementation_?
+> 2. Which _database platforms_ are used in different environments (development and production environment)?
+> 3. Which programming language, frameworks and major libraries are used in the _frontend implementation_?
 
 ## Sprint Review
 

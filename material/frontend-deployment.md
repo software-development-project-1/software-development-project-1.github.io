@@ -17,6 +17,10 @@ In the frontend folder, add a `.env` [environment variable](https://vitejs.dev/g
 VITE_BACKEND_URL=http://localhost:8080
 ```
 
+{: .highlight }
+
+> The `VITE_` prefix in the environment variable name is important, but otherwise you could also name the variable differently.
+
 Make sure that every `fetch` function call has the environment variable as the URL prefix. For example:
 
 ```js
@@ -30,7 +34,7 @@ fetch(`${import.meta.env.VITE_BACKEND_URL}/api/messages`).then(
 Add a `.env.production` environment variable file for the _production environment_. The `.env.production` file should contain a `VITE_BACKEND_URL` environment variable for your backend's Rahti application URL (ends with "rahtiapp.fi"). For example:
 
 ```
-VITE_BACKEND_URL=https://nameofyourrahtiapp.2.rahtiapp.fi/
+VITE_BACKEND_URL=https://nameofyourrahtiapp.2.rahtiapp.fi
 ```
 
 Finally, _push the changes to GitHub_.

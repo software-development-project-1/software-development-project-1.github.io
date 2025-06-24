@@ -240,7 +240,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .highlight }
 
-> The user stories related to the teacher dashboard can be _implemented as a backend application_ and there's no need to include any frontend features (meaning using Thymeleaf templates instead of React for the user interface). The student dashboard application we get to later will be implemented as a frontend application.
+> The user stories related to the teacher dashboard can be _implemented as a backend-only application_ and there's no need to include any frontend features (meaning using Thymeleaf templates instead of React for the user interface). The student dashboard application we get to later will be implemented as a frontend application.
 
 {: .important-title }
 
@@ -515,7 +515,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 > Exercise 22
 >
-> Write a developer guide documentation on _how to start the backend application_ on the command-line to the `README.md` file. Also, mention the required Java version for the project. Add it under a "Developer guide" subheading. For the sake of readability, code and command text is commonly highlighted (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown.
+> Write a developer guide documentation on _how to start the backend application_ on the command-line to the `README.md` file. Also, mention the required Java version for the project. Add it under a "Developer guide" subheading. For the sake of readability, code and command-line command text is commonly highlighted in Markdown file (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown syntax.
 >
 > You can assume that the reader of the `README.md` file is a software developer who knows how to use a command-line interface, the basic Git commands and install the required Java version. _Make sure that instructions on the developer guide work_ by cloning a new version of the repository and executing the steps on the developer guide one by one.
 
