@@ -15,7 +15,7 @@ nav_order: 4
 
 ## Submitting this week's exercises
 
-Submit this week's exercises to [Moodle]({{site.week_2_moodle_submission_link}}) (you'll find the submission in the "Exercise submissions" tab). The submission should contain the information mentioned in exercises 7, 15 and 16. Other exercises must be done as well, but they don't contain anything that should be added to the Moodle submission. The submission deadline is on {{site.week_2_deadline}}.
+Submit this week's exercises to [Moodle]({{site.week_2_moodle_submission_link}}) (you'll find the submission in the "Exercise submissions" tab). The submission should contain the information mentioned in exercises 7, 15 and 16. _Other exercises must be done as well_, but they don't contain anything that should be added to the Moodle submission. The submission deadline is on {{site.week_2_deadline}}.
 
 ## Version control
 
@@ -25,7 +25,7 @@ Version control tools allow marking a specific state of a project as so that one
 
 Contrary to what many people think, programming is mostly done in groups. With version control tools it is possible to use and develop others' code, even without ever meeting in person. People can give verbal feedback, such as report issues, as well as make concrete suggestions for improvement by providing code to the project. All developers are kept up to date about the state of the project, which makes cooperation smoother.
 
-Visual Studio has summarized reasons for using version control on their [website](https://www.visualstudio.com/learn/what-is-version-control/?rr=https%3A%2F%2Fwww.google.fi%2F). Bitbucket [has also written](https://www.atlassian.com/git/tutorials/what-is-version-control) a longer text about version control.
+Visual Studio has summarized reasons for using version control on their [website](https://www.visualstudio.com/learn/what-is-version-control). Bitbucket [has also written](https://www.atlassian.com/git/tutorials/what-is-version-control) a longer text about version control.
 
 There are several different version control tools available, but this part will focus on using Git and GitHub, especially in the context of programming projects.
 
@@ -789,7 +789,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 {: .highlight }
 
-> The Moodle submission should only contain the link to your GitHub repository created in exercise 7 and the information mentioned in exercises 15 and 16. Other exercises must be done as well, but they don't contain anything that should be added to the Moodle submission.
+> The Moodle submission should only contain the link to your GitHub repository created in exercise 7 and the information mentioned in exercises 15 and 16. _Other exercises must be done as well_, but they don't contain anything that should be added to the Moodle submission.
 
 ## The End
 

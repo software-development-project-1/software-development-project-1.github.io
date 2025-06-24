@@ -1,9 +1,8 @@
 ---
 layout: page
 title: 🏃‍♂️ Sprint 3
-permalink: /sprint-3-todo
+permalink: /sprint-3
 nav_order: 8
-nav_exclude: true
 ---
 
 {% include toc.html %}
@@ -12,11 +11,11 @@ nav_exclude: true
 
 For the final Sprint of the course, the Sprint 3, we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to testing.
 
-During this Sprint, each team member will write a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal points of a team member. Each team member can earn up to 20 personal points.
+During this Sprint, each team member will write a [peer review](#peer-review) in which they asses themselves and other team members. The results of the peer review will heavily impact the personal grade of a team member. The final grade will be based on the project and personal grade.
 
 {: .highlight }
 
-> At the end of this Sprint, each team member has to submit the [final report](#final-report) and the [peer review](#peer-review). Both of them are _required to pass the course_. Submitting either of them after the Sprint deadline will decrease the personal points.
+> At the end of this Sprint, each team member has to submit the [final report](#final-report) and the [peer review](#peer-review). Both of them are _required to pass the course_. Submitting either of them after the Sprint deadline will decrease the personal grade.
 
 ## Retrospective
 
@@ -46,9 +45,9 @@ The Product Owner was delighted to see how the project has advancend during Spri
 
 > _"We now have the basic features for managing and taking quizzes. What we still need is a way for the students to share their thoughts about quizzes by writing reviews in the student dashboard._
 >
-> _To provide valuable feedback for the teacher and recommendations for their fellow students, the student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a numeric rating between 1 and 5, a review text and a recommendation choice. The recommendation choice indicates wheather the student would recommend other students taking the quiz or not. The student should not be able to review a non-published quiz._
+> _To provide valuable feedback for the teacher and recommendations for their fellow students, the student should be able to share their thoughts about a quiz by writing a review. For this purpose there could be a separate review page. A review has a reviewer's nickname, a numeric rating between 1 and 5 and a review text. The student should not be able to review a non-published quiz._
 >
-> _The review page should list the added reviews and summarize them by displaying the number of reviews, the rating average and the recommendation percentage of the quiz. Each review should display the information submitted by the student and the date when the review was written. It should also be possible for the student to edit and delete reviews in the review page."_
+> _The review page should list the added reviews and summarize them by displaying the number of reviews and the rating average. Each review should display the information submitted by the student and the date when the review was written. It should also be possible for the student to edit and delete reviews in the review page."_
 >
 > -- The Product Owner
 
@@ -512,7 +511,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 13
 >
-> Implement appropriate test methods for _at least two more endpoints_ of your choice. Analyze the behavior of the endpoints based on different requests (e.g. different kind of invalid requests like in the test cases covered in the previous exercises) and dabatase states and implement test scenarios to cover these cases. Use descriptive names for the test methods so that they properly describe the test case.
+> Implement appropriate test methods for _at least two more endpoints_ of your choice. Analyze the behavior of the endpoints based on different requests (e.g. different kind of invalid requests like in the test cases covered in the previous exercises) and database states and implement test scenarios to cover these cases. Use descriptive names for the test methods so that they properly describe the test case.
 
 {: .important-title }
 
@@ -524,7 +523,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 15
 >
-> Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `README.md` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
+> Repository's _license_ defines how others can use, modify, and distribute the code within your repository. Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `README.md` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
 > Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specified in the React project's [README.md](https://github.com/facebook/react/blob/main/README.md) file.
 
@@ -552,7 +551,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Writing a peer review for each team member and receiving a passing grade from the peer reviews is required to pass the course.
 
-The peer review is used to assess each team member. The 20 personal points are based on the peer reviews and the teacher's observations. _Every team member must write a peer review_.
+The peer review is used to assess each team member. The personal grade is based on the peer reviews and the teacher's observations. _Every team member must write a peer review_.
 
 The peer review is conducted with a form. You will receive the link to the form via email from the teacher at the beginning of the Sprint. In the form you will need to assess every team member's (including yourself) efforts in the team work in the following aspects:
 
