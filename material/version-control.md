@@ -257,7 +257,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 The changes which were committed are no longer visible in the output. However, they are not lost, they have just been moved to the commit. You can view the commits of a project with the command `git log`:
 
 ```
-Author: Kalle Ilves <kalle.ilves@haaga-helia.fi>
+Author: Jukka Remes <jukka.remes@haaga-helia.fi>
 Date:   Wed Sep 6 12:51:07 2023 +0300
 
     Add new file
