@@ -31,9 +31,9 @@ sprint_2_deadline: "Before the Mon 1.12.2025 session"
 sprint_3_deadline: "Before the Wed 10.12.2025 session"
 exclude:
   # Comment sprint file exclude lines to publish sprint materials. E.g. commenting "material/sprint-1.md" line will publish sprint 1 material
-  - material/sprint-1.md
-  - material/sprint-2.md
-  - material/sprint-3.md
+  #- material/sprint-1.md
+  #- material/sprint-2.md
+  #- material/sprint-3.md
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
