@@ -15,8 +15,8 @@ On the third week the teams start working on the project. The project advances i
 |------|--------|-------|
 | Wed 22.10. | [Introduction to software development projects](/introduction) | Exercises 1 - 13, deadline on {{site.week_1_deadline}} |
 | Mon 27.10. | [Version control: Git and GitHub](/git) | Exercises 1 - 17, deadline on {{site.week_2_deadline}} |
-| Wed 29.10. | 🏃‍♂️ [Sprint 1](/sprint-1) Planning: Scrum backlogs, GitHub Projects, Daily Scrum | Exercises 1 - 25, deadline on {{site.sprint_1_deadline}} |
-| Mon 3.11. | Sprint 1 work session | (Backup session for Sprint 1 Planning) |
+| Wed 29.10. | Work session | |
+| Mon 3.11. | 🏃‍♂️ [Sprint 1](/sprint-1) Planning: Scrum backlogs, GitHub Projects, Daily Scrum | Exercises 1 - 25, deadline on {{site.sprint_1_deadline}} |
 | Wed 5.11. | Sprint 1 work session | Independent working |
 | Mon 10.11. | Sprint 1 work session | Independent working, Backend deployment |
 | Wed 12.11. | Sprint 1 Review & Retrospective → 🏃‍♂️ [Sprint 2](/sprint-2) Planning (REST APIs) | Exercises 1 - 28, deadline on {{site.sprint_2_deadline}} |
