@@ -719,7 +719,9 @@ somesubfolder/
     ...
 ```
 
-Also, make sure that the Spring Boot project _doesn't require higher Java version than 21_. That is, both versions 17 and 21 are fine.
+{: .highlight }
+
+> It is highly recommended that the Spring Boot project _doesn't require a higher Java version than 25_. That is, versions 17, 21 and 25 are good choices.
 
 {: .important-title }
 
