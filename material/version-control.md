@@ -719,7 +719,9 @@ somesubfolder/
     ...
 ```
 
-Also, make sure that the Spring Boot project _doesn't require higher Java version than 21_. That is, both versions 17 and 21 are fine.
+{: .highlight }
+
+> It is highly recommended that the Spring Boot project _doesn't require a higher Java version than 25_. That is, versions 17, 21 and 25 are good choices.
 
 {: .important-title }
 
@@ -730,7 +732,7 @@ Also, make sure that the Spring Boot project _doesn't require higher Java versio
 > 1. GitHub organizations are a way to apply fine-grained access permissions to repositories. Create a GitHub organization for your team by following [these](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) instructions. You can name the organization for example based on your team's name you came up with previously
 > 2. Invite other team members to the organization by following [these](https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization) instructions. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team
 > 3. Create a _public_ GitHub repository for the project. Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description
-> 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web, Spring Boot DevTools, Thymeleaf, Spring Data JPA and H2 dependencies by clicking the "Dependencies" button will get you started. Push the generated project to the GitHub repository
+> 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web, Spring Boot DevTools, Thymeleaf and Spring Data JPA dependencies by clicking the "Dependencies" button will get you started. Push the generated project to the GitHub repository
 > 5. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. Start the Spring Boot application in the repository and make sure that there are no errors
 > 6. Add a `README.md` file with some content in it to the repository and push it to GitHub
 > 7. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work. Check the commit history in GitHub and _make sure that the commit's author is your GitHub account_. If your commit's author's avatar is a grey GitHub logo (see below) and the username doesn't match your GitHub ussername, revisit exercise 3

@@ -110,21 +110,21 @@ And the following user stories for the _student dashboard_ application:
 >
 > Create a new milestone for the second Sprint. If you didn't manage to implement all user stories during the previous Sprint, set the second Sprint's milestone for the unfinished user story and task issues. If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks.
 
+<!--
+{: .note }
+
+> You can create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) such as "frontend" and "backend" to clearly indicate whether an issue relates to the frontend or backend part of the project.
+-->
+
 {: .important-title }
 
 > Exercise 4
->
-> To classify frontend-related and backend-related issues, create two new [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): "frontend" and "backend". Add the "frontend" label for issues that are related to the frontend implementation and the "backend" label for issues that are related to the backend implementation.
-
-{: .important-title }
-
-> Exercise 5
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the Sprint milestone and add the issues to the backlog.
 
 {: .important-title }
 
-> Exercise 6
+> Exercise 5
 >
 > Plan the tasks for the first user story, "{{site.sprint_2_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -136,7 +136,7 @@ And the following user stories for the _student dashboard_ application:
 
 {: .important-title }
 
-> Exercise 7
+> Exercise 6
 >
 > Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -150,7 +150,7 @@ And the following user stories for the _student dashboard_ application:
 
 {: .important-title }
 
-> Exercise 8
+> Exercise 7
 >
 > Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -164,7 +164,7 @@ And the following user stories for the _student dashboard_ application:
 
 {: .important-title }
 
-> Exercise 9
+> Exercise 8
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -172,7 +172,7 @@ And the following user stories for the _student dashboard_ application:
 
 {: .important-title }
 
-> Exercise 10
+> Exercise 9
 >
 > Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
 >
@@ -292,7 +292,7 @@ fetch("http://localhost:8080/api/messages", {
 
 ### Controlling the request and response body format with DTO classes
 
-To have full control over the format of the request and response body we can use [DTO](https://www.baeldung.com/java-dto-pattern) classes. Especially with the request body annotated by the `@RequestBody` annotation, we should in general use a DTO class object instead of an entity class object. This is because using an entity class object might accidently allow users to update undesired attributes of an entity as described [here](https://rules.sonarsource.com/java/tag/spring/RSPEC-4684/).
+To have full control over the format of the request and response body we can use [DTO](https://www.baeldung.com/java-dto-pattern) classes (or [records](https://www.baeldung.com/java-record-keyword)). Especially with the request body annotated by the `@RequestBody` annotation, we should in general use a DTO class object instead of an entity class object. This is because using an entity class object might accidently allow users to [update undesired attributes](https://rules.sonarsource.com/java/tag/spring/RSPEC-4684/) of an entity.
 
 For example, let's assume that we have a `User` entity with `id`, `username`, `password` and `isAdmin` (determines if user is an admin user or not) attributes. We want the user to be able to register with an username and password, but _they aren't suppose to be able to define their id or admin status_. To define the available attributes for the request body, we can create a `CreateUserDto` DTO class:
 
@@ -306,6 +306,12 @@ public class CreateUserDto {
 
     // constructors, getters and setters
 }
+
+// Or using a record
+public record CreateUserDto(
+    @NotBlank(message = "Username is required") String username,
+    @Size(min = 8, message = "Password should be at least 8 characters long") String password
+) {}
 ```
 
 In the controller method, the request body is mapped to a `CreateUserDto` object:
@@ -456,7 +462,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 11
+> Exercise 10
 >
 > Implement a REST API endpoint for _getting a quiz by id_. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -466,7 +472,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 12
+> Exercise 11
 >
 > Implement a REST API endpoint for _getting the questions of a quiz_. In this case, instead of using the `@JsonIgnore` annotation, you can use [@JsonManagedReference and @JsonBackReference](https://www.baeldung.com/jackson-bidirectional-relationships-and-infinite-recursion) annotations to include the question's answer options in to the JSON response. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -476,7 +482,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 13
+> Exercise 12
 >
 > Implement a REST API endpoint for _creating an answer for a question_ (or more specifically, for an answer option of a question). Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. The student should be able to choose an answer option (e.g. "Helsinki") for a question (e.g. "What is the capital of Finland?") and submit their answer. The information, which answer option the student submitted for the question should be stored to the database.
 >
@@ -498,7 +504,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 14
+> Exercise 13
 >
 > Implement a REST API endpoint for _getting the results of a quiz_. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -525,7 +531,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 15
+> Exercise 14
 >
 > Implement a REST API endpoint for _getting all categories_.
 >
@@ -533,7 +539,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 16
+> Exercise 15
 >
 > Implement a REST API endpoint for _getting a category by id_. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -543,7 +549,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 17
+> Exercise 16
 >
 > Implement a REST API endpoint for _getting the quizzes of a category_. Only _published quizzes of the category_ should be returned by the endpoint. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -561,7 +567,7 @@ Now that we have implemented REST API endpoints for our application, we should d
 
 Spring Doc is a library for generating a JSON-formatted description of a REST API from our controller classes and their methods. This description follows a common format called the [OpenAPI Specification](https://swagger.io/docs/specification/about/) format. Once the OpenAPI formatted description is generated, there are tools to display the information in a user-friendly way as a user interface. One of such tools is [Swagger](https://swagger.io/).
 
-Swagger provides documentation for the API endpoints we define in the controller methods. The documentation is a user interface that lists the endpoints and provides information for each one, such as what the request for the endpoint looks like and what's in the response. We can also easily send requests and inspect the response using the user interface. [Here](https://petstore.swagger.io/) is an example of a Swagger documentation.
+Swagger provides documentation for the API endpoints we define in the controller methods. The documentation is a user interface that lists the endpoints and provides information for each one, such as what the request for the endpoint looks like and what's in the response. We can also easily send requests and inspect the response using the user interface. [Swagger Petstore](https://petstore.swagger.io/) is an example of a Swagger documentation.
 
 Let's start documenting our API by adding the Spring Doc dependency to the `<dependencies>` list in the `pom.xml` file:
 
@@ -569,7 +575,7 @@ Let's start documenting our API by adding the Spring Doc dependency to the `<dep
 <dependency>
     <groupId>org.springdoc</groupId>
     <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-    <version>2.3.0</version>
+    <version>2.8.15</version>
 </dependency>
 ```
 
@@ -683,7 +689,7 @@ public class UserRestController {
 
 {: .important-title }
 
-> Exercise 18
+> Exercise 17
 >
 > Generate a Swagger documentation for the project as described above. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response. Group the endpoints based on the endpoint's collection name using the `@Tag` annotation.
 >
@@ -788,7 +794,7 @@ export default function MessageList() {
 
 {: .important-title }
 
-> Exercise 19
+> Exercise 18
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -800,7 +806,7 @@ export default function MessageList() {
 
 {: .important-title }
 
-> Exercise 20
+> Exercise 19
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -814,7 +820,7 @@ export default function MessageList() {
 
 {: .important-title }
 
-> Exercise 21
+> Exercise 20
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -828,7 +834,7 @@ export default function MessageList() {
 
 {: .important-title }
 
-> Exercise 22
+> Exercise 21
 >
 > Plan the tasks for the eight user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -842,7 +848,7 @@ export default function MessageList() {
 
 {: .important-title }
 
-> Exercise 23
+> Exercise 22
 >
 > Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_9}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -854,7 +860,7 @@ export default function MessageList() {
 
 {: .important-title }
 
-> Exercise 24
+> Exercise 23
 >
 > Plan the tasks for the tenth user story, "{{site.sprint_2_user_story_10}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -872,13 +878,13 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 {: .important-title }
 
-> Exercise 25
+> Exercise 24
 >
 > Deploy the frontend application to a production environment by following [these instructions](/frontend-deployment). _Test that the application works in the production envinronment_ by e.g. answering a few quizzes and taking a look at their results. Add the production environment URL of the frontend application (the static site URL in the Render dashboard) to the project description section in the `README.md` file.
 
 {: .important-title }
 
-> Exercise 26
+> Exercise 25
 >
 > Add instructions on _how to start the frontend application_ on the command-line to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
@@ -912,13 +918,13 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 27
+> Exercise 26
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 28
+> Exercise 27
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the teacher dashboard and the student dashboard applications on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate both teacher and student dashboard's features in the production environment. As in the previous Sprint Review, prepare some _sensible_ test data for the Sprint Review.
 
