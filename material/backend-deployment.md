@@ -99,7 +99,7 @@ Commit the above changes and push them to your GitHub repository.
 >
 > ![Create a new project disclaimer](/assets/rahti/create-project-disclaimer.png)
 
-Login to CSC at <https://my.csc.fi/login> using you Haka user account (Haaga-Helia credentials) or your CSC user account (username sent to your email). Navigate to "Projects" view and start creating a new project.
+Login to CSC at <https://my.csc.fi> using you Haka user account (Haaga-Helia credentials) or your CSC user account (username sent to your email). Navigate to "Projects" view and start creating a new project.
 
 ![New project](/assets/rahti/new-project.png)
 
@@ -133,8 +133,7 @@ Proceed the login process, you need to click Login buttons a few times in differ
 
 Successfully logging in directs you to Rahti console. When starting the console for the first time take the site's tour showing important navigation options. After the tour you are ready to create your Rahti project.
 
-Click the "Project: All projects" dropdown menu and choose "Create Project" or click the text "Create a Project". If you don't have these options visible in your page, make sure you are in 
-"Developer" view (marked with yellow).
+Click the "Project: All projects" dropdown menu and choose "Create Project" or click the text "Create a Project". If you don't have these options visible in your page, make sure you are in "Developer" view (marked with yellow).
 
 ![Create Rahti project](/assets/rahti/rahti-create-project.png)
 
@@ -146,9 +145,9 @@ Give your project a name and a display name. In the description write `csc_proje
 
 ![Create Rahti project details](/assets/rahti/rahti-create-project-details.png)
 
-Next you will import your code from a Git repository. The following instructions assume that you have set your GitHub repository Public. In Rahti dashboard make sure you are in "Developer" view: go to "+Add" and choose "Import from Git".
+Next you will import your code from a Git repository. The following instructions assume that you have set your GitHub repository Public. In Rahti dashboard, click the "+" icon in the top-right corner and choose "Import from Git".
 
-![Import from Git](/assets/rahti/import-from-git.png)
+![Import from Git](/assets/rahti/rahti-add.png)
 
 Copy and paste your GitHub repository's URL into the corresponding form field and choose "Dockerfile" as your "Import Strategy" if it is not the suggested one. You can leave rest of the form fields to their default values. Move on to "Create".
 
