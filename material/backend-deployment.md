@@ -133,7 +133,7 @@ Proceed the login process, you need to click Login buttons a few times in differ
 
 Successfully logging in directs you to Rahti console. When starting the console for the first time take the site's tour showing important navigation options. After the tour you are ready to create your Rahti project.
 
-Click the "Project: All projects" dropdown menu and choose "Create Project" or click the text "Create a Project". If you don't have these options visible in your page, make sure you are in "Developer" view (marked with yellow).
+In the navigation collapse "Home" and click "Projects". On the "Projects" page click the "Create project" button.
 
 ![Create Rahti project](/assets/rahti/rahti-create-project.png)
 
@@ -149,9 +149,9 @@ Next you will import your code from a Git repository. The following instructions
 
 ![Import from Git](/assets/rahti/rahti-add.png)
 
-Copy and paste your GitHub repository's URL into the corresponding form field and choose "Dockerfile" as your "Import Strategy" if it is not the suggested one. You can leave rest of the form fields to their default values. Move on to "Create".
+Copy and paste your GitHub repository's URL into the corresponding form field and choose "Dockerfile" as your "Import Strategy" if it is not the suggested one. If the "Dockerfile path" has an error, type in the path `./Dockerfile`. You can leave rest of the form fields to their default values. Move on to "Create".
 
-![Import from Git config](/assets/rahti/import-from-git-config.png)
+![Import from Git config](/assets/rahti/rahti-dockerfile-path.png)
 
 Successful creation will take you to your project's "Topology" view. Click the graphical representation of your deployment to open your deployment controls.
 
@@ -159,9 +159,11 @@ Successful creation will take you to your project's "Topology" view. Click the g
 
 You have now deployed your application into Rahti. But it is not in working condition yet. The "Crash Loop BackOff" error is due to the build's trials of connecting to a database that doesn't exist trying to use environment variables that haven't been declared. (You might have to wait a minute to get the error).
 
-In Developer view, go to "+Add" page and start creating a database for your project. Choose "PostgreSQL". _Make sure you don't select the Ephemeral version!_ Click "Instantiate Template" to continue the process.
+## Setting up the PostgreSQL database
 
-![Add database](/assets/rahti/add-database.png)
+To setup a PostgreSQL database, in the navigation collapse "Home" and click the "Software Catalog" link. In the "Software Catalog" page, type in "postgresql" to the search bar and scroll down until you find "PostgreSQL" and click it. _Make sure you don't select the Ephemeral version!_. Click "Instantiate Template" to continue the process.
+
+![Add database](/assets/rahti/rahti-postgres.png)
 
 You can leave all the default values in the form where you create your database. Leaving PostgreSQL "Connection Username" and "Password" empty will make the system generate random credentials for you. This is fine within the scope of Haaga-Helia UAS course work.
 
@@ -175,7 +177,7 @@ Successful creation of a database will show as a new "DeploymentConfig" object i
 
 ![Topology deployment config](/assets/rahti/topology-deployment-config.png)
 
-You still need to configure the environmental variables before your application's deployment is finished. In "Administrator" view navigate to "Workloads > Deployments > NAME_OF_YOUR_DEPLOYMENT > Environment".
+You still need to configure the environmental variables before your application's deployment is finished. Navigate to "Workloads > Deployments > NAME_OF_YOUR_DEPLOYMENT > Environment".
 
 Set your environment variables as shown below (name: value). Click the circled "Add from ConfigMap or Secret" to get more form fields. _Make sure that you don't mistype variable names or values!_
 
@@ -190,7 +192,7 @@ _Click "Save" at the bottom of the page to activate your changes_.
 
 Congratulations! You have now deployed your Spring application with a proper database to CSC/Rahti!
 
-To get the URL for your app go back to "Developer view > Topology". Click your application's "Open URL" shortcut or navigate to deployment's quick controls (navigation pane on the right) and scroll down to "Routes". It might take few minutes before you are able to access your deployment's URL in browser.
+To get the URL for your app go back to "Topology" page. Click your application's "Open URL" shortcut or navigate to deployment's quick controls (navigation pane on the right) and scroll down to "Routes". It might take few minutes before you are able to access your deployment's URL in browser.
 
 ![Rahti URL](/assets/rahti/rahti-url.png)
 

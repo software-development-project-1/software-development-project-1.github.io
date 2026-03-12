@@ -124,7 +124,7 @@ Testing each feature manually after each code change to spot regression bugs is 
 
 ![TestPyramid](/assets/test-pyramid.png)
 
-Fowler categorizes different tests in three categories: _unit_, _service_ and _UI_ (user interface) tests. The test pyramid represents the _amount_ of these different kind of tests we should have for our application. There are pros and cons for the different kind of tests. While we go up in the pyramid we get better reliability that our application works as inteaded as a whole, but the tests becomes _laborious to maintain_, _difficult to implement_, and _time consuming to run_. This is why our test portfolio should be balanced.
+Fowler categorizes different tests in three categories: _unit_, _service_ and _UI_ (user interface) tests. The test pyramid represents the _amount_ of these different kind of tests we should have for our application. There are pros and cons for the different kind of tests. While we go up in the pyramid we get better reliability that our application works as inteaded as a whole, but the tests becomes _laborious to maintain_, _difficult to implement_, and _time consuming to run_. Ideally, our project should include multiple types of tests that complement each other, forming a balanced test pyramid.
 
 Automated tests are implemented with programming language specific _testing frameworks_, such as Java's [JUnit](https://junit.org/junit5/) and JavaScript's [Vitest](https://vitest.dev/). During this Sprint we will implement some integration tests for our backend's REST API endpoints using JUnit and the [MockMVC](https://spring.io/guides/gs/testing-web) framework.
 
@@ -216,9 +216,9 @@ Submit Valid Message
 
 UI tests have these pros and cons:
 
-- 🟢 Provides a good reliability that the application works as a whole
-- 🔴 Difficult to implement and laborious to maintain
+- 🔴 More difficult to implement and laborious to maintain
 - 🔴 Slow to run
+- 🟢 Provides a good reliability that the application works as a whole
 
 ## Configuration for tests
 
@@ -250,7 +250,7 @@ Integration tests are a great balance of reliability and performance. Kent C. Do
 
 To get some confidence that our application is working as inteded, let's implement some integration tests for our REST API endpoints.
 
-In Java applications, tests are implemented and executed with the [JUnit](https://junit.org/junit5/) testing framework. JUnit tests are implemented as _test classes_. Test classes can be annoted with the `@SpringBootTest` annotation to access the Spring application context in tests. This, for example makes the `@Autowired` annotations work. Methods annotated with the `@Test` annotation are the _test methods_, which test a specific _test scenario_.
+In Java applications, tests are implemented and executed with the [JUnit](https://junit.org/junit5/) testing framework. JUnit tests are implemented as _test classes_. Test classes can be annoted with the `@SpringBootTest` annotation to access the Spring application context in tests. This, for example makes the dependency injection work. Methods annotated with the `@Test` annotation are the _test methods_, which test a specific _test scenario_.
 
 Test methods usually share certain common setup code, which should be executed before each test method. This setup can be put inside a method annotated with the `@BeforeEach` annotation. The tests should be _independent_ from each other, meaning that for example the order in which the tests are executed should not matter. To achieve the independence, each test needs to start with an _empty database_. This is achieved by deleting all entities in the `setUp` method before each test.
 
@@ -261,8 +261,9 @@ As an example, let's consider testing the following methods of a `MessageRestCon
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class MessageRestController {
-    @Autowired
-    private MessageRepository messageRepository;
+    private final MessageRepository messageRepository;
+
+    // ...
 
     @GetMapping("/messages")
     public List<Message> getAllMessages() {
@@ -292,7 +293,7 @@ The test class files should be placed to the `src/test/java` folder and the name
 To make sure that the tests in the test class are independent, the `setUp` method should delete all messages at the beginning of each test:
 
 ```java
-package fi.haagahelia.quizzer.controller;
+package fi.haagahelia.messenger.controller;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -307,19 +308,19 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.util.List;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import fi.haagahelia.quizzer.model.Message;
-import fi.haagahelia.quizzer.repository.MessageRepository;
+import fi.haagahelia.messenger.model.Message;
+import fi.haagahelia.messenger.repository.MessageRepository;
 
 @SpringBootTest
 @AutoConfigureMockMvc
 public class MessageRestControllerTest {
     @Autowired
-    MessageRepository messageRepository;
+    private MessageRepository messageRepository;
 
     @Autowired
     private MockMvc mockMvc;
 
-    ObjectMapper mapper = new ObjectMapper();
+    private ObjectMapper mapper = new ObjectMapper();
 
     @BeforeEach
     void setUp() throws Exception {

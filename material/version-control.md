@@ -19,15 +19,15 @@ Submit this week's exercises to [Moodle]({{site.week_2_moodle_submission_link}})
 
 ## Version control
 
-This part of the course handles version control. Version control refers to a service used for storing code. There are two primary reasons for using it: Version control allows storing backups of both the current and older versions of a program. In addition, code and projects can easily be shared with others, which makes collaboration easy.
+This part of the course handles version control. Version control refers to a service used for storing code. There are two primary reasons for using it: Version control allows storing backups of both the current and older versions of an application. In addition, code and projects can easily be shared with others, which makes collaboration easy.
 
-Version control tools allow marking a specific state of a project as so that one can return to it later. Thus, if something goes wrong in the development of new features, one can return to an older and functional version of the project. Version control stores all the marked states. Therefore all the developers can follow the evolution of the program, like who has done what and when. This also makes finding bugs, or errors in the program, a lot easier.
+Version control tools allow marking a specific state of a project as so that one can return to it later. Thus, if something goes wrong in the development of new features, one can return to an older and functional version of the project. Version control stores all the marked states. Therefore all the developers can follow the evolution of the application, like who has done what and when. This also makes finding bugs, or errors in the application, a lot easier.
 
-Contrary to what many people think, programming is mostly done in groups. With version control tools it is possible to use and develop others' code, even without ever meeting in person. People can give verbal feedback, such as report issues, as well as make concrete suggestions for improvement by providing code to the project. All developers are kept up to date about the state of the project, which makes cooperation smoother.
+Contrary to what many people think, software development is mostly done in teams. With version control tools it is possible to use and develop others' code, even without ever meeting in person. People can give verbal feedback, such as report issues, as well as make concrete suggestions for improvement by providing code to the project. All developers are kept up to date about the state of the project, which makes cooperation smoother.
 
 Visual Studio has summarized reasons for using version control on their [website](https://www.visualstudio.com/learn/what-is-version-control). Bitbucket [has also written](https://www.atlassian.com/git/tutorials/what-is-version-control) a longer text about version control.
 
-There are several different version control tools available, but this part will focus on using Git and GitHub, especially in the context of programming projects.
+There are several different version control tools available, but this part will focus on using Git and GitHub, especially in the context of software development projects.
 
 ## About Git
 
@@ -45,7 +45,7 @@ Git and GitHub are used in solo as well as collaborative projects in the industr
 
 > Exercise 1
 >
-> Start by creating a GitHub account at <https://github.com/>. Programmers often use GitHub as a sort of code protfolio, so make sure to choose a username which you don't mind adding to your CV.
+> Start by creating a GitHub account at <https://github.com/>. Software developers often use GitHub as a sort of code protfolio, so make sure to choose a username which you don't mind adding to your CV.
 
 {: .important-title }
 
@@ -91,6 +91,9 @@ The command should print basic introductions on how to use the `git` command.
 >
 > If you don't want your email to be public, GitHub offers a specific <a href="https://help.github.com/en/articles/setting-your-commit-email-address">noreply email</a>.
 
+{: .highlight }
+> This configuration is computer-specific. If you work on more than computer, you'll need to configure each separately.
+
 ## Starting a Git project
 
 A project is simply a folder containing some files. These files can for example have code in them. You can turn a folder into a Git project by running the command `git init` inside it. This will allow running git commands inside the folder. The initialization command will create a subfolder called `.git`. This folder stores all sorts of information about the project in the folder it is located in.
@@ -99,7 +102,7 @@ A project is simply a folder containing some files. These files can for example 
 
 Information is stored to Git with _commits_. A commit is a bundle of changes which have been made into files inside the project. In practice these changes are often adding or removing text from a file, for example.
 
-You can think of a commit as a step towards a finished project. Every commit adds some changes to the previous commit. For example, when developing a program, it would be natural to add a new feature in a new commit.
+You can think of a commit as a step towards a finished project. Every commit adds some changes to the previous commit. For example, when developing an application, it would be natural to add a new feature in a new commit.
 
 Let's go through how a commit is created. First, the changes one wants to include in the commit are added to the _staging_ state. When all the desired changes are in staging, the commit is wrapped together, sealing all the changes together.
 
@@ -176,11 +179,7 @@ Untracked files:
 
 Now let's break down the output.
 
-The first title is called `Changes to be committed.` The changes under this title will be added to the next commit.
-
-`Changes not staged for commit` refers to the changes which Git is aware of, which _will not_ be added to the next commit.
-
-Finally `Untracked files` contains all the files which are unknown to Git, meaning that the changes inside them are not being followed. For example, Git cannot distinguish what sort of changes have been done to the untracked files. In consequence, the changes are not being added to the next commit.
+The first title is called `Changes to be committed`. The changes under this title will be added to the next commit. The second title, `Changes not staged for commit`, refers to the changes which Git is aware of, which _will not_ be added to the next commit. Finally `Untracked files` contains all the files which are unknown to Git, meaning that the changes inside them are not being followed. For example, Git cannot distinguish what sort of changes have been done to the untracked files. In consequence, the changes are not being added to the next commit.
 
 You probably noticed that the file `git_practice.txt` is in the output twice. This is because Git tracks _changes_. The first change added to Git was where the file `git_practice.txt` was created. Only after adding the change to Git was some text insterted into the file. Thus only the change where the file `git_practice.txt` was created will be added to the next commit, and not the change when some text was added inside it. The interpretation of the output of `git status` is made easier with some colors. The changes which will be added to the next commit are displayed in green, and next to the filename is written what was done to the file (for example `new file`, `modified`, `deleted`).
 
@@ -191,8 +190,8 @@ By running `git add -p` one can choose change by change, which ones to add to th
 Here's a few different ways to add changes with the `git add` command:
 
 - `git add name_of_folder/some_file.txt`: add changes in file `some_file.txt` in folder `name_of_folder`.
-- `git add name_of_folder`: add _all changes_ in folder `name_of_folder`
-- `git add .`: add _all changes_ in the project
+- `git add name_of_folder`: add _all changes_ in folder `name_of_folder`.
+- `git add .`: add _all changes_ in the project. Always check the changes with `git status` before using this.
 - `git add -p`: choose change by change, which ones to add. This only works for _tracked files_.
 
 {: .note }
@@ -241,9 +240,7 @@ Untracked files:
         empty.txt
 ```
 
-Then we'll run `git commit -m "Add new file"`
-
-Now the output of `git status` is:
+Then we'll run `git commit -m "Add new file"`. Now the output of `git status` is:
 
 ```bash
 On branch main
@@ -257,6 +254,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 The changes which were committed are no longer visible in the output. However, they are not lost, they have just been moved to the commit. You can view the commits of a project with the command `git log`:
 
 ```
+commit 51bf544c786a671c28f70713b6cb33d87cc38
 Author: Jukka Remes <jukka.remes@haaga-helia.fi>
 Date:   Wed Sep 6 12:51:07 2023 +0300
 
@@ -269,17 +267,26 @@ Date:   Wed Sep 6 12:51:07 2023 +0300
 
 The command `git log` outputs the author of the commit, the time of its creation and its title. Every commit has a unique id, formed with [SHA-1](https://en.wikipedia.org/wiki/SHA-1). In the output of `git log` the id can be seen as a long string next to the word "commit", which is `51bf544c786a671c28f70713b6cb33d87cc38` in this case.
 
+```mermaid
+gitGraph
+   checkout main
+  commit id: "Initialize repo and add practice file"
+  commit id: "Add initial story draft"
+  commit id: "Add shopping list file"
+  commit id: "Add school folder and notes file"
+  commit id: "Update shopping list with new items"
+  commit id: "Clarify story text and fix typos"
+```
+
 {: .note }
 
 > The process of creating a commit might seem unintuitive at first. The following analogy might help: Picture the commit as a package. You are sitting on the floor, with all the changes layed out in front of you as wooden blocks. The staging state, denoted with the title <code>Changes to be committed</code> is a piece of wrapping paper, which is spread out in front of you. With the command <code>git add</code> you can move the wooden blocks representing changes on top of the wrapping paper, and with <code>git commit</code> you tie the wrapper aroung the changes to create a commit.
 
 ### Branches
 
-At the top of of the output of `git status`, you can see the following text: `On branch main`. Branches allow separating some commits from others. This means that a new branch can be developed independently from an old branch. It is customary for projects to have a main branch, usually called literally `main` or alternatively `master`, containing the version currently in use.
+At the top of of the output of `git status`, you can see the following text: `On branch main`. Branches allow separating some commits from others. This means that a new branch can be developed independently from an old branch. It is customary for projects to have a main branch, usually called literally `main` or alternatively `master`, containing the version currently in use. Traditionally git has used the term master to refer to the main or default branch. Currently, many platforms such as GitHub, Gitlab and Git itself, create a branch named `main` by default.
 
-Traditionally git has used the term master to refer to the main or default branch. During years 2020 and 2021 many platforms, such as GitHub and Gitlab, transitioned into using main as the default name for this branch. Git itself followed suit in 2021 and recent versions of git create a branch named main by default.
-
-Branches are usually used for testing out new features without breaking a working version of the program. Since branches don't affect each other states, the new branch can be played with without worrying about other ones. When the changes made to the new branch are deemed ready, the branch can be merged to the main branch, and thus the new features will be published. For now it suffices to understand that we will only use the main branch in the exercises.
+Branches are usually used for testing out new features without breaking a working version of the application. Since branches don't affect each other states, the new branch can be played with without worrying about other ones. When the changes made to the new branch are deemed ready, the branch can be merged to the main branch, and thus the new features will be published. For now it suffices to understand that we will only use the main branch in the exercises.
 
 {: .important-title}
 
@@ -348,6 +355,8 @@ A new repository called "origin" is added using an HTTPS connection by running t
 >
 > - On _Windows_, run `git config --global credential.helper manager` in Git Bash.
 > - On _macOS_, run `git config --global credential.helper osxkeychain` in the Terminal
+>
+> Optionally, you can install [GitHub CLI](https://cli.github.com/) and authenticate via the `gh auth login` command.
 
 {: .important-title }
 
@@ -369,7 +378,7 @@ Let's push the changes we made to the file `git_practice.txt` by running `git pu
 
 {: .note}
 
-> Running `git push` will ask for your GitHub username and password. Once you have submitted those successfully, return to Git Bash.
+> Running `git push` might ask for your GitHub username and password, because chaging a GitHub repository's contents requires authentication. Once you have submitted those successfully, return to Git Bash.
 
 {: .important-title }
 
@@ -382,7 +391,7 @@ Let's push the changes we made to the file `git_practice.txt` by running `git pu
 
 There now exists two versions of the project: one locally, and one in the remote at GitHub. Let's see what happens, when these two versions don't stay properly synced.
 
-We'll start by making changes to the project via GitHub. You can edit files via GitHub by clicking on their name and then clicking on the pen icon on the right side of the page.
+We'll start by making changes to the project via GitHub. This simulates another team member changing the repository contents. You can edit files via GitHub by clicking on their name and then clicking on the pen icon on the right side of the page.
 
 ![Pen icon at GitHub](/assets/edit.png)
 
@@ -410,7 +419,7 @@ Now you can find the new line of text in the file you changed via GitHub.
 
 > Exercise 9
 >
-> Create a new file to the `school` subfolder via GitHub, and fetch it to your local version. You can add file in GitHub by click the `school` folder name on GitHub and cliking "Add a file" on top right corner. Then commit changes similarly as while editing the file.
+> Create a new file to the `school` subfolder _via GitHub_, and fetch it to your local version. You can add file in GitHub by click the `school` folder name on GitHub and cliking "Add a file" on top right corner. Then commit changes similarly as while editing the file.
 
 In practice the situation handled above corresponds to working on a collaborative project, where someone else has added commits to the project and pushed them to GitHub. Other developers should then fetch the new changes with the command `git pull`.
 
@@ -434,7 +443,10 @@ Aborting
 
 Pulling the new commit from the remote does not work, because the local verison holds changes to the same file as the remote repository, and the local changes have not been wrapped into a commit.
 
-In situations like this one can put the local changes aside to the _stash_. This is done with the command `git stash`. When the command is run, the local changes in files tracked by Git will by hidden, but not lost completely. In order to also stash changes in untracked files, add the flag `-u`. Changes can be returned from the stash by running `git stash pop`.
+In situations like this one can put the local changes aside to the _stash_ (as Git was suggesting with "commit your changes or stash them before you can merge"). This is done with the command `git stash`. When the command is run, the local changes in files tracked by Git will by hidden, but not lost completely. In order to also stash changes in untracked files, add the flag `-u`. Changes can be returned from the stash by running `git stash pop`.
+
+{: .note }
+> Use `git stash` in a situation where you have existing local changes you don't want to commit yet, but you need to pull changes from the remote GitHub repository (for example, your team member has pushed changes you need).
 
 {: .important-title }
 
@@ -442,13 +454,13 @@ In situations like this one can put the local changes aside to the _stash_. This
 >
 > 1. Make changes to some files which you have already added to Git once (i.e. they are not under the headline <code>untracked</code> in the output of <code>git status</code>).
 > 2. Stash the changes you just made using Git.
-> 3. Open the files you changed and check if you can still see the changes
-> 4. Edit the <i>first</i> sentence of the file <code>story.txt</code> in GitHub and create a commit.
-> 5. Then edit the <i>last</i> sentence of the same file locally, but _don't create a commit_.
-> 6. Fetch the changes you made to <code>story.txt</code> in the remote repository to the local version. Use the stash.
-> 7. After you have successfully fetched the changes to the local version, create a commit of the changes you made to the last sentence of <code>story.txt</code>.
+> 3. Open the files you changed and check if you can still see the changes.
+> 4. Edit the <i>first</i> line of the file <code>story.txt</code> _in GitHub_ and create a commit. Do this in browser as shown previously, by editing the file in GitHub.
+> 5. Then edit the <i>last</i> line of the same file locally, but _don't create a commit_.
+> 6. Fetch the changes you made to <code>story.txt</code> from the remote GitHub repository to the local version. After seeing the problem with fetching the remote changes, stash your current changes and fetch the changes again.
+> 7. After you have successfully fetched the changes from GitHub to the local version, pop the changes you have in the stash and create a commit of the changes you made to the last line of <code>story.txt</code>.
 > 8. Push the end result to GitHub.
-> 9. Make sure you can see both the changes you made to the first sentence and the ones to the last sentence in the remote version.
+> 9. Make sure you can see both the changes you made to the first line and the ones to the last line in the remote GitHub repository.
 >
 > If you see "CONFLICT" outputted to the terminal when popping changes from the stash, the section "Merge Conflicts" will help.
 
@@ -596,7 +608,7 @@ Merge conflicts can also occur when taking changes out of the stash, if the hidd
 
 All the commits added to a Git project add up to its _commit history_. Commit history is like a chain of commits, formed when commits are created on top of each other.
 
-Storing a project's commit history is one of the greatest benefits of using version control. It allows returning back in time to a working version of the program, or observing how certaing files and features have changed over time.
+Storing a project's commit history is one of the greatest benefits of using version control. It allows returning back in time to a working version of the application, or observing how certaing files and features have changed over time.
 
 ### Examining commit history
 
@@ -652,25 +664,23 @@ However, there exists another way of suggesting changes to an existing project. 
 
 If the chages you have done to your own version are good enough in your own opinion, you can suggest merging them to the original project with a [pull request](https://help.github.com/articles/about-pull-requests/). The owner of the original project can then go through your suggested changes and to integrate them to the project if they wish.
 
-Let's clone the git-practice repository we have been working on from GitHub to our local computer. First, open Git Bash in the folder where you want to clone the repository. For example, we can right-click on the Desktop and choose "Git Bash Here" to clone the repository on the Desktop. Then, let's clone the repository by using _the HTTPS address_ of the repository we get from GitHub. We can change the name of the repository folder by providing a name at the end of the `git clone` command. Let's call this folder `git-practice-clone` to not confuse it with the `git-practice` folder we have as well:
+Let's clone the git-practice repository we have been working on from GitHub to our local computer. First, check that you don't have any commited changes in the local repository using the `git status` command. If so, add, commit and push any changes you currently have. Then, delete the current `git-practice` folder on your computer.
+
+Once the folder has been deleted, open Git Bash in the folder where you want to clone the repository. For example, we can right-click on the Desktop and choose "Git Bash Here" to clone the repository on the Desktop. Finally, let's clone the repository by using _the HTTPS address_ of the repository we get from GitHub:
 
 ```bash
-git clone <https-address-of-the-repository> git-practice-clone
+git clone <https-address-of-the-repository>
 ```
 
-{: .highlight }
-
-> Usually we should not have multiple versions of the same repository on our computer to avoid confusion.
-
-We should now have a `git-practice-clone` folder in the folder we ran the command in. Open the folder for example in Visual Studio Code. We can see that the folder contains everything we have in GitHub. To open the repository in Git Bash we can either right-click on the repository folder or we can run the command `cd git-practice-clone`. The [cd command](https://www.geeksforgeeks.org/cd-command-in-linux-with-examples/) will change the current folder.
+We should now have a `git-practice` folder in the folder we ran the command in. Open the folder for example in Visual Studio Code. We can see that the folder contains everything we have in GitHub. To open the repository in Git Bash we can either right-click on the repository folder or we can run the command `cd git-practice`. The [cd command](https://www.geeksforgeeks.org/cd-command-in-linux-with-examples/) will change the current folder.
 
 {: .important-title }
 
 > Exercise 14
 >
-> 1. Clone the git-practice repository to your local computer as instructed above and open the repository folder in Git Bash and in an editor such as Visual Studio Code.
+> 1. Delete the current `git-practice` folder on your computer and clone the git-practice repository from GitHub to your local computer as instructed above. Then, open the repository folder in Git Bash and in an editor such as Visual Studio Code.
 > 2. Change the contents of some file (for example the `git_practice.txt`) file and push the changes to GitHub. Open the repository in GitHub and see that it has the commit you created.
-> 3. Find out using Google, how you can find out the names and addresses of the remote repositories of a Git project. The answer is a command you should run inside the Git project, when a remote has been set. Run the command and see that the remote repository address matches your GitHub repository. Add the command and the command output to a `remote.txt` file and push it to GitHub.
+> 3. Find out (e.g. using Google or ChatGPT), how you can find out the names and addresses of the remote repositories of a Git project. The answer is a command you should run inside the Git project, when a remote has been set. Run the command and see that the remote repository address matches your GitHub repository. Add the command and the command output to a `remote.txt` file and push it to GitHub.
 
 {: .important-title }
 
@@ -795,7 +805,7 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 ## The End
 
-As a novice programmer it is easy to lose and even break code with version control. However, learning how to use one is definitely one of the most vital skills required in the working life. Though the system in use may not be Git, the same principles often apply.
+As a novice software developer it is easy to lose and even break code with version control. However, learning how to use one is definitely one of the most vital skills required in the working life. Though the system in use may not be Git, the same principles often apply.
 
 If you run into a strange error message, don't be afraid to ask for help. Avoid running commands blindly. Keeping a close eye on the output of `git status` will get you a long way. Also remember to make commits a sensible size, push them to the remote repository regularly, and communicate with your team mates. The best way to learn how to use Git is to just do it, so don't give up and remove the project upon the first error message. Remember, that you can always just clone the repository to your computer again.
 
