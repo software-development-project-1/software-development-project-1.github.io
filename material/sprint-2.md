@@ -198,8 +198,9 @@ Instead of sending a response as an HTML page, we can serialize Java objects int
 @RestController
 @RequestMapping("/api")
 public class MessageRestController {
-    @Autowired
-    private MessageRepository messageRepository;
+    private final MessageRepository messageRepository;
+
+    // ...
 
     @GetMapping("/messages")
     public List<Message> getAllMessages() {

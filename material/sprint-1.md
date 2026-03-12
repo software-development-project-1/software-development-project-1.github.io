@@ -216,7 +216,7 @@ By default we can't see the labels or the milestone on the issue cards. We can c
 
 Data is the backbone of almost every application. That is why it is a good idea to start planning user stories by considering the data requirements. It is also necessary to decide and setup an appropriate database to suit the application's needs.
 
-For example, the [H2 database](https://www.h2database.com/html/main.html) is a good choice for the development environment database (the one that the developers use during the development). We will learn how to setup a more suitable production environment database (the one that the actual user's of the application use) later. First, make sure that your project has the required dependencies for the H2 database (or some other database of your team's choice). Then, add the database configuration to the `application.properties` configuration file. [This article](https://www.baeldung.com/spring-boot-h2-database) covers the details of the H2 database setup.
+For example, [H2](https://www.h2database.com/html/main.html) and [SQLite](https://medium.com/@AlexanderObregon/using-spring-boot-with-sqlite-for-lightweight-apps-6c7624a0f438) databases are good choices as the _development environment database_ (the one that the developers use during the development) due to their easy setup and use. We will discuss more suitable choices as the _production environment database_ (the one that the actual user's of the application use) later. First, make sure that your project has the required dependencies for, for example, the H2 database (or some other database of your team's choice). Then, add the database configuration to the `application.properties` configuration file. [This article](https://www.baeldung.com/spring-boot-h2-database) covers the details of the H2 database setup.
 
 {: .important-title }
 
@@ -437,8 +437,9 @@ The Product Owner wants us to get started with the student dashboard application
 > @RequestMapping("/api")
 > @CrossOrigin(origins = "*")
 > public class MessageRestController {
->    @Autowired
->    private MessageRepository messageRepository;
+>    private final MessageRepository messageRepository;
+>   
+>    // ...       
 >
 >    @GetMapping("/messages")
 >    public List<Message> getAllMessages() {
@@ -614,7 +615,7 @@ gitGraph
    commit
 ```
 
-A new branch can be created with the `git branch <name-of-the-branch>` (replace the `<name-of-the-branch>` with name of the branch) command in Git Bash. Let's create a branch and _name it our GitHub username with lowercase letters_. First, pull the latest changes from GitHub using the `git pull` command. Then, create the branch:
+A new branch can be created with the `git branch <name-of-the-branch>` command in Git Bash. Let's create a branch and name it based on the small feature developed in the branch (for example, `change-add-message-button-color`). First, pull the latest changes from GitHub using the `git pull` command. Then, create the branch:
 
 ```bash
 git branch <name-of-my-branch>
@@ -643,10 +644,10 @@ Then let's switch back to the main branch with the `git checkout main` command. 
 Let's switch back to our branch with the `git checkout` command. Then, push the changes to GitHub with the `git push` command. We get the following error message:
 
 ```bash
-fatal: The current branch kaltsoon has no upstream branch.
+fatal: The current branch change-add-message-button-color has no upstream branch.
 To push the current branch and set the remote as upstream, use
 
-    git push --set-upstream origin kaltsoon
+    git push --set-upstream origin change-add-message-button-color
 
 To have this happen automatically for branches without a tracking
 upstream, see 'push.autoSetupRemote' in 'git help config'.
@@ -664,7 +665,7 @@ Now, let's check that our branch is pushed to GitHub. Open the repository in Git
 
 > ⭐ Bonus exercise
 >
-> Perform the steps above to create your own branch named by your GitHub username. Implement some small change for the project in the branch by making one or more commits. Once you are done, push your branch and changes to GitHub.
+> Perform the steps above to create your own branch. Implement some small change for the project in the branch by making one or more commits. Once you are done, push your branch and changes to GitHub.
 
 ### Merging branches and pull requests
 
