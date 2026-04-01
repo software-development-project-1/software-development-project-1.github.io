@@ -11,11 +11,11 @@ This guide covers Spring Boot backend and PostgreSQL database deployment using t
 
 ## Register to CSC
 
-Start by registering to CSC by following [these instructions](/assets/rahti/csc_instructions_register.pdf).
+Start by registering to CSC by following [these instructions](https://github.com/Haaga-Helia-SOF003AS3A/documentation/blob/main/deployment-instructions/csc_instructions_md/csc_instructions_register.md).
 
 ## Configuring the Spring Boot project
 
-Make sure that your Spring Boot project is _in the repository's root folder, like this_ ✅:
+To ease the deployment, it is recommended that Spring Boot project is _in the repository's root folder, like this_ ✅:
 
 ```
 src/
@@ -103,15 +103,25 @@ Login to CSC at <https://my.csc.fi> using you Haka user account (Haaga-Helia cre
 
 ![New project](/assets/rahti/new-project.png)
 
-Fill in your project's information. Choose project name and description freely. Set the "Course end date" to three months from now. In "Project resources" you can set "Primary science area" as ""Engineering and technology" and "Secondary science area" as "Other engineering and technologies". Read and accept all terms of use and privacy notice. Choose "Create project" to continue.
+Then, go to through the project creation:
 
-You have now created your CSC project. Within this project you can start adding CSC's services. For your deployment you only need Rahti – Container Cloud. Click "Add services" and select "Rahti".
+1. In the "Category" step, select project types as "Course" and click the "Next" button.
+2. In the "Details" step, enter the required project details, which are the following:
+    - Project name and description.
+    - Course end date: can be at most six months from the creation date, so set it as six months from the current date.
+    - Primary science area: Engineering and technology.
+    - Secondary science area: Other engineering and technologies.
+3. In the "Services" step, select "Rahti". In this course, you will need the Rahti service from CSC's offerings.
+4. In the "Static resources" step, just move on by clicking the "Next" button.
+5. In the "Confirmation" step, accept all terms of use for the Rahti and click the "Submit" button. NOTE! It may take several minutes for the project to generate.
+
+Now you should have screen which contains basic information about your project with the Rahti service.
 
 ![Project information](/assets/rahti/project-information.png)
 
 {: .highlight }
 
-> Check your project number in the "Project information" section. You will need it later!
+> Check and copy-paste your project number in the "Project information" section somewhere temporarily. You will need it later.
 
 Once you have added the Rahti service you might have to wait up to 60 mins for you to gain access after activation. So be patient!
 
