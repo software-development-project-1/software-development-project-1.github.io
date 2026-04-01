@@ -110,11 +110,9 @@ And the following user stories for the _student dashboard_ application:
 >
 > Create a new milestone for the second Sprint. If you didn't manage to implement all user stories during the previous Sprint, set the second Sprint's milestone for the unfinished user story and task issues. If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks.
 
-<!--
 {: .note }
 
-> You can create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) such as "frontend" and "backend" to clearly indicate whether an issue relates to the frontend or backend part of the project.
--->
+> You can create [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) such as "frontend" and "backend" to indicate which part of the project an issue relates to.
 
 {: .important-title }
 
@@ -182,7 +180,7 @@ And the following user stories for the _student dashboard_ application:
 
 ## REST APIs
 
-So far the user has interacted with our web application in the following manner:
+In a fully backend-based application (e.g., Spring Boot with Thymeleaf) the user interacts with the web application in the following manner:
 
 1. The user opens a page at certain path, for example `/`, in a web browser.
 2. The web browser sends a request to the server (the backend) for the resource of that path.
@@ -190,7 +188,7 @@ So far the user has interacted with our web application in the following manner:
 4. The controller method retrieves the required data from the database and based on the data creates an HTML page.
 5. The HTML page is sent as a response and the browser displays the page for the user.
 
-So, the representation of our application's data is an HTML page. To provide other applications, such as JavaScript frontend applications, a better access to our data we need to represent it in a format that is easier to consume, such as the JSON format.
+So, the representation of the application's data is an HTML page. To provide other applications, such as JavaScript frontend applications, a better access to our data we need to represent it in a format that is easier to consume, such as the JSON format.
 
 Instead of sending a response as an HTML page, we can serialize Java objects into text-based JSON format and send it as a response. Let's consider a `MessageRestController` controller class as an example:
 
@@ -198,8 +196,9 @@ Instead of sending a response as an HTML page, we can serialize Java objects int
 @RestController
 @RequestMapping("/api")
 public class MessageRestController {
-    @Autowired
-    private MessageRepository messageRepository;
+    private final MessageRepository messageRepository;
+
+    // ...
 
     @GetMapping("/messages")
     public List<Message> getAllMessages() {
@@ -208,9 +207,15 @@ public class MessageRestController {
 }
 ```
 
-The `@RestController` annotation on the `MessageRestController` class specifies that each method of the controller class produces a JSON response body. Instead of returning the name of the template, we can directly return Java objects. For example the `getAllMessages` method returns a list of `Message` objects. If we open the page <http://localhost:8080/api/messages> in a web browser we should see this list.
+The `@RestController` annotation on the `MessageRestController` class specifies that each method of the controller class produces a JSON response body. Instead of returning the name of the template, we can directly return Java objects. For example the `getAllMessages` method returns a list of `Message` objects. In this example, the JSON list would be available at `http://localhost:8080/api/messages`.
 
-By using JSON as the data representation format we can separate the _client_ (the user interface application) from the server. This allows as to implement many different kinds of client applications with different programming languages. This separation of server and client is one of the corner stones of the _the REST architectural style_.
+By using JSON as the data representation format we can separate the _client_ (the user interface application) from the _server_. This allows as to implement many different kinds of client applications with different programming languages. This separation of server and client is one of the corner stones of the _the REST architectural style_.
+
+```mermaid
+flowchart LR
+    client(Client) -- GET /api/messages --> server(Server)
+    server -- "[{ #quot;id#quot;: 1, #quot;content#quot;: #quot;Hello world!#quot; }]" --> client
+```
 
 _REST_, or REpresentational State Transfer, is an architectural style for providing standards between computer systems on the web, making it easier for systems to communicate with each other. REST-compliant systems, often called _RESTful systems_, are characterized by how they are stateless and separate the concerns of client and server.
 
