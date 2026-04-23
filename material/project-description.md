@@ -37,9 +37,9 @@ The Product Owner has a great project idea and is in desperate need of a talente
 
 ## Technical requirements
 
-Although the high level requirements are the same, the team will decide on the technical implementation. The only technical limitations are the following:
+Although the high-level requirements are the same, the team will decide on the technical implementation. The only technical limitations are the following:
 
-- Backend must be implemented with Java using the Spring Boot framework
-- Frontend must be implemented with React
+- Backend must be implemented with Java using the Spring Boot framework.
+- Frontend must be implemented with React.
 
 To fulfill the Product Owner's requirements, two applications are implemented during the project. We will start by implementing backend features for the teachers during [Sprint 1](/sprint-1). Starting from [Sprint 2](/sprint-2) we will be implementing frontend features for the students.

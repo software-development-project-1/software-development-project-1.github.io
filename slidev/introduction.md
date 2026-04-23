@@ -27,7 +27,7 @@ Welcome to the Software Development Project 1 course! 👋
 
 - So far during the studies we have mostly worked on fairly small applications by ourselves
 - Different kinds of problems arise while we work on more complicated applications in a software development team
-- These problems aren't only technical, the management of the software development process can be quite tricky
+- These problems aren't only technical, the management of the **software development process** can be quite tricky
 - During this course, we will learn how to manage the software development process and how to work as a member of a software development team
 - We will learn these skills in practice by developing a software development project in a software development team consisting of 4-5 students
 
@@ -35,12 +35,12 @@ Welcome to the Software Development Project 1 course! 👋
 
 ## About the course
 
-- Each team will be developing a quiz management application described in more detail on the course page
-- The final application will be a full stack web application in which a frontend communicates with a backend
-- The implementation technologies of the application are Spring Boot and React
+- Each team will be developing a **quiz management application**, aimed to help teachers creating educational quizzes for their students
+- The final application will be a **full stack web application** in which a frontend communicates with a backend
+- The implementation technologies of the application are **Spring Boot** (backend) and **React** (frontend)
 - The development of the project is split into three two-week iterations called Sprints
-- Each Sprint has high-level requirements, but teams should make most of the technical decisions themselves
-- The project starts on week three
+- Each Sprint has high-level requirements, but teams **should make most of the technical decisions themselves**
+- The teams will be assembled during the first week and the project starts on the second week of the course
 
 ---
 
@@ -72,9 +72,9 @@ Welcome to the Software Development Project 1 course! 👋
 
 - The final grade (0-5) is composed of the project grade and the personal grade
 - The following are necessary to pass the course:
-  - At least 16 of the first two week's exercises have to be completed to pass the course
+  - At least 60% of first and second week's exercises must be completed
   - Written peer review for each team member
-  - Passing personal grade
+  - Passing project and personal grade
   - Written final report
 
 ---
@@ -82,29 +82,29 @@ Welcome to the Software Development Project 1 course! 👋
 ## Schedule
 
 - There are weekly sessions during which we will cover different topics
-- Attendance on weekly sessions is **mandatory**
+- **At least 50% session attendance** is required for a passing grade
 - During the first two weeks, we will cover topics that are important to grasp before starting to work on the project
 - The teams will start working on the project during the second week
 - During the teamwork we will learn about new topics, but most importantly we will learn how to apply our knowledge in practice
 - Both individual exercises and project exercises have **deadlines**
-- The detailed schedule can be found on the course page
+- The detailed schedule of topics and deadlines can be found on the course material's "Schedule" page
 
 ---
 
 ## What makes a software development project?
 
-- So far during the studies we have implemented software mostly alone with more or less detailed instructions on what to do
-- In the real world software is developed in **software development projects** by a diverse group of people referred to as the **software development team**
-- Depending on the budget and scope of the project, the timespan of a software development can be anything from a few months to many years
+- So far during your studies, you have mostly implemented software individually, following instructions that describe more or less precisely what you should build
+- In the real world, software is developed in **software development projects**, where people with different skills, backgrounds, and responsibilities work together as a **software development team**
+- Software development projects vary greatly in scope and complexity. Depending on the project's goals, budget, and resources, a project can last from a few months to several years
 
 ---
 
-## Stakeholders
+## Software development serves the stakeholders' needs
 
 - A software development project affects many people in different ways
 - For example, the software's end users get to use features they desire and the customer gets financial value for the project they are funding
 - The people or groups of people affected by a software development project are referred to as the software development project's **stakeholders**
-- On top of technical skills, the future of software developer's work will most likely consist more and more of understanding the needs of the stakeholders and applying technical solutions to meet those needs
+- In addition to solving technical problems, software developers will increasingly need to **understand stakeholder needs and build the right product** by applying appropriate technical solutions to address those needs
 
 ---
 
@@ -122,7 +122,7 @@ Welcome to the Software Development Project 1 course! 👋
 ## Problems with software development projects
 
 - Developing software based on the stakeholders' needs in a software development team isn't simple and many things can (and often do) go wrong
-- Which problems do you think software development projects commonly have? Are the problems technical such as programming errors or something else?
+- **Which problems do you think software development projects commonly have?** Are the problems technical such as programming errors or something else?
 
 ---
 
@@ -158,7 +158,7 @@ Welcome to the Software Development Project 1 course! 👋
 
 ## Agile principles in software development
 
-> _"Responding to change over following a plan."_
+> _"Responding to change over following a plan."_ ⎯ Agile Manifesto
 
 - One of the key values is the attitude towards **change**
 - For example, there is often a need to change the software's requirements during the development process
@@ -212,23 +212,23 @@ Welcome to the Software Development Project 1 course! 👋
 ## Test phase
 
 - In the **test phase**, the development team combines automation and manual testing to check that the software works as intended
-- In practice, the test phase isn't usually separated from the implementation phase
+- In practice, the test phase isn't usually separated from the implementation phase, but instead these phases **overlap**
 - This means that software developers usually implement a small coding task, write automated test cases for the task and move on to the next task
-- This practice is even taken so far that the tests are written **before** the implementation which is referred to as test-driven development (TDD)
+- This practice is even taken so far that the tests are written **before** the implementation which is referred to as **test-driven development** (TDD)
 
 ---
 
 ## Deployment and maintenance phase
 
-- In the **deployment phase**, the implemented software is distributed to the users
-- For example, a web application is published online so that users can access it with their browsers
+- In the **deployment phase**, the implemented software is made accessible to the users
+- For example, a web application is made available to users by deploying it to a server, allowing users to access it through their web browsers
 - Once the software is distributed, it needs to be constantly **maintained**
 - In the **maintenance phase**, among other tasks, the development team fixes bugs, resolves user issues, and manages software changes
 
 ---
 layout: image-right
-image: /intro/agile-lifecycle.png
-backgroundSize: 23em
+image: ./intro/agile-lifecycle.png
+backgroundSize: 20em
 class: image-right-sm
 ---
 
@@ -244,11 +244,9 @@ class: image-right-sm
 
 ## Benefits of the iterative approach
 
-> _"When to use iterative development? You should use iterative development only on projects that you want to succeed."_
->
-> ⎯ Martin Fowler, author and international public speaker on software development
+> _"When to use iterative development? You should use iterative development only on projects that you want to succeed."_ ⎯ Martin Fowler
 
-- The benefits of the iterative approach are the ability to respond to change quickly and the feedback loop it provides
+- The benefits of the iterative approach are the **ability to respond to change quickly** and the feedback loop it provides
 - After each iteration the requirements can change which makes it easy to respond to new user and business needs
 - After each iteration the users of the software can get their hands on new features which they can give feedback on
 - The feedback can be used to define requirements for the next iterations
@@ -299,20 +297,20 @@ class: image-right-sm
 
 - During the requirements phase, the stakeholders' requirements for the software are defined and documented
 - To derive the requirements, the development team needs to have a clear and thorough understanding of the software under development and continuously communicate with the stakeholders
-- Software’s requirements are commonly categorized as **functional** and **non-functional requirements**
-- Functional requirements are the requirements stated by the user which one can see directly in the final product
-- Non-functional requirements on the other are quality constraints related to e.g. performance and security that the system must satisfy
+- Software's requirements are commonly categorized as **functional** and **non-functional requirements**
+- Functional requirements describe **what the user can do with the software**, such as the features and functionality it must provide to its users
+- Non-functional requirements describe the quality attributes and constraints the system must satisfy, such as performance, security, reliability, and usability
 
 ---
 
 ## Functional and non-functional requirements
 
-- For example the following requirements are functional requirements:
-  - "User should be able to register with a username and password"
-  - "User should be able to see a list of latest blog posts of their favorite blogs"
-- And the following requirements are non-functional requirements:
-  - "User’s password should be stored in the database as a Bcrypt password hash upon registration"
-  - "List of latest blog posts of user’s favorite blogs should be loaded on average in a less than one second"
+- For example the following requirements are **functional requirements**:
+  - _"User should be able to register with a username and password"_
+  - _"User should be able to see a list of latest blog posts of their favorite blogs"_
+- And the following requirements are **non-functional requirements**:
+  - _"User's password should be stored in the database as a Bcrypt password hash upon registration"_
+  - _"List of latest blog posts of user's favorite blogs should be loaded on average in a less than one second"_
 
 ---
 
@@ -339,7 +337,7 @@ class: image-right-sm
 
 ## Let's write some user stories
 
-- Come up with and write down user stories in one or more applications you have used, for example Netflix or Moodle
+- **Come up with and write down user stories in one or more applications you have used**, for example Netflix or Moodle
 - Use the _"As [a user persona], I want [to perform this action] so that [I can accomplish this goal]"_ format
 - Try to come up with different user personas for the user stories
 - Share your user stories with others and let's discuss about them

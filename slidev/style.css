@@ -9,5 +9,5 @@
 
 
 .grid:has(> .image-right-sm) {
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 65% 35%;
 }

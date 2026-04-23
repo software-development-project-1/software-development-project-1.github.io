@@ -11,52 +11,60 @@ nav_order: 7
 
 For the Sprint 2 we have a new set of requirements from the Product Owner. On top of working on new user stories, we will be covering topics related to Retrospective, REST APIs and communication between frontend and backend.
 
+{: .highlight }
+
+> The deadline for the Sprint 2 is on {{site.sprint_2_deadline}}, after which the team will present their progress to the Product Owner in the Sprint Review event. The team should push their work to the project's GitHub repository before the deadline.
+
 ## Retrospective
 
 The Scrum Guide only describes high-level guideliness for the software development process. It is not a one-size-fits-all framework suitable for every kind of project. Instead, the Scrum Team should _adapt_ the process to match the project needs. To discuss about the issues with the process and to come up with solutions, the Scrum has a dedicated event called _Retrospective_.
 
 After the Sprint Review, the Retrospective is the final event that ends the current Sprint. During the Retrospective, the Scrum Team openly discuss the issues with the process. Every member of the Scrum Team must be heard. Even more important than raising issues, is to find solutions together. These solutions are concrete actions that the Scrum Team can perform during the upcoming Sprint to improve the process. In the ideal case, after performing the necessary actions during the upcoming Sprint, the same issues aren't raised during the next Retrospective.
 
-Scrum doesn't go into details how to actually arrange the event, but rather describe its purpose and goals. Luckily, there are many popular Retrospective techniques to arrange the event, such as [Mad, Sad, Glad](https://www.teamretro.com/retrospectives/mad-sad-glad-retrospective) and [Start, Stop, Continue](https://www.betterup.com/blog/start-stop-continue). Next, we will have a look how to arrange a _Mad, Sad, Glad_ style Retrospective. In this Retrospective, each member of Scrum Team writes down things during the Sprint that made them feel either mad, sad or glad.
+Scrum doesn't go into details how to actually organize the event, but rather describe its purpose and goals. Luckily, there are many popular Retrospective formats for organizing the event, such as [Mad, Sad, Glad](https://www.teamretro.com/retrospectives/mad-sad-glad-retrospective) and [Start, Stop, Continue](https://www.teamretro.com/retrospective-templates/start-stop-continue-retrospective/). Next, we will be organizing a Retrospective in the _Mad, Sad, Glad_ format. In this Retrospective, each member of Scrum Team writes down things during the Sprint that made them feel either mad, sad or glad.
 
-The things in the _mad_ category are the ones that are very frustrating and are stopping you from performing at your best. For example:
+The things in the _mad_ category are the ones that made you feel frustrated or annoyed and stopped you from performing at your best. For example:
 
-- The Spring Boot application won't start on my computer.
+- The backend application won't start on my computer.
 - I always have conflicts when I try to pull code from the GitHub.
 
-The things in the _sad_ category are the ones that are dissapointing, but you can cope with them. For example:
+The things in the _sad_ category are the ones that made you feel disappointed or discouraged, but you can cope with. For example:
 
 - The Daily Scrum meetings take too long.
 - The Sprint Backlog isn't always up-to-date.
 
-The things in the _glad_ category are the ones that made you happy. For example:
+The things in the _glad_ category are the ones that made you feel happy, satisfied, or proud. For example:
 
 - Communication was clear.
 - Everybody contributed to the tasks.
 
-Retrospectives can be organized face-to-face or using virtual platforms. During this course we will be using the [Flinga](https://edu.flinga.fi) platform to organize our Retrospectives. You can login to Flinga with your Haaga-Helia credentials by choosing "Haaga-Helia ammattikorkeakoulu" at the [Flinga login page](https://edu.flinga.fi/).
+Retrospectives can be organized face-to-face or using virtual platforms. Next, we will learn how to use the [Flinga](https://edu.flinga.fi) platform to organize a Retrospective in the Mad, Sad, Glad format.
 
-Once logged in a new session can be created by clicking the "Create a session" button. In the session you can send cards to the board by typing the message and clicking the "Send" button. You can also choose a color for the card. Other team members can join the session using the "Join link" which can be found by cliking the menu icon on the top left corner of the page.
+First, the Scrum Master should setup the Retrospective board:
 
-First, create a session board that has the _mad_, _sad_ and _glad_ categories like in [this board](https://edu.flinga.fi/s/E2L5YL9). Then, organize the Retrospective in the following manner:
+1. Login to Flinga with your Haaga-Helia credentials by choosing "Haaga-Helia ammattikorkeakoulu" at the [Flinga login page](https://edu.flinga.fi/).
+2. Once logged in, create a new session by clicking the "Create a session" button. Give the session a descriptive name, e.g. "Retrospective 1". In the session you can send cards to the board by typing the message and clicking the "Send" button. You can also choose a color for the card. Create a session board that has the _Mad_, _Sad_, _Glad_ and _Actions_ categories like in [this board](https://edu.flinga.fi/s/E2L5YL9).
+3. Copy the "Join link" which can be found by cliking the menu icon on the top left corner of the page, and share it with your team members so that they can join the session.
 
-1. Based on their experiences during the Sprint, each team member should write cards for each of the three categories. Choose the card color based on the category. Try to come up with cards for each category. _Don't discuss about the cards at this point_ because the cards should represent your personal opinions
-2. Once everyone is done writing the cards, go through the cards from each category. If necessary, the writer of the card can shortly describe what their card means
-3. Together, pick at least one most urgent issue from the _mad_ and _sad_ categories. Come up with at least one _concrete_ action to solve the issue during the upcoming Sprint. For example a concrete action for the issues "I always have conflicts when I try to pull code from the GitHub" could be "Pull code from GitHub more often" and "Create smaller commits and push code to GitHub more often". _Add these actions e.g. as cards to the retrospective board_.
+Once every team member has joined the Flinga session, start the Retrospective:
+
+1. Based on their experiences during the Sprint, each team member should write cards for each of the three categories. Choose the card color based on the category. Try to come up with cards for each category. _Don't discuss about the cards at this point_ because the cards should represent your personal opinions.
+2. Once everyone is done writing the cards, go through the cards from each category. If necessary, the writer of the card can shortly describe what their card means.
+3. Together, pick at least one most urgent issue from the _mad_ and _sad_ categories. Come up with _at least one concrete action_ to solve the issue during the upcoming Sprint. For example a concrete action for the issues "I always have conflicts when I try to pull code from the GitHub" could be "Create smaller commits and push code to GitHub more often". _Add these actions to the "Actions" category on the board_.
 
 The Scrum Master should make sure that everyone follows the event structure and that each team member gets their voice heard.
 
 {: .important-title }
 
-> Exercise 1
+> 🎯 Exercise 1
 >
-> The Scrum Master should create a new session in Flinga as instructed above. Name the session "Retrospective 1". Once the session is created, other team members should join the session with the "Join link". Setup the session board and organize the Retrospective event as instructed above. _Remember to come up with concreate actions for fixing possible problems in your process_.
+> The Scrum Master should create a new session in Flinga as instructed above. Once the session is created, other team members should join the session with the join link. Setup the session board and organize the Retrospective event as instructed above. _Remember to come up with concreate actions for fixing possible problems in your process_.
 >
 > Once you have completed the Retrospective, add "Retrospectives" subheading to the `README.md` file and below it a link to the Sprint 1 Retrospective Flinga board (link format is `https://edu.flinga.fi/s/<BOARD_ID>`).
 
 {: .important-title }
 
-> Exercise 2
+> 🎯 Exercise 2
 >
 > Choose a new (not the same team member as during the previous Sprint) Scrum Master among the team members for the second Sprint.
 
@@ -78,7 +86,7 @@ The Product Owner was delighted to see how the project has advancend during Spri
 >
 > _Each quiz name on the quiz list should be a link to a separate page where the quiz name, description and the questions are displayed. There should also be some kind of navigation menu from which the student can navigate to the quiz list page._
 >
-> _In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback dialog which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again"._
+> _In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed in difficulty order from easy to hard. The student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback dialog which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again"._
 >
 > _There should be a page in the student dashboard where the results of a quiz are summarized. The results summarize all the answers submitted by different students to provide the teacher with an overview of how well the students know the quiz's topic. The page should display the question text, the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. Also the total number of answer and questions of a quiz should be displayed. There should be a link to the results page next to the quiz in the quiz list page._
 >
@@ -104,9 +112,9 @@ And the following user stories for the _student dashboard_ application:
 
 {: .important-title }
 
-> Exercise 3
+> 🎯 Exercise 3
 >
-> Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
+> Make sure that all task related issues that have been completed during the Sprint 1 are _closed_ and their _status is "Done"_ in the backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
 > Create a new milestone for the second Sprint. If you didn't manage to implement all user stories during the previous Sprint, set the second Sprint's milestone for the unfinished user story and task issues. If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks.
 
@@ -116,13 +124,13 @@ And the following user stories for the _student dashboard_ application:
 
 {: .important-title }
 
-> Exercise 4
+> 🎯 Exercise 4
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the Sprint milestone and add the issues to the backlog.
 
 {: .important-title }
 
-> Exercise 5
+> 🎯 Exercise 5
 >
 > Plan the tasks for the first user story, "{{site.sprint_2_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -130,11 +138,11 @@ And the following user stories for the _student dashboard_ application:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-1-add-category.png)
+> ![](/assets/user-stories/sprint-2-us-1-add-category.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 6
+> 🎯 Exercise 6
 >
 > Plan the tasks for the second user story, "{{site.sprint_2_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -142,13 +150,13 @@ And the following user stories for the _student dashboard_ application:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-2-1-list-categories.png)
+> ![](/assets/user-stories/sprint-2-us-2-1-list-categories.png){:class="user-story-preview"}
 >
-> ![](/assets/sprint-2-us-2-2-list-categories.png)
+> ![](/assets/user-stories/sprint-2-us-2-2-list-categories.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 7
+> 🎯 Exercise 7
 >
 > Plan the tasks for the third user story, "{{site.sprint_2_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -156,13 +164,13 @@ And the following user stories for the _student dashboard_ application:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-3-1-select-quiz-category.png)
+> ![](/assets/user-stories/sprint-2-us-3-1-select-quiz-category.png){:class="user-story-preview"}
 >
-> ![](/assets/sprint-2-us-3-2-select-quiz-category.png)
+> ![](/assets/user-stories/sprint-2-us-3-2-select-quiz-category.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 8
+> 🎯 Exercise 8
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_2_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -170,9 +178,9 @@ And the following user stories for the _student dashboard_ application:
 
 {: .important-title }
 
-> Exercise 9
+> 🎯 Exercise 9
 >
-> Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
+> Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file. Take a look at the [example project's README.md file](https://github.com/hh-ohjelmistoprojekti-2/spring-boot-vite-example/blob/main/README.md?plain=1) for reference.
 >
 > GitHub supports including different kind of diagrams to Markdown files using the [Mermaid](https://github.blog/developer-skills/github/include-diagrams-markdown-files-mermaid/) syntax. Mermaid makes it easier to update diagrams, when for example new entities or attributes need to be added to an entity relationship diagram. Mermaid's entity relationship diagram documentation can be found [here](https://mermaid.js.org/syntax/entityRelationshipDiagram.html).
 >
@@ -467,7 +475,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 10
+> 🎯 Exercise 10
 >
 > Implement a REST API endpoint for _getting a quiz by id_. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -477,7 +485,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 11
+> 🎯 Exercise 11
 >
 > Implement a REST API endpoint for _getting the questions of a quiz_. In this case, instead of using the `@JsonIgnore` annotation, you can use [@JsonManagedReference and @JsonBackReference](https://www.baeldung.com/jackson-bidirectional-relationships-and-infinite-recursion) annotations to include the question's answer options in to the JSON response. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -487,7 +495,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 12
+> 🎯 Exercise 12
 >
 > Implement a REST API endpoint for _creating an answer for a question_ (or more specifically, for an answer option of a question). Before implementing the endpoint itself, consider what kind of data requirements the endpoint has. The student should be able to choose an answer option (e.g. "Helsinki") for a question (e.g. "What is the capital of Finland?") and submit their answer. The information, which answer option the student submitted for the question should be stored to the database.
 >
@@ -509,7 +517,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 13
+> 🎯 Exercise 13
 >
 > Implement a REST API endpoint for _getting the results of a quiz_. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -536,7 +544,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 14
+> 🎯 Exercise 14
 >
 > Implement a REST API endpoint for _getting all categories_.
 >
@@ -544,7 +552,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 15
+> 🎯 Exercise 15
 >
 > Implement a REST API endpoint for _getting a category by id_. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -554,7 +562,7 @@ Next, let's consider what kind of REST API endpoints we need for the remaining u
 
 {: .important-title }
 
-> Exercise 16
+> 🎯 Exercise 16
 >
 > Implement a REST API endpoint for _getting the quizzes of a category_. Only _published quizzes of the category_ should be returned by the endpoint. Return an appropriate HTTP status code and error message in the following error case:
 >
@@ -694,7 +702,7 @@ public class UserRestController {
 
 {: .important-title }
 
-> Exercise 17
+> 🎯 Exercise 17
 >
 > Generate a Swagger documentation for the project as described above. For each REST controller method add a proper summary and description using the `@Operation` annotation. Also add the `@ApiResponses` annotation with an `@ApiResponse` annotation for each success and error response. Group the endpoints based on the endpoint's collection name using the `@Tag` annotation.
 >
@@ -795,11 +803,11 @@ export default function MessageList() {
 
 {: .highlight}
 
-> The remaining user stories are related to the student dashboard application and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend.
+> The remaining user stories are related to the _student dashboard application_ and they should be implemented as a _frontend application_ which uses REST API endpoints implemented in the backend.
 
 {: .important-title }
 
-> Exercise 18
+> 🎯 Exercise 18
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -807,11 +815,11 @@ export default function MessageList() {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-6-list-quizzes.png)
+> ![](/assets/user-stories/sprint-2-us-6-list-quizzes.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 19
+> 🎯 Exercise 19
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_2_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -819,13 +827,13 @@ export default function MessageList() {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-7-1-quiz-questions.png)
+> ![](/assets/user-stories/sprint-2-us-7-1-quiz-questions.png){:class="user-story-preview"}
 >
-> ![](/assets/sprint-2-us-7-2-quiz-questions.png)
+> ![](/assets/user-stories/sprint-2-us-7-2-quiz-questions.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 20
+> 🎯 Exercise 20
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_2_user_story_7}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -833,13 +841,13 @@ export default function MessageList() {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-8-1-answer-quiz.png)
+> ![](/assets/user-stories/sprint-2-us-8-1-answer-quiz.png){:class="user-story-preview"}
 >
-> ![](/assets/sprint-2-us-8-2-answer-quiz.png)
+> ![](/assets/user-stories/sprint-2-us-8-2-answer-quiz.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 21
+> 🎯 Exercise 21
 >
 > Plan the tasks for the eight user story, "{{site.sprint_2_user_story_8}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -847,13 +855,13 @@ export default function MessageList() {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-9-1-quiz-results.png)
+> ![](/assets/user-stories/sprint-2-us-9-1-quiz-results.png){:class="user-story-preview"}
 >
-> ![](/assets/sprint-2-us-9-2-quiz-results.png)
+> ![](/assets/user-stories/sprint-2-us-9-2-quiz-results.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 22
+> 🎯 Exercise 22
 >
 > Plan the tasks for the ninth user story, "{{site.sprint_2_user_story_9}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -861,11 +869,11 @@ export default function MessageList() {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-10-list-categories.png)
+> ![](/assets/user-stories/sprint-2-us-10-list-categories.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 23
+> 🎯 Exercise 23
 >
 > Plan the tasks for the tenth user story, "{{site.sprint_2_user_story_10}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -873,9 +881,9 @@ export default function MessageList() {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-11-1-category-quizzes.png)
+> ![](/assets/user-stories/sprint-2-us-11-1-category-quizzes.png){:class="user-story-preview"}
 >
-> ![](/assets/sprint-2-us-11-2-category-quizzes.png)
+> ![](/assets/user-stories/sprint-2-us-11-2-category-quizzes.png){:class="user-story-preview"}
 
 ## Deploying the frontend
 
@@ -883,13 +891,13 @@ We managed to deploy the backend during the previous Sprint, but we still haven'
 
 {: .important-title }
 
-> Exercise 24
+> 🎯 Exercise 24
 >
 > Deploy the frontend application to a production environment by following [these instructions](/frontend-deployment). _Test that the application works in the production envinronment_ by e.g. answering a few quizzes and taking a look at their results. Add the production environment URL of the frontend application (the static site URL in the Render dashboard) to the project description section in the `README.md` file.
 
 {: .important-title }
 
-> Exercise 25
+> 🎯 Exercise 25
 >
 > Add instructions on _how to start the frontend application_ on the command-line to the "Developer guide" section in the `README.md` file. Don't forget important details, such as in which folder the commands should be run in an how to install the frontend dependencies.
 >
@@ -923,16 +931,16 @@ We have all kinds of cool stuff to show for the Product Owner at the end of this
 
 {: .important-title }
 
-> Exercise 26
+> 🎯 Exercise 26
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint2". The release title should be "Sprint 2". Give a brief description for the release that describes the features implemented during the Sprint.
 
 {: .important-title }
 
-> Exercise 27
+> 🎯 Exercise 27
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the teacher dashboard and the student dashboard applications on their computer and is able to show how the new features work in the user's perspective. If possible, demonstrate both teacher and student dashboard's features in the production environment. As in the previous Sprint Review, prepare some _sensible_ test data for the Sprint Review.
 
 {: .highlight }
 
-> Make sure that you have pushed your work to the project's GitHub repository before the Sprint 2 deadline on {{site.sprint_2_deadline}}.
+> Make sure that each team member has pushed their work to the project's GitHub repository before the Sprint 2 deadline on {{site.sprint_2_deadline}}.

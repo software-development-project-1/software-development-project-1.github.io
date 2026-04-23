@@ -46,7 +46,7 @@ gitGraph
 
 ---
 
-## Version control tools
+## Git version control tool
 
 ```bash
 git commit -m "Add blog listing feature"
@@ -61,19 +61,11 @@ git commit -m "Add blog listing feature"
 
 ---
 
-## GitHub 
+## GitHub version control collaboration platform
 
 - Git provides the version control functionality, but it doesn't provide us with a way to **store** or **publish** projects outside our own computer
 - For this, there are several different platforms, such as **GitLab**, **Bitbucket** and **GitHub**
 - The basic idea for these platforms is the same: they allow us to store and publish project-related code into a single **centralized code base** which all team members contribute to
 - These platforms also provide their own services around Git, e.g. bug and feature requirement tracking and code review functionalities
 - During this course we will be using the **GitHub** platform to store and publish our project's code and some other services provided by GitHub, e.g. managing feature requirements in the GitHub Projects platform
-
----
-
-## Using GitHub to showcase your skills
-
-- The software developer's GitHub account is commonly their **personal portfolio**, meaning all their projects are there for others to see
-- When applying for a job, having a GitHub account with a representative profile and projects is very beneficial because it is the easiest way to showcase your work
-- Besides the project's code, it is also important to **clearly communicate the project's purpose and implementation details** so that others can understand it more easily
-- That is why during the course, we also learn ways to document different aspects of our projects and how documentation is stored and evolves side by side with our code in GitHub
+- Your GitHub account will become **major part of your professional portfolio** and having an account with a representative profile and projects is a good way to showcase your skills

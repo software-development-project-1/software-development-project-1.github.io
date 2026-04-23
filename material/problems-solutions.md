@@ -11,7 +11,7 @@ Here you can find some common problems and possible solutions.
 
 ## Error: Could not find or load main class
 
-While running the application in Eclipse or with `./mvnw spring-boot:run`, you might get an error `Error: Could not find or load main class ...` at the top of the command output. If the project folder is under OneDrive, the solutions below might work.
+While running the application in VS Code or with `./mvnw spring-boot:run`, you might get an error `Error: Could not find or load main class ...` at the top of the command output. If the project folder is under OneDrive, the solutions below might work.
 
 If you have the project in Eclipse, delete it, by right-clicking on the project name and choosing "Delete". Then, move the project folder outside OneDrive, for example to your user's `Documents` directory at `C:\Users\<your-username>\Documents`. Once the folder is there, open it Eclipse and try running the application again.
 

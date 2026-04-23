@@ -1,13 +1,17 @@
 ---
 layout: page
-title: "Version control: Git and GitHub"
+title: "Version control"
 permalink: /git
 nav_order: 4
 ---
 
 {% include toc.html %}
 
-# Version control: Git and GitHub
+# Version control processes in software development
+
+{: .warning }
+
+> **The team must understand the project's entire technical implementation**, so use generative AI tools (e.g. ChatGPT or Copilot) with discretion. During Sprint Review meetings, the teacher may ask team members to describe and justify technical solutions, and understanding the technical implementation will affect the evaluation.
 
 {: .note }
 
@@ -16,6 +20,10 @@ nav_order: 4
 ## Submitting this week's exercises
 
 Submit this week's exercises to [Moodle]({{site.week_2_moodle_submission_link}}) (you'll find the submission in the "Exercise submissions" tab). The submission should contain the information mentioned in exercises 7, 15 and 16. _Other exercises must be done as well_, but they don't contain anything that should be added to the Moodle submission. The submission deadline is on {{site.week_2_deadline}}.
+
+{: .highlight }
+
+> The material has steps that you need to perform outside the exercises as well. So, _don't just skip to exercises_. Read through the material carefully and perform the instructed steps.
 
 ## Version control
 
@@ -31,11 +39,7 @@ There are several different version control tools available, but this part will 
 
 ## About Git
 
-{: .highlight }
-
-> The material has steps that you need to perform outside the exercises as well. So, _don't just skip to exercises_. Read through the material carefully and perform the instructed steps.
-
-Git was initiated by Linus Torvalds, who is most likely more famous for being the primary developer of the Linux kernel, which is the "heart" of many operating systems, such as Google's [Android](<https://en.wikipedia.org/wiki/Android_(operating_system)>). Torvalds started developing Git for his own needs when coding the Linux kernel. He needed a tool for storing different versions of his own code and sharing it with other people.
+Git was initiated by Linus Torvalds, who is most likely more famous for being the primary developer of the Linux kernel, which is the "heart" of many operating systems, such as Google's [Android](https://en.wikipedia.org/wiki/Android_(operating_system)). Torvalds started developing Git for his own needs when coding the Linux kernel. He needed a tool for storing different versions of his own code and sharing it with other people.
 
 GitHub is a service which was created later on, used for storing and publishing projects. There are several sites similiar to GitHub, such as [GitLab](https://about.gitlab.com/).
 
@@ -43,13 +47,13 @@ Git and GitHub are used in solo as well as collaborative projects in the industr
 
 {: .important-title }
 
-> Exercise 1
+> 🎯 Exercise 1
 >
 > Start by creating a GitHub account at <https://github.com/>. Software developers often use GitHub as a sort of code protfolio, so make sure to choose a username which you don't mind adding to your CV.
 
 {: .important-title }
 
-> Exercise 2
+> 🎯 Exercise 2
 >
 > Before we can start, we need to install Git. Here's the instructions for different operating systems:
 >
@@ -73,7 +77,7 @@ The command should print basic introductions on how to use the `git` command.
 
 {: .important-title }
 
-> Exercise 3
+> 🎯 Exercise 3
 >
 > Let's configure Git a bit.
 >
@@ -290,7 +294,7 @@ Branches are usually used for testing out new features without breaking a workin
 
 {: .important-title}
 
-> Exercise 4
+> 🎯 Exercise 4
 >
 > 1. Open the `git-practice` folder we turned it into a Git project earlier both in an editor (for example Visual Studio Code) and in Git Bash.
 > 2. Create a file called <code>story.txt</code> in your project. Add a lot of text inside.
@@ -303,7 +307,7 @@ Branches are usually used for testing out new features without breaking a workin
 
 {: .important-title}
 
-> Exercise 5
+> 🎯 Exercise 5
 >
 > 1. Find out how you can remove changes from the state where they are being added to the next commit (under <code>Changes to be committed</code>), and move them under the headline <code>Changes not staged for commit</code>? Hint: <code>git status</code> will help.
 > 2. Add some new products to the shopping list and save the file.
@@ -349,7 +353,7 @@ A new repository called "origin" is added using an HTTPS connection by running t
 
 {: .important-title }
 
-> Exercise 6
+> 🎯 Exercise 6
 >
 > When we start making changes to a remote repository on GitHub, we need to authenticate. So that we don't need to input our GitHub credentials every time we access the remote repository, let's configure the Git's [Credential Storage](https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage):
 >
@@ -360,7 +364,7 @@ A new repository called "origin" is added using an HTTPS connection by running t
 
 {: .important-title }
 
-> Exercise 7
+> 🎯 Exercise 7
 >
 > Create a remote repository in GitHub for the project you created locally as instructed above. _Don't let GitHub create a README, license or a .gitignore file when creating the repository_. Doing so will cause problems later. Also, make sure that _the repository is public_ (the "Public" option is selected).
 >
@@ -382,7 +386,7 @@ Let's push the changes we made to the file `git_practice.txt` by running `git pu
 
 {: .important-title }
 
-> Exercise 8
+> 🎯 Exercise 8
 >
 > 1. Push the three commits you made earlier to the main branch of the remote repository.
 > 2. Check on GitHub that you can find all the changes in the remote.
@@ -417,7 +421,7 @@ Now you can find the new line of text in the file you changed via GitHub.
 
 {: .important-title }
 
-> Exercise 9
+> 🎯 Exercise 9
 >
 > Create a new file to the `school` subfolder _via GitHub_, and fetch it to your local version. You can add file in GitHub by click the `school` folder name on GitHub and cliking "Add a file" on top right corner. Then commit changes similarly as while editing the file.
 
@@ -450,7 +454,7 @@ In situations like this one can put the local changes aside to the _stash_ (as G
 
 {: .important-title }
 
-> Exercise 10
+> 🎯 Exercise 10
 >
 > 1. Make changes to some files which you have already added to Git once (i.e. they are not under the headline <code>untracked</code> in the output of <code>git status</code>).
 > 2. Stash the changes you just made using Git.
@@ -517,7 +521,7 @@ Now according to the output of `git status` we have created two commits, (`ahead
 
 {: .important-title }
 
-> Exercise 11
+> 🎯 Exercise 11
 >
 > 1. Create two non-conflicting commits, one directly to the remote repository, and another to the local version. For example, edit the first line of your shopping list via GitHub, and the last line on the local version.
 > 2. Try pushing the local commit to the remote repository and observe the error message.
@@ -600,7 +604,7 @@ Merge conflicts can also occur when taking changes out of the stash, if the hidd
 
 {: .important-title}
 
-> Exercise 12
+> 🎯 Exercise 12
 >
 > Create a merge conflict in your project and resolve it. Make sure to push the end result to GitHub.
 
@@ -634,7 +638,7 @@ Of course, the same procedure can be repeated on the command line. You can brows
 
 {: .important-title }
 
-> Exercise 13
+> 🎯 Exercise 13
 >
 > 1. Create a new file to you project called <code>secret.txt</code>, and write something inside such as "this is a very important secret".
 > 2. Create a new commit of the new file and the contents added to it.
@@ -676,7 +680,7 @@ We should now have a `git-practice` folder in the folder we ran the command in. 
 
 {: .important-title }
 
-> Exercise 14
+> 🎯 Exercise 14
 >
 > 1. Delete the current `git-practice` folder on your computer and clone the git-practice repository from GitHub to your local computer as instructed above. Then, open the repository folder in Git Bash and in an editor such as Visual Studio Code.
 > 2. Change the contents of some file (for example the `git_practice.txt`) file and push the changes to GitHub. Open the repository in GitHub and see that it has the commit you created.
@@ -690,9 +694,9 @@ Next, you will get to know your team start working on the project by doing some 
 
 {: .important-title }
 
-> Exercise 15
+> 🎯 Exercise 15
 >
-> _This is a team exercise_. Let's start by getting to know your team. If you are uncertain who your team members are, check their names in Moodle. Get to know each other by introducing yourself to other team members. You can e.g. share the following things about yourself:
+> 👥 _This is a team exercise_. Let's start by getting to know your team. If you are uncertain who your team members are, check their names in Moodle. Get to know each other by introducing yourself to other team members. You can e.g. share the following things about yourself:
 >
 > - Which parts of software development you are most interested in? (e.g. backend development, frontend development, databases...)
 > - Which parts are you the most comfortable with?
@@ -712,7 +716,7 @@ Next, you will get to know your team start working on the project by doing some 
 
 ### Project setup
 
-Next, let's create the project repository and setup the Spring Boot project. To avoid future issues, make sure that your Spring Boot project is _in the repository's root folder, like this_ ✅:
+Next, let's create the project repository and setup the Spring Boot project. To avoid future issues, it is recommended that your Spring Boot project is _in the repository's root folder, like this_ ✅:
 
 ```
 src/
@@ -731,21 +735,21 @@ somesubfolder/
 
 {: .highlight }
 
-> It is highly recommended that the Spring Boot project _doesn't require a higher Java version than 25_. That is, versions 17, 21 and 25 are good choices.
+> It is highly recommended that the Spring Boot project _doesn't require a higher Java version than 25_. That is, versions 21 and 25 are good choices.
 
 {: .important-title }
 
-> Exercise 16
+> 🎯 Exercise 16
 >
-> _This is a team exercise_. Next, let's setup the GitHub repository for your team's project. Do the following:
+> 👥 _This is a team exercise_. Next, let's setup the GitHub repository for your team's project. Do the following:
 >
-> 1. GitHub organizations are a way to apply fine-grained access permissions to repositories. Create a GitHub organization for your team by following [these](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) instructions. You can name the organization for example based on your team's name you came up with previously
-> 2. Invite other team members to the organization by following [these](https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization) instructions. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team
-> 3. Create a _public_ GitHub repository for the project. Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description
-> 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web, Spring Boot DevTools, Thymeleaf and Spring Data JPA dependencies by clicking the "Dependencies" button will get you started. Push the generated project to the GitHub repository
-> 5. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. Start the Spring Boot application in the repository and make sure that there are no errors
+> 1. GitHub organizations are a way to apply fine-grained access permissions to repositories. Create a GitHub organization for your team by following [these](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) instructions. You can name the organization for example based on your team's name you came up with previously.
+> 2. Invite other team members to the organization by following [these](https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization) instructions. When sending the invitation on the "Role in the organization" step, choose role "Owner" for each member of the team,.
+> 3. Create a _public_ GitHub repository for the project. Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description.
+> 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web, Spring Boot DevTools, Thymeleaf and Spring Data JPA dependencies by clicking the "Dependencies" button will get you started. Push the generated project to the GitHub repository.
+> 5. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. Start the Spring Boot application in the repository and make sure that there are no errors.
 > 6. Add a `README.md` file with some content in it to the repository and push it to GitHub
-> 7. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work. Check the commit history in GitHub and _make sure that the commit's author is your GitHub account_. If your commit's author's avatar is a grey GitHub logo (see below) and the username doesn't match your GitHub ussername, revisit exercise 3
+> 7. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work. Check the commit history in GitHub and _make sure that the commit's author is your GitHub account_. If your commit's author's avatar is a grey GitHub logo (see below) and the username doesn't match your GitHub username, revisit exercise 3.
 >
 > ![](https://github.githubassets.com/images/gravatars/gravatar-user-420.png?size=32){: width="100" }
 >
@@ -764,7 +768,7 @@ In practice, every repository should have a README file with at least some basic
 
 In GitHub, the README files commonly have the `.md` extension. These are [Markdown](https://www.markdownguide.org/) files. Markdown is markup language similar to HTML and you can use it to add formatting elements to plaintext text documents. Compared to HTML, Markdown syntax is much simpler and that's why it is an excellent choise for formatting text documents.
 
-[This guide](https://www.markdownguide.org/basic-syntax) demonstrates the Markdown syntax compared to HTML. As an example, [here's](https://github.com/facebook/react/blob/main/README.md) what the React project's `README.md` file looks like and [here's](https://github.com/facebook/react/blob/main/README.md?plain=1) what the Markdown markup looks like. You can use the [Markdown Live Preview](https://markdownlivepreview.com/) to try out different kind of Markdown markup.
+[This guide](https://www.markdownguide.org/basic-syntax) demonstrates the Markdown syntax compared to HTML. As an example, [here's](https://github.com/hh-ohjelmistoprojekti-2/spring-boot-vite-example/blob/main/README.md) what the example project's `README.md` file looks like and [here's](https://github.com/hh-ohjelmistoprojekti-2/spring-boot-vite-example/blob/main/README.md?plain=1) what the Markdown markup looks like. You can use the [Markdown Live Preview](https://markdownlivepreview.com/) to try out different kind of Markdown markup.
 
 {: .highlight }
 
@@ -772,14 +776,14 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 {: .important-title }
 
-> Exercise 17
+> 🎯 Exercise 17
 >
-> _This is a team exercise_. Open the `README.md` file of your project for editing for example in GitHub or in Visual Studio Code. Replace the current contents of the repository's `README.md` file with the following information using Markdown syntax:
+> 👥 _This is a team exercise_. Open the `README.md` file of your project for editing for example in GitHub or in Visual Studio Code. Replace the current contents of the repository's `README.md` file with the following information using Markdown syntax:
 >
 > 1. At the beginning of the file add the project name "Quizzer" as a [heading](https://markdownguide.offshoot.io/basic-syntax/#headings).
 > 2. Below the heading add a description of the project as [paragraphs](https://markdownguide.offshoot.io/basic-syntax/#paragraphs-1). Check [the project description](/project-description) for some inspiration.
-> 3. Below the description, add a _subheading_ "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name.
-> 4. Each team member's name on the list should be a [link](https://markdownguide.offshoot.io/basic-syntax/#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
+> 3. Below the description, add a _subheading_ "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's GitHub username.
+> 4. Each team member's GitHub username on the list should be a [link](https://markdownguide.offshoot.io/basic-syntax/#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>.
 >
 > You can also include other information about the project, which you find useful. Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 
