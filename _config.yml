@@ -22,18 +22,19 @@ callouts:
   note:
     title: Note
     color: purple
-teacher_text: "Jukka Remes (jukka.remes@haaga-helia.fi)"
+teacher_text: "Kalle Ilves (kalle.ilves@haaga-helia.fi)"
 teams_flinga_link: "https://edu.flinga.fi/s/E6XUJ2Y"
-week_1_deadline: "Before the Wed 1.4.2026 session"
-week_2_deadline: "Before the Wed 8.4.2026 session"
-sprint_1_deadline: "Before the Mon 20.4.2026 session"
-sprint_2_deadline: "Before the Wed 29.4.2026 session"
-sprint_3_deadline: "Before the Wed 13.5.2026 session"
+week_1_deadline: "Tue 27.10. at 23:59"
+week_2_deadline: "Tue 3.11. at 23:59"
+sprint_1_deadline: "Tue 17.11. at 23:59"
+sprint_2_deadline: "Tue 1.12. at 23:59"
+sprint_3_deadline: "Thu 10.12. at 23:59"
+final_deadline: "Sun 13.12. at 23:59"
 exclude:
   # Comment sprint file exclude lines to publish sprint materials. E.g. commenting "material/sprint-1.md" line will publish sprint 1 material
-  #- material/sprint-1.md
-  #- material/sprint-2.md
-  #- material/sprint-3.md
+  - material/sprint-1.md
+  - material/sprint-2.md
+  - material/sprint-3.md
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
@@ -60,9 +61,9 @@ sprint_2_user_story_2: "As a teacher, I want to see a list of added categories s
 sprint_2_user_story_3: "As a teacher, I want to choose a category for a quiz so that I can categorize quizzes"
 sprint_2_user_story_4: "As a teacher, I want to delete a category so that I can get rid of categories I don't need"
 sprint_2_user_story_5: "As a student, I want to see a list of published quizzes so that I know which quizzes I can take"
-sprint_2_user_story_6: "As a student, I want to see the questions of a quiz so that I know the contents of the quiz"
+sprint_2_user_story_6: "As a student, I want to see the quiz's questions in difficulty order so that I know the quiz contents"
 sprint_2_user_story_7: "As a student, I want to answer the questions of a quiz so that I can know if my answers are correct"
-sprint_2_user_story_8: "As a user, I want to see the number of correct and wrong aswers of each question of a quiz so that I can know the results of a quiz"
+sprint_2_user_story_8: "As a user, I want to see the number of correct and wrong aswers of each question of a quiz so that I can know quiz results"
 sprint_2_user_story_9: "As a student, I want to see a list of added categories so that I can browse quizzes in different categories"
 sprint_2_user_story_10: "As a student, I want to see a list of quizzes of a category so that I can browse the quizzes of a category"
 sprint_3_user_story_1: "As a student, I want to review a quiz so that I can share my thoughts about the quiz with others"

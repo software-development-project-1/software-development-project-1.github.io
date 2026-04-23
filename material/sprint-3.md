@@ -15,7 +15,9 @@ During this Sprint, each team member will write a [peer review](#peer-review) in
 
 {: .highlight }
 
-> At the end of this Sprint, each team member has to submit the [final report](#final-report) and the [peer review](#peer-review). Both of them are _required to pass the course_. Submitting either of them after the Sprint deadline will decrease the personal grade.
+> The deadline for the Sprint 3 is on {{site.sprint_3_deadline}}, after which the team will present their progress to the Product Owner in the Sprint Review event. The team should push their work to the project's GitHub repository before the deadline.
+> 
+> At the end of this Sprint, each team member has to submit the [final report](#final-report) and the [peer review](#peer-review). Both of them are _required to pass the course_. The deadline for these submissions is on {{site.final_deadline}}. Submitting either of them after the final deadline will decrease the personal grade.
 
 ## Retrospective
 
@@ -23,7 +25,7 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 
 {: .important-title }
 
-> Exercise 1
+> 🎯 Exercise 1
 >
 > Organize a similar Mad-Sad-Glad Retrspective as during the previous Sprint. _Remember to come up with concreate actions for fixing possible problems in your process_. Once you have completed the Retrospective, check the board from your previous Retrospective. Did similar issues arise as in Sprint 1 retrospective? If so, try to come up with different actions as before or ask the teacher for tips on how to solve these issues.
 >
@@ -31,9 +33,9 @@ Organize a similar Mad, Sad, Glad retrospective in Flinga for the Sprint 2 as we
 
 {: .important-title }
 
-> Exercise 2
+> 🎯 Exercise 2
 >
-> Choose a new (not the same team member as during the previous Sprint) Scrum Master among the team members for the third Sprint.
+> Choose a new (not the same team member as during the previous sprints) Scrum Master among the team members for the third Sprint.
 
 ## 🏃‍♂️ Sprint 3 planning
 
@@ -60,21 +62,21 @@ After some discussion the Scrum Team planned the following user stories for the 
 
 {: .important-title }
 
-> Exercise 3
+> 🎯 Exercise 3
 >
-> Make sure that all task related issues that have been completed during the Sprint 2 are _closed_ and their _status is "Done"_ in the Backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
+> Make sure that all task related issues that have been completed during the Sprint 2 are _closed_ and their _status is "Done"_ in the backlog project. Do the same with the user story related issues _accepted by the Product Owner_ during the Sprint Review event.
 >
 > Create a new milestone for the third Sprint. If you didn't manage to implement all user stories during the previous Sprint, set the third Sprint's milestone for the unfinished user story and task issues. If the Sprint Review brought up implementation improvements or flaws (e.g. bugs), create appropriate issues for the tasks.
 
 {: .important-title }
 
-> Exercise 4
+> 🎯 Exercise 4
 >
 > Create an issue for each _user story_. Add the "user story" label for each issue. Set the Sprint milestone and add the issues to the backlog.
 
 {: .important-title }
 
-> Exercise 5
+> 🎯 Exercise 5
 >
 > Plan the tasks for the first user story, "{{site.sprint_3_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -82,11 +84,11 @@ After some discussion the Scrum Team planned the following user stories for the 
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-3-us-1-add-review.png)
+> ![](/assets/user-stories/sprint-3-us-1-add-review.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 6
+> 🎯 Exercise 6
 >
 > Plan the tasks for the second user story, "{{site.sprint_3_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -94,13 +96,13 @@ After some discussion the Scrum Team planned the following user stories for the 
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-3-us-2-1-list-reviews.png)
+> ![](/assets/user-stories/sprint-3-us-2-1-list-reviews.png){:class="user-story-preview"}
 >
-> ![](/assets/sprint-3-us-2-2-list-reviews.png)
+> ![](/assets/user-stories/sprint-3-us-2-2-list-reviews.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 7
+> 🎯 Exercise 7
 >
 > Plan the tasks for the third user story, "{{site.sprint_3_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -108,7 +110,7 @@ After some discussion the Scrum Team planned the following user stories for the 
 
 {: .important-title }
 
-> Exercise 8
+> 🎯 Exercise 8
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_3_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -232,7 +234,7 @@ The configuration in the `src/test/resources/application.properties` file will b
 
 {: .important-title }
 
-> Exercise 9
+> 🎯 Exercise 9
 >
 > Add a test-specific configuration file and configure a separate database for the tests. Make sure that running the tests doesn't alter (for example delete any data) the development environment database.
 
@@ -477,7 +479,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 10
+> 🎯 Exercise 10
 >
 > Implement a test class within the `src/test/java` package with the following test methods for the endpoint for _getting all (published) quizzes_:
 >
@@ -489,7 +491,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 11
+> 🎯 Exercise 11
 >
 > Implement the following test methods for the endpoint for _getting the questions of a quiz_:
 >
@@ -499,7 +501,7 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 12
+> 🎯 Exercise 12
 >
 > Implement a test class with the following test methods for the endpoint for _creating an answer_:
 >
@@ -510,41 +512,50 @@ While testing your application's REST API endpoints, refer to the examples above
 
 {: .important-title }
 
-> Exercise 13
+> 🎯 Exercise 13
 >
 > Implement appropriate test methods for _at least two more endpoints_ of your choice. Analyze the behavior of the endpoints based on different requests (e.g. different kind of invalid requests like in the test cases covered in the previous exercises) and database states and implement test scenarios to cover these cases. Use descriptive names for the test methods so that they properly describe the test case.
 
 {: .important-title }
 
-> Exercise 14
+> 🎯 Exercise 14
 >
 > Add instructions on _how to run the tests_ on the command-line to the "Developer guide" section in the `README.md` file.
 
 {: .important-title }
 
-> Exercise 15
+> 🎯 Exercise 15
 >
 > Repository's _license_ defines how others can use, modify, and distribute the code within your repository. Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `README.md` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
-> Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specified in the React project's [README.md](https://github.com/facebook/react/blob/main/README.md) file.
+> Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specified in the example project's [README.md](https://github.com/hh-ohjelmistoprojekti-2/spring-boot-vite-example/blob/main/README.md?plain=1) file.
 
 {: .important-title }
 
-> Exercise 16
+> 🎯 Exercise 16
 >
-> Deploy the final versions of the backend and frontend applications to the production environment. Make sure that both applications work properly in the production environment.
-
-{: .important-title }
-
-> Exercise 17
+> Make sure that all project-related documentation, such as project description, data model documentation, developer guide documentation and Swagger documentation is up-to-date in the `README.md` file. There should also be the following links:
 >
-> Make sure that all project-related documentation, such as project description, data model documentation, developer guide documentation and Swagger documentation is up-to-date.
+> - Link to the backend and frontend deployments (e.g. in Rahti and Render).
+> - Link to the GitHub Projects backlog.
+> - Link to the Swagger documentation (format is <https://nameofyourrahtiapp.2.rahtiapp.fi/swagger-ui/index.html> in Rahti).
+> - Link to the project's license file.
 
 {: .important-title }
 
-> Exercise 18
+> 🎯 Exercise 16
+>
+> Before the final Sprint Review, deploy the final versions of the backend and frontend applications to the production environment. Make sure that both applications work properly in the production environment.
+
+{: .important-title }
+
+> 🎯 Exercise 18
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
+
+{: .highlight }
+
+> Make sure that each team member has pushed their work to the project's GitHub repository before the Sprint 3 deadline on {{site.sprint_3_deadline}}.
 
 ## Peer review
 
@@ -564,9 +575,9 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 {: .important-title }
 
-> Exercise 19
+> 🎯 Exercise 19
 >
-> Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
+> Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher. The deadline for the peer review is on {{site.final_deadline}}.
 
 ## Final report
 
@@ -582,10 +593,6 @@ Submit the final report as _a single PDF file_ to Moodle (you'll find the submis
 
 {: .important-title }
 
-> Exercise 20
+> 🎯 Exercise 20
 >
-> Write the final report as instructed above.
-
-{: .highlight }
-
-> Make sure that you have pushed your work to the project's GitHub repository before the Sprint 3 deadline on {{site.sprint_3_deadline}}.
+> Write the final report as instructed above. The deadline for the final report is on {{site.final_deadline}}.

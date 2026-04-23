@@ -12,7 +12,9 @@ nav_exclude: false
 
 This week we'll start working on the project described by the Product Owner in the [project description](/project-description). As we have learned, in Scrum the project advances in short iterations called _Sprints_. Each of our three Sprints last two weeks. This week is the start of the Sprint 1.
 
-This Sprint doesn't have a Moodle submission. It is enough that you have pushed your work to the project's GitHub repository before the Sprint deadline on {{site.sprint_1_deadline}}, so we will be working on the Sprint requirements for the next two weeks. The Sprint ends with the Sprint Review event in which the team will share their progress with the Product Owner.
+{: .highlight }
+
+> The deadline for the Sprint 1 is on {{site.sprint_1_deadline}}, after which the team will present their progress to the Product Owner in the Sprint Review event. The team should push their work to the project's GitHub repository before the deadline.
 
 ## Sprint Planning
 
@@ -102,16 +104,18 @@ Taskboards are either physical taskboards, for example whiteboards in an office,
 
 [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) is a platform for managing taskboards. We will be using it for managing the user stories and tasks in our Product Backlog and Sprint Backlog.
 
-Taskboards in GitHub Projects are called _projects_. Let's create a project for our backlogs. Open your repository in GitHub and click the "Projects" tab. Then, click the green "New project" button on the right. Click the arrow next to the button, if the button label is different. This should open a dialog. From the left side of the dialog, choose "Board". This determines what the project will look like and you can change it later. Name the project "Backlog". Finally, click the "Create" button to create the project.
+Taskboards in GitHub Projects are called _projects_. Let's create a project for our backlogs:
 
-We now have a project with the default columns: "Todo", "In progress" and "Done". The column will determine the status of the backlog items. We can edit the column names by clicking the three dots at the top-right corner of the column. We can add a new column by pressing the "+" button on the right side of the last column. Let's change the columns so that they are the following from left to right:
+1. Open your repository in GitHub and click the "Projects" tab. Then, click the green "New project" button on the right. 
+2. A dialog should open with different options for the project's appearance. Choose the "Kanban" option, which is a traditional taskboard. You can change it later. Come up with a descriptive name for the project and finally, click the "Create project" button to create the project.
+3. Let's make sure that our project is public. Click the project's name and the project's settings should open. Scroll down to "Danger zone" section and choose "Visibility" as "Public" from the dropdown menu.
+
+We now have a project with the default columns. The column will determine the status of the backlog items. We can edit the column names by clicking the three dots at the top-right corner of the column. We can add a new column by pressing the "+" button on the right side of the last column. Let's change the columns so that they are the following from left to right:
 
 - "Product Backlog". This column is for the _Product Backlog_ items. That is, items that are requirements for the project but aren't currently worked on. The items should be listed in the priority order defined by the Product Owner.
 - "Sprint Backlog". This column is for the _Sprint Backlog_ items. That is, user stories and tasks that are chosen for the current Sprint.
 - "In progress". This column is for the items that some team member is currently working on.
 - "Done". This column is for the items that have been completed.
-
-Finally, let's make sure that our project is public. Click the project's name and the project's settings should open. Scroll down to "Danger zone" section and choose "Visibility" as "Public" from the dropdown menu.
 
 The project will be empty for now, but we will add some user stories and tasks for the project after the Sprint Planning event.
 
@@ -125,9 +129,9 @@ The project will be empty for now, but we will add some user stories and tasks f
 
 {: .important-title }
 
-> Exercise 1
+> 🎯 Exercise 1
 >
-> Create the "Backlog" project as instructed above. Make sure that the project is public. Add a link to the Backlog project to the `README.md` under a "Backlog" subheading (open the Backlog project in GitHub and copy the URL from the web browser's address bar).
+> Create a GitHub Projects project for your taskboard as instructed above. Make sure that the project is public. Add a link to the Backlog project to the `README.md` under a "Backlog" subheading (open the backlog project in GitHub and copy the URL from the web browser's address bar).
 
 ## 🏃‍♂️ Sprint 1 planning
 
@@ -172,9 +176,9 @@ These are the user stories, that you will be working on as a team during this Sp
 
 {: .important-title }
 
-> Exercise 2
+> 🎯 Exercise 2
 >
-> Choose the [Scrum Master](https://scrumguides.org/scrum-guide.html#scrum-master) among the team members for the first Sprint. The Scrum Master should help other team members with following the Scrum process, for example by facilitating the team's meetings and making sure that the backlogs are kept up-to-date.
+> Choose the [Scrum Master](https://scrumguides.org/scrum-guide.html#scrum-master) among the team members for the first Sprint. The Scrum Master should help other team members with following the Scrum process, for example by facilitating the team's meetings and making sure that the backlog is kept up-to-date.
 
 ## GitHub issues
 
@@ -188,29 +192,30 @@ Before we start creating issues, let's add some [labels](https://docs.github.com
 
 {: .important-title }
 
-> Exercise 3
+> 🎯 Exercise 3
 >
-> Create the "user story" label to classify user story related issues.
+> Create the "user story" label to classify user story related issues. Feel free to also create other labels on top of the predefined labels for your issues.
 
 Next, we need to specify the Sprint the issue is worked on. We can use Sprint-specific [milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) to group the issues based on a Sprint. Let's create a milestone for the first Sprint. First, click the "Issues" tab to open the issues page. Then, click the "Milestones" button next to the "Labels" button. On the Milestones page, click the "Create a new Milestone" button. Set the milestone title as "Sprint 1". You can also specify a due date and a description if you want. Finally, click the "Create milestone" button to create the milestone.
 
 {: .important-title }
 
-> Exercise 4
+> 🎯 Exercise 4
 >
 > Create the "Sprint 1" milestone to group the issues of the first Sprint.
 
-Now that we have the "user story" label and the "Sprint 1" milestone, let's create an issue for each user story. Click the "Issues" tab and click the green "New issue" button on the right. Set the issue title as "{{site.sprint_1_user_story_1}}". With the description we can provide additional details if we can't fit everything in the title. On the right, click "Labels" and choose the "user story" label which indicates that this issue is a user story. Then, click "Projects" and choose the "Backlog" project. This will add the issue to the Backlog project. To specify the issue's Sprint, click "Milestone" and choose "Sprint 1". Finally, click the "Submit a new issue" button to create the issue.
+Now that we have the "user story" label and the "Sprint 1" milestone, let's create an issue for each user story:
 
-Next, let's open the "Projects" tab and open the Backlog project. We should see that the issue we created is now in the project. We can move the issue to a column by dragging the issue card. This will change the status of the issue. Let's move the issue we created to the "Sprint Backlog" column, which indicates that this user story is in the current Sprint.
-
-By default we can't see the labels or the milestone on the issue cards. We can click on the arrow button next to "View 1" below the project name and click "Fields" under "Configuration". There, check "Labels" and "Milestone". Finally, click the green "Save" button to save the configuration.
+1. Open your GitHub Projects backlog. Hover the "Product Backlog" column on the project and click the "Add item" button. Type the first user story, _"{{site.sprint_1_user_story_1}}"_ as the issue title and click "Create a new issue".
+2. A dialog for the new issue should open with the provided title. With the description we can provide additional details if we can't fit everything in the title. Description supports the [Markdown](https://www.markdownguide.org/) syntax and can include, e.g. images of the user story's UI design. Below the description, click the "Label" button and choose the "user story" label which indicates that this issue is a user story. Then, to specify the issue's Sprint, click the "Milestone" button and choose "Sprint 1". Finally, click the "Create" button to create the issue.
+3. The issue card should have appeared to the "Product Backlog" column on the project. We can move the issue to a column by dragging the issue card. This will change the status of the issue. Let's move the issue we created to the "Sprint Backlog" column, which indicates that this user story is in the current Sprint.
+4. By default we can't see the labels or the milestone on the board's issue cards. To make them visible, click the "View" button in the board view and from the dropdown menu, click "Fields". There, check "Labels" and "Milestone". Finally, click the green "Save view" button to save the configuration. 
 
 {: .important-title }
 
-> Exercise 5
+> 🎯 Exercise 5
 >
-> Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 1". Add the issues to the Backlog project and move them to the "Sprint Backlog" column.
+> Create an issue for each _user story_. Add the "user story" label for each issue. Set the milestone as "Sprint 1". Add the issues to the project and move them to the "Sprint Backlog" column. Make sure that that the issue labels and milestone is visible in the backlog project.
 
 ## Database setup
 
@@ -220,7 +225,7 @@ For example, [H2](https://github.com/h2database/h2database) database is a good c
 
 {: .important-title }
 
-> Exercise 6
+> 🎯 Exercise 6
 >
 > Setup the database (for example, H2) for the project. Start the Sprint planning by discussing the database schema based on the requirements. What kind of entities and attributes should be added and what are their relationships?
 
@@ -244,7 +249,7 @@ Here's a few tips before you start implementing the tasks:
 
 {: .important-title }
 
-> Exercise 7
+> 🎯 Exercise 7
 >
 > Read through the [User stories and tasks](#user-stories-and-tasks) section. Then, plan the tasks for the first user story, "{{site.sprint_1_user_story_1}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
@@ -254,11 +259,11 @@ Here's a few tips before you start implementing the tasks:
 > - What kind of user interface requirements does the user story have?
 > - What kind of controller requirements does the user story have?
 >
-> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the backlog project's "Sprint Backlog" column.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-1-add-quiz.png)
+> ![](/assets/user-stories/sprint-1-us-1-add-quiz.png){:class="user-story-preview"}
 
 {: .note }
 
@@ -266,45 +271,45 @@ Here's a few tips before you start implementing the tasks:
 
 {: .important-title }
 
-> Exercise 8
+> 🎯 Exercise 8
 >
 > Plan the tasks for the second user story, "{{site.sprint_1_user_story_2}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the backlog project's "Sprint Backlog" column.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-2-list-quizzes.png)
+> ![](/assets/user-stories/sprint-1-us-2-list-quizzes.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 9
+> 🎯 Exercise 9
 >
 > Plan the tasks for the third user story, "{{site.sprint_1_user_story_3}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the backlog project's "Sprint Backlog" column.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-3-1-edit-quiz.png)
+> ![](/assets/user-stories/sprint-1-us-3-1-edit-quiz.png){:class="user-story-preview"}
 >
-> ![](/assets/sprint-1-us-3-2-edit-quiz.png)
+> ![](/assets/user-stories/sprint-1-us-3-2-edit-quiz.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 10
+> 🎯 Exercise 10
 >
 > Plan the tasks for the fourth user story, "{{site.sprint_1_user_story_4}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the backlog project's "Sprint Backlog" column.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-4-delete-quiz.png)
+> ![](/assets/user-stories/sprint-1-us-4-delete-quiz.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 11
+> 🎯 Exercise 11
 >
 > Now that there's some work to be done, discuss how you will divide the tasks among the team members. Then, add an _assignee_ for each issue. This can be done by opening the issue and clicking "Assignees" on the right. Then, choose your GitHub account from the dropdown menu. Issue can also have more than one assignee if multiple team members work on the same issue together.
 
@@ -342,77 +347,77 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 
 {: .important-title }
 
-> Exercise 12
+> 🎯 Exercise 12
 >
 > Organize a Daily Scrum event at least once a week during each Sprint. Scheduling a Daily Scrum meeting at least two days before the end of the Sprint is probably a good idea. The Scrum Master should be in charge of facilitating the event. Remember to use the Sprint Backlog to track your progress during the event.
 
 {: .important-title }
 
-> Exercise 13
+> 🎯 Exercise 13
 >
 > Plan the tasks for the fifth user story, "{{site.sprint_1_user_story_5}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the backlog project's "Sprint Backlog" column.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-5-1-add-question.png)
+> ![](/assets/user-stories/sprint-1-us-5-1-add-question.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 14
+> 🎯 Exercise 14
 >
 > Plan the tasks for the sixth user story, "{{site.sprint_1_user_story_6}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the backlog project's "Sprint Backlog" column.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-6-1-list-questions.png)
+> ![](/assets/user-stories/sprint-1-us-6-1-list-questions.png){:class="user-story-preview"}
 >
-> ![](/assets/sprint-1-us-6-2-list-questions.png)
+> ![](/assets/user-stories/sprint-1-us-6-2-list-questions.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 15
+> 🎯 Exercise 15
 >
 > Plan the tasks for the seventh user story, "{{site.sprint_1_user_story_7}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the backlog project's "Sprint Backlog" column.
 
 {: .important-title }
 
-> Exercise 16
+> 🎯 Exercise 16
 >
 > Plan the tasks for the eight user story, "{{site.sprint_1_user_story_8}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the backlog project's "Sprint Backlog" column.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-9-2-add-answer-option.png)
+> ![](/assets/user-stories/sprint-1-us-9-2-add-answer-option.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 17
+> 🎯 Exercise 17
 >
 > Plan the tasks for the ninth user story, "{{site.sprint_1_user_story_9}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the backlog project's "Sprint Backlog" column.
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-10-1-list-answer-options.png)
+> ![](/assets/user-stories/sprint-1-us-10-1-list-answer-options.png){:class="user-story-preview"}
 >
-> ![](/assets/sprint-1-us-10-2-list-answer-options.png)
+> ![](/assets/user-stories/sprint-1-us-10-2-list-answer-options.png){:class="user-story-preview"}
 
 {: .important-title }
 
-> Exercise 18
+> 🎯 Exercise 18
 >
 > Plan the tasks for the tenth user story, "{{site.sprint_1_user_story_10}}". Read the Product Owner's Sprint Planning description regarding the user story again and split it into small coding tasks.
 >
-> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the Backlog project's "Sprint Backlog" column.
+> Create an issue for each task. Set the milestone as "Sprint 1". Add the issues to the backlog project's "Sprint Backlog" column.
 
 ## First steps for the frontend
 
@@ -420,13 +425,13 @@ The Product Owner wants us to get started with the student dashboard application
 
 {: .important-title }
 
-> Exercise 19
+> 🎯 Exercise 19
 >
-> Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You don't need a separate repository for the frontend application, you can initialize it in folder within the current repository.
+> Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You can create a new repository for the frontend under your team's organization or you can initialize it in a folder within the current repository.
 
 {: .important-title }
 
-> Exercise 20
+> 🎯 Exercise 20
 >
 > Implement a [REST controller class](https://spring.io/guides/tutorials/rest) and a REST API method for _getting all quizzes_. Only _published quizzes_ should be returned by the endpoint.
 >
@@ -489,7 +494,7 @@ public class MessageRestController {
 
 {: .important-title }
 
-> Exercise 21
+> 🎯 Exercise 21
 >
 > Implement a simple (no need for a fancy user interface at this point) listing of the published quizzes for the student dashboard frontend application.
 
@@ -514,7 +519,7 @@ The description should be so clear that your fellow student who knows nothing ab
 
 {: .important-title }
 
-> Exercise 22
+> 🎯 Exercise 22
 >
 > Write a developer guide documentation on _how to start the backend application_ on the command-line to the `README.md` file. Also, mention the required Java version for the project. Add it under a "Developer guide" subheading. For the sake of readability, code and command-line command text is commonly highlighted in Markdown file (like in the example above). [Here's](https://markdownguide.offshoot.io/basic-syntax/#code) how that is done in Markdown syntax.
 >
@@ -537,7 +542,7 @@ Next, we will learn how to deploy both of these components to the Rahti platform
 
 {: .important-title }
 
-> Exercise 23
+> 🎯 Exercise 23
 >
 > Deploy the backend application to a production environment by following [these instructions](/backend-deployment). _Test that the application works in the production envinronment_ by adding a quiz with some questions and answer options. Add the production environment URL of the backend application (the application URL in the Rahti dashboard) to the project description section in the `README.md` file.
 
@@ -545,7 +550,7 @@ Next, we will learn how to deploy both of these components to the Rahti platform
 
 Once the GitHub repository's main branch has a working version of the application with the desired features at the end of the Sprint, we should _release_ its source code for the users. [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is a way to "freeze" the source code of a project at certain point of the commit history and to provide users a working version of the application.
 
-Usually a new version of an application is released at the end of each Sprint. When we create a new release at the end of each Sprint, we will create a _release history_ for the project. Users can easily browse and download the source code of different versions of the application by going through the release history. Release also creates a [tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) for the current point in the commit history, which makes it easy to browse commits in different Sprints.
+Usually a new version of an application is released at the end of each Sprint. When we create a new release at the end of each Sprint, we will create a _release history_ for the project. Users can easily browse and download the source code of different versions of the application by going through the release history. Release also creates a [tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) for the current point in the commit history, which makes it easy to browse commits in different Sprints and use Git to return to tagged points of the commit history.
 
 ```mermaid
 gitGraph
@@ -566,7 +571,7 @@ As an example, [here](https://github.com/facebook/react/releases) are the releas
 
 {: .important-title }
 
-> Exercise 24
+> 🎯 Exercise 24
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project as instructed in the [GitHub's documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Create a new tag called "sprint1". The release title should be "Sprint 1". Give a brief description for the release that describes the features implemented during the Sprint.
 
@@ -578,7 +583,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .important-title }
 
-> Exercise 25
+> 🎯 Exercise 25
 >
 > The Scrum Master should prepare the Sprint Review demonstration at the beginning of the next Sprint. The Scrum Master should make sure that they have a working version of the application either deployed to Rahti (preferred) or on their computer and they are able to show how the new features work _in the user's perspective_. If possible, demonstrate the features in the production environment.
 >
@@ -586,7 +591,7 @@ Sprint Review has a huge impact on the transparency of the process. Seeing how t
 
 {: .highlight }
 
-> Make sure that you have pushed your work to the project's GitHub repository before the Sprint 1 deadline on {{site.sprint_1_deadline}}.
+> Make sure that each team member has pushed their work to the project's GitHub repository before the Sprint 1 deadline on {{site.sprint_1_deadline}}.
 
 ## ⭐ Bonus: Git branches
 
