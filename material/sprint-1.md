@@ -422,7 +422,7 @@ The Product Owner wants us to get started with the student dashboard application
 
 > Exercise 19
 >
-> Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You don't need a separate repository for the frontend application, you can initialize it in folder within the current repository.
+> Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You can create a new repository for the frontend or you can initialize it in a folder within the current repository.
 
 {: .important-title }
 

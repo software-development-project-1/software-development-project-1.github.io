@@ -1,13 +1,17 @@
 ---
 layout: page
-title: "Version control: Git and GitHub"
+title: "Version control"
 permalink: /git
 nav_order: 4
 ---
 
 {% include toc.html %}
 
-# Version control: Git and GitHub
+# Version control processes in software development
+
+{: .important-title }
+
+> During the project's development, **generating code with generative AI tools (e.g., ChatGPT or Copilot) is strictly forbidden**. You are required to understand the technical implementation of the project and the teacher will ask about it during the Sprint Review events. How well the technical implementation is understood affects the project assessment.
 
 {: .note }
 
@@ -16,6 +20,10 @@ nav_order: 4
 ## Submitting this week's exercises
 
 Submit this week's exercises to [Moodle]({{site.week_2_moodle_submission_link}}) (you'll find the submission in the "Exercise submissions" tab). The submission should contain the information mentioned in exercises 7, 15 and 16. _Other exercises must be done as well_, but they don't contain anything that should be added to the Moodle submission. The submission deadline is on {{site.week_2_deadline}}.
+
+{: .highlight }
+
+> The material has steps that you need to perform outside the exercises as well. So, _don't just skip to exercises_. Read through the material carefully and perform the instructed steps.
 
 ## Version control
 
@@ -30,10 +38,6 @@ Visual Studio has summarized reasons for using version control on their [website
 There are several different version control tools available, but this part will focus on using Git and GitHub, especially in the context of software development projects.
 
 ## About Git
-
-{: .highlight }
-
-> The material has steps that you need to perform outside the exercises as well. So, _don't just skip to exercises_. Read through the material carefully and perform the instructed steps.
 
 Git was initiated by Linus Torvalds, who is most likely more famous for being the primary developer of the Linux kernel, which is the "heart" of many operating systems, such as Google's [Android](<https://en.wikipedia.org/wiki/Android_(operating_system)>). Torvalds started developing Git for his own needs when coding the Linux kernel. He needed a tool for storing different versions of his own code and sharing it with other people.
 
@@ -712,7 +716,7 @@ Next, you will get to know your team start working on the project by doing some 
 
 ### Project setup
 
-Next, let's create the project repository and setup the Spring Boot project. To avoid future issues, make sure that your Spring Boot project is _in the repository's root folder, like this_ ✅:
+Next, let's create the project repository and setup the Spring Boot project. To avoid future issues, it is recommended that your Spring Boot project is _in the repository's root folder, like this_ ✅:
 
 ```
 src/
@@ -731,7 +735,7 @@ somesubfolder/
 
 {: .highlight }
 
-> It is highly recommended that the Spring Boot project _doesn't require a higher Java version than 25_. That is, versions 17, 21 and 25 are good choices.
+> It is highly recommended that the Spring Boot project _doesn't require a higher Java version than 25_. That is, versions 21 and 25 are good choices.
 
 {: .important-title }
 
@@ -764,7 +768,7 @@ In practice, every repository should have a README file with at least some basic
 
 In GitHub, the README files commonly have the `.md` extension. These are [Markdown](https://www.markdownguide.org/) files. Markdown is markup language similar to HTML and you can use it to add formatting elements to plaintext text documents. Compared to HTML, Markdown syntax is much simpler and that's why it is an excellent choise for formatting text documents.
 
-[This guide](https://www.markdownguide.org/basic-syntax) demonstrates the Markdown syntax compared to HTML. As an example, [here's](https://github.com/facebook/react/blob/main/README.md) what the React project's `README.md` file looks like and [here's](https://github.com/facebook/react/blob/main/README.md?plain=1) what the Markdown markup looks like. You can use the [Markdown Live Preview](https://markdownlivepreview.com/) to try out different kind of Markdown markup.
+[This guide](https://www.markdownguide.org/basic-syntax) demonstrates the Markdown syntax compared to HTML. As an example, [here's](https://github.com/hh-ohjelmistoprojekti-2/spring-boot-vite-example/blob/main/README.md) what the example project's `README.md` file looks like and [here's](https://github.com/hh-ohjelmistoprojekti-2/spring-boot-vite-example/blob/main/README.md?plain=1) what the Markdown markup looks like. You can use the [Markdown Live Preview](https://markdownlivepreview.com/) to try out different kind of Markdown markup.
 
 {: .highlight }
 
@@ -778,8 +782,8 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 >
 > 1. At the beginning of the file add the project name "Quizzer" as a [heading](https://markdownguide.offshoot.io/basic-syntax/#headings).
 > 2. Below the heading add a description of the project as [paragraphs](https://markdownguide.offshoot.io/basic-syntax/#paragraphs-1). Check [the project description](/project-description) for some inspiration.
-> 3. Below the description, add a _subheading_ "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's name.
-> 4. Each team member's name on the list should be a [link](https://markdownguide.offshoot.io/basic-syntax/#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>
+> 3. Below the description, add a _subheading_ "Team members" and below that add a [list](https://markdownguide.offshoot.io/basic-syntax/#unordered-lists) of each team member's GitHub username.
+> 4. Each team member's GitHub username on the list should be a [link](https://markdownguide.offshoot.io/basic-syntax/#links) to their GitHub profile page. The GitHub profile link is in format https://github.com/GITHUB_USERNAME, for example <https://github.com/Kaltsoon>.
 >
 > You can also include other information about the project, which you find useful. Push the `README.md` file changes to GitHub and see that the file formatting looks correct in GitHub.
 

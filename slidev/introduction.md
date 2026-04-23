@@ -246,7 +246,7 @@ class: image-right-sm
 
 > _"When to use iterative development? You should use iterative development only on projects that you want to succeed."_
 >
-> ⎯ Martin Fowler, author and international public speaker on software development
+> ⎯ Martin Fowler
 
 - The benefits of the iterative approach are the ability to respond to change quickly and the feedback loop it provides
 - After each iteration the requirements can change which makes it easy to respond to new user and business needs
