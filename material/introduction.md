@@ -105,7 +105,7 @@ Instead of completing software development lifecycle's phases sequentially from 
 
 ## Scrum
 
-_Scrum_ is an iterative software development process framework that defines practical ways to carry out agile software development principles. Scrum has been by far the most widely used Agile method in the recent years based on the anual [State of Agile](https://www.scruminc.com/2022-state-agile-report-takeaways/) reports. For example based on the year 2022 report, 87% of respondents used Scrum at the team level.
+_Scrum_ is an iterative software development process framework that defines practical ways to carry out agile software development principles. Scrum has been by far the most widely used Agile method in the recent years based on the anual [State of Agile](https://2288549.fs1.hubspotusercontent-na1.net/hubfs/2288549/RE-SA-17th-Annual-State-Of-Agile-Report.pdf) reports. For example based on the year 2024 report, 63% of respondents used Scrum at the team level.
 
 The [Scrum Guide](https://scrumguides.org/scrum-guide.html) (the Finnish version is [here](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-Finnish.pdf)) is the official guide to Scrum. During the course we will use Scrum to manage our software development process. This week we will learn about Scrum in theory and week three onwards we will apply the knowledge with our project.
 
@@ -117,7 +117,7 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 
 > Exercise 1
 >
-> Read the "Scrum Team" chapter of the Scrum Guide and the [Agile scrum roles and responsibilities](https://www.atlassian.com/agile/scrum/roles) article. Then, answer the following questions in your own words:
+> Read the "Scrum Team" chapter of the [Scrum Guide](https://scrumguides.org/scrum-guide.html) and the [Agile scrum roles and responsibilities](https://www.atlassian.com/agile/scrum/roles) article. Then, answer the following questions in your own words:
 >
 > 1. What are the different roles in a Scrum Team?
 > 2. What are the responsibilities of each role?
@@ -126,7 +126,7 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 
 > Exercise 2
 >
-> Read the "Scrum Events" chapter of the Scrum Guide and answer the following questions in your own words:
+> Read the "Scrum Events" chapter of the [Scrum Guide](https://scrumguides.org/scrum-guide.html) and answer the following questions in your own words:
 >
 > 1. What is a Sprint?
 > 2. Which events occur during the Sprint and at what point of the Sprint do each of them occur?
@@ -136,7 +136,7 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 
 > Exercise 3
 >
-> Read the "Scrum Artifacts" chapter of the Scrum Guide and answer the following questions in your own words:
+> Read the "Scrum Artifacts" chapter of the [Scrum Guide](https://scrumguides.org/scrum-guide.html) and answer the following questions in your own words:
 >
 > 1. What is the Product Backlog?
 > 2. What is the Sprint Backlog?
@@ -164,7 +164,7 @@ Before starting working on the exercises, read at least the "Scrum Definition", 
 
 > Exercise 7
 >
-> "Responding to change over following a plan" is one of the core principles of agile. How does Scrum carry out this principle in practice?
+> _"Responding to change over following a plan"_ is one of the core principles of agile. How does Scrum carry out this principle in practice?
 
 {: .important-title }
 
@@ -211,19 +211,19 @@ In agile software development, functional requirements are commonly written as _
 
 For example, two separate user stories for a blog application could be the following:
 
-> As a content creator, I want to create a new blog so that I can start writing blog posts for my readers.
+> As a **content creator**, I want to **create a new blog** so that **I can start writing blog posts for my readers**.
 
-> As a blog reader, I want to browse list of blog posts of a blog so that I can find interesting posts to read.
+> As a **blog reader**, I want to **browse list of blog posts of a blog** so that **I can find interesting posts to read**.
 
 A user story is written from the user's perspective and commonly follows the following format:
 
-> As [a user persona], I want [to perform this action] so that [I can accomplish this goal].
+> As **[a user persona]**, I want **[to perform this action]** so that **[I can accomplish this goal]**.
 
 The "a user persona" part describes the user role (for example "content creator", "blog reader" or "admin user") who wants to use the feature described in the "to perform this action" part. If we can't come up with a specific role we can just call the user persona a "user". The last part of the user story format is the "I can accomplish this goal" part. This justifies, why this user story is important enough to be implemented.
 
 {: .note }
 
-> User stories are sort of todo items, like "go to the store", "take out the trash" and "pick up kids from school". They are there so that the Scrum Team remembers what kind of features need to be implemented for the software.
+> User stories are sort of todo items, like _"go to the store"_, _"take out the trash"_ and _"pick up kids from school"_. They are there so that the Scrum Team remembers what kind of features need to be implemented for the software.
 
 In Scrum, the whole Scrum Team participates in writing the user stories. This is done during the Sprint Planning event at the beginning of the Sprint. The Product Owner's responsibility is to decide which user stories get done first (perhaps during the next Sprint) and which can wait for later. This _priorization_ of the Developers' work is among the most important responsibilities of the Product Owner.
 

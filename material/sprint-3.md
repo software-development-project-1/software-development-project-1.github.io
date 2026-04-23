@@ -526,7 +526,7 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Repository's _license_ defines how others can use, modify, and distribute the code within your repository. Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `README.md` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
-> Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specified in the React project's [README.md](https://github.com/facebook/react/blob/main/README.md) file.
+> Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specified in the example project's [README.md](https://github.com/hh-ohjelmistoprojekti-2/spring-boot-vite-example/blob/main/README.md?plain=1) file.
 
 {: .important-title }
 
@@ -538,7 +538,12 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 17
 >
-> Make sure that all project-related documentation, such as project description, data model documentation, developer guide documentation and Swagger documentation is up-to-date.
+> Make sure that all project-related documentation, such as project description, data model documentation, developer guide documentation and Swagger documentation is up-to-date in the `README.md` file. There should also be the following links:
+>
+> - Link to the backend and frontend deployments (e.g. in Rahti and Render).
+> - Link to the GitHub Projects backlog.
+> - Link to the Swagger documentation (format is <https://nameofyourrahtiapp.2.rahtiapp.fi/swagger-ui/index.html> in Rahti).
+> - Link to the project's license file.
 
 {: .important-title }
 
