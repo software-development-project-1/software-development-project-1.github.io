@@ -21,9 +21,9 @@ On the first two weeks, there are exercises on each week that need to be submitt
 
 {{site.teacher_text}}
 
-## Course related discussions in Teams
+## Completion via recognition of learning
 
-The course has a Teams team for all course related discussions. When you have trouble with an exercise or any other questions related to the course, feel free to ask about it in Teams. You can find the link for joining the Teams team on Moodle.
+The course can be completed via the [recognition of learning](https://www.haaga-helia.fi/en/career-planning/recognition-learning) process, if you have _at least 135 hours of software developer work experience_. Contact the teacher during the first course week if your experience matches these requirements.
 
 ## Assessment
 
@@ -47,7 +47,7 @@ Each team member's personal assessment is based on the following aspects:
 - _Activity in team work_: attendance and active presence during team meetings and communication with team members outside the meetings
 - _Technical contributions_: amount of working code written _or_ active participation in the writing process of the code (for example [pair-programming](https://en.wikipedia.org/wiki/Pair_programming))
 - _Project management and documentation contributions_: activity during Sprint events, Backlog management, efforts to improve the process (for example in Retrospectives), writing project related documentation
-- _Exercise submissions_: at least 16 of the _first two week's exercises_ have to be completed to pass the course
+- _Exercise submissions_: at least 50% of first and second week's exercises must be completed to pass the course
 - The final report written at the end of the course
 
 The personal assessment is done based on the teacher's observations and peer reviews from the team members. Each team member receives a _personal grade_ (0-5) based on their personal efforts towards the project and their exercise submissions from the first two weeks.
@@ -58,7 +58,7 @@ The final grade (0-5) is composed of the project grade and the personal grade.
 
 > The following are necessary to pass the course:
 >
-> - At least 16 of the first two week's exercises have to be completed
+> - At least 50% of first and second week's exercises must be completed
 > - Written peer review for each team member
-> - Passing personal grade
+> - Passing project and personal grade
 > - Written final report

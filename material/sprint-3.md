@@ -15,7 +15,7 @@ During this Sprint, each team member will write a [peer review](#peer-review) in
 
 {: .highlight }
 
-> At the end of this Sprint, each team member has to submit the [final report](#final-report) and the [peer review](#peer-review). Both of them are _required to pass the course_. Submitting either of them after the Sprint deadline will decrease the personal grade.
+> At the end of this Sprint, each team member has to submit the [final report](#final-report) and the [peer review](#peer-review). Both of them are _required to pass the course_. Submitting either of them after the final deadline {{site.final_deadline}} will decrease the personal grade.
 
 ## Retrospective
 
@@ -82,7 +82,7 @@ After some discussion the Scrum Team planned the following user stories for the 
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-3-us-1-add-review.png)
+> ![](/assets/user-stories/sprint-3-us-1-add-review.png)
 
 {: .important-title }
 
@@ -94,9 +94,9 @@ After some discussion the Scrum Team planned the following user stories for the 
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-3-us-2-1-list-reviews.png)
+> ![](/assets/user-stories/sprint-3-us-2-1-list-reviews.png)
 >
-> ![](/assets/sprint-3-us-2-2-list-reviews.png)
+> ![](/assets/user-stories/sprint-3-us-2-2-list-reviews.png)
 
 {: .important-title }
 
@@ -526,7 +526,7 @@ While testing your application's REST API endpoints, refer to the examples above
 >
 > Repository's _license_ defines how others can use, modify, and distribute the code within your repository. Read the GitHub's documentation on [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Then, choose a license for your repository and place the license text in a file named `LICENSE` at the root folder of your repository (the same folder that has the `README.md` file). If you don't have a strong opinion on the license, you can consider the [MIT](https://choosealicense.com/licenses/mit/) license.
 >
-> Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specified in the React project's [README.md](https://github.com/facebook/react/blob/main/README.md) file.
+> Add a "License" subheading to the `README.md` file and under that the chosen license name and the link to the `LICENSE` file in the GitHub repository. As a reference, you can take a look how the license is specified in the example project's [README.md](https://github.com/hh-ohjelmistoprojekti-2/spring-boot-vite-example/blob/main/README.md?plain=1) file.
 
 {: .important-title }
 
@@ -538,13 +538,22 @@ While testing your application's REST API endpoints, refer to the examples above
 
 > Exercise 17
 >
-> Make sure that all project-related documentation, such as project description, data model documentation, developer guide documentation and Swagger documentation is up-to-date.
+> Make sure that all project-related documentation, such as project description, data model documentation, developer guide documentation and Swagger documentation is up-to-date in the `README.md` file. There should also be the following links:
+>
+> - Link to the backend and frontend deployments (e.g. in Rahti and Render).
+> - Link to the GitHub Projects backlog.
+> - Link to the Swagger documentation (format is <https://nameofyourrahtiapp.2.rahtiapp.fi/swagger-ui/index.html> in Rahti).
+> - Link to the project's license file.
 
 {: .important-title }
 
 > Exercise 18
 >
 > Once you have implemented the user stories of the Sprint and the main branch has a working version of the application, create a GitHub release for the project. Create a new tag called "sprint3". The release title should be "Sprint 3". Give a brief description for the release that describes the features implemented during the Sprint.
+
+{: .highlight }
+
+> Make sure that you have pushed your work to the project's GitHub repository before the Sprint 3 deadline on {{site.sprint_3_deadline}}.
 
 ## Peer review
 
@@ -566,7 +575,7 @@ You will need to grade each these aspects in scale of 0-5 and provide a short re
 
 > Exercise 19
 >
-> Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher.
+> Write the peer review for your team members. You will receive the peer review form via email. If you haven't received the peer review form link, contact the teacher. The deadline for the peer review is on {{site.final_deadline}}.
 
 ## Final report
 
@@ -584,8 +593,4 @@ Submit the final report as _a single PDF file_ to Moodle (you'll find the submis
 
 > Exercise 20
 >
-> Write the final report as instructed above.
-
-{: .highlight }
-
-> Make sure that you have pushed your work to the project's GitHub repository before the Sprint 3 deadline on {{site.sprint_3_deadline}}.
+> Write the final report as instructed above. The deadline for the final report is on {{site.final_deadline}}.

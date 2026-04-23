@@ -72,9 +72,9 @@ Welcome to the Software Development Project 1 course! 👋
 
 - The final grade (0-5) is composed of the project grade and the personal grade
 - The following are necessary to pass the course:
-  - At least 16 of the first two week's exercises have to be completed to pass the course
+  - At least 50% of first and second week's exercises must be completed
   - Written peer review for each team member
-  - Passing personal grade
+  - Passing project and personal grade
   - Written final report
 
 ---
@@ -82,7 +82,7 @@ Welcome to the Software Development Project 1 course! 👋
 ## Schedule
 
 - There are weekly sessions during which we will cover different topics
-- Attendance on weekly sessions is **mandatory**
+- **At least 50% session attendance** is required for a passing grade
 - During the first two weeks, we will cover topics that are important to grasp before starting to work on the project
 - The teams will start working on the project during the second week
 - During the teamwork we will learn about new topics, but most importantly we will learn how to apply our knowledge in practice
@@ -246,7 +246,7 @@ class: image-right-sm
 
 > _"When to use iterative development? You should use iterative development only on projects that you want to succeed."_
 >
-> ⎯ Martin Fowler, author and international public speaker on software development
+> ⎯ Martin Fowler
 
 - The benefits of the iterative approach are the ability to respond to change quickly and the feedback loop it provides
 - After each iteration the requirements can change which makes it easy to respond to new user and business needs

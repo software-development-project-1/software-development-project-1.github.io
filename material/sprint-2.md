@@ -78,7 +78,7 @@ The Product Owner was delighted to see how the project has advancend during Spri
 >
 > _Each quiz name on the quiz list should be a link to a separate page where the quiz name, description and the questions are displayed. There should also be some kind of navigation menu from which the student can navigate to the quiz list page._
 >
-> _In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed and the student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback dialog which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again"._
+> _In the quiz page the student should be able to take a published quiz by answering the questions. The questions should be listed in difficulty order from easy to hard. The student should be able to choose an answer option and submit their answer for each question. When the student submits their answer, there should be some kind of feedback dialog which tells the student if their answer was correct or not. For example, "That is correct, good job!", or "That is not correct, try again"._
 >
 > _There should be a page in the student dashboard where the results of a quiz are summarized. The results summarize all the answers submitted by different students to provide the teacher with an overview of how well the students know the quiz's topic. The page should display the question text, the difficulty level, the total number of answers, the correct answer percentage and the number of correct and wrong answers for each question of the quiz. Also the total number of answer and questions of a quiz should be displayed. There should be a link to the results page next to the quiz in the quiz list page._
 >
@@ -130,7 +130,7 @@ And the following user stories for the _student dashboard_ application:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-1-add-category.png)
+> ![](/assets/user-stories/sprint-2-us-1-add-category.png)
 
 {: .important-title }
 
@@ -142,9 +142,9 @@ And the following user stories for the _student dashboard_ application:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-2-1-list-categories.png)
+> ![](/assets/user-stories/sprint-2-us-2-1-list-categories.png)
 >
-> ![](/assets/sprint-2-us-2-2-list-categories.png)
+> ![](/assets/user-stories/sprint-2-us-2-2-list-categories.png)
 
 {: .important-title }
 
@@ -156,9 +156,9 @@ And the following user stories for the _student dashboard_ application:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-3-1-select-quiz-category.png)
+> ![](/assets/user-stories/sprint-2-us-3-1-select-quiz-category.png)
 >
-> ![](/assets/sprint-2-us-3-2-select-quiz-category.png)
+> ![](/assets/user-stories/sprint-2-us-3-2-select-quiz-category.png)
 
 {: .important-title }
 
@@ -172,7 +172,7 @@ And the following user stories for the _student dashboard_ application:
 
 > Exercise 9
 >
-> Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file.
+> Write the first version of the project's _data model documentation_. Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) and write a description of the application's data model, which documents the application's entities, their attributes, their relationships and the relationship types (one-to-one, one-to-many, or many-to-many). The description should explain the purpose of each entity and their relationship to other entities. Add the documentation under a "Data model" subheading in the `README.md` file. Take a look at the [example project's README.md file](https://github.com/hh-ohjelmistoprojekti-2/spring-boot-vite-example/blob/main/README.md?plain=1) for reference.
 >
 > GitHub supports including different kind of diagrams to Markdown files using the [Mermaid](https://github.blog/developer-skills/github/include-diagrams-markdown-files-mermaid/) syntax. Mermaid makes it easier to update diagrams, when for example new entities or attributes need to be added to an entity relationship diagram. Mermaid's entity relationship diagram documentation can be found [here](https://mermaid.js.org/syntax/entityRelationshipDiagram.html).
 >
@@ -795,7 +795,7 @@ export default function MessageList() {
 
 {: .highlight}
 
-> The remaining user stories are related to the student dashboard application and they should be implemented as a frontend application which uses REST API endpoints implemented in the backend.
+> The remaining user stories are related to the _student dashboard application_ and they should be implemented as a _frontend application_ which uses REST API endpoints implemented in the backend.
 
 {: .important-title }
 
@@ -807,7 +807,7 @@ export default function MessageList() {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-6-list-quizzes.png)
+> ![](/assets/user-stories/sprint-2-us-6-list-quizzes.png)
 
 {: .important-title }
 
@@ -819,9 +819,9 @@ export default function MessageList() {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-7-1-quiz-questions.png)
+> ![](/assets/user-stories/sprint-2-us-7-1-quiz-questions.png)
 >
-> ![](/assets/sprint-2-us-7-2-quiz-questions.png)
+> ![](/assets/user-stories/sprint-2-us-7-2-quiz-questions.png)
 
 {: .important-title }
 
@@ -833,9 +833,9 @@ export default function MessageList() {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-8-1-answer-quiz.png)
+> ![](/assets/user-stories/sprint-2-us-8-1-answer-quiz.png)
 >
-> ![](/assets/sprint-2-us-8-2-answer-quiz.png)
+> ![](/assets/user-stories/sprint-2-us-8-2-answer-quiz.png)
 
 {: .important-title }
 
@@ -847,9 +847,9 @@ export default function MessageList() {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-9-1-quiz-results.png)
+> ![](/assets/user-stories/sprint-2-us-9-1-quiz-results.png)
 >
-> ![](/assets/sprint-2-us-9-2-quiz-results.png)
+> ![](/assets/user-stories/sprint-2-us-9-2-quiz-results.png)
 
 {: .important-title }
 
@@ -861,7 +861,7 @@ export default function MessageList() {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-10-list-categories.png)
+> ![](/assets/user-stories/sprint-2-us-10-list-categories.png)
 
 {: .important-title }
 
@@ -873,9 +873,9 @@ export default function MessageList() {
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-2-us-11-1-category-quizzes.png)
+> ![](/assets/user-stories/sprint-2-us-11-1-category-quizzes.png)
 >
-> ![](/assets/sprint-2-us-11-2-category-quizzes.png)
+> ![](/assets/user-stories/sprint-2-us-11-2-category-quizzes.png)
 
 ## Deploying the frontend
 

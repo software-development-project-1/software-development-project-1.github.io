@@ -258,7 +258,7 @@ Here's a few tips before you start implementing the tasks:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-1-add-quiz.png)
+> ![](/assets/user-stories/sprint-1-us-1-add-quiz.png)
 
 {: .note }
 
@@ -274,7 +274,7 @@ Here's a few tips before you start implementing the tasks:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-2-list-quizzes.png)
+> ![](/assets/user-stories/sprint-1-us-2-list-quizzes.png)
 
 {: .important-title }
 
@@ -286,9 +286,9 @@ Here's a few tips before you start implementing the tasks:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-3-1-edit-quiz.png)
+> ![](/assets/user-stories/sprint-1-us-3-1-edit-quiz.png)
 >
-> ![](/assets/sprint-1-us-3-2-edit-quiz.png)
+> ![](/assets/user-stories/sprint-1-us-3-2-edit-quiz.png)
 
 {: .important-title }
 
@@ -300,7 +300,7 @@ Here's a few tips before you start implementing the tasks:
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-4-delete-quiz.png)
+> ![](/assets/user-stories/sprint-1-us-4-delete-quiz.png)
 
 {: .important-title }
 
@@ -356,7 +356,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-5-1-add-question.png)
+> ![](/assets/user-stories/sprint-1-us-5-1-add-question.png)
 
 {: .important-title }
 
@@ -368,9 +368,9 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-6-1-list-questions.png)
+> ![](/assets/user-stories/sprint-1-us-6-1-list-questions.png)
 >
-> ![](/assets/sprint-1-us-6-2-list-questions.png)
+> ![](/assets/user-stories/sprint-1-us-6-2-list-questions.png)
 
 {: .important-title }
 
@@ -390,7 +390,7 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-9-2-add-answer-option.png)
+> ![](/assets/user-stories/sprint-1-us-9-2-add-answer-option.png)
 
 {: .important-title }
 
@@ -402,9 +402,9 @@ A funny fact: it is common that during the Daily Scrum the whole Scrum Team is s
 >
 > The Scrum Team's UI Designer's vision is that the implementation could look something like this:
 >
-> ![](/assets/sprint-1-us-10-1-list-answer-options.png)
+> ![](/assets/user-stories/sprint-1-us-10-1-list-answer-options.png)
 >
-> ![](/assets/sprint-1-us-10-2-list-answer-options.png)
+> ![](/assets/user-stories/sprint-1-us-10-2-list-answer-options.png)
 
 {: .important-title }
 
@@ -422,7 +422,7 @@ The Product Owner wants us to get started with the student dashboard application
 
 > Exercise 19
 >
-> Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You don't need a separate repository for the frontend application, you can initialize it in folder within the current repository.
+> Initialize a frontend application for the student dashboard application for example using [Vite](https://vitejs.dev/). You can create a new repository for the frontend or you can initialize it in a folder within the current repository.
 
 {: .important-title }
 
@@ -545,7 +545,7 @@ Next, we will learn how to deploy both of these components to the Rahti platform
 
 Once the GitHub repository's main branch has a working version of the application with the desired features at the end of the Sprint, we should _release_ its source code for the users. [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is a way to "freeze" the source code of a project at certain point of the commit history and to provide users a working version of the application.
 
-Usually a new version of an application is released at the end of each Sprint. When we create a new release at the end of each Sprint, we will create a _release history_ for the project. Users can easily browse and download the source code of different versions of the application by going through the release history. Release also creates a [tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) for the current point in the commit history, which makes it easy to browse commits in different Sprints.
+Usually a new version of an application is released at the end of each Sprint. When we create a new release at the end of each Sprint, we will create a _release history_ for the project. Users can easily browse and download the source code of different versions of the application by going through the release history. Release also creates a [tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) for the current point in the commit history, which makes it easy to browse commits in different Sprints and use Git to return to tagged points of the commit history.
 
 ```mermaid
 gitGraph
