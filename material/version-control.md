@@ -370,7 +370,7 @@ A new repository called "origin" is added using an HTTPS connection by running t
 >
 > Add the repository as a remote to your local project using the `git remote add` command as instructed above. _Remember to use the HTTPS address when you copy the repository address in GitHub_. Note that the paste keyboard shortcut does not work on Git Bash. You need to right click the Git Bash window and choose "Paste".
 >
-> _Add the link to this GitHub repository to the Moodle submission._
+> **Add the link to this GitHub repository to the Moodle submission**.
 
 ### Publishing
 
@@ -712,7 +712,7 @@ Next, you will get to know your team start working on the project by doing some 
 > - What are the strenghts and weaknesses (e.g. skill-related) of your team?
 > - Which communication platform you will be using?
 >
-> _Every team member should add these to their Moodle submission_. One team member can write down the information and share it with others.
+> **Every team member should add these to their Moodle submission**. One team member can write down the information and share it with others.
 
 ### Project setup
 
@@ -753,7 +753,7 @@ somesubfolder/
 >
 > ![](https://github.githubassets.com/images/gravatars/gravatar-user-420.png?size=32){: width="100" }
 >
-> _Every team member should add the link to the GitHub repository to their Moodle submission_.
+> **Every team member should add the link to the GitHub repository to their Moodle submission**.
 
 ## Markdown and the README file
 
