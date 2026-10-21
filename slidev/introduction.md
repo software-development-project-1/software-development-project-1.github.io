@@ -257,7 +257,7 @@ class: image-right-sm
 ## Scrum
 
 - **Scrum** is a widely adopted iterative software development process framework that defines practical ways to carry out agile software development principles
-- Based on the State of Agile report of the year 2022, 87% of respondents used Scrum at the team level
+- Based on the State of Agile report of the year 2024, 63% of respondents used Scrum at the team level
 - In the Scrum process, the **Scrum Team** develops software in fixed-length iterations called **Sprints**
 - Sprints should be kept short, preferably at most four weeks long
 - In each Sprint, there are fixed **events**, which help the Scrum Team organize their work and keep track of the progress of the Sprint
