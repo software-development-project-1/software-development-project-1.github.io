@@ -19,7 +19,7 @@ nav_order: 4
 
 ## Submitting this week's exercises
 
-Submit this week's exercises to [Moodle]({{site.week_2_moodle_submission_link}}) (you'll find the submission in the "Exercise submissions" tab). The submission should contain the information mentioned in exercises 7, 15 and 16. _Other exercises must be done as well_, but they don't contain anything that should be added to the Moodle submission. The submission deadline is on {{site.week_2_deadline}}.
+Submit this week's exercises to Moodle (you'll find the submission in the "Exercise submissions" tab). The submission should contain the information mentioned in exercises 7, 15 and 16. _Other exercises must be done as well_, but they don't contain anything that should be added to the Moodle submission. The submission deadline is on {{site.week_2_deadline}}.
 
 {: .highlight }
 
