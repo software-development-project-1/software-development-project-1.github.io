@@ -122,11 +122,11 @@ When we implement a new feature for the application we need to make sure that it
 
 Manual testing is important, but we can't perform it _at scale_. When our application becomes more complex, each change to code can potentially break any part of the application. This type of bug where a feature that has worked before stops working is referred to as [regression](https://en.wikipedia.org/wiki/Software_regression).
 
-Testing each feature manually after each code change to spot regression bugs is too time-consuming. That's why we implement _automated tests_: programs that test our code. We can usually execute hundreds of automated tests within just a minute. Martin Fowler explains the purpose of different kind of automated tests and their pros and cons in his article [TestPyramid](https://martinfowler.com/bliki/TestPyramid.html).
+Testing each feature manually after each code change to spot regression bugs is too time-consuming. That's why we implement _automated tests_: programs that test our code. We can usually execute hundreds of automated tests within just a minute. Different kinds of automated tests serve different purpose of and they have their pros and cons. That is why our project's test portfolio should consist of balanced amount of different tests. This balanced portfolio is commonly visualized as the _test pyramid_.
 
 ![TestPyramid](/assets/test-pyramid.png)
 
-Fowler categorizes different tests in three categories: _unit_, _service_ and _UI_ (user interface) tests. The test pyramid represents the _amount_ of these different kind of tests we should have for our application. There are pros and cons for the different kind of tests. While we go up in the pyramid we get better reliability that our application works as inteaded as a whole, but the tests becomes _laborious to maintain_, _difficult to implement_, and _time consuming to run_. Ideally, our project should include multiple types of tests that complement each other, forming a balanced test pyramid.
+Tests are commonly categorized as _unit_, _integration_ (or service) and _end-to-end_ (or UI) tests depending on the scope of what is being tested and how much of the system is involved in the test. The test pyramid represents the _amount_ of these different kind of tests we should have for our application. There are pros and cons for the different kind of tests. While we go up in the pyramid we get better reliability that our application works as inteaded as a whole, but the tests becomes _laborious to maintain_, _difficult to implement_, and _time consuming to run_. Ideally, our project should include multiple types of tests that complement each other, forming a balanced test pyramid.
 
 Automated tests are implemented with programming language specific _testing frameworks_, such as Java's [JUnit](https://junit.org/junit5/) and JavaScript's [Vitest](https://vitest.dev/). During this Sprint we will implement some integration tests for our backend's REST API endpoints using JUnit and the [MockMVC](https://spring.io/guides/gs/testing-web) framework.
 
@@ -200,9 +200,9 @@ Integration tests have these pros and cons:
 - 🟢 Fairly fast to run
 - 🟡 Provides a reasonable reliability that the application works as a whole
 
-### UI tests
+### End-to-end tests
 
-_UI tests_ (also known as end-to-end tests) constitute the top of the test pyramid. We should have a moderate amount of UI tests in our application. As the name suggests, UI tests test that the application works by actually performing actions on the user interface similarly as a real user. This means opening a page on a web browser, filling form fields, clicking buttons and expecting the page to have some content. Because UI tests need the user interface to operate on, they are _slow to execute_. In addition, because the application's user interface commonly changes more often than the code, UI tests are laborious to maintain.
+_End-to-end tests_ (also known as UI tests) constitute the top of the test pyramid. We should have a moderate amount of end-to-end tests in our application. As the name suggests, end-to-end tests test that the application works by actually performing actions on the user interface similarly as a real user. This means opening a page on a web browser, filling form fields, clicking buttons and expecting the page to have some content. Because UI tests need the user interface to operate on, they are _slow to execute_. In addition, because the application's user interface commonly changes more often than the code, UI tests are laborious to maintain.
 
 Here's an example of testing the submission of the message form with the [Robot Framework](https://robotframework.org/) test automation framework:
 
