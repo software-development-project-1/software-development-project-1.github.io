@@ -15,7 +15,7 @@ nav_order: 4
 
 {: .note }
 
-> This material is based on the execellent course material of University of Helsinki's [Computing tools for CS studies](https://tkt-lapio.github.io/en/) course.
+> This material is based on the course material of University of Helsinki's [Computing tools for CS studies](https://tkt-lapio.github.io/en/) course.
 
 ## Submitting this week's exercises
 
