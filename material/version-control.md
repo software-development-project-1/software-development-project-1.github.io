@@ -749,7 +749,7 @@ somesubfolder/
 > 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web, Spring Boot DevTools, Thymeleaf and Spring Data JPA dependencies by clicking the "Dependencies" button will get you started. Push the generated project to the GitHub repository.
 > 5. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. Start the Spring Boot application in the repository and make sure that there are no errors.
 > 6. Add a `README.md` file with some content in it to the repository and push it to GitHub
-> 7. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. You might not be able to edit the file in Eclipse, but Visual Studio Code should work. Check the commit history in GitHub and _make sure that the commit's author is your GitHub account_. If your commit's author's avatar is a grey GitHub logo (see below) and the username doesn't match your GitHub username, revisit exercise 3.
+> 7. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. Check the commit history in GitHub and _make sure that the commit's author is your GitHub account_. If your commit's author's avatar is a grey GitHub logo (see below) and the username doesn't match your GitHub username, revisit exercise 3.
 >
 > ![](https://github.githubassets.com/images/gravatars/gravatar-user-420.png?size=32){: width="100" }
 >
@@ -769,10 +769,6 @@ In practice, every repository should have a README file with at least some basic
 In GitHub, the README files commonly have the `.md` extension. These are [Markdown](https://www.markdownguide.org/) files. Markdown is markup language similar to HTML and you can use it to add formatting elements to plaintext text documents. Compared to HTML, Markdown syntax is much simpler and that's why it is an excellent choise for formatting text documents.
 
 [This guide](https://www.markdownguide.org/basic-syntax) demonstrates the Markdown syntax compared to HTML. As an example, [here's](https://github.com/hh-ohjelmistoprojekti-2/spring-boot-vite-example/blob/main/README.md) what the example project's `README.md` file looks like and [here's](https://github.com/hh-ohjelmistoprojekti-2/spring-boot-vite-example/blob/main/README.md?plain=1) what the Markdown markup looks like. You can use the [Markdown Live Preview](https://markdownlivepreview.com/) to try out different kind of Markdown markup.
-
-{: .highlight }
-
-> If you can't edit a Markdown file in Eclipse, try in Visual Studio Code.
 
 {: .important-title }
 
