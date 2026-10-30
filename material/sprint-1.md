@@ -106,9 +106,9 @@ Taskboards are either physical taskboards, for example whiteboards in an office,
 
 Taskboards in GitHub Projects are called _projects_. Let's create a project for our backlogs:
 
-1. Open your repository in GitHub and click the "Projects" tab. Then, click the green "New project" button on the right. 
+1. Open your repository in GitHub and click the "Projects" tab. Then, click the green "New project" button on the right.
 2. A dialog should open with different options for the project's appearance. Choose the "Kanban" option, which is a traditional taskboard. You can change it later. Come up with a descriptive name for the project and finally, click the "Create project" button to create the project.
-3. Let's make sure that our project is public. Click the project's name and the project's settings should open. Scroll down to "Danger zone" section and choose "Visibility" as "Public" from the dropdown menu.
+3. Projects are private by default. Make sure that you have addded the teacher (GitHub username: {{site.teacher_github}}) as a member of your organization so they can see the project.
 
 We now have a project with the default columns. The column will determine the status of the backlog items. We can edit the column names by clicking the three dots at the top-right corner of the column. We can add a new column by pressing the "+" button on the right side of the last column. Let's change the columns so that they are the following from left to right:
 
@@ -131,7 +131,7 @@ The project will be empty for now, but we will add some user stories and tasks f
 
 > 🎯 Exercise 1
 >
-> Create a GitHub Projects project for your taskboard as instructed above. Make sure that the project is public. Add a link to the Backlog project to the `README.md` under a "Backlog" subheading (open the backlog project in GitHub and copy the URL from the web browser's address bar).
+> Create a GitHub Projects project for your taskboard as instructed above. Add a link to the Backlog project to the `README.md` under a "Backlog" subheading (open the backlog project in GitHub and copy the URL from the web browser's address bar).
 
 ## 🏃‍♂️ Sprint 1 planning
 
@@ -209,7 +209,7 @@ Now that we have the "user story" label and the "Sprint 1" milestone, let's crea
 1. Open your GitHub Projects backlog. Hover the "Product Backlog" column on the project and click the "Add item" button. Type the first user story, _"{{site.sprint_1_user_story_1}}"_ as the issue title and click "Create a new issue".
 2. A dialog for the new issue should open with the provided title. With the description we can provide additional details if we can't fit everything in the title. Description supports the [Markdown](https://www.markdownguide.org/) syntax and can include, e.g. images of the user story's UI design. Below the description, click the "Label" button and choose the "user story" label which indicates that this issue is a user story. Then, to specify the issue's Sprint, click the "Milestone" button and choose "Sprint 1". Finally, click the "Create" button to create the issue.
 3. The issue card should have appeared to the "Product Backlog" column on the project. We can move the issue to a column by dragging the issue card. This will change the status of the issue. Let's move the issue we created to the "Sprint Backlog" column, which indicates that this user story is in the current Sprint.
-4. By default we can't see the labels or the milestone on the board's issue cards. To make them visible, click the "View" button in the board view and from the dropdown menu, click "Fields". There, check "Labels" and "Milestone". Finally, click the green "Save view" button to save the configuration. 
+4. By default we can't see the labels or the milestone on the board's issue cards. To make them visible, click the "View" button in the board view and from the dropdown menu, click "Fields". There, check "Labels" and "Milestone". Finally, click the green "Save view" button to save the configuration.
 
 {: .important-title }
 
@@ -443,8 +443,8 @@ The Product Owner wants us to get started with the student dashboard application
 > @CrossOrigin(origins = "*")
 > public class MessageRestController {
 >    private final MessageRepository messageRepository;
->   
->    // ...       
+>
+>    // ...
 >
 >    @GetMapping("/messages")
 >    public List<Message> getAllMessages() {
@@ -457,7 +457,7 @@ The Product Owner wants us to get started with the student dashboard application
 >
 > ```javascript
 > fetch("http://localhost:8080/api/messages").then((messages) =>
->   console.log(messages)
+>   console.log(messages),
 > );
 > ```
 
@@ -710,7 +710,7 @@ Finally, resolve the conflicts and add, commit and push the changes to GitHub. N
 
 ### Separate branch for the development code
 
- A quite common Git workflow is to have a separate branch for work-in-progress development code. All commits are made to the development branch. Whenever the development branch has some new ready features, it can be merged to the main branch using a pull request. Having a separate branch for the development code makes sure that the main branch always has a stable working version of the application which can be deployed at any moment.
+A quite common Git workflow is to have a separate branch for work-in-progress development code. All commits are made to the development branch. Whenever the development branch has some new ready features, it can be merged to the main branch using a pull request. Having a separate branch for the development code makes sure that the main branch always has a stable working version of the application which can be deployed at any moment.
 
 ```mermaid
 gitGraph
