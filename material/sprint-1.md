@@ -531,7 +531,7 @@ So far we have been using and developing our application in an isolated environm
 
 The deployment phase is crucial because unless users can use the application, it has no real value for the stakeholders. That is why, in the agile software development we shouldn't wait at the end of the project or event at the end of an iteration to deploy the application. Instead, deployment is done frequently, even on daily basis. In Scrum, the deployment should occur at least at the end of each Sprint. In real software development projects deployments commonly occur daily or even [a hundred times a day](https://www.infoq.com/news/2013/06/netflix/).
 
-There are many platforms for deploying web applications, such as [Heroku](https://www.heroku.com/) and [Render](https://render.com/). We will be using the [Rahti](https://rahti.csc.fi/) platform for backend deployment during this course. Our production environment will consist of two components: a _production database_ and a _production web server_ for the Spring Boot backend application. As the production database, we will be using the [PostgreSQL](https://www.postgresql.org/) database, which is among the most widely used databases.
+There are many platforms for deploying web applications, such as [Vercel](https://vercel.com/) and [Render](https://render.com/). We will be using the [Rahti](https://rahti.csc.fi/) platform for backend deployment during this course. Our production environment will consist of two components: a _production database_ and a _production web server_ for the Spring Boot backend application. As the production database, we will be using the [PostgreSQL](https://www.postgresql.org/) database, which is among the most widely used databases.
 
 ```mermaid
 flowchart LR
