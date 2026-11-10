@@ -746,7 +746,7 @@ somesubfolder/
 > 1. GitHub organizations are a way to apply fine-grained access permissions to repositories. Create a GitHub organization for your team by following [these](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) instructions. You can name the organization for example based on your team's name you came up with previously.
 > 2. Invite other team members to the organization by following [these](https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization) instructions. Also invite the teacher (GitHub username: {{site.teacher_github}}). When sending the invitation on the "Role in the organization" step, _choose role "Owner" for each team member_.
 > 3. Create a _public_ GitHub repository for the project. Choose the "Owner" as the organization you created previously and give the repository a descriptive name and a description.
-> 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web, Spring Boot DevTools, Thymeleaf and Spring Data JPA dependencies will get you started. Make sure that a `.gitignore` file is included and if not, add one with the [following content](https://raw.githubusercontent.com/hh-ohjelmistoprojekti-2/spring-boot-vite-example/refs/heads/main/.gitignore). Push the generated project to the GitHub repository.
+> 4. Initialize a Spring Boot project for example using [Spring Initializr](https://start.spring.io/). Choose a _Maven project_. Adding the Spring Web, Spring Boot DevTools, Thymeleaf and Spring Data JPA dependencies will get you started. Make sure that a `.gitignore` file is included to avoid undecired files and folders ending up in the remote GitHub repository. If not, add one with the [following content](https://raw.githubusercontent.com/hh-ohjelmistoprojekti-2/spring-boot-vite-example/refs/heads/main/.gitignore). Push the generated project to the GitHub repository.
 > 5. Each team member should clone the project's GitHub repository for their local computer with the `git clone` command. _Remember to use the HTTPS address_ of the GitHub repository with the command. Start the Spring Boot application in the repository and make sure that there are no errors.
 > 6. Add a `README.md` file with some content in it to the repository and push it to GitHub
 > 7. To make sure that the repository is accessible to the whole team, each team member should make a small change to the `README.md` file and push the changes to GitHub. Check the commit history in GitHub and _make sure that the commit's author is your GitHub account_. If your commit's author's avatar is a grey GitHub logo (see below) and the username doesn't match your GitHub username, revisit exercise 3.
@@ -766,7 +766,7 @@ The README file mentioned previously has a special meaning in software developme
 
 In practice, every repository should have a README file with at least some basic information about the repository.
 
-In GitHub, the README files commonly have the `.md` extension. These are [Markdown](https://www.markdownguide.org/) files. Markdown is markup language similar to HTML and you can use it to add formatting elements to plaintext text documents. Compared to HTML, Markdown syntax is much simpler and that's why it is an excellent choise for formatting text documents.
+In GitHub, the README files commonly have the `.md` extension. These are [Markdown](https://www.markdownguide.org/) files. Markdown is markup language similar to HTML and you can use it to add formatting elements to plaintext text documents. Compared to HTML, Markdown syntax is much simpler and that's why it is an excellent choise for formatting text documents. AI agents can also easily read and interpret Markdown, making it a suitable format for providing context.
 
 [This guide](https://www.markdownguide.org/basic-syntax) demonstrates the Markdown syntax compared to HTML. As an example, [here's](https://github.com/hh-ohjelmistoprojekti-2/spring-boot-vite-example/blob/main/README.md) what the example project's `README.md` file looks like and [here's](https://github.com/hh-ohjelmistoprojekti-2/spring-boot-vite-example/blob/main/README.md?plain=1) what the Markdown markup looks like. You can use the [Markdown Live Preview](https://markdownlivepreview.com/) to try out different kind of Markdown markup.
 
@@ -787,23 +787,11 @@ In GitHub, the README files commonly have the `.md` extension. These are [Markdo
 
 > The [Awesome README](https://github.com/matiassingers/awesome-readme) repository contains a curated list of great README files. You can use it as an inspiration for your projects README file.
 
-<!--
-{: .important-title }
-
-> ⭐ Bonus exercise
-> 
-> As mentioned before, the GitHub profile is the main portfolio of a software developer. That is why, having a professional GitHub profile is very important while applying for a software developer job. Improve your GitHub profile by applying improvements mentioned in the [Using your GitHub profile to enhance your resume](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/using-your-github-profile-to-enhance-your-resume) guide. The [Awesome GitHub profile README](https://github.com/abhisheknaiidu/awesome-github-profile-readme?tab=readme-ov-file) has a curated list of great profile `README` files for inspiration. Perhaps the most important parts of the profile are:
->
-> - Profile picture
-> - Professional bio
-> - Profile `README` file
--->
-
 {: .highlight }
 
 > The Moodle submission should only contain the link to your GitHub repository created in exercise 7 and the information mentioned in exercises 15 and 16. _Other exercises must be done as well_, but they don't contain anything that should be added to the Moodle submission.
 
-## The End
+## Final tips and additional reading
 
 As a novice software developer it is easy to lose and even break code with version control. However, learning how to use one is definitely one of the most vital skills required in the working life. Though the system in use may not be Git, the same principles often apply.
 
