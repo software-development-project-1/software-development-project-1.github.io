@@ -456,9 +456,11 @@ The Product Owner wants us to get started with the student dashboard application
 > In this example, the frontend would be able fetch all the messages in the following way:
 >
 > ```javascript
-> fetch("http://localhost:8080/api/messages").then((messages) =>
->   console.log(messages),
-> );
+> fetch("http://localhost:8080/api/messages")
+>   .then((response) => response.json())
+>   .then((messages) => {
+>     console.log(messages);
+>   });
 > ```
 
 ### Cross-Origin Resource Sharing (CORS)
