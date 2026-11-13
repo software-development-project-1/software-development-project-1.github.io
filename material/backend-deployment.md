@@ -268,7 +268,7 @@ You can find your Pukki database connection details by opening your database ins
 
 ![Pukki](/assets/rahti/rahti-pukki-connection-info.png)
 
-Open your Rahti deployment configuration and add these environment variables in the "Workloads > Environment" section.
+Open your Rahti deployment configuration and add these environment variables in the "Workloads > Deployments" section. Click the deployment and open the "Environment" tab.
 
 ![Pukki](/assets/rahti/rahti-env-variables.png)
 
