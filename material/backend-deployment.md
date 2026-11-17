@@ -270,6 +270,11 @@ You can find your Pukki database connection details by opening your database ins
 
 Open your Rahti deployment configuration and add these environment variables in the "Workloads > Deployments" section. Click the deployment and open the "Environment" tab.
 
+
+{: .highlight }
+
+> The environment variable values in the screenshot below, won't be the same for your project. Instead of using these values, check the correct database configuration in the Pukki UI.
+
 ![Pukki](/assets/rahti/rahti-env-variables.png)
 
 When you click "Save", Rahti redeploys your service with the updated configuration. After redeployment, your Spring Boot service should be able to connect to the Pukki database.
