@@ -164,13 +164,14 @@ Unit tests have these pros and cons:
 
 ### Integration tests
 
-_Integration tests_ (also known as service tests) constitute the middle of the test pyramid. We should have quite many integration tests for our application. As the name suggests, integration tests test that different parts of our application code work as inteded once they are _integrated_. For example, methods that perform database operations are tested with integration tests.
+_Integration tests_ (also known as service tests) constitute the middle of the test pyramid. We should have quite many integration tests for our application. As the name suggests, integration tests test that different parts of our application code (e.g. controllers and JPA repositories) work as inteded once they are _integrated_. For example, methods that perform database operations are tested with integration tests.
 
 Here's an example of integration tests for a REST API endpoint `/api/messages` implemented by the `getAllMessages` method:
 
 ```java
 @Test
 public void getAllMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception {
+    // When database has no messages, the response should be an empty list
     this.mockMvc.perform(get("/api/messages"))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$", hasSize(0)));
@@ -178,6 +179,7 @@ public void getAllMessagesReturnsEmptyListWhenNoMessagesExist() throws Exception
 
 @Test
 public void getAllMessagesReturnsListOfMessagesWhenMessagesExist() throws Exception {
+    // When database has messages, the response should be list that includes them
     Message firstMessage = new Message("First message");
     Message secondMessage = new Message("Second message");
     messageRepository.saveAll(List.of(firstMessage, secondMessage));
@@ -202,7 +204,7 @@ Integration tests have these pros and cons:
 
 ### End-to-end tests
 
-_End-to-end tests_ (also known as UI tests) constitute the top of the test pyramid. We should have a moderate amount of end-to-end tests in our application. As the name suggests, end-to-end tests test that the application works by actually performing actions on the user interface similarly as a real user. This means opening a page on a web browser, filling form fields, clicking buttons and expecting the page to have some content. Because UI tests need the user interface to operate on, they are _slow to execute_. In addition, because the application's user interface commonly changes more often than the code, UI tests are laborious to maintain.
+_End-to-end tests_ (E2E tests, or also known as UI tests) constitute the top of the test pyramid. We should have a moderate amount of end-to-end tests in our application. As the name suggests, end-to-end tests test that the application works by actually performing actions on the user interface similarly as a real user. This means opening a page on a web browser, filling form fields, clicking buttons and expecting the page to have some content. Because UI tests need the user interface to operate on, they are _slow to execute_. In addition, because the application's user interface commonly changes more often than the code, UI tests are laborious to maintain.
 
 Here's an example of testing the submission of the message form with the [Robot Framework](https://robotframework.org/) test automation framework:
 

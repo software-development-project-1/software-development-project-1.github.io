@@ -18,6 +18,6 @@ On the second week the teams start working on the project. The project advances 
 | 4.11.2026  | 🏃‍♂️ [Sprint 1](/sprint-1) Planning, Scrum backlogs, GitHub Projects           | [Sprint 1](/sprint-1) exercises, ⚠️ deadline: {{site.sprint_1_deadline}}            |
 | 11.11.2026 | [Sprint 1](/sprint-1) continues: Daily Scrum, Backend deployment, Sprint Review preparations           | [Sprint 1](/sprint-1) exercises                                                    |
 | 18.11.2026 | Sprint 1 Review & Retrospective → 🏃‍♂️ [Sprint 2](/sprint-2) Planning, REST APIs            | [Sprint 2](/sprint-2) exercises, ⚠️ deadline: {{site.sprint_2_deadline}}            |
-| 25.11.2026 | [Sprint 2](/sprint-2) continues: Frontend and backend communication & Frontend deployment | [Sprint 2](/sprint-2) exercises                                                    |
+| 25.11.2026 | [Sprint 2](/sprint-2) continues: Swagger documentation, Frontend and backend communication, Frontend deployment | [Sprint 2](/sprint-2) exercises                                                    |
 | 2.12.2026  | Sprint 2 Review & Retrospective → 🏃‍♂️ [Sprint 3](/sprint-3) Planning, Testing              | [Sprint 3](/sprint-3) exercises, ⚠️ deadline: {{site.sprint_3_deadline}}            |
 | 9.12.2026  | [Sprint 3](/sprint-3) continues: Finishing the project                                    | [Sprint 3](/sprint-3) exercises, (remember mandatory peer review and final report, ⚠️ deadline: {{site.final_deadline}}) |
