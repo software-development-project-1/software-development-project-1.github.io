@@ -303,6 +303,74 @@ fetch("http://localhost:8080/api/messages", {
 });
 ```
 
+### HTTP status codes and REST API error handling
+
+Previously we have handled errors in requests by sending a redirect or rendering a template with some error messages. With REST API endpoints we communicate errors with [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) and JSON formatted error objects containing details about the error. HTTP status codes are numeric codes that server (backend) sends as a response to describe whether the request was successful or not.
+
+Successful status codes are in range 200 - 299. Most common successful status code is [200 OK](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200), which is a generic way to inform the client that the request succeeded. Client error status codes are in range 400 - 499. These status codes indicate that there's something wrong with the client's request. Server error status codes are in the range 500–599. These status codes indicate that the server encountered an error while processing a valid request.
+
+Most common client error status codes are:
+
+- [404 Not Found](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404): the server cannot find the requested resource.
+- [400 Bad Request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400): there was something wrong with the user's request. For example the request body of a POST request is not valid.
+- [403 Forbidden](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403): the user lacks the required authorization for the request. For example the user tries to update a resource that they don't have access to.
+- [401 Unauthorized](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401): the user is not authenticated, meaning that the server can't identify the user. For example the user is not signed in and tries to access a resource which requires authentication.
+
+As in the previous example, we can use the [ResponseStatusException](https://www.baeldung.com/spring-response-status-exception) exception class to send HTTP status code with the response in case of errors. The exception should be thrown with an appropriate HTTP status code and an error message. For example, the line:
+
+```java
+throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Message with id " + id + " does not exist");
+```
+
+In the `getMessageById` method will send a `404 Not Found` status code with the response in case the message specified by the path variable does not exist. The second parameter of the `ResponseStatusException` constructor is the error message which will be displayed in the error response object:
+
+```json
+{
+  "timestamp": "2026-11-20T07:55:10.918+00:00",
+  "status": 404,
+  "error": "Not Found",
+  "trace": "...",
+  "message": "Messsage with id 999 does not exist",
+  "path": "/api/messages/999"
+}
+```
+
+If we don't throw a `ResponseStatusException` exception, the `200 OK` status code will be sent with the response, which indicates the that request succeeded:
+
+```java
+@GetMapping("/messages")
+public List<Message> getAllMessages() {
+    // HTTP status 200 OK will be used in the response by default
+    return messageRepository.findAll();
+}
+```
+
+To get more control over the response, we can use the [ResponseEntity](https://www.baeldung.com/spring-response-entity) class:
+
+```java
+@PostMapping("")
+public ResponseEntity<?> createMessage(@Valid @RequestBody CreateMessageDto message, BindingResult bindingResult) {
+    if (bindingResult.hasErrors()) {
+        List<String> errorMessages = bindingResult.getAllErrors().stream().map((error) -> error.getDefaultMessage())
+                .toList();
+
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorMessages);
+    }
+
+    Message newMessage = new Message(message.getContent());
+    messageRepository.save(newMessage);
+
+    // HTTP status 201 Created will be used in this response
+    return ResponseEntity.status(HttpStatus.CREATED).body(newMessage);
+}
+```
+
+The error messages won't be visible by default. We can change this behavior by adding the following property to the `application.properties` file:
+
+```
+server.error.include-message=always
+```
+
 ### Controlling the request and response body format with DTO classes
 
 To have full control over the format of the request and response body we can use [DTO](https://www.baeldung.com/java-dto-pattern) classes (or [records](https://www.baeldung.com/java-record-keyword)). Especially with the request body annotated by the `@RequestBody` annotation, we should in general use a DTO class object instead of an entity class object. This is because using an entity class object might accidently allow users to [update undesired attributes](https://rules.sonarsource.com/java/tag/spring/RSPEC-4684/) of an entity.
@@ -332,7 +400,7 @@ In the controller method, the request body is mapped to a `CreateUserDto` object
 ```java
 @PostMapping("/users")
 // The CreateUserDto class defines the request body
-public User createUser(@Valid @RequestBody CreateUserDto user, BindingResult bindingResult) {
+public PublicUserDto createUser(@Valid @RequestBody CreateUserDto user, BindingResult bindingResult) {
     // Check if user object violates any validations defined by the CreateUserDto class
     if (bindingResult.hasErrors()) {
         throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
@@ -386,72 +454,6 @@ This corresponds to the following JSON format for the response body:
 {: .note }
 
 > In the example above we could also use the `@JsonIgnore` annotation. With a DTO class we can get more fine grained control over the request and response body, if needed. However, this doesn't mean that every single request requires the use of a DTO class.
-
-### HTTP status codes and REST API error handling
-
-Previously we have handled errors in requests by sending a redirect or rendering a template with some error messages. With REST API endpoints we communicate errors with [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) and JSON formatted error objects containing details about the error. HTTP status codes are numeric codes that describe whether the request was successful or not.
-
-Successful status codes are in range 200 - 299. Most common successful status code is [200 OK](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200), which is a generic way to inform the client that the request succeeded. Client error status codes are in range 400 - 499. These status codes indicate that there's something wrong with the client's request. Most common client error status codes are:
-
-- [404 Not Found](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404): the server cannot find the requested resource
-- [400 Bad Request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400): there was something wrong with the user's request. For example the request body of a POST request is not valid
-- [403 Forbidden](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403): the user lacks the required authorization for the request. For example the user tries to update a resource that they don't have access to
-- [401 Unauthorized](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401): the user is not authenticated, meaning that the server can't identify the user. For example the user is not signed in and tries to access a resource which requires authentication
-
-As in the previous example, we can use the [ResponseStatusException](https://www.baeldung.com/spring-response-status-exception) exception class to send HTTP status code with the response in case of errors. The exception should be thrown with an appropriate HTTP status code and an error message. For example, the line:
-
-```java
-throw new ResponseStatusException(HttpStatus.BAD_REQUEST, bindingResult.getAllErrors().get(0).getDefaultMessage());
-```
-
-In the `createMessage` method will send a `400 Bad Request` status code with the response in case the request body is not valid. The second parameter of the `ResponseStatusException` constructor is the error message which will be displayed in the error response object:
-
-```json
-{
-  "timestamp": "2023-11-20T07:55:10.918+00:00",
-  "status": 400,
-  "error": "Bad Request",
-  "trace": "...",
-  "message": "Content is required",
-  "path": "/api/messages"
-}
-```
-
-If we don't throw a `ResponseStatusException` exception, the `200 OK` status code will be sent with the response, which indicates the that request succeeded:
-
-```java
-@GetMapping("/messages")
-public List<Message> getAllMessages() {
-    // HTTP status 200 OK will be used in the response by default
-    return messageRepository.findAll();
-}
-```
-
-To get more control over the response, we can use the [ResponseEntity](https://www.baeldung.com/spring-response-entity) class:
-
-```java
-@PostMapping("")
-public ResponseEntity<?> createMessage(@Valid @RequestBody CreateMessageDto message, BindingResult bindingResult) {
-    if (bindingResult.hasErrors()) {
-        List<String> errorMessages = bindingResult.getAllErrors().stream().map((error) -> error.getDefaultMessage())
-                .toList();
-
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorMessages);
-    }
-
-    Message newMessage = new Message(message.getContent());
-    messageRepository.save(newMessage);
-
-    // HTTP status 201 Created will be used in this response
-    return ResponseEntity.status(HttpStatus.CREATED).body(newMessage);
-}
-```
-
-The error messages won't be visible by default. We can change this behavior by adding the following property to the `application.properties` file:
-
-```
-server.error.include-message=always
-```
 
 ### Omitting attributes from the JSON response body
 
@@ -592,7 +594,7 @@ Let's start documenting our API by adding the Spring Doc dependency to the `<dep
 </dependency>
 ```
 
-Then, let's start our application and open <http://localhost:8080/v3/api-docs> in a browser. We should see the JSON formatted description of our REST API in the OpenAPI format. For a more user-friendly description, the Swagger documentation can be found at <http://localhost:8080/swagger-ui/index.html>. In the Swagger documentation, we can see a documentation for the REST controller classes.
+Then, let's start our application and open <http://localhost:8080/v3/api-docs> in a browser. We should see the JSON formatted description of our REST API in the OpenAPI format. This format is suitable for other applications and AI agents, but for a more human-friendly description, the Swagger documentation can be found at <http://localhost:8080/swagger-ui/index.html>. In the Swagger documentation, we can see a documentation for the REST controller classes.
 
 We can find documentation for each REST API endpoint under the section named by the REST controller class. We see all relevant information about the endpoint: the path, path parameters, and an example of the response. We can send a test request by clicking the "Try it out" button on the right. This is handy while we are exploring an API that we aren't familiar with.
 
