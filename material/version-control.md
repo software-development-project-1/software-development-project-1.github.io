@@ -31,17 +31,15 @@ This part of the course handles version control. Version control refers to a ser
 
 Version control tools allow marking a specific state of a project as so that one can return to it later. Thus, if something goes wrong in the development of new features, one can return to an older and functional version of the project. Version control stores all the marked states. Therefore all the developers can follow the evolution of the application, like who has done what and when. This also makes finding bugs, or errors in the application, a lot easier.
 
-Contrary to what many people think, software development is mostly done in teams. With version control tools it is possible to use and develop others' code, even without ever meeting in person. People can give verbal feedback, such as report issues, as well as make concrete suggestions for improvement by providing code to the project. All developers are kept up to date about the state of the project, which makes cooperation smoother.
+Contrary to what many people think, software development is mostly done in teams. With version control tools it is possible to use and develop others' code, even without ever meeting in person. People can give verbal feedback, such as report issues, as well as make concrete suggestions for improvement by providing code to the project. All developers are kept up to date about the state of the project, which makes cooperation smoother. 
 
-Visual Studio has summarized reasons for using version control on their [website](https://www.visualstudio.com/learn/what-is-version-control). Bitbucket [has also written](https://www.atlassian.com/git/tutorials/what-is-version-control) a longer text about version control.
-
-There are several different version control tools available, but this part will focus on using Git and GitHub, especially in the context of software development projects.
+There are several different version control tools available, but this part will focus on using Git and GitHub, especially in the context of software development projects. Atlassian's blog post [What is version control](https://www.atlassian.com/git/tutorials/what-is-version-control) covers purpose and benefits of version control in more detail.
 
 ## About Git
 
 Git was initiated by Linus Torvalds, who is most likely more famous for being the primary developer of the Linux kernel, which is the "heart" of many operating systems, such as Google's [Android](https://en.wikipedia.org/wiki/Android_(operating_system)). Torvalds started developing Git for his own needs when coding the Linux kernel. He needed a tool for storing different versions of his own code and sharing it with other people.
 
-GitHub is a service which was created later on, used for storing and publishing projects. There are several sites similiar to GitHub, such as [GitLab](https://about.gitlab.com/).
+[GitHub](https://github.com/) is a platform built around Git that allows developers to store, manage, and share their projects. It also provides tools for collaboration and version control. There are several similar platforms, such as [GitLab](https://about.gitlab.com/).
 
 Git and GitHub are used in solo as well as collaborative projects in the industry. It's usage isn't limited only to code, and many people like to for example backup their course material using Git. Nevertheless, this part focuses on sharing code with GitHub, and some of the common problems faced in the process. Git will certainly be useful in your studies, and especially if you choose the software developer career.
 
@@ -224,7 +222,7 @@ A good habit to form is to constantly check which changes will be added to the n
 
 After choosing which changes will be included in the next commit, you can finally create the commit with the command `git commit`. Every commit has a message attached to it, describing the changes included in the commit. The message is added upon creating the commit by running: `git commit -m "a descriptive message"`, where your descriptive message specifies what has changed since the last commit. If you leave out the flag `-m` and the message, a text editor will open, where you can write a longer, detailed description below the title message. The commit is then created by saving and exiting the text editor.
 
-Git uses a command line text editor for commit messages by default. Let's use a bit more user-friendly editor, [Visual Studio Code](https://code.visualstudio.com/). If you haven't installed it yet, start with that. Once installed, we can use Visual Studio Code as the Git text editor by running the following command:
+Git uses the Vim command line text editor for commit messages by default. If you prefer, you can also use a more user-friendly editor, like Visual Studio Code. We can use Visual Studio Code as the Git text editor by running the following command:
 
 ```bash
 git config --global core.editor "code --wait"
@@ -234,7 +232,19 @@ However, it is usually more convinient to commit changes using the `git commit -
 
 [Here](https://github.com/erlang/otp/wiki/writing-good-commit-messages) are some quick instructions about writing a good commit message.
 
-![Git process](/assets/git-process.webp){: width="500" }
+```mermaid
+flowchart LR
+    A["Working directory"] -->|git add| B["Staging area"]
+    B -->|git commit| C["Repository"]
+
+    classDef working fill:#EF4836,color:#fff,stroke:none
+    classDef staging fill:#D5A323,color:#fff,stroke:none
+    classDef repository fill:#42949B,color:#fff,stroke:none
+
+    class A working
+    class B staging
+    class C repository
+```
 
 We'll continue where the previous example left off. Let's add all the changes we made to the next commit, except the creation of the file `empty.txt`. Before running `git commit`, the output of `git status` is:
 
@@ -386,7 +396,7 @@ After a project has been added to a repository in GitHub, commits can be publish
 
 Changes can be pushed to a specific branch in the remote repository as follows: `git push remotename branchname`. In this part we will only use the main branch. If you add the flag `-u` after the command `push`, next time you do not need to specify the name of the remote and the branch to push changes to the same place. Using the flag `-u` is recommended.
 
-Let's push the changes we made to the file `README.md` by running `git push -u origin main`, since we named the remote `origin` and we are using the main branch. Next we'll navigate to the project site on GitHub. There we will find the file `README.md`.
+Let's push the changes we made to the file `README.md` by running `git push -u origin main`, since we named the remote `origin` and we are using the main branch. Next we'll navigate to the repository page on GitHub. There we will find the `README.md` file.
 
 {: .note}
 
@@ -628,15 +638,15 @@ GitHub provides arguably the easiest tool to examine a project's commit history.
 
 Let's navigate to our project's front page. Above the file list on right corner, there's a clock symbol, which has a tooltip displaying the number of commits. Clicking the symbol allows us to view the old commits.
 
-![Commits in GitHub](/assets/git/git-commits-button.png.png)
+![Commits in GitHub](/assets/git/git-commits-button.png)
 
 When you click the symbol, you'll see a list of all the commits which have been added to the project. There are three buttons on the right side of this view.
 
-![Viewing a commit](/assets/git/git-commit-log.png)
+![Viewing a commit](/assets/git/git-commit-log.png){: width="500" }
 
 The button at the center of those three shows the beginning of a given commit's id. Pressing the button shows all the changes made in that particular commit. The additions are shown in green, and removed lines in red.
 
-![Viewing changes](/assets/git/git-commit-diff.png)
+![Viewing changes](/assets/git/git-commit-diff.png){: width="500" }
 
 Then by pressing "Browse files", or the rightmost button with `<>` written on it from the previous view, you can browse the state of the project after a specific commit. A commit only contains a set of changes, but Git still enables revisiting the whole project after a given commit. You can return back to the latest commit of the main branch by pressing the button the "tree" icon on the left, and by choosing "main".
 
@@ -660,11 +670,11 @@ Of course, the same procedure can be repeated on the command line. You can brows
 
 ## GitHub's workflow
 
-Sites like GitHub make collaboraton in development projects a lot easier. No one notices problems more efficiently than the actual users, and GitHub creates a platform for reporting those complications. Any user can create an _issue_ to a public project in GitHub, where one can report any problems with regards to using the software. Common issue subjects are error messages in edge cases, problems in installing, or missing features.
+Platform like GitHub make collaboraton in development projects a lot easier. No one notices problems more efficiently than the actual users, and GitHub creates a platform for reporting those complications. Any user can create an _issue_ to a public project in GitHub, where one can report any problems with regards to using the software. Common issue subjects are error messages in edge cases, problems in installing, or missing features.
 
 If one knows the solution to a problem, they can even suggest their own improvements to the project. However, this requires having access to the source code of the project. A public project can be copied to a local computer with the command `git clone <https-address-of-the-repository>`. The command takes the address of the remote repository, which can be acquired from the upper right corner of the project page, as an argument.
 
-![Cloning address](/assets/git/git-clone-url.png)
+![Cloning address](/assets/git/git-clone-url.png){: width="500" }
 
 Note that this is actually the same address you used before when adding a remote repository with the command `git remote add`. The owner of a project will not know who has cloned their project. The command creates a new folder named by the repository containing the contents of the repository to the folder where we run it.
 
