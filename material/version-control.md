@@ -123,7 +123,7 @@ Now, initialize the folder as a Git project with the `git init` command.
 
 > Copying or pasting text into Git Bash won't work with keyboard shortcuts. Instead, you can right-click on the Git Bash window and click "Paste" or "Copy".
 
-Open the Git project folder in an editor such as Visual Studio Code and add an a empty file called `git_practice.txt` inside. When a new file is added to a fresh Git project, running the `git status` command will print the following:
+Open the Git project folder in an editor such as Visual Studio Code and add an a empty file called `README.md` inside. When a new file is added to a fresh Git project, running the `git status` command will print the following:
 
 ```bash
 On branch main
@@ -132,7 +132,7 @@ No commits yet
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-        git_practice.txt
+        README.md
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
@@ -143,7 +143,15 @@ Next we'll take a closer look on the output of `git status`.
 
 Changes can be added to the next commit by running `git add`. The command requires one argument, that is the path to the file containing the changes one wishes to move to staging and consequently include in the next commit. Before a file has been added to Git, it is under `Untracked files`. This also means that the changes inside that file will not be added to the next commit.
 
-Now let's add the changes in the file we created earlier by running `git add git_practice.txt`. Then, let's add some text into the file and save. After that, we'll run `git status`:
+Now let's add the changes in the file we created earlier by running `git add README.md`. Then, let's add the following content to the file and save it:
+
+```md
+# Git Practice
+
+The purpose of this repository is to practice the most common Git commands.
+```
+ 
+After that, we'll run `git status`:
 
 ```bash
 On branch main
@@ -152,12 +160,12 @@ No commits yet
 
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
-        new file:   git_practice.txt
+        new file:   README.md
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-        modified:   git_practice.txt
+        modified:   README.md
 ```
 
 Next we'll add one more file to the project, called `empty.txt`. We'll then run `git status` again, which outputs the following:
@@ -169,12 +177,12 @@ No commits yet
 
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
-        new file:   git_practice.txt
+        new file:   README.md
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-        modified:   git_practice.txt
+        modified:   README.md
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -185,9 +193,9 @@ Now let's break down the output.
 
 The first title is called `Changes to be committed`. The changes under this title will be added to the next commit. The second title, `Changes not staged for commit`, refers to the changes which Git is aware of, which _will not_ be added to the next commit. Finally `Untracked files` contains all the files which are unknown to Git, meaning that the changes inside them are not being followed. For example, Git cannot distinguish what sort of changes have been done to the untracked files. In consequence, the changes are not being added to the next commit.
 
-You probably noticed that the file `git_practice.txt` is in the output twice. This is because Git tracks _changes_. The first change added to Git was where the file `git_practice.txt` was created. Only after adding the change to Git was some text insterted into the file. Thus only the change where the file `git_practice.txt` was created will be added to the next commit, and not the change when some text was added inside it. The interpretation of the output of `git status` is made easier with some colors. The changes which will be added to the next commit are displayed in green, and next to the filename is written what was done to the file (for example `new file`, `modified`, `deleted`).
+You probably noticed that the file `README.md` is in the output twice. This is because Git tracks _changes_. The first change added to Git was where the file `README.md` was created. Only after adding the change to Git was some text insterted into the file. Thus only the change where the file `README.md` was created will be added to the next commit, and not the change when some text was added inside it. The interpretation of the output of `git status` is made easier with some colors. The changes which will be added to the next commit are displayed in green, and next to the filename is written what was done to the file (for example `new file`, `modified`, `deleted`).
 
-Changes can also be cancelled with Git. Adding some text to `git_practice.txt` could be cancelled by running `git restore git_practice.txt`. The file will be empty after running the command because the command cancelled the change which added some text into `git_practice.txt`. In conclusion, the command `git restore` enables cancelling changes in tracked files.
+Changes can also be cancelled with Git. Adding some text to `README.md` could be cancelled by running `git restore README.md`. The file will be empty after running the command because the command cancelled the change which added some text into `README.md`. In conclusion, the command `git restore` enables cancelling changes in tracked files.
 
 By running `git add -p` one can choose change by change, which ones to add to the next commit (letter "y" means add, "n" means don't add). Type in the letter ("y" or "n") and press the Enter key. The command only takes into consideration changes in files which are being tracked, i.e. _have already been added to Git once_. Thus new files cannot be added to Git with `git add -p`. Running `git add file` will add all the changes in the file. It is also possible to add entire folders to Git using the same command. Another quite handy shorthand is the `git add .` (note the dot at the end of the command), which will add all files to the next commit.
 
@@ -237,7 +245,7 @@ No commits yet
 
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
-        new file:   git_practice.txt
+        new file:   README.md
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -328,7 +336,7 @@ This shows how GitHub functions as a backup storage. When the state of a project
 
 You can create a repository to GitHub by pressing the button on the upper right corner:
 
-![Creating a new repository](/assets/new-repo.png)
+![Creating a new repository](/assets/git/git-new-repo.png)
 
 A window will open where you can add the repository a name and a description. A repository can be public or private: a public repository can be accessed by anyone, whereas a private repository can only be seen by people chosen by the owner.
 
@@ -347,7 +355,7 @@ A remote can be linked to a local project with the command `git remote add`.
 
 The command takes the name and the address of the remote repository as arguments. GitHub offers two options for the repository address protocol: SSH and HTTPS. _We'll choose the HTTPS address_ for the remote project:
 
-![HTTPS address in GitHub](/assets/https-clone.png)
+![HTTPS address in GitHub](/assets/git/git-repo-setup.png)
 
 A new repository called "origin" is added using an HTTPS connection by running the command `git remote add origin <https-address-of-the-repository>`. An HTTPS address would be almost identical to the URL in your browser. A remote can be called practically anything besides "origin", but it is a good and a common choice. It is possible to add several remotes, when properly naming them becomes important.
 
@@ -378,7 +386,7 @@ After a project has been added to a repository in GitHub, commits can be publish
 
 Changes can be pushed to a specific branch in the remote repository as follows: `git push remotename branchname`. In this part we will only use the main branch. If you add the flag `-u` after the command `push`, next time you do not need to specify the name of the remote and the branch to push changes to the same place. Using the flag `-u` is recommended.
 
-Let's push the changes we made to the file `git_practice.txt` by running `git push -u origin main`, since we named the remote `origin` and we are using the main branch. Next we'll navigate to the project site on GitHub. There we will find the file `git_practice.txt`.
+Let's push the changes we made to the file `README.md` by running `git push -u origin main`, since we named the remote `origin` and we are using the main branch. Next we'll navigate to the project site on GitHub. There we will find the file `README.md`.
 
 {: .note}
 
@@ -397,9 +405,9 @@ There now exists two versions of the project: one locally, and one in the remote
 
 We'll start by making changes to the project via GitHub. This simulates another team member changing the repository contents. You can edit files via GitHub by clicking on their name and then clicking on the pen icon on the right side of the page.
 
-![Pen icon at GitHub](/assets/edit.png)
+![Pen icon at GitHub](/assets/git/git-edit-file.png)
 
-Next we'll add a new line of text to `git_practice.txt`, and create a commit of the change by clicking the green "Commit changes..." on top right corner and then inside the dialog click the green "Commit changes" button. Now, if you take a look at the repository's files on your local computer, you can't see these changes locally. This is because our local version and the remote version of the repository aren't in sync.
+Next we'll add a new line of text to `README.md`, and create a commit of the change by clicking the green "Commit changes..." on top right corner and then inside the dialog click the green "Commit changes" button. Now, if you take a look at the repository's files on your local computer, you can't see these changes locally. This is because our local version and the remote version of the repository aren't in sync.
 
 We can get the new changes to our local version by running `git pull`. If you used the flag `-u` with `push` earlier, there is no need to specify a remote or a branch. We'll run `git pull`, which results in an output along the lines of the following:
 
@@ -413,7 +421,7 @@ From github.com
    8793615..c661629  main     -> origin/main
 Updating 8793615..c661629
 Fast-forward
- git_practice.txt | 1 +
+ README.md | 1 +
  1 file changed, 1 insertion(+)
 ```
 
@@ -431,7 +439,7 @@ In practice the situation handled above corresponds to working on a collaborativ
 
 Next we'll find out what happens, if GitHub contains some information not found in the local version, and vice versa.
 
-Let's change the first row of `git_practice.txt` via GitHub. This will create a new commit to the remote version. Then let's add a new line at the end of the same file in the local version, _but without creating a new commit of the new change_.
+Let's change the first row of `README.md` via GitHub. This will create a new commit to the remote version. Then let's add a new line at the end of the same file in the local version, _but without creating a new commit of the new change_.
 
 Now if we try to fetch the latest changes with the command `git pull` we'll get:
 
@@ -440,7 +448,7 @@ From github.com:
  * branch            main     -> FETCH_HEAD
 Updating 061ca96..6920cd0
 error: Your local changes to the following files would be overwritten by merge:
-	git_practice.txt
+	README.md
 Please, commit your changes or stash them before you can merge.
 Aborting
 ```
@@ -532,17 +540,17 @@ Now according to the output of `git status` we have created two commits, (`ahead
 
 When several people are working on the same project, it is not uncommon for two developers to make changes to the same lines in some file. When merging the two changes together, how does Git know which of the changes to discard and which one to keep? Well, it doesn't, and so when mutually exclusive changes are found when merging, the automatic merge will fail. The conflict between two commits (or branches) is called a _merge conflict_. In these cases, someone has to hand pick the changes which will be kept in the project. This is called resolving a merge conflict.
 
-Next we'll create a merge conflict. We'll start by writing "Greetings from GitHub" to a line in the `git_practice.txt` file via GitHub, and finish off by creating a commit. Then we'll edit the _exact_ same line locally by replacing it with "Greetings from my computer", and wrap the change up to another commit.
+Next we'll create a merge conflict. We'll start by writing "Greetings from GitHub" to a line in the `README.md` file via GitHub, and finish off by creating a commit. Then we'll edit the _exact_ same line locally by replacing it with "Greetings from my computer", and wrap the change up to another commit.
 
 Now when we try to combine the newest states from the remote and local versions together with `git pull`, we get the following error message:
 
 ```bash
 Auto-merging ...
-CONFLICT (content): Merge conflict in git_practice.txt
+CONFLICT (content): Merge conflict in README.md
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-This means that we have successfully created a merge conflict. The line starting with `CONFLICT` tells us where the overlapping changes can be found. Let's open the file in question, `git_practice.txt`. We see the following:
+This means that we have successfully created a merge conflict. The line starting with `CONFLICT` tells us where the overlapping changes can be found. Let's open the file in question, `README.md`. We see the following:
 
 ```bash
 <<<<<< HEAD
@@ -579,7 +587,7 @@ You have unmerged paths.
 Unmerged paths:
  (use "git add <file>..." to mark resolution)
 
-	both modified:   git_practice.txt
+	both modified:   README.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -593,7 +601,7 @@ All conflicts fixed but you are still merging.
 
 Changes to be committed:
 
-	modified:   git_practice.txt
+	modified:   README.md
 ```
 
 Finally, we'll wrap up resolving the conflicts by, you guessed it, creating a new commit. The finishing touch is to push the result to GitHub, so that other developers can use the newest version.
@@ -618,21 +626,21 @@ Storing a project's commit history is one of the greatest benefits of using vers
 
 GitHub provides arguably the easiest tool to examine a project's commit history. We'll start revisiting our project's commits from there.
 
-Let's navigate to our project's front page. Above the file list on right corner, there's a link that says the number of commits in the repository. Here the link says "4 commits". Clicking this link allows us to view the old commits.
+Let's navigate to our project's front page. Above the file list on right corner, there's a clock symbol, which has a tooltip displaying the number of commits. Clicking the symbol allows us to view the old commits.
 
-![Commits in GitHub](/assets/commits.png)
+![Commits in GitHub](/assets/git/git-commits-button.png.png)
 
-When you click the link, you'll see a list of all the commits which have been added to the project. There are three buttons on the right side of this view.
+When you click the symbol, you'll see a list of all the commits which have been added to the project. There are three buttons on the right side of this view.
 
-![Viewing a commit](/assets/browse-commit.png)
+![Viewing a commit](/assets/git/git-commit-log.png)
 
 The button at the center of those three shows the beginning of a given commit's id. Pressing the button shows all the changes made in that particular commit. The additions are shown in green, and removed lines in red.
 
-![Viewing changes](/assets/show-commit-en.png)
+![Viewing changes](/assets/git/git-commit-diff.png)
 
 Then by pressing "Browse files", or the rightmost button with `<>` written on it from the previous view, you can browse the state of the project after a specific commit. A commit only contains a set of changes, but Git still enables revisiting the whole project after a given commit. You can return back to the latest commit of the main branch by pressing the button the "tree" icon on the left, and by choosing "main".
 
-![Change back to main](/assets/back-to-main.png)
+![Change back to main](/assets/git/git-commit-browse-files.png)
 
 Of course, the same procedure can be repeated on the command line. You can browse the state of the project after a specific commit by running `git checkout commit_id`. You should check the id using `git log` for example. Similarly, you can move back to a specific branch by running `git checkout branch_name`, most commonly `git checkout main`. The changes made in a specific commit can be viewed with `git show commit_id`.
 
@@ -656,7 +664,7 @@ Sites like GitHub make collaboraton in development projects a lot easier. No one
 
 If one knows the solution to a problem, they can even suggest their own improvements to the project. However, this requires having access to the source code of the project. A public project can be copied to a local computer with the command `git clone <https-address-of-the-repository>`. The command takes the address of the remote repository, which can be acquired from the upper right corner of the project page, as an argument.
 
-![Cloning address](/assets/git-clone.png)
+![Cloning address](/assets/git/git-clone-url.png)
 
 Note that this is actually the same address you used before when adding a remote repository with the command `git remote add`. The owner of a project will not know who has cloned their project. The command creates a new folder named by the repository containing the contents of the repository to the folder where we run it.
 
@@ -683,7 +691,7 @@ We should now have a `git-practice` folder in the folder we ran the command in. 
 > 🎯 Exercise 14
 >
 > 1. Delete the current `git-practice` folder on your computer and clone the git-practice repository from GitHub to your local computer as instructed above. Then, open the repository folder in Git Bash and in an editor such as Visual Studio Code.
-> 2. Change the contents of some file (for example the `git_practice.txt`) file and push the changes to GitHub. Open the repository in GitHub and see that it has the commit you created.
+> 2. Change the contents of some file (for example the `README.md`) file and push the changes to GitHub. Open the repository in GitHub and see that it has the commit you created.
 > 3. Find out (e.g. using Google or ChatGPT), how you can find out the names and addresses of the remote repositories of a Git project. The answer is a command you should run inside the Git project, when a remote has been set. Run the command and see that the remote repository address matches your GitHub repository. Add the command and the command output to a `remote.txt` file and push it to GitHub.
 
 {: .important-title }
